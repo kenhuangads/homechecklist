@@ -1,31 +1,38 @@
 # 南投老家翻修清單（homechecklist）
 
-全家共用的家電採購／安裝需求 checklist，發布為 claude.ai Artifact（固定網址），
-資料存在同一個 artifact 的 `data/state.json`，每次儲存都是一個有署名的不可變版本。
+全家共用的家電採購／安裝需求 checklist。固定網址、不用登入：
+**https://kenhuangads.github.io/homechecklist/**
 
-## 結構
-- `src/seed.base.json` — 從報告整理出的原始結構化資料（人工維護）
-- `research/*.json` — 2026/8/22 MOMO／PChome／官網逐項實查結果（由 agent 產出）
-- `tools/merge-research.js` — 把實查結果合併進 `src/seed.json`，並套用事實修正（電壓、停售、價格）
-- `src/styles.css`、`src/app.part1~3.js`、`src/index.html` — 應用程式（無框架、單檔）
-- `build.js` — 內嵌 CSS／JS／seed → `dist/index.html`（發布用片段）與 `dist/preview.html`（本機測試，含 mock 儲存 API）
-- `.claude/launch.json` — 本機預覽伺服器（port 8791）
+- 家人：看價格、即時比價、選方案、打勾待辦、留言；每筆修改都有「誰／哪台裝置／幾點／改了什麼」的紀錄，可還原。
+- 設計師：同一網址，點「我是設計師」→ 只看尺寸、開孔、電壓迴路、給排水、排風與全屋前置工程（不顯示價格），可直接列印。
 
-## 指令
+## 架構
+| 層 | 做法 |
+|---|---|
+| 網站 | 靜態單檔 `docs/index.html`，由 GitHub Pages 提供（`main` 分支 `/docs`） |
+| 雲端資料與版本紀錄 | Google 試算表 + Apps Script 網頁應用程式（`apps-script/Code.gs`）；資料存在你的雲端硬碟 `homechecklist-data/state.json`，每次儲存都留快照；試算表 `history` 分頁記錄每筆修改 |
+| 每日價格 | GitHub Actions 每天 11:00（台灣）呼叫 PChome 公開 API 更新 `docs/prices.json`，網站顯示「今日價」；另有飛比價格／BigGo 即時比價連結 |
+| 商品資料 | `src/seed.json`：42 個方案、133 個連結（2026/8/22 逐一實查，失效連結已替換） |
+
+## 第一次部署後要做的事
+1. 照 [SETUP.md](SETUP.md) 建立 Google 試算表與 Apps Script（約 5 分鐘），取得 `/exec` 網址。
+2. 把網址填進 `docs/config.json` 的 `apiUrl`（或貼給 Claude），push 後約 1–2 分鐘生效。
+3. 在 GitHub → Settings → Pages 確認來源為 `main` / `docs`（已用 API 設定）。
+
+## 開發
 ```bash
-node tools/merge-research.js   # 重新合併實查資料（只在 research/ 或 seed.base.json 變更時需要）
-SHARE_URL="https://claude.ai/..." node build.js   # 建置；SHARE_URL 會寫進 seed.meta.shareUrl
+node tools/merge-research.js    # 把 research/*.json 合併進 seed（只在重新實查時）
+node tools/content-pass.js      # 簡潔優點／專家建議／比價關鍵字（只在重新實查時）
+node tools/apply-linkcheck.js   # 套用 research/links-result-*.json 的連結檢查
+node tools/fetch-prices.js      # 手動更新 docs/prices.json
+node build.js                   # 產生 docs/index.html（SHARE_URL 可覆蓋分享網址）
 ```
+本機預覽：`.claude/launch.json`（port 8791，serve `docs/`）；在瀏覽器 localStorage 設 `hc_api` 為 `"mock"` 可模擬雲端。
 
-## 發布／更新規則（重要）
-1. 發布用 Artifact 工具，`file_path` 固定為 `dist/index.html`，網址才會不變。
-2. 實測此環境的 files-form 不可用，頁面儲存時走「整頁 HTML 重新發布」：**線上 index.html 內嵌的 `hc-seed` JSON 就是最新資料**。
-   重新發布前務必：WebFetch artifact 網址（會存成 html 檔）→ `node tools/pull-live-seed.js <html 檔>` → 再 `SHARE_URL=<url> node build.js`。
-   頁面載入時會比較 `rev`／`updatedAt` 取較新者，但舊 seed 仍可能蓋掉家人的修改，所以一定要先拉。
-3. 價格刷新：更新 `research/*.json` 或直接改 `src/seed.json` 的 option.price／links（保留 history、bump `rev`），重建後發布。
-4. 分享：外層網址參數不會傳進頁面，所以所有人用同一網址，打開後自己選身分（裝置會記住）。
+## 資料流與更新規則
+- 網站內嵌的 seed 是「商品目錄基準」（`catalogVersion`）；家人的修改只存在雲端。載入時若 seed 的 `catalogVersion` 比雲端新，會自動把目錄欄位（價格、連結、優點、安裝須知…）合併進雲端資料，不會動到家人的選擇、待辦、留言與紀錄。
+- 所以更新商品資料只要：改 `src/seed.json` → bump `catalogVersion` → `node build.js` → push。
+- 雲端資料格式：`items[]`（status、chosenOptionId、options[]、install[]、costNotes[]、notes[]、todos[]、requests[]）、`prep[]`、`profiles{}`、`history[]`。
 
-## 資料模型（state.json）
-- `items[]`：品項（status: choosing/decided/bought/installed/skipped、chosenOptionId、options[]、install[]（tag 電/水/排水/排風/尺寸/搬運/木作/其他）、costNotes[]、notes[]、todos[]、requests[]）
-- `prep[]`：全屋前置工程；`profiles{}`：家人／設計師／水電師傅／採購各自顯示欄位
-- `history[]`：每筆修改 {ts, who, device, summary, changes[{path, before, after}]}，可單筆還原或回到某時間點
+## 舊版
+claude.ai Artifact 版（需登入）已停用：https://claude.ai/code/artifact/c844b959-4287-47dc-95be-a8114464b809

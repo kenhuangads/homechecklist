@@ -117,8 +117,9 @@ main.content { flex: 1; padding: .9rem .9rem calc(5.4rem + env(safe-area-inset-b
 .ring::after { content: ""; position: absolute; inset: .5rem; border-radius: 50%; background: var(--accent-deep); }
 .ring span { position: relative; z-index: 1; font-weight: 900; font-size: 1.05rem; text-align: center; line-height: 1.15; }
 .ring span small { display: block; font-size: .66rem; font-weight: 600; opacity: .85; }
-.hero-actions { display: flex; gap: .5rem; margin-top: .6rem; grid-column: 1 / -1; flex-wrap: wrap; }
-.hero-actions .btn { background: rgba(255,255,255,.16); color: #fff; border-color: rgba(255,255,255,.35); }
+.hero-actions { display: grid; grid-template-columns: 1fr 1fr; gap: .45rem; margin-top: .5rem; grid-column: 1 / -1; }
+.hero-actions .btn { background: rgba(255,255,255,.16); color: #fff; border-color: rgba(255,255,255,.35); min-width: 0; padding: .3rem .4rem; font-size: .86rem; white-space: nowrap; gap: .3rem; }
+.hero-actions .btn svg { width: 1.05rem; height: 1.05rem; }
 
 /* next-step card */
 .next { border-left: 5px solid var(--attn); }
