@@ -49,9 +49,9 @@ function askFamilyCode() {
 function openDesignerMoreSheet() {
   const curFont = store.get(KEYS.font, 'std');
   openSheet({ title: '更多', body: () => h('div', { class: 'stack' },
-    h('div', { class: 'btn-row' }, h('button', { class: 'btn primary', type: 'button', onclick: () => { closeSheet(); shareLink('designer'); } }, icon('share'), '分享這份需求'), h('button', { class: 'btn', type: 'button', onclick: () => { closeSheet(); showTutorial('designer'); } }, icon('book'), '說明')),
+    h('div', { class: 'btn-row' }, h('button', { class: 'btn primary', type: 'button', onclick: () => { closeSheet(); shareLink('designer'); } }, icon('share'), '轉傳這份需求'), h('button', { class: 'btn', type: 'button', onclick: () => { closeSheet(); showTutorial('designer'); } }, icon('book'), '說明')),
     h('div', { class: 'field' }, h('label', {}, '文字大小'), h('div', { class: 'seg' }, [['std', '標準'], ['lg', '大'], ['xl', '特大']].map(([v, l]) => h('button', { class: 'btn', type: 'button', 'aria-pressed': String(curFont === v), onclick: () => { store.set(KEYS.font, v); render(); closeSheet(); openDesignerMoreSheet(); } }, l)))),
-    h('button', { class: 'btn', type: 'button', onclick: () => { closeSheet(); role = null; store.del(KEYS.role); render(); } }, icon('user'), '我不是設計師，切換身分')),
+    h('p', { class: 'tiny' }, '內容由屋主隨時更新；重新整理即可看到最新版。')),
     actions: [{ label: '關閉' }] });
 }
 
@@ -152,15 +152,15 @@ const TUT_PICS = {
 };
 function showTutorial(kind) {
   const steps = kind === 'designer' ? [
-    { pic: 'doc', t: '這是一份需求總表', d: '家人在清單上選好的家電，會自動整理成尺寸、開孔、電壓迴路、給排水與排風需求。不顯示價格。' },
+    { pic: 'doc', t: '這是一份需求總表', d: '屋主選好的家電，自動整理成尺寸、開孔、電壓迴路、給排水與排風需求。' },
     { pic: 'check', t: '顏色標籤＝工種', d: '黃色「電」、藍色「水／排水」、綠色「排風」、紫色「尺寸」。最下面是全屋前置工程清單與自來水硬度資料。' },
-    { pic: 'share', t: '可以列印、也可以轉傳', d: '右上角「列印」直接印成 A4；資料由家人隨時更新，打開就是最新版。' }
+    { pic: 'share', t: '可以列印、也可以轉傳', d: '右上角「列印」直接印成 A4；內容由屋主隨時更新，打開就是最新版。' }
   ] : [
     { pic: 'house', t: '全家共用的採購清單', d: '14 項家電，每一項都整理好幾個方案可以比較。網址固定、不用登入，打開就能用。' },
     { pic: 'tap', t: '點進品項，按「選這個」', d: '方案卡片上有優點、價格、購買連結與比價。有「專家建議」標記的排在最前面。決定後再按「已購買」「已安裝」記錄進度。' },
     { pic: 'check', t: '待辦：做完就打勾', d: '量尺寸、拉電線、確認規格都列在「待辦」。打勾會記下是誰、什麼時候完成。' },
     { pic: 'undo', t: '改錯了不用怕', d: '每一筆修改都有紀錄（誰、哪台裝置、幾點）。按「還原」就回到修改前，或回到某個時間點。' },
-    { pic: 'share', t: '分享給家人與設計師', d: '「更多」裡有分享按鈕。設計師打開後點「我是設計師」，只會看到尺寸與安裝需求，不會看到價格。' }
+    { pic: 'share', t: '分享給家人與設計師', d: '「更多」裡可以分享給家人，或產生「設計師專用連結」：設計師打開只會看到尺寸、開孔與安裝需求，可直接列印。' }
   ];
   let i = 0;
   const dlg = h('dialog', { class: 'tut' });

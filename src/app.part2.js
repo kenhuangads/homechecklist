@@ -23,8 +23,7 @@ function render() {
   if (!state) { app.replaceChildren(h('main', { class: 'content' }, h('div', { class: 'card' }, h('p', { class: 'muted' }, '載入中…')))); return; }
   const y = window.scrollY;
   let screen;
-  if (!role) screen = renderWelcome();
-  else if (role === 'designer') screen = renderDocScreen(false);
+  if (role === 'designer') screen = renderDocScreen(false);
   else if (!(me && me.name)) screen = renderNameEntry();
   else if (route.screen === 'item') screen = renderItemScreen(route.itemId);
   else if (route.screen === 'doc') screen = renderDocScreen(true);
@@ -68,17 +67,6 @@ function toast(msg, opts = {}) {
 }
 
 /* ---------- welcome / identity ---------- */
-function renderWelcome() {
-  const pick = id => { role = id; store.set(KEYS.role, role); route = { screen: 'tab', tab: 'list' }; render(); window.scrollTo(0, 0); if (id === 'designer' && !store.get(KEYS.tut + '_designer')) showTutorial('designer'); };
-  const main = h('main', { class: 'content welcome' },
-    h('p', { class: 'eyebrow' }, '全家共用・南投老家翻修'),
-    h('h1', { class: 'big' }, state.meta.title),
-    h('p', { class: 'muted' }, '家電採購與安裝需求清單。請先選擇您是誰，之後可以在「更多」更改。'),
-    h('button', { class: 'role-btn primary', type: 'button', onclick: () => pick('family') }, h('span', { class: 'tile r-kitchen' }, icon('user')), h('div', {}, h('div', { class: 't' }, '我是家人'), h('div', { class: 'd' }, '負責選擇與採購：看價格、比價、選方案、打勾、留言')), icon('next')),
-    h('button', { class: 'role-btn', type: 'button', onclick: () => pick('designer') }, h('span', { class: 'tile r-living' }, icon('book')), h('div', {}, h('div', { class: 't' }, '我是設計師'), h('div', { class: 'd' }, '整合設計與水電：看尺寸、開孔、電壓迴路、給排水、排風；不顯示價格')), icon('next')),
-    h('p', { class: 'tiny' }, '這個網址是固定的，不用登入，可以直接傳給家人或設計師。'));
-  return [main];
-}
 function renderNameEntry() {
   const names = knownNames();
   const input = h('input', { class: 'input', type: 'text', placeholder: '例如：爸爸、媽媽、阿華', autocomplete: 'off', maxlength: '20', style: 'font-size:1.2rem', id: 'nameInput' });
@@ -86,13 +74,14 @@ function renderNameEntry() {
   const start = () => { const name = input.value.trim(); if (!name) { input.focus(); toast('請先輸入稱呼'); return; } me = { name, device: dev }; store.set(KEYS.me, me); route = { screen: 'tab', tab: 'list' }; render(); window.scrollTo(0, 0); if (!store.get(KEYS.tut)) showTutorial('family'); };
   input.addEventListener('keydown', e => { if (e.key === 'Enter') start(); });
   const main = h('main', { class: 'content welcome' },
-    h('h1', { class: 'big' }, '請問怎麼稱呼您？'),
-    h('p', { class: 'muted' }, '每一筆修改都會記下是誰、用哪台裝置改的，家人才看得懂。只需要輸入一次。'),
-    h('div', { class: 'field' }, h('label', { for: 'nameInput' }, '稱呼'), input),
+    h('p', { class: 'eyebrow' }, '全家共用・南投老家翻修'),
+    h('h1', { class: 'big' }, state.meta.title),
+    h('p', { class: 'muted' }, '家電採購與安裝需求清單。第一次使用請先告訴大家您是誰，之後每一筆修改都會記下是誰改的。'),
+    h('div', { class: 'field' }, h('label', { for: 'nameInput' }, '請問怎麼稱呼您？'), input),
     names.length ? h('div', { class: 'row wrap' }, h('span', { class: 'small muted' }, '或點選：'), names.map(n => h('button', { class: 'btn sm', type: 'button', onclick: () => { input.value = n; } }, n))) : null,
     h('p', { class: 'small muted' }, '這台裝置：', dev),
     h('button', { class: 'btn primary lg block', type: 'button', onclick: start }, '開始使用'),
-    h('button', { class: 'linkbtn', type: 'button', onclick: () => { role = null; store.del(KEYS.role); render(); } }, '← 我不是家人，回上一步'));
+    h('p', { class: 'tiny' }, '這個網址是固定的，不用登入，可以直接傳給家人。'));
   setTimeout(() => input.focus(), 50);
   return [main];
 }
@@ -143,7 +132,7 @@ function renderList() {
   out.push(h('div', { class: 'hero' },
     h('div', {}, h('p', { class: 'eyebrow' }, '全家共用・南投老家翻修'), h('h2', { class: 'h-hero' }, state.meta.title), h('p', { class: 'sub' }, `已購買 ${bought} 項・待辦未完成 ${openTodoCount()} 項${decidedN ? `・已決定合計 ${fmtMoney(decidedSum)}` : ''}`)),
     ring,
-    h('div', { class: 'hero-actions' }, h('button', { class: 'btn sm', type: 'button', onclick: () => shareLink('family') }, icon('share'), '分享給家人'), h('button', { class: 'btn sm', type: 'button', onclick: () => shareLink('designer') }, icon('book'), '分享給設計師'))));
+    h('div', { class: 'hero-actions' }, h('button', { class: 'btn sm', type: 'button', onclick: () => shareLink('family') }, icon('share'), '分享給家人'), h('button', { class: 'btn sm', type: 'button', onclick: () => shareLink('designer') }, icon('book'), '設計師連結'))));
   const ns = nextStep();
   out.push(h(ns.go ? 'button' : 'div', { class: 'card next' + (ns.go ? ' item-row' : ''), type: ns.go ? 'button' : null, style: ns.go ? 'grid-template-columns:1fr auto' : '', onclick: ns.go || null },
     h('div', {}, h('div', { class: 'eyebrow' }, '下一步'), h('div', { class: 't' }, ns.t), h('div', { class: 'small muted' }, ns.d)), ns.go ? icon('next', 'arrow') : null));
@@ -305,15 +294,21 @@ function renderHistory() {
 }
 
 /* ---------- share ---------- */
-function shareUrlFor() { return (state.meta.shareUrl || location.href.split('#')[0].split('?')[0]).trim(); }
+function baseUrl() { return (state.meta.shareUrl || location.href.split('#')[0].split('?')[0]).trim(); }
+function designerToken() {
+  if (state.meta.shareToken) return state.meta.shareToken;
+  if (canEdit()) { const t = Math.random().toString(36).slice(2, 8); dispatch({ type: 'setMeta', patch: { shareToken: t }, summary: '建立設計師專用連結' }, { silent: true }); return t; }
+  return 'view';
+}
+function shareUrlFor(profileId) { const b = baseUrl(); return profileId === 'designer' ? b + (b.includes('?') ? '&' : '?') + 'd=' + designerToken() : b; }
 function shareTextFor(profileId) {
-  if (profileId === 'designer') return `${state.meta.title}（設計師版）\n打開後請點「我是設計師」，會看到各品項的尺寸、開孔、電壓迴路與給排水需求，可直接列印。`;
-  return `${state.meta.title}\n打開後請點「我是家人」、輸入稱呼，就可以一起選方案、打勾。`;
+  if (profileId === 'designer') return `${state.meta.title}｜設計與水電需求總表（尺寸、開孔、電壓迴路、給排水、排風）`;
+  return `${state.meta.title}\n打開後輸入稱呼，就可以一起選方案、打勾。`;
 }
 async function shareLink(profileId) {
-  const url = shareUrlFor(), text = shareTextFor(profileId);
+  const url = shareUrlFor(profileId), text = shareTextFor(profileId);
   if (navigator.share) { try { await navigator.share({ title: state.meta.title, text, url }); return; } catch (e) { if (e && e.name === 'AbortError') return; } }
-  await copyText(text + '\n' + url, '已複製網址與說明，可以貼到 LINE 傳給對方');
+  await copyText(text + '\n' + url, '已複製連結與說明，可以貼到 LINE 傳給對方');
 }
 async function copyText(text, msg) {
   try { await navigator.clipboard.writeText(text); toast(msg || '已複製'); }
@@ -323,18 +318,19 @@ async function copyText(text, msg) {
 /* ---------- more ---------- */
 function renderMore() {
   const editable = canEdit(), out = [pendingBanner()];
-  const url = shareUrlFor();
-  out.push(h('div', { class: 'card' }, h('div', { class: 'eyebrow' }, '分享（固定網址，不用登入）'),
-    h('input', { class: 'input', value: url, readonly: true, onclick: e => e.target.select() }),
-    h('div', { class: 'btn-row' }, h('button', { class: 'btn primary', type: 'button', onclick: () => shareLink('family') }, icon('share'), '分享給家人'), h('button', { class: 'btn', type: 'button', onclick: () => shareLink('designer') }, icon('book'), '分享給設計師')),
-    h('p', { class: 'small muted' }, '所有人用同一個網址。打開後自己選「家人」或「設計師」，手機會記住。設計師版只有尺寸與安裝需求、不顯示價格。'),
-    h('button', { class: 'btn sm', type: 'button', onclick: () => go({ screen: 'doc' }) }, '預覽設計師版')));
+  out.push(h('div', { class: 'card' }, h('div', { class: 'eyebrow' }, '分享給家人（固定網址，不用登入）'),
+    h('input', { class: 'input', value: baseUrl(), readonly: true, onclick: e => e.target.select() }),
+    h('div', { class: 'btn-row' }, h('button', { class: 'btn primary', type: 'button', onclick: () => shareLink('family') }, icon('share'), '分享給家人'), h('button', { class: 'btn', type: 'button', onclick: () => copyText(baseUrl(), '已複製網址') }, '複製網址')),
+    h('p', { class: 'small muted' }, '家人打開後輸入稱呼就能一起修改，手機會記住。')));
+  out.push(h('div', { class: 'card' }, h('div', { class: 'eyebrow' }, '設計師專用連結'),
+    h('p', { class: 'small muted' }, '設計師打開這個連結，看到的是各品項的尺寸、開孔、電壓迴路、給排水與排風需求，以及全屋前置工程，可直接列印。'),
+    h('input', { class: 'input', value: shareUrlFor('designer'), readonly: true, onclick: e => e.target.select() }),
+    h('div', { class: 'btn-row' }, h('button', { class: 'btn primary', type: 'button', onclick: () => shareLink('designer') }, icon('share'), '傳給設計師'), h('button', { class: 'btn', type: 'button', onclick: () => copyText(shareUrlFor('designer'), '已複製設計師連結') }, '複製連結'), h('button', { class: 'btn', type: 'button', onclick: () => go({ screen: 'doc' }) }, '預覽'))));
   out.push(h('div', { class: 'card' }, h('div', { class: 'eyebrow' }, '我是誰'),
-    h('div', { class: 'row between' }, h('div', {}, h('div', { style: 'font-size:1.2rem;font-weight:800' }, (me && me.name) || '（尚未設定）'), h('div', { class: 'small muted' }, '這台裝置：' + deviceLabel())), h('button', { class: 'btn', type: 'button', onclick: openNameSheet }, '變更')),
-    h('div', { class: 'seg' }, Object.values(state.profiles).map(p => h('button', { class: 'btn', type: 'button', 'aria-pressed': String(role === p.id), onclick: () => { role = p.id; store.set(KEYS.role, role); route = { screen: 'tab', tab: 'list' }; render(); window.scrollTo(0, 0); } }, '身分：' + p.label)))));
+    h('div', { class: 'row between' }, h('div', {}, h('div', { style: 'font-size:1.2rem;font-weight:800' }, (me && me.name) || '（尚未設定）'), h('div', { class: 'small muted' }, '這台裝置：' + deviceLabel())), h('button', { class: 'btn', type: 'button', onclick: openNameSheet }, '變更'))));
   const curFont = store.get(KEYS.font, 'std');
   out.push(h('div', { class: 'card' }, h('div', { class: 'eyebrow' }, '文字大小'), h('div', { class: 'seg' }, [['std', '標準'], ['lg', '大'], ['xl', '特大']].map(([v, l]) => h('button', { class: 'btn', type: 'button', 'aria-pressed': String(curFont === v), onclick: () => { store.set(KEYS.font, v); render(); } }, l)))));
-  out.push(h('div', { class: 'card' }, h('div', { class: 'eyebrow' }, '操作教學'), h('p', { class: 'small muted' }, '四個步驟，一分鐘看完：怎麼選方案、打勾、還原、分享。'), h('button', { class: 'btn outline', type: 'button', onclick: () => showTutorial('family') }, icon('book'), '再看一次操作教學')));
+  out.push(h('div', { class: 'card' }, h('div', { class: 'eyebrow' }, '操作教學'), h('p', { class: 'small muted' }, '五個步驟，一分鐘看完：怎麼選方案、打勾、還原、分享。'), h('button', { class: 'btn outline', type: 'button', onclick: () => showTutorial('family') }, icon('book'), '再看一次操作教學')));
   // cloud
   const cloudLabel = !API.configured ? '尚未設定（見 SETUP.md）' : ({ ok: '已連線', none: '已連線（雲端還沒有資料，第一次儲存時會建立）', offline: '連不上', unknown: '連線中…' })[remoteStatus] || remoteStatus;
   const reqs = []; state.items.forEach(it => it.requests.filter(r => r.status === 'pending').forEach(r => reqs.push({ it, r })));
@@ -344,7 +340,7 @@ function renderMore() {
     h('details', {}, h('summary', { class: 'tiny', style: 'cursor:pointer;min-height:2rem;display:flex;align-items:center' }, '進階：連線網址'), h('div', { class: 'row', style: 'margin-top:.3rem' }, h('input', { class: 'input grow', id: 'apiInput', value: store.get(KEYS.api, '') || '', placeholder: API.url || 'https://script.google.com/macros/s/…/exec' }), h('button', { class: 'btn sm', type: 'button', onclick: () => { const v = $('#apiInput').value.trim(); if (v) store.set(KEYS.api, v); else store.del(KEYS.api); location.reload(); } }, '套用')), h('p', { class: 'tiny' }, '通常不用改：網站會自動讀取 config.json 的設定。這裡只覆蓋這台裝置。'))));
   if (reqs.length) out.push(h('div', { class: 'card' }, h('div', { class: 'eyebrow' }, `請 Claude 幫忙查（${reqs.length}）`), h('div', { class: 'stack-sm' }, reqs.map(({ it, r }) => h('div', { class: 'note' }, h('div', { class: 'who' }, it.name), h('div', { class: 'txt' }, r.query || '', r.url ? h('div', {}, h('a', { href: r.url, target: '_blank', rel: 'noopener noreferrer' }, r.url)) : null), h('div', { class: 'when' }, `${r.who}・${fmtTime(r.ts, true)}`))))));
   out.push(h('div', { class: 'card' }, h('div', { class: 'eyebrow' }, '關於'), h('p', { class: 'small muted' }, `${state.meta.title} v${APP_VERSION}。資料來源：2026/8/22 全屋家電採購報告＋MOMO／PChome 逐項實查；PChome 價格每日自動更新。${state.meta.priceNote}`),
-    h('button', { class: 'linkbtn', type: 'button', onclick: async () => { if (await confirmDialog({ title: '重設這台裝置？', text: '會清掉這台裝置記住的稱呼、身分與家庭代碼（雲端資料不受影響）。', ok: '重設', danger: true })) { [KEYS.me, KEYS.role, KEYS.font, KEYS.code, KEYS.tut, KEYS.tut + '_designer'].forEach(k => store.del(k)); location.reload(); } } }, '重設這台裝置的設定')));
+    h('button', { class: 'linkbtn', type: 'button', onclick: async () => { if (await confirmDialog({ title: '重設這台裝置？', text: '會清掉這台裝置記住的稱呼、身分與家庭代碼（雲端資料不受影響）。', ok: '重設', danger: true })) { [KEYS.me, KEYS.font, KEYS.code, KEYS.tut, KEYS.tut + '_designer'].forEach(k => store.del(k)); location.reload(); } } }, '重設這台裝置的設定')));
   return out;
 }
 async function downloadBackup() {
@@ -358,15 +354,15 @@ function renderDocScreen(preview) {
   const p = profileOf('designer');
   const right = [h('button', { class: 'btn ghost sm no-print', type: 'button', onclick: () => window.print() }, icon('print'), '列印')];
   if (!preview) right.push(h('button', { class: 'btn ghost sm no-print', type: 'button', onclick: openDesignerMoreSheet, 'aria-label': '更多' }, icon('more'), '更多'));
-  const back = preview ? { label: '回家人版', onClick: () => go({ screen: 'tab', tab: 'more' }) } : null;
-  return [topbar({ back, title: '設計師版', right }), h('main', { class: 'content' }, ...renderDoc(p)), toastHost()];
+  const back = preview ? { label: '返回', onClick: () => go({ screen: 'tab', tab: 'more' }) } : null;
+  return [topbar({ back, title: '設計與水電需求', right }), h('main', { class: 'content' }, ...renderDoc(p)), toastHost()];
 }
 function renderDoc(p) {
   const out = [], items = state.items.filter(i => i.status !== 'skipped'), decided = items.filter(i => chosenOption(i));
   const noPrice = !p.show.price, txt = t => noPrice ? stripPriceSentences(t) : t;
-  out.push(h('div', { class: 'doc' }, h('div', { class: 'doc-head' }, h('p', { class: 'eyebrow' }, '設計師版・整合設計與水電需求'), h('h2', {}, state.meta.title), h('p', { class: 'muted' }, state.meta.subtitle),
-    h('p', { class: 'small muted', style: 'margin-top:.3rem' }, `資料更新：${fmtTime(state.updatedAt, true)}（台灣時間）・已決定 ${decided.length}／${items.length} 項${noPrice ? '・本版不含價格' : ''}`))));
-  out.push(h('div', { class: 'banner info no-print' }, icon('info'), h('div', { class: 'small' }, '怎麼看：每個品項列出「選定型號」（或候選方案）的尺寸、開孔與電源；安裝須知用顏色標籤分 ', tagChip('電'), ' ', tagChip('水'), ' ', tagChip('排風'), ' ', tagChip('尺寸'), '。最下方是全屋前置工程清單。資料由家人即時更新，列印前建議重新整理。')));
+  out.push(h('div', { class: 'doc' }, h('div', { class: 'doc-head' }, h('p', { class: 'eyebrow' }, '設計與水電需求總表'), h('h2', {}, state.meta.title), h('p', { class: 'muted' }, state.meta.subtitle),
+    h('p', { class: 'small muted', style: 'margin-top:.3rem' }, `資料更新：${fmtTime(state.updatedAt, true)}（台灣時間）・已決定 ${decided.length}／${items.length} 項`))));
+  out.push(h('div', { class: 'banner info no-print' }, icon('info'), h('div', { class: 'small' }, '怎麼看：每個品項列出「選定型號」（或候選方案）的尺寸、開孔與電源；安裝須知用顏色標籤分 ', tagChip('電'), ' ', tagChip('水'), ' ', tagChip('排風'), ' ', tagChip('尺寸'), '。最下方是全屋前置工程清單與自來水硬度。內容由屋主隨時更新，列印前建議重新整理。')));
   if (p.show.install) {
     const short = t => { const x = (t || '').split(/[；（(，,。]/)[0].trim(); return x.length > 16 ? x.slice(0, 16) + '…' : x; };
     const quick = items.map(i => { const o = chosenOption(i); const tags = [...new Set(i.install.map(n => n.tag))]; const powerNote = i.install.find(n => n.tag === '電'); const chips = [chip('電：' + short((o && o.power) || (powerNote && powerNote.text) || '—'), 'tag tag-電')]; ['水', '排水', '排風', '搬運'].forEach(t => { if (tags.includes(t)) chips.push(tagChip(t)); }); if (o && o.cutout) chips.push(chip('開孔：' + short(o.cutout), 'tag tag-尺寸')); return h('div', { class: 'row wrap', style: 'padding:.45rem 0;border-top:1px solid var(--line)' }, h('b', { style: 'min-width:7em' }, i.name), h('span', { class: 'tiny' }, o ? `${o.brand} ${o.model}` : '未決定'), h('span', { class: 'row wrap', style: 'gap:.3rem' }, chips)); });
@@ -382,7 +378,7 @@ function renderDoc(p) {
     out.push(h('div', { class: 'doc' }, h('h3', { class: 'h-room' }, '全屋前置工程清單'), groups.map(gn => h('div', { class: 'ditem' }, h('h4', {}, gn), h('ul', {}, state.prep.filter(x => x.group === gn).map(x => h('li', { style: x.done ? 'color:var(--ink-3);text-decoration:line-through' : '' }, tagChip(x.trade), ' ', x.text)))))));
     const w = state.meta.water; if (w) out.push(h('div', { class: 'card flat' }, h('div', { class: 'eyebrow' }, '自來水水質（官方一手數據）'), h('p', {}, `${w.plant}，採樣 ${w.sampledAt}：總硬度 ${w.hardness} mg/L（${w.grade}）、TDS ${w.tds}、pH ${w.ph}。`), h('p', { class: 'small muted' }, w.note)));
   }
-  out.push(h('p', { class: 'tiny', style: 'text-align:center' }, `本頁由家人清單自動產生・${fmtTime(nowIso(), true)}`));
+  out.push(h('p', { class: 'tiny', style: 'text-align:center' }, `產生時間 ${fmtTime(nowIso(), true)}`));
   return out;
 }
 function docItem(i, p) {

@@ -134,13 +134,15 @@ function parseProductUrl(raw) {
 }
 const searchUrls = kw => ({ momo: `https://www.momoshop.com.tw/search/searchShop.jsp?keyword=${encodeURIComponent(kw)}`, pchome: `https://24h.pchome.com.tw/search/?q=${encodeURIComponent(kw)}` });
 const compareUrls = kw => ({ feebee: `https://feebee.com.tw/s/?q=${encodeURIComponent(kw)}`, biggo: `https://biggo.com.tw/s/${encodeURIComponent(kw)}/` });
-const PRICE_RE = /NT\$|\d\s*萬|[\d,]{3,}\s*元/;
-function stripPriceSentences(text) { if (!text) return ''; return text.split(/(?<=[。；;])/).filter(seg => !PRICE_RE.test(seg)).join('').trim(); }
+const PRICE_RE = /NT\$|\d\s*萬|[\d,]{3,}\s*元|\d{1,3}(,\d{3})+/;
+const PURCHASE_RE = /價|便宜|省|現貨|缺貨|下架|售完|詢價|買|CP|MOMO|PChome|通路|賣場|官網|經銷|保固|免費|安裝費|報告|實查|下單|庫存|促銷|限時/;
+function stripPriceSentences(text) { if (!text) return ''; return text.split(/(?<=[。；;])|(?=——)/).filter(seg => !PRICE_RE.test(seg) && !PURCHASE_RE.test(seg)).map((seg, i) => i === 0 ? seg.replace(/^——/, '') : seg).join('').trim(); }
 
 /* ---------- app state ---------- */
 let state = null;
 let me = store.get(KEYS.me);
-let role = store.get(KEYS.role);
+const DESIGNER_PARAM = (() => { try { return new URLSearchParams(location.search).get('d'); } catch { return null; } })();
+let role = DESIGNER_PARAM ? 'designer' : 'family';
 let route = { screen: 'tab', tab: 'list', itemId: null, preview: false };
 let saveState = { s: 'idle', msg: '' };
 let pending = store.get(KEYS.pending, []);

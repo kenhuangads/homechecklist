@@ -4,13 +4,13 @@
 **https://kenhuangads.github.io/homechecklist/**
 
 - 家人：看價格、即時比價、選方案、打勾待辦、留言；每筆修改都有「誰／哪台裝置／幾點／改了什麼」的紀錄，可還原。
-- 設計師：同一網址，點「我是設計師」→ 只看尺寸、開孔、電壓迴路、給排水、排風與全屋前置工程（不顯示價格），可直接列印。
+- 設計師：由家人在「更多 → 設計師專用連結」產生帶參數的連結（`?d=…`），打開直接是設計與水電需求總表（尺寸、開孔、電壓迴路、給排水、排風、前置工程），可直接列印。
 
 ## 架構
 | 層 | 做法 |
 |---|---|
 | 網站 | 靜態單檔 `docs/index.html`，由 GitHub Pages 提供（`main` 分支 `/docs`） |
-| 雲端資料與版本紀錄 | Google 試算表 + Apps Script 網頁應用程式（`apps-script/Code.gs`）；資料存在你的雲端硬碟 `homechecklist-data/state.json`，每次儲存都留快照；試算表 `history` 分頁記錄每筆修改 |
+| 雲端資料與版本紀錄 | Google 試算表 + Apps Script 網頁應用程式（`apps-script/Code.gs`，只要求「目前這份試算表」權限）；資料壓縮後存在 `state` 分頁，每次儲存在 `snapshots` 分頁留快照（最近 120 份），`history` 分頁記錄每筆修改 |
 | 每日價格 | GitHub Actions 每天 11:00（台灣）呼叫 PChome 公開 API 更新 `docs/prices.json`，網站顯示「今日價」；另有飛比價格／BigGo 即時比價連結 |
 | 商品資料 | `src/seed.json`：42 個方案、133 個連結（2026/8/22 逐一實查，失效連結已替換） |
 
