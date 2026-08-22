@@ -1,5 +1,5 @@
 {
-  "checkedAt": "2026-08-22T14:46:34.827Z",
+  "checkedAt": "2026-08-22T15:35:55.722Z",
   "source": "PChome 24h prodapi (每日自動更新)",
   "pchome": {
     "QBAY1F-A900A80OH": {
@@ -105,7 +105,7 @@
       "button": "ForSale"
     },
     "DMAWI0-A900ITF3M": {
-      "low": 36800,
+      "low": 33120,
       "list": 36800,
       "qty": 20,
       "button": "ForSale"
@@ -146,6 +146,30 @@
       "qty": 0,
       "button": "NotReady"
     },
+    "DEDW02-A900K5B4X": {
+      "low": 172200,
+      "list": 172200,
+      "qty": 10,
+      "button": "ForSale"
+    },
+    "DEDW02-A900K5B4X-001": {
+      "low": 172200,
+      "list": 172200,
+      "qty": 10,
+      "button": "ForSale"
+    },
+    "DEDW02-A900K5B9K": {
+      "low": 129560,
+      "list": 129560,
+      "qty": 10,
+      "button": "ForSale"
+    },
+    "DEDW02-A900K5B9K-001": {
+      "low": 129560,
+      "list": 129560,
+      "qty": 10,
+      "button": "ForSale"
+    },
     "DEDW02-A900K5BBS": {
       "low": 112340,
       "list": 112340,
@@ -158,28 +182,10 @@
       "qty": 8,
       "button": "ForSale"
     },
-    "DMAL6W-A900JNQF2": {
-      "low": 23900,
-      "list": 23900,
-      "qty": 10,
-      "button": "ForSale"
-    },
-    "DEDW02-A900IZCQE": {
-      "low": 15436,
-      "list": 15436,
-      "qty": 20,
-      "button": "ForSale"
-    },
-    "DMAL6W-A900JVX5O": {
-      "low": 17900,
-      "list": 17900,
-      "qty": 16,
-      "button": "ForSale"
-    },
-    "DMAL6W-A900JVWI8": {
-      "low": 14900,
-      "list": 14900,
-      "qty": 11,
+    "DMAL6I-A900JEKAD": {
+      "low": 34900,
+      "list": 34900,
+      "qty": 2,
       "button": "ForSale"
     },
     "DPAL3O-A900K8KTZ": {

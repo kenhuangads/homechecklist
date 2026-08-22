@@ -1,0 +1,157 @@
+[
+  {
+    "key": "neorest_rs_ces83410gtw",
+    "type": "一體型",
+    "model": "CES83410GTW",
+    "name_zh": "TOTO 除菌全自動馬桶(CES83410GTW 不含安裝)",
+    "autoLid": true,
+    "autoFlush": true,
+    "momo": {
+      "url": "https://www.momoshop.com.tw/search/searchShop.jsp?keyword=CES83410GTW",
+      "price": null,
+      "verified": "none",
+      "note": "momo 站內搜尋 CES83410GTW / NEOREST 均無結果（2026-08-22）"
+    },
+    "pchome": {
+      "url": "https://24h.pchome.com.tw/prod/DEDW02-A900K5BBS",
+      "price": 112340,
+      "verified": "fetched",
+      "note": "不含安裝；原價 137,000；button API 庫存 8、ForSale"
+    },
+    "best_price": { "amount": 112340, "source": "pchome", "checkedAt": "2026-08-22" },
+    "notes": "NEOREST RS 一體型，TOTO 台灣官網「自動掀蓋/洗淨」名單內，自動掀蓋＋自動沖水內建，不需另配馬桶。"
+  },
+  {
+    "key": "neorest_as_ces85510gtw",
+    "type": "一體型",
+    "model": "CES85510GTW",
+    "name_zh": "TOTO 除菌全自動馬桶(CES85510GTW 不含安裝)",
+    "autoLid": true,
+    "autoFlush": true,
+    "momo": {
+      "url": "https://www.momoshop.com.tw/search/searchShop.jsp?keyword=CES85510GTW",
+      "price": null,
+      "verified": "none",
+      "note": "momo 站內搜尋 CES85510GTW / NEOREST 均無結果（2026-08-22）"
+    },
+    "pchome": {
+      "url": "https://24h.pchome.com.tw/prod/DEDW02-A900K5B9K",
+      "price": 129560,
+      "verified": "fetched",
+      "note": "不含安裝；原價 158,000；button API 庫存 10、ForSale"
+    },
+    "best_price": { "amount": 129560, "source": "pchome", "checkedAt": "2026-08-22" },
+    "notes": "NEOREST AS 一體型，官網自動掀蓋/洗淨名單內，自動掀蓋＋自動沖水內建。"
+  },
+  {
+    "key": "neorest_ls_ces87120gtw",
+    "type": "一體型",
+    "model": "CES87120GTW",
+    "name_zh": "TOTO 除菌全自動馬桶(CES87120GTW 不含安裝)",
+    "autoLid": true,
+    "autoFlush": true,
+    "momo": {
+      "url": "https://www.momoshop.com.tw/search/searchShop.jsp?keyword=CES87120GTW",
+      "price": null,
+      "verified": "none",
+      "note": "momo 站內搜尋 CES87120GTW / NEOREST 均無結果（2026-08-22）"
+    },
+    "pchome": {
+      "url": "https://24h.pchome.com.tw/prod/DEDW02-A900K5B4X",
+      "price": 172200,
+      "verified": "fetched",
+      "note": "不含安裝；原價 210,000；button API 庫存 10、ForSale"
+    },
+    "best_price": { "amount": 172200, "source": "pchome", "checkedAt": "2026-08-22" },
+    "notes": "TOTO 台灣官網標示為 NEOREST LS（非 AH），自動掀蓋＋自動沖水內建；LS 其他色款 CES87220GTW/CES87320GTW/CES87820GTW 兩平台皆未上架。"
+  },
+  {
+    "key": "neorest_nx2_ces903kvg",
+    "type": "一體型",
+    "model": "CES903KVG",
+    "name_zh": "TOTO NEOREST NX2 除菌全自動馬桶",
+    "autoLid": true,
+    "autoFlush": true,
+    "exclude": true,
+    "momo": {
+      "url": "https://www.momoshop.com.tw/search/searchShop.jsp?keyword=CES903KVG",
+      "price": null,
+      "verified": "none",
+      "note": "momo 無上架（搜尋 CES903KVG / NX2 無相符商品）"
+    },
+    "pchome": {
+      "url": "https://24h.pchome.com.tw/search/?q=CES903KVG",
+      "price": null,
+      "verified": "none",
+      "note": "PChome 無上架（搜尋 CES903KVG / NX2 結果 0）"
+    },
+    "best_price": { "amount": null, "source": null, "checkedAt": "2026-08-22" },
+    "notes": "依指示標記 exclude；兩平台均無上架，僅 TOTO 官網/經銷商販售。"
+  },
+  {
+    "key": "g5_ces75110atw",
+    "type": "一體型",
+    "model": "CES75110ATW",
+    "name_zh": "TOTO G5 WASHLET 一體型馬桶 CES75110ATW",
+    "autoLid": true,
+    "autoFlush": true,
+    "momo": {
+      "url": "https://www.momoshop.com.tw/search/searchShop.jsp?keyword=CES75110ATW",
+      "price": null,
+      "verified": "none",
+      "note": "momo 搜尋 CES75110ATW 無結果"
+    },
+    "pchome": {
+      "url": "https://24h.pchome.com.tw/search/?q=CES75110ATW",
+      "price": null,
+      "verified": "none",
+      "note": "PChome 搜尋 CES75110ATW 結果 0"
+    },
+    "best_price": { "amount": null, "source": null, "checkedAt": "2026-08-22" },
+    "notes": "TOTO 官網自動掀蓋/洗淨名單內的非 NEOREST 一體型（G5），兩平台目前皆未上架。"
+  },
+  {
+    "key": "washlet_s7_tcf47360gtw",
+    "type": "便座",
+    "model": "TCF47360GTW",
+    "name_zh": "【TOTO】S7 旗艦款 除菌溫水洗淨便座 TCF47360GTW(電解除菌水/智慧洗淨/自動掀蓋/WASHLET/免治馬桶座)",
+    "autoLid": true,
+    "autoFlush": true,
+    "momo": {
+      "url": "https://www.momoshop.com.tw/goods/GoodsDetail.jsp?i_code=12288626",
+      "price": 34900,
+      "verified": "fetched",
+      "note": "頁面 JSON-LD 售價 34,900；品名未標示安裝；無缺貨/無展售標記"
+    },
+    "pchome": {
+      "url": "https://24h.pchome.com.tw/prod/DMAL6I-A900JEKAD",
+      "price": 34900,
+      "verified": "fetched",
+      "note": "原價 57,000；button API 庫存 2、ForSale；品名未標示安裝"
+    },
+    "best_price": { "amount": 34900, "source": "momo", "checkedAt": "2026-08-22" },
+    "notes": "兩平台同價 34,900；S7 旗艦款便座本身有自動掀蓋，自動沖水需搭配 TOTO 對應藏線款自動沖水馬桶（CW288/CW923/CW887/CW889 的 S7AA 組合）；S7 輕奢款 TCF47160GTW 無自動掀蓋。"
+  },
+  {
+    "key": "combo_ccw288s7aa",
+    "type": "馬桶",
+    "model": "CCW288S7AA",
+    "name_zh": "【TOTO】除菌全自動馬桶CCW288S7AA(S7旗艦/自動掀蓋/自動沖水/自動除菌/藏線款/免治馬桶)",
+    "autoLid": true,
+    "autoFlush": true,
+    "momo": {
+      "url": "https://www.momoshop.com.tw/goods/GoodsDetail.jsp?i_code=15239925",
+      "price": 71920,
+      "verified": "fetched",
+      "note": "CW288 單體馬桶＋S7 旗艦便座（TCF47360GTW）極淨藏線組合；頁面 JSON-LD 售價 71,920；品名未標示安裝"
+    },
+    "pchome": {
+      "url": "https://24h.pchome.com.tw/search/?q=CCW288S7AA",
+      "price": null,
+      "verified": "none",
+      "note": "PChome 搜尋 CCW288 / CCW288S7AA 結果 0"
+    },
+    "best_price": { "amount": 71920, "source": "momo", "checkedAt": "2026-08-22" },
+    "notes": "賣場明示自動掀蓋＋自動沖水；同系列 CCW288S7NA（S7 輕奢，momo 15239928，58,160）僅自動沖水無自動掀蓋故不列；官網另有 CCW923/CCW887/CCW889 S7AA 組合，兩平台皆未上架。"
+  }
+]

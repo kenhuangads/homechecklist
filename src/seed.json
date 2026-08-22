@@ -1,7 +1,7 @@
 {
   "schema": 1,
-  "rev": 11,
-  "updatedAt": "2026-08-22T14:42:37.851Z",
+  "rev": 12,
+  "updatedAt": "2026-08-22T15:35:55.693Z",
   "meta": {
     "title": "南投老家翻修清單",
     "subtitle": "全屋家電採購與安裝需求",
@@ -1731,331 +1731,340 @@
       "id": "toilet",
       "roomId": "bath",
       "name": "TOTO 電腦馬桶",
-      "short": "一體型 vs 分離式",
+      "short": "自動掀蓋＋自動沖水",
       "status": "choosing",
       "chosenOptionId": null,
-      "hardReq": "",
-      "advice": "一體型（NEOREST）造型俐落、功能整合最完整，但整組故障要整台維修、單價高；分離式（WASHLET 便座＋馬桶）日後只換座、維修便宜、CP 值高，多數家庭建議分離式。頂級控制在 NEOREST RS；NX2 價格遠超一般家庭需求，已剔除。",
+      "hardReq": "必須同時有自動掀蓋與自動沖水。",
+      "advice": "要同時有自動掀蓋＋自動沖水只有兩條路：一體型的 NEOREST（RS／AS／LS）或 G5，或是 TOTO 原廠套組「S7 旗艦款便座＋馬桶洗淨裝置 TCA541＋對應單體馬桶」（CCW288S7AA 等）。套組是分離式，便座壞了只換便座、價格也最低；NEOREST 一體成型最俐落，有電解除菌水（G5 沒有）。",
       "warnings": [
-        "TOTO NX2 CES903KVG 價格遠超一般家庭需求，已剔除。"
+        "S7 輕奢款（TCF47160GTW）與 S5、S2 便座都沒有自動掀蓋，不符需求，已不列入。",
+        "便座式的自動沖水必須搭配 TOTO 原廠洗淨裝置（TCA541／TCA540）與對應單體馬桶（CW288／CW923／CW887／CW889）；便座單買裝在舊馬桶上不會有自動沖水。",
+        "NX2（CES903KVG，建議售價 507,200）與 NX1（302,500）價格過高，不列入。"
       ],
       "install": [
         {
-          "tag": "尺寸",
-          "text": "排水管距：CW769CTW 305–400 mm；NEOREST RS 地排 305–435 mm（436–540 或 200 mm 需洽經銷）、壁排 120–155 mm。購買前務必量測。"
+          "tag": "電",
+          "text": "馬桶側預留 110V 防水接地插座（分離式套組含洗淨裝置，建議預留 2 組較保險）。"
         },
         {
-          "tag": "電",
-          "text": "馬桶側需 110V 防水接地插座。"
+          "tag": "尺寸",
+          "text": "管距購買前務必量測：NEOREST RS／AS 地排 305–435 mm（-S1）或壁排 120–155 mm（-S2）；LS 地排 305–435；G5 地排 305 或 400；套組 CW288 地排 305–400 mm。"
+        },
+        {
+          "tag": "尺寸",
+          "text": "一體型尺寸：RS W386×D690×H515、AS W386×D690×H512、LS W411×D725×H497、G5 W386×D721×H518 mm；套組 CW288 含便座 W452×D732×H625 mm。"
         },
         {
           "tag": "水",
-          "text": "給水壓力一般機種約 0.05–0.75MPa；透天高樓層水壓不足需加壓馬達，過高則加減壓閥。"
+          "text": "給水壓力約 0.05–0.75MPa；透天高樓層水壓不足需加壓馬達，過高則加減壓閥。"
         },
         {
           "tag": "其他",
-          "text": "水錘吸收器非必裝，管路有水錘聲再加；TOTO 全台服務網完整。"
+          "text": "自動掀蓋需要便蓋上方淨空，馬桶上方不要做置物層板；S7 旗艦便座搭對應馬桶可藏線。水錘吸收器非必裝，有水錘聲再加。"
         }
       ],
       "options": [
         {
-          "id": "toilet_neorest_rs_ces83410gtw",
-          "key": "toilet_neorest_rs_ces83410gtw",
-          "tier": "頂級",
           "brand": "TOTO",
-          "model": "NEOREST RS CES83410GTW",
-          "name": "TOTO NEOREST RS 全自動馬桶（一體型）",
-          "highlights": [
-            "自動掀蓋、自動沖水",
-            "電解除菌水，常保清潔",
-            "一體成型最俐落"
-          ],
-          "dims": "W386 × D690 × H515 mm",
-          "cutout": "管距：地排 305–435 mm（-S1）／壁排 120–155 mm（-S2）",
-          "power": "110V 防水接地插座",
           "weight": "",
-          "other": "",
+          "note": "",
+          "checkedAt": "2026-08-22",
+          "storeName": "",
+          "researchNote": "",
+          "id": "toilet_neorest_ls_ces87120gtw",
+          "key": "toilet_neorest_ls_ces87120gtw",
+          "tier": "頂級",
+          "model": "NEOREST LS CES87120GTW",
+          "name": "TOTO NEOREST LS 除菌全自動馬桶（一體型）",
+          "highlights": [
+            "自動掀蓋＋自動沖水，一體成型",
+            "AIR-IN WONDER WAVE 律動水波、電解除菌水",
+            "最新外型，洗淨只用 3.8L／3.0L"
+          ],
+          "dims": "W411 × D725 × H497 mm",
+          "cutout": "管距：地排 305–435 mm（436–540 mm 洽經銷商）",
+          "power": "110V 防水接地插座；洗淨水量 3.8L／3.0L",
+          "other": "暖風烘乾、除臭、前噴霧、遙控器",
           "price": {
-            "amount": 112340,
-            "min": 112340,
-            "max": 112340,
+            "amount": 172200,
+            "min": 172200,
+            "max": 210000,
             "source": "pchome",
             "checkedAt": "2026-08-22",
-            "note": "PChome 112,340（市價 137,000，不含安裝，庫存 8）；MOMO 第三方賣場無法取得價格；TOTO 官網定價 137,000",
-            "sourceDetail": "pchome"
+            "note": "PChome 172,200（建議售價 210,000，不含安裝，庫存 10）；MOMO 未上架"
           },
           "links": [
             {
-              "type": "search-momo",
-              "url": "https://www.momoshop.com.tw/search/searchShop.jsp?keyword=CES83410GTW",
-              "verified": false,
-              "note": "原商品頁已下架，改為搜尋頁",
-              "checkedAt": "2026-08-22",
-              "check": "dead"
+              "type": "pchome",
+              "url": "https://24h.pchome.com.tw/prod/DEDW02-A900K5B4X",
+              "verified": true,
+              "note": "不含安裝，庫存 10"
             },
+            {
+              "type": "official",
+              "url": "https://www.twtoto.com.tw/product-detail.aspx?mid=1&id=2810",
+              "verified": true
+            },
+            {
+              "type": "search-momo",
+              "url": "https://www.momoshop.com.tw/search/searchShop.jsp?keyword=CES87120GTW",
+              "verified": false
+            }
+          ],
+          "availability": "in_stock",
+          "cmpKeyword": "TOTO CES87120GTW"
+        },
+        {
+          "brand": "TOTO",
+          "weight": "",
+          "note": "",
+          "checkedAt": "2026-08-22",
+          "storeName": "",
+          "researchNote": "",
+          "id": "toilet_neorest_as_ces85510gtw",
+          "key": "toilet_neorest_as_ces85510gtw",
+          "tier": "高級",
+          "model": "NEOREST AS CES85510GTW",
+          "name": "TOTO NEOREST AS 除菌全自動馬桶（一體型）",
+          "highlights": [
+            "自動掀蓋＋自動沖水，一體成型",
+            "RS 外型＋AIR-IN WONDER WAVE 律動水波",
+            "電解除菌水、暖風烘乾；地排／壁排都有"
+          ],
+          "dims": "W386 × D690 × H512 mm",
+          "cutout": "管距：地排 305–435 mm（-S1）／壁排 120–155 mm（-S2）",
+          "power": "110V 防水接地插座；洗淨水量 地排 3.8L／3.0L",
+          "other": "暖風烘乾、除臭、前噴霧、遙控器",
+          "price": {
+            "amount": 129560,
+            "min": 129560,
+            "max": 158000,
+            "source": "pchome",
+            "checkedAt": "2026-08-22",
+            "note": "PChome 129,560（建議售價 158,000，不含安裝，庫存 10）；MOMO 未上架"
+          },
+          "links": [
+            {
+              "type": "pchome",
+              "url": "https://24h.pchome.com.tw/prod/DEDW02-A900K5B9K",
+              "verified": true,
+              "note": "不含安裝，庫存 10"
+            },
+            {
+              "type": "official",
+              "url": "https://www.twtoto.com.tw/product-detail.aspx?mid=1&id=2811",
+              "verified": true
+            },
+            {
+              "type": "search-momo",
+              "url": "https://www.momoshop.com.tw/search/searchShop.jsp?keyword=CES85510GTW",
+              "verified": false
+            }
+          ],
+          "availability": "in_stock",
+          "cmpKeyword": "TOTO CES85510GTW"
+        },
+        {
+          "brand": "TOTO",
+          "weight": "",
+          "note": "",
+          "checkedAt": "2026-08-22",
+          "storeName": "",
+          "researchNote": "",
+          "id": "toilet_neorest_rs_ces83410gtw",
+          "key": "toilet_neorest_rs_ces83410gtw",
+          "tier": "高級",
+          "model": "NEOREST RS CES83410GTW",
+          "name": "TOTO NEOREST RS 除菌全自動馬桶（一體型）",
+          "highlights": [
+            "自動掀蓋＋自動沖水，一體成型",
+            "電解除菌水、前噴霧、暖風烘乾",
+            "NEOREST 入門款，金級省水標章"
+          ],
+          "dims": "W386 × D690 × H515 mm",
+          "cutout": "管距：地排 305–435 mm（-S1）／壁排 120–155 mm（-S2）",
+          "power": "110V 防水接地插座；洗淨水量 地排 3.8L／3.0L",
+          "other": "暖風烘乾、除臭、遙控器",
+          "price": {
+            "amount": 112340,
+            "min": 112340,
+            "max": 137000,
+            "source": "pchome",
+            "checkedAt": "2026-08-22",
+            "note": "PChome 112,340（建議售價 137,000，不含安裝，庫存 8）；MOMO 未上架"
+          },
+          "links": [
             {
               "type": "pchome",
               "url": "https://24h.pchome.com.tw/prod/DEDW02-A900K5BBS",
               "verified": true,
-              "note": "市價137,000；庫存8；不含安裝",
-              "checkedAt": "2026-08-22",
-              "check": "ok",
-              "stock": "ok"
+              "note": "不含安裝，庫存 8"
             },
             {
               "type": "official",
               "url": "https://www.twtoto.com.tw/product-detail.aspx?mid=1&id=2812",
-              "verified": true,
-              "checkedAt": "2026-08-22",
-              "check": "ok",
-              "stock": "ok"
+              "verified": true
+            },
+            {
+              "type": "search-momo",
+              "url": "https://www.momoshop.com.tw/search/searchShop.jsp?keyword=CES83410GTW",
+              "verified": false
             }
           ],
-          "note": "",
           "availability": "in_stock",
-          "storeName": "TOTO 除菌全自動馬桶 NEOREST RS(CES83410GTW 不含安裝)",
-          "researchNote": "一體型全自動馬桶；管距：地排水305~435mm(CES83410GTW-S1)、壁排水120~155mm(-S2)，436~540mm或200mm需洽經銷商；龍捲噴射式3.8L/3.0L；TOTO官網定價137,000",
-          "checkedAt": "2026-08-22",
           "cmpKeyword": "TOTO CES83410GTW"
         },
         {
-          "id": "washlet_s7_tcf47160gtw",
-          "key": "washlet_s7_tcf47160gtw",
-          "tier": "高級",
           "brand": "TOTO",
-          "model": "WASHLET S7 TCF47160GTW ＋ 馬桶 CW769CTW",
-          "name": "TOTO S7 輕奢款除菌溫水洗淨便座 ＋ 二段上壓分離式馬桶 CW769CTW",
-          "highlights": [
-            "瞬熱式，隨時有溫水",
-            "便座壞了只換便座，維修便宜",
-            "搭 CW769CTW，管距 305–400mm"
-          ],
-          "dims": "便座 W383 × D530 × H103 mm；馬桶 W395 × D700 × H746 mm",
-          "cutout": "管距 305–400 mm",
-          "power": "110V 防水接地插座",
           "weight": "",
-          "other": "保固：1年(momo商品頁)",
+          "note": "",
+          "checkedAt": "2026-08-22",
+          "storeName": "",
+          "researchNote": "",
+          "id": "toilet_g5_ces75110atw",
+          "key": "toilet_g5_ces75110atw",
+          "tier": "高CP值",
+          "model": "G5 全自動馬桶 CES75110ATW",
+          "name": "TOTO G5 全自動馬桶（一體型）",
+          "highlights": [
+            "自動掀蓋＋自動沖水，一體型裡最便宜",
+            "前噴霧、暖風烘乾、除臭（沒有電解除菌水）",
+            "地排 305 或 400 mm 兩種管距"
+          ],
+          "dims": "W386 × D721 × H518 mm",
+          "cutout": "管距：地排 305 mm 或 400 mm",
+          "power": "110V 防水接地插座；洗淨水量 4.8L／3.0L",
+          "other": "龍捲上旋式",
           "price": {
-            "amount": 38259,
-            "min": 38259,
-            "max": 39336,
-            "source": "momo",
+            "amount": null,
+            "min": 98000,
+            "max": 98000,
+            "source": "official",
             "checkedAt": "2026-08-22",
-            "note": "便座 S7 MOMO／PChome 23,900 ＋ 馬桶 CW769CTW MOMO 折後 14,359（限北北基桃配送）／PChome 15,436；皆不含安裝"
+            "note": "建議售價 98,000；MOMO／PChome 未上架，需向 TOTO 經銷商詢價"
           },
           "links": [
             {
-              "type": "momo",
-              "url": "https://www.momoshop.com.tw/goods/GoodsDetail.jsp?i_code=12288627",
-              "verified": true,
-              "label": "便座 S7 MOMO",
-              "note": "市售價39,800；1年保固",
-              "checkedAt": "2026-08-22",
-              "check": "ok",
-              "stock": "ok"
-            },
-            {
-              "type": "pchome",
-              "url": "https://24h.pchome.com.tw/prod/DMAL6W-A900JNQF2",
-              "verified": true,
-              "label": "便座 S7 PChome",
-              "note": "市價39,800；庫存10；另一賣場DMALH5-A900IJ9PH同價23,900",
-              "checkedAt": "2026-08-22",
-              "check": "ok",
-              "stock": "ok"
-            },
-            {
               "type": "official",
-              "url": "https://www.twtoto.com.tw/product-detail.aspx?mid=2&id=2931",
-              "verified": true,
-              "label": "便座 S7 官網",
-              "checkedAt": "2026-08-22",
-              "check": "ok",
-              "stock": "ok"
+              "url": "https://www.twtoto.com.tw/product-detail.aspx?mid=1&id=2536",
+              "verified": true
             },
             {
-              "type": "momo",
-              "url": "https://www.momoshop.com.tw/goods/GoodsDetail.jsp?i_code=13795372",
-              "verified": true,
-              "label": "馬桶 CW769CTW MOMO",
-              "note": "促銷價17,949、滿1件享8折→折後價14,359(原價20,000)；限北北基桃配送；不含安裝；另有TP0004612第三方賣場未能取得價格",
-              "checkedAt": "2026-08-22",
-              "check": "ok",
-              "stock": "ok"
+              "type": "search-momo",
+              "url": "https://www.momoshop.com.tw/search/searchShop.jsp?keyword=CES75110ATW",
+              "verified": false
             },
             {
-              "type": "pchome",
-              "url": "https://24h.pchome.com.tw/prod/DEDW02-A900IZCQE",
-              "verified": true,
-              "label": "馬桶 CW769CTW PChome",
-              "note": "市價20,000；庫存20；不含安裝",
-              "checkedAt": "2026-08-22",
-              "check": "ok",
-              "stock": "ok"
-            },
-            {
-              "type": "official",
-              "url": "https://www.twtoto.com.tw/product-detail.aspx?mid=1&id=2542",
-              "verified": true,
-              "label": "馬桶 CW769CTW 官網",
-              "checkedAt": "2026-08-22",
-              "check": "ok",
-              "stock": "ok"
+              "type": "search-pchome",
+              "url": "https://24h.pchome.com.tw/search/?q=CES75110ATW",
+              "verified": false
             }
           ],
-          "note": "",
-          "availability": "in_stock",
-          "storeName": "【TOTO】S7 輕奢款 除菌溫水洗淨便座 TCF47160GTW(電解除菌水/智慧洗淨/溫熱無縫便座/WASHLET/免治馬桶座)",
-          "researchNote": "S7輕奢款(瞬熱式、全包覆便蓋，非旗艦款TCF47360GTW)；momo與PChome同價23,900",
-          "checkedAt": "2026-08-22",
-          "cmpKeyword": "TOTO TCF47160GTW"
+          "availability": "unclear",
+          "cmpKeyword": "TOTO CES75110ATW"
         },
         {
-          "id": "washlet_s5_tcf34461gtw",
-          "key": "washlet_s5_tcf34461gtw",
-          "tier": "高CP值",
           "brand": "TOTO",
-          "model": "WASHLET S5 TCF34461GTW（或 S2 TCF33461GTW）＋ 馬桶 CW769CTW",
-          "name": "TOTO S5（2025 新款、無線遙控）或 S2 進階款便座 ＋ 分離式馬桶 CW769CTW",
-          "highlights": [
-            "S5 無線遙控＋暖風烘乾",
-            "S2 更省，功能也夠用",
-            "分離式最省錢、最好維修"
-          ],
-          "dims": "便座 S5 W382 × D533 × H139 mm；馬桶 W395 × D700 × H746 mm",
-          "cutout": "管距 305–400 mm",
-          "power": "110V 防水接地插座",
           "weight": "",
-          "other": "保固：1年(momo商品頁)",
+          "note": "",
+          "checkedAt": "2026-08-22",
+          "storeName": "",
+          "researchNote": "",
+          "id": "toilet_set_ccw288s7aa",
+          "key": "toilet_set_ccw288s7aa",
+          "tier": "高CP值",
+          "model": "CCW288S7AA 套組（CW288 馬桶＋S7 旗艦便座＋洗淨裝置）",
+          "name": "TOTO 除菌全自動馬桶套組：CW288SGUR 單體馬桶＋WASHLET S7 旗艦款 TCF47360GTW＋馬桶洗淨裝置 TCA541",
+          "highlights": [
+            "原廠套組：便座電動掀蓋＋洗淨裝置自動沖水",
+            "分離式，便座壞了只換便座",
+            "全部方案裡最便宜，MOMO 有現貨"
+          ],
+          "dims": "含便座 W452 × D732 × H625 mm；便座 W383 × D530 × H103 mm",
+          "cutout": "管距：地排 305–400 mm",
+          "power": "110V 防水接地插座；沖水量 4.8L",
+          "other": "同系列其他馬桶套組（經銷商）：CCW887S7AA 建議售價 88,800、CCW923S7AA 95,400、CCW889S7AA 87,600",
           "price": {
-            "amount": 32259,
-            "min": 29259,
-            "max": 33336,
+            "amount": 71920,
+            "min": 71920,
+            "max": 89900,
             "source": "momo",
             "checkedAt": "2026-08-22",
-            "note": "S5 17,900 或 S2 14,900 ＋ 馬桶 CW769CTW 14,359–15,436；皆不含安裝"
+            "note": "MOMO 71,920（建議售價 89,900）；PChome 未上架；S7 旗艦便座單買 34,900，但要另配 TCA541 與對應馬桶才有自動沖水"
           },
           "links": [
             {
               "type": "momo",
-              "url": "https://www.momoshop.com.tw/goods/GoodsDetail.jsp?i_code=14834661",
+              "url": "https://www.momoshop.com.tw/goods/GoodsDetail.jsp?i_code=15239925",
               "verified": true,
-              "label": "便座 S5 MOMO",
-              "note": "市售價32,400；1年保固；廠商宅配",
-              "checkedAt": "2026-08-22",
-              "check": "ok",
-              "stock": "ok"
-            },
-            {
-              "type": "pchome",
-              "url": "https://24h.pchome.com.tw/prod/DMAL6W-A900JVX5O",
-              "verified": true,
-              "label": "便座 S5 PChome",
-              "note": "市價32,400；庫存16",
-              "checkedAt": "2026-08-22",
-              "check": "ok",
-              "stock": "ok"
+              "note": "MOMO 71,920"
             },
             {
               "type": "official",
-              "url": "https://www.twtoto.com.tw/product-detail.aspx?mid=2&id=2969",
+              "url": "https://www.twtoto.com.tw/product-detail.aspx?mid=1&id=2926",
               "verified": true,
-              "label": "便座 S5 官網",
-              "checkedAt": "2026-08-22",
-              "check": "ok",
-              "stock": "ok"
+              "label": "官網套組頁"
+            },
+            {
+              "type": "search-pchome",
+              "url": "https://24h.pchome.com.tw/search/?q=CCW288S7AA",
+              "verified": false
             },
             {
               "type": "momo",
-              "url": "https://www.momoshop.com.tw/goods/GoodsDetail.jsp?i_code=14834662",
+              "url": "https://www.momoshop.com.tw/goods/GoodsDetail.jsp?i_code=12288626",
               "verified": true,
-              "label": "便座 S2 MOMO",
-              "note": "市售價26,000；1年保固",
-              "checkedAt": "2026-08-22",
-              "check": "ok",
-              "stock": "ok"
+              "label": "便座單品 MOMO（34,900）",
+              "note": "TCF47360GTW 單品"
             },
             {
               "type": "pchome",
-              "url": "https://24h.pchome.com.tw/prod/DMAL6W-A900JVWI8",
+              "url": "https://24h.pchome.com.tw/prod/DMAL6I-A900JEKAD",
               "verified": true,
-              "label": "便座 S2 PChome",
-              "note": "市價26,000；庫存11",
-              "checkedAt": "2026-08-22",
-              "check": "ok",
-              "stock": "ok"
+              "label": "便座單品 PChome（34,900）",
+              "note": "TCF47360GTW 單品"
             },
             {
               "type": "official",
-              "url": "https://www.twtoto.com.tw/product-detail.aspx?mid=2&id=2977",
+              "url": "https://www.twtoto.com.tw/product-detail.aspx?mid=2&id=2930",
               "verified": true,
-              "label": "便座 S2 官網",
-              "checkedAt": "2026-08-22",
-              "check": "ok",
-              "stock": "ok"
-            },
-            {
-              "type": "momo",
-              "url": "https://www.momoshop.com.tw/goods/GoodsDetail.jsp?i_code=13795372",
-              "verified": true,
-              "label": "馬桶 CW769CTW MOMO",
-              "note": "促銷價17,949、滿1件享8折→折後價14,359(原價20,000)；限北北基桃配送；不含安裝；另有TP0004612第三方賣場未能取得價格",
-              "checkedAt": "2026-08-22",
-              "check": "ok",
-              "stock": "ok"
-            },
-            {
-              "type": "pchome",
-              "url": "https://24h.pchome.com.tw/prod/DEDW02-A900IZCQE",
-              "verified": true,
-              "label": "馬桶 CW769CTW PChome",
-              "note": "市價20,000；庫存20；不含安裝",
-              "checkedAt": "2026-08-22",
-              "check": "ok",
-              "stock": "ok"
-            },
-            {
-              "type": "official",
-              "url": "https://www.twtoto.com.tw/product-detail.aspx?mid=1&id=2542",
-              "verified": true,
-              "label": "馬桶 CW769CTW 官網",
-              "checkedAt": "2026-08-22",
-              "check": "ok",
-              "stock": "ok"
+              "label": "便座官網頁"
             }
           ],
-          "note": "",
           "availability": "in_stock",
-          "storeName": "【TOTO】S5 除菌溫水洗淨便座 TCF34461GTW(電解除菌水/強力除臭/無線遙控/WASHLET/免治馬桶座)",
-          "researchNote": "2025新款S5(無線遙控、電解除菌水、暖風烘乾)；momo與PChome同價17,900",
-          "checkedAt": "2026-08-22",
-          "cmpKeyword": "TOTO TCF34461GTW"
+          "cmpKeyword": "TOTO TCF47360GTW"
         }
       ],
       "notes": [],
       "todos": [
         {
           "id": "toilet_t1",
-          "text": "量每間廁所的排水管距（305 或 400mm）",
+          "text": "量每間廁所的排水管距（305 或 400mm；NEOREST 可到 435）",
           "done": false
         },
         {
           "id": "toilet_t2",
-          "text": "馬桶旁預留 110V 防水接地插座",
+          "text": "馬桶旁預留 110V 防水接地插座（建議 2 組）",
           "done": false
         },
         {
           "id": "toilet_t3",
           "text": "確認各樓層水壓（不足加壓、過高減壓）",
           "done": false
+        },
+        {
+          "id": "toilet_t4",
+          "text": "決定一體型（NEOREST／G5）或原廠套組（S7 旗艦便座＋TCA541）",
+          "done": false
         }
       ],
       "requests": [],
       "costNotes": [
-        "NEOREST RS 實查約 11.2 萬（不含安裝）；NX2 CES903KVG 建議售價 507,200、特價仍約 35 萬，已剔除。"
+        "NEOREST 實查 PChome：RS 112,340（建議售價 137,000）、AS 129,560（158,000）、LS 172,200（210,000），皆不含安裝。",
+        "S7 旗艦款便座單買 34,900（建議售價 57,000）；套組 CCW288S7AA MOMO 71,920（建議售價 89,900）；G5 建議售價 98,000（經銷商詢價）。"
       ],
-      "pickOptionId": "washlet_s5_tcf34461gtw",
-      "pickReason": "分離式最省、壞了只換便座"
+      "pickOptionId": "toilet_set_ccw288s7aa",
+      "pickReason": "同樣有自動掀蓋＋自動沖水，便座壞了只換便座，7.2 萬比 NEOREST RS 省約 4 萬；想要一體成型、電解除菌水就選 NEOREST RS／AS。"
     },
     {
       "id": "bath_heater",
@@ -3620,5 +3629,5 @@
   },
   "history": [],
   "todos": [],
-  "catalogVersion": 2026082201
+  "catalogVersion": 2026082202
 }
