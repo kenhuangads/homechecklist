@@ -33,8 +33,9 @@ function confirmDialog({ title, text, ok = '確定', cancel = '取消', danger }
 /* ---------- identity / code ---------- */
 function openNameSheet() {
   const input = h('input', { class: 'input', value: (me && me.name) || '', maxlength: '20', placeholder: '例如：爸爸、媽媽' });
-  openSheet({ title: '怎麼稱呼您？', body: () => h('div', { class: 'stack' }, h('div', { class: 'field' }, h('label', {}, '稱呼'), input), h('p', { class: 'small muted' }, '這台裝置：' + deviceLabel())),
-    actions: [{ label: '取消' }, { label: '儲存', class: 'primary', onClick: () => { const v = input.value.trim(); if (!v) { input.focus(); return false; } me = { name: v, device: deviceLabel() }; store.set(KEYS.me, me); render(); toast('已更新稱呼'); } }] });
+  const devInput = h('input', { class: 'input', value: (me && me.deviceName) || '', maxlength: '24', placeholder: '例如：媽媽的 iPhone（選填）' });
+  openSheet({ title: '我是誰、這是哪台裝置', body: () => h('div', { class: 'stack' }, h('div', { class: 'field' }, h('label', {}, '稱呼'), input), h('div', { class: 'field' }, h('label', {}, '裝置名字'), devInput, h('p', { class: 'help' }, '偵測到：' + deviceLabel() + '。取名字後紀錄會顯示「名字・#識別碼」。'))),
+    actions: [{ label: '取消' }, { label: '儲存', class: 'primary', onClick: () => { const v = input.value.trim(); if (!v) { input.focus(); return false; } me = { name: v, deviceName: devInput.value.trim() }; store.set(KEYS.me, me); render(); toast('已更新'); } }] });
   setTimeout(() => input.focus(), 50);
 }
 let codeSheetOpen = false;
@@ -181,6 +182,7 @@ function showTutorial(kind) {
 
 /* ---------- boot ---------- */
 async function boot() {
+  refineDeviceModel();
   const app = $('#app');
   app.replaceChildren(h('main', { class: 'content' }, h('div', { class: 'card' }, h('p', { class: 'muted' }, '載入清單中…'))));
   const seed = readSeed();

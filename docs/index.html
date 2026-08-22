@@ -394,18 +394,34 @@ function fmtTime(iso, withYear) {
 function fmtDate(iso) { try { return new Intl.DateTimeFormat('zh-TW', { timeZone: TZ, year: 'numeric', month: 'numeric', day: 'numeric' }).format(new Date(iso)); } catch { return iso; } }
 function fmtDateShort(iso) { try { return new Intl.DateTimeFormat('zh-TW', { timeZone: TZ, month: 'numeric', day: 'numeric' }).format(new Date(iso)); } catch { return iso; } }
 function todayIso() { return new Date().toISOString().slice(0, 10); }
+let DEVICE_MODEL = '';
+function deviceId() {
+  let id = store.get('hc_dev');
+  if (!id) { const chars = 'ABCDEFGHJKLMNPQRSTUVWXYZ23456789'; id = ''; for (let i = 0; i < 4; i++) id += chars[Math.floor(Math.random() * chars.length)]; store.set('hc_dev', id); }
+  return id;
+}
+function iphoneSizeClass() {
+  const w = Math.min(screen.width, screen.height), hgt = Math.max(screen.width, screen.height);
+  const map = { '375x667': '4.7 吋', '414x736': '5.5 吋', '375x812': '5.4／5.8 吋', '390x844': '6.1 吋', '393x852': '6.1 吋', '402x874': '6.3 吋', '414x896': '6.1／6.5 吋', '428x926': '6.7 吋', '430x932': '6.7 吋', '440x956': '6.9 吋' };
+  return map[w + 'x' + hgt] || '';
+}
+function refineDeviceModel() {
+  try { if (navigator.userAgentData && navigator.userAgentData.getHighEntropyValues) navigator.userAgentData.getHighEntropyValues(['model', 'platformVersion']).then(v => { if (v && v.model) DEVICE_MODEL = v.model; }).catch(() => {}); } catch {}
+}
 function deviceLabel() {
   const ua = navigator.userAgent || '';
-  let dev = '電腦';
-  if (/iPhone/.test(ua)) dev = 'iPhone';
-  else if (/iPad/.test(ua) || (/Macintosh/.test(ua) && navigator.maxTouchPoints > 1)) dev = 'iPad';
-  else if (/Android/.test(ua)) dev = /Mobile/.test(ua) ? 'Android 手機' : 'Android 平板';
-  else if (/Macintosh/.test(ua)) dev = 'Mac 電腦';
-  else if (/Windows/.test(ua)) dev = 'Windows 電腦';
+  let dev = '電腦', os = '', model = DEVICE_MODEL;
+  const iosV = ua.match(/OS (\d+)[_.](\d+)/);
+  if (/iPhone/.test(ua)) { dev = 'iPhone'; os = iosV ? `iOS ${iosV[1]}.${iosV[2]}` : ''; model = model || iphoneSizeClass(); }
+  else if (/iPad/.test(ua) || (/Macintosh/.test(ua) && navigator.maxTouchPoints > 1)) { dev = 'iPad'; os = iosV ? `iPadOS ${iosV[1]}.${iosV[2]}` : ''; }
+  else if (/Android/.test(ua)) { dev = /Mobile/.test(ua) ? 'Android 手機' : 'Android 平板'; const m = ua.match(/Android ([\d.]+)(?:; ([^;)]+))?/); if (m) { os = 'Android ' + m[1].split('.')[0]; const raw = (m[2] || '').replace(/ Build.*/, '').trim(); if (!model && raw && !/^[a-z]{2}(-[a-z]{2})?$/i.test(raw) && !/^wv$/i.test(raw)) model = raw; } }
+  else if (/Macintosh/.test(ua)) { dev = 'Mac 電腦'; const m = ua.match(/Mac OS X (\d+)[_.](\d+)/); if (m) os = `macOS ${m[1]}.${m[2]}`; }
+  else if (/Windows/.test(ua)) { dev = 'Windows 電腦'; const m = ua.match(/Windows NT ([\d.]+)/); if (m) os = 'Windows ' + (m[1] === '10.0' ? '10／11' : m[1]); }
   let br = '';
-  if (/Line\//i.test(ua)) br = 'LINE'; else if (/FBAN|FBAV/.test(ua)) br = 'Facebook'; else if (/Edg\//.test(ua)) br = 'Edge'; else if (/Chrome\//.test(ua)) br = 'Chrome'; else if (/Safari\//.test(ua)) br = 'Safari'; else if (/Firefox\//.test(ua)) br = 'Firefox';
-  return br ? `${dev}・${br}` : dev;
+  if (/Line\//i.test(ua)) br = 'LINE'; else if (/FBAN|FBAV/.test(ua)) br = 'Facebook'; else if (/Edg\//.test(ua)) br = 'Edge'; else if (/CriOS/.test(ua)) br = 'Chrome'; else if (/Chrome\//.test(ua)) br = 'Chrome'; else if (/Safari\//.test(ua)) br = 'Safari'; else if (/Firefox\//.test(ua)) br = 'Firefox';
+  return [dev + (model ? `（${model}）` : ''), os, br, '#' + deviceId()].filter(Boolean).join('・');
 }
+function deviceName() { return (me && me.deviceName) ? `${me.deviceName}・#${deviceId()}` : deviceLabel(); }
 function parseProductUrl(raw) {
   const s = (raw || '').trim(); if (!s) return null;
   let url; try { url = new URL(/^https?:\/\//i.test(s) ? s : 'https://' + s); } catch { return null; }
@@ -535,7 +551,7 @@ function reduce(action) {
 function dispatch(action, opts = {}) {
   if (!state) return null;
   if (!canEdit() && !opts.force) { toast('目前是檢視模式，無法修改'); return null; }
-  action._ctx = action._ctx || { id: uid(), ts: nowIso(), who: (me && me.name) || '未具名', device: (me && me.device) || deviceLabel() };
+  action._ctx = action._ctx || { id: uid(), ts: nowIso(), who: (me && me.name) || '未具名', device: deviceName() };
   const res = reduce(action); if (!res) return null;
   const entry = { id: action._ctx.id, ts: action._ctx.ts, who: action._ctx.who, device: action._ctx.device, type: action.type, summary: res.summary, changes: res.changes, restore: !!res.restore };
   state.history.push(entry);
@@ -619,7 +635,7 @@ async function saveNow() {
   saving = true; setSave('saving', '儲存中…');
   try {
     const entries = state.history.filter(e => pending.some(a => a._ctx && a._ctx.id === e.id));
-    const res = await apiCall({ action: 'save' }, { state, baseRev: syncedRev, code: API.code, entries, who: me && me.name, device: me && me.device });
+    const res = await apiCall({ action: 'save' }, { state, baseRev: syncedRev, code: API.code, entries, who: me && me.name, device: deviceName() });
     if (res && res.ok) { syncedRev = res.rev; state.rev = res.rev; pending = []; store.set(KEYS.pending, pending); lastSyncAt = nowIso(); remoteStatus = 'ok'; setSave('saved', '已儲存到雲端 ' + fmtTime(lastSyncAt)); }
     else if (res && res.conflict) { adoptRemote(res.state, { initial: false, quiet: true }); dirtyAgain = pending.length > 0; if (!dirtyAgain) setSave('saved', '已同步'); }
     else if (res && res.error === 'code_required') { setSave('error', '需要家庭代碼才能存到雲端'); askFamilyCode(); }
@@ -741,8 +757,9 @@ function toast(msg, opts = {}) {
 function renderNameEntry() {
   const names = knownNames();
   const input = h('input', { class: 'input', type: 'text', placeholder: '例如：爸爸、媽媽、阿華', autocomplete: 'off', maxlength: '20', style: 'font-size:1.2rem', id: 'nameInput' });
+  const devInput = h('input', { class: 'input', type: 'text', placeholder: '例如：媽媽的 iPhone（選填）', autocomplete: 'off', maxlength: '24', id: 'devInput' });
   const dev = deviceLabel();
-  const start = () => { const name = input.value.trim(); if (!name) { input.focus(); toast('請先輸入稱呼'); return; } me = { name, device: dev }; store.set(KEYS.me, me); route = { screen: 'tab', tab: 'list' }; render(); window.scrollTo(0, 0); if (!store.get(KEYS.tut)) showTutorial('family'); };
+  const start = () => { const name = input.value.trim(); if (!name) { input.focus(); toast('請先輸入稱呼'); return; } me = { name, deviceName: devInput.value.trim() }; store.set(KEYS.me, me); route = { screen: 'tab', tab: 'list' }; render(); window.scrollTo(0, 0); if (!store.get(KEYS.tut)) showTutorial('family'); };
   input.addEventListener('keydown', e => { if (e.key === 'Enter') start(); });
   const main = h('main', { class: 'content welcome' },
     h('p', { class: 'eyebrow' }, '全家共用・南投老家翻修'),
@@ -750,7 +767,7 @@ function renderNameEntry() {
     h('p', { class: 'muted' }, '家電採購與安裝需求清單。第一次使用請先告訴大家您是誰，之後每一筆修改都會記下是誰改的。'),
     h('div', { class: 'field' }, h('label', { for: 'nameInput' }, '請問怎麼稱呼您？'), input),
     names.length ? h('div', { class: 'row wrap' }, h('span', { class: 'small muted' }, '或點選：'), names.map(n => h('button', { class: 'btn sm', type: 'button', onclick: () => { input.value = n; } }, n))) : null,
-    h('p', { class: 'small muted' }, '這台裝置：', dev),
+    h('div', { class: 'field' }, h('label', { for: 'devInput' }, '幫這台裝置取個名字'), devInput, h('p', { class: 'help' }, '紀錄裡會顯示是哪一台改的。偵測到：', dev)),
     h('button', { class: 'btn primary lg block', type: 'button', onclick: start }, '開始使用'),
     h('p', { class: 'tiny' }, '這個網址是固定的，不用登入，可以直接傳給家人。'));
   setTimeout(() => input.focus(), 50);
@@ -998,7 +1015,7 @@ function renderMore() {
     h('input', { class: 'input', value: shareUrlFor('designer'), readonly: true, onclick: e => e.target.select() }),
     h('div', { class: 'btn-row' }, h('button', { class: 'btn primary', type: 'button', onclick: () => shareLink('designer') }, icon('share'), '傳給設計師'), h('button', { class: 'btn', type: 'button', onclick: () => copyText(shareUrlFor('designer'), '已複製設計師連結') }, '複製連結'), h('button', { class: 'btn', type: 'button', onclick: () => go({ screen: 'doc' }) }, '預覽'))));
   out.push(h('div', { class: 'card' }, h('div', { class: 'eyebrow' }, '我是誰'),
-    h('div', { class: 'row between' }, h('div', {}, h('div', { style: 'font-size:1.2rem;font-weight:800' }, (me && me.name) || '（尚未設定）'), h('div', { class: 'small muted' }, '這台裝置：' + deviceLabel())), h('button', { class: 'btn', type: 'button', onclick: openNameSheet }, '變更'))));
+    h('div', { class: 'row between' }, h('div', {}, h('div', { style: 'font-size:1.2rem;font-weight:800' }, (me && me.name) || '（尚未設定）'), h('div', { class: 'small muted' }, '這台裝置：' + deviceName()), me && me.deviceName ? h('div', { class: 'tiny' }, '偵測到：' + deviceLabel()) : null), h('button', { class: 'btn', type: 'button', onclick: openNameSheet }, '變更'))));
   const curFont = store.get(KEYS.font, 'std');
   out.push(h('div', { class: 'card' }, h('div', { class: 'eyebrow' }, '文字大小'), h('div', { class: 'seg' }, [['std', '標準'], ['lg', '大'], ['xl', '特大']].map(([v, l]) => h('button', { class: 'btn', type: 'button', 'aria-pressed': String(curFont === v), onclick: () => { store.set(KEYS.font, v); render(); } }, l)))));
   out.push(h('div', { class: 'card' }, h('div', { class: 'eyebrow' }, '操作教學'), h('p', { class: 'small muted' }, '五個步驟，一分鐘看完：怎麼選方案、打勾、還原、分享。'), h('button', { class: 'btn outline', type: 'button', onclick: () => showTutorial('family') }, icon('book'), '再看一次操作教學')));
@@ -1111,8 +1128,9 @@ function confirmDialog({ title, text, ok = '確定', cancel = '取消', danger }
 /* ---------- identity / code ---------- */
 function openNameSheet() {
   const input = h('input', { class: 'input', value: (me && me.name) || '', maxlength: '20', placeholder: '例如：爸爸、媽媽' });
-  openSheet({ title: '怎麼稱呼您？', body: () => h('div', { class: 'stack' }, h('div', { class: 'field' }, h('label', {}, '稱呼'), input), h('p', { class: 'small muted' }, '這台裝置：' + deviceLabel())),
-    actions: [{ label: '取消' }, { label: '儲存', class: 'primary', onClick: () => { const v = input.value.trim(); if (!v) { input.focus(); return false; } me = { name: v, device: deviceLabel() }; store.set(KEYS.me, me); render(); toast('已更新稱呼'); } }] });
+  const devInput = h('input', { class: 'input', value: (me && me.deviceName) || '', maxlength: '24', placeholder: '例如：媽媽的 iPhone（選填）' });
+  openSheet({ title: '我是誰、這是哪台裝置', body: () => h('div', { class: 'stack' }, h('div', { class: 'field' }, h('label', {}, '稱呼'), input), h('div', { class: 'field' }, h('label', {}, '裝置名字'), devInput, h('p', { class: 'help' }, '偵測到：' + deviceLabel() + '。取名字後紀錄會顯示「名字・#識別碼」。'))),
+    actions: [{ label: '取消' }, { label: '儲存', class: 'primary', onClick: () => { const v = input.value.trim(); if (!v) { input.focus(); return false; } me = { name: v, deviceName: devInput.value.trim() }; store.set(KEYS.me, me); render(); toast('已更新'); } }] });
   setTimeout(() => input.focus(), 50);
 }
 let codeSheetOpen = false;
@@ -1259,6 +1277,7 @@ function showTutorial(kind) {
 
 /* ---------- boot ---------- */
 async function boot() {
+  refineDeviceModel();
   const app = $('#app');
   app.replaceChildren(h('main', { class: 'content' }, h('div', { class: 'card' }, h('p', { class: 'muted' }, '載入清單中…'))));
   const seed = readSeed();

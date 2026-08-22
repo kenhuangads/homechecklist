@@ -70,8 +70,9 @@ function toast(msg, opts = {}) {
 function renderNameEntry() {
   const names = knownNames();
   const input = h('input', { class: 'input', type: 'text', placeholder: '例如：爸爸、媽媽、阿華', autocomplete: 'off', maxlength: '20', style: 'font-size:1.2rem', id: 'nameInput' });
+  const devInput = h('input', { class: 'input', type: 'text', placeholder: '例如：媽媽的 iPhone（選填）', autocomplete: 'off', maxlength: '24', id: 'devInput' });
   const dev = deviceLabel();
-  const start = () => { const name = input.value.trim(); if (!name) { input.focus(); toast('請先輸入稱呼'); return; } me = { name, device: dev }; store.set(KEYS.me, me); route = { screen: 'tab', tab: 'list' }; render(); window.scrollTo(0, 0); if (!store.get(KEYS.tut)) showTutorial('family'); };
+  const start = () => { const name = input.value.trim(); if (!name) { input.focus(); toast('請先輸入稱呼'); return; } me = { name, deviceName: devInput.value.trim() }; store.set(KEYS.me, me); route = { screen: 'tab', tab: 'list' }; render(); window.scrollTo(0, 0); if (!store.get(KEYS.tut)) showTutorial('family'); };
   input.addEventListener('keydown', e => { if (e.key === 'Enter') start(); });
   const main = h('main', { class: 'content welcome' },
     h('p', { class: 'eyebrow' }, '全家共用・南投老家翻修'),
@@ -79,7 +80,7 @@ function renderNameEntry() {
     h('p', { class: 'muted' }, '家電採購與安裝需求清單。第一次使用請先告訴大家您是誰，之後每一筆修改都會記下是誰改的。'),
     h('div', { class: 'field' }, h('label', { for: 'nameInput' }, '請問怎麼稱呼您？'), input),
     names.length ? h('div', { class: 'row wrap' }, h('span', { class: 'small muted' }, '或點選：'), names.map(n => h('button', { class: 'btn sm', type: 'button', onclick: () => { input.value = n; } }, n))) : null,
-    h('p', { class: 'small muted' }, '這台裝置：', dev),
+    h('div', { class: 'field' }, h('label', { for: 'devInput' }, '幫這台裝置取個名字'), devInput, h('p', { class: 'help' }, '紀錄裡會顯示是哪一台改的。偵測到：', dev)),
     h('button', { class: 'btn primary lg block', type: 'button', onclick: start }, '開始使用'),
     h('p', { class: 'tiny' }, '這個網址是固定的，不用登入，可以直接傳給家人。'));
   setTimeout(() => input.focus(), 50);
@@ -327,7 +328,7 @@ function renderMore() {
     h('input', { class: 'input', value: shareUrlFor('designer'), readonly: true, onclick: e => e.target.select() }),
     h('div', { class: 'btn-row' }, h('button', { class: 'btn primary', type: 'button', onclick: () => shareLink('designer') }, icon('share'), '傳給設計師'), h('button', { class: 'btn', type: 'button', onclick: () => copyText(shareUrlFor('designer'), '已複製設計師連結') }, '複製連結'), h('button', { class: 'btn', type: 'button', onclick: () => go({ screen: 'doc' }) }, '預覽'))));
   out.push(h('div', { class: 'card' }, h('div', { class: 'eyebrow' }, '我是誰'),
-    h('div', { class: 'row between' }, h('div', {}, h('div', { style: 'font-size:1.2rem;font-weight:800' }, (me && me.name) || '（尚未設定）'), h('div', { class: 'small muted' }, '這台裝置：' + deviceLabel())), h('button', { class: 'btn', type: 'button', onclick: openNameSheet }, '變更'))));
+    h('div', { class: 'row between' }, h('div', {}, h('div', { style: 'font-size:1.2rem;font-weight:800' }, (me && me.name) || '（尚未設定）'), h('div', { class: 'small muted' }, '這台裝置：' + deviceName()), me && me.deviceName ? h('div', { class: 'tiny' }, '偵測到：' + deviceLabel()) : null), h('button', { class: 'btn', type: 'button', onclick: openNameSheet }, '變更'))));
   const curFont = store.get(KEYS.font, 'std');
   out.push(h('div', { class: 'card' }, h('div', { class: 'eyebrow' }, '文字大小'), h('div', { class: 'seg' }, [['std', '標準'], ['lg', '大'], ['xl', '特大']].map(([v, l]) => h('button', { class: 'btn', type: 'button', 'aria-pressed': String(curFont === v), onclick: () => { store.set(KEYS.font, v); render(); } }, l)))));
   out.push(h('div', { class: 'card' }, h('div', { class: 'eyebrow' }, '操作教學'), h('p', { class: 'small muted' }, '五個步驟，一分鐘看完：怎麼選方案、打勾、還原、分享。'), h('button', { class: 'btn outline', type: 'button', onclick: () => showTutorial('family') }, icon('book'), '再看一次操作教學')));

@@ -104,18 +104,34 @@ function fmtTime(iso, withYear) {
 function fmtDate(iso) { try { return new Intl.DateTimeFormat('zh-TW', { timeZone: TZ, year: 'numeric', month: 'numeric', day: 'numeric' }).format(new Date(iso)); } catch { return iso; } }
 function fmtDateShort(iso) { try { return new Intl.DateTimeFormat('zh-TW', { timeZone: TZ, month: 'numeric', day: 'numeric' }).format(new Date(iso)); } catch { return iso; } }
 function todayIso() { return new Date().toISOString().slice(0, 10); }
+let DEVICE_MODEL = '';
+function deviceId() {
+  let id = store.get('hc_dev');
+  if (!id) { const chars = 'ABCDEFGHJKLMNPQRSTUVWXYZ23456789'; id = ''; for (let i = 0; i < 4; i++) id += chars[Math.floor(Math.random() * chars.length)]; store.set('hc_dev', id); }
+  return id;
+}
+function iphoneSizeClass() {
+  const w = Math.min(screen.width, screen.height), hgt = Math.max(screen.width, screen.height);
+  const map = { '375x667': '4.7 吋', '414x736': '5.5 吋', '375x812': '5.4／5.8 吋', '390x844': '6.1 吋', '393x852': '6.1 吋', '402x874': '6.3 吋', '414x896': '6.1／6.5 吋', '428x926': '6.7 吋', '430x932': '6.7 吋', '440x956': '6.9 吋' };
+  return map[w + 'x' + hgt] || '';
+}
+function refineDeviceModel() {
+  try { if (navigator.userAgentData && navigator.userAgentData.getHighEntropyValues) navigator.userAgentData.getHighEntropyValues(['model', 'platformVersion']).then(v => { if (v && v.model) DEVICE_MODEL = v.model; }).catch(() => {}); } catch {}
+}
 function deviceLabel() {
   const ua = navigator.userAgent || '';
-  let dev = '電腦';
-  if (/iPhone/.test(ua)) dev = 'iPhone';
-  else if (/iPad/.test(ua) || (/Macintosh/.test(ua) && navigator.maxTouchPoints > 1)) dev = 'iPad';
-  else if (/Android/.test(ua)) dev = /Mobile/.test(ua) ? 'Android 手機' : 'Android 平板';
-  else if (/Macintosh/.test(ua)) dev = 'Mac 電腦';
-  else if (/Windows/.test(ua)) dev = 'Windows 電腦';
+  let dev = '電腦', os = '', model = DEVICE_MODEL;
+  const iosV = ua.match(/OS (\d+)[_.](\d+)/);
+  if (/iPhone/.test(ua)) { dev = 'iPhone'; os = iosV ? `iOS ${iosV[1]}.${iosV[2]}` : ''; model = model || iphoneSizeClass(); }
+  else if (/iPad/.test(ua) || (/Macintosh/.test(ua) && navigator.maxTouchPoints > 1)) { dev = 'iPad'; os = iosV ? `iPadOS ${iosV[1]}.${iosV[2]}` : ''; }
+  else if (/Android/.test(ua)) { dev = /Mobile/.test(ua) ? 'Android 手機' : 'Android 平板'; const m = ua.match(/Android ([\d.]+)(?:; ([^;)]+))?/); if (m) { os = 'Android ' + m[1].split('.')[0]; const raw = (m[2] || '').replace(/ Build.*/, '').trim(); if (!model && raw && !/^[a-z]{2}(-[a-z]{2})?$/i.test(raw) && !/^wv$/i.test(raw)) model = raw; } }
+  else if (/Macintosh/.test(ua)) { dev = 'Mac 電腦'; const m = ua.match(/Mac OS X (\d+)[_.](\d+)/); if (m) os = `macOS ${m[1]}.${m[2]}`; }
+  else if (/Windows/.test(ua)) { dev = 'Windows 電腦'; const m = ua.match(/Windows NT ([\d.]+)/); if (m) os = 'Windows ' + (m[1] === '10.0' ? '10／11' : m[1]); }
   let br = '';
-  if (/Line\//i.test(ua)) br = 'LINE'; else if (/FBAN|FBAV/.test(ua)) br = 'Facebook'; else if (/Edg\//.test(ua)) br = 'Edge'; else if (/Chrome\//.test(ua)) br = 'Chrome'; else if (/Safari\//.test(ua)) br = 'Safari'; else if (/Firefox\//.test(ua)) br = 'Firefox';
-  return br ? `${dev}・${br}` : dev;
+  if (/Line\//i.test(ua)) br = 'LINE'; else if (/FBAN|FBAV/.test(ua)) br = 'Facebook'; else if (/Edg\//.test(ua)) br = 'Edge'; else if (/CriOS/.test(ua)) br = 'Chrome'; else if (/Chrome\//.test(ua)) br = 'Chrome'; else if (/Safari\//.test(ua)) br = 'Safari'; else if (/Firefox\//.test(ua)) br = 'Firefox';
+  return [dev + (model ? `（${model}）` : ''), os, br, '#' + deviceId()].filter(Boolean).join('・');
 }
+function deviceName() { return (me && me.deviceName) ? `${me.deviceName}・#${deviceId()}` : deviceLabel(); }
 function parseProductUrl(raw) {
   const s = (raw || '').trim(); if (!s) return null;
   let url; try { url = new URL(/^https?:\/\//i.test(s) ? s : 'https://' + s); } catch { return null; }
@@ -245,7 +261,7 @@ function reduce(action) {
 function dispatch(action, opts = {}) {
   if (!state) return null;
   if (!canEdit() && !opts.force) { toast('目前是檢視模式，無法修改'); return null; }
-  action._ctx = action._ctx || { id: uid(), ts: nowIso(), who: (me && me.name) || '未具名', device: (me && me.device) || deviceLabel() };
+  action._ctx = action._ctx || { id: uid(), ts: nowIso(), who: (me && me.name) || '未具名', device: deviceName() };
   const res = reduce(action); if (!res) return null;
   const entry = { id: action._ctx.id, ts: action._ctx.ts, who: action._ctx.who, device: action._ctx.device, type: action.type, summary: res.summary, changes: res.changes, restore: !!res.restore };
   state.history.push(entry);
@@ -329,7 +345,7 @@ async function saveNow() {
   saving = true; setSave('saving', '儲存中…');
   try {
     const entries = state.history.filter(e => pending.some(a => a._ctx && a._ctx.id === e.id));
-    const res = await apiCall({ action: 'save' }, { state, baseRev: syncedRev, code: API.code, entries, who: me && me.name, device: me && me.device });
+    const res = await apiCall({ action: 'save' }, { state, baseRev: syncedRev, code: API.code, entries, who: me && me.name, device: deviceName() });
     if (res && res.ok) { syncedRev = res.rev; state.rev = res.rev; pending = []; store.set(KEYS.pending, pending); lastSyncAt = nowIso(); remoteStatus = 'ok'; setSave('saved', '已儲存到雲端 ' + fmtTime(lastSyncAt)); }
     else if (res && res.conflict) { adoptRemote(res.state, { initial: false, quiet: true }); dirtyAgain = pending.length > 0; if (!dirtyAgain) setSave('saved', '已同步'); }
     else if (res && res.error === 'code_required') { setSave('error', '需要家庭代碼才能存到雲端'); askFamilyCode(); }
