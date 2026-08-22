@@ -104,7 +104,7 @@ function fmtTime(iso, withYear) {
 function fmtDate(iso) { try { return new Intl.DateTimeFormat('zh-TW', { timeZone: TZ, year: 'numeric', month: 'numeric', day: 'numeric' }).format(new Date(iso)); } catch { return iso; } }
 function fmtDateShort(iso) { try { return new Intl.DateTimeFormat('zh-TW', { timeZone: TZ, month: 'numeric', day: 'numeric' }).format(new Date(iso)); } catch { return iso; } }
 function todayIso() { return new Date().toISOString().slice(0, 10); }
-let DEVICE_MODEL = '';
+let DEVICE_MODEL = '', DEVICE_OSV = '';
 function deviceId() {
   let id = store.get('hc_dev');
   if (!id) { const chars = 'ABCDEFGHJKLMNPQRSTUVWXYZ23456789'; id = ''; for (let i = 0; i < 4; i++) id += chars[Math.floor(Math.random() * chars.length)]; store.set('hc_dev', id); }
@@ -116,7 +116,7 @@ function iphoneSizeClass() {
   return map[w + 'x' + hgt] || '';
 }
 function refineDeviceModel() {
-  try { if (navigator.userAgentData && navigator.userAgentData.getHighEntropyValues) navigator.userAgentData.getHighEntropyValues(['model', 'platformVersion']).then(v => { if (v && v.model) DEVICE_MODEL = v.model; }).catch(() => {}); } catch {}
+  try { if (navigator.userAgentData && navigator.userAgentData.getHighEntropyValues) navigator.userAgentData.getHighEntropyValues(['model', 'platformVersion']).then(v => { if (v && v.model) DEVICE_MODEL = v.model; if (v && v.platformVersion) DEVICE_OSV = v.platformVersion; }).catch(() => {}); } catch {}
 }
 function deviceLabel() {
   const ua = navigator.userAgent || '';
@@ -124,9 +124,9 @@ function deviceLabel() {
   const iosV = ua.match(/OS (\d+)[_.](\d+)/);
   if (/iPhone/.test(ua)) { dev = 'iPhone'; os = iosV ? `iOS ${iosV[1]}.${iosV[2]}` : ''; model = model || iphoneSizeClass(); }
   else if (/iPad/.test(ua) || (/Macintosh/.test(ua) && navigator.maxTouchPoints > 1)) { dev = 'iPad'; os = iosV ? `iPadOS ${iosV[1]}.${iosV[2]}` : ''; }
-  else if (/Android/.test(ua)) { dev = /Mobile/.test(ua) ? 'Android 手機' : 'Android 平板'; const m = ua.match(/Android ([\d.]+)(?:; ([^;)]+))?/); if (m) { os = 'Android ' + m[1].split('.')[0]; const raw = (m[2] || '').replace(/ Build.*/, '').trim(); if (!model && raw && !/^[a-z]{2}(-[a-z]{2})?$/i.test(raw) && !/^wv$/i.test(raw)) model = raw; } }
-  else if (/Macintosh/.test(ua)) { dev = 'Mac 電腦'; const m = ua.match(/Mac OS X (\d+)[_.](\d+)/); if (m) os = `macOS ${m[1]}.${m[2]}`; }
-  else if (/Windows/.test(ua)) { dev = 'Windows 電腦'; const m = ua.match(/Windows NT ([\d.]+)/); if (m) os = 'Windows ' + (m[1] === '10.0' ? '10／11' : m[1]); }
+  else if (/Android/.test(ua)) { dev = /Mobile/.test(ua) ? 'Android 手機' : 'Android 平板'; const m = ua.match(/Android ([\d.]+)(?:; ([^;)]+))?/); if (DEVICE_OSV) os = 'Android ' + DEVICE_OSV.split('.')[0]; if (m) { if (!os) os = 'Android ' + m[1].split('.')[0]; const raw = (m[2] || '').replace(/ Build.*/, '').trim(); if (!model && raw && !/^[a-z]{2}(-[a-z]{2})?$/i.test(raw) && !/^wv$/i.test(raw)) model = raw; } }
+  else if (/Macintosh/.test(ua)) { dev = 'Mac 電腦'; const m = ua.match(/Mac OS X (\d+)[_.](\d+)/); os = DEVICE_OSV ? `macOS ${DEVICE_OSV.split('.').slice(0, 2).join('.')}` : (m ? `macOS ${m[1]}.${m[2]}` : ''); }
+  else if (/Windows/.test(ua)) { dev = 'Windows 電腦'; const major = Number((DEVICE_OSV || '').split('.')[0]); os = DEVICE_OSV ? (major >= 13 ? 'Windows 11' : 'Windows 10') : 'Windows'; }
   let br = '';
   if (/Line\//i.test(ua)) br = 'LINE'; else if (/FBAN|FBAV/.test(ua)) br = 'Facebook'; else if (/Edg\//.test(ua)) br = 'Edge'; else if (/CriOS/.test(ua)) br = 'Chrome'; else if (/Chrome\//.test(ua)) br = 'Chrome'; else if (/Safari\//.test(ua)) br = 'Safari'; else if (/Firefox\//.test(ua)) br = 'Firefox';
   return [dev + (model ? `（${model}）` : ''), os, br, '#' + deviceId()].filter(Boolean).join('・');
