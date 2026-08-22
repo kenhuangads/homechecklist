@@ -1,5 +1,5 @@
 {
-  "apiUrl": "",
+  "apiUrl": "https://script.google.com/macros/s/AKfycbxZXa05IJzZpzpDVb9mfdE2gWMFg8fSa2KAzWBt3wNRsuKuowtu1_oTU0QUOVnH8qah/exec",
   "note": "Google Apps Script 網頁應用程式網址（/exec 結尾）。設定方式見 SETUP.md。",
   "updatedAt": "2026-08-22"
 }
