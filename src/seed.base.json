@@ -1,0 +1,2100 @@
+{
+  "schema": 1,
+  "rev": 1,
+  "updatedAt": "2026-08-22T19:30:00+08:00",
+  "meta": {
+    "title": "南投老家翻修清單",
+    "subtitle": "全屋家電採購與安裝需求",
+    "shareUrl": "",
+    "priceNote": "價格以 MOMO、PChome 24h 現價為準（2026/8/22 查），每日會浮動，下單前請再點進去確認一次。",
+    "water": {
+      "plant": "台水 南崗淨水場（南投市成功一路28號）",
+      "sampledAt": "2026-08-10",
+      "hardness": 151,
+      "tds": 268,
+      "ph": 6.9,
+      "grade": "硬水（WHO 分級 120–180 mg/L）",
+      "note": "法規限值 300 mg/L、合格。超過 120 mg/L 就值得裝全戶軟水；不是「超硬水」。"
+    }
+  },
+  "profiles": {
+    "family": {
+      "id": "family",
+      "label": "家人",
+      "who": "自己人",
+      "desc": "完整內容：價格、購買連結、方案比較、留言與待辦，可以修改。",
+      "show": {
+        "price": true,
+        "links": true,
+        "options": true,
+        "install": true,
+        "dims": true,
+        "notes": true,
+        "todos": true,
+        "advice": true,
+        "prep": true
+      },
+      "edit": true
+    },
+    "designer": {
+      "id": "designer",
+      "label": "設計師",
+      "who": "室內設計師",
+      "desc": "只看尺寸、開孔與安裝需求，不顯示價格與購買連結。",
+      "show": {
+        "price": false,
+        "links": false,
+        "options": true,
+        "install": true,
+        "dims": true,
+        "notes": false,
+        "todos": false,
+        "advice": true,
+        "prep": true
+      },
+      "edit": false
+    },
+    "contractor": {
+      "id": "contractor",
+      "label": "水電師傅",
+      "who": "水電、工班",
+      "desc": "電壓迴路、給排水、排風與全屋前置工程清單。",
+      "show": {
+        "price": false,
+        "links": false,
+        "options": false,
+        "install": true,
+        "dims": true,
+        "notes": false,
+        "todos": false,
+        "advice": false,
+        "prep": true
+      },
+      "edit": false
+    },
+    "buyer": {
+      "id": "buyer",
+      "label": "採購",
+      "who": "負責下單的人",
+      "desc": "已決定的品項、價格與購買連結。",
+      "show": {
+        "price": true,
+        "links": true,
+        "options": false,
+        "install": false,
+        "dims": false,
+        "notes": true,
+        "todos": true,
+        "advice": false,
+        "prep": false
+      },
+      "edit": false
+    }
+  },
+  "rooms": [
+    {
+      "id": "kitchen",
+      "name": "廚房"
+    },
+    {
+      "id": "water",
+      "name": "飲水與水質"
+    },
+    {
+      "id": "bath",
+      "name": "衛浴"
+    },
+    {
+      "id": "living",
+      "name": "客廳"
+    },
+    {
+      "id": "entry",
+      "name": "玄關與全屋"
+    }
+  ],
+  "items": [
+    {
+      "id": "hood",
+      "roomId": "kitchen",
+      "name": "抽油煙機",
+      "short": "Panasonic 頂側雙吸式 90cm",
+      "status": "decided",
+      "chosenOptionId": "hood_fvktb2sd1tw",
+      "hardReq": "",
+      "advice": "已指定型號，規格全部查核正確。透天安裝重點是排風管路徑越短、彎折越少越好（每多一個 90° 彎，排風量會明顯下降）。",
+      "warnings": [],
+      "install": [
+        {
+          "tag": "尺寸",
+          "text": "對應 90cm 廚具；L 型機身深度僅 354mm，貼牆安裝不易碰頭。"
+        },
+        {
+          "tag": "排風",
+          "text": "排煙管 Φ150mm，牆面預留孔要配合；路徑越短、彎越少越好。"
+        },
+        {
+          "tag": "電",
+          "text": "110V 一般插座即可（功率僅 328W，免專用迴路）。"
+        },
+        {
+          "tag": "尺寸",
+          "text": "機體與 IH／瓦斯爐面距離建議 65–75cm。"
+        }
+      ],
+      "options": [
+        {
+          "id": "hood_fvktb2sd1tw",
+          "key": "hood_fvktb2sd1tw",
+          "tier": "指定",
+          "brand": "Panasonic",
+          "model": "FV-KTB2SD1TW",
+          "name": "國際牌 頂側雙吸式抽油煙機 90cm（曜石黑晶）",
+          "highlights": [
+            "觸控＋揮手智控",
+            "最大風量 18 m³/min、3 段風速",
+            "噪音 68 dB、轉速 1130 rpm",
+            "3 分鐘延遲關機、油杯式濾網"
+          ],
+          "dims": "寬895 × 深354 × 高935 mm",
+          "cutout": "",
+          "power": "110V／328W",
+          "weight": "32.5 kg",
+          "other": "排煙管 Φ150mm；保固全機 1 年、登錄 3 年",
+          "price": {
+            "amount": 21500,
+            "min": 21500,
+            "max": 26500,
+            "source": "other",
+            "checkedAt": "2026-08-22",
+            "note": "最低約 NT$21,500（多為不含安裝）；一般電商 21,500–26,500，部分限六都送基本安裝"
+          },
+          "links": [],
+          "note": ""
+        }
+      ],
+      "notes": [],
+      "todos": [
+        {
+          "id": "hood_t1",
+          "text": "確認廚具寬度是 90cm",
+          "done": false
+        },
+        {
+          "id": "hood_t2",
+          "text": "牆面預留 Φ150 排風孔，確認路徑短、彎少",
+          "done": false
+        }
+      ],
+      "requests": [],
+      "costNotes": []
+    },
+    {
+      "id": "ih",
+      "roomId": "kitchen",
+      "name": "IH 調理爐",
+      "short": "Panasonic 嵌入式雙口 220V",
+      "status": "decided",
+      "chosenOptionId": "ih_kyc1w70",
+      "hardReq": "",
+      "advice": "已指定型號。注意：左右爐口「各 3200W 同時全開」是錯的——總功率上限就是 3.2kW／15A，兩口同時用會自動分配火力。",
+      "warnings": [
+        "總輸出上限 3.2kW（15A），不是雙口各 3200W 同時輸出。"
+      ],
+      "install": [
+        {
+          "tag": "電",
+          "text": "必須 220V 專用迴路；無熔絲開關建議 20A（負載 15A），線徑建議 5.5mm²（依水電師傅現場評估）。"
+        },
+        {
+          "tag": "電",
+          "text": "220V T 型插座，附接地。"
+        },
+        {
+          "tag": "尺寸",
+          "text": "檯面開孔 710 × 368 mm；下方抽屜／櫃體須預留散熱空間，勿緊貼。"
+        },
+        {
+          "tag": "尺寸",
+          "text": "與抽油煙機面距約 65–75cm。"
+        }
+      ],
+      "options": [
+        {
+          "id": "ih_kyc1w70",
+          "key": "ih_kyc1w70",
+          "tier": "指定",
+          "brand": "Panasonic",
+          "model": "KY-C1W70",
+          "name": "國際牌 嵌入式雙口 IH 調理爐",
+          "highlights": [
+            "光火力感應、9 段火力＋5 段油煎＋7 段油炸",
+            "加熱範圍左右各 Φ190mm",
+            "多重安全裝置＋兒童鎖"
+          ],
+          "dims": "本體 寬744 × 深440 × 高93 mm",
+          "cutout": "檯面開孔 710 × 368 mm",
+          "power": "單相 220V／總功率 3200W／15A",
+          "weight": "11.6 kg",
+          "other": "",
+          "price": {
+            "amount": 34800,
+            "min": 32900,
+            "max": 34800,
+            "source": "other",
+            "checkedAt": "2026-08-22",
+            "note": "MOMO／PChome／經銷約 NT$34,800（玉明特價區間 32,900–34,800），不含安裝"
+          },
+          "links": [],
+          "note": ""
+        }
+      ],
+      "notes": [],
+      "todos": [
+        {
+          "id": "ih_t1",
+          "text": "請水電拉 220V 專用迴路（20A、5.5mm²）到爐具位置",
+          "done": false
+        },
+        {
+          "id": "ih_t2",
+          "text": "廚具開孔 710×368mm，下方留散熱",
+          "done": false
+        }
+      ],
+      "requests": [],
+      "costNotes": []
+    },
+    {
+      "id": "oven",
+      "roomId": "kitchen",
+      "name": "氣炸烤箱",
+      "short": "Cuisinart 美膳雅",
+      "status": "choosing",
+      "chosenOptionId": null,
+      "hardReq": "",
+      "advice": "原本提供的 id=376 連結是正常的，實際商品就是 26L 的 TOA-110TW（草稿說連結失效是錯的）。三款都真實在售，差別在容量與功能。",
+      "warnings": [],
+      "install": [
+        {
+          "tag": "電",
+          "text": "110V 一般插座；功率高，建議獨立插座，不要和微波爐共用同一個插座。"
+        },
+        {
+          "tag": "尺寸",
+          "text": "四周散熱：上方 ≥10cm、左右後 ≥5–10cm；放電器櫃要有抽拉散熱層板，勿密閉。"
+        }
+      ],
+      "options": [
+        {
+          "id": "oven_toa110tw",
+          "key": "oven_toa110tw",
+          "tier": "頂級",
+          "brand": "Cuisinart",
+          "model": "TOA-110TW",
+          "name": "美膳雅 26L 10合一數位氣炸烤箱",
+          "highlights": [
+            "10 合一、6 種料理模式 × 4 種氣炸預設",
+            "數位面板"
+          ],
+          "dims": "",
+          "cutout": "",
+          "power": "110V",
+          "weight": "",
+          "other": "官網為詢價制",
+          "price": {
+            "amount": null,
+            "min": 8000,
+            "max": 9000,
+            "source": "official",
+            "checkedAt": "2026-08-22",
+            "note": "官網詢價；同級 26L 約 NT$8,000–9,000（待確認官方現價）"
+          },
+          "links": [],
+          "note": ""
+        },
+        {
+          "id": "oven_toa95tw",
+          "key": "oven_toa95tw",
+          "tier": "高級",
+          "brand": "Cuisinart",
+          "model": "TOA-95TW",
+          "name": "美膳雅 26L 氣炸烤箱（電子探針）",
+          "highlights": [
+            "12 種烹調模式、電子探針",
+            "可烤全雞／9 片吐司"
+          ],
+          "dims": "",
+          "cutout": "",
+          "power": "110V",
+          "weight": "",
+          "other": "",
+          "price": {
+            "amount": null,
+            "min": 7000,
+            "max": 8000,
+            "source": "momo",
+            "checkedAt": "2026-08-22",
+            "note": "MOMO／PChome 約 NT$7,000–8,000"
+          },
+          "links": [],
+          "note": ""
+        },
+        {
+          "id": "oven_toa60tw",
+          "key": "oven_toa60tw",
+          "tier": "高CP值",
+          "brand": "Cuisinart",
+          "model": "TOA-60TW",
+          "name": "美膳雅 17L 多功能氣炸烤箱",
+          "highlights": [
+            "17L，適合單人～小家庭"
+          ],
+          "dims": "",
+          "cutout": "",
+          "power": "110V",
+          "weight": "",
+          "other": "",
+          "price": {
+            "amount": null,
+            "min": 4000,
+            "max": 5000,
+            "source": "momo",
+            "checkedAt": "2026-08-22",
+            "note": "MOMO 約 NT$4,000–5,000"
+          },
+          "links": [],
+          "note": ""
+        }
+      ],
+      "notes": [],
+      "todos": [
+        {
+          "id": "oven_t1",
+          "text": "電器櫃預留抽拉層板與散熱空間",
+          "done": false
+        }
+      ],
+      "requests": [],
+      "costNotes": []
+    },
+    {
+      "id": "microwave",
+      "roomId": "kitchen",
+      "name": "微波爐",
+      "short": "Panasonic 燒烤變頻 27L",
+      "status": "decided",
+      "chosenOptionId": "mw_nngf574",
+      "hardReq": "",
+      "advice": "已指定型號，規格全部正確：變頻、平面無轉盤、微波／燒烤各 1000W。",
+      "warnings": [],
+      "install": [
+        {
+          "tag": "電",
+          "text": "110V；建議與氣炸烤箱各自獨立插座。"
+        },
+        {
+          "tag": "尺寸",
+          "text": "散熱：上方 ≥10cm、後方 ≥10cm、左右 ≥5cm；電器櫃高度要留本體 326mm 加散熱，前方要有開門操作空間。"
+        }
+      ],
+      "options": [
+        {
+          "id": "mw_nngf574",
+          "key": "mw_nngf574",
+          "tier": "指定",
+          "brand": "Panasonic",
+          "model": "NN-GF574",
+          "name": "國際牌 27L 燒烤變頻微波爐",
+          "highlights": [
+            "變頻、平面無轉盤",
+            "微波 1000W／燒烤 1000W",
+            "23 道自動料理、兒童鎖"
+          ],
+          "dims": "本體 529 × 422 × 326 mm；爐內 354 × 338 × 230 mm",
+          "cutout": "",
+          "power": "110V／微波 1040W、電熱 1050W",
+          "weight": "12.7 kg",
+          "other": "保固一般 1 年、主要零件 3 年（上網登錄再延 1 年）",
+          "price": {
+            "amount": null,
+            "min": 6294,
+            "max": 8390,
+            "source": "pchome",
+            "checkedAt": "2026-08-22",
+            "note": "約 NT$6,294–8,390；燦坤促銷約 6,750；MOMO／PChome 約 7,500–7,690"
+          },
+          "links": [],
+          "note": ""
+        }
+      ],
+      "notes": [],
+      "todos": [],
+      "requests": [],
+      "costNotes": []
+    },
+    {
+      "id": "freezer",
+      "roomId": "kitchen",
+      "name": "冷凍櫃",
+      "short": "Panasonic 直立式 380L",
+      "status": "decided",
+      "chosenOptionId": "freezer_nrfz383avs",
+      "hardReq": "",
+      "advice": "已指定型號。預設右開，要改門向需原廠付費。透天走樓梯搬運前先量門框與樓梯轉角（含把手寬 710mm）。",
+      "warnings": [],
+      "install": [
+        {
+          "tag": "搬運",
+          "text": "搬運淨寬須 >710mm（含把手）；門框、樓梯轉角先量；透天走樓梯要確認梯間迴旋。"
+        },
+        {
+          "tag": "尺寸",
+          "text": "頂部距天花板 ≥30cm、左右各 ≥10cm 散熱（官方明載）；後方美背下段簍空屬正常。"
+        },
+        {
+          "tag": "電",
+          "text": "110V 一般插座。"
+        },
+        {
+          "tag": "其他",
+          "text": "地板承重（滿載近 100kg 以上）；定位後靜置約 3 小時再通電；預設右開，改門向需原廠。"
+        }
+      ],
+      "options": [
+        {
+          "id": "freezer_nrfz383avs",
+          "key": "freezer_nrfz383avs",
+          "tier": "指定",
+          "brand": "Panasonic",
+          "model": "NR-FZ383AV-S",
+          "name": "國際牌 380L 直立式冷凍／冷藏櫃",
+          "highlights": [
+            "變頻風冷無霜、冷凍／冷藏一鍵切換",
+            "年耗電 348 度、R600a 冷媒",
+            "四星級冷凍"
+          ],
+          "dims": "寬710 × 深767 × 高1855 mm（含把手）；外箱 750 × 756 × 1910 mm",
+          "cutout": "",
+          "power": "110V",
+          "weight": "81 kg",
+          "other": "保固全機 1 年、主要零件 3 年、壓縮機 5 年",
+          "price": {
+            "amount": null,
+            "min": 22500,
+            "max": 25900,
+            "source": "pchome",
+            "checkedAt": "2026-08-22",
+            "note": "約 NT$22,500–25,900；玉明 23,300、甫佳 24,500、多店 25,900 含配送定位"
+          },
+          "links": [],
+          "note": ""
+        }
+      ],
+      "notes": [],
+      "todos": [
+        {
+          "id": "freezer_t1",
+          "text": "量門框與樓梯轉角淨寬是否 >71cm",
+          "done": false
+        },
+        {
+          "id": "freezer_t2",
+          "text": "定位處預留：頂 30cm、左右各 10cm",
+          "done": false
+        },
+        {
+          "id": "freezer_t3",
+          "text": "決定門要開哪一邊（改左開需原廠付費）",
+          "done": false
+        }
+      ],
+      "requests": [],
+      "costNotes": []
+    },
+    {
+      "id": "dishwasher",
+      "roomId": "kitchen",
+      "name": "洗碗機",
+      "short": "抽屜式 vs 60cm 下掀式",
+      "status": "choosing",
+      "chosenOptionId": null,
+      "hardReq": "經常煮大鍋菜，要洗 32–36cm 中式炒鍋＋大湯鍋。",
+      "advice": "關鍵誠實評估：抽屜式（含加高款）單層內部高度有限，放 32–36cm 炒鍋＋大湯鍋會非常勉強甚至放不下。常大鍋熱炒的家庭，建議選 60cm 嵌入式下掀洗碗機（Bosch 8 系列最務實，Miele G7000 為頂級）。抽屜式適合碗盤多、鍋具不大的家庭；若仍偏好 F&P 外觀，可「上抽洗碗盤＋大鍋手洗」折衷。",
+      "warnings": [
+        "抽屜式放不下大炒鍋／深湯鍋，購買前務必確認內槽可用高度。",
+        "F&P 為 110V；多數歐系 60cm 為 220V 需專用迴路——購買前確認電壓！"
+      ],
+      "install": [
+        {
+          "tag": "尺寸",
+          "text": "櫥櫃開孔依機型：60cm 下掀約 W600 × H820 × D570 mm；抽屜式依 F&P 型號。"
+        },
+        {
+          "tag": "水",
+          "text": "需進水與排水，安裝時做水平調整。"
+        },
+        {
+          "tag": "電",
+          "text": "F&P 抽屜式為 110V；Bosch／Miele／Electrolux 多為 220V 專用迴路。"
+        },
+        {
+          "tag": "其他",
+          "text": "南投硬水 151 mg/L：建議加軟化鹽並把機器水質硬度設中高檔（家中實際可能比淨水場更高）。"
+        }
+      ],
+      "options": [
+        {
+          "id": "dw_fp_dd60dtx6hi1",
+          "key": "dw_fp_dd60dtx6hi1",
+          "tier": "頂級",
+          "brand": "Fisher & Paykel",
+          "model": "DD60DTX6HI1",
+          "name": "菲雪品克 雙層抽屜式洗碗機（嵌門板・加高・14 人份）",
+          "highlights": [
+            "嵌門板、加高雙層",
+            "單層耗水 6.9L、43dB",
+            "110V"
+          ],
+          "dims": "599 × 865 × 573 mm",
+          "cutout": "",
+          "power": "110V／雙層最大 1200W",
+          "weight": "",
+          "other": "",
+          "price": {
+            "amount": 98000,
+            "min": 98000,
+            "max": 98000,
+            "source": "other",
+            "checkedAt": "2026-08-22",
+            "note": "甫佳電器 NT$98,000"
+          },
+          "links": [],
+          "note": ""
+        },
+        {
+          "id": "dw_fp_dd60dchx9",
+          "key": "dw_fp_dd60dchx9",
+          "tier": "高級",
+          "brand": "Fisher & Paykel",
+          "model": "DD60DCHX9",
+          "name": "菲雪品克 雙層不鏽鋼抽屜式洗碗機（14 人份）",
+          "highlights": [
+            "DC 變頻、73°C 高溫殺菌",
+            "110V"
+          ],
+          "dims": "599 × 820~880 × 573 mm",
+          "cutout": "",
+          "power": "110V",
+          "weight": "",
+          "other": "",
+          "price": {
+            "amount": 68800,
+            "min": 65000,
+            "max": 70000,
+            "source": "other",
+            "checkedAt": "2026-08-22",
+            "note": "甫佳約 NT$68,800；含標準安裝通路約 6.5–7 萬"
+          },
+          "links": [],
+          "note": ""
+        },
+        {
+          "id": "dw_fp_dd60scthx9",
+          "key": "dw_fp_dd60scthx9",
+          "tier": "高CP值",
+          "brand": "Fisher & Paykel",
+          "model": "DD60SCTHX9",
+          "name": "菲雪品克 單層加高抽屜式洗碗機（7 人份）",
+          "highlights": [
+            "不鏽鋼、單層加高款"
+          ],
+          "dims": "",
+          "cutout": "",
+          "power": "110V",
+          "weight": "",
+          "other": "",
+          "price": {
+            "amount": null,
+            "min": 41500,
+            "max": 43500,
+            "source": "other",
+            "checkedAt": "2026-08-22",
+            "note": "約 NT$41,500–43,500"
+          },
+          "links": [],
+          "note": ""
+        },
+        {
+          "id": "dw_bosch_8series_60",
+          "key": "dw_bosch_8series_60",
+          "tier": "替代方案",
+          "brand": "Bosch",
+          "model": "8 系列 60cm（SMV8／SMI8）",
+          "name": "博世 8 系列 60cm 嵌入式下掀洗碗機（14 套）",
+          "highlights": [
+            "上層可移、下籃深，可平放大炒鍋／湯鍋",
+            "大鍋家庭最務實的選擇"
+          ],
+          "dims": "60cm 下掀約 W600 × H820 × D570 mm",
+          "cutout": "W600 × H820 × D570 mm",
+          "power": "多為 220V 專用迴路（購買前確認）",
+          "weight": "",
+          "other": "",
+          "price": {
+            "amount": null,
+            "min": 50000,
+            "max": 80000,
+            "source": "momo",
+            "checkedAt": "2026-08-22",
+            "note": "約 NT$5–8 萬"
+          },
+          "links": [],
+          "note": ""
+        },
+        {
+          "id": "dw_miele_g7000_60",
+          "key": "dw_miele_g7000_60",
+          "tier": "替代方案",
+          "brand": "Miele",
+          "model": "G7000 系列 60cm",
+          "name": "Miele G7000 系列 60cm 嵌入式洗碗機",
+          "highlights": [
+            "AutoDos 自動投劑、大鍋強項、耐用"
+          ],
+          "dims": "60cm 下掀約 W600 × H820 × D570 mm",
+          "cutout": "W600 × H820 × D570 mm",
+          "power": "220V 專用迴路（購買前確認）",
+          "weight": "",
+          "other": "",
+          "price": {
+            "amount": null,
+            "min": 80000,
+            "max": 120000,
+            "source": "momo",
+            "checkedAt": "2026-08-22",
+            "note": "約 NT$8–12 萬"
+          },
+          "links": [],
+          "note": ""
+        },
+        {
+          "id": "dw_electrolux_60",
+          "key": "dw_electrolux_60",
+          "tier": "替代方案",
+          "brand": "Electrolux／AEG",
+          "model": "60cm 嵌入式",
+          "name": "伊萊克斯／AEG 60cm 嵌入式洗碗機",
+          "highlights": [
+            "CP 值佳、下籃可放大鍋"
+          ],
+          "dims": "60cm 下掀約 W600 × H820 × D570 mm",
+          "cutout": "W600 × H820 × D570 mm",
+          "power": "多為 220V（購買前確認）",
+          "weight": "",
+          "other": "",
+          "price": {
+            "amount": null,
+            "min": 35000,
+            "max": 60000,
+            "source": "momo",
+            "checkedAt": "2026-08-22",
+            "note": "約 NT$3.5–6 萬"
+          },
+          "links": [],
+          "note": ""
+        }
+      ],
+      "notes": [],
+      "todos": [
+        {
+          "id": "dw_t1",
+          "text": "先決定：抽屜式 或 60cm 下掀式（看家裡炒鍋尺寸）",
+          "done": false
+        },
+        {
+          "id": "dw_t2",
+          "text": "確認所選機型電壓（110V 或 220V 專用迴路）",
+          "done": false
+        },
+        {
+          "id": "dw_t3",
+          "text": "廚具預留開孔與進排水位置",
+          "done": false
+        }
+      ],
+      "requests": [],
+      "costNotes": []
+    },
+    {
+      "id": "water_dispenser",
+      "roomId": "water",
+      "name": "櫥下飲水機",
+      "short": "冰・溫・熱＋氣泡",
+      "status": "choosing",
+      "chosenOptionId": null,
+      "hardReq": "常溫＋熱＋冰＋氣泡，四合一。",
+      "advice": "台灣真正把冰／溫／熱＋氣泡整合在同一套的櫥下機，幾乎只有 OASIS 一款。若最重視可靠度與長期維護，「三溫櫥下機＋獨立氣泡模組」比單一四合一整合機好（氣泡壞了不影響飲水、維修單純），缺點是佔兩個龍頭孔、總價可能更高。追求檯面極簡、一鍵出氣泡才選整合機。",
+      "warnings": [
+        "草稿列的 Yaffle YS-1301H、BWT AQA S CT「四合一」無法證實，待確認。"
+      ],
+      "install": [
+        {
+          "tag": "尺寸",
+          "text": "櫥下預留高度 ≥45cm、寬 ≥25–35cm；櫥櫃上下開散熱孔保持對流。"
+        },
+        {
+          "tag": "電",
+          "text": "110V 專用插座（壓縮機製冷機種建議獨立插座）。"
+        },
+        {
+          "tag": "水",
+          "text": "需排水（廢水／洩壓）；龍頭開孔依機種（OASIS 龍頭孔徑須配合）；前置建議加軟水或 RO。"
+        },
+        {
+          "tag": "其他",
+          "text": "CO₂ 用 SodaStream 家用氣瓶（恆隆行專櫃、全國電子可換瓶）；南投水偏硬，建議每 4 個月換軟水濾芯。"
+        }
+      ],
+      "options": [
+        {
+          "id": "water_oasis_fizz401",
+          "key": "water_oasis_fizz401",
+          "tier": "頂級",
+          "brand": "OASIS",
+          "model": "LUXES-FIZZ-401",
+          "name": "OASIS 櫥下極奢氣泡三溫 UVC 飲水機（真四合一）",
+          "highlights": [
+            "冰／溫／熱＋氣泡四合一、免組裝首選",
+            "壓縮機製冷（冰水低至 4°C）、熱水 80/90/100°C",
+            "UVC 殺菌、SodaStream 氣瓶、台灣製"
+          ],
+          "dims": "主機 230 × 350 × 450 mm；龍頭 55 × 192 × 356 mm",
+          "cutout": "",
+          "power": "110V",
+          "weight": "17.6 kg",
+          "other": "保固 1 年；恆隆行／格威代理",
+          "price": {
+            "amount": null,
+            "min": 20000,
+            "max": 55000,
+            "source": "momo",
+            "checkedAt": "2026-08-22",
+            "note": "主機約 NT$2 萬多起（依搭配 RO 或三道軟水淨水而異）；MOMO／PChome／燦坤有售，含免費基本安裝"
+          },
+          "links": [],
+          "note": ""
+        },
+        {
+          "id": "water_modular_3temp_soda",
+          "key": "",
+          "tier": "高級",
+          "brand": "賀眾／Buder＋SodaStream",
+          "model": "三溫櫥下機＋獨立氣泡模組",
+          "name": "三溫櫥下機（賀眾 UW 系列／普德 BD-3006）＋獨立氣泡水模組（SodaStream／GROHE Blue）",
+          "highlights": [
+            "模組化、水質更彈性、維修單純",
+            "冰溫熱 RO/UF＋另一龍頭出氣泡",
+            "佔用兩個龍頭孔"
+          ],
+          "dims": "依機種",
+          "cutout": "兩個龍頭孔",
+          "power": "110V",
+          "weight": "",
+          "other": "",
+          "price": {
+            "amount": null,
+            "min": 30000,
+            "max": 51000,
+            "source": "momo",
+            "checkedAt": "2026-08-22",
+            "note": "三溫機 NT$25,000–36,000＋氣泡模組 NT$5,000–15,000"
+          },
+          "links": [],
+          "note": ""
+        },
+        {
+          "id": "water_oasis_3temp",
+          "key": "water_oasis_3temp",
+          "tier": "高CP值",
+          "brand": "OASIS",
+          "model": "櫥下輕奢三溫",
+          "name": "OASIS 櫥下輕奢三溫（含三道軟水抑菌淨水）＋桌上型氣泡機",
+          "highlights": [
+            "櫥下三溫＋桌面氣泡分離"
+          ],
+          "dims": "依機種",
+          "cutout": "",
+          "power": "110V",
+          "weight": "",
+          "other": "",
+          "price": {
+            "amount": null,
+            "min": 18000,
+            "max": 21000,
+            "source": "momo",
+            "checkedAt": "2026-08-22",
+            "note": "三溫櫥下 NT$1.5 萬級＋桌上氣泡機 NT$3,000–6,000"
+          },
+          "links": [],
+          "note": ""
+        }
+      ],
+      "notes": [],
+      "todos": [
+        {
+          "id": "wd_t1",
+          "text": "決定：整合四合一（OASIS）或 三溫＋獨立氣泡",
+          "done": false
+        },
+        {
+          "id": "wd_t2",
+          "text": "水槽櫃預留高 45cm、110V 專用插座、排水",
+          "done": false
+        },
+        {
+          "id": "wd_t3",
+          "text": "檯面龍頭孔數量與孔徑告知廚具商",
+          "done": false
+        }
+      ],
+      "requests": [],
+      "costNotes": [
+        "耗材年費：濾芯＋氣瓶約 NT$3,000–6,000／年。"
+      ]
+    },
+    {
+      "id": "softener",
+      "roomId": "water",
+      "name": "全戶軟水系統",
+      "short": "南投硬水 151 mg/L",
+      "status": "choosing",
+      "chosenOptionId": null,
+      "hardReq": "",
+      "advice": "南投市自來水（南崗淨水場 2026/8/10）總硬度 151 mg/L，屬「硬水」不是超硬水（草稿 191 mg/L 是錯的）。US EPA 建議 >120 mg/L 即可考慮軟水——151 確實值得裝全戶軟水。",
+      "warnings": [
+        "軟水含鈉，不建議直接生飲；飲用水另走 RO／UF 分流。"
+      ],
+      "install": [
+        {
+          "tag": "水",
+          "text": "裝在總進水管處：透天多在頂樓水塔後／加壓馬達後；進水壓 1.5–3kg（過高加減壓閥、過低加壓馬達）。"
+        },
+        {
+          "tag": "電",
+          "text": "智慧閥需 110V 電源。"
+        },
+        {
+          "tag": "排水",
+          "text": "需排水（再生排鹽水）。"
+        },
+        {
+          "tag": "其他",
+          "text": "必裝旁通閥，維修不斷水；前端可加前置沉澱／除氯（如 3M BFS 系列）。"
+        }
+      ],
+      "options": [
+        {
+          "id": "soft_bwt_bewamat75a",
+          "key": "soft_bwt_bewamat75a",
+          "tier": "頂級",
+          "brand": "BWT 德國倍世",
+          "model": "Bewamat 75A",
+          "name": "BWT 倍世 Bewamat 75A 智慧型全戶軟水機",
+          "highlights": [
+            "專利樹脂床：省鹽 57%、省洗水 49%",
+            "可調出水軟硬度、電子面板、72hr 停電記憶",
+            "適合 3 間衛浴以上"
+          ],
+          "dims": "",
+          "cutout": "",
+          "power": "110V",
+          "weight": "",
+          "other": "",
+          "price": {
+            "amount": null,
+            "min": 80000,
+            "max": 120000,
+            "source": "other",
+            "checkedAt": "2026-08-22",
+            "note": "約 NT$8–12 萬含安裝"
+          },
+          "links": [],
+          "note": ""
+        },
+        {
+          "id": "soft_3m_sft200",
+          "key": "soft_3m_sft200",
+          "tier": "高級",
+          "brand": "3M",
+          "model": "SFT-200",
+          "name": "3M SFT-200 全戶式軟水系統",
+          "highlights": [
+            "美國進口智慧控制閥、英國食品級樹脂",
+            "免濾芯只需加鹽、2 噸/hr、NSF 認證"
+          ],
+          "dims": "",
+          "cutout": "",
+          "power": "110V",
+          "weight": "",
+          "other": "",
+          "price": {
+            "amount": null,
+            "min": 60000,
+            "max": 70000,
+            "source": "momo",
+            "checkedAt": "2026-08-22",
+            "note": "約 NT$6–7 萬含安裝（多店含免費基本安裝）"
+          },
+          "links": [],
+          "note": ""
+        },
+        {
+          "id": "soft_3m_sft150",
+          "key": "soft_3m_sft150",
+          "tier": "高CP值",
+          "brand": "3M",
+          "model": "SFT-150",
+          "name": "3M SFT-150 全戶式軟水系統（2–3 人）",
+          "highlights": [
+            "定時／流量再生、樹脂 25–30L",
+            "或 Clack 控制閥 25–30L 樹脂系統"
+          ],
+          "dims": "",
+          "cutout": "",
+          "power": "110V",
+          "weight": "",
+          "other": "",
+          "price": {
+            "amount": null,
+            "min": 35000,
+            "max": 50000,
+            "source": "momo",
+            "checkedAt": "2026-08-22",
+            "note": "約 NT$3.5–5 萬含安裝"
+          },
+          "links": [],
+          "note": ""
+        }
+      ],
+      "notes": [],
+      "todos": [
+        {
+          "id": "soft_t1",
+          "text": "確認總進水管位置（水塔後／加壓馬達後）與排水",
+          "done": false
+        },
+        {
+          "id": "soft_t2",
+          "text": "預留 110V 插座與旁通閥空間",
+          "done": false
+        }
+      ],
+      "requests": [],
+      "costNotes": [
+        "耗材：軟化鹽 2–4 人約每 2 個月一包（約 NT$500），年費約 NT$3,000–6,000。"
+      ]
+    },
+    {
+      "id": "toilet",
+      "roomId": "bath",
+      "name": "TOTO 電腦馬桶",
+      "short": "一體型 vs 分離式",
+      "status": "choosing",
+      "chosenOptionId": null,
+      "hardReq": "",
+      "advice": "一體型（NEOREST）造型俐落、功能整合最完整，但整組故障要整台維修、單價高；分離式（WASHLET 便座＋馬桶）日後只換座、維修便宜、CP 值高，多數家庭建議分離式。頂級控制在 NEOREST RS；NX2 價格遠超一般家庭需求，已剔除。",
+      "warnings": [
+        "TOTO NX2 CES903KVG 價格遠超一般家庭需求，已剔除。"
+      ],
+      "install": [
+        {
+          "tag": "尺寸",
+          "text": "排水管距（壁排／地排）常見 305mm 或 400mm，購買前務必量測。"
+        },
+        {
+          "tag": "電",
+          "text": "馬桶側需 110V 防水接地插座。"
+        },
+        {
+          "tag": "水",
+          "text": "給水壓力一般機種約 0.05–0.75MPa；透天高樓層水壓不足需加壓馬達，過高則加減壓閥。"
+        },
+        {
+          "tag": "其他",
+          "text": "水錘吸收器非必裝，管路有水錘聲再加；TOTO 全台服務網完整。"
+        }
+      ],
+      "options": [
+        {
+          "id": "toilet_neorest_rs_ces83410gtw",
+          "key": "toilet_neorest_rs_ces83410gtw",
+          "tier": "頂級",
+          "brand": "TOTO",
+          "model": "NEOREST RS CES83410GTW",
+          "name": "TOTO NEOREST RS 全自動馬桶（一體型）",
+          "highlights": [
+            "除菌全自動、電解除菌水",
+            "整合度最高、造型最俐落"
+          ],
+          "dims": "",
+          "cutout": "",
+          "power": "110V 防水接地插座",
+          "weight": "",
+          "other": "",
+          "price": {
+            "amount": null,
+            "min": 130000,
+            "max": 170000,
+            "source": "other",
+            "checkedAt": "2026-08-22",
+            "note": "市場行情約 NT$13–17 萬（電商／衛浴經銷）"
+          },
+          "links": [],
+          "note": ""
+        },
+        {
+          "id": "washlet_s7_tcf47160gtw",
+          "key": "washlet_s7_tcf47160gtw",
+          "tier": "高級",
+          "brand": "TOTO",
+          "model": "WASHLET S7 TCF47160GTW＋馬桶",
+          "name": "TOTO WASHLET S7 電腦馬桶座（輕奢款）＋ TOTO 馬桶（CW 系列）",
+          "highlights": [
+            "分離式：日後只換便座",
+            "便座約 3.5–4.5 萬＋馬桶 1–2 萬"
+          ],
+          "dims": "",
+          "cutout": "",
+          "power": "110V 防水接地插座",
+          "weight": "",
+          "other": "",
+          "price": {
+            "amount": null,
+            "min": 50000,
+            "max": 70000,
+            "source": "other",
+            "checkedAt": "2026-08-22",
+            "note": "合計約 NT$5–7 萬"
+          },
+          "links": [],
+          "note": ""
+        },
+        {
+          "id": "washlet_s5_tcf34461gtw",
+          "key": "washlet_s5_tcf34461gtw",
+          "tier": "高CP值",
+          "brand": "TOTO",
+          "model": "WASHLET S5 TCF34461GTW／S2 TCF33461GTW＋CW769CTW",
+          "name": "TOTO WASHLET S5 或 S2 便座 ＋ 分離式馬桶 CW769CTW",
+          "highlights": [
+            "便座 2–3.5 萬＋馬桶約 1 萬",
+            "維修最省、CP 值最高"
+          ],
+          "dims": "",
+          "cutout": "",
+          "power": "110V 防水接地插座",
+          "weight": "",
+          "other": "",
+          "price": {
+            "amount": null,
+            "min": 30000,
+            "max": 45000,
+            "source": "other",
+            "checkedAt": "2026-08-22",
+            "note": "合計約 NT$3–4.5 萬"
+          },
+          "links": [],
+          "note": ""
+        }
+      ],
+      "notes": [],
+      "todos": [
+        {
+          "id": "toilet_t1",
+          "text": "量每間廁所的排水管距（305 或 400mm）",
+          "done": false
+        },
+        {
+          "id": "toilet_t2",
+          "text": "馬桶旁預留 110V 防水接地插座",
+          "done": false
+        },
+        {
+          "id": "toilet_t3",
+          "text": "確認各樓層水壓（不足加壓、過高減壓）",
+          "done": false
+        }
+      ],
+      "requests": [],
+      "costNotes": [
+        "NEOREST RS 實查約 11.2 萬（不含安裝）；NX2 CES903KVG 建議售價 507,200、特價仍約 35 萬，已剔除。"
+      ]
+    },
+    {
+      "id": "bath_heater",
+      "roomId": "bath",
+      "name": "浴室暖風機",
+      "short": "透天多間要乘倍",
+      "status": "choosing",
+      "chosenOptionId": null,
+      "hardReq": "",
+      "advice": "新裝潢強烈建議 220V＋線控：暖房快、面板耐用、濕手好按（110V 亦可用於一般坪數）。三款都是真實在售型號。透天多間浴室，數量請自行乘倍。",
+      "warnings": [],
+      "install": [
+        {
+          "tag": "電",
+          "text": "建議 220V；需獨立迴路＋漏電斷路器（30mA）。"
+        },
+        {
+          "tag": "排風",
+          "text": "排風管務必排到戶外，不可排到夾層／管道間造成回流。"
+        },
+        {
+          "tag": "尺寸",
+          "text": "天花板須留機體高度（台達豪華300 約 213mm、400 約 203mm）＋出風管路徑。"
+        },
+        {
+          "tag": "尺寸",
+          "text": "機體避開淋浴正上方，裝在乾區。"
+        }
+      ],
+      "options": [
+        {
+          "id": "heater_mitsubishi_v251bztwn",
+          "key": "heater_mitsubishi_v251bztwn",
+          "tier": "頂級",
+          "brand": "三菱電機",
+          "model": "V-251BZ-TWN",
+          "name": "三菱電機 浴室暖風乾燥機（日本製）",
+          "highlights": [
+            "3D 擺葉、IPX7 無線遙控",
+            "暖／涼／乾／換氣",
+            "適用約 2–4 坪、110V"
+          ],
+          "dims": "",
+          "cutout": "",
+          "power": "110V",
+          "weight": "",
+          "other": "",
+          "price": {
+            "amount": null,
+            "min": 13000,
+            "max": 16000,
+            "source": "momo",
+            "checkedAt": "2026-08-22",
+            "note": "約 NT$13,000–16,000（不含安裝）"
+          },
+          "links": [],
+          "note": ""
+        },
+        {
+          "id": "heater_panasonic_fv40buy1w",
+          "key": "heater_panasonic_fv40buy1w",
+          "tier": "高級",
+          "brand": "Panasonic",
+          "model": "FV-40BUY1W",
+          "name": "國際牌 浴室暖風機（220V 陶瓷加熱・有線線控）",
+          "highlights": [
+            "陶瓷加熱、有線線控、五重安全",
+            "大坪數適用"
+          ],
+          "dims": "",
+          "cutout": "",
+          "power": "220V",
+          "weight": "",
+          "other": "另有 nanoeX 版 FV-40BEN4W 約 NT$17,800",
+          "price": {
+            "amount": null,
+            "min": 10000,
+            "max": 13000,
+            "source": "pchome",
+            "checkedAt": "2026-08-22",
+            "note": "約 NT$10,000–13,000"
+          },
+          "links": [],
+          "note": ""
+        },
+        {
+          "id": "heater_delta_vhb30bcmrta",
+          "key": "heater_delta_vhb30bcmrta",
+          "tier": "高CP值",
+          "brand": "台達電子",
+          "model": "VHB30BCMRT-A（無線）／VHB30BCMT-AD（有線）",
+          "name": "台達 多功能循環涼暖風機 豪華300（220V）",
+          "highlights": [
+            "DC 馬達省電靜音、感應換氣／夜燈",
+            "3–6 坪、3 年保固"
+          ],
+          "dims": "機體高約 213 mm",
+          "cutout": "",
+          "power": "220V",
+          "weight": "",
+          "other": "",
+          "price": {
+            "amount": 7788,
+            "min": 7788,
+            "max": 7788,
+            "source": "pchome",
+            "checkedAt": "2026-08-22",
+            "note": "PChome 約 NT$7,788（不含安裝）"
+          },
+          "links": [],
+          "note": ""
+        }
+      ],
+      "notes": [],
+      "todos": [
+        {
+          "id": "bh_t1",
+          "text": "確認要裝幾間浴室",
+          "done": false
+        },
+        {
+          "id": "bh_t2",
+          "text": "每間拉 220V 獨立迴路＋漏電斷路器、排風管到戶外",
+          "done": false
+        }
+      ],
+      "requests": [],
+      "costNotes": []
+    },
+    {
+      "id": "tv",
+      "roomId": "living",
+      "name": "LG 電視（75 吋以上）",
+      "short": "強光客廳：QNED miniLED 優先",
+      "status": "choosing",
+      "chosenOptionId": null,
+      "hardReq": "75 吋以上。",
+      "advice": "透天客廳白天採光強 → 優先 QNED miniLED（75QNED86ATA／9MATA）：峰值亮度高、抗反光佳、無烙印顧慮。若客廳可控光、重畫質對比 → OLED evo G6（純淨黑抗反光面板）。挑高大空間 75–86 吋剛好；觀看距離 3.5–4.5m 建議 75 吋以上。",
+      "warnings": [
+        "草稿的 75MRGB86BTA（Micro RGB）型號尾碼待以 LG 台灣官網實際上架為準。"
+      ],
+      "install": [
+        {
+          "tag": "搬運",
+          "text": "75–86 吋先量樓梯轉角與門框。"
+        },
+        {
+          "tag": "尺寸",
+          "text": "觀看距離 3.5–4.5m；壁掛需確認牆體承重與 VESA 孔距。"
+        },
+        {
+          "tag": "電",
+          "text": "110V；預留 HDMI eARC 給聲霸。"
+        }
+      ],
+      "options": [
+        {
+          "id": "tv_lg_86qned86ata",
+          "key": "tv_lg_86qned86ata",
+          "tier": "頂級",
+          "brand": "LG",
+          "model": "86QNED86ATA",
+          "name": "LG 86 吋 QNED miniLED 4K 智慧電視",
+          "highlights": [
+            "miniLED 高亮、抗環境光",
+            "144Hz"
+          ],
+          "dims": "",
+          "cutout": "",
+          "power": "110V",
+          "weight": "",
+          "other": "或 77 吋 OLED evo G5／G6（約 NT$15–17 萬）",
+          "price": {
+            "amount": 123405,
+            "min": 123405,
+            "max": 123405,
+            "source": "momo",
+            "checkedAt": "2026-08-22",
+            "note": "MOMO 約 NT$123,405"
+          },
+          "links": [],
+          "note": ""
+        },
+        {
+          "id": "tv_lg_oled77g5pta",
+          "key": "tv_lg_oled77g5pta",
+          "tier": "頂級",
+          "brand": "LG",
+          "model": "OLED77G5PTA",
+          "name": "LG 77 吋 OLED evo G5 4K 電視",
+          "highlights": [
+            "OLED evo、抗反光佳、對比無限",
+            "適合可控光客廳"
+          ],
+          "dims": "",
+          "cutout": "",
+          "power": "110V",
+          "weight": "",
+          "other": "",
+          "price": {
+            "amount": null,
+            "min": 150000,
+            "max": 170000,
+            "source": "momo",
+            "checkedAt": "2026-08-22",
+            "note": "約 NT$15–17 萬"
+          },
+          "links": [],
+          "note": ""
+        },
+        {
+          "id": "tv_lg_75qned9mata",
+          "key": "tv_lg_75qned9mata",
+          "tier": "高級",
+          "brand": "LG",
+          "model": "75QNED9MATA",
+          "name": "LG 75 吋 QNED miniLED 真無線 4K 電視",
+          "highlights": [
+            "miniLED 高亮、真無線 9M"
+          ],
+          "dims": "",
+          "cutout": "",
+          "power": "110V",
+          "weight": "",
+          "other": "",
+          "price": {
+            "amount": 74900,
+            "min": 74900,
+            "max": 74900,
+            "source": "pchome",
+            "checkedAt": "2026-08-22",
+            "note": "PChome 約 NT$74,900"
+          },
+          "links": [],
+          "note": ""
+        },
+        {
+          "id": "tv_lg_oled77c5pta",
+          "key": "tv_lg_oled77c5pta",
+          "tier": "高級",
+          "brand": "LG",
+          "model": "OLED77C5PTA",
+          "name": "LG 77 吋 OLED evo C5 4K 電視",
+          "highlights": [
+            "OLED evo"
+          ],
+          "dims": "",
+          "cutout": "",
+          "power": "110V",
+          "weight": "",
+          "other": "",
+          "price": {
+            "amount": null,
+            "min": 100000,
+            "max": 110000,
+            "source": "momo",
+            "checkedAt": "2026-08-22",
+            "note": "約 NT$10 萬級"
+          },
+          "links": [],
+          "note": ""
+        },
+        {
+          "id": "tv_lg_75qned86ata",
+          "key": "tv_lg_75qned86ata",
+          "tier": "高CP值",
+          "brand": "LG",
+          "model": "75QNED86ATA",
+          "name": "LG 75 吋 QNED miniLED 4K 智慧電視（86 系列 144Hz）",
+          "highlights": [
+            "miniLED、144Hz",
+            "強光客廳首選"
+          ],
+          "dims": "",
+          "cutout": "",
+          "power": "110V",
+          "weight": "",
+          "other": "",
+          "price": {
+            "amount": null,
+            "min": 50000,
+            "max": 60000,
+            "source": "momo",
+            "checkedAt": "2026-08-22",
+            "note": "約 NT$5–6 萬"
+          },
+          "links": [],
+          "note": ""
+        },
+        {
+          "id": "tv_lg_75qned82ata",
+          "key": "tv_lg_75qned82ata",
+          "tier": "高CP值",
+          "brand": "LG",
+          "model": "75QNED82ATA",
+          "name": "LG 75 吋 QNED 4K 智慧電視",
+          "highlights": [
+            "QNED"
+          ],
+          "dims": "",
+          "cutout": "",
+          "power": "110V",
+          "weight": "",
+          "other": "",
+          "price": {
+            "amount": null,
+            "min": 42900,
+            "max": 56900,
+            "source": "momo",
+            "checkedAt": "2026-08-22",
+            "note": "MOMO 約 NT$42,900–56,900"
+          },
+          "links": [],
+          "note": ""
+        }
+      ],
+      "notes": [],
+      "todos": [
+        {
+          "id": "tv_t1",
+          "text": "量客廳觀看距離、樓梯與門框",
+          "done": false
+        },
+        {
+          "id": "tv_t2",
+          "text": "決定壁掛或座式；壁掛請設計師留承重牆與管線",
+          "done": false
+        }
+      ],
+      "requests": [],
+      "costNotes": []
+    },
+    {
+      "id": "soundbar",
+      "roomId": "living",
+      "name": "Soundbar",
+      "short": "搭 LG 電視：WOW 整合",
+      "status": "choosing",
+      "chosenOptionId": null,
+      "hardReq": "",
+      "advice": "LG 聲霸搭 LG 電視有 WOW Orchestra（電視＋聲霸同時發聲）、WOW Interface、WOWCAST，是選 LG 的最大理由。挑高天花板注意：向上發射天空聲道靠天花板反射，挑高 >3.2m 或斜頂會削弱 Atmos，此時實體後環繞（S95TR／S90TR 有）更有感。",
+      "warnings": [
+        "S95TR 仍在售但非最新（全球新款 S95AR／S90TR）；台灣通路主流仍為 S95TR。"
+      ],
+      "install": [
+        {
+          "tag": "電",
+          "text": "以 eARC HDMI 連接電視；聲霸置於電視正下方置中。"
+        },
+        {
+          "tag": "尺寸",
+          "text": "挑高 >3.2m 或斜頂：天空聲道效果打折，優先有實體後環繞的型號。"
+        }
+      ],
+      "options": [
+        {
+          "id": "sb_lg_s95tr",
+          "key": "sb_lg_s95tr",
+          "tier": "頂級",
+          "brand": "LG",
+          "model": "S95TR",
+          "name": "LG Soundbar S95TR（9.1.5 聲道）",
+          "highlights": [
+            "Dolby Atmos／DTS:X",
+            "三向上天空聲道＋無線後環繞"
+          ],
+          "dims": "",
+          "cutout": "",
+          "power": "110V",
+          "weight": "",
+          "other": "",
+          "price": {
+            "amount": 32500,
+            "min": 32500,
+            "max": 32500,
+            "source": "pchome",
+            "checkedAt": "2026-08-22",
+            "note": "PChome／克拉家電 約 NT$32,500"
+          },
+          "links": [],
+          "note": ""
+        },
+        {
+          "id": "sb_lg_s90tr",
+          "key": "sb_lg_s90tr",
+          "tier": "高級",
+          "brand": "LG",
+          "model": "S90TR／S80TR",
+          "name": "LG Soundbar S90TR（7.1.3）／S80TR（5.1.3）",
+          "highlights": [
+            "無線後環繞＋重低音"
+          ],
+          "dims": "",
+          "cutout": "",
+          "power": "110V",
+          "weight": "",
+          "other": "",
+          "price": {
+            "amount": null,
+            "min": 20000,
+            "max": 25000,
+            "source": "momo",
+            "checkedAt": "2026-08-22",
+            "note": "約 NT$2 萬級"
+          },
+          "links": [],
+          "note": ""
+        },
+        {
+          "id": "sb_lg_s70ty",
+          "key": "sb_lg_s70ty",
+          "tier": "高CP值",
+          "brand": "LG",
+          "model": "S70TY",
+          "name": "LG Soundbar S70TY（3.1.1）",
+          "highlights": [
+            "入門 Atmos"
+          ],
+          "dims": "",
+          "cutout": "",
+          "power": "110V",
+          "weight": "",
+          "other": "同級對照：Samsung HW-Q990F（11.1.4）約 NT$3 萬",
+          "price": {
+            "amount": null,
+            "min": 15000,
+            "max": 18000,
+            "source": "momo",
+            "checkedAt": "2026-08-22",
+            "note": "約 NT$1.5 萬"
+          },
+          "links": [],
+          "note": ""
+        },
+        {
+          "id": "sb_samsung_q990f",
+          "key": "sb_samsung_q990f",
+          "tier": "替代方案",
+          "brand": "Samsung",
+          "model": "HW-Q990F",
+          "name": "三星 HW-Q990F Soundbar（11.1.4）",
+          "highlights": [
+            "聲道數最多、實體後環繞",
+            "但沒有 LG WOW 整合"
+          ],
+          "dims": "",
+          "cutout": "",
+          "power": "110V",
+          "weight": "",
+          "other": "",
+          "price": {
+            "amount": null,
+            "min": 30000,
+            "max": 33000,
+            "source": "momo",
+            "checkedAt": "2026-08-22",
+            "note": "約 NT$3 萬"
+          },
+          "links": [],
+          "note": ""
+        }
+      ],
+      "notes": [],
+      "todos": [
+        {
+          "id": "sb_t1",
+          "text": "量客廳天花板高度（是否 >3.2m 或斜頂）",
+          "done": false
+        }
+      ],
+      "requests": [],
+      "costNotes": []
+    },
+    {
+      "id": "robot_vacuum",
+      "roomId": "entry",
+      "name": "掃地機器人",
+      "short": "自動上下水",
+      "status": "choosing",
+      "chosenOptionId": null,
+      "hardReq": "自動上下水。",
+      "advice": "三款都是 2026/8 台灣在售。Saros 20 水立方內建自動上下水；Dreame X50 Ultra 上下水為另購模組；Qrevo 上下水款最省。基站要先規劃好進排水與插座位置。",
+      "warnings": [
+        "Dreame 已推 X60 系列；草稿「X60 Master」為基站低矮版命名，以追覓官方台灣品名為準。"
+      ],
+      "install": [
+        {
+          "tag": "水",
+          "text": "進水接 2 分（1/4\"）軟管；排水接 3 分或直接入排水孔／地排。"
+        },
+        {
+          "tag": "排水",
+          "text": "排水管需洩水坡度 ≥1–2%，避免積水回堵。"
+        },
+        {
+          "tag": "電",
+          "text": "基站旁需 110V 插座。"
+        },
+        {
+          "tag": "尺寸",
+          "text": "基站預留擺放空間（含開門／散熱）。"
+        },
+        {
+          "tag": "其他",
+          "text": "南投水偏硬（151 mg/L）：定期清基站水路防水垢，或前端接軟水。"
+        }
+      ],
+      "options": [
+        {
+          "id": "robot_roborock_saros20",
+          "key": "robot_roborock_saros20",
+          "tier": "頂級",
+          "brand": "Roborock 石頭",
+          "model": "Saros 20 水立方",
+          "name": "石頭 Saros 20 水立方（內建自動上下水）",
+          "highlights": [
+            "36000Pa、100°C 熱水洗拖布",
+            "4.5＋4.3cm 雙門檻越障、機身 7.95cm 超薄、零纏繞"
+          ],
+          "dims": "機身高 7.95 cm",
+          "cutout": "",
+          "power": "110V",
+          "weight": "",
+          "other": "",
+          "price": {
+            "amount": null,
+            "min": 40000,
+            "max": 45000,
+            "source": "momo",
+            "checkedAt": "2026-08-22",
+            "note": "約 NT$4 萬級（石頭台灣官網／MOMO／蝦皮官方）"
+          },
+          "links": [],
+          "note": ""
+        },
+        {
+          "id": "robot_dreame_x50ultra",
+          "key": "robot_dreame_x50ultra",
+          "tier": "高級",
+          "brand": "Dreame 追覓",
+          "model": "X50 Ultra",
+          "name": "追覓 X50 Ultra（上下水模組另購）",
+          "highlights": [
+            "五重升降、仿生機械輪足",
+            "20000Pa、80°C 熱水洗、AI 避障",
+            "新款 X60 系列已上市"
+          ],
+          "dims": "",
+          "cutout": "",
+          "power": "110V",
+          "weight": "",
+          "other": "上下水模組另計",
+          "price": {
+            "amount": null,
+            "min": 35000,
+            "max": 40000,
+            "source": "momo",
+            "checkedAt": "2026-08-22",
+            "note": "主機約 NT$3.5–4 萬；上下水模組另計"
+          },
+          "links": [],
+          "note": ""
+        },
+        {
+          "id": "robot_roborock_qrevo_water",
+          "key": "robot_roborock_qrevo_water",
+          "tier": "高CP值",
+          "brand": "Roborock 石頭",
+          "model": "Qrevo 系列 水立方",
+          "name": "石頭 Qrevo 系列上下水款（水立方）／ECOVACS T 系列",
+          "highlights": [
+            "60°C 熱水洗、自動加清潔液、機械手臂",
+            "部分內附上下水"
+          ],
+          "dims": "",
+          "cutout": "",
+          "power": "110V",
+          "weight": "",
+          "other": "",
+          "price": {
+            "amount": null,
+            "min": 25000,
+            "max": 35000,
+            "source": "momo",
+            "checkedAt": "2026-08-22",
+            "note": "約 NT$2.5–3.5 萬"
+          },
+          "links": [],
+          "note": ""
+        }
+      ],
+      "notes": [],
+      "todos": [
+        {
+          "id": "rv_t1",
+          "text": "決定基站位置：要有給水、排水（有坡度）與 110V 插座",
+          "done": false
+        }
+      ],
+      "requests": [],
+      "costNotes": [
+        "水電接管費約 NT$1,500–3,500（視拉管距離）；石頭官網登錄最高補助安裝費 NT$1,200。"
+      ]
+    },
+    {
+      "id": "door_lock",
+      "roomId": "entry",
+      "name": "大門電子鎖",
+      "short": "人臉＋指紋",
+      "status": "choosing",
+      "chosenOptionId": null,
+      "hardReq": "人臉＋指紋同時具備。",
+      "advice": "三款都同時具備人臉＋指紋，符合硬需求；人臉多為 3D 結構光／雙目。戶外大門建議 IP54 以上＋加雨遮；西曬／逆光會影響部分人臉辨識與電池壽命，選有紅外／結構光補光、大容量鋰電並保留 Type-C 應急供電的機種。",
+      "warnings": [
+        "Philips 702FVP 型號待以飛利浦官方現售為準；主推 709FVP。"
+      ],
+      "install": [
+        {
+          "tag": "其他",
+          "text": "先拍門正／側／背照給業者評估門型（子母門、外推門、鋁框玻璃通風門常需窄面板款）。"
+        },
+        {
+          "tag": "尺寸",
+          "text": "確認門厚與鎖體規格（多支援 60mm 前後）。"
+        },
+        {
+          "tag": "其他",
+          "text": "戶外大門選 IP54 以上防水防塵，並加雨遮；西曬／逆光位置注意辨識與電池。"
+        }
+      ],
+      "options": [
+        {
+          "id": "lock_hitachi_hitfy10t",
+          "key": "lock_hitachi_hitfy10t",
+          "tier": "頂級",
+          "brand": "HITACHI 日立",
+          "model": "HIT-FY10-T（逸系列）",
+          "name": "日立 逸系列 電子鎖（3D 人臉＋掌靜脈＋指紋＋貓眼）",
+          "highlights": [
+            "3D 人臉＋掌靜脈＋指紋＋密碼＋卡片＋鑰匙＋WiFi",
+            "C 級鎖芯、300 萬畫素夜視貓眼、IP54、3 年保"
+          ],
+          "dims": "",
+          "cutout": "",
+          "power": "鋰電池",
+          "weight": "",
+          "other": "",
+          "price": {
+            "amount": 36800,
+            "min": 36800,
+            "max": 36800,
+            "source": "official",
+            "checkedAt": "2026-08-22",
+            "note": "約 NT$36,800 含基本安裝（日立官方建議售價）"
+          },
+          "links": [],
+          "note": ""
+        },
+        {
+          "id": "lock_yale_lunaproplus",
+          "key": "lock_yale_lunaproplus",
+          "tier": "高級",
+          "brand": "Yale",
+          "model": "Luna Pro+",
+          "name": "Yale Luna Pro+ 3D 人臉辨識推拉電子鎖",
+          "highlights": [
+            "人臉＋指紋＋卡片＋密碼＋藍牙＋WiFi＋鑰匙",
+            "急速人臉、防夾手、貓眼"
+          ],
+          "dims": "",
+          "cutout": "",
+          "power": "鋰電池",
+          "weight": "",
+          "other": "同級：Philips 709FVP（含遠端視訊對講）",
+          "price": {
+            "amount": null,
+            "min": 18000,
+            "max": 26000,
+            "source": "momo",
+            "checkedAt": "2026-08-22",
+            "note": "約 NT$18,000–26,000 含安裝"
+          },
+          "links": [],
+          "note": ""
+        },
+        {
+          "id": "lock_philips_ddl709fvp",
+          "key": "lock_philips_ddl709fvp",
+          "tier": "高級",
+          "brand": "Philips 飛利浦",
+          "model": "DDL709-FVP",
+          "name": "飛利浦 709FVP 人臉辨識＋貓眼 電子鎖（遠端視訊對講）",
+          "highlights": [
+            "人臉＋指紋＋貓眼＋遠端視訊對講"
+          ],
+          "dims": "",
+          "cutout": "",
+          "power": "鋰電池",
+          "weight": "",
+          "other": "",
+          "price": {
+            "amount": null,
+            "min": 18000,
+            "max": 26000,
+            "source": "momo",
+            "checkedAt": "2026-08-22",
+            "note": "約 NT$18,000–26,000 含安裝"
+          },
+          "links": [],
+          "note": ""
+        },
+        {
+          "id": "lock_lockin_v5max",
+          "key": "lock_lockin_v5max",
+          "tier": "高CP值",
+          "brand": "Lockin 鹿客",
+          "model": "V5 Max",
+          "name": "鹿客 V5 Max 人臉＋掌靜脈 電子鎖（2K 貓眼）",
+          "highlights": [
+            "人臉＋掌靜脈＋指紋＋密碼＋NFC＋鑰匙＋藍牙＋遠端＋聲控",
+            "可串米家／HomeKit、紅點獎、公司貨 2 年保"
+          ],
+          "dims": "",
+          "cutout": "",
+          "power": "鋰電池",
+          "weight": "",
+          "other": "",
+          "price": {
+            "amount": null,
+            "min": 13000,
+            "max": 16000,
+            "source": "momo",
+            "checkedAt": "2026-08-22",
+            "note": "約 NT$13,000–16,000 含安裝"
+          },
+          "links": [],
+          "note": ""
+        }
+      ],
+      "notes": [],
+      "todos": [
+        {
+          "id": "lock_t1",
+          "text": "拍大門正／側／背面照片，量門厚",
+          "done": false
+        },
+        {
+          "id": "lock_t2",
+          "text": "確認大門是否西曬、是否要加雨遮",
+          "done": false
+        }
+      ],
+      "requests": [],
+      "costNotes": [
+        "安裝含改孔／特殊門型費用約 NT$0–3,000（多數電商價已含基本安裝）。"
+      ]
+    }
+  ],
+  "prep": [
+    {
+      "id": "prep_e1",
+      "group": "電力迴路",
+      "trade": "電",
+      "text": "IH 爐：220V 專用迴路 15–20A（線徑 5.5mm²、T 型接地插座）",
+      "done": false
+    },
+    {
+      "id": "prep_e2",
+      "group": "電力迴路",
+      "trade": "電",
+      "text": "歐系 60cm 洗碗機：多為 220V 專用迴路（若選 F&P 抽屜式則 110V）",
+      "done": false
+    },
+    {
+      "id": "prep_e3",
+      "group": "電力迴路",
+      "trade": "電",
+      "text": "浴室暖風機：每間 220V 獨立迴路＋漏電斷路器（30mA）",
+      "done": false
+    },
+    {
+      "id": "prep_e4",
+      "group": "電力迴路",
+      "trade": "電",
+      "text": "抽油煙機、微波爐、氣炸烤箱：110V（氣炸與微波各自獨立插座）",
+      "done": false
+    },
+    {
+      "id": "prep_e5",
+      "group": "電力迴路",
+      "trade": "電",
+      "text": "電子鎖、掃地機基站、飲水機、軟水閥：各需 110V 插座",
+      "done": false
+    },
+    {
+      "id": "prep_e6",
+      "group": "電力迴路",
+      "trade": "電",
+      "text": "馬桶側：110V 防水接地插座",
+      "done": false
+    },
+    {
+      "id": "prep_w1",
+      "group": "水質／軟水",
+      "trade": "水",
+      "text": "全戶軟水裝於水塔／加壓馬達後、總進水處，加旁通閥；進水壓 1.5–3kg",
+      "done": false
+    },
+    {
+      "id": "prep_w2",
+      "group": "水質／軟水",
+      "trade": "水",
+      "text": "飲用水另走 RO／UF 分流（軟水含鈉不生飲）",
+      "done": false
+    },
+    {
+      "id": "prep_s1",
+      "group": "預留尺寸",
+      "trade": "木作",
+      "text": "冷凍櫃：頂 ≥30cm、左右 ≥10cm",
+      "done": false
+    },
+    {
+      "id": "prep_s2",
+      "group": "預留尺寸",
+      "trade": "木作",
+      "text": "IH 檯面開孔 710 × 368 mm，下方留散熱",
+      "done": false
+    },
+    {
+      "id": "prep_s3",
+      "group": "預留尺寸",
+      "trade": "木作",
+      "text": "洗碗機依機型開孔（60cm 下掀約 W600 × H820 × D570）",
+      "done": false
+    },
+    {
+      "id": "prep_s4",
+      "group": "預留尺寸",
+      "trade": "木作",
+      "text": "抽油煙機牆孔 Φ150；飲水機櫥下 ≥45cm 高",
+      "done": false
+    },
+    {
+      "id": "prep_d1",
+      "group": "排水",
+      "trade": "水",
+      "text": "洗碗機、飲水機、軟水機、掃地機基站皆需排水；排水管留洩水坡度（掃地機 ≥1–2%）",
+      "done": false
+    },
+    {
+      "id": "prep_v1",
+      "group": "排風",
+      "trade": "排風",
+      "text": "抽油煙機 Φ150 路徑短少彎；暖風機排風管務必排到戶外",
+      "done": false
+    },
+    {
+      "id": "prep_p1",
+      "group": "給水壓",
+      "trade": "水",
+      "text": "TOTO 電腦馬桶與飲水機需足夠水壓：高樓層不足加壓、過高加減壓閥；水錘吸收器非必裝",
+      "done": false
+    },
+    {
+      "id": "prep_m1",
+      "group": "搬運動線",
+      "trade": "搬運",
+      "text": "冷凍櫃（含把手寬 710mm）、75–86 吋電視：先量樓梯轉角與門框",
+      "done": false
+    }
+  ],
+  "budget": {
+    "note": "含估計安裝費，未含全屋水電改線、廚具木工、壁掛／管線延長等工程費。暖風機以 1 間計，透天常需 2–3 間。",
+    "rows": [
+      {
+        "item": "抽油煙機 FV-KTB2SD1TW",
+        "cp": 21500,
+        "mid": 21500,
+        "top": 21500
+      },
+      {
+        "item": "IH 爐 KY-C1W70",
+        "cp": 34800,
+        "mid": 34800,
+        "top": 34800
+      },
+      {
+        "item": "氣炸烤箱 Cuisinart",
+        "cp": 4500,
+        "mid": 7500,
+        "top": 9000
+      },
+      {
+        "item": "微波爐 NN-GF574",
+        "cp": 6500,
+        "mid": 7500,
+        "top": 8390
+      },
+      {
+        "item": "冷凍櫃 NR-FZ383AV-S",
+        "cp": 22500,
+        "mid": 24500,
+        "top": 25900
+      },
+      {
+        "item": "櫥下飲水機",
+        "cp": 20000,
+        "mid": 38000,
+        "top": 55000
+      },
+      {
+        "item": "TOTO 馬桶",
+        "cp": 40000,
+        "mid": 65000,
+        "top": 150000
+      },
+      {
+        "item": "浴室暖風機（×1）",
+        "cp": 9000,
+        "mid": 13000,
+        "top": 16000
+      },
+      {
+        "item": "掃地機器人",
+        "cp": 30000,
+        "mid": 40000,
+        "top": 45000
+      },
+      {
+        "item": "電子鎖",
+        "cp": 15000,
+        "mid": 22000,
+        "top": 37000
+      },
+      {
+        "item": "全戶軟水",
+        "cp": 45000,
+        "mid": 65000,
+        "top": 100000
+      },
+      {
+        "item": "LG 電視 75 吋以上",
+        "cp": 50000,
+        "mid": 75000,
+        "top": 140000
+      },
+      {
+        "item": "Soundbar",
+        "cp": 18000,
+        "mid": 25000,
+        "top": 33000
+      },
+      {
+        "item": "洗碗機",
+        "cp": 43500,
+        "mid": 68800,
+        "top": 98000
+      }
+    ],
+    "totals": {
+      "cp": "約 36–37 萬",
+      "mid": "約 51 萬",
+      "top": "約 77–78 萬"
+    }
+  },
+  "history": []
+}

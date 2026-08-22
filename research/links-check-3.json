@@ -1,0 +1,332 @@
+[
+  {
+    "itemId": "ih",
+    "item": "IH 調理爐",
+    "optionId": "ih_kyc1w70",
+    "model": "KY-C1W70",
+    "brand": "Panasonic",
+    "type": "momo",
+    "url": "https://www.momoshop.com.tw/TP/TP0006954/goodsDetail/TP00069540000174",
+    "label": ""
+  },
+  {
+    "itemId": "oven",
+    "item": "氣炸烤箱",
+    "optionId": "oven_toa95tw",
+    "model": "TOA-95TW",
+    "brand": "Cuisinart",
+    "type": "momo",
+    "url": "https://www.momoshop.com.tw/goods/GoodsDetail.jsp?i_code=11978993",
+    "label": ""
+  },
+  {
+    "itemId": "oven",
+    "item": "氣炸烤箱",
+    "optionId": "oven_toa60tw",
+    "model": "TOA-60TW",
+    "brand": "Cuisinart",
+    "type": "pchome",
+    "url": "https://24h.pchome.com.tw/prod/DMAGOA-A900KAR7L",
+    "label": ""
+  },
+  {
+    "itemId": "microwave",
+    "item": "微波爐",
+    "optionId": "mw_nngf574",
+    "model": "NN-GF574",
+    "brand": "Panasonic",
+    "type": "official",
+    "url": "https://www.panasonic.com/tw/consumer/kitchen/microwave/nn-gf574.html",
+    "label": ""
+  },
+  {
+    "itemId": "dishwasher",
+    "item": "洗碗機",
+    "optionId": "dw_fp_dd60dtx6hi1",
+    "model": "DD60DTX6HI1",
+    "brand": "Fisher & Paykel",
+    "type": "momo",
+    "url": "https://www.momoshop.com.tw/TP/TP0003734/goodsDetail/TP00037340002951",
+    "label": ""
+  },
+  {
+    "itemId": "dishwasher",
+    "item": "洗碗機",
+    "optionId": "dw_fp_dd60dchx9",
+    "model": "DD60DCHX9",
+    "brand": "Fisher & Paykel",
+    "type": "official",
+    "url": "https://fisherpaykel.com.tw/wp-content/uploads/2025/06/DD60DCHX9%E9%9B%99%E5%B1%A4%E4%B8%8D%E9%8F%BD%E9%8B%BC%E6%B4%97%E7%A2%97%E6%A9%9F.pdf",
+    "label": ""
+  },
+  {
+    "itemId": "dishwasher",
+    "item": "洗碗機",
+    "optionId": "dw_bosch_8series_60",
+    "model": "SMV8ZCX00X",
+    "brand": "Bosch",
+    "type": "momo",
+    "url": "https://www.momoshop.com.tw/goods/GoodsDetail.jsp?i_code=13164245",
+    "label": ""
+  },
+  {
+    "itemId": "dishwasher",
+    "item": "洗碗機",
+    "optionId": "dw_bosch_6series_60",
+    "model": "SMV6ZAX00X",
+    "brand": "Bosch",
+    "type": "pchome",
+    "url": "https://24h.pchome.com.tw/prod/DMBR13-A900K8SOK",
+    "label": ""
+  },
+  {
+    "itemId": "dishwasher",
+    "item": "洗碗機",
+    "optionId": "dw_miele_g7000_60",
+    "model": "G7114C SCi",
+    "brand": "Miele",
+    "type": "official",
+    "url": "https://miele.kenk.com.tw/product/dish-washer/no.g7114csci/%E5%8D%8A%E5%B5%8C%E5%BC%8F%E6%B4%97%E7%A2%97%E6%A9%9F",
+    "label": ""
+  },
+  {
+    "itemId": "water_dispenser",
+    "item": "櫥下飲水機",
+    "optionId": "water_oasis_fizz401",
+    "model": "LUXES-FIZZ-401",
+    "brand": "OASIS",
+    "type": "pchome",
+    "url": "https://24h.pchome.com.tw/prod/DMCI01-A900I4EU0",
+    "label": ""
+  },
+  {
+    "itemId": "water_dispenser",
+    "item": "櫥下飲水機",
+    "optionId": "water_modular_3temp_soda",
+    "model": "UR-3902AW-1 ＋ SodaStream ART",
+    "brand": "賀眾牌＋SodaStream",
+    "type": "official",
+    "url": "https://acuowater.com.tw/product/ur-3902aw/",
+    "label": "賀眾 官網"
+  },
+  {
+    "itemId": "water_dispenser",
+    "item": "櫥下飲水機",
+    "optionId": "water_oasis_3temp",
+    "model": "LUXES-COLD-301",
+    "brand": "OASIS",
+    "type": "momo",
+    "url": "https://www.momoshop.com.tw/goods/GoodsDetail.jsp?i_code=13116710",
+    "label": ""
+  },
+  {
+    "itemId": "water_dispenser",
+    "item": "櫥下飲水機",
+    "optionId": "water_oasis_3temp",
+    "model": "LUXES-COLD-301",
+    "brand": "OASIS",
+    "type": "pchome",
+    "url": "https://24h.pchome.com.tw/prod/DMAWGY-A900HF5JT",
+    "label": "SodaStream PChome"
+  },
+  {
+    "itemId": "softener",
+    "item": "全戶軟水系統",
+    "optionId": "soft_3m_sft200",
+    "model": "SFT-200",
+    "brand": "3M",
+    "type": "official",
+    "url": "https://shop.3m.com.tw/SalePage/Index/11013225",
+    "label": "3M 官方旗艦店（90,900）"
+  },
+  {
+    "itemId": "toilet",
+    "item": "TOTO 電腦馬桶",
+    "optionId": "toilet_neorest_rs_ces83410gtw",
+    "model": "NEOREST RS CES83410GTW",
+    "brand": "TOTO",
+    "type": "momo",
+    "url": "https://www.momoshop.com.tw/TP/TP0002437/goodsDetail/TP00024370000557",
+    "label": ""
+  },
+  {
+    "itemId": "toilet",
+    "item": "TOTO 電腦馬桶",
+    "optionId": "washlet_s7_tcf47160gtw",
+    "model": "WASHLET S7 TCF47160GTW ＋ 馬桶 CW769CTW",
+    "brand": "TOTO",
+    "type": "pchome",
+    "url": "https://24h.pchome.com.tw/prod/DMAL6W-A900JNQF2",
+    "label": "便座 S7 PChome"
+  },
+  {
+    "itemId": "toilet",
+    "item": "TOTO 電腦馬桶",
+    "optionId": "washlet_s7_tcf47160gtw",
+    "model": "WASHLET S7 TCF47160GTW ＋ 馬桶 CW769CTW",
+    "brand": "TOTO",
+    "type": "official",
+    "url": "https://www.twtoto.com.tw/product-detail.aspx?mid=1&id=2542",
+    "label": "馬桶 CW769CTW 官網"
+  },
+  {
+    "itemId": "toilet",
+    "item": "TOTO 電腦馬桶",
+    "optionId": "washlet_s5_tcf34461gtw",
+    "model": "WASHLET S5 TCF34461GTW（或 S2 TCF33461GTW）＋ 馬桶 CW769CTW",
+    "brand": "TOTO",
+    "type": "momo",
+    "url": "https://www.momoshop.com.tw/goods/GoodsDetail.jsp?i_code=14834662",
+    "label": "便座 S2 MOMO"
+  },
+  {
+    "itemId": "toilet",
+    "item": "TOTO 電腦馬桶",
+    "optionId": "washlet_s5_tcf34461gtw",
+    "model": "WASHLET S5 TCF34461GTW（或 S2 TCF33461GTW）＋ 馬桶 CW769CTW",
+    "brand": "TOTO",
+    "type": "pchome",
+    "url": "https://24h.pchome.com.tw/prod/DEDW02-A900IZCQE",
+    "label": "馬桶 CW769CTW PChome"
+  },
+  {
+    "itemId": "bath_heater",
+    "item": "浴室暖風機",
+    "optionId": "heater_panasonic_fv40buy1w",
+    "model": "FV-40BUY1W",
+    "brand": "Panasonic",
+    "type": "momo",
+    "url": "https://www.momoshop.com.tw/goods/GoodsDetail.jsp?i_code=11072198",
+    "label": ""
+  },
+  {
+    "itemId": "bath_heater",
+    "item": "浴室暖風機",
+    "optionId": "heater_delta_vhb30bcmrta",
+    "model": "VHB30BCMRT-A（無線）／VHB30BCMT-AD（有線）",
+    "brand": "台達電子",
+    "type": "official",
+    "url": "https://www.deltaww.com/zh-tw/products/Heater-Fan/3251",
+    "label": "無線款 官網"
+  },
+  {
+    "itemId": "tv",
+    "item": "LG 電視（75 吋以上）",
+    "optionId": "tv_lg_86qned86ata",
+    "model": "86QNED86ATA",
+    "brand": "LG",
+    "type": "momo",
+    "url": "https://www.momoshop.com.tw/TP/TP0003952/goodsDetail/TP00039520005326",
+    "label": ""
+  },
+  {
+    "itemId": "tv",
+    "item": "LG 電視（75 吋以上）",
+    "optionId": "tv_lg_oled77g5pta",
+    "model": "OLED77G6PTA",
+    "brand": "LG",
+    "type": "official",
+    "url": "https://www.lg.com/tw/tv-soundbars/oled-evo/oled77g6pta/",
+    "label": ""
+  },
+  {
+    "itemId": "tv",
+    "item": "LG 電視（75 吋以上）",
+    "optionId": "tv_lg_oled77c5pta",
+    "model": "OLED77C5PTA",
+    "brand": "LG",
+    "type": "momo",
+    "url": "https://www.momoshop.com.tw/TP/TP0004001/goodsDetail/TP00040010001115",
+    "label": ""
+  },
+  {
+    "itemId": "tv",
+    "item": "LG 電視（75 吋以上）",
+    "optionId": "tv_lg_75qned86ata",
+    "model": "75QNED86ATA",
+    "brand": "LG",
+    "type": "pchome",
+    "url": "https://24h.pchome.com.tw/prod/DPADYE-A900IWS22",
+    "label": ""
+  },
+  {
+    "itemId": "tv",
+    "item": "LG 電視（75 吋以上）",
+    "optionId": "tv_lg_75qned82ata",
+    "model": "75QNED82ATA",
+    "brand": "LG",
+    "type": "official",
+    "url": "https://www.lg.com/tw/tv-soundbars/qned/75qned82ata/",
+    "label": ""
+  },
+  {
+    "itemId": "soundbar",
+    "item": "Soundbar",
+    "optionId": "sb_lg_s90tr",
+    "model": "S80TR",
+    "brand": "LG",
+    "type": "momo",
+    "url": "https://www.momoshop.com.tw/TP/TP0003952/goodsDetail/TP00039520005779",
+    "label": ""
+  },
+  {
+    "itemId": "soundbar",
+    "item": "Soundbar",
+    "optionId": "sb_lg_s70ty",
+    "model": "S70TR",
+    "brand": "LG",
+    "type": "official",
+    "url": "https://www.lg.com/tw/speakers/lg-s70tr",
+    "label": ""
+  },
+  {
+    "itemId": "robot_vacuum",
+    "item": "掃地機器人",
+    "optionId": "robot_roborock_saros20",
+    "model": "Saros 20 水立方",
+    "brand": "Roborock 石頭",
+    "type": "momo",
+    "url": "https://www.momoshop.com.tw/goods/GoodsDetail.jsp?i_code=14900392",
+    "label": ""
+  },
+  {
+    "itemId": "robot_vacuum",
+    "item": "掃地機器人",
+    "optionId": "robot_dreame_x50ultra",
+    "model": "X50 Ultra",
+    "brand": "Dreame 追覓",
+    "type": "official",
+    "url": "https://www.dreametech.com.tw/products/dreame-x50-ultra",
+    "label": ""
+  },
+  {
+    "itemId": "door_lock",
+    "item": "大門電子鎖",
+    "optionId": "lock_hitachi_hitfy10t",
+    "model": "HIT-FY10-T（逸系列）",
+    "brand": "HITACHI 日立",
+    "type": "pchome",
+    "url": "https://24h.pchome.com.tw/prod/DQBS4N-A900KAPUN",
+    "label": ""
+  },
+  {
+    "itemId": "door_lock",
+    "item": "大門電子鎖",
+    "optionId": "lock_yale_lunaproplus",
+    "model": "Luna Pro+",
+    "brand": "Yale",
+    "type": "official",
+    "url": "https://www.ipddl.com.tw/page/product/show.aspx?num=1224&lang=TW",
+    "label": ""
+  },
+  {
+    "itemId": "door_lock",
+    "item": "大門電子鎖",
+    "optionId": "lock_lockin_v5max",
+    "model": "V5 Max",
+    "brand": "Lockin 鹿客",
+    "type": "momo",
+    "url": "https://www.momoshop.com.tw/TP/TP0005915/goodsDetail/TP00059150000004",
+    "label": ""
+  }
+]

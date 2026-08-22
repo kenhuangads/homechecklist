@@ -1,0 +1,258 @@
+[
+  {
+    "key": "water_oasis_fizz401",
+    "brand": "OASIS",
+    "model": "LUXES-FIZZ-401",
+    "name_zh": "OASIS 櫥下極奢氣泡三溫UVC飲水機（配置高效三道軟水抑菌淨水器／免費基本安裝／氣泡水／冰溫熱）",
+    "momo": {
+      "url": "https://www.momoshop.com.tw/goods/GoodsDetail.jsp?i_code=13048533",
+      "price": 54800,
+      "verified": "fetched",
+      "note": "促銷價 54,800（原價 69,800）；08/21–08/24 限時 95 折後 52,060；庫存低於 5 組；頁面未印型號，但品名與恆隆行 LUXES-FIZZ-401 一致"
+    },
+    "pchome": {
+      "url": "https://24h.pchome.com.tw/prod/DMCI01-A900I4EU0",
+      "price": 54800,
+      "verified": "fetched",
+      "note": "API 現價 54,800／原價 59,800，ForSale；品名：【美國OASIS】櫥下極奢氣泡三溫飲水機(買就送高效三道軟水抑菌淨水器)；600G RO 版 DMCI2K-A900IG6N5 64,800"
+    },
+    "official": {
+      "url": "https://shop.hengstyle.com/SalePage/Index/9976090",
+      "verified": "fetched"
+    },
+    "best_price": {
+      "amount": 52060,
+      "source": "momo",
+      "checkedAt": "2026-08-22"
+    },
+    "dimensions": "230×350×450 mm（主機；龍頭 55×192×356、三道濾芯 320×70×375）",
+    "power": "110V/60Hz，額定 450W",
+    "warranty": "1 年",
+    "availability": "in_stock",
+    "notes": "冰溫熱＋氣泡四合一、UVC 瞬間殺菌、NSF/SGS 生飲認證；含免費基本安裝；恆隆行（格威）代理；燦坤 54,800；使用 SodaStream 鋼瓶"
+  },
+  {
+    "key": "water_oasis_3temp",
+    "brand": "OASIS",
+    "model": "LUXES-COLD-301",
+    "name_zh": "OASIS 櫥下輕奢三溫UVC飲水機（配置高效三道軟水抑菌淨水器／免費基本安裝／冰溫熱）",
+    "momo": {
+      "url": "https://www.momoshop.com.tw/goods/GoodsDetail.jsp?i_code=13116710",
+      "price": 39800,
+      "verified": "fetched",
+      "note": "促銷價 39,800（原價 52,800）；08/21–08/24 限時 95 折後 37,810；庫存低於 3 組；含免費基本安裝；600G RO 版 i_code=13690069 49,800（折後 47,310）"
+    },
+    "pchome": {
+      "url": "https://24h.pchome.com.tw/prod/DMCI01-A900I4ERS",
+      "price": 39800,
+      "verified": "fetched",
+      "note": "API 現價 39,800／原價 42,800，ForSale；品名：OASIS 櫥下輕奢三溫UVC飲水機(配置高效三道軟水抑菌淨水器)；600G RO 版 DMCI2K-A900IG6VR 49,800"
+    },
+    "official": {
+      "url": "https://shop.hengstyle.com/SalePage/Index/10123858",
+      "verified": "fetched"
+    },
+    "best_price": {
+      "amount": 37810,
+      "source": "momo",
+      "checkedAt": "2026-08-22"
+    },
+    "dimensions": "230×350×450 mm（主機，15.2 kg）",
+    "power": "",
+    "warranty": "1 年",
+    "availability": "in_stock",
+    "notes": "冰溫熱三合一、UVC 瞬間殺菌、三道濾芯（銀離子碳纖維＋2 支高效軟水）、流量 1.8L/60s；momo 與 PChome 促銷價同為 39,800，momo 另有限時折扣；燦坤 39,800（預購）"
+  },
+  {
+    "key": "water_buder_bd3006",
+    "brand": "Buder 普德",
+    "model": "BD-3006A（超濾版 BD-3006A-DC／RO 版 BD-3006A-RO）",
+    "name_zh": "Buder 普德 BD-3006A 廚下型冷水煮沸飲水機（316 醫療級不鏽鋼龍頭）",
+    "momo": {
+      "url": "https://www.momoshop.com.tw/TP/TP0001280/goodsDetail/TP00012800000078",
+      "price": 32184,
+      "verified": "fetched",
+      "note": "momo 商城（省錢王）賣場：BD-3006A＋DC-1604 四道生飲淨水器，含專業安裝，2 年保固；momo 自營無單獨 BD-3006 頁"
+    },
+    "pchome": {
+      "url": "https://24h.pchome.com.tw/prod/DMAWFH-A900EN0XL",
+      "price": 39480,
+      "verified": "fetched",
+      "note": "BD-3006A-DC（316 不鏽鋼龍頭＋超濾膜）API 現價 39,480／原價 43,430、活動折後 34,742，ForSale；RO 版 DMAWFH-A900EN0Y0 40,800（折後 35,904）；免費標準安裝"
+    },
+    "official": {
+      "url": "https://buderwater.com/en/bd-3006a%E5%BB%9A%E4%B8%8B%E5%9E%8B%E9%A3%B2%E6%B0%B4%E6%A9%9F%E5%86%B7%E6%B0%B4%E7%85%AE%E6%B2%B8/",
+      "verified": "fetched"
+    },
+    "best_price": {
+      "amount": 32184,
+      "source": "momo",
+      "checkedAt": "2026-08-22"
+    },
+    "dimensions": "200×420×445 mm（加熱主機）；龍頭 110×40×280 mm，迴轉半徑 150 mm",
+    "power": "110V，750W",
+    "warranty": "官網 1 年（終身維修）；momo／PChome 賣場標示 2 年原廠保固",
+    "availability": "in_stock",
+    "notes": "冷水煮沸後冷卻出水＋熱水（冷／熱雙溫，非冰溫熱）；熱水 3.6L＋溫水 3.6L；一級能效；官網單機 27,900–29,000"
+  },
+  {
+    "key": "water_uw_3temp",
+    "brand": "賀眾牌",
+    "model": "UR-3902AW-1",
+    "name_zh": "賀眾牌 PREMIER 尊爵不凡廚下冰溫瞬熱旗艦飲水機 UR-3902AW-1（110V／雙源淨化／冰溫瞬熱／恆淨水系統）",
+    "momo": {
+      "url": "https://www.momoshop.com.tw/goods/GoodsDetail.jsp?i_code=14013218",
+      "price": 36800,
+      "verified": "fetched",
+      "note": "原價 49,800；同頁可選 110V／220V；含標準安裝（3 米內）"
+    },
+    "pchome": {
+      "url": "https://24h.pchome.com.tw/prod/DMAWI0-A900ITF3M",
+      "price": 36800,
+      "verified": "fetched",
+      "note": "API 現價 36,800／原價 49,800，ForSale；220V 版 DMAWI0-A900ITF4F 同價"
+    },
+    "official": {
+      "url": "https://acuowater.com.tw/product/ur-3902aw/",
+      "verified": "fetched"
+    },
+    "best_price": {
+      "amount": 36800,
+      "source": "momo",
+      "checkedAt": "2026-08-22"
+    },
+    "dimensions": "183×467×463 mm（主機）；前置濾芯 160×155×380 mm",
+    "power": "110V/60Hz，加熱 1500W＋製冷 100W（220V 版加熱 2100W）",
+    "warranty": "1 年",
+    "availability": "in_stock",
+    "notes": "賀眾唯一真正冰／溫／熱三溫櫥下機（內建 600GPD RO 雙源淨化，冰水箱 0.8L）；UW 系列櫥下機皆僅冷熱雙溫：UW-2212HW-1 momo i_code=9556766／PChome DMAWEM-A900F0DM9 均 24,900（200×270×410 mm、750W），UW-2502DW-1 冰熱 PChome 34,900"
+  },
+  {
+    "key": "soft_bwt_bewamat75a",
+    "brand": "BWT 德國倍世",
+    "model": "Bewamat 75A",
+    "name_zh": "BWT 德國倍世 智慧型軟水機（Bewamat 75A）",
+    "momo": {
+      "url": "https://www.momoshop.com.tw/search/searchShop.jsp?keyword=BWT%20Bewamat%2075A",
+      "price": null,
+      "verified": "none",
+      "note": "原 momo 商品頁 i_code=3666407、3374698 現皆顯示「商品目前無展售」，已下架"
+    },
+    "pchome": {
+      "url": "https://24h.pchome.com.tw/prod/QBAU0O-A90065T09",
+      "price": 213000,
+      "verified": "fetched",
+      "note": "API 標價 213,000／原價 236,000，但 ButtonType=NotReady、庫存 0（目前無法下單）"
+    },
+    "official": {
+      "url": "https://shop.wqp-water.com.tw/products/bwt-75a-%E8%BB%9F%E6%B0%B4%E6%A9%9F",
+      "verified": "search"
+    },
+    "best_price": {
+      "amount": 213000,
+      "source": "other:拓霖企業商城（BWT 台灣總代理，預購）",
+      "checkedAt": "2026-08-22"
+    },
+    "dimensions": "390×560×1090 mm（W×D×H）",
+    "power": "230V/50-60Hz 變壓 18V，耗電 20W",
+    "warranty": "1 年",
+    "availability": "unclear",
+    "notes": "全戶型軟水機：工作流量 1.8–2.5 m³/h、交換容量 75 m³、儲鹽 50 kg、管徑 1-1/4 吋，德國製；momo 已無在售頁、PChome 暫無庫存，建議洽總代理拓霖 0800-092-552"
+  },
+  {
+    "key": "soft_3m_sft200",
+    "brand": "3M",
+    "model": "SFT-200",
+    "name_zh": "3M SFT-200 全戶式軟水系統",
+    "momo": {
+      "url": "https://www.momoshop.com.tw/goods/GoodsDetail.jsp?i_code=14520267",
+      "price": 120700,
+      "verified": "fetched",
+      "note": "為全戶三件組（SFT-200＋SS802 不鏽鋼淨水＋BFS3-40BK 反洗），原價 156,600，2026/09/11 後排程安裝；單機頁 i_code=10176004 已下架"
+    },
+    "pchome": {
+      "url": "https://24h.pchome.com.tw/search/?q=3M%20SFT-200",
+      "price": null,
+      "verified": "none",
+      "note": "PChome 搜尋 API 無 SFT-200 品項"
+    },
+    "official": {
+      "url": "https://shop.3m.com.tw/SalePage/Index/11013225",
+      "verified": "fetched"
+    },
+    "best_price": {
+      "amount": 90900,
+      "source": "official",
+      "checkedAt": "2026-08-22"
+    },
+    "dimensions": "483.5×482.5×1123 mm",
+    "power": "110V/60Hz",
+    "warranty": "1 年",
+    "availability": "in_stock",
+    "notes": "工作流量 2.0 噸/h、最大 2.9 噸/h、儲鹽 60 kg、進出水 3/4 吋；3M 官方旗艦店 SFT-200＋BFS3-40BK 90,900、大三套 120,700"
+  },
+  {
+    "key": "soft_3m_sft150",
+    "brand": "3M",
+    "model": "SFT-150",
+    "name_zh": "3M SFT-150 全屋/全戶式軟水系統（加碼送 3M BFS3-40BK 前置反洗淨水系統－曜石黑）",
+    "momo": {
+      "url": "https://www.momoshop.com.tw/goods/GoodsDetail.jsp?i_code=13230158",
+      "price": 74900,
+      "verified": "fetched",
+      "note": "原價 84,900；預購，預計 2026/09/11 出貨；廠商宅配安裝"
+    },
+    "pchome": {
+      "url": "https://24h.pchome.com.tw/search/?q=3M%20SFT-150",
+      "price": null,
+      "verified": "none",
+      "note": "PChome 搜尋 API 無 SFT-150 品項"
+    },
+    "official": {
+      "url": "https://shop.3m.com.tw/SalePage/Index/10138623",
+      "verified": "search"
+    },
+    "best_price": {
+      "amount": 74900,
+      "source": "momo",
+      "checkedAt": "2026-08-22"
+    },
+    "dimensions": "470×460×661 mm",
+    "power": "110V/60Hz",
+    "warranty": "1 年",
+    "availability": "in_stock",
+    "notes": "工作流量 1.5 噸/h、最大 2.4 噸/h、淨重 21 kg；3M 官方旗艦店僅有大三套 104,700；momo 商城（省錢王）另有 SFT-150＋BFS1-80＋BD-300S 組 74,900"
+  },
+  {
+    "key": "sparkling_sodastream_module",
+    "brand": "SodaStream",
+    "model": "ART",
+    "name_zh": "Sodastream ART 拉桿式自動扣瓶氣泡水機（白／黑）",
+    "momo": {
+      "url": "https://www.momoshop.com.tw/goods/GoodsDetail.jsp?i_code=10071565",
+      "price": 5490,
+      "verified": "fetched",
+      "note": "促銷價 5,490（限時折後 5,215），原價 7,680；08/24 前到貨；2 年保固"
+    },
+    "pchome": {
+      "url": "https://24h.pchome.com.tw/prod/DMAWGY-A900HF5JT",
+      "price": 4990,
+      "verified": "fetched",
+      "note": "【快扣鋼瓶機型】ART 白，API 現價 4,990／原價 7,680，ForSale；黑 DMAWGY-A900HHO21 同價"
+    },
+    "official": {
+      "url": "https://www.sodastream.com.tw/catalog/ins.php?index_id=91",
+      "verified": "fetched"
+    },
+    "best_price": {
+      "amount": 4990,
+      "source": "pchome",
+      "checkedAt": "2026-08-22"
+    },
+    "dimensions": "250×180×440 mm（L×W×H，3.5 kg）",
+    "power": "免插電（手動拉桿打氣）",
+    "warranty": "2 年",
+    "availability": "in_stock",
+    "notes": "桌上型氣泡水機，含 425g 快扣鋼瓶＋1L 水瓶，以色列製；與 OASIS LUXES-FIZZ-401 共用 SodaStream 快扣鋼瓶"
+  }
+]

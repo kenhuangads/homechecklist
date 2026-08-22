@@ -1,0 +1,3624 @@
+{
+  "schema": 1,
+  "rev": 11,
+  "updatedAt": "2026-08-22T14:42:37.851Z",
+  "meta": {
+    "title": "南投老家翻修清單",
+    "subtitle": "全屋家電採購與安裝需求",
+    "shareUrl": "https://kenhuangads.github.io/homechecklist/",
+    "priceNote": "價格以 MOMO、PChome 24h 現價為準（2026/8/22 逐一實查；PChome 價格每天自動更新），下單前請再點進去確認。",
+    "water": {
+      "plant": "台水 南崗淨水場（南投市成功一路28號）",
+      "sampledAt": "2026-08-10",
+      "hardness": 151,
+      "tds": 268,
+      "ph": 6.9,
+      "grade": "硬水（WHO 分級 120–180 mg/L）",
+      "note": "法規限值 300 mg/L、合格。超過 120 mg/L 就值得裝全戶軟水；不是「超硬水」。"
+    },
+    "researchedAt": "2026-08-22"
+  },
+  "profiles": {
+    "family": {
+      "id": "family",
+      "label": "家人",
+      "who": "負責選擇與採購",
+      "desc": "看得到價格、購買連結與比價，可以選方案、打勾、留言。",
+      "show": {
+        "price": true,
+        "links": true,
+        "options": true,
+        "install": true,
+        "dims": true,
+        "notes": true,
+        "todos": true,
+        "advice": true,
+        "prep": true
+      },
+      "edit": true
+    },
+    "designer": {
+      "id": "designer",
+      "label": "設計師",
+      "who": "整合設計與水電需求",
+      "desc": "尺寸、開孔、電壓迴路、給排水、排風與全屋前置工程；不顯示價格與購買連結。",
+      "show": {
+        "price": false,
+        "links": false,
+        "options": true,
+        "install": true,
+        "dims": true,
+        "notes": false,
+        "todos": false,
+        "advice": true,
+        "prep": true
+      },
+      "edit": false
+    }
+  },
+  "rooms": [
+    {
+      "id": "kitchen",
+      "name": "廚房"
+    },
+    {
+      "id": "water",
+      "name": "飲水與水質"
+    },
+    {
+      "id": "bath",
+      "name": "衛浴"
+    },
+    {
+      "id": "living",
+      "name": "客廳"
+    },
+    {
+      "id": "entry",
+      "name": "玄關與全屋"
+    }
+  ],
+  "items": [
+    {
+      "id": "hood",
+      "roomId": "kitchen",
+      "name": "抽油煙機",
+      "short": "Panasonic 頂側雙吸式 90cm",
+      "status": "decided",
+      "chosenOptionId": "hood_fvktb2sd1tw",
+      "hardReq": "",
+      "advice": "已指定型號，規格全部查核正確。透天安裝重點是排風管路徑越短、彎折越少越好（每多一個 90° 彎，排風量會明顯下降）。",
+      "warnings": [
+        "2026/8/22 實查：MOMO 與 PChome 目前沒有在售，請改向經銷商（甫佳、格蘭登等）或 Panasonic 官方商城購買。"
+      ],
+      "install": [
+        {
+          "tag": "尺寸",
+          "text": "對應 90cm 廚具；L 型機身深度僅 354mm，貼牆安裝不易碰頭。"
+        },
+        {
+          "tag": "排風",
+          "text": "排煙管 Φ150mm，牆面預留孔要配合；路徑越短、彎越少越好。"
+        },
+        {
+          "tag": "電",
+          "text": "110V 一般插座即可（功率僅 328W，免專用迴路）。"
+        },
+        {
+          "tag": "尺寸",
+          "text": "機體與 IH／瓦斯爐面距離建議 65–75cm。"
+        }
+      ],
+      "options": [
+        {
+          "id": "hood_fvktb2sd1tw",
+          "key": "hood_fvktb2sd1tw",
+          "tier": "指定",
+          "brand": "Panasonic",
+          "model": "FV-KTB2SD1TW",
+          "name": "國際牌 頂側雙吸式抽油煙機 90cm（曜石黑晶）",
+          "highlights": [
+            "揮手就能開關，不沾油手",
+            "18 m³/min 大風量、3 段風速",
+            "機身薄不碰頭，延遲 3 分鐘關機"
+          ],
+          "dims": "寬895 × 深354 × 高935 mm",
+          "cutout": "",
+          "power": "110V／328W",
+          "weight": "32.5 kg",
+          "other": "排煙管 Φ150mm；保固全機 1 年、登錄 3 年",
+          "price": {
+            "amount": 21900,
+            "min": 21900,
+            "max": 21900,
+            "source": "other",
+            "checkedAt": "2026-08-22",
+            "note": "MOMO／PChome 目前皆無在售（原頁已下架）；甫佳電器 21,900（原價 22,900，預購、不含安裝）",
+            "sourceDetail": "甫佳電器 Fuchia (https://www.fuchia.tw/v2/shop/item/3219)"
+          },
+          "links": [
+            {
+              "type": "search-momo",
+              "url": "https://www.momoshop.com.tw/search/searchShop.jsp?keyword=FV-KTB2SD1TW",
+              "verified": false
+            },
+            {
+              "type": "search-pchome",
+              "url": "https://24h.pchome.com.tw/search/?q=FV-KTB2SD1TW",
+              "verified": false
+            },
+            {
+              "type": "official",
+              "url": "https://www.panasonic.com/tw/homeliving/housing/kitchen/range-hood/fv-ktb2sd1tw.html",
+              "verified": true,
+              "checkedAt": "2026-08-22",
+              "check": "blocked",
+              "note": "官網對自動程式封鎖，人工開啟正常"
+            },
+            {
+              "type": "other",
+              "url": "https://www.fuchia.tw/v2/shop/item/3219",
+              "verified": true,
+              "label": "甫佳電器 看商品",
+              "checkedAt": "2026-08-22",
+              "check": "ok",
+              "stock": "ok"
+            }
+          ],
+          "note": "",
+          "availability": "unclear",
+          "storeName": "Panasonic 國際牌 頂側雙吸式排油煙機 FV-KTB2SD1TW",
+          "researchNote": "MOMO、PChome 目前皆無在售；經銷商甫佳電器 21,900（原價 22,900，預購、不含安裝）。官網規格頁擋爬蟲（403），尺寸/功率取自官網搜尋摘要。",
+          "checkedAt": "2026-08-22",
+          "cmpKeyword": "Panasonic FV-KTB2SD1TW"
+        }
+      ],
+      "notes": [],
+      "todos": [
+        {
+          "id": "hood_t1",
+          "text": "確認廚具寬度是 90cm",
+          "done": false
+        },
+        {
+          "id": "hood_t2",
+          "text": "牆面預留 Φ150 排風孔，確認路徑短、彎少",
+          "done": false
+        }
+      ],
+      "requests": [],
+      "costNotes": [],
+      "pickOptionId": null,
+      "pickReason": ""
+    },
+    {
+      "id": "ih",
+      "roomId": "kitchen",
+      "name": "IH 調理爐",
+      "short": "Panasonic 嵌入式雙口 220V",
+      "status": "decided",
+      "chosenOptionId": "ih_kyc1w70",
+      "hardReq": "",
+      "advice": "已指定型號。注意：左右爐口「各 3200W 同時全開」是錯的——總功率上限就是 3.2kW／15A，兩口同時用會自動分配火力。",
+      "warnings": [
+        "總輸出上限 3.2kW（15A），不是雙口各 3200W 同時輸出。",
+        "2026/8/22 實查現價：PChome 39,800（庫存 1）／MOMO 42,900；報告寫的 34,800 是經銷價，電商買會貴一些。各賣場皆不含安裝。"
+      ],
+      "install": [
+        {
+          "tag": "電",
+          "text": "必須 220V 專用迴路；無熔絲開關建議 20A（負載 15A），線徑建議 5.5mm²（依水電師傅現場評估）。"
+        },
+        {
+          "tag": "電",
+          "text": "220V T 型插座，附接地。"
+        },
+        {
+          "tag": "尺寸",
+          "text": "檯面開孔 710 × 368 mm；下方抽屜／櫃體須預留散熱空間，勿緊貼。"
+        },
+        {
+          "tag": "尺寸",
+          "text": "與抽油煙機面距約 65–75cm。"
+        }
+      ],
+      "options": [
+        {
+          "id": "ih_kyc1w70",
+          "key": "ih_kyc1w70",
+          "tier": "指定",
+          "brand": "Panasonic",
+          "model": "KY-C1W70",
+          "name": "國際牌 嵌入式雙口 IH 調理爐",
+          "highlights": [
+            "光感應火力，9 段＋油煎油炸模式",
+            "兩口各 19cm，大鍋也放得下",
+            "多重安全保護＋兒童鎖"
+          ],
+          "dims": "本體 寬744 × 深440 × 高93 mm",
+          "cutout": "檯面開孔 710 × 368 mm",
+          "power": "單相 220V／總功率 3200W／15A",
+          "weight": "11.6 kg",
+          "other": "保固：1 年",
+          "price": {
+            "amount": 39800,
+            "min": 39800,
+            "max": 42900,
+            "source": "pchome",
+            "checkedAt": "2026-08-22",
+            "note": "MOMO 42,900（MOMO 商城賣場，僅配送無安裝，1 年保固）；PChome 39,800（第三方賣場，庫存僅 1，附贈 SP-2601 鍋鏟組，不含安裝）",
+            "sourceDetail": "pchome"
+          },
+          "links": [
+            {
+              "type": "momo",
+              "url": "https://www.momoshop.com.tw/TP/TP0006954/goodsDetail/TP00069540000174",
+              "verified": true,
+              "note": "MOMO 商城賣場，僅配送無安裝，1 年保固",
+              "checkedAt": "2026-08-22",
+              "check": "ok",
+              "stock": "ok"
+            },
+            {
+              "type": "pchome",
+              "url": "https://24h.pchome.com.tw/prod/QBAY1F-A900A80OH",
+              "verified": true,
+              "note": "第三方賣場，庫存僅 1，附贈 SP-2601 鍋鏟組，不含安裝；PChome 直營 DPAL4E-A900JFX4T 46,483（折後 44,623，庫存 10）、DMAGOH-A900GDYU4 43,000（庫存 3）",
+              "checkedAt": "2026-08-22",
+              "check": "ok",
+              "stock": "ok"
+            },
+            {
+              "type": "official",
+              "url": "https://www.panasonic.com/tw/consumer/kitchen/ih-cooker/ky-c1w70.html",
+              "verified": true,
+              "checkedAt": "2026-08-22",
+              "check": "blocked",
+              "note": "官網對自動程式封鎖，人工開啟正常"
+            }
+          ],
+          "note": "",
+          "availability": "in_stock",
+          "storeName": "Panasonic 國際牌 IH調理爐 KY-C1W70（嵌入式雙口 220V，不含安裝）",
+          "researchNote": "各賣場皆不含安裝；PChome 39,800 賣場庫存僅 1，售完後次低為 PChome 43,000 / momo 42,900。",
+          "checkedAt": "2026-08-22",
+          "cmpKeyword": "Panasonic KY-C1W70"
+        }
+      ],
+      "notes": [],
+      "todos": [
+        {
+          "id": "ih_t1",
+          "text": "請水電拉 220V 專用迴路（20A、5.5mm²）到爐具位置",
+          "done": false
+        },
+        {
+          "id": "ih_t2",
+          "text": "廚具開孔 710×368mm，下方留散熱",
+          "done": false
+        }
+      ],
+      "requests": [],
+      "costNotes": [],
+      "pickOptionId": null,
+      "pickReason": ""
+    },
+    {
+      "id": "oven",
+      "roomId": "kitchen",
+      "name": "氣炸烤箱",
+      "short": "Cuisinart 美膳雅",
+      "status": "choosing",
+      "chosenOptionId": null,
+      "hardReq": "",
+      "advice": "原本提供的 id=376 連結是正常的，實際商品就是 26L 的 TOA-110TW（草稿說連結失效是錯的）。三款都真實在售，差別在容量與功能。",
+      "warnings": [],
+      "install": [
+        {
+          "tag": "電",
+          "text": "110V 一般插座；功率高，建議獨立插座，不要和微波爐共用同一個插座。"
+        },
+        {
+          "tag": "尺寸",
+          "text": "四周散熱：上方 ≥10cm、左右後 ≥5–10cm；放電器櫃要有抽拉散熱層板，勿密閉。"
+        }
+      ],
+      "options": [
+        {
+          "id": "oven_toa110tw",
+          "key": "oven_toa110tw",
+          "tier": "頂級",
+          "brand": "Cuisinart",
+          "model": "TOA-110TW",
+          "name": "美膳雅 26L 10合一數位氣炸烤箱",
+          "highlights": [
+            "26L 大容量，一次烤全家份",
+            "10 合一：氣炸、烘烤、風乾都行",
+            "只能向官網詢價，通路買不到"
+          ],
+          "dims": "",
+          "cutout": "",
+          "power": "110V",
+          "weight": "",
+          "other": "官網為詢價制",
+          "price": {
+            "amount": null,
+            "min": null,
+            "max": null,
+            "source": "other",
+            "checkedAt": "2026-08-22",
+            "note": "官網詢價制（未標價）；MOMO／PChome 及其他台灣通路皆未上架",
+            "sourceDetail": "official"
+          },
+          "links": [
+            {
+              "type": "search-momo",
+              "url": "https://www.momoshop.com.tw/search/searchShop.jsp?keyword=TOA-110TW",
+              "verified": false
+            },
+            {
+              "type": "search-pchome",
+              "url": "https://24h.pchome.com.tw/search/?q=TOA-110TW",
+              "verified": false
+            },
+            {
+              "type": "official",
+              "url": "https://cuisinart.com.tw/index/product/productinfo.html?id=376",
+              "verified": true,
+              "checkedAt": "2026-08-22",
+              "check": "ok",
+              "stock": "ok"
+            }
+          ],
+          "note": "",
+          "availability": "unclear",
+          "storeName": "Cuisinart 美膳雅 26L 10合一數位氣炸烤箱 TOA-110TW",
+          "researchNote": "官網產品頁（6 種料理模式 × 4 種氣炸預設）未標價、庫存數 0，屬詢價制；MOMO/PChome 及其他台灣通路皆未見上架。",
+          "checkedAt": "2026-08-22",
+          "cmpKeyword": "Cuisinart TOA-110TW"
+        },
+        {
+          "id": "oven_toa95tw",
+          "key": "oven_toa95tw",
+          "tier": "高級",
+          "brand": "Cuisinart",
+          "model": "TOA-95TW",
+          "name": "美膳雅 26L 氣炸烤箱（電子探針）",
+          "highlights": [
+            "26L 可烤全雞、9 片吐司",
+            "電子探針，肉熟度不用猜",
+            "12 種模式，MOMO／PChome 有現貨"
+          ],
+          "dims": "475×429.5×396 mm（長×寬×高）",
+          "cutout": "",
+          "power": "110V / 1550W",
+          "weight": "",
+          "other": "保固：主機 2 年",
+          "price": {
+            "amount": 8888,
+            "min": 8888,
+            "max": 8888,
+            "source": "momo",
+            "checkedAt": "2026-08-22",
+            "note": "MOMO 8,888（原價 12,800）；PChome 8,888（市價 11,800，庫存 10）",
+            "sourceDetail": "momo"
+          },
+          "links": [
+            {
+              "type": "momo",
+              "url": "https://www.momoshop.com.tw/goods/GoodsDetail.jsp?i_code=11978993",
+              "verified": true,
+              "note": "原價 12,800；2 年保固",
+              "checkedAt": "2026-08-22",
+              "check": "ok",
+              "stock": "ok"
+            },
+            {
+              "type": "pchome",
+              "url": "https://24h.pchome.com.tw/prod/DMAGOA-A900KAR59",
+              "verified": true,
+              "note": "市價 11,800，庫存 10；舊賣場 DMBJ8E-A900GRAHU 已無庫存",
+              "checkedAt": "2026-08-22",
+              "check": "ok",
+              "stock": "ok"
+            },
+            {
+              "type": "official",
+              "url": "https://cuisinart.com.tw/index/product/productinfo.html?id=126",
+              "verified": true,
+              "checkedAt": "2026-08-22",
+              "check": "ok",
+              "stock": "ok"
+            }
+          ],
+          "note": "",
+          "availability": "in_stock",
+          "storeName": "Cuisinart 美膳雅 26L大容量數位氣炸烤箱 TOA-95TW",
+          "researchNote": "MOMO 與 PChome 同價 8,888；官網頁面未標價、庫存 0。",
+          "checkedAt": "2026-08-22",
+          "cmpKeyword": "Cuisinart TOA-95TW"
+        },
+        {
+          "id": "oven_toa60tw",
+          "key": "oven_toa60tw",
+          "tier": "高CP值",
+          "brand": "Cuisinart",
+          "model": "TOA-60TW",
+          "name": "美膳雅 17L 多功能氣炸烤箱",
+          "highlights": [
+            "17L 小家庭剛好，不佔檯面",
+            "氣炸＋烘烤多功能",
+            "價格最親民"
+          ],
+          "dims": "425×398×350 mm（長×寬×高，momo 規格）",
+          "cutout": "",
+          "power": "110V / 1550W",
+          "weight": "",
+          "other": "保固：主機 2 年",
+          "price": {
+            "amount": 4980,
+            "min": 4980,
+            "max": 4980,
+            "source": "momo",
+            "checkedAt": "2026-08-22",
+            "note": "MOMO 4,980（原價 8,990）；PChome 4,980（市價 8,990，庫存 9）",
+            "sourceDetail": "momo"
+          },
+          "links": [
+            {
+              "type": "momo",
+              "url": "https://www.momoshop.com.tw/goods/GoodsDetail.jsp?i_code=8006617",
+              "verified": true,
+              "note": "原價 8,990；2 年保固",
+              "checkedAt": "2026-08-22",
+              "check": "ok",
+              "stock": "ok"
+            },
+            {
+              "type": "pchome",
+              "url": "https://24h.pchome.com.tw/prod/DMAGOA-A900KAR7L",
+              "verified": true,
+              "note": "市價 8,990，庫存 9；舊賣場 DMBJ8E-A900HJ606、DMBJ51-A900ATVF3 已無庫存",
+              "checkedAt": "2026-08-22",
+              "check": "ok",
+              "stock": "ok"
+            },
+            {
+              "type": "official",
+              "url": "https://cuisinart.com.tw/index/product/productinfo.html?id=13",
+              "verified": true,
+              "checkedAt": "2026-08-22",
+              "check": "ok",
+              "stock": "ok"
+            }
+          ],
+          "note": "",
+          "availability": "in_stock",
+          "storeName": "Cuisinart 美膳雅 17L多功能氣炸烤箱 TOA-60TW",
+          "researchNote": "MOMO 與 PChome 同價 4,980；官網頁面未標價、庫存 0。",
+          "checkedAt": "2026-08-22",
+          "cmpKeyword": "Cuisinart TOA-60TW"
+        }
+      ],
+      "notes": [],
+      "todos": [
+        {
+          "id": "oven_t1",
+          "text": "電器櫃預留抽拉層板與散熱空間",
+          "done": false
+        }
+      ],
+      "requests": [],
+      "costNotes": [],
+      "pickOptionId": "oven_toa95tw",
+      "pickReason": "有現貨、有電子探針；TOA-110TW 通路買不到"
+    },
+    {
+      "id": "microwave",
+      "roomId": "kitchen",
+      "name": "微波爐",
+      "short": "Panasonic 燒烤變頻 27L",
+      "status": "decided",
+      "chosenOptionId": "mw_nngf574",
+      "hardReq": "",
+      "advice": "已指定型號，規格全部正確：變頻、平面無轉盤、微波／燒烤各 1000W。",
+      "warnings": [],
+      "install": [
+        {
+          "tag": "電",
+          "text": "110V；建議與氣炸烤箱各自獨立插座。"
+        },
+        {
+          "tag": "尺寸",
+          "text": "散熱：上方 ≥10cm、後方 ≥10cm、左右 ≥5cm；電器櫃高度要留本體 326mm 加散熱，前方要有開門操作空間。"
+        }
+      ],
+      "options": [
+        {
+          "id": "mw_nngf574",
+          "key": "mw_nngf574",
+          "tier": "指定",
+          "brand": "Panasonic",
+          "model": "NN-GF574",
+          "name": "國際牌 27L 燒烤變頻微波爐",
+          "highlights": [
+            "變頻平面式，免轉盤好清理",
+            "微波／燒烤各 1000W",
+            "23 道自動料理、兒童鎖"
+          ],
+          "dims": "本體 529 × 422 × 326 mm；爐內 354 × 338 × 230 mm",
+          "cutout": "",
+          "power": "110V／微波 1040W、電熱 1050W",
+          "weight": "12.7 kg",
+          "other": "保固一般 1 年、主要零件 3 年（上網登錄再延 1 年）",
+          "price": {
+            "amount": 6550,
+            "min": 6550,
+            "max": 7690,
+            "source": "pchome",
+            "checkedAt": "2026-08-22",
+            "note": "MOMO 7,690（MOMO 商城賣場，原價 8,999，1 年保固）；PChome 6,550（標價 8,390、折後 6,550，庫存 20）",
+            "sourceDetail": "pchome"
+          },
+          "links": [
+            {
+              "type": "momo",
+              "url": "https://www.momoshop.com.tw/TP/TP0003321/goodsDetail/TP00033210000357",
+              "verified": true,
+              "note": "MOMO 商城賣場，原價 8,999，1 年保固；舊頁 i_code=3450321 / 4946041 已下架",
+              "checkedAt": "2026-08-22",
+              "check": "ok",
+              "stock": "ok"
+            },
+            {
+              "type": "pchome",
+              "url": "https://24h.pchome.com.tw/prod/DMBJ0G-A900AMQOF",
+              "verified": true,
+              "note": "標價 8,390、折後 6,550，庫存 20；DMBJ7P-1900HCI9W 同價",
+              "checkedAt": "2026-08-22",
+              "check": "ok",
+              "stock": "ok"
+            },
+            {
+              "type": "official",
+              "url": "https://www.panasonic.com/tw/consumer/kitchen/microwave/nn-gf574.html",
+              "verified": true,
+              "checkedAt": "2026-08-22",
+              "check": "blocked",
+              "note": "官網對自動程式封鎖，人工開啟正常"
+            }
+          ],
+          "note": "",
+          "availability": "in_stock",
+          "storeName": "Panasonic 國際牌 27公升光波變頻燒烤微波爐 NN-GF574",
+          "researchNote": "PChome 折後 6,550 最低；MOMO 商城 7,690。",
+          "checkedAt": "2026-08-22",
+          "cmpKeyword": "Panasonic NN-GF574"
+        }
+      ],
+      "notes": [],
+      "todos": [],
+      "requests": [],
+      "costNotes": [],
+      "pickOptionId": null,
+      "pickReason": ""
+    },
+    {
+      "id": "freezer",
+      "roomId": "kitchen",
+      "name": "冷凍櫃",
+      "short": "Panasonic 直立式 380L",
+      "status": "decided",
+      "chosenOptionId": "freezer_nrfz383avs",
+      "hardReq": "",
+      "advice": "已指定型號。預設右開，要改門向需原廠付費。透天走樓梯搬運前先量門框與樓梯轉角（含把手寬 710mm）。",
+      "warnings": [],
+      "install": [
+        {
+          "tag": "搬運",
+          "text": "搬運淨寬須 >710mm（含把手）；門框、樓梯轉角先量；透天走樓梯要確認梯間迴旋。"
+        },
+        {
+          "tag": "尺寸",
+          "text": "頂部距天花板 ≥30cm、左右各 ≥10cm 散熱（官方明載）；後方美背下段簍空屬正常。"
+        },
+        {
+          "tag": "電",
+          "text": "110V 一般插座。"
+        },
+        {
+          "tag": "其他",
+          "text": "地板承重（滿載近 100kg 以上）；定位後靜置約 3 小時再通電；預設右開，改門向需原廠。"
+        }
+      ],
+      "options": [
+        {
+          "id": "freezer_nrfz383avs",
+          "key": "freezer_nrfz383avs",
+          "tier": "指定",
+          "brand": "Panasonic",
+          "model": "NR-FZ383AV-S",
+          "name": "國際牌 380L 直立式冷凍／冷藏櫃",
+          "highlights": [
+            "380L 直立式，分層好拿取",
+            "冷凍／冷藏一鍵切換",
+            "變頻無霜，年耗電 348 度"
+          ],
+          "dims": "寬710 × 深767 × 高1855 mm（含把手）；外箱 750 × 756 × 1910 mm",
+          "cutout": "",
+          "power": "年耗電 348 kWh（R600a 變頻壓縮機）",
+          "weight": "81 kg",
+          "other": "保固全機 1 年、主要零件 3 年、壓縮機 5 年",
+          "price": {
+            "amount": 22792,
+            "min": 22792,
+            "max": 22792,
+            "source": "momo",
+            "checkedAt": "2026-08-22",
+            "note": "MOMO 22,792（限時 88 折價（標價 25,900、原價 26,900），含標準安裝，1 年保固）；PChome 22,792（標價 25,900、折後 22,792，庫存 20，含運送及基本安裝）",
+            "sourceDetail": "momo"
+          },
+          "links": [
+            {
+              "type": "momo",
+              "url": "https://www.momoshop.com.tw/goods/GoodsDetail.jsp?i_code=10601450",
+              "verified": true,
+              "note": "限時 88 折價（標價 25,900、原價 26,900），含標準安裝，1 年保固",
+              "checkedAt": "2026-08-22",
+              "check": "ok",
+              "stock": "ok"
+            },
+            {
+              "type": "pchome",
+              "url": "https://24h.pchome.com.tw/prod/DPAC1T-A900GB0L3",
+              "verified": true,
+              "note": "標價 25,900、折後 22,792，庫存 20，含運送及基本安裝",
+              "checkedAt": "2026-08-22",
+              "check": "ok",
+              "stock": "ok"
+            },
+            {
+              "type": "official",
+              "url": "https://www.panasonic.com/tw/consumer/refrigerator/freezer/nr-fz383av-s.html",
+              "verified": true,
+              "checkedAt": "2026-08-22",
+              "check": "blocked",
+              "note": "官網對自動程式封鎖，人工開啟正常"
+            },
+            {
+              "type": "other",
+              "url": "https://pmst.panasonic.com.tw/Shop/Product/Detail/Y2ZKLTYGDG00P91I2PZM/NR-FZ383AV-S",
+              "verified": true,
+              "label": "Panasonic 官方商城",
+              "note": "官方商城 25,900"
+            }
+          ],
+          "note": "",
+          "availability": "in_stock",
+          "storeName": "Panasonic 國際牌 380公升直立式冷凍櫃 NR-FZ383AV-S",
+          "researchNote": "MOMO 限時價與 PChome 折後價同為 22,792，皆含基本安裝；Panasonic 官方商城 pmst.panasonic.com.tw 亦有售。",
+          "checkedAt": "2026-08-22",
+          "cmpKeyword": "Panasonic NR-FZ383AV-S"
+        }
+      ],
+      "notes": [],
+      "todos": [
+        {
+          "id": "freezer_t1",
+          "text": "量門框與樓梯轉角淨寬是否 >71cm",
+          "done": false
+        },
+        {
+          "id": "freezer_t2",
+          "text": "定位處預留：頂 30cm、左右各 10cm",
+          "done": false
+        },
+        {
+          "id": "freezer_t3",
+          "text": "決定門要開哪一邊（改左開需原廠付費）",
+          "done": false
+        }
+      ],
+      "requests": [],
+      "costNotes": [],
+      "pickOptionId": null,
+      "pickReason": ""
+    },
+    {
+      "id": "dishwasher",
+      "roomId": "kitchen",
+      "name": "洗碗機",
+      "short": "抽屜式 vs 60cm 下掀式",
+      "status": "choosing",
+      "chosenOptionId": null,
+      "hardReq": "經常煮大鍋菜，要洗 32–36cm 中式炒鍋＋大湯鍋。",
+      "advice": "關鍵誠實評估：抽屜式（含加高款）單層內部高度有限，放 32–36cm 炒鍋＋大湯鍋會非常勉強甚至放不下。常大鍋熱炒的家庭，建議選 60cm 嵌入式下掀洗碗機（Bosch 8 系列最務實，Miele G7000 為頂級）。抽屜式適合碗盤多、鍋具不大的家庭；若仍偏好 F&P 外觀，可「上抽洗碗盤＋大鍋手洗」折衷。",
+      "warnings": [
+        "抽屜式放不下大炒鍋／深湯鍋，購買前務必確認內槽可用高度。",
+        "電壓實查：F&P 與 Bosch 台灣機種都是 110V；Miele 為 220V 專用迴路——下單前再確認賣場標示。"
+      ],
+      "install": [
+        {
+          "tag": "尺寸",
+          "text": "櫥櫃開孔依機型：60cm 下掀約 W600 × H820 × D570 mm；抽屜式依 F&P 型號。"
+        },
+        {
+          "tag": "水",
+          "text": "需進水與排水，安裝時做水平調整。"
+        },
+        {
+          "tag": "電",
+          "text": "F&P 抽屜式與 Bosch 台灣機種為 110V（10A）；Miele 為 220V 專用迴路。"
+        },
+        {
+          "tag": "其他",
+          "text": "南投硬水 151 mg/L：建議加軟化鹽並把機器水質硬度設中高檔（家中實際可能比淨水場更高）。"
+        }
+      ],
+      "options": [
+        {
+          "id": "dw_fp_dd60dtx6hi1",
+          "key": "dw_fp_dd60dtx6hi1",
+          "tier": "頂級",
+          "brand": "Fisher & Paykel",
+          "model": "DD60DTX6HI1",
+          "name": "菲雪品克 雙層抽屜式洗碗機（嵌門板・加高・14 人份）",
+          "highlights": [
+            "雙層抽屜分開洗，免彎腰",
+            "嵌門板，與廚具同色",
+            "43dB 安靜；但放不下大炒鍋"
+          ],
+          "dims": "599 × 865 × 573 mm",
+          "cutout": "",
+          "power": "110V／雙層最大 1200W",
+          "weight": "",
+          "other": "",
+          "price": {
+            "amount": 98000,
+            "min": 98000,
+            "max": 98000,
+            "source": "other",
+            "checkedAt": "2026-08-22",
+            "note": "MOMO：momo 店家賣場（非官方直營），賣場頁未標價，請點進去看；PChome：PChome 沒有上架；甫佳電器 Fuchia 98,000",
+            "sourceDetail": "甫佳電器 Fuchia"
+          },
+          "links": [
+            {
+              "type": "search-momo",
+              "url": "https://www.momoshop.com.tw/search/searchShop.jsp?keyword=DD60DTX6HI1",
+              "verified": false,
+              "note": "原商品頁已下架，改為搜尋頁",
+              "checkedAt": "2026-08-22",
+              "check": "dead"
+            },
+            {
+              "type": "search-pchome",
+              "url": "https://24h.pchome.com.tw/search/?q=DD60DTX6HI1",
+              "verified": false
+            },
+            {
+              "type": "other",
+              "url": "https://www.kingsware.com.tw/p/405-1148-12503,c3119.php",
+              "verified": true,
+              "checkedAt": "2026-08-22",
+              "check": "dead",
+              "stock": "ok",
+              "note": "原連結已下架，改為替代賣場（2026/8/22）",
+              "label": "總代理勁威 看商品"
+            }
+          ],
+          "note": "",
+          "availability": "unclear",
+          "storeName": "Fisher & Paykel 菲雪品克 ( DD60DTX6HI1 ) 14人份雙層設計師加高款抽屜洗碗機",
+          "researchNote": "嵌門板款（門板與把手需自備）；14人份、43dB、耗水 6.9L/層；官網型錄標價 98,800、甫佳電器 98,000；momo 僅店家賣場、PChome 未上架",
+          "checkedAt": "2026-08-22",
+          "cmpKeyword": "Fisher DD60DTX6HI1"
+        },
+        {
+          "id": "dw_fp_dd60dchx9",
+          "key": "dw_fp_dd60dchx9",
+          "tier": "高級",
+          "brand": "Fisher & Paykel",
+          "model": "DD60DCHX9",
+          "name": "菲雪品克 雙層不鏽鋼抽屜式洗碗機（14 人份）",
+          "highlights": [
+            "雙層抽屜分開洗，免彎腰",
+            "不鏽鋼面板，免做門板",
+            "73°C 高溫殺菌、110V 免改電"
+          ],
+          "dims": "599 × 820~880 × 573 mm",
+          "cutout": "",
+          "power": "110V/60Hz",
+          "weight": "",
+          "other": "保固：2年（momo/PChome 官方直營頁標示）",
+          "price": {
+            "amount": 68800,
+            "min": 68800,
+            "max": 68800,
+            "source": "momo",
+            "checkedAt": "2026-08-22",
+            "note": "MOMO 68,800（官方直營）；PChome 68,800（官方直營 好禮二選一）",
+            "sourceDetail": "momo"
+          },
+          "links": [
+            {
+              "type": "momo",
+              "url": "https://www.momoshop.com.tw/goods/GoodsDetail.jsp?i_code=6895074",
+              "verified": true,
+              "note": "官方直營；2年保固；訂單確認後專人約定送貨安裝",
+              "checkedAt": "2026-08-22",
+              "check": "ok",
+              "stock": "ok"
+            },
+            {
+              "type": "pchome",
+              "url": "https://24h.pchome.com.tw/prod/DPAL7P-A900G5M4A",
+              "verified": true,
+              "note": "官方直營 好禮二選一；庫存 20",
+              "checkedAt": "2026-08-22",
+              "check": "ok",
+              "stock": "ok"
+            },
+            {
+              "type": "official",
+              "url": "https://fisherpaykel.com.tw/wp-content/uploads/2025/06/DD60DCHX9%E9%9B%99%E5%B1%A4%E4%B8%8D%E9%8F%BD%E9%8B%BC%E6%B4%97%E7%A2%97%E6%A9%9F.pdf",
+              "verified": true,
+              "checkedAt": "2026-08-22",
+              "check": "ok",
+              "stock": "ok"
+            }
+          ],
+          "note": "",
+          "availability": "in_stock",
+          "storeName": "【Fisher&Paykel 菲雪品克】＜官方直營-好禮二選一＞ 14人份雙層不鏽鋼抽屜式洗碗機DD60DCHX9",
+          "researchNote": "不鏽鋼面板免嵌門板；14人份、43dB、耗水 6.9L/層；momo 與 PChome 官方直營同價 68,800（官方 URL 為官網安裝指南 PDF）",
+          "checkedAt": "2026-08-22",
+          "cmpKeyword": "Fisher DD60DCHX9"
+        },
+        {
+          "id": "dw_fp_dd60scthx9",
+          "key": "dw_fp_dd60scthx9",
+          "tier": "高CP值",
+          "brand": "Fisher & Paykel",
+          "model": "DD60SCTHX9",
+          "name": "菲雪品克 單層加高抽屜式洗碗機（7 人份）",
+          "highlights": [
+            "單層加高 7 人份，小家庭夠用",
+            "不鏽鋼、43dB 安靜",
+            "抽屜式裡價格最低"
+          ],
+          "dims": "599×454×573 mm (W×H×D)；崁入開孔約 600×456×560 mm",
+          "cutout": "",
+          "power": "110V/60Hz (600W)",
+          "weight": "",
+          "other": "保固：2年（momo 原廠賣場標示）",
+          "price": {
+            "amount": 44500,
+            "min": 44500,
+            "max": 44500,
+            "source": "momo",
+            "checkedAt": "2026-08-22",
+            "note": "MOMO 44,500（原廠賣場-原廠技師安裝）；PChome 44,500（全省安裝）",
+            "sourceDetail": "momo"
+          },
+          "links": [
+            {
+              "type": "momo",
+              "url": "https://www.momoshop.com.tw/goods/GoodsDetail.jsp?i_code=6894995",
+              "verified": true,
+              "note": "原廠賣場-原廠技師安裝；2年保固",
+              "checkedAt": "2026-08-22",
+              "check": "ok",
+              "stock": "ok"
+            },
+            {
+              "type": "pchome",
+              "url": "https://24h.pchome.com.tw/prod/DMBR24-A900GK0BS",
+              "verified": true,
+              "note": "全省安裝；庫存 2、原價 79,900（官方直營頁 DPAC6C-A900F9LYI 目前 缺貨）",
+              "checkedAt": "2026-08-22",
+              "check": "ok",
+              "stock": "ok"
+            },
+            {
+              "type": "official",
+              "url": "https://fisherpaykel.com.tw/wp-content/uploads/2025/06/DD60SCTHX9-DD60SCHW9%E5%96%AE%E5%B1%A4%E6%B4%97%E7%A2%97%E6%A9%9F.pdf",
+              "verified": true,
+              "checkedAt": "2026-08-22",
+              "check": "ok",
+              "stock": "ok"
+            }
+          ],
+          "note": "",
+          "availability": "in_stock",
+          "storeName": "【Fisher&Paykel 菲雪品克】7人份單層加高款不鏽鋼抽屜式洗碗機DD60SCTHX9",
+          "researchNote": "單層加高款 7人份、43dB、耗水 6.9L；momo/PChome 同價 44,500",
+          "checkedAt": "2026-08-22",
+          "cmpKeyword": "Fisher DD60SCTHX9"
+        },
+        {
+          "id": "dw_bosch_8series_60",
+          "key": "dw_bosch_8series_60",
+          "tier": "替代方案",
+          "brand": "Bosch",
+          "model": "SMV8ZCX00X",
+          "name": "博世 8 系列 60cm 全嵌式沸石洗碗機（14 人份，需自備門板）",
+          "highlights": [
+            "下籃深，32–36cm 炒鍋可平放",
+            "沸石烘乾，塑膠盒也能乾",
+            "德國製、41dB、110V 免改電"
+          ],
+          "dims": "60cm 下掀約 W600 × H820 × D570 mm",
+          "cutout": "全嵌式開孔約 W600 × H815–875 × D550 mm",
+          "power": "110V／1.1kW（10A）",
+          "weight": "",
+          "other": "",
+          "price": {
+            "amount": 84500,
+            "min": 84500,
+            "max": 84500,
+            "source": "momo",
+            "checkedAt": "2026-08-22",
+            "note": "MOMO 84,500（限時折後價，原價 99,000）；PChome 84,500（原價 99,000）",
+            "sourceDetail": "momo"
+          },
+          "links": [
+            {
+              "type": "momo",
+              "url": "https://www.momoshop.com.tw/goods/GoodsDetail.jsp?i_code=13164245",
+              "verified": true,
+              "note": "限時折後價，原價 99,000；門板需自備、含基本安裝；廠商宅配",
+              "checkedAt": "2026-08-22",
+              "check": "ok",
+              "stock": "ok"
+            },
+            {
+              "type": "pchome",
+              "url": "https://24h.pchome.com.tw/prod/DMBR13-A900K8SQ5",
+              "verified": true,
+              "note": "原價 99,000；庫存 5",
+              "checkedAt": "2026-08-22",
+              "check": "ok",
+              "stock": "ok"
+            },
+            {
+              "type": "official",
+              "url": "https://www.bosch-home.com.tw/zh/mkt-product/dishwashers/built-in-dishwashers/bifulldishwashers60width/SMV8ZCX00X",
+              "verified": true,
+              "checkedAt": "2026-08-22",
+              "check": "ok",
+              "stock": "ok"
+            }
+          ],
+          "note": "",
+          "availability": "in_stock",
+          "storeName": "【BOSCH 博世】14人份 全嵌式沸石洗碗機(SMV8ZCX00X)",
+          "researchNote": "8系列全嵌式（需自備門板）、Zeolith 沸石烘乾、德國製；110V 家用機種；14人份、41dB；momo 與 PChome 同價 84,500",
+          "checkedAt": "2026-08-22",
+          "cmpKeyword": "Bosch SMV8ZCX00X"
+        },
+        {
+          "id": "dw_bosch_6series_60",
+          "key": "dw_bosch_6series_60",
+          "tier": "替代方案",
+          "brand": "Bosch",
+          "model": "SMV6ZAX00X",
+          "name": "博世 6 系列 60cm 全嵌式沸石洗碗機（13 人份，需自備門板）",
+          "highlights": [
+            "一樣放得下大鍋，便宜約 2 萬",
+            "沸石烘乾、德國製",
+            "110V 免改電、44dB"
+          ],
+          "dims": "60cm 下掀約 W600 × H820 × D570 mm",
+          "cutout": "全嵌式開孔約 W600 × H815–875 × D550 mm",
+          "power": "110V／1.1kW（10A）",
+          "weight": "",
+          "other": "",
+          "price": {
+            "amount": 62000,
+            "min": 62000,
+            "max": 62000,
+            "source": "pchome",
+            "checkedAt": "2026-08-22",
+            "note": "MOMO：momo 店家賣場（含基本安裝），賣場頁未標價，請點進去看；PChome 62,000（原價 72,800）",
+            "sourceDetail": "pchome"
+          },
+          "links": [
+            {
+              "type": "momo",
+              "url": "https://www.momoshop.com.tw/TP/TP0002980/goodsDetail/TP00029800000032",
+              "verified": true,
+              "note": "momo 店家賣場（含基本安裝），賣場頁未標價，請點進去看；另有 TP0002916 賣場為含運不安裝",
+              "checkedAt": "2026-08-22",
+              "check": "ok",
+              "stock": "ok"
+            },
+            {
+              "type": "pchome",
+              "url": "https://24h.pchome.com.tw/prod/DMBR13-A900K8SOK",
+              "verified": true,
+              "note": "原價 72,800；庫存 5；門板需自備",
+              "checkedAt": "2026-08-22",
+              "check": "ok",
+              "stock": "ok"
+            },
+            {
+              "type": "official",
+              "url": "https://www.bosch-home.com.tw/zh/mkt-product/dishwashers/built-in-dishwashers/bifulldishwashers60width/SMV6ZAX00X",
+              "verified": true,
+              "checkedAt": "2026-08-22",
+              "check": "ok",
+              "stock": "ok"
+            }
+          ],
+          "note": "",
+          "availability": "in_stock",
+          "storeName": "【BOSCH 博世】13人份 全嵌式沸石洗碗機(SMV6ZAX00X)",
+          "researchNote": "6系列全嵌式（需自備門板）、Zeolith 沸石烘乾、德國製；110V；13人份、44dB；Bosch 官方商城頁標示預計 2026/07 到貨",
+          "checkedAt": "2026-08-22",
+          "cmpKeyword": "Bosch SMV6ZAX00X"
+        },
+        {
+          "id": "dw_miele_g7000_60",
+          "key": "dw_miele_g7000_60",
+          "tier": "替代方案",
+          "brand": "Miele",
+          "model": "G7114C SCi",
+          "name": "Miele G7114C SCi 半嵌式洗碗機（16 人份中式碗籃・AutoDos）",
+          "highlights": [
+            "AutoDos 自動投放洗劑",
+            "大鍋、中式碗籃都順手",
+            "最耐用；需 220V 專用迴路"
+          ],
+          "dims": "60cm 下掀約 W600 × H820 × D570 mm",
+          "cutout": "安裝尺寸 W600 × H805–870 × D570 mm",
+          "power": "220V／1.8kW（10A）",
+          "weight": "",
+          "other": "保固：2年（momo 頁面標示）",
+          "price": {
+            "amount": 94000,
+            "min": 94000,
+            "max": 94000,
+            "source": "momo",
+            "checkedAt": "2026-08-22",
+            "note": "MOMO 94,000（含基本安裝）；PChome 94,000（庫存 2）",
+            "sourceDetail": "momo"
+          },
+          "links": [
+            {
+              "type": "momo",
+              "url": "https://www.momoshop.com.tw/goods/GoodsDetail.jsp?i_code=10652353",
+              "verified": true,
+              "note": "含基本安裝；2年保固；庫存低於4組",
+              "checkedAt": "2026-08-22",
+              "check": "ok",
+              "stock": "ok"
+            },
+            {
+              "type": "pchome",
+              "url": "https://24h.pchome.com.tw/prod/DMBR1W-A900GEZ29",
+              "verified": true,
+              "note": "庫存 2",
+              "checkedAt": "2026-08-22",
+              "check": "ok",
+              "stock": "ok"
+            },
+            {
+              "type": "official",
+              "url": "https://miele.kenk.com.tw/product/dish-washer/no.g7114csci/%E5%8D%8A%E5%B5%8C%E5%BC%8F%E6%B4%97%E7%A2%97%E6%A9%9F",
+              "verified": true,
+              "checkedAt": "2026-08-22",
+              "check": "ok",
+              "stock": "ok"
+            }
+          ],
+          "note": "",
+          "availability": "in_stock",
+          "storeName": "【Miele】G7114C SCi 半嵌式洗碗機(16人份中式碗籃/AutoOpen Drying自動開門烘乾/總代理公司貨)",
+          "researchNote": "半嵌式(SCi)、AutoDos 自動投放洗劑、AutoOpen 自動開門烘乾；16人份、44dBA；需 220V 專用迴路。G7104C SCi 之 momo 原頁(i_code=10656082)已改為 G7130C SCI 97,000、PChome 頁(DMBR1W-A900G444L, 89,000) 顯示 缺貨，故以 G7114C SCi 為代表型號；官方 URL 為台灣總代理嘉儀 Miele 產品頁（標價 94,000）",
+          "checkedAt": "2026-08-22",
+          "cmpKeyword": "Miele G7114C SCi"
+        },
+        {
+          "id": "dw_electrolux_60",
+          "key": "dw_electrolux_60",
+          "tier": "替代方案",
+          "brand": "Electrolux／AEG",
+          "model": "KEE47200IW",
+          "name": "伊萊克斯 極淨呵護 300 系列半嵌式洗碗機（60cm／13 人份）",
+          "highlights": [
+            "60cm 機種裡價格最低",
+            "下籃可放大鍋",
+            "目前缺貨，需等補貨"
+          ],
+          "dims": "60cm 下掀約 W600 × H820 × D570 mm",
+          "cutout": "W600 × H820 × D570 mm",
+          "power": "110V／1000W",
+          "weight": "",
+          "other": "",
+          "price": {
+            "amount": 29900,
+            "min": 29900,
+            "max": 29900,
+            "source": "pchome",
+            "checkedAt": "2026-08-22",
+            "note": "MOMO：原 momo 商品頁 i_code=11939500（曾標 18,500）現顯示「商品目前無展售」；PChome 29,900（庫存 0（標價 29,900、原價 46,900），目前無法下單）",
+            "sourceDetail": "pchome"
+          },
+          "links": [
+            {
+              "type": "search-momo",
+              "url": "https://www.momoshop.com.tw/search/searchShop.jsp?keyword=KEE47200IW",
+              "verified": false
+            },
+            {
+              "type": "pchome",
+              "url": "https://24h.pchome.com.tw/prod/DMBH1Q-A900GP1BM",
+              "verified": true,
+              "note": "庫存 0（標價 29,900、原價 46,900），目前無法下單；目前缺貨／補貨中",
+              "checkedAt": "2026-08-22",
+              "check": "ok_oos",
+              "stock": "oos"
+            },
+            {
+              "type": "official",
+              "url": "https://www.electrolux.com.tw/appliances/dishwashers/kee47200iw/",
+              "verified": true,
+              "checkedAt": "2026-08-22",
+              "check": "ok",
+              "stock": "ok"
+            }
+          ],
+          "note": "",
+          "availability": "unclear",
+          "storeName": "Electrolux 伊萊克斯 極淨呵護300系列半嵌式洗碗機(60cm/13人份)KEE47200IW",
+          "researchNote": "300 系列半嵌式、土耳其製；13人份、51dB；momo 已下架、PChome 缺貨（價格為最後標價）；在售替代可看 momo 700 系列全崁式 EBF7531SBA (https://www.momoshop.com.tw/product/13439664) 或向官網/經銷詢價",
+          "checkedAt": "2026-08-22",
+          "cmpKeyword": "Electrolux KEE47200IW"
+        }
+      ],
+      "notes": [],
+      "todos": [
+        {
+          "id": "dw_t1",
+          "text": "先決定：抽屜式 或 60cm 下掀式（看家裡炒鍋尺寸）",
+          "done": false
+        },
+        {
+          "id": "dw_t2",
+          "text": "確認所選機型電壓（110V 或 220V 專用迴路）",
+          "done": false
+        },
+        {
+          "id": "dw_t3",
+          "text": "廚具預留開孔與進排水位置",
+          "done": false
+        }
+      ],
+      "requests": [],
+      "costNotes": [],
+      "pickOptionId": "dw_bosch_8series_60",
+      "pickReason": "常煮大鍋菜，60cm 下掀式才放得下炒鍋；Bosch 台灣機種 110V 免改電"
+    },
+    {
+      "id": "water_dispenser",
+      "roomId": "water",
+      "name": "櫥下飲水機",
+      "short": "冰・溫・熱＋氣泡",
+      "status": "choosing",
+      "chosenOptionId": null,
+      "hardReq": "常溫＋熱＋冰＋氣泡，四合一。",
+      "advice": "台灣真正把冰／溫／熱＋氣泡整合在同一套的櫥下機，幾乎只有 OASIS 一款。若最重視可靠度與長期維護，「三溫櫥下機＋獨立氣泡模組」比單一四合一整合機好（氣泡壞了不影響飲水、維修單純），缺點是佔兩個龍頭孔、總價可能更高。追求檯面極簡、一鍵出氣泡才選整合機。",
+      "warnings": [
+        "報告列的 Yaffle YS-1301H、BWT AQA S CT「四合一」無法證實，待確認。",
+        "實查價：OASIS 四合一 5.2–5.5 萬、輕奢三溫 3.8–4 萬，比報告高很多。"
+      ],
+      "install": [
+        {
+          "tag": "尺寸",
+          "text": "櫥下預留高度 ≥45cm、寬 ≥25–35cm；櫥櫃上下開散熱孔保持對流。"
+        },
+        {
+          "tag": "電",
+          "text": "110V 專用插座（壓縮機製冷機種建議獨立插座）。"
+        },
+        {
+          "tag": "水",
+          "text": "需排水（廢水／洩壓）；龍頭開孔依機種（OASIS 龍頭孔徑須配合）；前置建議加軟水或 RO。"
+        },
+        {
+          "tag": "其他",
+          "text": "CO₂ 用 SodaStream 家用氣瓶（恆隆行專櫃、全國電子可換瓶）；南投水偏硬，建議每 4 個月換軟水濾芯。"
+        }
+      ],
+      "options": [
+        {
+          "id": "water_oasis_fizz401",
+          "key": "water_oasis_fizz401",
+          "tier": "頂級",
+          "brand": "OASIS",
+          "model": "LUXES-FIZZ-401",
+          "name": "OASIS 櫥下極奢氣泡三溫 UVC 飲水機（真四合一）",
+          "highlights": [
+            "冰、溫、熱＋氣泡一台搞定",
+            "UVC 殺菌、熱水 80/90/100°C",
+            "含免費基本安裝、台灣製"
+          ],
+          "dims": "主機 230 × 350 × 450 mm；龍頭 55 × 192 × 356 mm",
+          "cutout": "",
+          "power": "110V/60Hz，額定 450W",
+          "weight": "17.6 kg",
+          "other": "保固 1 年；恆隆行／格威代理",
+          "price": {
+            "amount": 54800,
+            "min": 54800,
+            "max": 54800,
+            "source": "momo",
+            "checkedAt": "2026-08-22",
+            "note": "MOMO 54,800（8/21–8/24 限時 95 折 52,060，庫存 <5）；PChome 54,800；燦坤 54,800；含免費基本安裝",
+            "sourceDetail": "momo"
+          },
+          "links": [
+            {
+              "type": "momo",
+              "url": "https://www.momoshop.com.tw/goods/GoodsDetail.jsp?i_code=13048533",
+              "verified": true,
+              "note": "促銷價 54,800（原價 69,800）；08/21–08/24 限時 95 折後 52,060；庫存低於 5 組；頁面未印型號，但品名與恆隆行 LUXES-FIZZ-401 一致",
+              "checkedAt": "2026-08-22",
+              "check": "ok",
+              "stock": "ok"
+            },
+            {
+              "type": "pchome",
+              "url": "https://24h.pchome.com.tw/prod/DMCI01-A900I4EU0",
+              "verified": true,
+              "note": "現價 54,800／原價 59,800，可下單；品名：【美國OASIS】櫥下極奢氣泡三溫飲水機(買就送高效三道軟水抑菌淨水器)；600G RO 版 DMCI2K-A900IG6N5 64,800",
+              "checkedAt": "2026-08-22",
+              "check": "ok",
+              "stock": "ok"
+            },
+            {
+              "type": "official",
+              "url": "https://shop.hengstyle.com/SalePage/Index/9976090",
+              "verified": true,
+              "checkedAt": "2026-08-22",
+              "check": "ok_oos",
+              "stock": "oos",
+              "note": "目前缺貨／補貨中"
+            }
+          ],
+          "note": "",
+          "availability": "in_stock",
+          "storeName": "OASIS 櫥下極奢氣泡三溫UVC飲水機（配置高效三道軟水抑菌淨水器／免費基本安裝／氣泡水／冰溫熱）",
+          "researchNote": "冰溫熱＋氣泡四合一、UVC 瞬間殺菌、NSF/SGS 生飲認證；含免費基本安裝；恆隆行（格威）代理；燦坤 54,800；使用 SodaStream 鋼瓶",
+          "checkedAt": "2026-08-22",
+          "cmpKeyword": "OASIS LUXES-FIZZ-401"
+        },
+        {
+          "id": "water_modular_3temp_soda",
+          "key": "",
+          "tier": "高級",
+          "brand": "賀眾牌＋SodaStream",
+          "model": "UR-3902AW-1 ＋ SodaStream ART",
+          "name": "賀眾 PREMIER 廚下冰溫瞬熱旗艦飲水機（600G RO 雙源淨化）＋ SodaStream ART 桌上氣泡水機",
+          "highlights": [
+            "真正冰溫熱，內建 RO 淨水",
+            "氣泡另用桌上機，壞了不互相影響",
+            "只需一個龍頭孔，維修單純"
+          ],
+          "dims": "賀眾主機 183 × 467 × 463 mm；前置濾芯 160 × 155 × 380 mm；SodaStream ART 250 × 180 × 440 mm",
+          "cutout": "只需一個龍頭孔（氣泡機放檯面）",
+          "power": "110V／加熱 1500W＋製冷 100W（另有 220V 版）；ART 免插電",
+          "weight": "",
+          "other": "",
+          "price": {
+            "amount": 41790,
+            "min": 41790,
+            "max": 42290,
+            "source": "momo",
+            "checkedAt": "2026-08-22",
+            "note": "賀眾 UR-3902AW-1 MOMO／PChome 36,800（含 3 米內標準安裝）＋ SodaStream ART PChome 4,990／MOMO 5,490"
+          },
+          "links": [
+            {
+              "type": "momo",
+              "url": "https://www.momoshop.com.tw/goods/GoodsDetail.jsp?i_code=14013218",
+              "verified": true,
+              "label": "賀眾 MOMO",
+              "note": "原價 49,800；同頁可選 110V／220V；含標準安裝（3 米內）",
+              "checkedAt": "2026-08-22",
+              "check": "ok",
+              "stock": "ok"
+            },
+            {
+              "type": "pchome",
+              "url": "https://24h.pchome.com.tw/prod/DMAWI0-A900ITF3M",
+              "verified": true,
+              "label": "賀眾 PChome",
+              "note": "現價 36,800／原價 49,800，可下單；220V 版 DMAWI0-A900ITF4F 同價",
+              "checkedAt": "2026-08-22",
+              "check": "ok",
+              "stock": "ok"
+            },
+            {
+              "type": "official",
+              "url": "https://acuowater.com.tw/product/ur-3902aw/",
+              "verified": true,
+              "label": "賀眾 官網",
+              "checkedAt": "2026-08-22",
+              "check": "ok",
+              "stock": "ok"
+            },
+            {
+              "type": "momo",
+              "url": "https://www.momoshop.com.tw/goods/GoodsDetail.jsp?i_code=10071565",
+              "verified": true,
+              "label": "SodaStream MOMO",
+              "note": "促銷價 5,490（限時折後 5,215），原價 7,680；08/24 前到貨；2 年保固",
+              "checkedAt": "2026-08-22",
+              "check": "ok",
+              "stock": "ok"
+            },
+            {
+              "type": "pchome",
+              "url": "https://24h.pchome.com.tw/prod/DMAWGY-A900HF5JT",
+              "verified": true,
+              "label": "SodaStream PChome",
+              "note": "【快扣鋼瓶機型】ART 白，現價 4,990／原價 7,680，可下單；黑 DMAWGY-A900HHO21 同價",
+              "checkedAt": "2026-08-22",
+              "check": "ok",
+              "stock": "ok"
+            },
+            {
+              "type": "official",
+              "url": "https://www.sodastream.com.tw/catalog/ins.php?index_id=91",
+              "verified": true,
+              "label": "SodaStream 官網",
+              "checkedAt": "2026-08-22",
+              "check": "ok",
+              "stock": "ok"
+            }
+          ],
+          "note": "",
+          "availability": "in_stock",
+          "storeName": "賀眾牌 PREMIER 尊爵不凡廚下冰溫瞬熱旗艦飲水機 UR-3902AW-1（110V／雙源淨化／冰溫瞬熱／恆淨水系統）",
+          "researchNote": "賀眾唯一真正冰／溫／熱三溫櫥下機（內建 600GPD RO 雙源淨化，冰水箱 0.8L）；UW 系列櫥下機皆僅冷熱雙溫：UW-2212HW-1 momo i_code=9556766／PChome DMAWEM-A900F0DM9 均 24,900（200×270×410 mm、750W），UW-2502DW-1 冰熱 PChome 34,900；桌上型氣泡水機，含 425g 快扣鋼瓶＋1L 水瓶，以色列製；與 OASIS LUXES-FIZZ-401 共用 SodaStream 快扣鋼瓶",
+          "checkedAt": "2026-08-22",
+          "cmpKeyword": "賀眾 UR-3902AW-1"
+        },
+        {
+          "id": "water_oasis_3temp",
+          "key": "water_oasis_3temp",
+          "tier": "高CP值",
+          "brand": "OASIS",
+          "model": "LUXES-COLD-301",
+          "name": "OASIS 櫥下輕奢三溫 UVC 飲水機（含三道軟水抑菌淨水）＋桌上型氣泡機",
+          "highlights": [
+            "冰溫熱三溫＋UVC 殺菌",
+            "含軟水濾芯、免費安裝",
+            "氣泡另配桌上機，最省"
+          ],
+          "dims": "依機種",
+          "cutout": "",
+          "power": "110V",
+          "weight": "",
+          "other": "保固：1 年",
+          "price": {
+            "amount": 44790,
+            "min": 44790,
+            "max": 45290,
+            "source": "momo",
+            "checkedAt": "2026-08-22",
+            "note": "MOMO 39,800（8/21–8/24 限時 37,810）；PChome 39,800；含免費基本安裝；氣泡機另加約 5,000",
+            "sourceDetail": "momo"
+          },
+          "links": [
+            {
+              "type": "momo",
+              "url": "https://www.momoshop.com.tw/goods/GoodsDetail.jsp?i_code=13116710",
+              "verified": true,
+              "note": "促銷價 39,800（原價 52,800）；08/21–08/24 限時 95 折後 37,810；庫存低於 3 組；含免費基本安裝；600G RO 版 i_code=13690069 49,800（折後 47,310）",
+              "checkedAt": "2026-08-22",
+              "check": "ok",
+              "stock": "ok"
+            },
+            {
+              "type": "pchome",
+              "url": "https://24h.pchome.com.tw/prod/DMCI01-A900I4ERS",
+              "verified": true,
+              "note": "現價 39,800／原價 42,800，可下單；品名：OASIS 櫥下輕奢三溫UVC飲水機(配置高效三道軟水抑菌淨水器)；600G RO 版 DMCI2K-A900IG6VR 49,800",
+              "checkedAt": "2026-08-22",
+              "check": "ok",
+              "stock": "ok"
+            },
+            {
+              "type": "official",
+              "url": "https://shop.hengstyle.com/SalePage/Index/10123858",
+              "verified": true,
+              "checkedAt": "2026-08-22",
+              "check": "ok",
+              "stock": "ok"
+            },
+            {
+              "type": "momo",
+              "url": "https://www.momoshop.com.tw/goods/GoodsDetail.jsp?i_code=10071565",
+              "verified": true,
+              "label": "SodaStream MOMO",
+              "note": "促銷價 5,490（限時折後 5,215），原價 7,680；08/24 前到貨；2 年保固",
+              "checkedAt": "2026-08-22",
+              "check": "mismatch"
+            },
+            {
+              "type": "pchome",
+              "url": "https://24h.pchome.com.tw/prod/DMAWGY-A900HF5JT",
+              "verified": true,
+              "label": "SodaStream PChome",
+              "note": "【快扣鋼瓶機型】ART 白，現價 4,990／原價 7,680，可下單；黑 DMAWGY-A900HHO21 同價",
+              "checkedAt": "2026-08-22",
+              "check": "mismatch"
+            },
+            {
+              "type": "official",
+              "url": "https://www.sodastream.com.tw/catalog/ins.php?index_id=91",
+              "verified": true,
+              "label": "SodaStream 官網",
+              "checkedAt": "2026-08-22",
+              "check": "ok",
+              "stock": "ok"
+            }
+          ],
+          "note": "",
+          "availability": "in_stock",
+          "storeName": "OASIS 櫥下輕奢三溫UVC飲水機（配置高效三道軟水抑菌淨水器／免費基本安裝／冰溫熱）",
+          "researchNote": "冰溫熱三合一、UVC 瞬間殺菌、三道濾芯（銀離子碳纖維＋2 支高效軟水）、流量 1.8L/60s；momo 與 PChome 促銷價同為 39,800，momo 另有限時折扣；燦坤 39,800（預購）",
+          "checkedAt": "2026-08-22",
+          "cmpKeyword": "OASIS LUXES-COLD-301"
+        }
+      ],
+      "notes": [],
+      "todos": [
+        {
+          "id": "wd_t1",
+          "text": "決定：整合四合一（OASIS）或 三溫＋獨立氣泡",
+          "done": false
+        },
+        {
+          "id": "wd_t2",
+          "text": "水槽櫃預留高 45cm、110V 專用插座、排水",
+          "done": false
+        },
+        {
+          "id": "wd_t3",
+          "text": "檯面龍頭孔數量與孔徑告知廚具商",
+          "done": false
+        }
+      ],
+      "requests": [],
+      "costNotes": [
+        "耗材年費：濾芯＋氣瓶約 NT$3,000–6,000／年。"
+      ],
+      "pickOptionId": "water_modular_3temp_soda",
+      "pickReason": "真正冰溫熱＋獨立氣泡機，故障互不影響、維修單純"
+    },
+    {
+      "id": "softener",
+      "roomId": "water",
+      "name": "全戶軟水系統",
+      "short": "南投硬水 151 mg/L",
+      "status": "choosing",
+      "chosenOptionId": null,
+      "hardReq": "",
+      "advice": "南投市自來水（南崗淨水場 2026/8/10）總硬度 151 mg/L，屬「硬水」不是超硬水（草稿 191 mg/L 是錯的）。US EPA 建議 >120 mg/L 即可考慮軟水——151 確實值得裝全戶軟水。",
+      "warnings": [
+        "軟水含鈉，不建議直接生飲；飲用水另走 RO／UF 分流。",
+        "實查價比報告高很多：3M SFT-150 約 7.5 萬、SFT-200 約 9.1–12 萬、BWT 75A 約 21.3 萬（皆含前置或安裝）。"
+      ],
+      "install": [
+        {
+          "tag": "水",
+          "text": "裝在總進水管處：透天多在頂樓水塔後／加壓馬達後；進水壓 1.5–3kg（過高加減壓閥、過低加壓馬達）。"
+        },
+        {
+          "tag": "電",
+          "text": "智慧閥需 110V 電源。"
+        },
+        {
+          "tag": "排水",
+          "text": "需排水（再生排鹽水）。"
+        },
+        {
+          "tag": "其他",
+          "text": "必裝旁通閥，維修不斷水；前端可加前置沉澱／除氯（如 3M BFS 系列）。"
+        }
+      ],
+      "options": [
+        {
+          "id": "soft_bwt_bewamat75a",
+          "key": "soft_bwt_bewamat75a",
+          "tier": "頂級",
+          "brand": "BWT 德國倍世",
+          "model": "Bewamat 75A",
+          "name": "BWT 倍世 Bewamat 75A 智慧型全戶軟水機",
+          "highlights": [
+            "德國製，省鹽 57%、省水 49%",
+            "可調軟硬度、停電記憶",
+            "適合 3 間衛浴以上的大家庭"
+          ],
+          "dims": "390 × 560 × 1090 mm",
+          "cutout": "",
+          "power": "230V 變壓 18V／20W",
+          "weight": "",
+          "other": "保固：1 年",
+          "price": {
+            "amount": 213000,
+            "min": 213000,
+            "max": 213000,
+            "source": "pchome",
+            "checkedAt": "2026-08-22",
+            "note": "PChome 標價 213,000（缺貨）；總代理拓霖企業商城預購 213,000；MOMO 已下架",
+            "sourceDetail": "拓霖企業商城（BWT 台灣總代理，預購）"
+          },
+          "links": [
+            {
+              "type": "search-momo",
+              "url": "https://www.momoshop.com.tw/search/searchShop.jsp?keyword=BWT%20Bewamat%2075A",
+              "verified": false
+            },
+            {
+              "type": "pchome",
+              "url": "https://24h.pchome.com.tw/prod/QBAU0O-A90065T09",
+              "verified": true,
+              "note": "標價 213,000／原價 236,000，但 ButtonType=缺貨、庫存 0（目前無法下單）；目前缺貨／補貨中",
+              "checkedAt": "2026-08-22",
+              "check": "ok_oos",
+              "stock": "oos"
+            },
+            {
+              "type": "other",
+              "url": "https://tw.buy.yahoo.com/gdsale/BWT%E5%BE%B7%E5%9C%8B%E5%80%8D%E4%B8%96-%E6%99%BA%E6%85%A7%E5%9E%8B%E8%BB%9F%E6%B0%B4%E6%A9%9F-Bewamat-75A-9802288.html",
+              "verified": true,
+              "checkedAt": "2026-08-22",
+              "check": "dead",
+              "stock": "ok",
+              "note": "原連結已下架，改為替代賣場（2026/8/22）",
+              "label": "Yahoo購物 看商品"
+            }
+          ],
+          "note": "",
+          "availability": "unclear",
+          "storeName": "BWT 德國倍世 智慧型軟水機（Bewamat 75A）",
+          "researchNote": "全戶型軟水機：工作流量 1.8–2.5 m³/h、交換容量 75 m³、儲鹽 50 kg、管徑 1-1/4 吋，德國製；momo 已無在售頁、PChome 暫無庫存，建議洽總代理拓霖 0800-092-552",
+          "checkedAt": "2026-08-22",
+          "cmpKeyword": "BWT Bewamat 75A"
+        },
+        {
+          "id": "soft_3m_sft200",
+          "key": "soft_3m_sft200",
+          "tier": "高級",
+          "brand": "3M",
+          "model": "SFT-200",
+          "name": "3M SFT-200 全戶式軟水系統",
+          "highlights": [
+            "每小時 2 噸，全屋都夠用",
+            "免濾芯只要加鹽、NSF 認證",
+            "官方旗艦店含前置過濾"
+          ],
+          "dims": "483.5×482.5×1123 mm",
+          "cutout": "",
+          "power": "110V/60Hz",
+          "weight": "",
+          "other": "保固：1 年",
+          "price": {
+            "amount": 90900,
+            "min": 90900,
+            "max": 120700,
+            "source": "official",
+            "checkedAt": "2026-08-22",
+            "note": "3M 官方旗艦店 SFT-200＋BFS3-40BK 前置 90,900；MOMO 全戶三件組 120,700（2026/9/11 後排程安裝）；PChome 無",
+            "sourceDetail": "official"
+          },
+          "links": [
+            {
+              "type": "official",
+              "url": "https://shop.3m.com.tw/SalePage/Index/11013225",
+              "verified": true,
+              "label": "3M 官方旗艦店（90,900）",
+              "checkedAt": "2026-08-22",
+              "check": "ok",
+              "stock": "ok"
+            },
+            {
+              "type": "momo",
+              "url": "https://www.momoshop.com.tw/goods/GoodsDetail.jsp?i_code=14520267",
+              "verified": true,
+              "note": "為全戶三件組（SFT-200＋SS802 不鏽鋼淨水＋BFS3-40BK 反洗），原價 156,600，2026/09/11 後排程安裝；單機頁 i_code=10176004 已下架",
+              "checkedAt": "2026-08-22",
+              "check": "ok",
+              "stock": "ok"
+            },
+            {
+              "type": "search-pchome",
+              "url": "https://24h.pchome.com.tw/search/?q=3M%20SFT-200",
+              "verified": false
+            }
+          ],
+          "note": "",
+          "availability": "in_stock",
+          "storeName": "3M SFT-200 全戶式軟水系統",
+          "researchNote": "工作流量 2.0 噸/h、最大 2.9 噸/h、儲鹽 60 kg、進出水 3/4 吋；3M 官方旗艦店 SFT-200＋BFS3-40BK 90,900、大三套 120,700",
+          "checkedAt": "2026-08-22",
+          "cmpKeyword": "3M SFT-200"
+        },
+        {
+          "id": "soft_3m_sft150",
+          "key": "soft_3m_sft150",
+          "tier": "高CP值",
+          "brand": "3M",
+          "model": "SFT-150",
+          "name": "3M SFT-150 全戶式軟水系統（2–3 人）",
+          "highlights": [
+            "2–3 人家庭剛好",
+            "免濾芯，加鹽就好",
+            "含前置反洗，價格最低"
+          ],
+          "dims": "470×460×661 mm",
+          "cutout": "",
+          "power": "110V/60Hz",
+          "weight": "",
+          "other": "保固：1 年",
+          "price": {
+            "amount": 74900,
+            "min": 74900,
+            "max": 74900,
+            "source": "momo",
+            "checkedAt": "2026-08-22",
+            "note": "MOMO 74,900（含 BFS3-40BK 前置反洗，預購 2026/9/11 出貨，廠商宅配安裝）；PChome 無",
+            "sourceDetail": "momo"
+          },
+          "links": [
+            {
+              "type": "momo",
+              "url": "https://www.momoshop.com.tw/goods/GoodsDetail.jsp?i_code=13230158",
+              "verified": true,
+              "note": "原價 84,900；預購，預計 2026/09/11 出貨；廠商宅配安裝",
+              "checkedAt": "2026-08-22",
+              "check": "ok",
+              "stock": "ok"
+            },
+            {
+              "type": "search-pchome",
+              "url": "https://24h.pchome.com.tw/search/?q=3M%20SFT-150",
+              "verified": false
+            },
+            {
+              "type": "official",
+              "url": "https://shop.3m.com.tw/SalePage/Index/10138623",
+              "verified": true,
+              "checkedAt": "2026-08-22",
+              "check": "ok",
+              "stock": "ok"
+            }
+          ],
+          "note": "",
+          "availability": "in_stock",
+          "storeName": "3M SFT-150 全屋/全戶式軟水系統（加碼送 3M BFS3-40BK 前置反洗淨水系統－曜石黑）",
+          "researchNote": "工作流量 1.5 噸/h、最大 2.4 噸/h、淨重 21 kg；3M 官方旗艦店僅有大三套 104,700；momo 商城（省錢王）另有 SFT-150＋BFS1-80＋BD-300S 組 74,900",
+          "checkedAt": "2026-08-22",
+          "cmpKeyword": "3M SFT-150"
+        }
+      ],
+      "notes": [],
+      "todos": [
+        {
+          "id": "soft_t1",
+          "text": "確認總進水管位置（水塔後／加壓馬達後）與排水",
+          "done": false
+        },
+        {
+          "id": "soft_t2",
+          "text": "預留 110V 插座與旁通閥空間",
+          "done": false
+        }
+      ],
+      "requests": [],
+      "costNotes": [
+        "耗材：軟化鹽 2–4 人約每 2 個月一包（約 NT$500），年費約 NT$3,000–6,000。"
+      ],
+      "pickOptionId": "soft_3m_sft150",
+      "pickReason": "一般家庭夠用、價格最低、含前置過濾"
+    },
+    {
+      "id": "toilet",
+      "roomId": "bath",
+      "name": "TOTO 電腦馬桶",
+      "short": "一體型 vs 分離式",
+      "status": "choosing",
+      "chosenOptionId": null,
+      "hardReq": "",
+      "advice": "一體型（NEOREST）造型俐落、功能整合最完整，但整組故障要整台維修、單價高；分離式（WASHLET 便座＋馬桶）日後只換座、維修便宜、CP 值高，多數家庭建議分離式。頂級控制在 NEOREST RS；NX2 價格遠超一般家庭需求，已剔除。",
+      "warnings": [
+        "TOTO NX2 CES903KVG 價格遠超一般家庭需求，已剔除。"
+      ],
+      "install": [
+        {
+          "tag": "尺寸",
+          "text": "排水管距：CW769CTW 305–400 mm；NEOREST RS 地排 305–435 mm（436–540 或 200 mm 需洽經銷）、壁排 120–155 mm。購買前務必量測。"
+        },
+        {
+          "tag": "電",
+          "text": "馬桶側需 110V 防水接地插座。"
+        },
+        {
+          "tag": "水",
+          "text": "給水壓力一般機種約 0.05–0.75MPa；透天高樓層水壓不足需加壓馬達，過高則加減壓閥。"
+        },
+        {
+          "tag": "其他",
+          "text": "水錘吸收器非必裝，管路有水錘聲再加；TOTO 全台服務網完整。"
+        }
+      ],
+      "options": [
+        {
+          "id": "toilet_neorest_rs_ces83410gtw",
+          "key": "toilet_neorest_rs_ces83410gtw",
+          "tier": "頂級",
+          "brand": "TOTO",
+          "model": "NEOREST RS CES83410GTW",
+          "name": "TOTO NEOREST RS 全自動馬桶（一體型）",
+          "highlights": [
+            "自動掀蓋、自動沖水",
+            "電解除菌水，常保清潔",
+            "一體成型最俐落"
+          ],
+          "dims": "W386 × D690 × H515 mm",
+          "cutout": "管距：地排 305–435 mm（-S1）／壁排 120–155 mm（-S2）",
+          "power": "110V 防水接地插座",
+          "weight": "",
+          "other": "",
+          "price": {
+            "amount": 112340,
+            "min": 112340,
+            "max": 112340,
+            "source": "pchome",
+            "checkedAt": "2026-08-22",
+            "note": "PChome 112,340（市價 137,000，不含安裝，庫存 8）；MOMO 第三方賣場無法取得價格；TOTO 官網定價 137,000",
+            "sourceDetail": "pchome"
+          },
+          "links": [
+            {
+              "type": "search-momo",
+              "url": "https://www.momoshop.com.tw/search/searchShop.jsp?keyword=CES83410GTW",
+              "verified": false,
+              "note": "原商品頁已下架，改為搜尋頁",
+              "checkedAt": "2026-08-22",
+              "check": "dead"
+            },
+            {
+              "type": "pchome",
+              "url": "https://24h.pchome.com.tw/prod/DEDW02-A900K5BBS",
+              "verified": true,
+              "note": "市價137,000；庫存8；不含安裝",
+              "checkedAt": "2026-08-22",
+              "check": "ok",
+              "stock": "ok"
+            },
+            {
+              "type": "official",
+              "url": "https://www.twtoto.com.tw/product-detail.aspx?mid=1&id=2812",
+              "verified": true,
+              "checkedAt": "2026-08-22",
+              "check": "ok",
+              "stock": "ok"
+            }
+          ],
+          "note": "",
+          "availability": "in_stock",
+          "storeName": "TOTO 除菌全自動馬桶 NEOREST RS(CES83410GTW 不含安裝)",
+          "researchNote": "一體型全自動馬桶；管距：地排水305~435mm(CES83410GTW-S1)、壁排水120~155mm(-S2)，436~540mm或200mm需洽經銷商；龍捲噴射式3.8L/3.0L；TOTO官網定價137,000",
+          "checkedAt": "2026-08-22",
+          "cmpKeyword": "TOTO CES83410GTW"
+        },
+        {
+          "id": "washlet_s7_tcf47160gtw",
+          "key": "washlet_s7_tcf47160gtw",
+          "tier": "高級",
+          "brand": "TOTO",
+          "model": "WASHLET S7 TCF47160GTW ＋ 馬桶 CW769CTW",
+          "name": "TOTO S7 輕奢款除菌溫水洗淨便座 ＋ 二段上壓分離式馬桶 CW769CTW",
+          "highlights": [
+            "瞬熱式，隨時有溫水",
+            "便座壞了只換便座，維修便宜",
+            "搭 CW769CTW，管距 305–400mm"
+          ],
+          "dims": "便座 W383 × D530 × H103 mm；馬桶 W395 × D700 × H746 mm",
+          "cutout": "管距 305–400 mm",
+          "power": "110V 防水接地插座",
+          "weight": "",
+          "other": "保固：1年(momo商品頁)",
+          "price": {
+            "amount": 38259,
+            "min": 38259,
+            "max": 39336,
+            "source": "momo",
+            "checkedAt": "2026-08-22",
+            "note": "便座 S7 MOMO／PChome 23,900 ＋ 馬桶 CW769CTW MOMO 折後 14,359（限北北基桃配送）／PChome 15,436；皆不含安裝"
+          },
+          "links": [
+            {
+              "type": "momo",
+              "url": "https://www.momoshop.com.tw/goods/GoodsDetail.jsp?i_code=12288627",
+              "verified": true,
+              "label": "便座 S7 MOMO",
+              "note": "市售價39,800；1年保固",
+              "checkedAt": "2026-08-22",
+              "check": "ok",
+              "stock": "ok"
+            },
+            {
+              "type": "pchome",
+              "url": "https://24h.pchome.com.tw/prod/DMAL6W-A900JNQF2",
+              "verified": true,
+              "label": "便座 S7 PChome",
+              "note": "市價39,800；庫存10；另一賣場DMALH5-A900IJ9PH同價23,900",
+              "checkedAt": "2026-08-22",
+              "check": "ok",
+              "stock": "ok"
+            },
+            {
+              "type": "official",
+              "url": "https://www.twtoto.com.tw/product-detail.aspx?mid=2&id=2931",
+              "verified": true,
+              "label": "便座 S7 官網",
+              "checkedAt": "2026-08-22",
+              "check": "ok",
+              "stock": "ok"
+            },
+            {
+              "type": "momo",
+              "url": "https://www.momoshop.com.tw/goods/GoodsDetail.jsp?i_code=13795372",
+              "verified": true,
+              "label": "馬桶 CW769CTW MOMO",
+              "note": "促銷價17,949、滿1件享8折→折後價14,359(原價20,000)；限北北基桃配送；不含安裝；另有TP0004612第三方賣場未能取得價格",
+              "checkedAt": "2026-08-22",
+              "check": "ok",
+              "stock": "ok"
+            },
+            {
+              "type": "pchome",
+              "url": "https://24h.pchome.com.tw/prod/DEDW02-A900IZCQE",
+              "verified": true,
+              "label": "馬桶 CW769CTW PChome",
+              "note": "市價20,000；庫存20；不含安裝",
+              "checkedAt": "2026-08-22",
+              "check": "ok",
+              "stock": "ok"
+            },
+            {
+              "type": "official",
+              "url": "https://www.twtoto.com.tw/product-detail.aspx?mid=1&id=2542",
+              "verified": true,
+              "label": "馬桶 CW769CTW 官網",
+              "checkedAt": "2026-08-22",
+              "check": "ok",
+              "stock": "ok"
+            }
+          ],
+          "note": "",
+          "availability": "in_stock",
+          "storeName": "【TOTO】S7 輕奢款 除菌溫水洗淨便座 TCF47160GTW(電解除菌水/智慧洗淨/溫熱無縫便座/WASHLET/免治馬桶座)",
+          "researchNote": "S7輕奢款(瞬熱式、全包覆便蓋，非旗艦款TCF47360GTW)；momo與PChome同價23,900",
+          "checkedAt": "2026-08-22",
+          "cmpKeyword": "TOTO TCF47160GTW"
+        },
+        {
+          "id": "washlet_s5_tcf34461gtw",
+          "key": "washlet_s5_tcf34461gtw",
+          "tier": "高CP值",
+          "brand": "TOTO",
+          "model": "WASHLET S5 TCF34461GTW（或 S2 TCF33461GTW）＋ 馬桶 CW769CTW",
+          "name": "TOTO S5（2025 新款、無線遙控）或 S2 進階款便座 ＋ 分離式馬桶 CW769CTW",
+          "highlights": [
+            "S5 無線遙控＋暖風烘乾",
+            "S2 更省，功能也夠用",
+            "分離式最省錢、最好維修"
+          ],
+          "dims": "便座 S5 W382 × D533 × H139 mm；馬桶 W395 × D700 × H746 mm",
+          "cutout": "管距 305–400 mm",
+          "power": "110V 防水接地插座",
+          "weight": "",
+          "other": "保固：1年(momo商品頁)",
+          "price": {
+            "amount": 32259,
+            "min": 29259,
+            "max": 33336,
+            "source": "momo",
+            "checkedAt": "2026-08-22",
+            "note": "S5 17,900 或 S2 14,900 ＋ 馬桶 CW769CTW 14,359–15,436；皆不含安裝"
+          },
+          "links": [
+            {
+              "type": "momo",
+              "url": "https://www.momoshop.com.tw/goods/GoodsDetail.jsp?i_code=14834661",
+              "verified": true,
+              "label": "便座 S5 MOMO",
+              "note": "市售價32,400；1年保固；廠商宅配",
+              "checkedAt": "2026-08-22",
+              "check": "ok",
+              "stock": "ok"
+            },
+            {
+              "type": "pchome",
+              "url": "https://24h.pchome.com.tw/prod/DMAL6W-A900JVX5O",
+              "verified": true,
+              "label": "便座 S5 PChome",
+              "note": "市價32,400；庫存16",
+              "checkedAt": "2026-08-22",
+              "check": "ok",
+              "stock": "ok"
+            },
+            {
+              "type": "official",
+              "url": "https://www.twtoto.com.tw/product-detail.aspx?mid=2&id=2969",
+              "verified": true,
+              "label": "便座 S5 官網",
+              "checkedAt": "2026-08-22",
+              "check": "ok",
+              "stock": "ok"
+            },
+            {
+              "type": "momo",
+              "url": "https://www.momoshop.com.tw/goods/GoodsDetail.jsp?i_code=14834662",
+              "verified": true,
+              "label": "便座 S2 MOMO",
+              "note": "市售價26,000；1年保固",
+              "checkedAt": "2026-08-22",
+              "check": "ok",
+              "stock": "ok"
+            },
+            {
+              "type": "pchome",
+              "url": "https://24h.pchome.com.tw/prod/DMAL6W-A900JVWI8",
+              "verified": true,
+              "label": "便座 S2 PChome",
+              "note": "市價26,000；庫存11",
+              "checkedAt": "2026-08-22",
+              "check": "ok",
+              "stock": "ok"
+            },
+            {
+              "type": "official",
+              "url": "https://www.twtoto.com.tw/product-detail.aspx?mid=2&id=2977",
+              "verified": true,
+              "label": "便座 S2 官網",
+              "checkedAt": "2026-08-22",
+              "check": "ok",
+              "stock": "ok"
+            },
+            {
+              "type": "momo",
+              "url": "https://www.momoshop.com.tw/goods/GoodsDetail.jsp?i_code=13795372",
+              "verified": true,
+              "label": "馬桶 CW769CTW MOMO",
+              "note": "促銷價17,949、滿1件享8折→折後價14,359(原價20,000)；限北北基桃配送；不含安裝；另有TP0004612第三方賣場未能取得價格",
+              "checkedAt": "2026-08-22",
+              "check": "ok",
+              "stock": "ok"
+            },
+            {
+              "type": "pchome",
+              "url": "https://24h.pchome.com.tw/prod/DEDW02-A900IZCQE",
+              "verified": true,
+              "label": "馬桶 CW769CTW PChome",
+              "note": "市價20,000；庫存20；不含安裝",
+              "checkedAt": "2026-08-22",
+              "check": "ok",
+              "stock": "ok"
+            },
+            {
+              "type": "official",
+              "url": "https://www.twtoto.com.tw/product-detail.aspx?mid=1&id=2542",
+              "verified": true,
+              "label": "馬桶 CW769CTW 官網",
+              "checkedAt": "2026-08-22",
+              "check": "ok",
+              "stock": "ok"
+            }
+          ],
+          "note": "",
+          "availability": "in_stock",
+          "storeName": "【TOTO】S5 除菌溫水洗淨便座 TCF34461GTW(電解除菌水/強力除臭/無線遙控/WASHLET/免治馬桶座)",
+          "researchNote": "2025新款S5(無線遙控、電解除菌水、暖風烘乾)；momo與PChome同價17,900",
+          "checkedAt": "2026-08-22",
+          "cmpKeyword": "TOTO TCF34461GTW"
+        }
+      ],
+      "notes": [],
+      "todos": [
+        {
+          "id": "toilet_t1",
+          "text": "量每間廁所的排水管距（305 或 400mm）",
+          "done": false
+        },
+        {
+          "id": "toilet_t2",
+          "text": "馬桶旁預留 110V 防水接地插座",
+          "done": false
+        },
+        {
+          "id": "toilet_t3",
+          "text": "確認各樓層水壓（不足加壓、過高減壓）",
+          "done": false
+        }
+      ],
+      "requests": [],
+      "costNotes": [
+        "NEOREST RS 實查約 11.2 萬（不含安裝）；NX2 CES903KVG 建議售價 507,200、特價仍約 35 萬，已剔除。"
+      ],
+      "pickOptionId": "washlet_s5_tcf34461gtw",
+      "pickReason": "分離式最省、壞了只換便座"
+    },
+    {
+      "id": "bath_heater",
+      "roomId": "bath",
+      "name": "浴室暖風機",
+      "short": "透天多間要乘倍",
+      "status": "choosing",
+      "chosenOptionId": null,
+      "hardReq": "",
+      "advice": "三款實查都是 220V 機型（三菱 V-251BZ-TWN 報告寫 110V 是錯的），正好符合「新裝潢建議 220V」。建議選有線線控：面板耐用、濕手好按。透天多間浴室，數量請自行乘倍。",
+      "warnings": [],
+      "install": [
+        {
+          "tag": "電",
+          "text": "建議 220V；需獨立迴路＋漏電斷路器（30mA）。"
+        },
+        {
+          "tag": "排風",
+          "text": "排風管務必排到戶外，不可排到夾層／管道間造成回流。"
+        },
+        {
+          "tag": "尺寸",
+          "text": "天花板須留機體高度（台達 174mm、三菱 180mm、Panasonic 180mm＋上方淨高 200mm）＋出風管路徑；開孔三菱 300×275、台達 300×300、Panasonic 400×280。"
+        },
+        {
+          "tag": "尺寸",
+          "text": "機體避開淋浴正上方，裝在乾區。"
+        }
+      ],
+      "options": [
+        {
+          "id": "heater_mitsubishi_v251bztwn",
+          "key": "heater_mitsubishi_v251bztwn",
+          "tier": "頂級",
+          "brand": "三菱電機",
+          "model": "V-251BZ-TWN",
+          "name": "三菱電機 浴室暖風乾燥機（日本製）",
+          "highlights": [
+            "日本製，3D 擺葉送風均勻",
+            "IPX7 防水無線遙控",
+            "暖／涼／乾／換氣四合一"
+          ],
+          "dims": "嵌入尺寸 300 × 275 × 180 mm",
+          "cutout": "",
+          "power": "220V／2250W",
+          "weight": "",
+          "other": "保固：3年(momo商品頁)",
+          "price": {
+            "amount": 14700,
+            "min": 14700,
+            "max": 15000,
+            "source": "pchome",
+            "checkedAt": "2026-08-22",
+            "note": "PChome 14,700（市價 24,500）；MOMO 15,000（市價 20,300）；3 年保固；不含安裝",
+            "sourceDetail": "pchome"
+          },
+          "links": [
+            {
+              "type": "momo",
+              "url": "https://www.momoshop.com.tw/goods/GoodsDetail.jsp?i_code=8437790",
+              "verified": true,
+              "note": "市售價20,300；3年保固；不含安裝",
+              "checkedAt": "2026-08-22",
+              "check": "ok",
+              "stock": "ok"
+            },
+            {
+              "type": "pchome",
+              "url": "https://24h.pchome.com.tw/prod/DPAL3O-A900K8KTZ",
+              "verified": true,
+              "note": "市價24,500；庫存18；另DEDW0A-A900HZ01C同價14,700",
+              "checkedAt": "2026-08-22",
+              "check": "ok",
+              "stock": "ok"
+            }
+          ],
+          "note": "",
+          "availability": "in_stock",
+          "storeName": "【MITSUBISHI 三菱電機】浴室暖風乾燥機 V-251BZ-TWN 日本原裝進口 無線遙控 220V 不含安裝(浴室暖風機)",
+          "researchNote": "注意：V-251BZ-TWN為220V無線遙控機型(110V無線遙控對應型號為V-151BZ-TWN)；日本製；適用2~4坪；IPX7防水遙控器；台灣三菱電機官網僅有V-141/241BZ-TWN專頁",
+          "checkedAt": "2026-08-22",
+          "cmpKeyword": "三菱 V-251BZ-TWN"
+        },
+        {
+          "id": "heater_panasonic_fv40buy1w",
+          "key": "heater_panasonic_fv40buy1w",
+          "tier": "高級",
+          "brand": "Panasonic",
+          "model": "FV-40BUY1W",
+          "name": "國際牌 浴室暖風機（220V 陶瓷加熱・有線線控）",
+          "highlights": [
+            "陶瓷加熱，暖得快",
+            "有線線控，濕手也好按",
+            "五重安全保護"
+          ],
+          "dims": "本體 394 × 270 × 180 mm；開孔 400 × 280 mm（上方淨高需 200mm）",
+          "cutout": "開孔 400 × 280 mm",
+          "power": "220V／1650W",
+          "weight": "",
+          "other": "另有 nanoeX 版 FV-40BEN4W 約 NT$17,800",
+          "price": {
+            "amount": 9405,
+            "min": 9405,
+            "max": 9800,
+            "source": "momo",
+            "checkedAt": "2026-08-22",
+            "note": "MOMO 限時 9,405（市售 22,000）；PChome 9,800；皆為 110V／220V 合併賣場，下單要選 220V FV-40BUY1W；不含安裝",
+            "sourceDetail": "momo"
+          },
+          "links": [
+            {
+              "type": "momo",
+              "url": "https://www.momoshop.com.tw/goods/GoodsDetail.jsp?i_code=11072198",
+              "verified": true,
+              "note": "限時折後價9,405(市售價22,000)；110V/220V合併賣場，需選220V FV-40BUY1W；1年保固",
+              "checkedAt": "2026-08-22",
+              "check": "ok",
+              "stock": "ok"
+            },
+            {
+              "type": "pchome",
+              "url": "https://24h.pchome.com.tw/prod/DPAL3M-A900BTWEY",
+              "verified": true,
+              "note": "市價12,950；庫存1；合併賣場需選220V；另DMAL1Y-A900GDHA6 9,842、DPAL4U-A900K3Z53 9,900",
+              "checkedAt": "2026-08-22",
+              "check": "ok",
+              "stock": "ok"
+            }
+          ],
+          "note": "",
+          "availability": "in_stock",
+          "storeName": "【Panasonic 國際牌】FV-40BUY1R/FV-40BUY1W 陶瓷加熱 浴室暖風乾燥機(有線遙控110/220V)",
+          "researchNote": "有線線控、陶瓷加熱；momo與PChome皆為FV-40BUY1R(110V)/FV-40BUY1W(220V)合併賣場，下單需選220V；不含安裝；Panasonic台灣官網擋爬蟲(403)未能驗證專頁",
+          "checkedAt": "2026-08-22",
+          "cmpKeyword": "Panasonic FV-40BUY1W"
+        },
+        {
+          "id": "heater_delta_vhb30bcmrta",
+          "key": "heater_delta_vhb30bcmrta",
+          "tier": "高CP值",
+          "brand": "台達電子",
+          "model": "VHB30BCMRT-A（無線）／VHB30BCMT-AD（有線）",
+          "name": "台達 多功能循環涼暖風機 豪華300（220V）",
+          "highlights": [
+            "DC 馬達省電又安靜",
+            "有線／無線兩種可選",
+            "3 年保固，價格最實惠"
+          ],
+          "dims": "安裝尺寸 300 × 300 × 174 mm；出風口 4 吋（100mm）；5.5kg",
+          "cutout": "開孔 300 × 300 mm",
+          "power": "220V／加熱 2000W＋馬達 15W",
+          "weight": "",
+          "other": "保固：原廠全機3年",
+          "price": {
+            "amount": 7500,
+            "min": 7500,
+            "max": 8500,
+            "source": "pchome",
+            "checkedAt": "2026-08-22",
+            "note": "無線 VHB30BCMRT-A：PChome 7,500／MOMO 8,500；有線 VHB30BCMT-AD：MOMO 7,780／PChome 8,100；合併賣場下單要選 220V；不含安裝",
+            "sourceDetail": "pchome"
+          },
+          "links": [
+            {
+              "type": "momo",
+              "url": "https://www.momoshop.com.tw/goods/GoodsDetail.jsp?i_code=8381731",
+              "verified": true,
+              "label": "無線款 MOMO",
+              "note": "市售價13,400；110V/220V合併賣場，需選220V VHB30BCMRT-A；3年保固",
+              "checkedAt": "2026-08-22",
+              "check": "ok",
+              "stock": "ok"
+            },
+            {
+              "type": "pchome",
+              "url": "https://24h.pchome.com.tw/prod/DPAL3O-A900HYXY7",
+              "verified": true,
+              "label": "無線款 PChome",
+              "note": "市價13,000；庫存20；合併賣場需選220V；220V專屬賣場QBAF2X-A900A9C80為8,100",
+              "checkedAt": "2026-08-22",
+              "check": "ok",
+              "stock": "ok"
+            },
+            {
+              "type": "official",
+              "url": "https://www.deltaww.com/zh-TW/products/Heater-Fan/VHB300",
+              "verified": true,
+              "label": "無線款 官網",
+              "checkedAt": "2026-08-22",
+              "check": "ok",
+              "stock": "ok"
+            },
+            {
+              "type": "momo",
+              "url": "https://www.momoshop.com.tw/goods/GoodsDetail.jsp?i_code=9758064",
+              "verified": true,
+              "label": "有線款 MOMO",
+              "note": "限時折後價7,780(促銷價8,500、市售價14,900)；110V/220V合併賣場，需選220V VHB30BCMT-AD；預計2026/08/24出貨；3年保固",
+              "checkedAt": "2026-08-22",
+              "check": "ok",
+              "stock": "ok"
+            },
+            {
+              "type": "pchome",
+              "url": "https://24h.pchome.com.tw/prod/DMAZ67-A900BSZZ7",
+              "verified": true,
+              "label": "有線款 PChome",
+              "note": "市價14,900；庫存20；220V線控專屬賣場",
+              "checkedAt": "2026-08-22",
+              "check": "ok",
+              "stock": "ok"
+            }
+          ],
+          "note": "",
+          "availability": "in_stock",
+          "storeName": "【台達電子】豪華型300系列 多功能循環涼暖風機 遙控型 VHB30ACMRT-A / VHB30BCMRT-A(浴室暖風機)",
+          "researchNote": "韻律風門、無線遙控、適用3~6坪；原廠說明書 https://filecenter.deltaww.com/Products/Download/03/0302/manual/VHB30BCMRT-TW.pdf",
+          "checkedAt": "2026-08-22",
+          "cmpKeyword": "台達 VHB30BCMRT-A"
+        }
+      ],
+      "notes": [],
+      "todos": [
+        {
+          "id": "bh_t1",
+          "text": "確認要裝幾間浴室",
+          "done": false
+        },
+        {
+          "id": "bh_t2",
+          "text": "每間拉 220V 獨立迴路＋漏電斷路器、排風管到戶外",
+          "done": false
+        }
+      ],
+      "requests": [],
+      "costNotes": [],
+      "pickOptionId": "heater_delta_vhb30bcmrta",
+      "pickReason": "220V＋有線線控，CP 值最高"
+    },
+    {
+      "id": "tv",
+      "roomId": "living",
+      "name": "LG 電視（75 吋以上）",
+      "short": "強光客廳：QNED miniLED 優先",
+      "status": "choosing",
+      "chosenOptionId": null,
+      "hardReq": "75 吋以上。",
+      "advice": "透天客廳白天採光強 → 優先 QNED miniLED（75QNED86ATA／9MATA）：峰值亮度高、抗反光佳、無烙印顧慮。若客廳可控光、重畫質對比 → OLED evo G6（純淨黑抗反光面板）。挑高大空間 75–86 吋剛好；觀看距離 3.5–4.5m 建議 75 吋以上。",
+      "warnings": [
+        "實查：OLED77G5 已下架、2026 主力為 G6（16.5 萬）；75QNED86ATA 多通路缺貨／清庫存；86QNED86ATA PChome 缺貨。",
+        "報告的 75MRGB86BTA（Micro RGB）型號尾碼待以 LG 台灣官網實際上架為準。"
+      ],
+      "install": [
+        {
+          "tag": "搬運",
+          "text": "75–86 吋先量樓梯轉角與門框。"
+        },
+        {
+          "tag": "尺寸",
+          "text": "觀看距離 3.5–4.5m；壁掛需確認牆體承重與 VESA 孔距。"
+        },
+        {
+          "tag": "電",
+          "text": "110V；預留 HDMI eARC 給聲霸。"
+        }
+      ],
+      "options": [
+        {
+          "id": "tv_lg_86qned86ata",
+          "key": "tv_lg_86qned86ata",
+          "tier": "頂級",
+          "brand": "LG",
+          "model": "86QNED86ATA",
+          "name": "LG 86 吋 QNED miniLED 4K 智慧電視",
+          "highlights": [
+            "86 吋 miniLED，白天客廳也夠亮",
+            "144Hz 畫面順暢",
+            "不會烙印，耐看"
+          ],
+          "dims": "不含腳座 1928×1108×30.9 mm；含腳座 1928×1190(或1142)×370 mm；重量 50.0 kg（不含腳座）/ 58.2 kg（含腳座）；VESA 600×400",
+          "cutout": "",
+          "power": "AC 110V 60Hz",
+          "weight": "",
+          "other": "VESA 600×400；重量 50.0 kg（不含腳座）",
+          "price": {
+            "amount": 99000,
+            "min": 99000,
+            "max": 99000,
+            "source": "pchome",
+            "checkedAt": "2026-08-22",
+            "note": "PChome 99,000（市價 149,000，目前缺貨可貨到通知）；MOMO 自營約 97,000（比價網，未驗證）；小蔡電器 MOMO 店含壁掛安裝約 93,999；PChome 目前缺貨",
+            "sourceDetail": "pchome"
+          },
+          "links": [
+            {
+              "type": "momo",
+              "url": "https://www.momoshop.com.tw/goods/GoodsDetail.jsp?i_code=14069862",
+              "verified": true,
+              "note": "原連結已下架，改為替代賣場（2026/8/22）",
+              "checkedAt": "2026-08-22",
+              "check": "dead",
+              "stock": "ok"
+            },
+            {
+              "type": "pchome",
+              "url": "https://24h.pchome.com.tw/prod/DPADYE-A900IWS3U",
+              "verified": true,
+              "note": "PChome 售價 $99,000（市價 $149,000），狀態 缺貨，可登記貨到通知；另一賣場 DMBM10-A900ITV7P $100,280 亦缺貨；目前缺貨／補貨中",
+              "checkedAt": "2026-08-22",
+              "check": "ok_oos",
+              "stock": "oos"
+            },
+            {
+              "type": "official",
+              "url": "https://www.lg.com/tw/tv-soundbars/qned/86qned86ata/",
+              "verified": true,
+              "checkedAt": "2026-08-22",
+              "check": "ok",
+              "stock": "ok"
+            }
+          ],
+          "note": "",
+          "availability": "unclear",
+          "storeName": "LG 樂金 86吋 QNED evo AI 4K miniLED 智慧顯示器(86QNED86ATA)",
+          "researchNote": "PChome 主要賣場目前缺貨；momo 僅找到小蔡電器含壁掛安裝店頁（無價）；第三方（Global Mall $94,004、Yahoo $95,060、小蔡 $93,999）價格來自 FindPrice 比價頁，未直接開啟驗證。",
+          "checkedAt": "2026-08-22",
+          "cmpKeyword": "LG 86QNED86ATA"
+        },
+        {
+          "id": "tv_lg_oled77g5pta",
+          "key": "tv_lg_oled77g5pta",
+          "tier": "頂級",
+          "brand": "LG",
+          "model": "OLED77G6PTA",
+          "name": "LG 77 吋 OLED evo G6 4K 電視（2026 新款；G5 已下架）",
+          "highlights": [
+            "OLED 黑得徹底、對比最好",
+            "2026 新款 G6 抗反光面板",
+            "OLED 面板 5 年保固"
+          ],
+          "dims": "（G6）不含腳座 1712×982×24.8 mm；含腳座 1712×1039×321 mm；重量 33.0 kg（不含腳座）/ 39.7 kg（含腳座）；VESA 300×300",
+          "cutout": "",
+          "power": "AC 110V 60Hz",
+          "weight": "",
+          "other": "VESA 300×300；重量 33.0 kg（不含腳座）",
+          "price": {
+            "amount": 164900,
+            "min": 164900,
+            "max": 164900,
+            "source": "pchome",
+            "checkedAt": "2026-08-22",
+            "note": "PChome 164,900（庫存 3）；MOMO 未找到可開啟的商品頁；G5 全通路已下架",
+            "sourceDetail": "pchome"
+          },
+          "links": [
+            {
+              "type": "search-momo",
+              "url": "https://www.momoshop.com.tw/search/searchShop.jsp?keyword=OLED77G6PTA",
+              "verified": false
+            },
+            {
+              "type": "pchome",
+              "url": "https://24h.pchome.com.tw/prod/DPADZ5-A900K4PDR",
+              "verified": true,
+              "note": "此為 G6（OLED77G6PTA）「LG 樂金 77吋 OLED evo AI 4K 智慧顯示器 OLED77G6PTA」；PChome $164,900，可下單、庫存 3；G5 77 吋 PChome 搜尋 0 筆",
+              "checkedAt": "2026-08-22",
+              "check": "ok",
+              "stock": "ok"
+            },
+            {
+              "type": "official",
+              "url": "https://www.lg.com/tw/tv-soundbars/oled-evo/oled77g6pta/",
+              "verified": true,
+              "checkedAt": "2026-08-22",
+              "check": "ok",
+              "stock": "ok"
+            }
+          ],
+          "note": "",
+          "availability": "discontinued",
+          "storeName": "LG 樂金 77吋 OLED evo AI 4K 智慧顯示器 OLED77G6PTA（G5 已下架，以 2026 G6 替代）",
+          "researchNote": "OLED77G5PTA 已下架（LG 台灣官網頁面 404、momo/PChome 皆無上架）；2026 主力為 G6 OLED77G6PTA：PChome $164,900 有貨；FindPrice 另見樂天家電生活館 $149,750、PXGo/小蔡 $156,655（含壁掛安裝），未直接驗證。",
+          "checkedAt": "2026-08-22",
+          "cmpKeyword": "LG OLED77G6PTA"
+        },
+        {
+          "id": "tv_lg_75qned9mata",
+          "key": "tv_lg_75qned9mata",
+          "tier": "高級",
+          "brand": "LG",
+          "model": "75QNED9MATA",
+          "name": "LG 75 吋 QNED miniLED 真無線 4K 電視",
+          "highlights": [
+            "真無線：電視只接一條電源線",
+            "miniLED 高亮",
+            "牆面不用拉線最乾淨"
+          ],
+          "dims": "不含腳座 1677×972×51.6 mm；重量 30.7 kg（不含腳座）；VESA 300×200；官網未列含腳座尺寸",
+          "cutout": "",
+          "power": "AC 110V 60Hz",
+          "weight": "",
+          "other": "VESA 300×200；重量 30.7 kg（不含腳座）",
+          "price": {
+            "amount": 74900,
+            "min": 74900,
+            "max": 74900,
+            "source": "pchome",
+            "checkedAt": "2026-08-22",
+            "note": "PChome 74,900（缺貨）；小蔡電器 MOMO 店含壁掛安裝約 77,900；PChome 目前缺貨",
+            "sourceDetail": "pchome"
+          },
+          "links": [
+            {
+              "type": "momo",
+              "url": "https://www.momoshop.com.tw/TP/TP0007894/goodsDetail/TP00078940000773",
+              "verified": true,
+              "note": "原連結已下架，改為替代賣場（2026/8/22）",
+              "checkedAt": "2026-08-22",
+              "check": "dead",
+              "stock": "ok"
+            },
+            {
+              "type": "pchome",
+              "url": "https://24h.pchome.com.tw/prod/DPADW2-A900JJ9TO",
+              "verified": true,
+              "note": "PChome 售價 $74,900（市價 $99,000），狀態 缺貨＝缺貨；目前缺貨／補貨中",
+              "checkedAt": "2026-08-22",
+              "check": "ok_oos",
+              "stock": "oos"
+            },
+            {
+              "type": "official",
+              "url": "https://www.lg.com/tw/tv-soundbars/qned/75qned9mata/",
+              "verified": true,
+              "checkedAt": "2026-08-22",
+              "check": "ok",
+              "stock": "ok"
+            }
+          ],
+          "note": "",
+          "availability": "unclear",
+          "storeName": "LG 樂金 75QNED9MATA 75 吋 QNED evo AI 4K MiniLED 智慧顯示器 9M真無線系列",
+          "researchNote": "真無線（Zero Connect Box）機種；PChome 缺貨、momo 僅小蔡電器含壁掛安裝店頁；FindPrice 另見集雅社（蝦皮/樂天）$69,900、老王電器 $70,100，未直接驗證。",
+          "checkedAt": "2026-08-22",
+          "cmpKeyword": "LG 75QNED9MATA"
+        },
+        {
+          "id": "tv_lg_oled77c5pta",
+          "key": "tv_lg_oled77c5pta",
+          "tier": "高級",
+          "brand": "LG",
+          "model": "OLED77C5PTA",
+          "name": "LG 77 吋 OLED evo C5 4K 電視",
+          "highlights": [
+            "OLED 畫質、120Hz",
+            "PChome 含壁掛架，CP 值高",
+            "適合可控光的客廳"
+          ],
+          "dims": "不含腳座 1711×982×47.1 mm；含腳座 1711×1035×267 mm；重量 23.5 kg（不含腳座）/ 27.1 kg（含腳座）；VESA 300×200",
+          "cutout": "",
+          "power": "AC 110V 60Hz",
+          "weight": "",
+          "other": "VESA 300×200；重量 23.5 kg（不含腳座）",
+          "price": {
+            "amount": 69900,
+            "min": 69900,
+            "max": 69900,
+            "source": "pchome",
+            "checkedAt": "2026-08-22",
+            "note": "PChome 69,900（含前推壁掛架，補貨中可下單）；MOMO 頁面無價；MOMO 77 吋 C5 已下架（現售 C6 約 129,900）",
+            "sourceDetail": "pchome"
+          },
+          "links": [
+            {
+              "type": "search-momo",
+              "url": "https://www.momoshop.com.tw/search/searchShop.jsp?keyword=OLED77C5PTA",
+              "verified": false,
+              "note": "原商品頁已下架，改為搜尋頁",
+              "checkedAt": "2026-08-22",
+              "check": "dead"
+            },
+            {
+              "type": "pchome",
+              "url": "https://24h.pchome.com.tw/prod/DPADFN-1900JVIWW",
+              "verified": true,
+              "note": "「LG 樂金 77型 4K OLED 120Hz C5極緻系列 智慧聯網顯示器 含前推可調角度電視壁掛架 (OLED77C5PTA)」PChome $69,900，補貨中，可下單；其他賣場 DPADYE-A900IWS4L $81,810、DPADYE-A900JC4LA $92,990 皆缺貨；目前缺貨／補貨中",
+              "checkedAt": "2026-08-22",
+              "check": "ok_oos",
+              "stock": "oos"
+            },
+            {
+              "type": "official",
+              "url": "https://www.lg.com/tw/tv-soundbars/oled-evo/oled77c5pta/",
+              "verified": true,
+              "checkedAt": "2026-08-22",
+              "check": "ok",
+              "stock": "ok"
+            }
+          ],
+          "note": "",
+          "availability": "unclear",
+          "storeName": "【LG 樂金】OLED77C5PTA 77吋 C5極緻系列 OLED evo AI 4K 智慧顯示器",
+          "researchNote": "PChome 最低價為含壁掛架組合 $69,900（補貨中可下單）；LG 官網活動：贈壁掛架 OLW480B（$4,500）＋VIP 安裝；PTT 今年 1 月曾見 $67,900。",
+          "checkedAt": "2026-08-22",
+          "cmpKeyword": "LG OLED77C5PTA"
+        },
+        {
+          "id": "tv_lg_75qned86ata",
+          "key": "tv_lg_75qned86ata",
+          "tier": "高CP值",
+          "brand": "LG",
+          "model": "75QNED86ATA",
+          "name": "LG 75 吋 QNED miniLED 4K 智慧電視（86 系列 144Hz）",
+          "highlights": [
+            "miniLED 高亮、144Hz",
+            "強光客廳首選",
+            "多通路清庫存，要買要快"
+          ],
+          "dims": "不含腳座 1677×965×30.9 mm；含腳座 1677×1042(或994)×370 mm；重量 33.3 kg（不含腳座）/ 41.5 kg（含腳座）；VESA 400×300",
+          "cutout": "",
+          "power": "AC 110V 60Hz",
+          "weight": "",
+          "other": "VESA 400×300；重量 33.3 kg（不含腳座）",
+          "price": {
+            "amount": 52155,
+            "min": 52155,
+            "max": 52155,
+            "source": "pchome",
+            "checkedAt": "2026-08-22",
+            "note": "PChome 52,155（缺貨）；MOMO 頁面無價；集雅社標「停產」49,410——疑已進入清庫存，要買要快",
+            "sourceDetail": "pchome"
+          },
+          "links": [
+            {
+              "type": "search-momo",
+              "url": "https://www.momoshop.com.tw/search/searchShop.jsp?keyword=75QNED86ATA",
+              "verified": false,
+              "note": "原商品頁已下架，改為搜尋頁",
+              "checkedAt": "2026-08-22",
+              "check": "dead"
+            },
+            {
+              "type": "pchome",
+              "url": "https://24h.pchome.com.tw/prod/DPADYE-A900IWS22",
+              "verified": true,
+              "note": "PChome 售價 $52,155（市價 $72,900），狀態 缺貨＝缺貨；目前缺貨／補貨中",
+              "checkedAt": "2026-08-22",
+              "check": "ok_oos",
+              "stock": "oos"
+            },
+            {
+              "type": "official",
+              "url": "https://www.lg.com/tw/tv-soundbars/qned/75qned86ata/",
+              "verified": true,
+              "checkedAt": "2026-08-22",
+              "check": "ok",
+              "stock": "ok"
+            }
+          ],
+          "note": "",
+          "availability": "unclear",
+          "storeName": "LG 樂金 75吋 QNED evo AI 4K miniLED 智慧顯示器(75QNED86ATA)",
+          "researchNote": "PChome 缺貨、momo 頁面無價；樂天（集雅社）賣場已標「停產」$49,410，Global Mall $55,000 含標準安裝（FindPrice 資料）——此型號疑已進入清庫存階段。",
+          "checkedAt": "2026-08-22",
+          "cmpKeyword": "LG 75QNED86ATA"
+        },
+        {
+          "id": "tv_lg_75qned82ata",
+          "key": "tv_lg_75qned82ata",
+          "tier": "高CP值",
+          "brand": "LG",
+          "model": "75QNED82ATA",
+          "name": "LG 75 吋 QNED 4K 智慧電視",
+          "highlights": [
+            "75 吋最便宜的 LG 選擇",
+            "MOMO 含標準安裝",
+            "有現貨"
+          ],
+          "dims": "不含腳座 1677×966×51.6 mm；含腳座 1677×1032×359 mm；重量 31.4 kg（不含腳座）/ 32.4 kg（含腳座）；VESA 300×200",
+          "cutout": "",
+          "power": "AC 110V 60Hz",
+          "weight": "",
+          "other": "VESA 300×200；重量 31.4 kg（不含腳座）",
+          "price": {
+            "amount": 39900,
+            "min": 39900,
+            "max": 56618,
+            "source": "momo",
+            "checkedAt": "2026-08-22",
+            "note": "MOMO 限時 39,900（含標準安裝，原價 72,900）；PChome 56,618；LG 官網活動送壁掛架＋免費壁掛安裝",
+            "sourceDetail": "momo"
+          },
+          "links": [
+            {
+              "type": "momo",
+              "url": "https://www.momoshop.com.tw/goods/GoodsDetail.jsp?i_code=15204600",
+              "verified": true,
+              "note": "限時價 $39,900（促銷價 $42,900、原價 $72,900）；含標準安裝；保固 2 年；momo 自營家電快配",
+              "checkedAt": "2026-08-22",
+              "check": "ok",
+              "stock": "ok"
+            },
+            {
+              "type": "pchome",
+              "url": "https://24h.pchome.com.tw/prod/DPADYE-A900JZW22",
+              "verified": true,
+              "note": "PChome 售價 $56,618（市價 $59,900），可下單、庫存 8；Google 摘要曾見折扣後 $39,618–42,900",
+              "checkedAt": "2026-08-22",
+              "check": "ok",
+              "stock": "ok"
+            },
+            {
+              "type": "official",
+              "url": "https://www.lg.com/tw/tv-soundbars/qned/75qned82ata/",
+              "verified": true,
+              "checkedAt": "2026-08-22",
+              "check": "ok",
+              "stock": "ok"
+            }
+          ],
+          "note": "",
+          "availability": "in_stock",
+          "storeName": "【LG 樂金】家電快配★75型 4K QNED 82系列 智慧聯網顯示器(75QNED82ATA)",
+          "researchNote": "momo 含標準安裝（壁掛另計）；LG 官網活動：免費壁掛安裝＋贈壁掛架 OLW480B（價值 $4,500）。",
+          "checkedAt": "2026-08-22",
+          "cmpKeyword": "LG 75QNED82ATA"
+        }
+      ],
+      "notes": [],
+      "todos": [
+        {
+          "id": "tv_t1",
+          "text": "量客廳觀看距離、樓梯與門框",
+          "done": false
+        },
+        {
+          "id": "tv_t2",
+          "text": "決定壁掛或座式；壁掛請設計師留承重牆與管線",
+          "done": false
+        }
+      ],
+      "requests": [],
+      "costNotes": [],
+      "pickOptionId": null,
+      "pickReason": ""
+    },
+    {
+      "id": "soundbar",
+      "roomId": "living",
+      "name": "Soundbar",
+      "short": "搭 LG 電視：WOW 整合",
+      "status": "choosing",
+      "chosenOptionId": null,
+      "hardReq": "",
+      "advice": "LG 聲霸搭 LG 電視有 WOW Orchestra（電視＋聲霸同時發聲）、WOW Interface、WOWCAST，是選 LG 的最大理由。挑高天花板注意：向上發射天空聲道靠天花板反射，挑高 >3.2m 或斜頂會削弱 Atmos，此時實體後環繞（S95TR／S90TR 有）更有感。",
+      "warnings": [
+        "實查：S90TR、S70TY 台灣未上市（LG 台灣官網 404）；台灣可買的是 S95TR（9.1.5）、S80TR（5.1.3）、S70TR（5.1.1）。"
+      ],
+      "install": [
+        {
+          "tag": "電",
+          "text": "以 eARC HDMI 連接電視；聲霸置於電視正下方置中。"
+        },
+        {
+          "tag": "尺寸",
+          "text": "挑高 >3.2m 或斜頂：天空聲道效果打折，優先有實體後環繞的型號。"
+        }
+      ],
+      "options": [
+        {
+          "id": "sb_lg_s95tr",
+          "key": "sb_lg_s95tr",
+          "tier": "頂級",
+          "brand": "LG",
+          "model": "S95TR",
+          "name": "LG Soundbar S95TR（9.1.5 聲道）",
+          "highlights": [
+            "9.1.5 聲道，有實體後環繞",
+            "搭 LG 電視可一起發聲",
+            "挑高客廳也有包圍感"
+          ],
+          "dims": "主機 1250×63×135 mm（5.65 kg）；重低音 201.7×407×403 mm（10.0 kg）；後環繞 159×223×142 mm（2 支共 4.08 kg）；總重 26.4 kg",
+          "cutout": "",
+          "power": "AC 110V（台灣公司貨；官網僅列功耗：主機 65W／後環繞 33W／重低音 40W）",
+          "weight": "",
+          "other": "保固：1 年（momo 賣場標示）",
+          "price": {
+            "amount": 28900,
+            "min": 28900,
+            "max": 32900,
+            "source": "momo",
+            "checkedAt": "2026-08-22",
+            "note": "MOMO 促銷 28,900（原價 35,900）；PChome 32,900（庫存 2）；MOMO 目前缺貨",
+            "sourceDetail": "momo"
+          },
+          "links": [
+            {
+              "type": "momo",
+              "url": "https://www.momoshop.com.tw/goods/GoodsDetail.jsp?i_code=13226987",
+              "verified": true,
+              "note": "促銷價 $28,900（原價 $35,900）；保固 1 年；momo 自營宅配；另有同款賣場 i_code=14633033；目前缺貨／補貨中",
+              "checkedAt": "2026-08-22",
+              "check": "ok_oos",
+              "stock": "oos"
+            },
+            {
+              "type": "pchome",
+              "url": "https://24h.pchome.com.tw/prod/DMAAOA-A900HS259",
+              "verified": true,
+              "note": "「LG 樂金 Soundbar AI 超維度 6D 立體環繞 聲霸(S95TR)」PChome $32,900（市價 $39,900），可下單、庫存 2",
+              "checkedAt": "2026-08-22",
+              "check": "ok",
+              "stock": "ok"
+            },
+            {
+              "type": "official",
+              "url": "https://www.lg.com/tw/speakers/soundbars/s95tr/",
+              "verified": true,
+              "checkedAt": "2026-08-22",
+              "check": "ok",
+              "stock": "ok"
+            }
+          ],
+          "note": "",
+          "availability": "in_stock",
+          "storeName": "LG Soundbar S95TR 9.1.5 聲道 AI超維度6D立體環繞聲霸(家庭劇院 / 杜比全景聲 / 天空聲道)",
+          "researchNote": "9.1.5 聲道 810W、17 顆單體、Dolby Atmos/DTS:X；LG 官網活動：搭配 QNED 80/86/91 系列購買贈聲霸壁掛支架。",
+          "checkedAt": "2026-08-22",
+          "cmpKeyword": "LG S95TR"
+        },
+        {
+          "id": "sb_lg_s90tr",
+          "key": "sb_lg_s90tr",
+          "tier": "高級",
+          "brand": "LG",
+          "model": "S80TR",
+          "name": "LG Soundbar S80TR（5.1.3 聲道，無線後環繞＋重低音）",
+          "highlights": [
+            "5.1.3 聲道＋無線後環繞",
+            "比 S95TR 省約 1 萬",
+            "兩平台都剩少量庫存"
+          ],
+          "dims": "主機 1000×63×135 mm（4.3 kg）；重低音 201.7×407×403 mm（10.0 kg）；後環繞 100×176.5×120 mm（一對 2.34 kg）；總重 22.6 kg",
+          "cutout": "",
+          "power": "AC 110V（台灣公司貨；官網僅列功耗：主機 59W／後環繞 20W×2／重低音 40W）",
+          "weight": "",
+          "other": "保固：1 年（賣場標示）",
+          "price": {
+            "amount": 19900,
+            "min": 19900,
+            "max": 21900,
+            "source": "pchome",
+            "checkedAt": "2026-08-22",
+            "note": "PChome 19,900（僅 1 組）／MOMO 21,900（<2 組）；兩平台都低庫存",
+            "sourceDetail": "pchome"
+          },
+          "links": [
+            {
+              "type": "momo",
+              "url": "https://www.momoshop.com.tw/TP/TP0003952/goodsDetail/TP00039520005779",
+              "verified": true,
+              "note": "「【LG 樂金】(無安裝)5.1.3聲霸Soundbar音響S80TR」$21,900（原價 $29,880）；庫存低於 2 組",
+              "checkedAt": "2026-08-22",
+              "check": "ok",
+              "stock": "ok"
+            },
+            {
+              "type": "pchome",
+              "url": "https://24h.pchome.com.tw/prod/DMBM1D-A900J5JAZ",
+              "verified": true,
+              "note": "PChome $19,900（市價 $26,900），可下單、庫存僅 1；次低 DMAAOD-A900JCHIM $22,900（庫存 3）、DPAD8R-A900K6VMR $22,900",
+              "checkedAt": "2026-08-22",
+              "check": "ok",
+              "stock": "ok"
+            },
+            {
+              "type": "official",
+              "url": "https://www.lg.com/tw/speakers/soundbars/s80tr/",
+              "verified": true,
+              "checkedAt": "2026-08-22",
+              "check": "ok",
+              "stock": "ok"
+            }
+          ],
+          "note": "",
+          "availability": "in_stock",
+          "storeName": "LG 樂金 5.1.3聲道立體環繞音效 Soundbar 家庭劇院 S80TR",
+          "researchNote": "兩大平台皆低庫存（PChome $19,900 僅 1 組、momo $21,900 低於 2 組）；LG 官網 8/31 前輸碼 AIstandbyme 折 $2,000＋LINE Points 15% 回饋。",
+          "checkedAt": "2026-08-22",
+          "cmpKeyword": "LG S80TR"
+        },
+        {
+          "id": "sb_lg_s70ty",
+          "key": "sb_lg_s70ty",
+          "tier": "高CP值",
+          "brand": "LG",
+          "model": "S70TR",
+          "name": "LG Soundbar S70TR（5.1.1 聲道）",
+          "highlights": [
+            "5.1.1 入門款",
+            "價格最低",
+            "沒有後環繞"
+          ],
+          "dims": "",
+          "cutout": "",
+          "power": "110V",
+          "weight": "",
+          "other": "同級對照：Samsung HW-Q990F（11.1.4）約 NT$3 萬",
+          "price": {
+            "amount": 15900,
+            "min": 15900,
+            "max": 18900,
+            "source": "pchome",
+            "checkedAt": "2026-08-22",
+            "note": "PChome 15,900–18,900（S70TR）"
+          },
+          "links": [
+            {
+              "type": "pchome",
+              "url": "https://24h.pchome.com.tw/prod/DMAAF8-A900HZQ7K",
+              "verified": true,
+              "note": "PChome 15,900",
+              "checkedAt": "2026-08-22",
+              "check": "ok",
+              "stock": "ok"
+            },
+            {
+              "type": "official",
+              "url": "https://www.lg.com/tw/speakers/soundbars/s70tr/",
+              "verified": true,
+              "checkedAt": "2026-08-22",
+              "check": "dead",
+              "stock": "ok",
+              "note": "原連結已下架，改為替代賣場（2026/8/22）"
+            },
+            {
+              "type": "search-momo",
+              "url": "https://www.momoshop.com.tw/search/searchShop.jsp?keyword=LG%20S70TR",
+              "verified": false
+            }
+          ],
+          "note": "",
+          "availability": "unclear",
+          "storeName": "LG Soundbar S70TY 3.1.1 聲道（台灣未上市）",
+          "researchNote": "台灣未上市：LG 台灣官網 /tw/speakers/soundbars/s70ty/ 為 404，momo/PChome 皆無；官網連結為 LG 香港頁面僅供參考。台灣對應機種為 S70TR 5.1.1 聲道（LG 台灣 https://www.lg.com/tw/speakers/lg-s70tr；PChome DMAAF8-A900HZQ7K $15,900、DMAFOQ-A900HNSQ5 $18,900）。",
+          "checkedAt": "2026-08-22",
+          "cmpKeyword": "LG S70TR"
+        },
+        {
+          "id": "sb_samsung_q990f",
+          "key": "sb_samsung_q990f",
+          "tier": "替代方案",
+          "brand": "Samsung",
+          "model": "HW-Q990F",
+          "name": "三星 HW-Q990F Soundbar（11.1.4）",
+          "highlights": [
+            "11.1.4 聲道數最多",
+            "有實體後環繞",
+            "但沒有 LG 電視整合功能"
+          ],
+          "dims": "主機 1232×70.8×138 mm（7.3 kg）；重低音 249×251.8×249 mm（8.3 kg）；後環繞 129.5×201.3×140.4 mm（一對 3.4 kg）",
+          "cutout": "",
+          "power": "110V（台灣公司貨 HW-Q990F/ZW）",
+          "weight": "",
+          "other": "保固：1 年（momo 賣場標示）",
+          "price": {
+            "amount": 38888,
+            "min": 38888,
+            "max": 44900,
+            "source": "pchome",
+            "checkedAt": "2026-08-22",
+            "note": "PChome 38,888（僅 1 組）；MOMO 44,900（預購 8/24 出貨）；三星官網已售完",
+            "sourceDetail": "pchome"
+          },
+          "links": [
+            {
+              "type": "momo",
+              "url": "https://www.momoshop.com.tw/goods/GoodsDetail.jsp?i_code=14063403",
+              "verified": true,
+              "note": "折後價 $44,900（促銷價 $49,889、市售價 $55,445）；預購，預計 2026/08/24–25 出貨；保固 1 年；另有 TP 賣場 TP0004603/TP00046030000116（HW-Q990F/ZW）",
+              "checkedAt": "2026-08-22",
+              "check": "ok",
+              "stock": "ok"
+            },
+            {
+              "type": "pchome",
+              "url": "https://24h.pchome.com.tw/prod/DMAAOD-A900JUDD2",
+              "verified": true,
+              "note": "「Samsung 三星 HW-Q990F 11.1.4聲道 Q系列 Soundbar 聲霸 Q990D升級」PChome $38,888（市價 $59,990），可下單、庫存僅 1；其他賣場 DPAD8R-A900JSC3L $49,900 缺貨、DMAAE5-A900IUWS1 $49,900 補貨中",
+              "checkedAt": "2026-08-22",
+              "check": "ok",
+              "stock": "ok"
+            },
+            {
+              "type": "official",
+              "url": "https://www.samsung.com/tw/audio-devices/soundbar/q990f-black-hw-q990f-zw/",
+              "verified": true,
+              "checkedAt": "2026-08-22",
+              "check": "ok",
+              "stock": "ok"
+            }
+          ],
+          "note": "",
+          "availability": "in_stock",
+          "storeName": "【Samsung 三星】11.1.4聲道 藍牙聲霸 Q990F(HW-Q990F)",
+          "researchNote": "PChome 最低價賣場僅剩 1 組，售完後次低為 momo $44,900（預購 8/24 出貨）；三星台灣官網顯示已售完。",
+          "checkedAt": "2026-08-22",
+          "cmpKeyword": "Samsung HW-Q990F"
+        }
+      ],
+      "notes": [],
+      "todos": [
+        {
+          "id": "sb_t1",
+          "text": "量客廳天花板高度（是否 >3.2m 或斜頂）",
+          "done": false
+        }
+      ],
+      "requests": [],
+      "costNotes": [],
+      "pickOptionId": "sb_lg_s95tr",
+      "pickReason": "有實體後環繞，挑高客廳更有感；搭 LG 電視可整合"
+    },
+    {
+      "id": "robot_vacuum",
+      "roomId": "entry",
+      "name": "掃地機器人",
+      "short": "自動上下水",
+      "status": "choosing",
+      "chosenOptionId": null,
+      "hardReq": "自動上下水。",
+      "advice": "三款都是 2026/8 台灣在售。Saros 20 水立方內建自動上下水；Dreame X50 Ultra 上下水為另購模組；Qrevo 上下水款最省。基站要先規劃好進排水與插座位置。",
+      "warnings": [
+        "實查：Dreame X50 Ultra 全通路缺貨／售完（後繼 X60 Ultra 已上市）；Qrevo Pro 水立方 官網售完為止。Saros 20 水立方有現貨 34,980。"
+      ],
+      "install": [
+        {
+          "tag": "水",
+          "text": "進水接 2 分（1/4\"）軟管；排水接 3 分或直接入排水孔／地排。"
+        },
+        {
+          "tag": "排水",
+          "text": "排水管需洩水坡度 ≥1–2%，避免積水回堵。"
+        },
+        {
+          "tag": "電",
+          "text": "基站旁需 110V 插座。"
+        },
+        {
+          "tag": "尺寸",
+          "text": "基站預留擺放空間（含開門／散熱）。"
+        },
+        {
+          "tag": "其他",
+          "text": "南投水偏硬（151 mg/L）：定期清基站水路防水垢，或前端接軟水。"
+        }
+      ],
+      "options": [
+        {
+          "id": "robot_roborock_saros20",
+          "key": "robot_roborock_saros20",
+          "tier": "頂級",
+          "brand": "Roborock 石頭",
+          "model": "Saros 20 水立方",
+          "name": "石頭 Saros 20 水立方（內建自動上下水）",
+          "highlights": [
+            "內建自動上下水，不用換水",
+            "100°C 熱水洗拖布",
+            "7.95cm 超薄、越障 8.8cm"
+          ],
+          "dims": "機身高 7.95 cm",
+          "cutout": "",
+          "power": "110V",
+          "weight": "",
+          "other": "保固：官網：主機與充電座2年（耗材不保）；momo頁標示1年",
+          "price": {
+            "amount": 34980,
+            "min": 34980,
+            "max": 34980,
+            "source": "momo",
+            "checkedAt": "2026-08-22",
+            "note": "MOMO 34,980／PChome 34,980／官網 34,980（市價 69,999）；需自行找水電接水管（官網登錄最高補助安裝費 1,200）",
+            "sourceDetail": "momo"
+          },
+          "links": [
+            {
+              "type": "momo",
+              "url": "https://www.momoshop.com.tw/goods/GoodsDetail.jsp?i_code=14900392",
+              "verified": true,
+              "note": "現價34,980／市價69,999；momo頁標1年保固。另有非水立方標準版 i_code=14868052 折後32,980",
+              "checkedAt": "2026-08-22",
+              "check": "ok",
+              "stock": "ok"
+            },
+            {
+              "type": "pchome",
+              "url": "https://24h.pchome.com.tw/prod/DMBL1C-A900JNELR",
+              "verified": true,
+              "note": "現價34,980／市價69,999，庫存20，可售",
+              "checkedAt": "2026-08-22",
+              "check": "ok",
+              "stock": "ok"
+            },
+            {
+              "type": "official",
+              "url": "https://www.roborocktw.com/products/saros-20%E6%B0%B4%E7%AB%8B%E6%96%B9",
+              "verified": true,
+              "checkedAt": "2026-08-22",
+              "check": "ok",
+              "stock": "ok"
+            }
+          ],
+          "note": "",
+          "availability": "in_stock",
+          "storeName": "【Roborock 石頭科技】旗艦新品上市! Saros 20跨越奇兵掃拖機-水立方(100度熱水/8.8公分越障/3.6萬大吸力)",
+          "researchNote": "水立方＝自動上下水基座版，需自行找水電師傅接水管安裝（官網登錄最高補助安裝費NT$1,200）。momo／PChome／官網同價NT$34,980（官網現貨）。",
+          "checkedAt": "2026-08-22",
+          "cmpKeyword": "Roborock Saros 20 水立方"
+        },
+        {
+          "id": "robot_dreame_x50ultra",
+          "key": "robot_dreame_x50ultra",
+          "tier": "高級",
+          "brand": "Dreame 追覓",
+          "model": "X50 Ultra",
+          "name": "追覓 X50 Ultra（上下水模組另購）",
+          "highlights": [
+            "機械輪足，跨門檻能力強",
+            "上下水模組另購",
+            "全通路缺貨，建議改看 X60"
+          ],
+          "dims": "",
+          "cutout": "",
+          "power": "110V",
+          "weight": "",
+          "other": "上下水模組另計",
+          "price": {
+            "amount": 31980,
+            "min": 31980,
+            "max": 31980,
+            "source": "pchome",
+            "checkedAt": "2026-08-22",
+            "note": "官網 24,988 已售完；PChome 31,980 缺貨；MOMO 已下架——後繼機 X60 Ultra 已上市，建議改看 X60",
+            "sourceDetail": "official"
+          },
+          "links": [
+            {
+              "type": "search-momo",
+              "url": "https://www.momoshop.com.tw/search/searchShop.jsp?keyword=X50%20Ultra",
+              "verified": false
+            },
+            {
+              "type": "pchome",
+              "url": "https://24h.pchome.com.tw/prod/DMBL3E-A900I5CEJ",
+              "verified": true,
+              "note": "現價31,980／市價62,680，但庫存0（缺貨，暫缺貨）；目前缺貨／補貨中",
+              "checkedAt": "2026-08-22",
+              "check": "ok_oos",
+              "stock": "oos"
+            },
+            {
+              "type": "official",
+              "url": "https://www.dreametech.com.tw/products/dreame-x50-ultra",
+              "verified": true,
+              "checkedAt": "2026-08-22",
+              "check": "ok_oos",
+              "stock": "oos",
+              "note": "目前缺貨／補貨中"
+            }
+          ],
+          "note": "",
+          "availability": "unclear",
+          "storeName": "Dreame 追覓科技 X50 Ultra 五重升降AI全能旗艦機皇(仿生機械輪足/潛望式升降/0纏繞氣旋滾刷/20000PA)",
+          "researchNote": "momo已下架、PChome暫無庫存、官網NT$24,988已售完（後繼機X60 Ultra已上市）。上下水模組需另購：官網「X50 Ultra 專用上下水模組」NT$3,680（原價6,560，目前缺貨），主機頁加購價NT$2,980；可自行安裝或付費請授權廠商「呼叫黃背心」安裝。",
+          "checkedAt": "2026-08-22",
+          "cmpKeyword": "Dreame X50 Ultra"
+        },
+        {
+          "id": "robot_roborock_qrevo_water",
+          "key": "robot_roborock_qrevo_water",
+          "tier": "高CP值",
+          "brand": "Roborock 石頭",
+          "model": "Qrevo Pro 水立方",
+          "name": "石頭 Qrevo Pro 水立方（60°C 熱水洗／機械手臂／自動上下水）",
+          "highlights": [
+            "自動上下水裡最省的選擇",
+            "60°C 熱水洗、機械手臂",
+            "官網售完為止"
+          ],
+          "dims": "",
+          "cutout": "",
+          "power": "110V",
+          "weight": "",
+          "other": "保固：主機1年（官網；配件不保）",
+          "price": {
+            "amount": 14999,
+            "min": 14999,
+            "max": 14999,
+            "source": "official",
+            "checkedAt": "2026-08-22",
+            "note": "官網 14,999（售完為止）；PChome 14,999 缺貨；另 Qrevo MaxV 水立方 PChome 35,900 缺貨",
+            "sourceDetail": "official"
+          },
+          "links": [
+            {
+              "type": "search-momo",
+              "url": "https://www.momoshop.com.tw/search/searchShop.jsp?keyword=Qrevo%20%E6%B0%B4%E7%AB%8B%E6%96%B9",
+              "verified": false
+            },
+            {
+              "type": "pchome",
+              "url": "https://24h.pchome.com.tw/prod/DMBL1C-A900IAE5C",
+              "verified": true,
+              "note": "現價14,999／市價43,999，庫存0（缺貨）。另 Qrevo MaxV 水立方 DMBT01-A900H7SOD 現價35,900 亦缺貨；DMAXB4-A900IZEMR（Qrevo Pro 水立方 AI機械臂）15,999 缺貨；目前缺貨／補貨中",
+              "checkedAt": "2026-08-22",
+              "check": "ok_oos",
+              "stock": "oos"
+            },
+            {
+              "type": "official",
+              "url": "https://www.roborocktw.com/products/roborock-qrevo-pro%E6%B0%B4%E7%AB%8B%E6%96%B9-ai%E6%A9%9F%E6%A2%B0%E8%87%82cp%E7%8E%8B%E8%80%85",
+              "verified": true,
+              "checkedAt": "2026-08-22",
+              "check": "ok_oos",
+              "stock": "oos",
+              "note": "目前缺貨／補貨中"
+            }
+          ],
+          "note": "",
+          "availability": "unclear",
+          "storeName": "Roborock 石頭科技 Qrevo Pro水立方 掃地機器人(60度熱水洗/機械手臂/熱風烘乾/自動集塵/動態複拖複洗)",
+          "researchNote": "台灣未販售 Qrevo Curv／Slim 水立方版；2026 在售的 Qrevo 水立方僅 Qrevo Pro 水立方（官網NT$14,999，售完為止）與 Qrevo MaxV 水立方（PChome NT$35,900 缺貨、官網僅福利機）。水立方版為自動上下水基座，需自行找水電安裝。",
+          "checkedAt": "2026-08-22",
+          "cmpKeyword": "Roborock Qrevo Pro 水立方"
+        }
+      ],
+      "notes": [],
+      "todos": [
+        {
+          "id": "rv_t1",
+          "text": "決定基站位置：要有給水、排水（有坡度）與 110V 插座",
+          "done": false
+        }
+      ],
+      "requests": [],
+      "costNotes": [
+        "水電接管費約 NT$1,500–3,500（視拉管距離）；石頭官網登錄最高補助安裝費 NT$1,200。"
+      ],
+      "pickOptionId": "robot_roborock_saros20",
+      "pickReason": "內建自動上下水，三通路都有現貨"
+    },
+    {
+      "id": "door_lock",
+      "roomId": "entry",
+      "name": "大門電子鎖",
+      "short": "人臉＋指紋",
+      "status": "choosing",
+      "chosenOptionId": null,
+      "hardReq": "人臉＋指紋同時具備。",
+      "advice": "三款都同時具備人臉＋指紋，符合硬需求；人臉多為 3D 結構光／雙目。戶外大門建議 IP54 以上＋加雨遮；西曬／逆光會影響部分人臉辨識與電池壽命，選有紅外／結構光補光、大容量鋰電並保留 Type-C 應急供電的機種。",
+      "warnings": [
+        "實查價：鹿客 V5 Max 2.85–3.3 萬（報告 1.3–1.6 萬錯誤）、Yale Luna Pro+ 2.5–2.8 萬、Philips 709FVP 3.25 萬、日立 3.5–3.6 萬。",
+        "Philips 702FVP 型號待以飛利浦官方現售為準；主推 709FVP。"
+      ],
+      "install": [
+        {
+          "tag": "其他",
+          "text": "先拍門正／側／背照給業者評估門型（子母門、外推門、鋁框玻璃通風門常需窄面板款）。"
+        },
+        {
+          "tag": "尺寸",
+          "text": "確認門厚與鎖體規格（多支援 60mm 前後）。"
+        },
+        {
+          "tag": "其他",
+          "text": "戶外大門選 IP54 以上防水防塵，並加雨遮；西曬／逆光位置注意辨識與電池。"
+        }
+      ],
+      "options": [
+        {
+          "id": "lock_hitachi_hitfy10t",
+          "key": "lock_hitachi_hitfy10t",
+          "tier": "頂級",
+          "brand": "HITACHI 日立",
+          "model": "HIT-FY10-T（逸系列）",
+          "name": "日立 逸系列 電子鎖（3D 人臉＋掌靜脈＋指紋＋貓眼）",
+          "highlights": [
+            "3D 人臉＋掌靜脈＋指紋七合一",
+            "300 萬畫素夜視貓眼",
+            "IP54、3 年保固、含安裝"
+          ],
+          "dims": "",
+          "cutout": "",
+          "power": "鋰電池",
+          "weight": "",
+          "other": "保固：原廠3年",
+          "price": {
+            "amount": 34960,
+            "min": 34960,
+            "max": 35800,
+            "source": "pchome",
+            "checkedAt": "2026-08-22",
+            "note": "PChome 34,960（市價 45,000）／MOMO 限時 35,800（<5 組）；皆含基本安裝、3 年保固",
+            "sourceDetail": "pchome"
+          },
+          "links": [
+            {
+              "type": "momo",
+              "url": "https://www.momoshop.com.tw/goods/GoodsDetail.jsp?i_code=15368264",
+              "verified": true,
+              "note": "限時折扣價35,800（市價38,800／原價49,800），庫存低於5組，含基本安裝，3年保固",
+              "checkedAt": "2026-08-22",
+              "check": "ok",
+              "stock": "ok"
+            },
+            {
+              "type": "pchome",
+              "url": "https://24h.pchome.com.tw/prod/DQBS4N-A900KAPUN",
+              "verified": true,
+              "note": "搜尋API現價34,960（按鈕P=36,800、Low=34,960、市價45,000，庫存11，可售）；另賣場 DQBS4N-A900K2QWO NT$38,800",
+              "checkedAt": "2026-08-22",
+              "check": "ok",
+              "stock": "ok"
+            },
+            {
+              "type": "official",
+              "url": "https://www.soba.com.tw/products/info.php?id=64312&title_id=1200",
+              "verified": true,
+              "checkedAt": "2026-08-22",
+              "check": "ok",
+              "stock": "ok"
+            }
+          ],
+          "note": "",
+          "availability": "in_stock",
+          "storeName": "【HITACHI 日立】逸系列 電子貓眼智慧推拉式電子鎖/門鎖 (人臉/指紋/密碼/卡片/鑰匙/含基本安裝)HIT-FY10-T",
+          "researchNote": "解鎖：3D人臉(50組)／掌靜脈(50)／指紋(100)／密碼(200)／卡片(200)／鑰匙／WiFi App 七合一；300萬畫素微光夜視貓眼、4吋螢幕、IP54、第二代靜音鎖體。含基本安裝，建議售價NT$36,800。日立電子鎖無品牌官網商品頁，official 欄為經銷商（鎖霸智能居家）規格頁。",
+          "checkedAt": "2026-08-22",
+          "cmpKeyword": "HITACHI HIT-FY10-T"
+        },
+        {
+          "id": "lock_yale_lunaproplus",
+          "key": "lock_yale_lunaproplus",
+          "tier": "高級",
+          "brand": "Yale",
+          "model": "Luna Pro+",
+          "name": "Yale Luna Pro+ 3D 人臉辨識推拉電子鎖",
+          "highlights": [
+            "3D 人臉急速辨識",
+            "防夾手、含原廠安裝",
+            "門厚 35–100mm 都能裝"
+          ],
+          "dims": "外側 49(D)×103(W)×424(H) mm；內側 62.7(D)×76(W)×420(H) mm；門厚 35–100 mm",
+          "cutout": "",
+          "power": "鋰電池",
+          "weight": "",
+          "other": "同級：Philips 709FVP（含遠端視訊對講）",
+          "price": {
+            "amount": 25000,
+            "min": 25000,
+            "max": 27999,
+            "source": "pchome",
+            "checkedAt": "2026-08-22",
+            "note": "PChome 25,000（香榭金，僅 1 組）／MOMO 27,999（8/21–8/24 促銷）；含原廠安裝、3 年保固",
+            "sourceDetail": "pchome"
+          },
+          "links": [
+            {
+              "type": "momo",
+              "url": "https://www.momoshop.com.tw/goods/GoodsDetail.jsp?i_code=14167057",
+              "verified": true,
+              "note": "現價27,999／原價38,000（8/21–8/24 促銷），庫存低於2組；香檳金同價，含原廠安裝、3年保固",
+              "checkedAt": "2026-08-22",
+              "check": "ok",
+              "stock": "ok"
+            },
+            {
+              "type": "pchome",
+              "url": "https://24h.pchome.com.tw/prod/DQBS4N-A900K6CMI",
+              "verified": true,
+              "note": "香榭金 七合一 含基本安裝，現價25,000／市價38,000，庫存僅1；另賣場 DQBS40-A900J3N7E 太空灰 27,999（庫存8）",
+              "checkedAt": "2026-08-22",
+              "check": "ok",
+              "stock": "ok"
+            },
+            {
+              "type": "official",
+              "url": "https://www.ipddl.com.tw/page/product/show.aspx?num=1224&lang=TW",
+              "verified": true,
+              "checkedAt": "2026-08-22",
+              "check": "ok",
+              "stock": "ok"
+            }
+          ],
+          "note": "",
+          "availability": "in_stock",
+          "storeName": "【Yale 耶魯】Luna Pro+ 3D人臉辨識推拉智能鎖/電子鎖-灰 藍芽組合 (指紋│卡片│密碼│Wifi│鑰匙/送安裝)",
+          "researchNote": "解鎖：3D結構光人臉(100組)／指紋(50)／卡片(100，支援悠遊卡/一卡通)／密碼(100組，6–10碼)／鑰匙／藍牙/WiFi App。Yale 台灣無品牌官網商品頁，official 欄為經銷商（展昇智能家）規格頁。",
+          "checkedAt": "2026-08-22",
+          "cmpKeyword": "Yale Luna Pro+"
+        },
+        {
+          "id": "lock_philips_ddl709fvp",
+          "key": "lock_philips_ddl709fvp",
+          "tier": "高級",
+          "brand": "Philips 飛利浦",
+          "model": "DDL709-FVP",
+          "name": "飛利浦 709FVP 人臉辨識＋貓眼 電子鎖（遠端視訊對講）",
+          "highlights": [
+            "人臉＋貓眼＋遠端視訊對講",
+            "4 吋室內螢幕",
+            "含安裝、3 年保固"
+          ],
+          "dims": "外鎖 41.2(H)×7.8(W)×5.5(D) cm；內鎖 42.0(H)×8.0(W)×6.5(D) cm；門厚 3.8–12 cm",
+          "cutout": "",
+          "power": "鋰電池",
+          "weight": "",
+          "other": "保固：原廠3年",
+          "price": {
+            "amount": 32500,
+            "min": 32500,
+            "max": 32500,
+            "source": "momo",
+            "checkedAt": "2026-08-22",
+            "note": "MOMO 32,500／PChome 32,500；含基本安裝、3 年保固",
+            "sourceDetail": "momo"
+          },
+          "links": [
+            {
+              "type": "momo",
+              "url": "https://www.momoshop.com.tw/TP/TP0006590/goodsDetail/TP00065900000110",
+              "verified": true,
+              "note": "MOMO 店+（鴻興智能科技）賣場，含基本安裝、原廠三年保固，免運",
+              "checkedAt": "2026-08-22",
+              "check": "ok",
+              "stock": "ok"
+            },
+            {
+              "type": "pchome",
+              "url": "https://24h.pchome.com.tw/prod/DQBS4N-A900I7PXE",
+              "verified": true,
+              "note": "現價32,500／市價42,000，庫存6，可售；另賣場 DQAT06-A900HIKF2 NT$42,000 缺貨",
+              "checkedAt": "2026-08-22",
+              "check": "ok",
+              "stock": "ok"
+            },
+            {
+              "type": "official",
+              "url": "https://www.ljtwm.com/product/philips-easykey-709fvp/",
+              "verified": true,
+              "checkedAt": "2026-08-22",
+              "check": "ok",
+              "stock": "ok"
+            }
+          ],
+          "note": "",
+          "availability": "in_stock",
+          "storeName": "【Philips 飛利浦】DDL709-FVP 人臉辨識 貓眼 指紋 卡片 密碼 鑰匙 遠端 電子鎖 含基本安裝 原廠公司貨",
+          "researchNote": "解鎖：3D人臉／指紋／卡片／密碼／鑰匙／臨時密碼／WiFi App 遠端；4吋IPS室內螢幕、貓眼視訊對講、2m超音波感應。含基本安裝；momo與PChome同價NT$32,500。official 為台灣總代理立傑（ljtwm）商品頁。",
+          "checkedAt": "2026-08-22",
+          "cmpKeyword": "Philips DDL709-FVP"
+        },
+        {
+          "id": "lock_lockin_v5max",
+          "key": "lock_lockin_v5max",
+          "tier": "高CP值",
+          "brand": "Lockin 鹿客",
+          "model": "V5 Max",
+          "name": "鹿客 V5 Max 人臉＋掌靜脈 電子鎖（2K 貓眼）",
+          "highlights": [
+            "人臉＋掌靜脈，雨天不用摸",
+            "2K 貓眼、可串 HomeKit",
+            "官網最便宜，但安裝另洽"
+          ],
+          "dims": "外側 45.5×7.6×6.6 cm；內側 45.5×7.5×8.0 cm；建議門厚 4–10 cm",
+          "cutout": "",
+          "power": "鋰電池",
+          "weight": "",
+          "other": "保固：原廠2年",
+          "price": {
+            "amount": 28500,
+            "min": 28500,
+            "max": 33000,
+            "source": "official",
+            "checkedAt": "2026-08-22",
+            "note": "官網 28,500（現貨、原價 39,990）；PChome 31,000；MOMO 33,000（不含安裝）",
+            "sourceDetail": "official"
+          },
+          "links": [
+            {
+              "type": "momo",
+              "url": "https://www.momoshop.com.tw/TP/TP0005915/goodsDetail/TP00059150000004",
+              "verified": true,
+              "note": "MOMO 店+賣場，現價33,000／原價41,500，庫存低於5組，不含安裝；黑武士版 TP00059150000007 NT$34,500。舊商品頁 i_code 13439870／13102989／12550063 已下架",
+              "checkedAt": "2026-08-22",
+              "check": "ok",
+              "stock": "ok"
+            },
+            {
+              "type": "pchome",
+              "url": "https://24h.pchome.com.tw/prod/DQAT1H-A900I5LFR",
+              "verified": true,
+              "note": "現價31,000／市價41,000，庫存2，可售；下單後1–3天聯絡評估門況",
+              "checkedAt": "2026-08-22",
+              "check": "ok",
+              "stock": "ok"
+            },
+            {
+              "type": "official",
+              "url": "https://www.lockin.tw/tw/product-detail/v5max-s",
+              "verified": true,
+              "checkedAt": "2026-08-22",
+              "check": "ok",
+              "stock": "ok"
+            }
+          ],
+          "note": "",
+          "availability": "in_stock",
+          "storeName": "Lockin 鹿客 掌靜脈人臉電子鎖 – V5 Max",
+          "researchNote": "解鎖：掌靜脈(50)／3D結構光人臉(50)／指紋(50)／密碼(50)／NFC(25)／藍牙／遠端一次性密碼／Siri／鑰匙；4吋800×480螢幕、2K貓眼、支援Apple HomeKit。官網lockin.tw NT$28,500（原價39,990，現貨）最低；momo賣場不含安裝，安裝需另洽。",
+          "checkedAt": "2026-08-22",
+          "cmpKeyword": "Lockin V5 Max"
+        }
+      ],
+      "notes": [],
+      "todos": [
+        {
+          "id": "lock_t1",
+          "text": "拍大門正／側／背面照片，量門厚",
+          "done": false
+        },
+        {
+          "id": "lock_t2",
+          "text": "確認大門是否西曬、是否要加雨遮",
+          "done": false
+        }
+      ],
+      "requests": [],
+      "costNotes": [
+        "安裝含改孔／特殊門型費用約 NT$0–3,000（多數電商價已含基本安裝）。"
+      ],
+      "pickOptionId": null,
+      "pickReason": ""
+    }
+  ],
+  "prep": [
+    {
+      "id": "prep_e1",
+      "group": "電力迴路",
+      "trade": "電",
+      "text": "IH 爐：220V 專用迴路 15–20A（線徑 5.5mm²、T 型接地插座）",
+      "done": false
+    },
+    {
+      "id": "prep_e2",
+      "group": "電力迴路",
+      "trade": "電",
+      "text": "歐系 60cm 洗碗機：多為 220V 專用迴路（若選 F&P 抽屜式則 110V）",
+      "done": false
+    },
+    {
+      "id": "prep_e3",
+      "group": "電力迴路",
+      "trade": "電",
+      "text": "浴室暖風機：每間 220V 獨立迴路＋漏電斷路器（30mA）",
+      "done": false
+    },
+    {
+      "id": "prep_e4",
+      "group": "電力迴路",
+      "trade": "電",
+      "text": "抽油煙機、微波爐、氣炸烤箱：110V（氣炸與微波各自獨立插座）",
+      "done": false
+    },
+    {
+      "id": "prep_e5",
+      "group": "電力迴路",
+      "trade": "電",
+      "text": "電子鎖、掃地機基站、飲水機、軟水閥：各需 110V 插座",
+      "done": false
+    },
+    {
+      "id": "prep_e6",
+      "group": "電力迴路",
+      "trade": "電",
+      "text": "馬桶側：110V 防水接地插座",
+      "done": false
+    },
+    {
+      "id": "prep_w1",
+      "group": "水質／軟水",
+      "trade": "水",
+      "text": "全戶軟水裝於水塔／加壓馬達後、總進水處，加旁通閥；進水壓 1.5–3kg",
+      "done": false
+    },
+    {
+      "id": "prep_w2",
+      "group": "水質／軟水",
+      "trade": "水",
+      "text": "飲用水另走 RO／UF 分流（軟水含鈉不生飲）",
+      "done": false
+    },
+    {
+      "id": "prep_s1",
+      "group": "預留尺寸",
+      "trade": "木作",
+      "text": "冷凍櫃：頂 ≥30cm、左右 ≥10cm",
+      "done": false
+    },
+    {
+      "id": "prep_s2",
+      "group": "預留尺寸",
+      "trade": "木作",
+      "text": "IH 檯面開孔 710 × 368 mm，下方留散熱",
+      "done": false
+    },
+    {
+      "id": "prep_s3",
+      "group": "預留尺寸",
+      "trade": "木作",
+      "text": "洗碗機依機型開孔（60cm 下掀約 W600 × H820 × D570）",
+      "done": false
+    },
+    {
+      "id": "prep_s4",
+      "group": "預留尺寸",
+      "trade": "木作",
+      "text": "抽油煙機牆孔 Φ150；飲水機櫥下 ≥45cm 高",
+      "done": false
+    },
+    {
+      "id": "prep_d1",
+      "group": "排水",
+      "trade": "水",
+      "text": "洗碗機、飲水機、軟水機、掃地機基站皆需排水；排水管留洩水坡度（掃地機 ≥1–2%）",
+      "done": false
+    },
+    {
+      "id": "prep_v1",
+      "group": "排風",
+      "trade": "排風",
+      "text": "抽油煙機 Φ150 路徑短少彎；暖風機排風管務必排到戶外",
+      "done": false
+    },
+    {
+      "id": "prep_p1",
+      "group": "給水壓",
+      "trade": "水",
+      "text": "TOTO 電腦馬桶與飲水機需足夠水壓：高樓層不足加壓、過高加減壓閥；水錘吸收器非必裝",
+      "done": false
+    },
+    {
+      "id": "prep_m1",
+      "group": "搬運動線",
+      "trade": "搬運",
+      "text": "冷凍櫃（含把手寬 710mm）、75–86 吋電視：先量樓梯轉角與門框",
+      "done": false
+    }
+  ],
+  "budget": {
+    "note": "預算由各方案的實查價即時計算（指定型號三檔同價；各檔取該等級最便宜的方案）。未含全屋水電改線、廚具木工、壁掛／管線延長等工程費；暖風機以 1 間計，透天常需 2–3 間。"
+  },
+  "history": [],
+  "todos": [],
+  "catalogVersion": 2026082201
+}

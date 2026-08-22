@@ -1,0 +1,22 @@
+name: 每日更新 PChome 價格
+on:
+  schedule:
+    - cron: '0 3 * * *'   # 每天 03:00 UTC = 台灣 11:00
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      - run: node tools/fetch-prices.js
+      - name: Commit if changed
+        run: |
+          git config user.name "price-bot"
+          git config user.email "price-bot@users.noreply.github.com"
+          git add docs/prices.json
+          if git diff --cached --quiet; then echo "no change"; else git commit -m "chore: 更新 PChome 價格 $(date -u +%Y-%m-%d)" && git push; fi
