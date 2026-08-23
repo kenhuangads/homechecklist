@@ -1,8 +1,14 @@
 {
-  "checkedAt": "2026-08-22T15:35:55.722Z",
+  "checkedAt": "2026-08-23T03:53:39.954Z",
   "source": "PChome 24h prodapi (每日自動更新)",
   "pchome": {
     "QBAY1F-A900A80OH": {
+      "low": 39800,
+      "list": 39800,
+      "qty": 1,
+      "button": "ForSale"
+    },
+    "QBAY1F-A900A80OH-005": {
       "low": 39800,
       "list": 39800,
       "qty": 1,
@@ -14,12 +20,6 @@
       "qty": 0,
       "button": "OrderRefill"
     },
-    "QBAY1F-A900A80OH-005": {
-      "low": 39800,
-      "list": 39800,
-      "qty": 1,
-      "button": "ForSale"
-    },
     "DMAGOA-A900KAR59": {
       "low": 8888,
       "list": 8888,
@@ -29,7 +29,7 @@
     "DMAGOA-A900KAR7L": {
       "low": 4980,
       "list": 4980,
-      "qty": 9,
+      "qty": 8,
       "button": "ForSale"
     },
     "DMBJ0G-A900AMQOF": {
@@ -105,7 +105,7 @@
       "button": "ForSale"
     },
     "DMAWI0-A900ITF3M": {
-      "low": 33120,
+      "low": 36800,
       "list": 36800,
       "qty": 20,
       "button": "ForSale"
