@@ -111,7 +111,7 @@ function tierEstimate(it, tier) {
 function nextStep() {
   const items = state.items.filter(i => i.status !== 'skipped');
   const choosing = items.filter(i => i.status === 'choosing');
-  if (choosing.length) { const hard = choosing.find(i => i.hardReq) || choosing[0]; return { t: `先決定「${hard.name}」`, d: `還有 ${choosing.length} 項沒決定`, go: () => go({ screen: 'item', itemId: hard.id }) }; }
+  if (choosing.length) { const nx = choosing[0]; return { t: `先決定「${nx.name}」`, d: `還有 ${choosing.length} 項沒決定`, go: () => go({ screen: 'item', itemId: nx.id }) }; }
   const open = openFamilyCount();
   if (open) return { t: `有 ${open} 件要我們決定`, d: '在「待辦」裡打勾', go: () => go({ screen: 'tab', tab: 'todos' }) };
   const notBought = items.filter(i => i.status === 'decided');
@@ -120,7 +120,7 @@ function nextStep() {
 }
 function renderList() {
   const items = state.items, active = items.filter(i => i.status !== 'skipped');
-  const decided = active.filter(i => ['decided', 'bought', 'installed'].includes(i.status)).length;
+  const decided = active.filter(i => picksOf(i).length || ['bought', 'installed'].includes(i.status)).length;
   const bought = active.filter(i => ['bought', 'installed'].includes(i.status)).length;
   const pct = active.length ? Math.round(decided / active.length * 100) : 0;
   let decidedSum = 0, decidedN = 0; active.forEach(i => { const t = itemTotal(i); if (t.n) { decidedSum += t.sum; decidedN++; } });
@@ -135,17 +135,25 @@ function renderList() {
     h('span', { class: 'tile r-next' }, icon('pin')), h('div', {}, h('div', { class: 'eyebrow' }, '下一步'), h('div', { class: 't' }, ns.t), ns.d ? h('div', { class: 'small muted' }, ns.d) : null), ns.go ? icon('next', 'arrow') : null));
   const pickedItems = active.filter(i => picksOf(i).length);
   const inst = installRange(pickedItems), instAll = installRange(active);
-  out.push(h('details', { class: 'card flat fold' },
-    h('summary', {}, h('span', {}, '預算總覽 ', h('b', { class: 'price' }, decidedN ? fmtMoney(decidedSum) : '—')), icon('next', 'chev')),
-    h('div', { class: 'fold-body stack' },
-      h('p', { class: 'small muted' }, decidedN ? `已決定 ${decidedN} 項的合計（含數量）` : '還沒有已決定的品項'),
-      decidedN ? h('div', { class: 'cost-rows' },
+  const unpriced = pickedItems.reduce((n, i) => n + picksOf(i).filter(p => priceValue(effectivePrice(p.option)) == null).length, 0);
+  const totalUnits = pickedItems.reduce((n, i) => n + pickCount(i), 0);
+  // --- 已選金額：永遠看得到 ---
+  out.push(h('div', { class: 'card budget-now' },
+    h('div', { class: 'row between' }, h('div', { class: 'eyebrow' }, '目前已選'), h('span', { class: 'tiny' }, `${pickedItems.length}／${active.length} 項・${totalUnits} 台`)),
+    decidedN ? h('div', { class: 'stack-sm' },
+      h('div', { class: 'big-total' }, inst.n ? fmtWanRange(decidedSum + inst.min, decidedSum + inst.max) : fmtWan(decidedSum)),
+      h('div', { class: 'cost-rows' },
         h('div', { class: 'row between' }, h('span', {}, '設備'), h('b', {}, fmtMoney(decidedSum))),
         inst.n ? h('div', { class: 'row between' }, h('span', {}, '安裝工程'), h('b', {}, installText({ min: inst.min, max: inst.max }))) : null,
-        inst.n ? h('div', { class: 'row between total' }, h('span', {}, '總計'), h('b', { class: 'price' }, installText({ min: decidedSum + inst.min, max: decidedSum + inst.max }))) : null,
-        h('p', { class: 'tiny' }, inst.n ? `安裝工程含拉線、開孔、配管、吊掛等（${inst.n} 項已估）；未選的品項未計入。` : '安裝工程費用尚未估算')) : null,
-      instAll.n ? h('p', { class: 'tiny' }, `若全部品項都裝，安裝工程估約 ${installText({ min: instAll.min, max: instAll.max })}。`) : null,
+        inst.n ? h('div', { class: 'row between total' }, h('span', {}, '總計'), h('b', {}, installText({ min: decidedSum + inst.min, max: decidedSum + inst.max }))) : null),
+      h('p', { class: 'tiny' }, [unpriced ? `其中 ${unpriced} 款價格待查` : '', active.length - pickedItems.length > 0 ? `還有 ${active.length - pickedItems.length} 項沒選，選完金額才完整` : '18 項都選好了'].filter(Boolean).join('・')))
+      : h('p', { class: 'muted' }, '還沒選任何商品。到下面的品項按「我要這個」，這裡就會顯示金額。')));
+  // --- 三種等級的估算：次要資訊 ---
+  out.push(h('details', { class: 'card flat fold' },
+    h('summary', {}, h('span', {}, '如果全部都買，三種等級各要多少？'), icon('next', 'chev')),
+    h('div', { class: 'fold-body stack' },
       h('div', { class: 'summary' }, [['cp', '全選高CP值'], ['mid', '全選高級'], ['top', '全選頂級']].map(([k, l]) => h('div', { class: 'cell' }, h('div', { class: 'v' }, fmtWan(est[k])), h('div', { class: 'k' }, l)))),
+      instAll.n ? h('p', { class: 'tiny' }, `以上只算設備；全部品項的安裝工程另估約 ${installText({ min: instAll.min, max: instAll.max })}。`) : null,
       h('div', { class: 'only-narrow' }, active.map(i => { const qy = i.defaultQty || 1; return h('div', { class: 'budget-item' },
         h('div', { class: 'nm' }, i.name, qy > 1 ? h('small', {}, ` ×${qy}`) : null),
         h('div', { class: 'vals' }, [['cp', 'CP'], ['mid', '高級'], ['top', '頂級']].map(([k, l]) => { const v = tierEstimate(i, k); return h('span', { class: 'v' }, h('small', {}, l), v == null ? '—' : fmtWan(v * qy)); }))); })),

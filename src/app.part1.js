@@ -91,6 +91,7 @@ const sstore = {
 };
 function fmtMoney(n) { return 'NT$' + Math.round(n).toLocaleString('en-US'); }
 function fmtWan(n) { if (n == null) return '—'; if (n >= 10000) return (n / 10000).toFixed(1).replace(/\.0$/, '') + ' 萬'; return Math.round(n).toLocaleString('en-US'); }
+function fmtWanRange(a, b) { if (a == null) return '—'; if (b == null || a === b) return fmtWan(a); if (a >= 10000 && b >= 10000) return (a / 10000).toFixed(1).replace(/\.0$/, '') + '–' + (b / 10000).toFixed(1).replace(/\.0$/, '') + ' 萬'; return fmtWan(a) + '–' + fmtWan(b); }
 function priceText(p) {
   if (!p) return '價格待查';
   if (typeof p.amount === 'number') return fmtMoney(p.amount);
@@ -301,7 +302,8 @@ function normalize(s) {
     it.todos.forEach(t => { if (t.for !== 'family') t.for = 'designer'; });
     if (!it.installCost || (typeof it.installCost.min !== 'number' && typeof it.installCost.max !== 'number')) it.installCost = null;
     if (!Array.isArray(it.picks)) it.picks = it.chosenOptionId ? [{ optionId: it.chosenOptionId, qty: 1 }] : [];
-    it.picks = it.picks.filter(p => p && it.options.some(o => o.id === p.optionId)); it.chosenOptionId = it.picks[0] ? it.picks[0].optionId : null; });
+    it.picks = it.picks.filter(p => p && it.options.some(o => o.id === p.optionId)); it.chosenOptionId = it.picks[0] ? it.picks[0].optionId : null;
+    if (it.status === 'decided' && !it.picks.length) it.status = 'choosing'; });
   return s;
 }
 const CATALOG_ITEM_FIELDS = ['name', 'short', 'hardReq', 'advice', 'warnings', 'install', 'costNotes', 'pickOptionId', 'pickReason', 'roomId', 'defaultQty', 'installCost'];
