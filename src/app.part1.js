@@ -47,6 +47,7 @@ const ICON_PATHS = {
   warn: '<path d="M12 3 2 21h20L12 3z"/><path d="M12 10v5M12 18h.01"/>',
   info: '<circle cx="12" cy="12" r="9"/><path d="M12 11v6M12 7h.01"/>',
   pin: '<path d="M12 21s-6-5.3-6-10a6 6 0 0 1 12 0c0 4.7-6 10-6 10z"/><circle cx="12" cy="11" r="2"/>',
+  house: '<path d="M3 11 12 4l9 7"/><path d="M5 10v10h14V10"/><rect x="10" y="14" width="4" height="6"/>',
   star: '<path d="m12 3 2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1L3.2 9.5l6.1-.9L12 3z"/>',
   cloud: '<path d="M7 18a4 4 0 0 1-.6-7.95A6 6 0 0 1 18 9a4.5 4.5 0 0 1-.5 9H7z"/>',
   book: '<path d="M4 5a2 2 0 0 1 2-2h13v16H6a2 2 0 0 0-2 2V5z"/><path d="M4 19a2 2 0 0 0 2 2h13"/><path d="M9 7h6"/>',
@@ -169,7 +170,11 @@ let syncedRev = 0, remoteStatus = 'unknown', lastSyncAt = null, lastPollAt = 0;
 
 const item = id => state.items.find(i => i.id === id);
 const room = id => state.rooms.find(r => r.id === id);
-const chosenOption = it => it.chosenOptionId ? it.options.find(o => o.id === it.chosenOptionId) : null;
+const picksOf = it => (it.picks || []).map(p => ({ option: it.options.find(o => o.id === p.optionId), qty: Number(p.qty) || 1 })).filter(p => p.option);
+const chosenOption = it => { const ps = picksOf(it); return ps.length ? ps[0].option : null; };
+const pickQty = (it, optionId) => { const p = (it.picks || []).find(x => x.optionId === optionId); return p ? (Number(p.qty) || 1) : 0; };
+const pickCount = it => picksOf(it).reduce((n, p) => n + p.qty, 0);
+function itemTotal(it) { let sum = 0, n = 0; picksOf(it).forEach(p => { const v = priceValue(effectivePrice(p.option)); if (v != null) { sum += v * p.qty; n++; } }); return { sum, n }; }
 const profileOf = id => state.profiles[id] || state.profiles.family;
 function canEdit() { return role === 'family'; }
 function knownNames() { const names = new Set(); (state.history || []).forEach(e => e.who && names.add(e.who)); state.items.forEach(it => (it.notes || []).forEach(n => n.who && names.add(n.who))); return [...names]; }
@@ -195,10 +200,10 @@ function listFor(path) {
   const key = { option: 'options', note: 'notes', todo: 'todos', request: 'requests' }[path.kind];
   it[key] = it[key] || []; return it[key];
 }
-const ITEM_SCALARS = ['status', 'chosenOptionId', 'name', 'short', 'hardReq', 'advice'];
+const ITEM_SCALARS = ['status', 'chosenOptionId', 'picks', 'name', 'short', 'hardReq', 'advice'];
 function getEntity(path) {
   switch (path.kind) {
-    case 'item': { const it = item(path.id); if (!it) return null; const o = {}; ITEM_SCALARS.forEach(k => o[k] = it[k] === undefined ? null : it[k]); return o; }
+    case 'item': { const it = item(path.id); if (!it) return null; const o = {}; ITEM_SCALARS.forEach(k => o[k] = it[k] === undefined ? null : clone(it[k])); return o; }
     case 'option': case 'note': case 'todo': case 'request': { const l = listFor(path); const e = l && l.find(x => x.id === path.id); return e ? clone(e) : null; }
     case 'prep': { const p = state.prep.find(x => x.id === path.id); return p ? clone(p) : null; }
     case 'profile': return state.profiles[path.id] ? clone(state.profiles[path.id]) : null;
@@ -208,7 +213,7 @@ function getEntity(path) {
 }
 function setEntity(path, value) {
   switch (path.kind) {
-    case 'item': { const it = item(path.id); if (!it || !value) return; ITEM_SCALARS.forEach(k => { if (k in value) it[k] = value[k]; }); return; }
+    case 'item': { const it = item(path.id); if (!it || !value) return; ITEM_SCALARS.forEach(k => { if (k in value) it[k] = clone(value[k]); }); if (!Array.isArray(it.picks)) it.picks = []; it.chosenOptionId = it.picks[0] ? it.picks[0].optionId : null; return; }
     case 'option': case 'note': case 'todo': case 'request': {
       const l = listFor(path); if (!l) return; const idx = l.findIndex(x => x.id === path.id);
       if (value == null) { if (idx >= 0) l.splice(idx, 1); } else if (idx >= 0) l[idx] = clone(value); else l.push(clone(value)); return;
@@ -225,10 +230,19 @@ function reduce(action) {
   const ch = (path, fn) => { const before = getEntity(path); fn(); const after = getEntity(path); return { path, before, after }; };
   switch (a.type) {
     case 'setStatus': { const it = item(a.itemId); if (!it) return null; const c = ch({ kind: 'item', id: it.id }, () => { it.status = a.status; }); return { changes: [c], summary: `把「${it.name}」改為「${STATUS[a.status].label}」` }; }
-    case 'choose': {
-      const it = item(a.itemId); if (!it) return null; const opt = a.optionId ? it.options.find(o => o.id === a.optionId) : null;
-      const c = ch({ kind: 'item', id: it.id }, () => { it.chosenOptionId = opt ? opt.id : null; if (opt && it.status === 'choosing') it.status = 'decided'; if (!opt && it.status === 'decided') it.status = 'choosing'; });
-      return { changes: [c], summary: opt ? `「${it.name}」選了 ${opt.brand} ${opt.model}` : `取消「${it.name}」的選擇` };
+    case 'choose': { a = { type: 'setPick', itemId: a.itemId, optionId: a.optionId, qty: a.optionId ? 1 : 0, _ctx: a._ctx }; }
+    case 'setPick': {
+      const it = item(a.itemId); if (!it) return null; const opt = it.options.find(o => o.id === a.optionId); if (!opt && a.optionId) return null;
+      const qty = Math.max(0, Math.min(20, Number(a.qty) || 0)); const prev = pickQty(it, a.optionId);
+      if (qty === prev) return null;
+      const c = ch({ kind: 'item', id: it.id }, () => {
+        const picks = (it.picks || []).filter(p => p.optionId !== a.optionId);
+        if (qty > 0) { const idx = (it.picks || []).findIndex(p => p.optionId === a.optionId); if (idx >= 0) picks.splice(idx, 0, { optionId: a.optionId, qty }); else picks.push({ optionId: a.optionId, qty }); }
+        it.picks = picks; it.chosenOptionId = picks[0] ? picks[0].optionId : null;
+        if (picks.length && it.status === 'choosing') it.status = 'decided'; if (!picks.length && it.status === 'decided') it.status = 'choosing';
+      });
+      const label = `${opt.brand} ${opt.model}`.trim();
+      return { changes: [c], summary: qty === 0 ? `「${it.name}」移除 ${label}` : prev ? `「${it.name}」${label} 數量改為 ${qty}` : `「${it.name}」加入 ${label}${qty > 1 ? ' ×' + qty : ''}` };
     }
     case 'addOption': { const it = item(a.itemId); if (!it || it.options.some(o => o.id === a.option.id)) return null; const c = ch({ kind: 'option', itemId: it.id, id: a.option.id }, () => { it.options.push(clone(a.option)); }); return { changes: [c], summary: `在「${it.name}」新增商品 ${a.option.model}` }; }
     case 'updateOption': { const it = item(a.itemId); if (!it) return null; const opt = it.options.find(o => o.id === a.optionId); if (!opt) return null; const c = ch({ kind: 'option', itemId: it.id, id: opt.id }, () => { Object.assign(opt, clone(a.patch)); }); return { changes: [c], summary: a.summary || `更新「${it.name}」${opt.model} 的資料` }; }
@@ -278,11 +292,13 @@ function dispatch(action, opts = {}) {
 function readSeed() { try { const el = document.getElementById('hc-seed'); return el ? JSON.parse(el.textContent) : null; } catch (e) { console.error('seed parse', e); return null; } }
 function normalize(s) {
   s.history = s.history || []; s.todos = s.todos || []; s.prep = s.prep || []; s.meta = s.meta || {}; s.profiles = s.profiles || {};
-  s.items.forEach(it => { it.options = it.options || []; it.notes = it.notes || []; it.todos = it.todos || []; it.requests = it.requests || []; it.install = it.install || []; it.warnings = it.warnings || []; it.costNotes = it.costNotes || []; });
+  s.items.forEach(it => { it.options = it.options || []; it.notes = it.notes || []; it.todos = it.todos || []; it.requests = it.requests || []; it.install = it.install || []; it.warnings = it.warnings || []; it.costNotes = it.costNotes || []; it.defaultQty = Number(it.defaultQty) || 1;
+    if (!Array.isArray(it.picks)) it.picks = it.chosenOptionId ? [{ optionId: it.chosenOptionId, qty: 1 }] : [];
+    it.picks = it.picks.filter(p => p && it.options.some(o => o.id === p.optionId)); it.chosenOptionId = it.picks[0] ? it.picks[0].optionId : null; });
   return s;
 }
-const CATALOG_ITEM_FIELDS = ['name', 'short', 'hardReq', 'advice', 'warnings', 'install', 'costNotes', 'pickOptionId', 'pickReason', 'roomId'];
-const CATALOG_OPTION_FIELDS = ['key', 'tier', 'brand', 'model', 'name', 'highlights', 'dims', 'cutout', 'power', 'weight', 'other', 'price', 'links', 'availability', 'storeName', 'researchNote', 'checkedAt', 'cmpKeyword'];
+const CATALOG_ITEM_FIELDS = ['name', 'short', 'hardReq', 'advice', 'warnings', 'install', 'costNotes', 'pickOptionId', 'pickReason', 'roomId', 'defaultQty'];
+const CATALOG_OPTION_FIELDS = ['key', 'tier', 'brand', 'model', 'name', 'highlights', 'dims', 'cutout', 'power', 'weight', 'other', 'price', 'links', 'availability', 'storeName', 'researchNote', 'checkedAt', 'cmpKeyword', 'reviews'];
 function mergeCatalog(remote, seed) {
   remote.meta = Object.assign({}, remote.meta, seed.meta); remote.profiles = clone(seed.profiles); remote.rooms = clone(seed.rooms); remote.budget = clone(seed.budget);
   seed.items.forEach(si => {
@@ -291,7 +307,7 @@ function mergeCatalog(remote, seed) {
     CATALOG_ITEM_FIELDS.forEach(k => { if (si[k] !== undefined) ri[k] = clone(si[k]); });
     si.options.forEach(so => { const ro = ri.options.find(o => o.id === so.id); if (ro) CATALOG_OPTION_FIELDS.forEach(k => { if (so[k] !== undefined) ro[k] = clone(so[k]); }); else ri.options.push(clone(so)); });
     ri.options = ri.options.filter(o => o.tier === '家人推薦' || si.options.some(so => so.id === o.id));
-    if (ri.chosenOptionId && !ri.options.some(o => o.id === ri.chosenOptionId)) ri.chosenOptionId = null;
+    ri.picks = (ri.picks || []).filter(p => ri.options.some(o => o.id === p.optionId)); ri.chosenOptionId = ri.picks[0] ? ri.picks[0].optionId : null;
     si.todos.forEach(st => { if (!ri.todos.some(t => t.id === st.id)) ri.todos.push(clone(st)); });
   });
   seed.prep.forEach(sp => { const rp = remote.prep.find(p => p.id === sp.id); if (rp) { rp.text = sp.text; rp.group = sp.group; rp.trade = sp.trade; } else remote.prep.push(clone(sp)); });

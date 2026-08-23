@@ -93,11 +93,13 @@ function getSnapshot(rev) {
 
 /* ---------- human-readable tabs ---------- */
 function writeSummary(state) {
-  const sh = sheet('summary', ['品項', '空間', '狀態', '選定型號', '價格', '待辦未完成', '留言數', '最後更新']);
+  const sh = sheet('summary', ['品項', '空間', '狀態', '選定型號（×數量）', '價格', '待辦未完成', '留言數', '最後更新']);
   const rows = (state.items || []).map(it => {
-    const o = it.chosenOptionId ? (it.options || []).find(x => x.id === it.chosenOptionId) : null;
+    const picks = (it.picks && it.picks.length) ? it.picks : (it.chosenOptionId ? [{ optionId: it.chosenOptionId, qty: 1 }] : []);
+    const sel = picks.map(p => { const o = (it.options || []).find(x => x.id === p.optionId); return o ? (o.brand + ' ' + o.model + (p.qty > 1 ? ' ×' + p.qty : '')) : ''; }).filter(Boolean).join('、');
+    const total = picks.reduce((sum, p) => { const o = (it.options || []).find(x => x.id === p.optionId); const v = o && o.price && (typeof o.price.amount === 'number' ? o.price.amount : o.price.min); return sum + ((typeof v === 'number' ? v : 0) * (Number(p.qty) || 1)); }, 0);
     const room = (state.rooms || []).find(r => r.id === it.roomId);
-    return [it.name, room ? room.name : '', STATUS_LABEL[it.status] || it.status, o ? (o.brand + ' ' + o.model) : '', o ? priceText(o.price) : '', (it.todos || []).filter(t => !t.done).length, (it.notes || []).length, tw(state.updatedAt)];
+    return [it.name, room ? room.name : '', STATUS_LABEL[it.status] || it.status, sel, total ? 'NT$' + total.toLocaleString('en-US') : '', (it.todos || []).filter(t => !t.done).length, (it.notes || []).length, tw(state.updatedAt)];
   });
   if (sh.getLastRow() > 1) sh.getRange(2, 1, sh.getLastRow() - 1, 8).clearContent();
   if (rows.length) sh.getRange(2, 1, rows.length, 8).setValues(rows);

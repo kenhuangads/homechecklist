@@ -6,7 +6,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <meta name="description" content="全家共用的家電採購與安裝需求清單：方案比較、價格與比價、待辦、修改紀錄與還原；設計師版只看尺寸與安裝需求。">
 <meta name="color-scheme" content="light dark">
-<meta name="theme-color" content="#0F6E7A">
+<meta name="theme-color" content="#C8612E">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-title" content="翻修清單">
 <meta name="apple-mobile-web-app-status-bar-style" content="default">
@@ -15,39 +15,39 @@
 <link rel="apple-touch-icon" href="icon-180.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700;900&family=Noto+Serif+TC:wght@700;900&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700;900&family=Huninn&display=swap">
 <style>
 /* ===== 南投老家翻修清單 v2 — 「藍釉與磚」 =====
    Tokens: light on :root; dark via guarded media query + data-theme. Base 19px, rem everywhere. */
 :root {
-  --bg: #EEF2F4; --surface: #FFFFFF; --surface-2: #E4EAED; --surface-3: #D8E0E4;
-  --ink: #1B2430; --ink-2: #4F5B66; --ink-3: #7C8791; --line: #D5DDE2; --line-strong: #B9C4CB;
-  --accent: #0F6E7A; --accent-ink: #FFFFFF; --accent-soft: #DCEFF1; --accent-deep: #0B545E;
-  --attn: #B8532E; --attn-soft: #F8E4DA; --ok: #2E7D4F; --ok-soft: #DDF1E4; --danger: #B3261E; --danger-soft: #F9E1DE;
-  --r-kitchen: #F5E4C6; --r-water: #D6EDF1; --r-bath: #DCEFE2; --r-living: #E6E0F3; --r-entry: #ECE5D6;
-  --shadow: 0 1px 2px rgba(27,36,48,.05), 0 6px 18px rgba(27,36,48,.07);
-  --radius: 18px; --radius-sm: 12px; --tap: 3.3rem;
-  --serif: "Noto Serif TC", "Songti TC", "PMingLiU", serif;
+  --bg: #F7F1E8; --surface: #FFFCF7; --surface-2: #F3EBDF; --surface-3: #E9DECD;
+  --ink: #2E2722; --ink-2: #685B50; --ink-3: #9A8B7E; --line: #E8DDCE; --line-strong: #CDBFAE;
+  --accent: #C8612E; --accent-ink: #FFFFFF; --accent-soft: #FBE6D8; --accent-deep: #9E4A1F;
+  --attn: #B9770E; --attn-soft: #FCF0D6; --ok: #3E7D4F; --ok-soft: #E1F0E3; --danger: #B3261E; --danger-soft: #F9E1DE;
+  --r-kitchen: #FBE3C3; --r-water: #D8ECEF; --r-bath: #DDEFE0; --r-living: #ECE2F2; --r-entry: #F0E6D3; --r-hvac: #E2E9F3; --r-next: #FBE6D8;
+  --shadow: 0 1px 2px rgba(70,45,25,.05), 0 6px 18px rgba(70,45,25,.07);
+  --radius: 20px; --radius-sm: 14px; --tap: 3.3rem;
+  --display: "Huninn", "Noto Sans TC", "PingFang TC", system-ui, sans-serif;
   --sans: "Noto Sans TC", "PingFang TC", "Microsoft JhengHei", system-ui, sans-serif;
   color-scheme: light;
 }
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme="light"]) {
-    --bg: #0F1518; --surface: #18222A; --surface-2: #1F2B34; --surface-3: #28363F;
-    --ink: #E9EEF1; --ink-2: #B4BFC7; --ink-3: #8794A0; --line: #2B3944; --line-strong: #3E4E5A;
-    --accent: #5CC3CF; --accent-ink: #0A1A1E; --accent-soft: #173A40; --accent-deep: #8ADBE4;
-    --attn: #E8916A; --attn-soft: #3E2419; --ok: #5FC48C; --ok-soft: #15382A; --danger: #F49A93; --danger-soft: #3E1C1A;
-    --r-kitchen: #3A3120; --r-water: #1C3A40; --r-bath: #1E3A2B; --r-living: #2C2840; --r-entry: #35301F;
+    --bg: #1D1814; --surface: #29221D; --surface-2: #342B25; --surface-3: #40352E;
+    --ink: #F3ECE3; --ink-2: #C4B6A8; --ink-3: #94867A; --line: #3E342D; --line-strong: #574A41;
+    --accent: #F0915E; --accent-ink: #2A1609; --accent-soft: #4A2B1A; --accent-deep: #F7B48C;
+    --attn: #E0A43A; --attn-soft: #3F311A; --ok: #6DC48A; --ok-soft: #1F3A28; --danger: #F49A93; --danger-soft: #3E1C1A;
+    --r-kitchen: #4A3A22; --r-water: #233A40; --r-bath: #253D2C; --r-living: #3A2E44; --r-entry: #3F3526; --r-hvac: #2C3542; --r-next: #4A2B1A;
     --shadow: 0 1px 2px rgba(0,0,0,.4), 0 6px 18px rgba(0,0,0,.35);
     color-scheme: dark;
   }
 }
 :root[data-theme="dark"] {
-  --bg: #0F1518; --surface: #18222A; --surface-2: #1F2B34; --surface-3: #28363F;
-  --ink: #E9EEF1; --ink-2: #B4BFC7; --ink-3: #8794A0; --line: #2B3944; --line-strong: #3E4E5A;
-  --accent: #5CC3CF; --accent-ink: #0A1A1E; --accent-soft: #173A40; --accent-deep: #8ADBE4;
-  --attn: #E8916A; --attn-soft: #3E2419; --ok: #5FC48C; --ok-soft: #15382A; --danger: #F49A93; --danger-soft: #3E1C1A;
-  --r-kitchen: #3A3120; --r-water: #1C3A40; --r-bath: #1E3A2B; --r-living: #2C2840; --r-entry: #35301F;
+  --bg: #1D1814; --surface: #29221D; --surface-2: #342B25; --surface-3: #40352E;
+  --ink: #F3ECE3; --ink-2: #C4B6A8; --ink-3: #94867A; --line: #3E342D; --line-strong: #574A41;
+  --accent: #F0915E; --accent-ink: #2A1609; --accent-soft: #4A2B1A; --accent-deep: #F7B48C;
+  --attn: #E0A43A; --attn-soft: #3F311A; --ok: #6DC48A; --ok-soft: #1F3A28; --danger: #F49A93; --danger-soft: #3E1C1A;
+  --r-kitchen: #4A3A22; --r-water: #233A40; --r-bath: #253D2C; --r-living: #3A2E44; --r-entry: #3F3526; --r-hvac: #2C3542; --r-next: #4A2B1A;
   --shadow: 0 1px 2px rgba(0,0,0,.4), 0 6px 18px rgba(0,0,0,.35);
   color-scheme: dark;
 }
@@ -86,9 +86,9 @@ main.content { flex: 1; padding: .9rem .9rem calc(5.4rem + env(safe-area-inset-b
 .tabbar button .badge { position: absolute; top: .3rem; right: calc(50% - 1.9rem); min-width: 1.3rem; height: 1.3rem; border-radius: 999px; background: var(--attn); color: #fff; font-size: .7rem; font-weight: 800; display: inline-flex; align-items: center; justify-content: center; padding: 0 .3rem; }
 
 /* ---- type ---- */
-.serif { font-family: var(--serif); }
-.h-hero { font-family: var(--serif); font-size: 1.9rem; font-weight: 900; letter-spacing: .01em; line-height: 1.2; }
-.h-room { font-family: var(--serif); font-size: 1.3rem; font-weight: 900; display: flex; align-items: baseline; gap: .6rem; }
+.serif { font-family: var(--display); }
+.h-hero { font-family: var(--display); font-size: 1.85rem; font-weight: 700; letter-spacing: .01em; line-height: 1.2; }
+.h-room { font-family: var(--display); font-size: 1.3rem; font-weight: 900; display: flex; align-items: baseline; gap: .6rem; }
 .h-room .count { font-family: var(--sans); font-size: .82rem; font-weight: 600; color: var(--ink-3); }
 .h-sec { font-size: 1.12rem; font-weight: 800; display: flex; align-items: center; gap: .5rem; }
 .h-sec .count { font-size: .85rem; font-weight: 600; color: var(--ink-3); }
@@ -108,13 +108,13 @@ main.content { flex: 1; padding: .9rem .9rem calc(5.4rem + env(safe-area-inset-b
 .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: .6rem; } @media (max-width: 380px) { .grid-2 { grid-template-columns: 1fr; } }
 
 /* hero */
-.hero { background: linear-gradient(135deg, var(--accent-deep), var(--accent) 70%, color-mix(in srgb, var(--accent) 70%, #fff)); color: #fff; border-radius: var(--radius); padding: 1.1rem 1.1rem 1rem; box-shadow: var(--shadow); display: grid; grid-template-columns: 1fr auto; gap: .8rem; align-items: center; }
+.hero { background: linear-gradient(135deg, #B8552A, #D9753F 62%, #EEA56E); color: #fff; border-radius: var(--radius); padding: 1.1rem 1.1rem 1rem; box-shadow: var(--shadow); display: grid; grid-template-columns: 1fr auto; gap: .8rem; align-items: center; }
 :root[data-theme="dark"] .hero, .hero.dark { color: #fff; }
 .hero .eyebrow { color: rgba(255,255,255,.75); }
 .hero .h-hero { color: #fff; }
 .hero .sub { color: rgba(255,255,255,.85); font-size: .9rem; margin-top: .25rem; }
 .ring { --p: 0; width: 5.4rem; height: 5.4rem; border-radius: 50%; background: conic-gradient(#fff calc(var(--p) * 1%), rgba(255,255,255,.25) 0); display: grid; place-items: center; position: relative; }
-.ring::after { content: ""; position: absolute; inset: .5rem; border-radius: 50%; background: var(--accent-deep); }
+.ring::after { content: ""; position: absolute; inset: .5rem; border-radius: 50%; background: #B8552A; }
 .ring span { position: relative; z-index: 1; font-weight: 900; font-size: 1.05rem; text-align: center; line-height: 1.15; }
 .ring span small { display: block; font-size: .66rem; font-weight: 600; opacity: .85; }
 .hero-actions { display: grid; grid-template-columns: 1fr 1fr; gap: .45rem; margin-top: .5rem; grid-column: 1 / -1; }
@@ -122,15 +122,15 @@ main.content { flex: 1; padding: .9rem .9rem calc(5.4rem + env(safe-area-inset-b
 .hero-actions .btn svg { width: 1.05rem; height: 1.05rem; }
 
 /* next-step card */
-.next { border-left: 5px solid var(--attn); }
-.next .t { font-weight: 800; font-size: 1.05rem; }
+.next { border-left: 0; }
+.next .t { font-weight: 800; font-size: 1.08rem; }
 
 /* item cards */
 .item-row { appearance: none; text-align: left; width: 100%; cursor: pointer; background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); padding: .8rem .85rem; box-shadow: var(--shadow); display: grid; grid-template-columns: auto 1fr auto; align-items: center; gap: .75rem; color: inherit; }
 .item-row:active { background: var(--surface-2); }
 .tile { width: 3.2rem; height: 3.2rem; border-radius: 14px; display: grid; place-items: center; flex: none; color: var(--ink); }
 .tile svg { width: 1.9rem; height: 1.9rem; }
-.tile.r-kitchen { background: var(--r-kitchen); } .tile.r-water { background: var(--r-water); } .tile.r-bath { background: var(--r-bath); } .tile.r-living { background: var(--r-living); } .tile.r-entry { background: var(--r-entry); }
+.tile.r-kitchen { background: var(--r-kitchen); } .tile.r-water { background: var(--r-water); } .tile.r-bath { background: var(--r-bath); } .tile.r-living { background: var(--r-living); } .tile.r-entry { background: var(--r-entry); } .tile.r-hvac { background: var(--r-hvac); } .tile.r-next { background: var(--r-next); color: var(--accent-deep); }
 .item-row .title { font-size: 1.12rem; font-weight: 800; }
 .item-row .sub { color: var(--ink-2); font-size: .9rem; margin-top: .1rem; }
 .item-row .meta { display: flex; flex-wrap: wrap; gap: .35rem; margin-top: .4rem; align-items: center; }
@@ -243,7 +243,7 @@ dialog.tut { border: 0; padding: 0; background: var(--bg); color: var(--ink); wi
 dialog.tut .wrap { max-width: 560px; margin: 0 auto; min-height: 100dvh; display: flex; flex-direction: column; padding: 1.2rem 1.2rem calc(1.2rem + env(safe-area-inset-bottom)); gap: 1rem; }
 dialog.tut .pic { flex: 0 0 auto; height: 12rem; display: grid; place-items: center; background: var(--surface); border: 1px solid var(--line); border-radius: 22px; box-shadow: var(--shadow); }
 dialog.tut .pic svg { width: 9rem; height: 9rem; }
-dialog.tut h2 { font-family: var(--serif); font-size: 1.6rem; font-weight: 900; }
+dialog.tut h2 { font-family: var(--display); font-size: 1.6rem; font-weight: 900; }
 dialog.tut p { font-size: 1.08rem; color: var(--ink-2); }
 dialog.tut .dots { display: flex; gap: .4rem; justify-content: center; } dialog.tut .dots span { width: .6rem; height: .6rem; border-radius: 50%; background: var(--line-strong); } dialog.tut .dots span.on { background: var(--accent); width: 1.6rem; border-radius: 999px; }
 dialog.tut .spacer { flex: 1; }
@@ -255,7 +255,7 @@ dialog.tut .spacer { flex: 1; }
 
 /* welcome */
 .welcome { display: flex; flex-direction: column; gap: 1rem; padding-top: .6rem; }
-.welcome .big { font-family: var(--serif); font-size: 2rem; font-weight: 900; letter-spacing: .01em; }
+.welcome .big { font-family: var(--display); font-size: 2rem; font-weight: 900; letter-spacing: .01em; }
 .role-btn { display: grid; grid-template-columns: auto 1fr auto; align-items: center; gap: .8rem; text-align: left; padding: 1rem; min-height: 4.6rem; border-radius: var(--radius); border: 2px solid var(--line); background: var(--surface); cursor: pointer; width: 100%; box-shadow: var(--shadow); }
 .role-btn .t { font-size: 1.25rem; font-weight: 800; } .role-btn .d { color: var(--ink-2); font-size: .9rem; margin-top: .15rem; }
 .role-btn.primary { border-color: var(--accent); background: var(--accent-soft); }
@@ -268,9 +268,9 @@ dialog.tut .spacer { flex: 1; }
 
 /* docs */
 .doc { display: flex; flex-direction: column; gap: 1rem; }
-.doc .doc-head { border-bottom: 3px solid var(--ink); padding-bottom: .6rem; } .doc .doc-head h2 { font-family: var(--serif); font-size: 1.7rem; font-weight: 900; }
+.doc .doc-head { border-bottom: 3px solid var(--ink); padding-bottom: .6rem; } .doc .doc-head h2 { font-family: var(--display); font-size: 1.7rem; font-weight: 900; }
 .doc .room { display: flex; flex-direction: column; gap: .7rem; }
-.doc .room > h3 { font-family: var(--serif); font-size: 1.3rem; font-weight: 900; padding: .35rem 0; border-bottom: 2px solid var(--line-strong); display: flex; justify-content: space-between; align-items: baseline; }
+.doc .room > h3 { font-family: var(--display); font-size: 1.3rem; font-weight: 900; padding: .35rem 0; border-bottom: 2px solid var(--line-strong); display: flex; justify-content: space-between; align-items: baseline; }
 .doc .ditem { background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); padding: .85rem .9rem; display: flex; flex-direction: column; gap: .5rem; break-inside: avoid; }
 .doc .ditem > h4 { font-size: 1.12rem; font-weight: 800; display: flex; gap: .5rem; align-items: center; flex-wrap: wrap; }
 .doc table { border-collapse: collapse; width: 100%; font-size: .9rem; } .doc th, .doc td { text-align: left; padding: .4rem .5rem; border-bottom: 1px solid var(--line); vertical-align: top; } .doc th { color: var(--ink-3); font-weight: 700; white-space: nowrap; width: 6.5em; }
@@ -278,6 +278,41 @@ dialog.tut .spacer { flex: 1; }
 .ctable { border-collapse: collapse; width: 100%; font-size: .88rem; min-width: 560px; } .ctable th, .ctable td { border: 1px solid var(--line); padding: .4rem .5rem; text-align: left; vertical-align: top; } .ctable th { background: var(--surface-2); font-weight: 800; }
 @media (max-width: 719px) { .only-wide { display: none !important; } } @media (min-width: 720px) { .only-narrow { display: none !important; } }
 @media print { .only-wide { display: block !important; } .only-narrow { display: none !important; } html { font-size: 12pt; } body { background: #fff; color: #000; } .topbar, .tabbar, .toast-host, .no-print { display: none !important; } main.content { padding: 0; } .card, .ditem, .opt { box-shadow: none; break-inside: avoid; } a { color: #000; text-decoration: none; } }
+
+/* ---- v3 additions ---- */
+.tile svg { stroke-width: 1.7; }
+.item-row .title { font-family: var(--display); font-weight: 700; }
+.opt .model { font-family: var(--display); font-weight: 700; }
+.chip.tier { border: 1px solid var(--line); background: var(--surface); }
+.chip.t-top { color: #7A3E9D; background: #F3E8F9; border-color: #DCC6EA; }
+.chip.t-mid { color: #1E5FA8; background: #E3EEF9; border-color: #BDD4EE; }
+.chip.t-cp { color: #2F7A4F; background: #E1F0E3; border-color: #B8DCC3; }
+.chip.t-fixed { color: #5B4636; background: #EFE4D6; border-color: #DCCBB7; }
+.chip.t-alt { color: #8A5A10; background: #FBF0D9; border-color: #EBD6A4; }
+.chip.t-fam { color: #B3261E; background: #F9E3E1; border-color: #EFBDB9; }
+:root[data-theme="dark"] .chip[class*="t-"] { background: var(--surface-2); border-color: var(--line-strong); color: var(--ink); }
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .chip[class*="t-"] { background: var(--surface-2); border-color: var(--line-strong); color: var(--ink); } }
+.card.tone-soft { background: var(--surface-2); border-color: var(--line); box-shadow: none; }
+.stepper { display: inline-flex; align-items: center; gap: .35rem; }
+.stepper .btn { min-width: 3rem; min-height: 3rem; padding: 0; font-size: 1.4rem; border-radius: 50%; background: var(--accent-soft); color: var(--accent-deep); }
+.stepper .qty { min-width: 3.2rem; text-align: center; font-weight: 900; font-size: 1.3rem; }
+.stepper .qty small { font-size: .8rem; font-weight: 600; margin-left: .1rem; color: var(--ink-2); }
+.pick-line { padding: .2rem 0; }
+details.fold { background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius-sm); padding: 0 .9rem; }
+details.fold > summary { list-style: none; cursor: pointer; min-height: 3.1rem; display: flex; align-items: center; justify-content: space-between; gap: .5rem; font-weight: 700; font-size: 1rem; }
+details.fold > summary::-webkit-details-marker { display: none; }
+details.fold > summary .chev svg { transform: rotate(90deg); transition: transform .15s; color: var(--ink-3); }
+details.fold[open] > summary .chev svg { transform: rotate(-90deg); }
+details.fold .fold-body { padding: 0 0 .9rem; }
+details.fold.card { padding: 0 1rem; }
+details.fold.card > summary { font-size: 1.05rem; }
+.opt details.fold { background: var(--surface-2); border: 0; }
+.welcome-art { width: 5.2rem; height: 5.2rem; border-radius: 26px; background: var(--accent-soft); color: var(--accent-deep); display: grid; place-items: center; }
+.welcome-art svg { width: 3rem; height: 3rem; }
+.welcome .big { font-family: var(--display); font-weight: 700; }
+dialog.tut h2 { font-family: var(--display); font-weight: 700; }
+.doc .doc-head h2, .doc .room > h3 { font-family: var(--display); font-weight: 700; }
+.h-room { font-family: var(--display); font-weight: 700; }
 
 </style>
 </head>
@@ -337,6 +372,7 @@ const ICON_PATHS = {
   warn: '<path d="M12 3 2 21h20L12 3z"/><path d="M12 10v5M12 18h.01"/>',
   info: '<circle cx="12" cy="12" r="9"/><path d="M12 11v6M12 7h.01"/>',
   pin: '<path d="M12 21s-6-5.3-6-10a6 6 0 0 1 12 0c0 4.7-6 10-6 10z"/><circle cx="12" cy="11" r="2"/>',
+  house: '<path d="M3 11 12 4l9 7"/><path d="M5 10v10h14V10"/><rect x="10" y="14" width="4" height="6"/>',
   star: '<path d="m12 3 2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1L3.2 9.5l6.1-.9L12 3z"/>',
   cloud: '<path d="M7 18a4 4 0 0 1-.6-7.95A6 6 0 0 1 18 9a4.5 4.5 0 0 1-.5 9H7z"/>',
   book: '<path d="M4 5a2 2 0 0 1 2-2h13v16H6a2 2 0 0 0-2 2V5z"/><path d="M4 19a2 2 0 0 0 2 2h13"/><path d="M9 7h6"/>',
@@ -459,7 +495,11 @@ let syncedRev = 0, remoteStatus = 'unknown', lastSyncAt = null, lastPollAt = 0;
 
 const item = id => state.items.find(i => i.id === id);
 const room = id => state.rooms.find(r => r.id === id);
-const chosenOption = it => it.chosenOptionId ? it.options.find(o => o.id === it.chosenOptionId) : null;
+const picksOf = it => (it.picks || []).map(p => ({ option: it.options.find(o => o.id === p.optionId), qty: Number(p.qty) || 1 })).filter(p => p.option);
+const chosenOption = it => { const ps = picksOf(it); return ps.length ? ps[0].option : null; };
+const pickQty = (it, optionId) => { const p = (it.picks || []).find(x => x.optionId === optionId); return p ? (Number(p.qty) || 1) : 0; };
+const pickCount = it => picksOf(it).reduce((n, p) => n + p.qty, 0);
+function itemTotal(it) { let sum = 0, n = 0; picksOf(it).forEach(p => { const v = priceValue(effectivePrice(p.option)); if (v != null) { sum += v * p.qty; n++; } }); return { sum, n }; }
 const profileOf = id => state.profiles[id] || state.profiles.family;
 function canEdit() { return role === 'family'; }
 function knownNames() { const names = new Set(); (state.history || []).forEach(e => e.who && names.add(e.who)); state.items.forEach(it => (it.notes || []).forEach(n => n.who && names.add(n.who))); return [...names]; }
@@ -485,10 +525,10 @@ function listFor(path) {
   const key = { option: 'options', note: 'notes', todo: 'todos', request: 'requests' }[path.kind];
   it[key] = it[key] || []; return it[key];
 }
-const ITEM_SCALARS = ['status', 'chosenOptionId', 'name', 'short', 'hardReq', 'advice'];
+const ITEM_SCALARS = ['status', 'chosenOptionId', 'picks', 'name', 'short', 'hardReq', 'advice'];
 function getEntity(path) {
   switch (path.kind) {
-    case 'item': { const it = item(path.id); if (!it) return null; const o = {}; ITEM_SCALARS.forEach(k => o[k] = it[k] === undefined ? null : it[k]); return o; }
+    case 'item': { const it = item(path.id); if (!it) return null; const o = {}; ITEM_SCALARS.forEach(k => o[k] = it[k] === undefined ? null : clone(it[k])); return o; }
     case 'option': case 'note': case 'todo': case 'request': { const l = listFor(path); const e = l && l.find(x => x.id === path.id); return e ? clone(e) : null; }
     case 'prep': { const p = state.prep.find(x => x.id === path.id); return p ? clone(p) : null; }
     case 'profile': return state.profiles[path.id] ? clone(state.profiles[path.id]) : null;
@@ -498,7 +538,7 @@ function getEntity(path) {
 }
 function setEntity(path, value) {
   switch (path.kind) {
-    case 'item': { const it = item(path.id); if (!it || !value) return; ITEM_SCALARS.forEach(k => { if (k in value) it[k] = value[k]; }); return; }
+    case 'item': { const it = item(path.id); if (!it || !value) return; ITEM_SCALARS.forEach(k => { if (k in value) it[k] = clone(value[k]); }); if (!Array.isArray(it.picks)) it.picks = []; it.chosenOptionId = it.picks[0] ? it.picks[0].optionId : null; return; }
     case 'option': case 'note': case 'todo': case 'request': {
       const l = listFor(path); if (!l) return; const idx = l.findIndex(x => x.id === path.id);
       if (value == null) { if (idx >= 0) l.splice(idx, 1); } else if (idx >= 0) l[idx] = clone(value); else l.push(clone(value)); return;
@@ -515,10 +555,19 @@ function reduce(action) {
   const ch = (path, fn) => { const before = getEntity(path); fn(); const after = getEntity(path); return { path, before, after }; };
   switch (a.type) {
     case 'setStatus': { const it = item(a.itemId); if (!it) return null; const c = ch({ kind: 'item', id: it.id }, () => { it.status = a.status; }); return { changes: [c], summary: `把「${it.name}」改為「${STATUS[a.status].label}」` }; }
-    case 'choose': {
-      const it = item(a.itemId); if (!it) return null; const opt = a.optionId ? it.options.find(o => o.id === a.optionId) : null;
-      const c = ch({ kind: 'item', id: it.id }, () => { it.chosenOptionId = opt ? opt.id : null; if (opt && it.status === 'choosing') it.status = 'decided'; if (!opt && it.status === 'decided') it.status = 'choosing'; });
-      return { changes: [c], summary: opt ? `「${it.name}」選了 ${opt.brand} ${opt.model}` : `取消「${it.name}」的選擇` };
+    case 'choose': { a = { type: 'setPick', itemId: a.itemId, optionId: a.optionId, qty: a.optionId ? 1 : 0, _ctx: a._ctx }; }
+    case 'setPick': {
+      const it = item(a.itemId); if (!it) return null; const opt = it.options.find(o => o.id === a.optionId); if (!opt && a.optionId) return null;
+      const qty = Math.max(0, Math.min(20, Number(a.qty) || 0)); const prev = pickQty(it, a.optionId);
+      if (qty === prev) return null;
+      const c = ch({ kind: 'item', id: it.id }, () => {
+        const picks = (it.picks || []).filter(p => p.optionId !== a.optionId);
+        if (qty > 0) { const idx = (it.picks || []).findIndex(p => p.optionId === a.optionId); if (idx >= 0) picks.splice(idx, 0, { optionId: a.optionId, qty }); else picks.push({ optionId: a.optionId, qty }); }
+        it.picks = picks; it.chosenOptionId = picks[0] ? picks[0].optionId : null;
+        if (picks.length && it.status === 'choosing') it.status = 'decided'; if (!picks.length && it.status === 'decided') it.status = 'choosing';
+      });
+      const label = `${opt.brand} ${opt.model}`.trim();
+      return { changes: [c], summary: qty === 0 ? `「${it.name}」移除 ${label}` : prev ? `「${it.name}」${label} 數量改為 ${qty}` : `「${it.name}」加入 ${label}${qty > 1 ? ' ×' + qty : ''}` };
     }
     case 'addOption': { const it = item(a.itemId); if (!it || it.options.some(o => o.id === a.option.id)) return null; const c = ch({ kind: 'option', itemId: it.id, id: a.option.id }, () => { it.options.push(clone(a.option)); }); return { changes: [c], summary: `在「${it.name}」新增商品 ${a.option.model}` }; }
     case 'updateOption': { const it = item(a.itemId); if (!it) return null; const opt = it.options.find(o => o.id === a.optionId); if (!opt) return null; const c = ch({ kind: 'option', itemId: it.id, id: opt.id }, () => { Object.assign(opt, clone(a.patch)); }); return { changes: [c], summary: a.summary || `更新「${it.name}」${opt.model} 的資料` }; }
@@ -568,11 +617,13 @@ function dispatch(action, opts = {}) {
 function readSeed() { try { const el = document.getElementById('hc-seed'); return el ? JSON.parse(el.textContent) : null; } catch (e) { console.error('seed parse', e); return null; } }
 function normalize(s) {
   s.history = s.history || []; s.todos = s.todos || []; s.prep = s.prep || []; s.meta = s.meta || {}; s.profiles = s.profiles || {};
-  s.items.forEach(it => { it.options = it.options || []; it.notes = it.notes || []; it.todos = it.todos || []; it.requests = it.requests || []; it.install = it.install || []; it.warnings = it.warnings || []; it.costNotes = it.costNotes || []; });
+  s.items.forEach(it => { it.options = it.options || []; it.notes = it.notes || []; it.todos = it.todos || []; it.requests = it.requests || []; it.install = it.install || []; it.warnings = it.warnings || []; it.costNotes = it.costNotes || []; it.defaultQty = Number(it.defaultQty) || 1;
+    if (!Array.isArray(it.picks)) it.picks = it.chosenOptionId ? [{ optionId: it.chosenOptionId, qty: 1 }] : [];
+    it.picks = it.picks.filter(p => p && it.options.some(o => o.id === p.optionId)); it.chosenOptionId = it.picks[0] ? it.picks[0].optionId : null; });
   return s;
 }
-const CATALOG_ITEM_FIELDS = ['name', 'short', 'hardReq', 'advice', 'warnings', 'install', 'costNotes', 'pickOptionId', 'pickReason', 'roomId'];
-const CATALOG_OPTION_FIELDS = ['key', 'tier', 'brand', 'model', 'name', 'highlights', 'dims', 'cutout', 'power', 'weight', 'other', 'price', 'links', 'availability', 'storeName', 'researchNote', 'checkedAt', 'cmpKeyword'];
+const CATALOG_ITEM_FIELDS = ['name', 'short', 'hardReq', 'advice', 'warnings', 'install', 'costNotes', 'pickOptionId', 'pickReason', 'roomId', 'defaultQty'];
+const CATALOG_OPTION_FIELDS = ['key', 'tier', 'brand', 'model', 'name', 'highlights', 'dims', 'cutout', 'power', 'weight', 'other', 'price', 'links', 'availability', 'storeName', 'researchNote', 'checkedAt', 'cmpKeyword', 'reviews'];
 function mergeCatalog(remote, seed) {
   remote.meta = Object.assign({}, remote.meta, seed.meta); remote.profiles = clone(seed.profiles); remote.rooms = clone(seed.rooms); remote.budget = clone(seed.budget);
   seed.items.forEach(si => {
@@ -581,7 +632,7 @@ function mergeCatalog(remote, seed) {
     CATALOG_ITEM_FIELDS.forEach(k => { if (si[k] !== undefined) ri[k] = clone(si[k]); });
     si.options.forEach(so => { const ro = ri.options.find(o => o.id === so.id); if (ro) CATALOG_OPTION_FIELDS.forEach(k => { if (so[k] !== undefined) ro[k] = clone(so[k]); }); else ri.options.push(clone(so)); });
     ri.options = ri.options.filter(o => o.tier === '家人推薦' || si.options.some(so => so.id === o.id));
-    if (ri.chosenOptionId && !ri.options.some(o => o.id === ri.chosenOptionId)) ri.chosenOptionId = null;
+    ri.picks = (ri.picks || []).filter(p => ri.options.some(o => o.id === p.optionId)); ri.chosenOptionId = ri.picks[0] ? ri.picks[0].optionId : null;
     si.todos.forEach(st => { if (!ri.todos.some(t => t.id === st.id)) ri.todos.push(clone(st)); });
   });
   seed.prep.forEach(sp => { const rp = remote.prep.find(p => p.id === sp.id); if (rp) { rp.text = sp.text; rp.group = sp.group; rp.trade = sp.trade; } else remote.prep.push(clone(sp)); });
@@ -685,7 +736,7 @@ function startPolling() {
 }
 async function loadPrices() { try { const r = await fetch('prices.json?ts=' + Date.now(), { cache: 'no-store' }); if (r.ok) prices = await r.json(); } catch {} }
 
-/* ===================== Part 2: rendering ===================== */
+/* ===================== Part 2: rendering (v3 warm UI, quantities) ===================== */
 const scrollMemo = {};
 function routeKey() { return [route.screen, route.tab, route.itemId].join('|'); }
 function go(next, opts = {}) {
@@ -698,11 +749,12 @@ function go(next, opts = {}) {
 }
 function chip(text, cls) { return h('span', { class: 'chip ' + (cls || '') }, text); }
 function statusChip(st) { const s = STATUS[st] || STATUS.choosing; return chip(s.label, 's-' + (STATUS[st] ? st : 'choosing')); }
-function tierChip(tier) { return chip(tier, 'tier'); }
+function tierChip(tier) { return chip(tier, 'tier t-' + ({ '指定': 'fixed', '頂級': 'top', '高級': 'mid', '高CP值': 'cp', '替代方案': 'alt', '家人推薦': 'fam' }[tier] || 'alt')); }
 function availChip(a) { if (a === 'in_stock') return chip('有現貨', 's-bought'); if (a === 'discontinued') return chip('已下架', 'warn'); if (a === 'unclear') return chip('庫存待確認', 's-choosing'); return null; }
 function tagChip(tag) { return chip(tag, 'tag tag-' + tag); }
-function section(title, count, ...kids) { return h('section', { class: 'stack' }, h('h2', { class: 'h-sec' }, title, count != null ? h('span', { class: 'count' }, count) : null), ...kids); }
+function fold(title, body, opts = {}) { return h('details', { class: 'fold' + (opts.cls ? ' ' + opts.cls : ''), open: opts.open ? true : null }, h('summary', {}, h('span', {}, title), icon('next', 'chev')), h('div', { class: 'fold-body' }, body)); }
 function roomHeader(r, n) { return h('h2', { class: 'h-room' }, r.name, h('span', { class: 'count' }, `${n} 項`)); }
+function qtyHint(it) { return it.defaultQty > 1 ? `建議 ${it.defaultQty} 台` : ''; }
 
 function render() {
   const app = $('#app'); if (!app) return;
@@ -728,9 +780,9 @@ function topbar({ back, title, right }) {
 }
 function renderSaveState(el) {
   let s = saveState.s, msg = saveState.msg;
-  if (s === 'idle') { if (!API.configured) { s = 'local'; msg = '尚未連線雲端：修改只留在這台裝置（設定完成後會自動同步）'; } else if (remoteStatus === 'offline') { s = 'error'; msg = '目前連不上雲端，修改會先留在手機，連上後自動同步'; } }
+  if (s === 'idle') { if (!API.configured) { s = 'local'; msg = '尚未連線雲端：修改只留在這台裝置'; } else if (remoteStatus === 'offline') { s = 'error'; msg = '目前連不上雲端，修改會先留在手機，連上後自動同步'; } }
   el.dataset.s = s;
-  const map = { idle: '', saving: '儲存中…', saved: '已儲存', error: '未同步', local: '未連線', readonly: '檢視' };
+  const map = { idle: '', saving: '儲存中', saved: '已儲存', error: '未同步', local: '未連線', readonly: '檢視' };
   el.replaceChildren(...[s === 'saved' ? icon('check') : (s === 'idle' ? null : icon('cloud')), map[s] || ''].filter(Boolean));
   el.hidden = s === 'idle'; el.title = msg || '';
   el.onclick = () => { if (msg) toast(msg); };
@@ -753,23 +805,19 @@ function toast(msg, opts = {}) {
   toastTimer = setTimeout(() => host.replaceChildren(), opts.undoEntryId ? 6000 : 2800);
 }
 
-/* ---------- welcome / identity ---------- */
+/* ---------- identity ---------- */
 function renderNameEntry() {
   const names = knownNames();
-  const input = h('input', { class: 'input', type: 'text', placeholder: '例如：爸爸、媽媽、阿華', autocomplete: 'off', maxlength: '20', style: 'font-size:1.2rem', id: 'nameInput' });
-  const devInput = h('input', { class: 'input', type: 'text', placeholder: '例如：媽媽的 iPhone（選填）', autocomplete: 'off', maxlength: '24', id: 'devInput' });
-  const dev = deviceLabel();
-  const start = () => { const name = input.value.trim(); if (!name) { input.focus(); toast('請先輸入稱呼'); return; } me = { name, deviceName: devInput.value.trim() }; store.set(KEYS.me, me); route = { screen: 'tab', tab: 'list' }; render(); window.scrollTo(0, 0); if (!store.get(KEYS.tut)) showTutorial('family'); };
+  const input = h('input', { class: 'input', type: 'text', placeholder: '例如：爸爸、媽媽、阿華', autocomplete: 'off', maxlength: '20', style: 'font-size:1.25rem', id: 'nameInput' });
+  const start = () => { const name = input.value.trim(); if (!name) { input.focus(); toast('請先輸入稱呼'); return; } me = { name, deviceName: (me && me.deviceName) || '' }; store.set(KEYS.me, me); route = { screen: 'tab', tab: 'list' }; render(); window.scrollTo(0, 0); if (!store.get(KEYS.tut)) showTutorial('family'); };
   input.addEventListener('keydown', e => { if (e.key === 'Enter') start(); });
   const main = h('main', { class: 'content welcome' },
-    h('p', { class: 'eyebrow' }, '全家共用・南投老家翻修'),
+    h('div', { class: 'welcome-art' }, icon('house')),
     h('h1', { class: 'big' }, state.meta.title),
-    h('p', { class: 'muted' }, '家電採購與安裝需求清單。第一次使用請先告訴大家您是誰，之後每一筆修改都會記下是誰改的。'),
-    h('div', { class: 'field' }, h('label', { for: 'nameInput' }, '請問怎麼稱呼您？'), input),
-    names.length ? h('div', { class: 'row wrap' }, h('span', { class: 'small muted' }, '或點選：'), names.map(n => h('button', { class: 'btn sm', type: 'button', onclick: () => { input.value = n; } }, n))) : null,
-    h('div', { class: 'field' }, h('label', { for: 'devInput' }, '幫這台裝置取個名字'), devInput, h('p', { class: 'help' }, '紀錄裡會顯示是哪一台改的。偵測到：', dev)),
-    h('button', { class: 'btn primary lg block', type: 'button', onclick: start }, '開始使用'),
-    h('p', { class: 'tiny' }, '這個網址是固定的，不用登入，可以直接傳給家人。'));
+    h('p', { class: 'muted' }, '全家一起用的家電清單。請問怎麼稱呼您？'),
+    h('div', { class: 'field' }, input),
+    names.length ? h('div', { class: 'row wrap' }, names.map(n => h('button', { class: 'btn sm', type: 'button', onclick: () => { input.value = n; } }, n))) : null,
+    h('button', { class: 'btn primary lg block', type: 'button', onclick: start }, '開始使用'));
   setTimeout(() => input.focus(), 50);
   return [main];
 }
@@ -777,15 +825,15 @@ function renderNameEntry() {
 /* ---------- tab screens ---------- */
 function renderTabScreen() {
   const tab = route.tab || 'list';
-  const titles = { list: state.meta.title, todos: '待辦事項', history: '修改紀錄', more: '更多' };
+  const titles = { list: state.meta.title, todos: '待辦', history: '修改紀錄', more: '更多' };
   const body = { list: renderList, todos: renderTodos, history: renderHistory, more: renderMore }[tab]();
   return [topbar({ title: titles[tab], right: [saveStateEl()] }), h('main', { class: 'content' }, ...body), tabbar(tab), toastHost()];
 }
 function pendingBanner() {
   if (!pending.length) return null;
   if (saveState.s === 'saving' || saveState.s === 'saved') return null;
-  const msg = !API.configured ? '雲端還沒設定好（見 SETUP.md），修改先留在這台裝置，設定完成後會自動同步。' : (saveState.msg || '稍後會自動再試');
-  return h('div', { class: 'banner warn pending-banner' }, icon('warn'), h('div', { class: 'grow' }, `有 ${pending.length} 筆修改還沒存到雲端。`, h('div', { class: 'small', style: 'margin-top:.2rem' }, msg),
+  const msg = !API.configured ? '雲端還沒設定好，修改先留在這台裝置。' : (saveState.msg || '稍後會自動再試');
+  return h('div', { class: 'banner warn pending-banner' }, icon('warn'), h('div', { class: 'grow' }, `${pending.length} 筆修改還沒存到雲端。`, h('div', { class: 'small', style: 'margin-top:.2rem' }, msg),
     API.configured ? h('div', { class: 'btn-row', style: 'margin-top:.4rem' }, h('button', { class: 'btn sm', type: 'button', onclick: () => { saveDelay = 300; scheduleSave(); saveDelay = 1500; } }, '再試一次')) : null));
 }
 function tierEstimate(it, tier) {
@@ -799,49 +847,50 @@ function tierEstimate(it, tier) {
 function nextStep() {
   const items = state.items.filter(i => i.status !== 'skipped');
   const choosing = items.filter(i => i.status === 'choosing');
-  if (choosing.length) { const hard = choosing.find(i => i.hardReq) || choosing[0]; return { t: `先決定「${hard.name}」`, d: hard.hardReq ? `硬需求：${hard.hardReq}` : `還有 ${choosing.length} 項沒決定，按進去比較方案、按「選這個」。`, go: () => go({ screen: 'item', itemId: hard.id }) }; }
+  if (choosing.length) { const hard = choosing.find(i => i.hardReq) || choosing[0]; return { t: `先決定「${hard.name}」`, d: `還有 ${choosing.length} 項沒決定`, go: () => go({ screen: 'item', itemId: hard.id }) }; }
   const open = openTodoCount();
-  if (open) return { t: `還有 ${open} 項待辦`, d: '量尺寸、拉電線、確認規格，做完就打勾。', go: () => go({ screen: 'tab', tab: 'todos' }) };
+  if (open) return { t: `還有 ${open} 項待辦`, d: '做完就打勾', go: () => go({ screen: 'tab', tab: 'todos' }) };
   const notBought = items.filter(i => i.status === 'decided');
-  if (notBought.length) return { t: `有 ${notBought.length} 項已決定、還沒買`, d: '到品項頁按「MOMO 看商品」下單後，記得改成「已購買」。', go: () => go({ screen: 'item', itemId: notBought[0].id }) };
-  return { t: '全部完成！', d: '所有品項都已決定、待辦都打勾了。', go: null };
+  if (notBought.length) return { t: `${notBought.length} 項已決定、還沒買`, d: '下單後改成「已購買」', go: () => go({ screen: 'item', itemId: notBought[0].id }) };
+  return { t: '全部完成！', d: '', go: null };
 }
 function renderList() {
-  const items = state.items;
-  const active = items.filter(i => i.status !== 'skipped');
+  const items = state.items, active = items.filter(i => i.status !== 'skipped');
   const decided = active.filter(i => ['decided', 'bought', 'installed'].includes(i.status)).length;
   const bought = active.filter(i => ['bought', 'installed'].includes(i.status)).length;
   const pct = active.length ? Math.round(decided / active.length * 100) : 0;
-  let decidedSum = 0, decidedN = 0;
-  active.forEach(i => { const o = chosenOption(i); const v = o && priceValue(effectivePrice(o)); if (v != null) { decidedSum += v; decidedN++; } });
-  const est = { cp: 0, mid: 0, top: 0 }; active.forEach(i => ['cp', 'mid', 'top'].forEach(k => { const v = tierEstimate(i, k); if (v != null) est[k] += v; }));
+  let decidedSum = 0, decidedN = 0; active.forEach(i => { const t = itemTotal(i); if (t.n) { decidedSum += t.sum; decidedN++; } });
+  const est = { cp: 0, mid: 0, top: 0 }; active.forEach(i => ['cp', 'mid', 'top'].forEach(k => { const v = tierEstimate(i, k); if (v != null) est[k] += v * (i.defaultQty || 1); }));
   const out = [pendingBanner()];
-  const ring = h('div', { class: 'ring', style: `--p:${pct}` }, h('span', {}, `${decided}/${active.length}`, h('small', {}, '已決定')));
   out.push(h('div', { class: 'hero' },
-    h('div', {}, h('p', { class: 'eyebrow' }, '全家共用・南投老家翻修'), h('h2', { class: 'h-hero' }, state.meta.title), h('p', { class: 'sub' }, `已購買 ${bought} 項・待辦未完成 ${openTodoCount()} 項${decidedN ? `・已決定合計 ${fmtMoney(decidedSum)}` : ''}`)),
-    ring,
-    h('div', { class: 'hero-actions' }, h('button', { class: 'btn sm', type: 'button', onclick: () => shareLink('family') }, icon('share'), '分享給家人'), h('button', { class: 'btn sm', type: 'button', onclick: () => shareLink('designer') }, icon('book'), '設計師連結'))));
+    h('div', {}, h('h2', { class: 'h-hero' }, state.meta.title), h('p', { class: 'sub' }, `已決定 ${decided}／${active.length}・已購買 ${bought}${decidedN ? `・合計 ${fmtMoney(decidedSum)}` : ''}`)),
+    h('div', { class: 'ring', style: `--p:${pct}` }, h('span', {}, `${pct}%`, h('small', {}, '已決定'))),
+    h('div', { class: 'hero-actions' }, h('button', { class: 'btn sm', type: 'button', onclick: () => shareLink('family') }, icon('share'), '分享給家人'), h('button', { class: 'btn sm', type: 'button', onclick: () => go({ screen: 'tab', tab: 'more' }) }, icon('book'), '設計師連結'))));
   const ns = nextStep();
-  out.push(h(ns.go ? 'button' : 'div', { class: 'card next' + (ns.go ? ' item-row' : ''), type: ns.go ? 'button' : null, style: ns.go ? 'grid-template-columns:1fr auto' : '', onclick: ns.go || null },
-    h('div', {}, h('div', { class: 'eyebrow' }, '下一步'), h('div', { class: 't' }, ns.t), h('div', { class: 'small muted' }, ns.d)), ns.go ? icon('next', 'arrow') : null));
-  out.push(h('details', { class: 'card flat' },
-    h('summary', { style: 'cursor:pointer;font-weight:800;font-size:1.05rem;display:flex;justify-content:space-between;align-items:center;min-height:2.4rem' }, h('span', {}, '預算總覽'), h('span', { class: 'price' }, decidedN ? fmtMoney(decidedSum) : '—')),
-    h('p', { class: 'small muted' }, decidedN ? `已決定 ${decidedN} 項的合計（以目前查到的價格計）` : '還沒有已決定的品項'),
-    h('div', { class: 'summary' }, [['cp', '全選高CP值'], ['mid', '全選高級'], ['top', '全選頂級']].map(([k, l]) => h('div', { class: 'cell' }, h('div', { class: 'v', style: 'font-size:1.02rem' }, fmtMoney(est[k])), h('div', { class: 'k' }, l)))),
-    h('div', { class: 'table-wrap' }, h('table', { class: 'ctable', style: 'min-width:420px' }, h('thead', {}, h('tr', {}, h('th', {}, '品項'), h('th', {}, '高CP值'), h('th', {}, '高級'), h('th', {}, '頂級'))),
-      h('tbody', {}, active.map(i => h('tr', {}, h('td', {}, i.name), ['cp', 'mid', 'top'].map(k => { const v = tierEstimate(i, k); return h('td', {}, v == null ? '—' : v.toLocaleString('en-US')); })))))),
-    h('p', { class: 'tiny' }, state.budget.note)));
+  out.push(h(ns.go ? 'button' : 'div', { class: 'next' + (ns.go ? ' item-row' : ' card'), type: ns.go ? 'button' : null, onclick: ns.go || null },
+    h('span', { class: 'tile r-next' }, icon('pin')), h('div', {}, h('div', { class: 'eyebrow' }, '下一步'), h('div', { class: 't' }, ns.t), ns.d ? h('div', { class: 'small muted' }, ns.d) : null), ns.go ? icon('next', 'arrow') : null));
+  out.push(h('details', { class: 'card flat fold' },
+    h('summary', {}, h('span', {}, '預算總覽 ', h('b', { class: 'price' }, decidedN ? fmtMoney(decidedSum) : '—')), icon('next', 'chev')),
+    h('div', { class: 'fold-body stack' },
+      h('p', { class: 'small muted' }, decidedN ? `已決定 ${decidedN} 項的合計（含數量）` : '還沒有已決定的品項'),
+      h('div', { class: 'summary' }, [['cp', '全選高CP值'], ['mid', '全選高級'], ['top', '全選頂級']].map(([k, l]) => h('div', { class: 'cell' }, h('div', { class: 'v', style: 'font-size:1rem' }, fmtMoney(est[k])), h('div', { class: 'k' }, l)))),
+      h('div', { class: 'table-wrap' }, h('table', { class: 'ctable', style: 'min-width:420px' }, h('thead', {}, h('tr', {}, h('th', {}, '品項'), h('th', {}, '數量'), h('th', {}, '高CP值'), h('th', {}, '高級'), h('th', {}, '頂級'))),
+        h('tbody', {}, active.map(i => h('tr', {}, h('td', {}, i.name), h('td', {}, i.defaultQty || 1), ['cp', 'mid', 'top'].map(k => { const v = tierEstimate(i, k); return h('td', {}, v == null ? '—' : (v * (i.defaultQty || 1)).toLocaleString('en-US')); })))))),
+      h('p', { class: 'tiny' }, state.budget.note))));
   state.rooms.forEach(r => { const its = items.filter(i => i.roomId === r.id); if (its.length) out.push(h('section', { class: 'stack' }, roomHeader(r, its.length), its.map(itemRow))); });
   out.push(h('p', { class: 'tiny', style: 'text-align:center' }, state.meta.priceNote, prices && prices.checkedAt ? `（PChome 價格更新：${fmtDateShort(prices.checkedAt)}）` : ''));
   return out;
 }
+function picksText(it, withPrice) {
+  const ps = picksOf(it); if (!ps.length) return '';
+  const s = ps.map(p => `${p.option.model.split(/[（(]/)[0].trim()}${p.qty > 1 ? ' ×' + p.qty : ''}`).join('、');
+  const t = itemTotal(it); return withPrice && t.n ? `${s}　${fmtMoney(t.sum)}` : s;
+}
 function itemRow(it) {
-  const o = chosenOption(it);
-  const openTodos = it.todos.filter(t => !t.done).length, pendingReq = it.requests.filter(r => r.status === 'pending').length;
-  const sub = o ? `${o.brand} ${o.model}${profileOf(role).show.price ? '　' + priceText(effectivePrice(o)) : ''}` : (it.status === 'skipped' ? '這次不買' : `${it.options.length} 個方案可以選${it.pickOptionId ? '・有專家建議' : ''}`);
+  const ps = picksOf(it); const openTodos = it.todos.filter(t => !t.done).length;
+  const sub = ps.length ? picksText(it, profileOf(role).show.price) : (it.status === 'skipped' ? '這次不買' : `${it.options.length} 個方案${qtyHint(it) ? '・' + qtyHint(it) : ''}`);
   return h('button', { class: 'item-row', type: 'button', onclick: () => go({ screen: 'item', itemId: it.id }) }, tile(it),
-    h('div', {}, h('div', { class: 'title' }, it.name), h('div', { class: 'sub' }, sub),
-      h('div', { class: 'meta' }, statusChip(it.status), it.hardReq ? chip('有硬需求', 'tag') : null, openTodos ? chip(`待辦 ${openTodos}`, 'tag') : null, it.notes.length ? chip(`留言 ${it.notes.length}`, 'tag') : null, pendingReq ? chip(`待查 ${pendingReq}`, 'warn') : null)),
+    h('div', {}, h('div', { class: 'title' }, it.name), h('div', { class: 'sub' }, sub), h('div', { class: 'meta' }, statusChip(it.status), openTodos ? chip(`待辦 ${openTodos}`, 'tag') : null, it.notes.length ? chip(`留言 ${it.notes.length}`, 'tag') : null)),
     icon('next', 'arrow'));
 }
 
@@ -854,27 +903,40 @@ function sortedOptions(it) {
   const order = ['指定', '頂級', '高級', '高CP值', '替代方案', '家人推薦'];
   return [...it.options].sort((a, b) => (a.id === it.pickOptionId ? -1 : 0) - (b.id === it.pickOptionId ? -1 : 0) || order.indexOf(a.tier) - order.indexOf(b.tier));
 }
+function pickControls(it, o, editable) {
+  const qty = pickQty(it, o.id);
+  const set = (n, msg) => { const e = dispatch({ type: 'setPick', itemId: it.id, optionId: o.id, qty: n }); if (e) toast(msg, { undoEntryId: e.id }); };
+  if (!editable) return null;
+  if (!qty) return h('button', { class: 'btn primary', type: 'button', onclick: () => set(1, `已加入 ${o.model.split(/[（(]/)[0]}`) }, icon('plus'), '加入清單');
+  return h('div', { class: 'stepper' },
+    h('button', { class: 'btn', type: 'button', 'aria-label': '減少', onclick: () => set(qty - 1, qty - 1 ? `數量 ${qty - 1}` : '已移除') }, '−'),
+    h('span', { class: 'qty' }, qty, h('small', {}, '台')),
+    h('button', { class: 'btn', type: 'button', 'aria-label': '增加', onclick: () => set(qty + 1, `數量 ${qty + 1}`) }, '＋'));
+}
 function renderItemBody(it) {
   const prof = profileOf(role), editable = canEdit(), out = [pendingBanner()];
   out.push(h('div', { class: 'row' }, tile(it), h('div', {}, h('div', { class: 'small muted' }, room(it.roomId).name), h('div', { style: 'font-weight:700' }, it.short))));
   const grid = h('div', { class: 'status-grid' }, ['choosing', 'decided', 'bought', 'installed'].map(st => h('button', { class: 'btn s-' + st, type: 'button', 'aria-pressed': String(it.status === st), disabled: !editable, onclick: () => { if (it.status === st) return; const e = dispatch({ type: 'setStatus', itemId: it.id, status: st }); if (e) toast(`已改為「${STATUS[st].label}」`, { undoEntryId: e.id }); } }, STATUS[st].label, h('span', { class: 'hint' }, STATUS[st].hint))));
-  out.push(h('div', { class: 'card' }, h('div', { class: 'eyebrow' }, '進度'), grid,
-    editable ? h('button', { class: 'linkbtn', type: 'button', onclick: async () => { if (it.status === 'skipped') { dispatch({ type: 'setStatus', itemId: it.id, status: 'choosing' }); return; } if (await confirmDialog({ title: `「${it.name}」這次不買？`, text: '會標示為「不需要」，之後隨時可以改回來。', ok: '標示為不需要' })) { const e = dispatch({ type: 'setStatus', itemId: it.id, status: 'skipped' }); if (e) toast('已標示為不需要', { undoEntryId: e.id }); } } }, it.status === 'skipped' ? '改回「考慮中」' : '這次不買（標示為不需要）') : null));
+  out.push(h('div', { class: 'card' }, grid,
+    editable ? h('button', { class: 'linkbtn', type: 'button', onclick: async () => { if (it.status === 'skipped') { dispatch({ type: 'setStatus', itemId: it.id, status: 'choosing' }); return; } if (await confirmDialog({ title: `「${it.name}」這次不買？`, text: '會標示為「不需要」，之後隨時可以改回來。', ok: '標示為不需要' })) { const e = dispatch({ type: 'setStatus', itemId: it.id, status: 'skipped' }); if (e) toast('已標示為不需要', { undoEntryId: e.id }); } } }, it.status === 'skipped' ? '改回「考慮中」' : '這次不買') : null));
   if (it.hardReq) out.push(h('div', { class: 'banner info' }, icon('pin'), h('div', {}, h('b', {}, '硬需求：'), it.hardReq)));
-  if (it.warnings.length) out.push(h('div', { class: 'banner warn' }, icon('warn'), h('ul', { style: 'padding-left:1.1em' }, it.warnings.map(w => h('li', {}, w)))));
-  const chosen = chosenOption(it);
-  if (chosen) out.push(h('div', { class: 'card tone-accent' }, h('div', { class: 'eyebrow' }, '目前選擇'), optionCard(it, chosen, { prof, editable })));
-  else if (it.status !== 'skipped') out.push(h('div', { class: 'card tone-attn' }, h('div', { class: 'eyebrow' }, '目前選擇'), h('p', {}, '還沒決定。比較下面的方案，按「選這個」就完成。', it.pickOptionId ? '有「專家建議」標記的方案排在最前面。' : '')));
-  if (prof.show.options) { const opts = sortedOptions(it).filter(o => !chosen || o.id !== chosen.id); out.push(section(chosen ? '其他方案' : '方案比較', `${it.options.length} 個`, opts.map(o => optionCard(it, o, { prof, editable })))); }
-  if (editable) out.push(h('button', { class: 'btn outline block lg', type: 'button', onclick: () => openAddProductSheet(it) }, icon('plus'), '新增其他商品（貼連結或輸入關鍵字）'));
+  // picks summary
+  const ps = picksOf(it), total = itemTotal(it);
+  if (ps.length) out.push(h('div', { class: 'card tone-accent' }, h('div', { class: 'row between' }, h('div', { class: 'eyebrow' }, '已選清單'), qtyHint(it) ? h('span', { class: 'tiny' }, `已選 ${pickCount(it)} 台・${qtyHint(it)}`) : null),
+    h('div', { class: 'stack-sm' }, ps.map(p => h('div', { class: 'row between pick-line' }, h('div', { class: 'grow' }, h('b', {}, `${p.option.brand} ${p.option.model}`), p.qty > 1 ? h('span', { class: 'chip s-decided', style: 'margin-left:.4rem' }, `×${p.qty}`) : null), prof.show.price ? h('span', { class: 'price' }, priceValue(effectivePrice(p.option)) != null ? fmtMoney(priceValue(effectivePrice(p.option)) * p.qty) : '—') : null))),
+    prof.show.price && total.n && ps.length > 1 ? h('div', { class: 'row between', style: 'border-top:1px solid var(--line);padding-top:.4rem' }, h('b', {}, '合計'), h('span', { class: 'price' }, fmtMoney(total.sum))) : null));
+  else if (it.status !== 'skipped') out.push(h('div', { class: 'card tone-attn' }, h('p', {}, `還沒選。按方案上的「加入清單」即可${qtyHint(it) ? `；${qtyHint(it)}，可以混搭不同方案` : ''}。`)));
+  if (prof.show.options) out.push(h('section', { class: 'stack' }, h('h2', { class: 'h-sec' }, '方案', h('span', { class: 'count' }, `${it.options.length} 個`)), sortedOptions(it).map(o => optionCard(it, o, { prof, editable }))));
+  if (editable) out.push(h('button', { class: 'btn outline block', type: 'button', onclick: () => openAddProductSheet(it) }, icon('plus'), '新增其他商品'));
+  if (prof.show.advice && it.advice) out.push(h('div', { class: 'card tone-soft' }, h('div', { class: 'eyebrow' }, '達人建議'), h('p', {}, it.advice)));
+  if (it.warnings.length) out.push(fold(`注意事項（${it.warnings.length}）`, h('ul', { class: 'small' }, it.warnings.map(w => h('li', {}, w)))));
+  if (prof.show.install && it.install.length) out.push(fold('安裝須知（給設計師／水電）', h('div', {}, installList(it.install))));
+  if (prof.show.price && it.costNotes.length) out.push(fold('費用參考', h('ul', { class: 'small' }, it.costNotes.map(c => h('li', {}, c)))));
   const reqs = it.requests.filter(r => r.status === 'pending');
   if (reqs.length && prof.show.notes) out.push(h('div', { class: 'card' }, h('div', { class: 'eyebrow' }, '等 Claude 幫忙查'), reqs.map(r => h('div', { class: 'row between' }, h('div', { class: 'grow' }, h('div', {}, r.query || r.url), h('div', { class: 'tiny' }, `${r.who}・${fmtTime(r.ts)}`)), editable ? h('button', { class: 'btn sm', type: 'button', onclick: () => dispatch({ type: 'updateRequest', itemId: it.id, requestId: r.id, patch: { status: 'done' } }) }, '已處理') : null))));
-  if (prof.show.advice && it.advice) out.push(h('div', { class: 'card' }, h('div', { class: 'eyebrow' }, '專家建議'), h('p', {}, it.advice)));
-  if (prof.show.install && it.install.length) out.push(h('div', { class: 'card' }, h('div', { class: 'eyebrow' }, '安裝須知（給設計師／水電）'), h('div', {}, installList(it.install))));
-  if (prof.show.price && it.costNotes.length) out.push(h('div', { class: 'card' }, h('div', { class: 'eyebrow' }, '費用參考'), h('ul', { class: 'small' }, it.costNotes.map(c => h('li', {}, c)))));
-  if (prof.show.todos) { const open = it.todos.filter(t => !t.done), done = it.todos.filter(t => t.done); out.push(h('div', { class: 'card' }, h('div', { class: 'row between' }, h('div', { class: 'eyebrow' }, `待辦（${open.length} 未完成）`), editable ? h('button', { class: 'btn sm', type: 'button', onclick: () => openAddTodoSheet(it.id) }, icon('plus'), '新增') : null), open.length || done.length ? h('div', { class: 'stack-sm' }, open.map(t => todoRow(t, it.id, editable)), done.map(t => todoRow(t, it.id, editable))) : h('p', { class: 'small muted' }, '沒有待辦'))); }
-  if (prof.show.notes) out.push(h('div', { class: 'card' }, h('div', { class: 'row between' }, h('div', { class: 'eyebrow' }, `家人留言（${it.notes.length}）`), editable ? h('button', { class: 'btn sm', type: 'button', onclick: () => openNoteSheet(it.id) }, icon('plus'), '留言') : null),
-    it.notes.length ? h('div', { class: 'stack-sm' }, [...it.notes].reverse().map(n => h('div', { class: 'note' }, h('div', { class: 'row between' }, h('span', { class: 'who' }, n.who), h('span', { class: 'when' }, fmtTime(n.ts, true))), h('div', { class: 'txt' }, n.text), editable && me && n.who === me.name ? h('button', { class: 'linkbtn small', type: 'button', onclick: async () => { if (await confirmDialog({ title: '刪除這則留言？', ok: '刪除', danger: true })) dispatch({ type: 'removeNote', itemId: it.id, noteId: n.id }); } }, '刪除') : null))) : h('p', { class: 'small muted' }, '還沒有留言。有想法就寫下來，全家都看得到。')));
+  if (prof.show.todos) { const open = it.todos.filter(t => !t.done), done = it.todos.filter(t => t.done); out.push(h('div', { class: 'card' }, h('div', { class: 'row between' }, h('div', { class: 'eyebrow' }, `待辦（${open.length}）`), editable ? h('button', { class: 'btn sm', type: 'button', onclick: () => openAddTodoSheet(it.id) }, icon('plus'), '新增') : null), open.length || done.length ? h('div', { class: 'stack-sm' }, open.map(t => todoRow(t, it.id, editable)), done.map(t => todoRow(t, it.id, editable))) : h('p', { class: 'small muted' }, '沒有待辦'))); }
+  if (prof.show.notes) out.push(h('div', { class: 'card' }, h('div', { class: 'row between' }, h('div', { class: 'eyebrow' }, `留言（${it.notes.length}）`), editable ? h('button', { class: 'btn sm', type: 'button', onclick: () => openNoteSheet(it.id) }, icon('plus'), '留言') : null),
+    it.notes.length ? h('div', { class: 'stack-sm' }, [...it.notes].reverse().map(n => h('div', { class: 'note' }, h('div', { class: 'row between' }, h('span', { class: 'who' }, n.who), h('span', { class: 'when' }, fmtTime(n.ts, true))), h('div', { class: 'txt' }, n.text), editable && me && n.who === me.name ? h('button', { class: 'linkbtn small', type: 'button', onclick: async () => { if (await confirmDialog({ title: '刪除這則留言？', ok: '刪除', danger: true })) dispatch({ type: 'removeNote', itemId: it.id, noteId: n.id }); } }, '刪除') : null))) : h('p', { class: 'small muted' }, '有想法就寫下來，全家都看得到。')));
   return out;
 }
 function installList(list, noPrice) {
@@ -895,48 +957,54 @@ function linkButtons(opt) {
   if (!has('pchome') && !has('search-pchome')) search.push({ type: 'search-pchome', url: su.pchome });
   return h('div', { class: 'stack-sm' },
     direct.length ? h('div', { class: 'link-row' }, direct.map(l => linkBtn(l))) : null,
-    search.length ? h('div', { class: 'link-row' }, search.map(l => linkBtn(l, true))) : null,
-    h('div', { class: 'link-row' }, h('a', { class: 'btn sm lnk-cmp', href: cu.feebee, target: '_blank', rel: 'noopener noreferrer' }, '飛比價格 即時比價', icon('ext')), h('a', { class: 'btn sm lnk-cmp', href: cu.biggo, target: '_blank', rel: 'noopener noreferrer' }, 'BigGo 即時比價', icon('ext'))));
+    h('div', { class: 'link-row' }, search.map(l => linkBtn(l, true)), h('a', { class: 'btn sm lnk-cmp', href: cu.feebee, target: '_blank', rel: 'noopener noreferrer' }, '飛比價格', icon('ext')), h('a', { class: 'btn sm lnk-cmp', href: cu.biggo, target: '_blank', rel: 'noopener noreferrer' }, 'BigGo 比價', icon('ext'))));
 }
 function priceBlock(o) {
   const p = effectivePrice(o), lp = livePrice(o);
+  const note = o.price && o.price.note ? o.price.note.split(/[；;]/)[0] : '';
   return h('div', {},
-    h('div', { class: 'row wrap' }, h('span', { class: 'price' }, priceText(p)), p && p.source ? chip(SOURCE_LABEL[p.source] || p.source, 'src') : null, p && p.live ? chip(`今日價 ${fmtDateShort(p.checkedAt)}`, 'live') : (p && p.checkedAt ? h('span', { class: 'tiny' }, fmtDate(p.checkedAt) + ' 查') : null)),
-    lp && lp.qty === 0 ? h('div', { class: 'tiny', style: 'color:var(--attn)' }, `PChome 今日顯示缺貨（${fmtDateShort(lp.checkedAt)}）`) : null,
-    o.price && o.price.note ? h('div', { class: 'tiny', style: 'margin-top:.15rem' }, o.price.note) : null);
+    h('div', { class: 'row wrap' }, h('span', { class: 'price' }, priceText(p)), p && p.source ? chip(SOURCE_LABEL[p.source] || p.source, 'src') : null, p && p.live ? chip(`今日價 ${fmtDateShort(p.checkedAt)}`, 'live') : (p && p.checkedAt ? h('span', { class: 'tiny' }, fmtDateShort(p.checkedAt) + ' 查') : null)),
+    lp && lp.qty === 0 ? h('div', { class: 'tiny', style: 'color:var(--attn)' }, `PChome 今日顯示缺貨`) : null,
+    note ? h('div', { class: 'tiny' }, note) : null);
+}
+function reviewsBlock(o) {
+  const r = o.reviews; if (!r || (!(r.praise || []).length && !(r.complaints || []).length)) return null;
+  const conf = { high: '多個來源一致', medium: '來源較少', low: '資料不多' }[r.confidence] || '';
+  return fold('大家怎麼說' + (conf ? `（${conf}）` : ''), h('div', { class: 'stack-sm small' },
+    (r.praise || []).length ? h('div', {}, h('div', { class: 'eyebrow', style: 'color:var(--ok)' }, '好評'), h('ul', {}, r.praise.map(x => h('li', {}, x)))) : null,
+    (r.complaints || []).length ? h('div', {}, h('div', { class: 'eyebrow', style: 'color:var(--attn)' }, '抱怨／災情'), h('ul', {}, r.complaints.map(x => h('li', {}, x)))) : null,
+    (r.sources || []).length ? h('div', { class: 'tiny' }, '來源：', r.sources.slice(0, 4).map((u, i) => [i ? '、' : '', h('a', { href: u, target: '_blank', rel: 'noopener noreferrer' }, (() => { try { return new URL(u).hostname.replace(/^www\./, ''); } catch { return '連結'; } })())])) : null));
 }
 function optionCard(it, o, { prof, editable }) {
-  const chosen = it.chosenOptionId === o.id, picked = it.pickOptionId === o.id;
+  const qty = pickQty(it, o.id), picked = it.pickOptionId === o.id;
   const kv = [];
   if (prof.show.dims) { if (o.dims) kv.push(['尺寸', o.dims]); if (o.cutout) kv.push(['開孔／預留', o.cutout]); if (o.power) kv.push(['電源', o.power]); if (o.weight) kv.push(['重量', o.weight]); if (o.other) kv.push(['其他', o.other]); }
-  return h('div', { class: 'opt' + (chosen ? ' chosen' : '') + (picked ? ' picked' : '') },
-    h('div', { class: 'row wrap' }, picked ? chip('專家建議', 'pick') : null, tierChip(o.tier), availChip(o.availability), chosen ? chip('已選擇', 's-decided') : null),
+  return h('div', { class: 'opt' + (qty ? ' chosen' : '') + (picked ? ' picked' : '') },
+    h('div', { class: 'row wrap' }, picked ? chip('達人推薦', 'pick') : null, tierChip(o.tier), availChip(o.availability), qty ? chip(`已選${qty > 1 ? ' ×' + qty : ''}`, 's-decided') : null),
     h('div', { class: 'model' }, `${o.brand} ${o.model}`),
     o.name ? h('div', { class: 'name' }, o.name) : null,
-    o.highlights && o.highlights.length ? h('ul', { class: 'hl' }, o.highlights.map(x => h('li', {}, x))) : null,
-    picked && it.pickReason ? h('div', { class: 'pick-reason' }, '建議原因：', it.pickReason) : null,
+    o.highlights && o.highlights.length ? h('ul', { class: 'hl' }, o.highlights.slice(0, 3).map(x => h('li', {}, x))) : null,
+    picked && it.pickReason ? h('div', { class: 'pick-reason' }, it.pickReason) : null,
     prof.show.price ? priceBlock(o) : null,
+    editable ? h('div', { class: 'row between' }, pickControls(it, o, editable), h('button', { class: 'btn sm ghost', type: 'button', onclick: () => openPriceSheet(it, o) }, '回報價格')) : null,
     prof.show.links ? linkButtons(o) : null,
-    kv.length ? h('dl', { class: 'kv' }, kv.map(([k, v]) => [h('dt', {}, k), h('dd', {}, v)])) : null,
+    kv.length ? fold('規格', h('dl', { class: 'kv' }, kv.map(([k, v]) => [h('dt', {}, k), h('dd', {}, v)]))) : null,
+    prof.show.advice ? reviewsBlock(o) : null,
     o.note ? h('div', { class: 'small muted' }, '備註：', o.note) : null,
-    editable ? h('div', { class: 'btn-row' },
-      chosen ? h('button', { class: 'btn', type: 'button', onclick: () => { const e = dispatch({ type: 'choose', itemId: it.id, optionId: null }); if (e) toast('已取消選擇', { undoEntryId: e.id }); } }, '取消選擇')
-        : h('button', { class: 'btn primary', type: 'button', onclick: () => { const e = dispatch({ type: 'choose', itemId: it.id, optionId: o.id }); if (e) toast(`已選 ${o.model}`, { undoEntryId: e.id }); } }, icon('check'), '選這個'),
-      h('button', { class: 'btn', type: 'button', onclick: () => openPriceSheet(it, o) }, '回報價格／連結'),
-      o.tier === '家人推薦' ? h('button', { class: 'btn danger', type: 'button', onclick: async () => { if (await confirmDialog({ title: `移除 ${o.model}？`, text: '只會從方案清單移除，紀錄裡還找得到、也可以還原。', ok: '移除', danger: true })) { const e = dispatch({ type: 'removeOption', itemId: it.id, optionId: o.id }); if (e) toast('已移除', { undoEntryId: e.id }); } } }, icon('trash'), '移除') : null) : null);
+    editable && o.tier === '家人推薦' ? h('button', { class: 'linkbtn small', type: 'button', onclick: async () => { if (await confirmDialog({ title: `移除 ${o.model}？`, text: '紀錄裡還找得到、也可以還原。', ok: '移除', danger: true })) { const e = dispatch({ type: 'removeOption', itemId: it.id, optionId: o.id }); if (e) toast('已移除', { undoEntryId: e.id }); } } }, '移除這個商品') : null);
 }
 function todoRow(t, itemId, editable, ctx) {
   return h('div', { class: 'check-row', 'data-done': String(!!t.done) },
     h('button', { class: 'toggle', type: 'button', disabled: !editable, 'aria-pressed': String(!!t.done), onclick: () => { const e = dispatch({ type: 'toggleTodo', itemId, todoId: t.id, done: !t.done }); if (e && !t.done) toast('已完成', { undoEntryId: e.id }); } },
       h('span', { class: 'box' }, t.done ? icon('check') : null),
-      h('span', {}, h('div', { class: 'label' }, t.text), ctx || t.done ? h('div', { class: 'ctx' }, [ctx, t.done && t.doneBy ? `${t.doneBy} 於 ${fmtTime(t.doneAt)} 完成` : null].filter(Boolean).join('・')) : null)),
+      h('span', {}, h('div', { class: 'label' }, t.text), ctx || t.done ? h('div', { class: 'ctx' }, [ctx, t.done && t.doneBy ? `${t.doneBy} ${fmtTime(t.doneAt)}` : null].filter(Boolean).join('・')) : null)),
     editable ? h('button', { class: 'del', type: 'button', 'aria-label': '刪除', onclick: async () => { if (await confirmDialog({ title: '刪除這個待辦？', text: t.text, ok: '刪除', danger: true })) { const e = dispatch({ type: 'removeTodo', itemId, todoId: t.id }); if (e) toast('已刪除', { undoEntryId: e.id }); } } }, icon('trash')) : h('span', {}));
 }
 function prepRow(p, editable) {
   return h('div', { class: 'check-row', 'data-done': String(!!p.done) },
     h('button', { class: 'toggle', type: 'button', disabled: !editable, 'aria-pressed': String(!!p.done), onclick: () => { const e = dispatch({ type: 'togglePrep', prepId: p.id, done: !p.done }); if (e && !p.done) toast('已完成', { undoEntryId: e.id }); } },
       h('span', { class: 'box' }, p.done ? icon('check') : null),
-      h('span', {}, h('div', { class: 'label' }, p.text), h('div', { class: 'ctx' }, [p.trade, p.done && p.doneBy ? `${p.doneBy} 於 ${fmtTime(p.doneAt)} 完成` : null].filter(Boolean).join('・')))),
+      h('span', {}, h('div', { class: 'label' }, p.text), p.done && p.doneBy ? h('div', { class: 'ctx' }, `${p.doneBy} ${fmtTime(p.doneAt)}`) : null)),
     h('span', {}, tagChip(p.trade)));
 }
 
@@ -946,14 +1014,13 @@ function renderTodos() {
   const groups = []; const general = (state.todos || []); if (general.length) groups.push({ title: '一般待辦', itemId: null, todos: general });
   state.items.forEach(it => { if (it.todos.length) groups.push({ title: it.name, itemId: it.id, todos: it.todos }); });
   const openTotal = groups.reduce((n, g) => n + g.todos.filter(t => !t.done).length, 0);
-  out.push(h('div', { class: 'row between' }, h('p', { class: 'muted' }, `品項待辦未完成 ${openTotal} 項`), editable ? h('button', { class: 'btn primary', type: 'button', onclick: () => openAddTodoSheet(null) }, icon('plus'), '新增待辦') : null));
-  groups.forEach(g => { const open = g.todos.filter(t => !t.done); if (open.length) out.push(section(g.title, null, h('div', { class: 'stack-sm' }, open.map(t => todoRow(t, g.itemId, editable))))); });
+  out.push(h('div', { class: 'row between' }, h('p', { class: 'muted' }, `未完成 ${openTotal} 項`), editable ? h('button', { class: 'btn primary', type: 'button', onclick: () => openAddTodoSheet(null) }, icon('plus'), '新增') : null));
+  groups.forEach(g => { const open = g.todos.filter(t => !t.done); if (open.length) out.push(h('section', { class: 'stack' }, h('h2', { class: 'h-sec' }, g.title), h('div', { class: 'stack-sm' }, open.map(t => todoRow(t, g.itemId, editable))))); });
   const prepGroups = [...new Set(state.prep.map(p => p.group))]; const prepOpen = state.prep.filter(p => !p.done).length;
   out.push(h('h2', { class: 'h-room', style: 'margin-top:.4rem' }, '全屋前置工程', h('span', { class: 'count' }, `${prepOpen} 未完成`)));
-  out.push(h('p', { class: 'small muted', style: 'margin-top:-.5rem' }, '水電／木作施工前要先做好的事，和師傅確認完成就打勾。'));
-  prepGroups.forEach(gn => { const ps = state.prep.filter(p => p.group === gn && !p.done); if (ps.length) out.push(section(gn, null, h('div', { class: 'stack-sm' }, ps.map(p => prepRow(p, editable))))); });
+  prepGroups.forEach(gn => { const ps = state.prep.filter(p => p.group === gn && !p.done); if (ps.length) out.push(h('section', { class: 'stack' }, h('h2', { class: 'h-sec' }, gn), h('div', { class: 'stack-sm' }, ps.map(p => prepRow(p, editable))))); });
   const doneList = []; groups.forEach(g => g.todos.filter(t => t.done).forEach(t => doneList.push(todoRow(t, g.itemId, editable, g.title)))); state.prep.filter(p => p.done).forEach(p => doneList.push(prepRow(p, editable)));
-  if (doneList.length) out.push(h('details', { class: 'card flat' }, h('summary', { style: 'cursor:pointer;font-weight:800;min-height:2.4rem;display:flex;align-items:center' }, `已完成（${doneList.length}）`), h('div', { class: 'stack-sm', style: 'margin-top:.5rem' }, doneList)));
+  if (doneList.length) out.push(fold(`已完成（${doneList.length}）`, h('div', { class: 'stack-sm' }, doneList), { cls: 'card flat' }));
   return out;
 }
 
@@ -961,9 +1028,8 @@ function renderTodos() {
 let historyShown = 30;
 function renderHistory() {
   const out = [pendingBanner()], editable = canEdit();
-  out.push(h('div', { class: 'banner info' }, icon('history'), h('div', {}, '每一筆修改都記下了是誰、哪台裝置、幾月幾號幾點改的。改錯了可以按「還原這一筆」，或「回到這之前」一次復原後面所有修改。雲端（Google 試算表）也有同樣的紀錄與快照。')));
+  out.push(h('p', { class: 'small muted' }, '每一筆都記下誰、哪台裝置、幾點改的；改錯了可以還原。'));
   const hist = [...state.history].reverse();
-  if (state.historyTrimmedAt) out.push(h('p', { class: 'tiny' }, `為了控制大小，${fmtTime(state.historyTrimmedAt, true)} 之前較舊的紀錄已精簡（試算表裡仍有完整紀錄）。`));
   if (!hist.length) out.push(h('div', { class: 'card' }, h('p', { class: 'muted' }, '還沒有任何修改。')));
   const list = h('div', { class: 'card flat' });
   hist.slice(0, historyShown).forEach(e => {
@@ -971,13 +1037,12 @@ function renderHistory() {
     list.append(h('div', { class: 'hist' }, h('div', { class: 'dot' + (e.restore ? ' restore' : '') }),
       h('div', {}, h('div', { class: 'when' }, fmtTime(e.ts, true)), h('div', { class: 'who' }, `${e.who}・${e.device}`), h('div', { class: 'what' }, e.summary),
         editable && e.changes && e.changes.length ? h('div', { class: 'acts' },
-          h('button', { class: 'btn sm', type: 'button', onclick: async () => { if (await confirmDialog({ title: '還原這一筆修改？', text: e.summary + '\n會把這一筆改回修改前的樣子（之後的其他修改不受影響）。', ok: '還原' })) { const r = dispatch({ type: 'restore', entryId: e.id }); if (r) toast('已還原', { undoEntryId: r.id }); } } }, icon('undo'), '還原這一筆'),
-          !isLatest ? h('button', { class: 'btn sm', type: 'button', onclick: async () => { const n = state.history.length - state.history.findIndex(x => x.id === e.id); if (await confirmDialog({ title: `回到 ${fmtTime(e.ts, true)} 之前？`, text: `會一次復原這一筆和之後共 ${n} 筆修改。復原本身也會留下紀錄，隨時可以再還原。`, ok: '回到這之前', danger: true })) { const r = dispatch({ type: 'restoreTo', entryId: e.id }); if (r) toast(`已復原 ${n} 筆`, { undoEntryId: r.id }); } } }, '回到這之前') : null) : null)));
+          h('button', { class: 'btn sm', type: 'button', onclick: async () => { if (await confirmDialog({ title: '還原這一筆？', text: e.summary, ok: '還原' })) { const r = dispatch({ type: 'restore', entryId: e.id }); if (r) toast('已還原', { undoEntryId: r.id }); } } }, icon('undo'), '還原'),
+          !isLatest ? h('button', { class: 'btn sm', type: 'button', onclick: async () => { const n = state.history.length - state.history.findIndex(x => x.id === e.id); if (await confirmDialog({ title: `回到 ${fmtTime(e.ts, true)} 之前？`, text: `會一次復原 ${n} 筆修改（復原本身也會留下紀錄）。`, ok: '回到這之前', danger: true })) { const r = dispatch({ type: 'restoreTo', entryId: e.id }); if (r) toast(`已復原 ${n} 筆`, { undoEntryId: r.id }); } } }, '回到這之前') : null) : null)));
   });
   out.push(list);
   if (hist.length > historyShown) out.push(h('button', { class: 'btn block', type: 'button', onclick: () => { historyShown += 30; render(); } }, `顯示更多（還有 ${hist.length - historyShown} 筆）`));
-  out.push(h('p', { class: 'tiny', style: 'text-align:center' }, `共 ${state.history.length} 筆紀錄・台灣時間`));
-  if (API.configured && editable) out.push(h('button', { class: 'btn outline block', type: 'button', onclick: openSnapshotsSheet }, icon('cloud'), '雲端快照（可整份回復）'));
+  if (API.configured && editable) out.push(h('button', { class: 'btn outline block', type: 'button', onclick: openSnapshotsSheet }, icon('cloud'), '雲端快照'));
   return out;
 }
 
@@ -996,7 +1061,7 @@ function shareTextFor(profileId) {
 async function shareLink(profileId) {
   const url = shareUrlFor(profileId), text = shareTextFor(profileId);
   if (navigator.share) { try { await navigator.share({ title: state.meta.title, text, url }); return; } catch (e) { if (e && e.name === 'AbortError') return; } }
-  await copyText(text + '\n' + url, '已複製連結與說明，可以貼到 LINE 傳給對方');
+  await copyText(text + '\n' + url, '已複製連結，可以貼到 LINE');
 }
 async function copyText(text, msg) {
   try { await navigator.clipboard.writeText(text); toast(msg || '已複製'); }
@@ -1006,29 +1071,27 @@ async function copyText(text, msg) {
 /* ---------- more ---------- */
 function renderMore() {
   const editable = canEdit(), out = [pendingBanner()];
-  out.push(h('div', { class: 'card' }, h('div', { class: 'eyebrow' }, '分享給家人（固定網址，不用登入）'),
+  out.push(h('div', { class: 'card' }, h('div', { class: 'eyebrow' }, '分享給家人'),
     h('input', { class: 'input', value: baseUrl(), readonly: true, onclick: e => e.target.select() }),
-    h('div', { class: 'btn-row' }, h('button', { class: 'btn primary', type: 'button', onclick: () => shareLink('family') }, icon('share'), '分享給家人'), h('button', { class: 'btn', type: 'button', onclick: () => copyText(baseUrl(), '已複製網址') }, '複製網址')),
-    h('p', { class: 'small muted' }, '家人打開後輸入稱呼就能一起修改，手機會記住。')));
+    h('div', { class: 'btn-row' }, h('button', { class: 'btn primary', type: 'button', onclick: () => shareLink('family') }, icon('share'), '分享'), h('button', { class: 'btn', type: 'button', onclick: () => copyText(baseUrl(), '已複製網址') }, '複製網址'))));
   out.push(h('div', { class: 'card' }, h('div', { class: 'eyebrow' }, '設計師專用連結'),
-    h('p', { class: 'small muted' }, '設計師打開這個連結，看到的是各品項的尺寸、開孔、電壓迴路、給排水與排風需求，以及全屋前置工程，可直接列印。'),
+    h('p', { class: 'small muted' }, '設計師打開只看到尺寸、開孔、電壓迴路、給排水與排風需求，可直接列印。'),
     h('input', { class: 'input', value: shareUrlFor('designer'), readonly: true, onclick: e => e.target.select() }),
-    h('div', { class: 'btn-row' }, h('button', { class: 'btn primary', type: 'button', onclick: () => shareLink('designer') }, icon('share'), '傳給設計師'), h('button', { class: 'btn', type: 'button', onclick: () => copyText(shareUrlFor('designer'), '已複製設計師連結') }, '複製連結'), h('button', { class: 'btn', type: 'button', onclick: () => go({ screen: 'doc' }) }, '預覽'))));
+    h('div', { class: 'btn-row' }, h('button', { class: 'btn primary', type: 'button', onclick: () => shareLink('designer') }, icon('share'), '傳給設計師'), h('button', { class: 'btn', type: 'button', onclick: () => copyText(shareUrlFor('designer'), '已複製設計師連結') }, '複製'), h('button', { class: 'btn', type: 'button', onclick: () => go({ screen: 'doc' }) }, '預覽'))));
   out.push(h('div', { class: 'card' }, h('div', { class: 'eyebrow' }, '我是誰'),
-    h('div', { class: 'row between' }, h('div', {}, h('div', { style: 'font-size:1.2rem;font-weight:800' }, (me && me.name) || '（尚未設定）'), h('div', { class: 'small muted' }, '這台裝置：' + deviceName()), me && me.deviceName ? h('div', { class: 'tiny' }, '偵測到：' + deviceLabel()) : null), h('button', { class: 'btn', type: 'button', onclick: openNameSheet }, '變更'))));
+    h('div', { class: 'row between' }, h('div', {}, h('div', { style: 'font-size:1.2rem;font-weight:800' }, (me && me.name) || '（尚未設定）'), h('div', { class: 'small muted' }, deviceName())), h('button', { class: 'btn', type: 'button', onclick: openNameSheet }, '變更'))));
   const curFont = store.get(KEYS.font, 'std');
   out.push(h('div', { class: 'card' }, h('div', { class: 'eyebrow' }, '文字大小'), h('div', { class: 'seg' }, [['std', '標準'], ['lg', '大'], ['xl', '特大']].map(([v, l]) => h('button', { class: 'btn', type: 'button', 'aria-pressed': String(curFont === v), onclick: () => { store.set(KEYS.font, v); render(); } }, l)))));
-  out.push(h('div', { class: 'card' }, h('div', { class: 'eyebrow' }, '操作教學'), h('p', { class: 'small muted' }, '五個步驟，一分鐘看完：怎麼選方案、打勾、還原、分享。'), h('button', { class: 'btn outline', type: 'button', onclick: () => showTutorial('family') }, icon('book'), '再看一次操作教學')));
-  // cloud
-  const cloudLabel = !API.configured ? '尚未設定（見 SETUP.md）' : ({ ok: '已連線', none: '已連線（雲端還沒有資料，第一次儲存時會建立）', offline: '連不上', unknown: '連線中…' })[remoteStatus] || remoteStatus;
+  out.push(h('div', { class: 'card' }, h('div', { class: 'row between' }, h('div', { class: 'eyebrow' }, '操作教學'), h('button', { class: 'btn sm', type: 'button', onclick: () => showTutorial('family') }, icon('book'), '再看一次'))));
+  const cloudLabel = !API.configured ? '尚未設定' : ({ ok: '已連線', none: '已連線（尚無資料）', offline: '連不上', unknown: '連線中…' })[remoteStatus] || remoteStatus;
   const reqs = []; state.items.forEach(it => it.requests.filter(r => r.status === 'pending').forEach(r => reqs.push({ it, r })));
-  out.push(h('div', { class: 'card' }, h('div', { class: 'eyebrow' }, '雲端（Google 試算表）'),
-    h('div', { class: 'kv' }, h('dt', {}, '狀態'), h('dd', {}, cloudLabel), h('dt', {}, '最後同步'), h('dd', {}, lastSyncAt ? fmtTime(lastSyncAt, true) : '—'), h('dt', {}, '資料版本'), h('dd', {}, `第 ${state.rev} 版・${fmtTime(state.updatedAt, true)}`), h('dt', {}, '未同步'), h('dd', {}, pending.length ? `${pending.length} 筆` : '無'), h('dt', {}, '家庭代碼'), h('dd', {}, API.code ? '已設定' : '未設定')),
-    h('div', { class: 'btn-row' }, API.configured ? h('button', { class: 'btn sm', type: 'button', onclick: () => { pollRemote(); toast('已重新同步'); } }, '重新同步') : null, h('button', { class: 'btn sm', type: 'button', onclick: askFamilyCode }, API.code ? '更改家庭代碼' : '輸入家庭代碼'), h('button', { class: 'btn sm', type: 'button', onclick: downloadBackup }, '下載備份檔'), API.configured ? h('button', { class: 'btn sm', type: 'button', onclick: openSnapshotsSheet }, '雲端快照') : null),
-    h('details', {}, h('summary', { class: 'tiny', style: 'cursor:pointer;min-height:2rem;display:flex;align-items:center' }, '進階：連線網址'), h('div', { class: 'row', style: 'margin-top:.3rem' }, h('input', { class: 'input grow', id: 'apiInput', value: store.get(KEYS.api, '') || '', placeholder: API.url || 'https://script.google.com/macros/s/…/exec' }), h('button', { class: 'btn sm', type: 'button', onclick: () => { const v = $('#apiInput').value.trim(); if (v) store.set(KEYS.api, v); else store.del(KEYS.api); location.reload(); } }, '套用')), h('p', { class: 'tiny' }, '通常不用改：網站會自動讀取 config.json 的設定。這裡只覆蓋這台裝置。'))));
-  if (reqs.length) out.push(h('div', { class: 'card' }, h('div', { class: 'eyebrow' }, `請 Claude 幫忙查（${reqs.length}）`), h('div', { class: 'stack-sm' }, reqs.map(({ it, r }) => h('div', { class: 'note' }, h('div', { class: 'who' }, it.name), h('div', { class: 'txt' }, r.query || '', r.url ? h('div', {}, h('a', { href: r.url, target: '_blank', rel: 'noopener noreferrer' }, r.url)) : null), h('div', { class: 'when' }, `${r.who}・${fmtTime(r.ts, true)}`))))));
-  out.push(h('div', { class: 'card' }, h('div', { class: 'eyebrow' }, '關於'), h('p', { class: 'small muted' }, `${state.meta.title} v${APP_VERSION}。資料來源：2026/8/22 全屋家電採購報告＋MOMO／PChome 逐項實查；PChome 價格每日自動更新。${state.meta.priceNote}`),
-    h('button', { class: 'linkbtn', type: 'button', onclick: async () => { if (await confirmDialog({ title: '重設這台裝置？', text: '會清掉這台裝置記住的稱呼、身分與家庭代碼（雲端資料不受影響）。', ok: '重設', danger: true })) { [KEYS.me, KEYS.font, KEYS.code, KEYS.tut, KEYS.tut + '_designer'].forEach(k => store.del(k)); location.reload(); } } }, '重設這台裝置的設定')));
+  out.push(fold('雲端與備份', h('div', { class: 'stack' },
+    h('div', { class: 'kv' }, h('dt', {}, '狀態'), h('dd', {}, cloudLabel), h('dt', {}, '最後同步'), h('dd', {}, lastSyncAt ? fmtTime(lastSyncAt, true) : '—'), h('dt', {}, '版本'), h('dd', {}, `第 ${state.rev} 版`), h('dt', {}, '未同步'), h('dd', {}, pending.length ? `${pending.length} 筆` : '無'), h('dt', {}, '家庭代碼'), h('dd', {}, API.code ? '已設定' : '未設定')),
+    h('div', { class: 'btn-row' }, API.configured ? h('button', { class: 'btn sm', type: 'button', onclick: () => { pollRemote(); toast('已重新同步'); } }, '重新同步') : null, h('button', { class: 'btn sm', type: 'button', onclick: askFamilyCode }, API.code ? '更改家庭代碼' : '輸入家庭代碼'), h('button', { class: 'btn sm', type: 'button', onclick: downloadBackup }, '下載備份'), API.configured ? h('button', { class: 'btn sm', type: 'button', onclick: openSnapshotsSheet }, '雲端快照') : null),
+    h('div', { class: 'row', style: 'margin-top:.3rem' }, h('input', { class: 'input grow', id: 'apiInput', value: store.get(KEYS.api, '') || '', placeholder: '連線網址（通常不用改）' }), h('button', { class: 'btn sm', type: 'button', onclick: () => { const v = $('#apiInput').value.trim(); if (v) store.set(KEYS.api, v); else store.del(KEYS.api); location.reload(); } }, '套用')),
+    reqs.length ? h('div', {}, h('div', { class: 'eyebrow' }, `請 Claude 幫忙查（${reqs.length}）`), reqs.map(({ it, r }) => h('div', { class: 'note' }, h('div', { class: 'who' }, it.name), h('div', { class: 'txt' }, r.query || r.url), h('div', { class: 'when' }, `${r.who}・${fmtTime(r.ts, true)}`)))) : null,
+    h('p', { class: 'tiny' }, `${state.meta.title} v${APP_VERSION}・${state.meta.priceNote}`),
+    h('button', { class: 'linkbtn', type: 'button', onclick: async () => { if (await confirmDialog({ title: '重設這台裝置？', text: '會清掉這台裝置記住的稱呼與家庭代碼（雲端資料不受影響）。', ok: '重設', danger: true })) { [KEYS.me, KEYS.font, KEYS.code, KEYS.tut, KEYS.tut + '_designer'].forEach(k => store.del(k)); location.reload(); } } }, '重設這台裝置')), { cls: 'card flat' }));
   return out;
 }
 async function downloadBackup() {
@@ -1046,17 +1109,17 @@ function renderDocScreen(preview) {
   return [topbar({ back, title: '設計與水電需求', right }), h('main', { class: 'content' }, ...renderDoc(p)), toastHost()];
 }
 function renderDoc(p) {
-  const out = [], items = state.items.filter(i => i.status !== 'skipped'), decided = items.filter(i => chosenOption(i));
+  const out = [], items = state.items.filter(i => i.status !== 'skipped'), decided = items.filter(i => picksOf(i).length);
   const noPrice = !p.show.price, txt = t => noPrice ? stripPriceSentences(t) : t;
   out.push(h('div', { class: 'doc' }, h('div', { class: 'doc-head' }, h('p', { class: 'eyebrow' }, '設計與水電需求總表'), h('h2', {}, state.meta.title), h('p', { class: 'muted' }, state.meta.subtitle),
     h('p', { class: 'small muted', style: 'margin-top:.3rem' }, `資料更新：${fmtTime(state.updatedAt, true)}（台灣時間）・已決定 ${decided.length}／${items.length} 項`))));
-  out.push(h('div', { class: 'banner info no-print' }, icon('info'), h('div', { class: 'small' }, '怎麼看：每個品項列出「選定型號」（或候選方案）的尺寸、開孔與電源；安裝須知用顏色標籤分 ', tagChip('電'), ' ', tagChip('水'), ' ', tagChip('排風'), ' ', tagChip('尺寸'), '。最下方是全屋前置工程清單與自來水硬度。內容由屋主隨時更新，列印前建議重新整理。')));
+  out.push(h('div', { class: 'banner info no-print' }, icon('info'), h('div', { class: 'small' }, '每個品項列出「選定型號」（或候選方案）的尺寸、開孔與電源；安裝須知用標籤分 ', tagChip('電'), ' ', tagChip('水'), ' ', tagChip('排風'), ' ', tagChip('尺寸'), '。最下方是全屋前置工程清單。內容由屋主隨時更新，列印前建議重新整理。')));
   if (p.show.install) {
     const short = t => { const x = (t || '').split(/[；（(，,。]/)[0].trim(); return x.length > 16 ? x.slice(0, 16) + '…' : x; };
-    const quick = items.map(i => { const o = chosenOption(i); const tags = [...new Set(i.install.map(n => n.tag))]; const powerNote = i.install.find(n => n.tag === '電'); const chips = [chip('電：' + short((o && o.power) || (powerNote && powerNote.text) || '—'), 'tag tag-電')]; ['水', '排水', '排風', '搬運'].forEach(t => { if (tags.includes(t)) chips.push(tagChip(t)); }); if (o && o.cutout) chips.push(chip('開孔：' + short(o.cutout), 'tag tag-尺寸')); return h('div', { class: 'row wrap', style: 'padding:.45rem 0;border-top:1px solid var(--line)' }, h('b', { style: 'min-width:7em' }, i.name), h('span', { class: 'tiny' }, o ? `${o.brand} ${o.model}` : '未決定'), h('span', { class: 'row wrap', style: 'gap:.3rem' }, chips)); });
-    const rows = items.map(i => { const o = chosenOption(i); const byTag = t => i.install.filter(n => t.includes(n.tag)).map(n => txt(n.text)).filter(Boolean).join('；'); return h('tr', {}, h('td', {}, h('b', {}, i.name), h('div', { class: 'tiny' }, o ? `${o.brand} ${o.model}` : '未決定')), h('td', {}, byTag(['電'])), h('td', {}, byTag(['水', '排水'])), h('td', {}, byTag(['排風'])), h('td', {}, [o && o.cutout, byTag(['尺寸', '搬運'])].filter(Boolean).join('；'))); });
+    const quick = items.map(i => { const o = chosenOption(i); const tags = [...new Set(i.install.map(n => n.tag))]; const powerNote = i.install.find(n => n.tag === '電'); const chips = [chip('電：' + short((o && o.power) || (powerNote && powerNote.text) || '—'), 'tag tag-電')]; ['水', '排水', '排風', '搬運'].forEach(t => { if (tags.includes(t)) chips.push(tagChip(t)); }); if (o && o.cutout) chips.push(chip('開孔：' + short(o.cutout), 'tag tag-尺寸')); return h('div', { class: 'row wrap', style: 'padding:.45rem 0;border-top:1px solid var(--line)' }, h('b', { style: 'min-width:7em' }, i.name, (i.defaultQty || 1) > 1 || pickCount(i) > 1 ? h('span', { class: 'tiny' }, ` ×${pickCount(i) || i.defaultQty}`) : null), h('span', { class: 'tiny' }, o ? picksText(i, false) : '未決定'), h('span', { class: 'row wrap', style: 'gap:.3rem' }, chips)); });
+    const rows = items.map(i => { const o = chosenOption(i); const byTag = t => i.install.filter(n => t.includes(n.tag)).map(n => txt(n.text)).filter(Boolean).join('；'); return h('tr', {}, h('td', {}, h('b', {}, i.name), h('div', { class: 'tiny' }, o ? picksText(i, false) : '未決定')), h('td', {}, pickCount(i) || i.defaultQty || 1), h('td', {}, byTag(['電'])), h('td', {}, byTag(['水', '排水'])), h('td', {}, byTag(['排風'])), h('td', {}, [o && o.cutout, byTag(['尺寸', '搬運'])].filter(Boolean).join('；'))); });
     out.push(h('div', { class: 'doc' }, h('h3', { class: 'h-room' }, '需求總表'), h('div', { class: 'card flat only-narrow' }, quick, h('p', { class: 'tiny', style: 'margin-top:.4rem' }, '速覽；完整內容見下方各品項。')),
-      h('div', { class: 'table-wrap only-wide' }, h('table', { class: 'ctable' }, h('thead', {}, h('tr', {}, h('th', {}, '品項'), h('th', {}, '電'), h('th', {}, '給水／排水'), h('th', {}, '排風'), h('th', {}, '尺寸／預留／搬運'))), h('tbody', {}, rows)))));
+      h('div', { class: 'table-wrap only-wide' }, h('table', { class: 'ctable' }, h('thead', {}, h('tr', {}, h('th', {}, '品項'), h('th', {}, '數量'), h('th', {}, '電'), h('th', {}, '給水／排水'), h('th', {}, '排風'), h('th', {}, '尺寸／預留／搬運'))), h('tbody', {}, rows)))));
   }
   const docEl = h('div', { class: 'doc' });
   state.rooms.forEach(r => { const its = items.filter(i => i.roomId === r.id); if (!its.length) return; const roomEl = h('div', { class: 'room' }, h('h3', {}, r.name, h('span', { class: 'small muted', style: 'font-weight:500;font-family:var(--sans)' }, `${its.length} 項`))); its.forEach(i => roomEl.append(docItem(i, p))); docEl.append(roomEl); });
@@ -1070,22 +1133,22 @@ function renderDoc(p) {
   return out;
 }
 function docItem(i, p) {
-  const o = chosenOption(i), noPrice = !p.show.price, txt = t => noPrice ? stripPriceSentences(t) : t;
-  const el = h('div', { class: 'ditem' }, h('h4', {}, tile(i), i.name, statusChip(i.status), i.hardReq ? chip('硬需求', 'tag') : null));
+  const ps = picksOf(i), noPrice = !p.show.price, txt = t => noPrice ? stripPriceSentences(t) : t;
+  const el = h('div', { class: 'ditem' }, h('h4', {}, tile(i), i.name, statusChip(i.status), (i.defaultQty || 1) > 1 ? chip(`建議 ${i.defaultQty} 台`, 'tag') : null, i.hardReq ? chip('硬需求', 'tag') : null));
   if (i.hardReq) el.append(h('p', { class: 'small' }, h('b', {}, '硬需求：'), i.hardReq));
-  const optBlock = (opt, label) => {
+  const optBlock = (opt, label, qty) => {
     const rows = []; const hl = (opt.highlights || []).map(txt).filter(Boolean);
     if (p.show.dims) [['尺寸', opt.dims], ['開孔／預留', opt.cutout], ['電源', opt.power], ['重量', opt.weight], ['其他', opt.other]].forEach(([k, v]) => { const t = txt(v); if (t) rows.push([k, t]); });
     if (p.show.price) rows.push(['價格', priceText(effectivePrice(opt))]);
-    return h('div', {}, h('div', { style: 'font-weight:800' }, label ? label + '：' : '', `${opt.brand} ${opt.model}`, ' ', tierChip(opt.tier), i.pickOptionId === opt.id ? [' ', chip('專家建議', 'pick')] : null), txt(opt.name) ? h('div', { class: 'small muted' }, txt(opt.name)) : null,
+    return h('div', {}, h('div', { style: 'font-weight:800' }, label ? label + '：' : '', `${opt.brand} ${opt.model}`, qty > 1 ? ` ×${qty}` : '', ' ', tierChip(opt.tier), i.pickOptionId === opt.id ? [' ', chip('達人推薦', 'pick')] : null), txt(opt.name) ? h('div', { class: 'small muted' }, txt(opt.name)) : null,
       hl.length ? h('ul', { class: 'small muted', style: 'margin:.2rem 0' }, hl.map(x => h('li', {}, x))) : null,
       rows.length ? h('table', {}, h('tbody', {}, rows.map(([k, v]) => h('tr', {}, h('th', {}, k), h('td', {}, v))))) : null, p.show.links ? linkButtons(opt) : null);
   };
-  if (o) el.append(optBlock(o, '選定'));
+  if (ps.length) ps.forEach(pk => el.append(optBlock(pk.option, '選定', pk.qty)));
   else if (p.show.options && i.options.length) { el.append(h('div', { class: 'small muted' }, '尚未決定，候選方案：')); sortedOptions(i).forEach(opt => el.append(optBlock(opt))); }
   else el.append(h('div', { class: 'small muted' }, '尚未決定型號'));
   if (p.show.install && i.install.length) el.append(h('div', {}, h('div', { class: 'eyebrow', style: 'margin-top:.3rem' }, '安裝須知'), installList(i.install, noPrice)));
-  if (p.show.advice && txt(i.advice)) el.append(h('div', {}, h('div', { class: 'eyebrow', style: 'margin-top:.3rem' }, '專家建議'), h('p', { class: 'small' }, txt(i.advice))));
+  if (p.show.advice && txt(i.advice)) el.append(h('div', {}, h('div', { class: 'eyebrow', style: 'margin-top:.3rem' }, '建議'), h('p', { class: 'small' }, txt(i.advice))));
   const warns = i.warnings.map(txt).filter(Boolean); if (warns.length && (p.show.advice || p.show.install)) el.append(h('ul', { class: 'small', style: 'color:var(--attn)' }, warns.map(w => h('li', {}, w))));
   if (p.show.price && i.costNotes.length) el.append(h('div', {}, h('div', { class: 'eyebrow', style: 'margin-top:.3rem' }, '費用參考'), h('ul', { class: 'small' }, i.costNotes.map(c => h('li', {}, c)))));
   if (p.show.notes && i.notes.length) el.append(h('div', {}, h('div', { class: 'eyebrow', style: 'margin-top:.3rem' }, '家人留言'), i.notes.map(n => h('div', { class: 'note' }, h('span', { class: 'who' }, n.who), ' ', h('span', { class: 'when' }, fmtTime(n.ts, true)), h('div', { class: 'txt' }, n.text)))));
@@ -1249,14 +1312,14 @@ const TUT_PICS = {
 function showTutorial(kind) {
   const steps = kind === 'designer' ? [
     { pic: 'doc', t: '這是一份需求總表', d: '屋主選好的家電，自動整理成尺寸、開孔、電壓迴路、給排水與排風需求。' },
-    { pic: 'check', t: '顏色標籤＝工種', d: '黃色「電」、藍色「水／排水」、綠色「排風」、紫色「尺寸」。最下面是全屋前置工程清單與自來水硬度資料。' },
-    { pic: 'share', t: '可以列印、也可以轉傳', d: '右上角「列印」直接印成 A4；內容由屋主隨時更新，打開就是最新版。' }
+    { pic: 'check', t: '顏色標籤＝工種', d: '黃色「電」、藍色「水」、綠色「排風」、紫色「尺寸」。最下面是全屋前置工程與自來水硬度。' },
+    { pic: 'share', t: '可以列印、也可以轉傳', d: '右上角「列印」印成 A4；內容隨時更新，打開就是最新版。' }
   ] : [
-    { pic: 'house', t: '全家共用的採購清單', d: '14 項家電，每一項都整理好幾個方案可以比較。網址固定、不用登入，打開就能用。' },
-    { pic: 'tap', t: '點進品項，按「選這個」', d: '方案卡片上有優點、價格、購買連結與比價。有「專家建議」標記的排在最前面。決定後再按「已購買」「已安裝」記錄進度。' },
-    { pic: 'check', t: '待辦：做完就打勾', d: '量尺寸、拉電線、確認規格都列在「待辦」。打勾會記下是誰、什麼時候完成。' },
-    { pic: 'undo', t: '改錯了不用怕', d: '每一筆修改都有紀錄（誰、哪台裝置、幾點）。按「還原」就回到修改前，或回到某個時間點。' },
-    { pic: 'share', t: '分享給家人與設計師', d: '「更多」裡可以分享給家人，或產生「設計師專用連結」：設計師打開只會看到尺寸、開孔與安裝需求，可直接列印。' }
+    { pic: 'house', t: '全家一起用的清單', d: '每個家電都整理好幾個方案。網址固定、不用登入。' },
+    { pic: 'tap', t: '點進品項，按「加入清單」', d: '可以選好幾個方案、調整數量。買了就按「已購買」。' },
+    { pic: 'check', t: '待辦做完打勾', d: '量尺寸、拉電線都在「待辦」，打勾會記下是誰完成的。' },
+    { pic: 'undo', t: '改錯了不用怕', d: '每一筆修改都有紀錄，按「還原」就回到之前。' },
+    { pic: 'share', t: '分享', d: '「更多」可以分享給家人，或產生設計師專用連結。' }
   ];
   let i = 0;
   const dlg = h('dialog', { class: 'tut' });
