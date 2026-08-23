@@ -90,6 +90,7 @@ const sstore = {
   del(k) { try { sessionStorage.removeItem(k); } catch {} }
 };
 function fmtMoney(n) { return 'NT$' + Math.round(n).toLocaleString('en-US'); }
+function fmtWan(n) { if (n == null) return '—'; if (n >= 10000) return (n / 10000).toFixed(1).replace(/\.0$/, '') + ' 萬'; return Math.round(n).toLocaleString('en-US'); }
 function priceText(p) {
   if (!p) return '價格待查';
   if (typeof p.amount === 'number') return fmtMoney(p.amount);

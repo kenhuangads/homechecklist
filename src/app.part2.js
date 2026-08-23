@@ -127,7 +127,7 @@ function renderList() {
   const est = { cp: 0, mid: 0, top: 0 }; active.forEach(i => ['cp', 'mid', 'top'].forEach(k => { const v = tierEstimate(i, k); if (v != null) est[k] += v * (i.defaultQty || 1); }));
   const out = [pendingBanner()];
   out.push(h('div', { class: 'hero' },
-    h('div', {}, h('h2', { class: 'h-hero' }, state.meta.title), h('p', { class: 'sub' }, `已決定 ${decided}／${active.length}・已購買 ${bought}${decidedN ? `・設備 ${fmtMoney(decidedSum)}` : ''}`)),
+    h('div', {}, h('h2', { class: 'h-hero' }, state.meta.title), h('p', { class: 'sub' }, `已決定 ${decided}／${active.length}・已購買 ${bought}${decidedN ? `・設備 ${fmtWan(decidedSum)}` : ''}`)),
     h('div', { class: 'ring', style: `--p:${pct}` }, h('span', {}, `${pct}%`, h('small', {}, '已決定'))),
     h('div', { class: 'hero-actions' }, h('button', { class: 'btn sm', type: 'button', onclick: () => shareLink('family') }, icon('share'), '分享給家人'), h('button', { class: 'btn sm', type: 'button', onclick: () => go({ screen: 'tab', tab: 'more' }) }, icon('book'), '設計師連結'))));
   const ns = nextStep();
@@ -141,12 +141,15 @@ function renderList() {
       h('p', { class: 'small muted' }, decidedN ? `已決定 ${decidedN} 項的合計（含數量）` : '還沒有已決定的品項'),
       decidedN ? h('div', { class: 'cost-rows' },
         h('div', { class: 'row between' }, h('span', {}, '設備'), h('b', {}, fmtMoney(decidedSum))),
-        inst.n ? h('div', { class: 'row between' }, h('span', {}, '安裝工程估算'), h('b', {}, installText({ min: inst.min, max: inst.max }))) : null,
+        inst.n ? h('div', { class: 'row between' }, h('span', {}, '安裝工程'), h('b', {}, installText({ min: inst.min, max: inst.max }))) : null,
         inst.n ? h('div', { class: 'row between total' }, h('span', {}, '總計'), h('b', { class: 'price' }, installText({ min: decidedSum + inst.min, max: decidedSum + inst.max }))) : null,
         h('p', { class: 'tiny' }, inst.n ? `安裝工程含拉線、開孔、配管、吊掛等（${inst.n} 項已估）；未選的品項未計入。` : '安裝工程費用尚未估算')) : null,
       instAll.n ? h('p', { class: 'tiny' }, `若全部品項都裝，安裝工程估約 ${installText({ min: instAll.min, max: instAll.max })}。`) : null,
-      h('div', { class: 'summary' }, [['cp', '全選高CP值'], ['mid', '全選高級'], ['top', '全選頂級']].map(([k, l]) => h('div', { class: 'cell' }, h('div', { class: 'v', style: 'font-size:1rem' }, fmtMoney(est[k])), h('div', { class: 'k' }, l)))),
-      h('div', { class: 'table-wrap' }, h('table', { class: 'ctable', style: 'min-width:420px' }, h('thead', {}, h('tr', {}, h('th', {}, '品項'), h('th', {}, '數量'), h('th', {}, '高CP值'), h('th', {}, '高級'), h('th', {}, '頂級'))),
+      h('div', { class: 'summary' }, [['cp', '全選高CP值'], ['mid', '全選高級'], ['top', '全選頂級']].map(([k, l]) => h('div', { class: 'cell' }, h('div', { class: 'v' }, fmtWan(est[k])), h('div', { class: 'k' }, l)))),
+      h('div', { class: 'only-narrow' }, active.map(i => { const qy = i.defaultQty || 1; return h('div', { class: 'budget-item' },
+        h('div', { class: 'nm' }, i.name, qy > 1 ? h('small', {}, ` ×${qy}`) : null),
+        h('div', { class: 'vals' }, [['cp', 'CP'], ['mid', '高級'], ['top', '頂級']].map(([k, l]) => { const v = tierEstimate(i, k); return h('span', { class: 'v' }, h('small', {}, l), v == null ? '—' : fmtWan(v * qy)); }))); })),
+      h('div', { class: 'table-wrap only-wide' }, h('table', { class: 'ctable', style: 'min-width:420px' }, h('thead', {}, h('tr', {}, h('th', {}, '品項'), h('th', {}, '數量'), h('th', {}, '高CP值'), h('th', {}, '高級'), h('th', {}, '頂級'))),
         h('tbody', {}, active.map(i => h('tr', {}, h('td', {}, i.name), h('td', {}, i.defaultQty || 1), ['cp', 'mid', 'top'].map(k => { const v = tierEstimate(i, k); return h('td', {}, v == null ? '—' : (v * (i.defaultQty || 1)).toLocaleString('en-US')); })))))),
       h('p', { class: 'tiny' }, state.budget.note))));
   state.rooms.forEach(r => { const its = items.filter(i => i.roomId === r.id); if (its.length) out.push(h('section', { class: 'stack' }, roomHeader(r, its.length), its.map(itemRow))); });
@@ -175,15 +178,19 @@ function sortedOptions(it) {
   const order = ['指定', '頂級', '高級', '高CP值', '替代方案', '家人推薦'];
   return [...it.options].sort((a, b) => (a.id === it.pickOptionId ? -1 : 0) - (b.id === it.pickOptionId ? -1 : 0) || order.indexOf(a.tier) - order.indexOf(b.tier));
 }
-function pickControls(it, o, editable) {
+function setPickQty(it, o, n, msg) { const e = dispatch({ type: 'setPick', itemId: it.id, optionId: o.id, qty: n }); if (e) toast(msg, { undoEntryId: e.id }); }
+function stepper(it, o, small) {
   const qty = pickQty(it, o.id);
-  const set = (n, msg) => { const e = dispatch({ type: 'setPick', itemId: it.id, optionId: o.id, qty: n }); if (e) toast(msg, { undoEntryId: e.id }); };
-  if (!editable) return null;
-  if (!qty) return h('button', { class: 'btn primary', type: 'button', onclick: () => set(1, `已加入 ${o.model.split(/[（(]/)[0]}`) }, icon('plus'), '加入清單');
-  return h('div', { class: 'stepper' },
-    h('button', { class: 'btn', type: 'button', 'aria-label': '減少', onclick: () => set(qty - 1, qty - 1 ? `數量 ${qty - 1}` : '已移除') }, '−'),
+  return h('div', { class: 'stepper' + (small ? ' sm' : '') },
+    h('button', { class: 'btn', type: 'button', 'aria-label': '少一台', onclick: () => setPickQty(it, o, qty - 1, qty - 1 ? `改成 ${qty - 1} 台` : '已移除') }, '−'),
     h('span', { class: 'qty' }, qty, h('small', {}, '台')),
-    h('button', { class: 'btn', type: 'button', 'aria-label': '增加', onclick: () => set(qty + 1, `數量 ${qty + 1}`) }, '＋'));
+    h('button', { class: 'btn', type: 'button', 'aria-label': '多一台', onclick: () => setPickQty(it, o, qty + 1, `改成 ${qty + 1} 台`) }, '＋'));
+}
+function pickControls(it, o, editable) {
+  if (!editable) return null;
+  const qty = pickQty(it, o.id);
+  if (!qty) return h('button', { class: 'btn primary block lg', type: 'button', onclick: () => setPickQty(it, o, 1, `已加入「${it.name}」`) }, icon('plus'), '我要這個');
+  return h('div', { class: 'qty-bar' }, h('span', { class: 'lbl' }, icon('check'), '已加入・要幾台'), stepper(it, o));
 }
 function renderItemBody(it) {
   const prof = profileOf(role), editable = canEdit(), out = [pendingBanner()];
@@ -194,11 +201,15 @@ function renderItemBody(it) {
   if (it.hardReq) out.push(h('div', { class: 'banner info' }, icon('pin'), h('div', {}, h('b', {}, '硬需求：'), it.hardReq)));
   // picks summary
   const ps = picksOf(it), total = itemTotal(it);
-  if (ps.length) out.push(h('div', { class: 'card tone-accent' }, h('div', { class: 'row between' }, h('div', { class: 'eyebrow' }, '已選清單'), qtyHint(it) ? h('span', { class: 'tiny' }, `已選 ${pickCount(it)} 台・${qtyHint(it)}`) : null),
-    h('div', { class: 'stack-sm' }, ps.map(p => h('div', { class: 'row between pick-line' }, h('div', { class: 'grow' }, h('b', {}, `${p.option.brand} ${p.option.model}`), p.qty > 1 ? h('span', { class: 'chip s-decided', style: 'margin-left:.4rem' }, `×${p.qty}`) : null), prof.show.price ? h('span', { class: 'price' }, priceValue(effectivePrice(p.option)) != null ? fmtMoney(priceValue(effectivePrice(p.option)) * p.qty) : '—') : null))),
+  const need = (it.defaultQty || 1) - pickCount(it);
+  if (ps.length) out.push(h('div', { class: 'card tone-accent' }, h('div', { class: 'row between' }, h('div', { class: 'eyebrow' }, '我要買的'), h('span', { class: 'tiny' }, `共 ${pickCount(it)} 台`)),
+    h('div', { class: 'stack-sm' }, ps.map(p => h('div', { class: 'pick-line' },
+      h('div', { class: 'grow' }, h('b', {}, `${p.option.brand} ${p.option.model}`.trim()), prof.show.price ? h('div', { class: 'small muted' }, priceValue(effectivePrice(p.option)) != null ? `${fmtMoney(priceValue(effectivePrice(p.option)))} × ${p.qty} ＝ ${fmtMoney(priceValue(effectivePrice(p.option)) * p.qty)}` : '價格待查') : null),
+      editable ? stepper(it, p.option, true) : h('span', { class: 'chip s-decided' }, `${p.qty} 台`)))),
     prof.show.price && total.n && ps.length > 1 ? h('div', { class: 'row between', style: 'border-top:1px solid var(--line);padding-top:.4rem' }, h('b', {}, '合計'), h('span', { class: 'price' }, fmtMoney(total.sum))) : null,
-    prof.show.price && it.installCost ? h('div', { class: 'row between', style: 'border-top:1px dashed var(--line);padding-top:.4rem' }, h('span', { class: 'small' }, '另加安裝工程估算'), h('b', { class: 'small' }, installText(it.installCost))) : null));
-  else if (it.status !== 'skipped') out.push(h('div', { class: 'card tone-attn' }, h('p', {}, `還沒選。按方案上的「加入清單」即可${qtyHint(it) ? `；${qtyHint(it)}，可以混搭不同方案` : ''}。`)));
+    prof.show.price && it.installCost ? h('div', { class: 'row between', style: 'border-top:1px dashed var(--line);padding-top:.4rem' }, h('span', { class: 'small' }, '另加安裝工程'), h('b', { class: 'small' }, installText(it.installCost))) : null,
+    need > 0 ? h('div', { class: 'banner warn small', style: 'margin-top:.2rem' }, icon('info'), h('div', {}, `建議 ${it.defaultQty} 台，還差 ${need} 台。可以按同一款的「＋」，或到下面選別款混搭。`)) : null));
+  else if (it.status !== 'skipped') out.push(h('div', { class: 'card tone-attn' }, h('div', { class: 'row' }, icon('pin'), h('div', {}, h('b', {}, '怎麼選？'), h('div', { class: 'small' }, `看下面的方案，喜歡哪個就按「我要這個」${(it.defaultQty || 1) > 1 ? `。這裡建議 ${it.defaultQty} 台，可以同一款按「＋」加數量，也可以不同款各選一台` : ''}。`)))));
   if (prof.show.options) out.push(h('section', { class: 'stack' }, h('h2', { class: 'h-sec' }, '方案', h('span', { class: 'count' }, `${it.options.length} 個`)), sortedOptions(it).map(o => optionCard(it, o, { prof, editable }))));
   if (editable) out.push(h('button', { class: 'btn outline block', type: 'button', onclick: () => openAddProductSheet(it) }, icon('plus'), '新增其他商品'));
   if (prof.show.advice && it.advice) out.push(h('div', { class: 'card tone-soft' }, h('div', { class: 'eyebrow' }, '達人建議'), h('p', {}, it.advice)));
@@ -267,12 +278,13 @@ function optionCard(it, o, { prof, editable }) {
     o.highlights && o.highlights.length ? h('ul', { class: 'hl' }, o.highlights.slice(0, 3).map(x => h('li', {}, x))) : null,
     picked && it.pickReason ? h('div', { class: 'pick-reason' }, it.pickReason) : null,
     prof.show.price ? priceBlock(o) : null,
-    editable ? h('div', { class: 'row between' }, pickControls(it, o, editable), h('button', { class: 'btn sm ghost', type: 'button', onclick: () => openPriceSheet(it, o) }, '回報價格')) : null,
+    editable ? pickControls(it, o, editable) : null,
     prof.show.links ? linkButtons(o) : null,
     kv.length ? fold('規格', h('dl', { class: 'kv' }, kv.map(([k, v]) => [h('dt', {}, k), h('dd', {}, v)]))) : null,
     prof.show.advice ? reviewsBlock(o) : null,
     o.note ? h('div', { class: 'small muted' }, '備註：', o.note) : null,
-    editable && o.tier === '家人推薦' ? h('button', { class: 'linkbtn small', type: 'button', onclick: async () => { if (await confirmDialog({ title: `移除 ${o.model}？`, text: '紀錄裡還找得到、也可以還原。', ok: '移除', danger: true })) { const e = dispatch({ type: 'removeOption', itemId: it.id, optionId: o.id }); if (e) toast('已移除', { undoEntryId: e.id }); } } }, '移除這個商品') : null);
+    editable ? h('div', { class: 'row wrap', style: 'gap:.8rem' }, h('button', { class: 'linkbtn small', type: 'button', onclick: () => openPriceSheet(it, o) }, '回報價格／連結'),
+      o.tier === '家人推薦' ? h('button', { class: 'linkbtn small', type: 'button', onclick: async () => { if (await confirmDialog({ title: `移除 ${o.model}？`, text: '紀錄裡還找得到、也可以還原。', ok: '移除', danger: true })) { const e = dispatch({ type: 'removeOption', itemId: it.id, optionId: o.id }); if (e) toast('已移除', { undoEntryId: e.id }); } } }, '從清單移除這個商品') : null) : null);
 }
 function todoRow(t, itemId, editable, ctx) {
   return h('div', { class: 'check-row', 'data-done': String(!!t.done) },

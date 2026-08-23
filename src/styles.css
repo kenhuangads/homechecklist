@@ -297,3 +297,29 @@ dialog.tut h2 { font-family: var(--display); font-weight: 700; }
 .cost-rows { display: flex; flex-direction: column; gap: .35rem; background: var(--surface-2); border-radius: var(--radius-sm); padding: .6rem .75rem; }
 .cost-rows .total { border-top: 1px solid var(--line-strong); padding-top: .4rem; margin-top: .1rem; }
 .cost-rows .tiny { color: var(--ink-3); }
+/* ---- v3.1: readable numbers on phones ---- */
+.summary .cell .v { font-size: 1.15rem; white-space: nowrap; }
+.summary .cell .k { white-space: nowrap; }
+.ctable td, .ctable th { white-space: nowrap; }
+.budget-item { padding: .5rem 0; border-top: 1px solid var(--line); }
+.budget-item:first-child { border-top: 0; }
+.budget-item .nm { font-weight: 700; font-size: .95rem; }
+.budget-item .nm small { color: var(--ink-3); font-weight: 600; }
+.budget-item .vals { display: grid; grid-template-columns: repeat(3, 1fr); gap: .3rem; margin-top: .15rem; }
+.budget-item .v { display: flex; gap: .3rem; align-items: baseline; font-weight: 800; font-size: .92rem; white-space: nowrap; font-variant-numeric: tabular-nums; }
+.budget-item .v small { color: var(--ink-3); font-weight: 600; font-size: .72rem; }
+/* ---- v3.1: clearer quantity controls ---- */
+.qty-bar { display: flex; align-items: center; justify-content: space-between; gap: .5rem; background: var(--accent-soft); border-radius: var(--radius-sm); padding: .45rem .6rem; }
+.qty-bar .lbl { display: inline-flex; align-items: center; gap: .35rem; font-weight: 800; color: var(--accent-deep); font-size: .95rem; }
+.stepper.sm .btn { min-width: 2.5rem; min-height: 2.5rem; font-size: 1.2rem; }
+.stepper.sm .qty { min-width: 2.6rem; font-size: 1.05rem; }
+.pick-line { display: grid; grid-template-columns: minmax(0,1fr) auto; gap: .5rem; align-items: center; padding: .35rem 0; border-top: 1px solid color-mix(in srgb, var(--line) 60%, transparent); }
+.pick-line:first-child { border-top: 0; }
+.pick-line .price, .pick-line b { overflow-wrap: anywhere; }
+.banner.small { font-size: .86rem; padding: .5rem .65rem; }
+.cost-rows .row { gap: .75rem; align-items: baseline; }
+.cost-rows .row > span { white-space: nowrap; font-size: .95rem; flex: 0 0 auto; }
+.cost-rows .row > b { white-space: nowrap; font-variant-numeric: tabular-nums; text-align: right; flex: 1 1 auto; font-size: .98rem; }
+.cost-rows .row.total > b { font-size: 1.08rem; }
+.card .row.between > .price, .card .row.between > b { white-space: nowrap; }
+@media (max-width: 400px) { .h-hero { font-size: 1.6rem; } .hero .sub { font-size: .86rem; } .ring { width: 4.8rem; height: 4.8rem; } }
