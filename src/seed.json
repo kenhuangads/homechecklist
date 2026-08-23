@@ -1,7 +1,7 @@
 {
   "schema": 1,
-  "rev": 12,
-  "updatedAt": "2026-08-22T15:35:55.693Z",
+  "rev": 13,
+  "updatedAt": "2026-08-23T10:51:40.169Z",
   "meta": {
     "title": "南投老家翻修清單",
     "subtitle": "全屋家電採購與安裝需求",
@@ -41,7 +41,7 @@
       "id": "designer",
       "label": "設計師",
       "who": "設計師／水電",
-      "desc": "設計與水電需求：尺寸、開孔、電壓迴路、給排水、排風與全屋前置工程。",
+      "desc": "設計與水電需求：尺寸、開孔、電壓迴路、給排水、排風、待確認事項與全屋前置工程。",
       "show": {
         "price": false,
         "links": false,
@@ -49,7 +49,7 @@
         "install": true,
         "dims": true,
         "notes": false,
-        "todos": false,
+        "todos": true,
         "advice": true,
         "prep": true
       },
@@ -178,18 +178,25 @@
         {
           "id": "hood_t1",
           "text": "確認廚具寬度是 90cm",
-          "done": false
+          "done": false,
+          "for": "designer"
         },
         {
           "id": "hood_t2",
           "text": "牆面預留 Φ150 排風孔，確認路徑短、彎少",
-          "done": false
+          "done": false,
+          "for": "designer"
         }
       ],
       "requests": [],
       "costNotes": [],
       "pickOptionId": null,
-      "pickReason": ""
+      "pickReason": "",
+      "installCost": {
+        "min": 2000,
+        "max": 6000,
+        "note": "排風管路徑與牆面開孔、吊掛工資"
+      }
     },
     {
       "id": "ih",
@@ -290,18 +297,25 @@
         {
           "id": "ih_t1",
           "text": "請水電拉 220V 專用迴路（20A、5.5mm²）到爐具位置",
-          "done": false
+          "done": false,
+          "for": "designer"
         },
         {
           "id": "ih_t2",
           "text": "廚具開孔 710×368mm，下方留散熱",
-          "done": false
+          "done": false,
+          "for": "designer"
         }
       ],
       "requests": [],
       "costNotes": [],
       "pickOptionId": null,
-      "pickReason": ""
+      "pickReason": "",
+      "installCost": {
+        "min": 5800,
+        "max": 10500,
+        "note": "220V 專用迴路 4,800–8,500＋檯面開孔 1,000–2,000"
+      }
     },
     {
       "id": "oven",
@@ -505,13 +519,19 @@
         {
           "id": "oven_t1",
           "text": "電器櫃預留抽拉層板與散熱空間",
-          "done": false
+          "done": false,
+          "for": "designer"
         }
       ],
       "requests": [],
       "costNotes": [],
       "pickOptionId": "oven_toa95tw",
-      "pickReason": "有現貨、有電子探針；TOA-110TW 通路買不到"
+      "pickReason": "有現貨、有電子探針；TOA-110TW 通路買不到",
+      "installCost": {
+        "min": 0,
+        "max": 1500,
+        "note": "電器櫃散熱層板與獨立插座"
+      }
     },
     {
       "id": "microwave",
@@ -601,7 +621,12 @@
       "requests": [],
       "costNotes": [],
       "pickOptionId": null,
-      "pickReason": ""
+      "pickReason": "",
+      "installCost": {
+        "min": 0,
+        "max": 1500,
+        "note": "電器櫃散熱與獨立插座"
+      }
     },
     {
       "id": "freezer",
@@ -706,23 +731,31 @@
         {
           "id": "freezer_t1",
           "text": "量門框與樓梯轉角淨寬是否 >71cm",
-          "done": false
+          "done": false,
+          "for": "designer"
         },
         {
           "id": "freezer_t2",
           "text": "定位處預留：頂 30cm、左右各 10cm",
-          "done": false
+          "done": false,
+          "for": "designer"
         },
         {
           "id": "freezer_t3",
           "text": "決定門要開哪一邊（改左開需原廠付費）",
-          "done": false
+          "done": false,
+          "for": "family"
         }
       ],
       "requests": [],
       "costNotes": [],
       "pickOptionId": null,
-      "pickReason": ""
+      "pickReason": "",
+      "installCost": {
+        "min": 0,
+        "max": 3000,
+        "note": "透天樓梯搬運與定位（多數通路含基本配送）"
+      }
     },
     {
       "id": "dishwasher",
@@ -1182,23 +1215,31 @@
         {
           "id": "dw_t1",
           "text": "先決定：抽屜式 或 60cm 下掀式（看家裡炒鍋尺寸）",
-          "done": false
+          "done": false,
+          "for": "family"
         },
         {
           "id": "dw_t2",
           "text": "確認所選機型電壓（110V 或 220V 專用迴路）",
-          "done": false
+          "done": false,
+          "for": "designer"
         },
         {
           "id": "dw_t3",
           "text": "廚具預留開孔與進排水位置",
-          "done": false
+          "done": false,
+          "for": "designer"
         }
       ],
       "requests": [],
       "costNotes": [],
       "pickOptionId": "dw_bosch_8series_60",
-      "pickReason": "常煮大鍋菜，60cm 下掀式才放得下炒鍋；Bosch 台灣機種 110V 免改電"
+      "pickReason": "常煮大鍋菜，60cm 下掀式才放得下炒鍋；Bosch 台灣機種 110V 免改電",
+      "installCost": {
+        "min": 6000,
+        "max": 20000,
+        "note": "櫥櫃開孔改造、進排水配管、門板加工、220V 專用迴路（歐系機種）"
+      }
     },
     {
       "id": "water_dispenser",
@@ -1480,17 +1521,20 @@
         {
           "id": "wd_t1",
           "text": "決定：整合四合一（OASIS）或 三溫＋獨立氣泡",
-          "done": false
+          "done": false,
+          "for": "family"
         },
         {
           "id": "wd_t2",
           "text": "水槽櫃預留高 45cm、110V 專用插座、排水",
-          "done": false
+          "done": false,
+          "for": "designer"
         },
         {
           "id": "wd_t3",
           "text": "檯面龍頭孔數量與孔徑告知廚具商",
-          "done": false
+          "done": false,
+          "for": "designer"
         }
       ],
       "requests": [],
@@ -1498,7 +1542,12 @@
         "耗材年費：濾芯＋氣瓶約 NT$3,000–6,000／年。"
       ],
       "pickOptionId": "water_modular_3temp_soda",
-      "pickReason": "真正冰溫熱＋獨立氣泡機，故障互不影響、維修單純"
+      "pickReason": "真正冰溫熱＋獨立氣泡機，故障互不影響、維修單純",
+      "installCost": {
+        "min": 0,
+        "max": 6000,
+        "note": "多數含免費基本安裝；檯面龍頭開孔、櫥下排水與專用插座另計"
+      }
     },
     {
       "id": "softener",
@@ -1712,12 +1761,14 @@
         {
           "id": "soft_t1",
           "text": "確認總進水管位置（水塔後／加壓馬達後）與排水",
-          "done": false
+          "done": false,
+          "for": "designer"
         },
         {
           "id": "soft_t2",
           "text": "預留 110V 插座與旁通閥空間",
-          "done": false
+          "done": false,
+          "for": "designer"
         }
       ],
       "requests": [],
@@ -1725,7 +1776,12 @@
         "耗材：軟化鹽 2–4 人約每 2 個月一包（約 NT$500），年費約 NT$3,000–6,000。"
       ],
       "pickOptionId": "soft_3m_sft150",
-      "pickReason": "一般家庭夠用、價格最低、含前置過濾"
+      "pickReason": "一般家庭夠用、價格最低、含前置過濾",
+      "installCost": {
+        "min": 8000,
+        "max": 20000,
+        "note": "總進水管切管、旁通閥、排水與 110V 電源"
+      }
     },
     {
       "id": "toilet",
@@ -2040,22 +2096,26 @@
         {
           "id": "toilet_t1",
           "text": "量每間廁所的排水管距（305 或 400mm；NEOREST 可到 435）",
-          "done": false
+          "done": false,
+          "for": "designer"
         },
         {
           "id": "toilet_t2",
           "text": "馬桶旁預留 110V 防水接地插座（建議 2 組）",
-          "done": false
+          "done": false,
+          "for": "designer"
         },
         {
           "id": "toilet_t3",
           "text": "確認各樓層水壓（不足加壓、過高減壓）",
-          "done": false
+          "done": false,
+          "for": "designer"
         },
         {
           "id": "toilet_t4",
           "text": "決定一體型（NEOREST／G5）或原廠套組（S7 旗艦便座＋TCA541）",
-          "done": false
+          "done": false,
+          "for": "family"
         }
       ],
       "requests": [],
@@ -2064,7 +2124,12 @@
         "S7 旗艦款便座單買 34,900（建議售價 57,000）；套組 CCW288S7AA MOMO 71,920（建議售價 89,900）；G5 建議售價 98,000（經銷商詢價）。"
       ],
       "pickOptionId": "toilet_set_ccw288s7aa",
-      "pickReason": "同樣有自動掀蓋＋自動沖水，便座壞了只換便座，7.2 萬比 NEOREST RS 省約 4 萬；想要一體成型、電解除菌水就選 NEOREST RS／AS。"
+      "pickReason": "同樣有自動掀蓋＋自動沖水，便座壞了只換便座，7.2 萬比 NEOREST RS 省約 4 萬；想要一體成型、電解除菌水就選 NEOREST RS／AS。",
+      "installCost": {
+        "min": 9000,
+        "max": 24000,
+        "note": "三間合計：拆舊裝新、管距轉換、防水接地插座，每間 3,000–8,000"
+      }
     },
     {
       "id": "bath_heater",
@@ -2291,18 +2356,25 @@
         {
           "id": "bh_t1",
           "text": "確認要裝幾間浴室",
-          "done": false
+          "done": false,
+          "for": "family"
         },
         {
           "id": "bh_t2",
           "text": "每間拉 220V 獨立迴路＋漏電斷路器、排風管到戶外",
-          "done": false
+          "done": false,
+          "for": "designer"
         }
       ],
       "requests": [],
       "costNotes": [],
       "pickOptionId": "heater_delta_vhb30bcmrta",
-      "pickReason": "220V＋有線線控，CP 值最高"
+      "pickReason": "220V＋有線線控，CP 值最高",
+      "installCost": {
+        "min": 14400,
+        "max": 25500,
+        "note": "三間合計：220V 專用迴路每間 4,800–8,500＋排風管到戶外"
+      }
     },
     {
       "id": "tv",
@@ -2698,18 +2770,25 @@
         {
           "id": "tv_t1",
           "text": "量客廳觀看距離、樓梯與門框",
-          "done": false
+          "done": false,
+          "for": "designer"
         },
         {
           "id": "tv_t2",
           "text": "決定壁掛或座式；壁掛請設計師留承重牆與管線",
-          "done": false
+          "done": false,
+          "for": "family"
         }
       ],
       "requests": [],
       "costNotes": [],
       "pickOptionId": null,
-      "pickReason": ""
+      "pickReason": "",
+      "installCost": {
+        "min": 5000,
+        "max": 11000,
+        "note": "壁掛安裝 2,000–5,000＋電視牆預埋管線與插座 3,000–6,000"
+      }
     },
     {
       "id": "soundbar",
@@ -2980,13 +3059,19 @@
         {
           "id": "sb_t1",
           "text": "量客廳天花板高度（是否 >3.2m 或斜頂）",
-          "done": false
+          "done": false,
+          "for": "designer"
         }
       ],
       "requests": [],
       "costNotes": [],
       "pickOptionId": "sb_lg_s95tr",
-      "pickReason": "有實體後環繞，挑高客廳更有感；搭 LG 電視可整合"
+      "pickReason": "有實體後環繞，挑高客廳更有感；搭 LG 電視可整合",
+      "installCost": {
+        "min": 2000,
+        "max": 5000,
+        "note": "沙發後方插座拉線＋HDMI 暗管與線材"
+      }
     },
     {
       "id": "robot_vacuum",
@@ -3206,7 +3291,8 @@
         {
           "id": "rv_t1",
           "text": "決定基站位置：要有給水、排水（有坡度）與 110V 插座",
-          "done": false
+          "done": false,
+          "for": "family"
         }
       ],
       "requests": [],
@@ -3214,7 +3300,12 @@
         "水電接管費約 NT$1,500–3,500（視拉管距離）；石頭官網登錄最高補助安裝費 NT$1,200。"
       ],
       "pickOptionId": "robot_roborock_saros20",
-      "pickReason": "內建自動上下水，三通路都有現貨"
+      "pickReason": "內建自動上下水，三通路都有現貨",
+      "installCost": {
+        "min": 1500,
+        "max": 3500,
+        "note": "進水 2 分、排水 3 分接管與洩水坡度、基站插座"
+      }
     },
     {
       "id": "door_lock",
@@ -3494,12 +3585,14 @@
         {
           "id": "lock_t1",
           "text": "拍大門正／側／背面照片，量門厚",
-          "done": false
+          "done": false,
+          "for": "designer"
         },
         {
           "id": "lock_t2",
           "text": "確認大門是否西曬、是否要加雨遮",
-          "done": false
+          "done": false,
+          "for": "family"
         }
       ],
       "requests": [],
@@ -3507,7 +3600,12 @@
         "安裝含改孔／特殊門型費用約 NT$0–3,000（多數電商價已含基本安裝）。"
       ],
       "pickOptionId": null,
-      "pickReason": ""
+      "pickReason": "",
+      "installCost": {
+        "min": 0,
+        "max": 3000,
+        "note": "多數電商含基本安裝；特殊門型改孔 0–3,000"
+      }
     }
   ],
   "prep": [
@@ -3629,5 +3727,5 @@
   },
   "history": [],
   "todos": [],
-  "catalogVersion": 2026082202
+  "catalogVersion": 2026082302
 }

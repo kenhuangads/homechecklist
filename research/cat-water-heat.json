@@ -1,0 +1,622 @@
+[
+  {
+    "itemId": "water_heater",
+    "name": "多衛浴熱水系統",
+    "roomId": "bath",
+    "short": "三衛浴兩間同時洗不搶水",
+    "hardReq": "三間衛浴共用，其中兩間要能同時淋浴不搶水、不忽冷忽熱",
+    "advice": "兩支蓮蓬頭同時開，24L 恆溫瓦斯機就夠（冬天約 24 L/分）。透天優先選屋外型，省排氣管也沒一氧化碳疑慮；預算夠、有 220V 和放水桶的空間，再考慮 300L 熱泵，最穩不忽冷忽熱，但加熱慢、要空間。",
+    "warnings": [
+      "2026 中央已無瓦斯熱水器補助（2024/4 截止）",
+      "24L 天然氣機要 5 燈表，沒換表會火力不足忽冷忽熱",
+      "FE 屋內型排氣管要獨立直通屋外，密閉陽台禁裝",
+      "熱泵 300L 需 220V 與通風位置，啟動噪音 70–80 dB",
+      "南投若用桶裝瓦斯，24L 機冬天單桶供氣可能不夠",
+      "潛熱回收機會排冷凝水，機器下方要留排水"
+    ],
+    "install": [
+      {
+        "tag": "電",
+        "text": "瓦斯恆溫機旁留 110V 防水插座；熱泵需 220V 專用迴路（20A 以上）並接地"
+      },
+      {
+        "tag": "其他",
+        "text": "天然氣：24L 機向瓦斯公司申請 5 燈表，瓦斯管 3/4 吋；桶裝瓦斯：24L 機建議兩桶並聯＋自動切換調整器"
+      },
+      {
+        "tag": "排風",
+        "text": "屋外型裝在通風處、不可事後加窗封起來；FE 屋內型要專用排氣管直通屋外、不可與排油煙機共管；密閉空間只能裝 FF 式"
+      },
+      {
+        "tag": "水",
+        "text": "熱水主管 3/4 吋，熱水器盡量裝在三間衛浴的中間位置縮短管線；硬水地區前端裝軟水器；潛熱機與熱泵下方留排水孔"
+      },
+      {
+        "tag": "尺寸",
+        "text": "壁掛瓦斯機預留 W400×H650×D200 mm；熱泵水箱 580×595×1672 mm＋主機，前方留 ≥50 cm 通風"
+      },
+      {
+        "tag": "搬運",
+        "text": "熱泵水箱空重 85 kg、滿水約 385 kg，放置面要能承重；裝頂樓先確認樓梯搬運路徑"
+      },
+      {
+        "tag": "其他",
+        "text": "屋外型另購溫控器拉線到主浴；屋內型必裝一氧化碳警報器"
+      }
+    ],
+    "costNotes": [
+      "MOMO 瓦斯機多含基本安裝，舊機拆機 +300；加長管線、排氣管另計",
+      "換 5 燈表向當地瓦斯公司申請，工本費依各公司規定",
+      "熱泵 MOMO 價不含安裝，220V 專線與水路由經銷商報價",
+      "預算緊：林內 REU-A2426W-TR 36,600 含安裝，比潛熱版便宜 1.6 萬"
+    ],
+    "installCost": {
+      "min": 8000,
+      "max": 35000,
+      "note": "瓦斯機：換 5 燈表＋瓦斯管加大＋熱水主管 3/4 吋與加長約 8,000–20,000；溫控器另購 2,000–4,000。熱泵：220V 專用迴路 4,800–8,500＋水電配管與吊掛約 10,000–25,000"
+    },
+    "todos": [
+      {
+        "text": "向瓦斯公司申請換 5 燈表（24L 機必要）",
+        "for": "designer"
+      },
+      {
+        "text": "熱水主管改 3/4 吋，熱水器裝在三衛浴中間位置",
+        "for": "designer"
+      },
+      {
+        "text": "屋外型確認通風、屋內型排氣管直通戶外",
+        "for": "designer"
+      },
+      {
+        "text": "決定瓦斯（24L）或熱泵（300L）",
+        "for": "family"
+      }
+    ],
+    "defaultQty": 1,
+    "options": [
+      {
+        "id": "haier_hp50w_300ts7",
+        "tier": "頂級",
+        "brand": "Haier 海爾",
+        "model": "HP50W/300TS7",
+        "name": "300L 變頻空氣能熱泵熱水器（不含安裝）",
+        "highlights": [
+          "300L 儲熱，多人連洗不缺水",
+          "COP 4.2 省電，R32 冷媒",
+          "WiFi 控溫、自清潔"
+        ],
+        "dims": "水箱 580×595×1672 mm（分離式主機另計）",
+        "cutout": "水箱＋主機需通風位置，主機前方留 ≥50 cm，下方留排水",
+        "power": "220V 單相專用迴路；製熱量 5000W、製熱水 108 L/h",
+        "weight": "約 85 kg（空桶）",
+        "other": "MOMO 標 2 年保固",
+        "price": {
+          "amount": 70000,
+          "min": 66000,
+          "max": 84000,
+          "source": "momo",
+          "checkedAt": "2026-08-23",
+          "note": "MOMO 促銷 70,000（市售 84,000），不含安裝"
+        },
+        "links": [
+          {
+            "type": "momo",
+            "url": "https://www.momoshop.com.tw/goods/GoodsDetail.jsp?i_code=9775834",
+            "verified": true
+          },
+          {
+            "type": "official",
+            "url": "https://www.haierpro.com.tw/product/300ts7/",
+            "verified": false
+          }
+        ],
+        "availability": "in_stock",
+        "reviews": {
+          "praise": [
+            "從電儲熱換過來電費大降",
+            "泡澡後下一人仍夠洗，5 大 3 小連洗不缺熱水",
+            "運轉約 50 幾 dB，白天幾乎無感"
+          ],
+          "complaints": [
+            "剛啟動 70–80 dB，偶有高頻聲",
+            "20→55°C 約 105 分鐘，冬天效率下降",
+            "設 55°C 以上會啟動電熱棒，建議設 54°C",
+            "裝機要先注滿水、靜置再通電"
+          ],
+          "sources": [
+            "https://www.mobile01.com/topicdetail.php?f=168&t=6539768",
+            "https://www.mobile01.com/topicdetail.php?f=168&t=6770738"
+          ],
+          "confidence": "medium"
+        },
+        "cmpKeyword": "海爾 HP50W/300TS7"
+      },
+      {
+        "id": "dyhot_fegq24",
+        "tier": "頂級",
+        "brand": "Dyhot 東湧",
+        "model": "FEGQ24",
+        "name": "24L 全預混智慧變頻併聯即熱式熱水器",
+        "highlights": [
+          "熱效率 96.6%，一級能效",
+          "可併聯多台、Wi-Fi 線控",
+          "強排 FE 式，低 CO 排放"
+        ],
+        "dims": "官網未列，請向經銷索取規格表",
+        "cutout": "屋內強排，排氣管直通屋外",
+        "power": "110V；天然氣款需 5 燈表",
+        "weight": "",
+        "other": "一級能效；Wi-Fi 線控器另購",
+        "price": {
+          "amount": 63000,
+          "min": 63000,
+          "max": 89999,
+          "source": "momo",
+          "checkedAt": "2026-08-23",
+          "note": "MOMO 桶裝 24L 含基本安裝 63,000；官網建議售價 89,999"
+        },
+        "links": [
+          {
+            "type": "momo",
+            "url": "https://www.momoshop.com.tw/goods/GoodsDetail.jsp?i_code=15567277",
+            "verified": true
+          },
+          {
+            "type": "official",
+            "url": "https://www.dyhot.com.tw/products/fegq-20-24-28-32",
+            "verified": true
+          }
+        ],
+        "availability": "in_stock",
+        "reviews": {
+          "praise": [
+            "併聯與大水量設計，多浴室取向"
+          ],
+          "complaints": [
+            "價格約是林內 16L 的 3–4 倍，CP 值被質疑",
+            "50 坪內透天被認為沒必要",
+            "長期使用心得極少"
+          ],
+          "sources": [
+            "https://www.ptt.cc/bbs/Interior/M.1725498195.A.5EA.html"
+          ],
+          "confidence": "low"
+        },
+        "cmpKeyword": "東湧 FEGQ24"
+      },
+      {
+        "id": "rinnai_reu_e2426w_tr",
+        "tier": "高級",
+        "brand": "Rinnai 林內",
+        "model": "REU-E2426W-TR",
+        "name": "24L 屋外型潛熱回收強排熱水器（含基本安裝）",
+        "highlights": [
+          "日本原裝，熱效率 93–97%",
+          "屋外型免排氣管、無 CO 疑慮",
+          "5 年保固、一級能效"
+        ],
+        "dims": "350×530×190 mm",
+        "cutout": "屋外通風牆面，下方留冷凝水排水；瓦斯與水管 3/4 吋",
+        "power": "110V；瓦斯耗量 46 kW，天然氣需 5 燈表",
+        "weight": "",
+        "other": "家用 5 年保固；溫控器另購",
+        "price": {
+          "amount": 52900,
+          "min": 52900,
+          "max": 62300,
+          "source": "momo",
+          "checkedAt": "2026-08-23",
+          "note": "MOMO 52,900 含基本安裝（舊機拆機 +300）"
+        },
+        "links": [
+          {
+            "type": "momo",
+            "url": "https://www.momoshop.com.tw/goods/GoodsDetail.jsp?i_code=7404794",
+            "verified": true
+          },
+          {
+            "type": "pchome",
+            "url": "https://24h.pchome.com.tw/prod/DMBM31-A900FRWB4",
+            "verified": true
+          }
+        ],
+        "availability": "in_stock",
+        "reviews": {
+          "praise": [
+            "林內維修據點多、日本原裝 5 年保固",
+            "屋外型安裝省事，透天常見選擇"
+          ],
+          "complaints": [
+            "比同級 A2426W-TR 貴約 1.6 萬，省瓦斯回本慢",
+            "屋外型要另買溫控器"
+          ],
+          "sources": [
+            "https://www.mobile01.com/topicdetail.php?f=335&t=5330945"
+          ],
+          "confidence": "low"
+        },
+        "cmpKeyword": "林內 REU-E2426W-TR"
+      },
+      {
+        "id": "sakura_dh2460",
+        "tier": "高CP值",
+        "brand": "SAKURA 櫻花",
+        "model": "DH2460",
+        "name": "24L 無線溫控智能恆溫熱水器（FE 式，原廠安裝）",
+        "highlights": [
+          "標配無線遙控，浴室調溫免拉線",
+          "智慧水量調節、分段火排",
+          "官方直營含原廠安裝"
+        ],
+        "dims": "390×155×600 mm",
+        "cutout": "屋內 FE 式，需排氣管直通屋外",
+        "power": "110V；天然氣需 5 燈表",
+        "weight": "",
+        "other": "2 級能效；原廠安裝",
+        "price": {
+          "amount": 45540,
+          "min": 45090,
+          "max": 50600,
+          "source": "momo",
+          "checkedAt": "2026-08-23",
+          "note": "MOMO 官方直營 45,540 含原廠安裝"
+        },
+        "links": [
+          {
+            "type": "momo",
+            "url": "https://www.momoshop.com.tw/goods/GoodsDetail.jsp?i_code=8654043",
+            "verified": true
+          },
+          {
+            "type": "pchome",
+            "url": "https://24h.pchome.com.tw/prod/DPAL3B-A900BQACS",
+            "verified": true
+          }
+        ],
+        "availability": "in_stock",
+        "reviews": {
+          "praise": [
+            "恆溫系列水溫平順，較少忽冷忽熱",
+            "加熱快、售後據點多"
+          ],
+          "complaints": [
+            "低溫設定時出水仍偏熱",
+            "無線遙控長期耐用度心得少"
+          ],
+          "sources": [
+            "https://www.dcard.tw/@madevans777/post/261148210"
+          ],
+          "confidence": "low"
+        },
+        "cmpKeyword": "櫻花 DH2460"
+      },
+      {
+        "id": "rinnai_reu_a2426w_tr",
+        "tier": "替代方案",
+        "brand": "Rinnai 林內",
+        "model": "REU-A2426W-TR",
+        "name": "24L 屋外型強制排氣熱水器（含基本安裝）",
+        "highlights": [
+          "同級最便宜 24L 日本原裝",
+          "屋外型免排氣管",
+          "與潛熱版共用溫控器"
+        ],
+        "dims": "屋外壁掛 24L",
+        "cutout": "屋外通風牆面",
+        "power": "110V；天然氣需 5 燈表",
+        "weight": "",
+        "other": "溫控器另購",
+        "price": {
+          "amount": 36600,
+          "min": 36600,
+          "max": 36600,
+          "source": "momo",
+          "checkedAt": "2026-08-23",
+          "note": "MOMO 36,600 含基本安裝"
+        },
+        "links": [
+          {
+            "type": "momo",
+            "url": "https://www.momoshop.com.tw/goods/GoodsDetail.jsp?i_code=9881886",
+            "verified": true
+          }
+        ],
+        "availability": "in_stock",
+        "reviews": {
+          "praise": [
+            "林內 24L 屋外強排是透天常見標配"
+          ],
+          "complaints": [
+            "沒有潛熱回收，瓦斯費略高"
+          ],
+          "sources": [
+            "https://www.mobile01.com/topicdetail.php?f=335&t=5330945"
+          ],
+          "confidence": "low"
+        },
+        "cmpKeyword": "林內 REU-A2426W-TR"
+      }
+    ],
+    "pickOptionId": "rinnai_reu_e2426w_tr",
+    "pickReason": "24L 夠兩間同時洗；屋外型免排氣管、無 CO 疑慮，5 年保固含安裝。"
+  },
+  {
+    "itemId": "towel_rack",
+    "name": "電熱毛巾架",
+    "roomId": "bath",
+    "short": "三間衛浴各一支",
+    "hardReq": "三間衛浴各 1 支，110V，IP24 以上，離出水口 ≥60 cm",
+    "advice": "三支一起買差價會放大：KOHLER 8,900 有品牌、IP24、40W 夠日常烘乾；想整支 304 不鏽鋼、大面積烘浴巾再上 HAMMAM。免打孔便宜款電壓與防水常標不清。泥作前先決定明裝或暗線、留好插座位置。",
+    "warnings": [
+      "網購免打孔款多為 220V 陸規，下單確認 110V",
+      "不可裝在會淋到水的位置，需漏電斷路器＋接地",
+      "液熱式 200W 升溫 1–2 小時，想快熱選碳纖維乾式",
+      "電鍍／噴塗款勿用菜瓜布刷，刮傷就生鏽",
+      "KOHLER Underscore 無定時器，要手動開關"
+    ],
+    "install": [
+      {
+        "tag": "電",
+        "text": "每間留 110V 專用出線：明裝留插座、暗裝預埋出線盒；離出水口 ≥60 cm、離地 ≥60 cm；迴路加漏電保護並接地"
+      },
+      {
+        "tag": "木作",
+        "text": "鎖牆款若是輕隔間要預埋木角材或背板；磁磚牆鑽孔前確認避開水管"
+      },
+      {
+        "tag": "尺寸",
+        "text": "預留牆面 W600×H1200 mm（大款）或 W600×H800 mm（小款），兩側各留 10 cm"
+      },
+      {
+        "tag": "其他",
+        "text": "暗線款要在泥作前定型號與出線位置；明裝線長 150 cm，插座別離太遠"
+      }
+    ],
+    "costNotes": [
+      "KOHLER 原廠基本安裝 2,000／支；一般水電掛牆＋拉線每處約 1,500–3,000",
+      "電費：40W 款 24 小時開約 1 度／天；200W 液熱式約 5 度／天",
+      "三間合計：KOHLER 約 26,700；CAESAR 約 45,000–55,000"
+    ],
+    "installCost": {
+      "min": 4500,
+      "max": 9000,
+      "note": "三間合計：掛牆＋拉線每處 1,500–3,000（KOHLER 原廠安裝 2,000／支）；暗線款需在泥作前預埋出線盒"
+    },
+    "todos": [
+      {
+        "text": "三間衛浴乾區各留 110V 插座（離出水口 ≥60 cm、離地 ≥60 cm）",
+        "for": "designer"
+      },
+      {
+        "text": "迴路加漏電斷路器並接地",
+        "for": "designer"
+      },
+      {
+        "text": "決定明裝（插座）或暗線（泥作前要先定）",
+        "for": "family"
+      }
+    ],
+    "defaultQty": 3,
+    "options": [
+      {
+        "id": "hammam_lina_1200",
+        "tier": "頂級",
+        "brand": "HAMMAM（土耳其）",
+        "model": "LINA W600×H1200",
+        "name": "土耳其 LINA 304 不鏽鋼電熱毛巾架",
+        "highlights": [
+          "整支 AISI 304 不鏽鋼毛絲面",
+          "歐規 EN442，土耳其製",
+          "110V 200W，大面積烘浴巾"
+        ],
+        "dims": "W600×H1200×D92–127 mm（另有 H800 款）",
+        "cutout": "鎖牆；外露式留插座，隱藏式需預埋出線",
+        "power": "110V／200W",
+        "weight": "",
+        "other": "保固依經銷；另有 VISTA 液熱式",
+        "price": {
+          "amount": 34200,
+          "min": 26100,
+          "max": 34200,
+          "source": "other",
+          "checkedAt": "2026-08-23",
+          "note": "格蘭登官網：H1200 34,200、H800 26,100，不含安裝"
+        },
+        "links": [
+          {
+            "type": "other",
+            "url": "https://grand-kitchen.com.tw/product/hammam-lina-1/",
+            "verified": true,
+            "label": "格蘭登 看商品"
+          },
+          {
+            "type": "momo",
+            "url": "https://www.momoshop.com.tw/search/searchShop.jsp?keyword=HAMMAM%20%E9%9B%BB%E7%86%B1%E6%AF%9B%E5%B7%BE%E6%9E%B6",
+            "verified": false
+          }
+        ],
+        "availability": "unclear",
+        "reviews": {
+          "praise": [
+            "整支不鏽鋼不怕鏽，質感最好",
+            "大面積，浴巾整條攤開烘得到"
+          ],
+          "complaints": [
+            "液熱式升溫慢，約 1–2 小時才到最高溫",
+            "200W 整天開電費高於碳纖維款",
+            "台灣真實心得極少"
+          ],
+          "sources": [
+            "https://grand-kitchen.com.tw/product/hammam-lina-1/"
+          ],
+          "confidence": "low"
+        },
+        "cmpKeyword": "HAMMAM LINA 電熱毛巾架"
+      },
+      {
+        "id": "caesar_tw012",
+        "tier": "高級",
+        "brand": "CAESAR 凱撒",
+        "model": "TW012",
+        "name": "304 不鏽鋼電熱毛巾架 TW012",
+        "highlights": [
+          "304 不鏽鋼，45–55°C 恆溫",
+          "限流保護＋溫度保險絲",
+          "台灣品牌，一年保固"
+        ],
+        "dims": "W530×D140×H870 mm",
+        "cutout": "鎖牆；電源線 1.8 m 接插座",
+        "power": "110V/220V 兩用，100W",
+        "weight": "",
+        "other": "1 年保固；IP 等級官網未標",
+        "price": {
+          "amount": 18450,
+          "min": 15160,
+          "max": 18450,
+          "source": "official",
+          "checkedAt": "2026-08-23",
+          "note": "官網建議售價 18,450；BS 衛浴 15,160，不含安裝"
+        },
+        "links": [
+          {
+            "type": "official",
+            "url": "https://www.caesar.com.tw/product/detail/TW012",
+            "verified": true
+          },
+          {
+            "type": "other",
+            "url": "https://www.bsbs.co/products/caesar-tw012",
+            "verified": true,
+            "label": "BS 衛浴 看商品"
+          }
+        ],
+        "availability": "unclear",
+        "reviews": {
+          "praise": [
+            "凱撒全台據點多，維修方便",
+            "整支 304 不鏽鋼，比噴塗款耐鏽"
+          ],
+          "complaints": [
+            "官網沒標防水等級與定時功能",
+            "經銷庫存少，要先問現貨"
+          ],
+          "sources": [
+            "https://www.caesar.com.tw/product/detail/TW012"
+          ],
+          "confidence": "low"
+        },
+        "cmpKeyword": "凱撒 TW012"
+      },
+      {
+        "id": "kohler_underscore_k29349tw7",
+        "tier": "高CP值",
+        "brand": "KOHLER",
+        "model": "K-29349TW-7",
+        "name": "Underscore 電熱毛巾架 霧面黑 110V 明裝",
+        "highlights": [
+          "IP24、40W 超省電",
+          "55°C 恆溫、180° 旋轉",
+          "義大利加熱絲、杜邦塗層"
+        ],
+        "dims": "小款（約掛 4 條毛巾）",
+        "cutout": "明裝外接下出線（線長 150 cm），旁邊留插座",
+        "power": "110V／40W",
+        "weight": "",
+        "other": "原廠基本安裝 2,000；無定時器",
+        "price": {
+          "amount": 8900,
+          "min": 8900,
+          "max": 20400,
+          "source": "momo",
+          "checkedAt": "2026-08-23",
+          "note": "MOMO 與 KOHLER 官網同價 8,900（原價 20,400），不含安裝"
+        },
+        "links": [
+          {
+            "type": "momo",
+            "url": "https://www.momoshop.com.tw/goods/GoodsDetail.jsp?i_code=12097159",
+            "verified": true
+          },
+          {
+            "type": "official",
+            "url": "https://shop.kohler.com.tw/underscore-110v/",
+            "verified": true
+          }
+        ],
+        "availability": "in_stock",
+        "reviews": {
+          "praise": [
+            "40W 耗電低，實測約 1 度／天",
+            "恆溫 55°C 毛巾不發霉沒霉味",
+            "霧黑好搭，掛勾可掛沐浴球"
+          ],
+          "complaints": [
+            "無定時器，要手動開關",
+            "小款只掛 4 條毛巾，浴巾偏擠"
+          ],
+          "sources": [
+            "https://www.mobile01.com/topicdetail.php?f=168&t=6949265"
+          ],
+          "confidence": "low"
+        },
+        "cmpKeyword": "KOHLER K-29349TW-7"
+      },
+      {
+        "id": "generic_nopunch_alu",
+        "tier": "替代方案",
+        "brand": "通用",
+        "model": "免打孔數顯恆溫款",
+        "name": "電熱數顯恆溫毛巾架 鋁合金免打孔 五段定時",
+        "highlights": [
+          "3,699 三間不到 1.2 萬",
+          "三檔調溫、五檔定時",
+          "免打孔可貼磁磚"
+        ],
+        "dims": "賣場未標",
+        "cutout": "免打孔背膠或鎖牆",
+        "power": "110V；同類多 60–120W",
+        "weight": "",
+        "other": "賣場標 1 年保固；IP 等級未標",
+        "price": {
+          "amount": 3699,
+          "min": 3699,
+          "max": 6990,
+          "source": "momo",
+          "checkedAt": "2026-08-23",
+          "note": "MOMO 3,699；PChome 同類不鏽鋼款 6,990"
+        },
+        "links": [
+          {
+            "type": "momo",
+            "url": "https://www.momoshop.com.tw/goods/GoodsDetail.jsp?i_code=14871546",
+            "verified": true
+          },
+          {
+            "type": "pchome",
+            "url": "https://24h.pchome.com.tw/prod/DECB77-A900EOHIO",
+            "verified": true
+          }
+        ],
+        "availability": "in_stock",
+        "reviews": {
+          "praise": [
+            "便宜、定時與調溫功能齊全"
+          ],
+          "complaints": [
+            "陸規 220V 混賣，電壓要再三確認",
+            "塗層薄易刮花生鏽，沒標防水等級",
+            "免打孔膠條久了會脫落"
+          ],
+          "sources": [
+            "https://www.ptt.cc/bbs/e-shopping/M.1678068127.A.E40.html"
+          ],
+          "confidence": "low"
+        },
+        "cmpKeyword": "免打孔 電熱毛巾架 110V"
+      }
+    ],
+    "pickOptionId": "kohler_underscore_k29349tw7",
+    "pickReason": "三支合計 2.7 萬，IP24＋40W 省電、品牌保固，三衛浴最划算。"
+  }
+]

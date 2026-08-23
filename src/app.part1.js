@@ -175,6 +175,10 @@ const chosenOption = it => { const ps = picksOf(it); return ps.length ? ps[0].op
 const pickQty = (it, optionId) => { const p = (it.picks || []).find(x => x.optionId === optionId); return p ? (Number(p.qty) || 1) : 0; };
 const pickCount = it => picksOf(it).reduce((n, p) => n + p.qty, 0);
 function itemTotal(it) { let sum = 0, n = 0; picksOf(it).forEach(p => { const v = priceValue(effectivePrice(p.option)); if (v != null) { sum += v * p.qty; n++; } }); return { sum, n }; }
+const familyTodos = it => (it.todos || []).filter(t => t.for === 'family');
+const designerTodos = it => (it.todos || []).filter(t => t.for !== 'family');
+function installRange(items) { let min = 0, max = 0, n = 0; (items || []).forEach(i => { const c = i.installCost; if (!c) return; const lo = typeof c.min === 'number' ? c.min : (typeof c.max === 'number' ? c.max : 0); const hi = typeof c.max === 'number' ? c.max : lo; if (!lo && !hi) return; min += lo; max += hi; n++; }); return { min, max, n }; }
+function installText(c) { if (!c) return ''; const lo = typeof c.min === 'number' ? c.min : null, hi = typeof c.max === 'number' ? c.max : null; if (lo == null && hi == null) return ''; if (lo != null && hi != null && lo !== hi) return `${fmtMoney(lo)}–${Math.round(hi).toLocaleString('en-US')}`; return fmtMoney(lo != null ? lo : hi); }
 const profileOf = id => state.profiles[id] || state.profiles.family;
 function canEdit() { return role === 'family'; }
 function knownNames() { const names = new Set(); (state.history || []).forEach(e => e.who && names.add(e.who)); state.items.forEach(it => (it.notes || []).forEach(n => n.who && names.add(n.who))); return [...names]; }
@@ -293,11 +297,13 @@ function readSeed() { try { const el = document.getElementById('hc-seed'); retur
 function normalize(s) {
   s.history = s.history || []; s.todos = s.todos || []; s.prep = s.prep || []; s.meta = s.meta || {}; s.profiles = s.profiles || {};
   s.items.forEach(it => { it.options = it.options || []; it.notes = it.notes || []; it.todos = it.todos || []; it.requests = it.requests || []; it.install = it.install || []; it.warnings = it.warnings || []; it.costNotes = it.costNotes || []; it.defaultQty = Number(it.defaultQty) || 1;
+    it.todos.forEach(t => { if (t.for !== 'family') t.for = 'designer'; });
+    if (!it.installCost || (typeof it.installCost.min !== 'number' && typeof it.installCost.max !== 'number')) it.installCost = null;
     if (!Array.isArray(it.picks)) it.picks = it.chosenOptionId ? [{ optionId: it.chosenOptionId, qty: 1 }] : [];
     it.picks = it.picks.filter(p => p && it.options.some(o => o.id === p.optionId)); it.chosenOptionId = it.picks[0] ? it.picks[0].optionId : null; });
   return s;
 }
-const CATALOG_ITEM_FIELDS = ['name', 'short', 'hardReq', 'advice', 'warnings', 'install', 'costNotes', 'pickOptionId', 'pickReason', 'roomId', 'defaultQty'];
+const CATALOG_ITEM_FIELDS = ['name', 'short', 'hardReq', 'advice', 'warnings', 'install', 'costNotes', 'pickOptionId', 'pickReason', 'roomId', 'defaultQty', 'installCost'];
 const CATALOG_OPTION_FIELDS = ['key', 'tier', 'brand', 'model', 'name', 'highlights', 'dims', 'cutout', 'power', 'weight', 'other', 'price', 'links', 'availability', 'storeName', 'researchNote', 'checkedAt', 'cmpKeyword', 'reviews'];
 function mergeCatalog(remote, seed) {
   remote.meta = Object.assign({}, remote.meta, seed.meta); remote.profiles = clone(seed.profiles); remote.rooms = clone(seed.rooms); remote.budget = clone(seed.budget);

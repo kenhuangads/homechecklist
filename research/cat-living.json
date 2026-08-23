@@ -1,0 +1,644 @@
+[
+  {
+    "itemId": "tv",
+    "name": "客廳電視",
+    "roomId": "living",
+    "short": "75 吋以上、白天看得清",
+    "hardReq": "75 吋以上；白天強光客廳可視；HDMI 2.1 eARC 接聲霸",
+    "advice": "白天採光強的客廳，重點是亮度＋抗反光，不是只看 OLED。預算夠直上 G6 77（抗反光升級＋5 年面板保固）；想省錢 75QNED82 四萬有找還含安裝。C5 77 一月 67,900 的跳水價已結束，現在近 10 萬不划算。白天記得拉簾。",
+    "warnings": [
+      "C5 77 今年 1 月官網 67,900 已結束，8 月通路約 10 萬，別被舊價誤導",
+      "OLED 在太陽直射客廳仍會反光，G6 抗反光好很多但白天仍要拉簾",
+      "LG 非 G 系列面板保固 2 年（含烙印），G6 為 5 年",
+      "webOS 首頁有推薦廣告、LG Channels 部分頻道插 45 秒廣告",
+      "原廠壁掛架 OLW480B 只保 RC 水泥牆，木作／輕隔間要補強",
+      "2025 款 QNED86、QNED9M、三星 75QN90F 通路時常缺貨，下單前確認"
+    ],
+    "install": [
+      {
+        "tag": "電",
+        "text": "電視牆預留 110V 專用插座 2 個（電視＋聲霸），藏在壁掛架後方，插座中心離地約 100–110 cm"
+      },
+      {
+        "tag": "其他",
+        "text": "電視牆到電視櫃預埋 Ø50 mm 以上 PVC 暗管，走 2 條 HDMI 2.1（eARC）＋1 條 CAT6，管內留引線"
+      },
+      {
+        "tag": "木作",
+        "text": "壁掛牆若是木作或輕隔間，內層加 ≥2 cm 夾板或預埋 C 型鋼，原廠壁掛架只建議水泥牆"
+      },
+      {
+        "tag": "尺寸",
+        "text": "77 吋寬約 171 cm、75 吋約 167 cm、86 吋約 193 cm；電視牆淨寬至少 220 cm，沙發視距 3–4 m，避免正對窗"
+      },
+      {
+        "tag": "搬運",
+        "text": "大門、樓梯轉角淨寬至少 100 cm（86 吋外箱近 2 m），75 吋以上需 2 人搬運，透天先量樓梯"
+      },
+      {
+        "tag": "其他",
+        "text": "白天強光建議窗邊加遮光捲簾或百葉；電視上方不裝直射投射燈，避免畫面反光"
+      }
+    ],
+    "costNotes": [
+      "MOMO／PChome／LG 官網多含基本安裝（非壁掛）；壁掛安裝另計約 2,000–5,000，LG 官網活動常送壁掛架",
+      "電視牆預埋管線＋插座的水電工資約 3,000–6,000；舊機回收多數通路免費"
+    ],
+    "installCost": {
+      "min": 5000,
+      "max": 11000,
+      "note": "壁掛安裝 2,000–5,000＋電視牆預埋管線與插座 3,000–6,000；木作／輕隔間補強另計"
+    },
+    "todos": [
+      {
+        "text": "量電視牆淨寬與沙發視距（建議 3–4 m）",
+        "for": "designer"
+      },
+      {
+        "text": "電視牆預埋 Ø50 暗管＋2 個 110V 插座",
+        "for": "designer"
+      },
+      {
+        "text": "決定壁掛或放電視櫃",
+        "for": "family"
+      },
+      {
+        "text": "決定 OLED（畫質）或 miniLED（白天亮度）",
+        "for": "family"
+      }
+    ],
+    "defaultQty": 1,
+    "options": [
+      {
+        "id": "lg_oled77g6",
+        "tier": "頂級",
+        "brand": "LG",
+        "model": "OLED77G6PTA",
+        "name": "LG 77 吋 OLED evo G6 零間隙藝廊系列（2026）",
+        "highlights": [
+          "抗反光面板，強光客廳最適 OLED",
+          "4 層 RGB Tandem 亮度再升級",
+          "面板 5 年保固"
+        ],
+        "dims": "約 171×98 cm（不含底座），零間隙壁掛設計",
+        "cutout": "電視牆淨寬 ≥220 cm；壁掛架後方預留插座與暗管",
+        "power": "110V；建議獨立插座",
+        "weight": "",
+        "other": "面板保固 5 年（G 系列）；隨附零間隙壁掛架、底座另購；α11 Gen3；165Hz VRR",
+        "price": {
+          "amount": 164900,
+          "min": 164900,
+          "max": 164900,
+          "source": "pchome",
+          "checkedAt": "2026-08-23",
+          "note": "PChome 164,900 有貨；MOMO 同價"
+        },
+        "links": [
+          {
+            "type": "pchome",
+            "url": "https://24h.pchome.com.tw/prod/DPADZ5-A900K4PDR",
+            "verified": true
+          },
+          {
+            "type": "momo",
+            "url": "https://www.momoshop.com.tw/goods/GoodsDetail.jsp?i_code=15390224",
+            "verified": true
+          },
+          {
+            "type": "official",
+            "url": "https://www.lg.com/tw/tv-soundbars/oled-evo/oled77g6pta/",
+            "verified": true
+          }
+        ],
+        "availability": "in_stock",
+        "reviews": {
+          "praise": [
+            "抗反光比 G5 明顯進步，白天開燈可看",
+            "亮度、色彩比 C 系列高一級，HDR 更有衝擊力",
+            "5 年面板（含烙印）保固，長期持有安心"
+          ],
+          "complaints": [
+            "77 吋 16 萬以上，比 C6／C5 貴很多",
+            "2026 年 6 月才上市，台灣長期心得極少",
+            "零間隙設計適合壁掛，桌放要另買底座"
+          ],
+          "sources": [
+            "https://www.mobile01.com/topicdetail.php?f=347&t=7269717",
+            "https://www.rtings.com/tv/reviews/lg/g6-oled"
+          ],
+          "confidence": "medium"
+        },
+        "cmpKeyword": "LG OLED77G6PTA"
+      },
+      {
+        "id": "lg_oled77c5",
+        "tier": "高級",
+        "brand": "LG",
+        "model": "OLED77C5PTA",
+        "name": "LG 77 吋 OLED evo C5 極緻系列（2025）含壁掛安裝",
+        "highlights": [
+          "OLED 純黑對比，夜間電影最強",
+          "144Hz VRR、4 個 HDMI 2.1",
+          "官網送壁掛架＋免費壁掛"
+        ],
+        "dims": "171.1×98.2×4.7 cm（不含底座）；VESA 300×200",
+        "cutout": "電視牆淨寬 ≥220 cm",
+        "power": "110V；建議獨立插座",
+        "weight": "23.5 kg（不含底座）",
+        "other": "保固 2 年（含面板烙印）；α9 Gen8；內建 40W 2.2 聲道",
+        "price": {
+          "amount": 106383,
+          "min": 99999,
+          "max": 106383,
+          "source": "other",
+          "checkedAt": "2026-08-23",
+          "note": "MOMO／PChome 已無直達頁；Yahoo 購物中心 106,383 含壁掛安裝；比價最低 99,999"
+        },
+        "links": [
+          {
+            "type": "other",
+            "url": "https://tw.buy.yahoo.com/gdsale/11585986.html",
+            "verified": false,
+            "label": "Yahoo 購物中心 含壁掛安裝"
+          },
+          {
+            "type": "official",
+            "url": "https://www.lg.com/tw/tv-soundbars/oled-evo/oled77c5pta/",
+            "verified": true
+          },
+          {
+            "type": "momo",
+            "url": "https://www.momoshop.com.tw/search/searchShop.jsp?keyword=OLED77C5PTA",
+            "verified": false
+          }
+        ],
+        "availability": "unclear",
+        "reviews": {
+          "praise": [
+            "畫質、黑位、遊戲 144Hz 網友一致肯定",
+            "webOS 遙控直覺好上手，AirPlay／HomeKit 認證"
+          ],
+          "complaints": [
+            "沒遮光的明亮客廳網友直言不建議 OLED",
+            "面板保固只有 2 年",
+            "2025 舊款庫存零星，8 月價格回到 10 萬"
+          ],
+          "sources": [
+            "https://www.ptt.cc/bbs/Lifeismoney/M.1767771923.A.621.html",
+            "https://www.mobile01.com/topicdetail.php?f=347&t=7252334"
+          ],
+          "confidence": "medium"
+        },
+        "cmpKeyword": "LG OLED77C5PTA"
+      },
+      {
+        "id": "lg_75qned82",
+        "tier": "高CP值",
+        "brand": "LG",
+        "model": "75QNED82ATA",
+        "name": "LG 75 吋 QNED AI 4K 82 系列（2025）含基本安裝",
+        "highlights": [
+          "75 吋四萬有找，含基本安裝",
+          "webOS 25、AirPlay／HomeKit",
+          "α7 Gen8 晶片、區域控光"
+        ],
+        "dims": "約 167×97 cm（不含底座）",
+        "cutout": "電視牆淨寬 ≥210 cm；壁掛需另購壁掛架",
+        "power": "110V",
+        "weight": "",
+        "other": "保固 2 年；非 MiniLED；60Hz 面板",
+        "price": {
+          "amount": 39900,
+          "min": 39900,
+          "max": 39900,
+          "source": "pchome",
+          "checkedAt": "2026-08-23",
+          "note": "PChome 折後 39,900 有貨；MOMO 39,900 含基本安裝"
+        },
+        "links": [
+          {
+            "type": "pchome",
+            "url": "https://24h.pchome.com.tw/prod/DPADYE-A900JZW22",
+            "verified": true
+          },
+          {
+            "type": "momo",
+            "url": "https://www.momoshop.com.tw/goods/GoodsDetail.jsp?i_code=15204600",
+            "verified": true
+          },
+          {
+            "type": "official",
+            "url": "https://www.lg.com/tw/tv-soundbars/qned/75qned82ata/",
+            "verified": true
+          }
+        ],
+        "availability": "in_stock",
+        "reviews": {
+          "praise": [
+            "同價位 75 吋裡系統最順、遙控直覺",
+            "含安裝、有 AirPlay，長輩好上手"
+          ],
+          "complaints": [
+            "非 MiniLED，對比與 HDR 亮度普通",
+            "出廠色彩偏冷要自己調",
+            "保固只有 2 年"
+          ],
+          "sources": [
+            "https://www.mobile01.com/topicdetail.php?f=347&t=6962413"
+          ],
+          "confidence": "low"
+        },
+        "cmpKeyword": "LG 75QNED82ATA"
+      },
+      {
+        "id": "samsung_75qn90f",
+        "tier": "替代方案",
+        "brand": "Samsung",
+        "model": "QA75QN90FAXXZW",
+        "name": "Samsung 75 吋 Neo QLED QN90F（2025）含基本安裝",
+        "highlights": [
+          "抗反光真星黑面板，白天客廳最強",
+          "MiniLED 峰值逾 2,000 nits",
+          "4K 165Hz VRR"
+        ],
+        "dims": "約 166×95 cm（不含底座）",
+        "cutout": "電視牆淨寬 ≥210 cm",
+        "power": "110V",
+        "weight": "",
+        "other": "Tizen 系統，不支援 Dolby Vision",
+        "price": {
+          "amount": 79900,
+          "min": 79900,
+          "max": 99000,
+          "source": "pchome",
+          "checkedAt": "2026-08-23",
+          "note": "PChome 79,900 含基本安裝但補貨中；85 吋 119,900 有貨"
+        },
+        "links": [
+          {
+            "type": "pchome",
+            "url": "https://24h.pchome.com.tw/prod/DPADEW-A900IUDMN",
+            "verified": true
+          },
+          {
+            "type": "pchome",
+            "url": "https://24h.pchome.com.tw/prod/DPADEW-A900IUDPG",
+            "verified": true,
+            "label": "85 吋 119,900"
+          }
+        ],
+        "availability": "unclear",
+        "reviews": {
+          "praise": [
+            "窗邊午後陽光實測幾乎無反光，白天房間首選",
+            "亮度高、HDR 衝擊力強"
+          ],
+          "complaints": [
+            "不支援 Dolby Vision",
+            "台灣 OTT 相容性偶有問題",
+            "75 吋常缺貨"
+          ],
+          "sources": [
+            "https://www.mobile01.com/topicdetail.php?f=347&t=7143091"
+          ],
+          "confidence": "medium"
+        },
+        "cmpKeyword": "Samsung 75QN90F"
+      },
+      {
+        "id": "sony_75xr70",
+        "tier": "替代方案",
+        "brand": "Sony",
+        "model": "Y-75XR70",
+        "name": "Sony BRAVIA 7 75 吋 XR MiniLED Google TV",
+        "highlights": [
+          "Sony 影像處理、光暈控制好",
+          "Google TV 生態、台灣 App 齊",
+          "8.3 萬有貨"
+        ],
+        "dims": "約 167×96 cm（不含底座）",
+        "cutout": "電視牆淨寬 ≥210 cm",
+        "power": "110V",
+        "weight": "",
+        "other": "2026 新款 7 II（Y-75XR70M2）PChome 99,900",
+        "price": {
+          "amount": 82710,
+          "min": 82710,
+          "max": 99900,
+          "source": "pchome",
+          "checkedAt": "2026-08-23",
+          "note": "PChome 折後 82,710 有貨"
+        },
+        "links": [
+          {
+            "type": "pchome",
+            "url": "https://24h.pchome.com.tw/prod/DPAD06-A900J477W",
+            "verified": true
+          },
+          {
+            "type": "pchome",
+            "url": "https://24h.pchome.com.tw/prod/DPADO2-A900K7L2F",
+            "verified": true,
+            "label": "2026 新款 7 II"
+          }
+        ],
+        "availability": "in_stock",
+        "reviews": {
+          "praise": [
+            "亮度、畫質、操作順暢",
+            "光暈控制好，電影對比佳"
+          ],
+          "complaints": [
+            "面板無抗反光鍍膜，複雜光源下反光明顯",
+            "出廠色準偏差大"
+          ],
+          "sources": [
+            "https://www.mobile01.com/topicdetail.php?f=347&t=6997708"
+          ],
+          "confidence": "medium"
+        },
+        "cmpKeyword": "Sony Y-75XR70"
+      }
+    ],
+    "pickOptionId": "lg_oled77g6",
+    "pickReason": "強光客廳要抗反光＋高亮度，G6 兩者兼具又有 5 年面板保固；預算緊改 75QNED82。"
+  },
+  {
+    "itemId": "soundbar",
+    "name": "客廳 Soundbar",
+    "roomId": "living",
+    "short": "實體後環繞優先",
+    "hardReq": "HDMI eARC；含實體後環繞",
+    "advice": "挑高 3.2 m 以上，靠天花板反射的天空聲道效果差，錢要花在實體後環繞和重低音。Q990F 11.1.4 最完整；想跟 LG 電視整合選 S95TR 省一萬多；預算緊 S80TR 兩萬有找。港規 S90TR／S70TY 別買。",
+    "warnings": [
+      "挑高天花板天空聲道反射弱，別為天空聲道多花錢",
+      "S95TR 後環繞電源線只有 150 cm，先確認插座位置",
+      "LG WOW Orchestra 電視重開會重設、App 常斷線",
+      "Q990F 後環繞預設音量偏小，要用 App 拉高",
+      "2026 新款 Q990H 已上市，F 款為清倉價、庫存零星",
+      "S90TR、S70TY 為港規水貨，台灣無保固"
+    ],
+    "install": [
+      {
+        "tag": "電",
+        "text": "電視櫃內預留插座 2 個（主機＋重低音）；沙發後方兩側各預留 1 個插座給後環繞，離地 30 cm 或壁掛高 120–150 cm"
+      },
+      {
+        "tag": "其他",
+        "text": "電視到主機用認證 HDMI 線 ≥2 m 走暗管，接電視 eARC 孔；Wi-Fi 路由器離主機 5 m 內"
+      },
+      {
+        "tag": "尺寸",
+        "text": "主機寬約 118–125 cm、高 6–7.5 cm，電視櫃深 ≥35 cm；電視壁掛底緣離櫃面至少 12 cm"
+      },
+      {
+        "tag": "木作",
+        "text": "重低音不要塞封閉櫃內（共振、故障），留 30×40 cm 開放地面空間"
+      }
+    ],
+    "costNotes": [
+      "聲霸多為宅配不含安裝；後環繞壁掛架另購約 500–1,500",
+      "HDMI 2.1 認證線 2 m 約 500–1,000"
+    ],
+    "installCost": {
+      "min": 2000,
+      "max": 5000,
+      "note": "沙發後方 2 個插座拉線＋HDMI 暗管與線材；後環繞壁掛架另計"
+    },
+    "todos": [
+      {
+        "text": "沙發後方兩側各預留 1 個插座（後環繞）",
+        "for": "designer"
+      },
+      {
+        "text": "電視到電視櫃預埋 HDMI 暗管",
+        "for": "designer"
+      },
+      {
+        "text": "量客廳天花板高度（是否 >3.2 m）",
+        "for": "designer"
+      }
+    ],
+    "defaultQty": 1,
+    "options": [
+      {
+        "id": "samsung_q990f",
+        "tier": "頂級",
+        "brand": "Samsung",
+        "model": "HW-Q990F",
+        "name": "Samsung 11.1.4 聲道 Q990F 聲霸（含重低音＋後環繞）",
+        "highlights": [
+          "11.1.4 實體後環繞＋天空聲道最完整",
+          "新款方塊重低音，低音更紮實",
+          "SpaceFit 自動校正"
+        ],
+        "dims": "主機約 123×7×14 cm；重低音約 25 cm 立方",
+        "cutout": "電視櫃深 ≥35 cm；後環繞各 1 插座",
+        "power": "110V；共 4 個插座",
+        "weight": "",
+        "other": "保固 1 年；Dolby Atmos／DTS:X；非三星電視無 Q-Symphony",
+        "price": {
+          "amount": 44900,
+          "min": 38888,
+          "max": 49900,
+          "source": "momo",
+          "checkedAt": "2026-08-23",
+          "note": "MOMO 44,900 有貨；PChome 38,888 僅剩 1 件"
+        },
+        "links": [
+          {
+            "type": "momo",
+            "url": "https://www.momoshop.com.tw/goods/GoodsDetail.jsp?i_code=14063403",
+            "verified": true
+          },
+          {
+            "type": "pchome",
+            "url": "https://24h.pchome.com.tw/prod/DMAAOD-A900JUDD2",
+            "verified": true
+          }
+        ],
+        "availability": "in_stock",
+        "reviews": {
+          "praise": [
+            "低音飽滿、包圍感強",
+            "多裝置同網實測無斷線",
+            "對白清晰，AI 音量可壓過噪音"
+          ],
+          "complaints": [
+            "後環繞預設偏小聲，要進 App 調",
+            "細部設定都要裝 App",
+            "2026 Q990H 上市，F 款庫存零星"
+          ],
+          "sources": [
+            "https://www.mobile01.com/topicdetail.php?f=348&t=7131450"
+          ],
+          "confidence": "medium"
+        },
+        "cmpKeyword": "Samsung HW-Q990F"
+      },
+      {
+        "id": "lg_s95tr",
+        "tier": "高級",
+        "brand": "LG",
+        "model": "S95TR",
+        "name": "LG 9.1.5 聲道 S95TR 聲霸（含重低音＋後環繞）",
+        "highlights": [
+          "實體後環繞含天空聲道",
+          "WOW Orchestra 與 LG 電視同步發聲",
+          "人聲清楚，遊戲環繞強"
+        ],
+        "dims": "主機約 125×6.4×13.5 cm",
+        "cutout": "電視櫃深 ≥35 cm；後環繞各 1 插座（線長僅 150 cm）",
+        "power": "110V；共 4 個插座",
+        "weight": "",
+        "other": "保固 1 年；WOW 功能需 LG 2022 以後電視",
+        "price": {
+          "amount": 28900,
+          "min": 28900,
+          "max": 32900,
+          "source": "pchome",
+          "checkedAt": "2026-08-23",
+          "note": "PChome 28,900 有貨；MOMO 32,900"
+        },
+        "links": [
+          {
+            "type": "pchome",
+            "url": "https://24h.pchome.com.tw/prod/DMAAF8-A900I0K0Y",
+            "verified": true
+          },
+          {
+            "type": "momo",
+            "url": "https://www.momoshop.com.tw/goods/GoodsDetail.jsp?i_code=13226987",
+            "verified": true
+          }
+        ],
+        "availability": "in_stock",
+        "reviews": {
+          "praise": [
+            "人聲表現好、環繞效果清楚",
+            "搭 LG 電視 WOW 聲場更大",
+            "三萬內有實體後環繞＋天空聲道"
+          ],
+          "complaints": [
+            "後環繞電源線 150 cm，多要買延長線",
+            "偶爾 Wi-Fi 斷線，App 常斷",
+            "電視重開 WOW 會重設"
+          ],
+          "sources": [
+            "https://www.mobile01.com/topicdetail.php?f=348&t=6999624"
+          ],
+          "confidence": "high"
+        },
+        "cmpKeyword": "LG S95TR"
+      },
+      {
+        "id": "lg_s80tr",
+        "tier": "高CP值",
+        "brand": "LG",
+        "model": "S80TR",
+        "name": "LG 5.1.3 聲道 S80TR 聲霸（含重低音＋後環繞）",
+        "highlights": [
+          "兩萬有找含實體後環繞",
+          "重低音與 S95TR 同級",
+          "可搭 LG 電視 WOW"
+        ],
+        "dims": "主機約 1 m 寬",
+        "cutout": "電視櫃深 ≥35 cm；後環繞各 1 插座",
+        "power": "110V；共 4 個插座",
+        "weight": "",
+        "other": "保固 1 年；後環繞無天空聲道",
+        "price": {
+          "amount": 19900,
+          "min": 19900,
+          "max": 26900,
+          "source": "pchome",
+          "checkedAt": "2026-08-23",
+          "note": "PChome 19,900 有貨；MOMO 26,900"
+        },
+        "links": [
+          {
+            "type": "pchome",
+            "url": "https://24h.pchome.com.tw/prod/DMBM1D-A900J5JAZ",
+            "verified": true
+          },
+          {
+            "type": "momo",
+            "url": "https://www.momoshop.com.tw/goods/GoodsDetail.jsp?i_code=14906381",
+            "verified": true
+          }
+        ],
+        "availability": "in_stock",
+        "reviews": {
+          "praise": [
+            "中階就有天空聲道＋實體後環繞",
+            "重低音升級到旗艦同級"
+          ],
+          "complaints": [
+            "主機偏長，小電視會塞滿",
+            "後環繞只有 2.0"
+          ],
+          "sources": [
+            "https://m.eprice.com.tw/tech/talk/1183/5735092/1"
+          ],
+          "confidence": "medium"
+        },
+        "cmpKeyword": "LG S80TR"
+      },
+      {
+        "id": "sonos_arc_ultra",
+        "tier": "替代方案",
+        "brand": "Sonos",
+        "model": "Arc Ultra",
+        "name": "Sonos Arc Ultra 9.1.4 單體聲霸",
+        "highlights": [
+          "單體聲霸音場最強、對白三段增強",
+          "不加重低音也夠",
+          "外型簡約、多房音樂"
+        ],
+        "dims": "117.8×7.5×11.1 cm",
+        "cutout": "電視櫃深 ≥30 cm；只需 1 個插座",
+        "power": "110V",
+        "weight": "5.9 kg",
+        "other": "只有 1 個 HDMI eARC、無 DTS:X；後環繞需另購",
+        "price": {
+          "amount": 41900,
+          "min": 37710,
+          "max": 41900,
+          "source": "pchome",
+          "checkedAt": "2026-08-23",
+          "note": "PChome 41,900 有貨"
+        },
+        "links": [
+          {
+            "type": "pchome",
+            "url": "https://24h.pchome.com.tw/prod/DMAAO6-A900IE4HM",
+            "verified": true
+          },
+          {
+            "type": "momo",
+            "url": "https://www.momoshop.com.tw/goods/GoodsDetail.jsp?i_code=14825640",
+            "verified": true
+          }
+        ],
+        "availability": "in_stock",
+        "reviews": {
+          "praise": [
+            "Atmos 層次與低音明顯進步",
+            "校正後大空間仍有包圍感"
+          ],
+          "complaints": [
+            "無 HDMI 輸入",
+            "要實體後環繞總價翻倍"
+          ],
+          "sources": [
+            "https://www.mobile01.com/topicdetail.php?f=348&t=7040896"
+          ],
+          "confidence": "medium"
+        },
+        "cmpKeyword": "Sonos Arc Ultra"
+      }
+    ],
+    "pickOptionId": "samsung_q990f",
+    "pickReason": "挑高大客廳要輸出與實體後環繞，Q990F 最完整且災情少。"
+  }
+]

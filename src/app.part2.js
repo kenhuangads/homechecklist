@@ -51,9 +51,11 @@ function renderSaveState(el) {
 }
 function saveStateEl() { const el = h('button', { id: 'saveState', class: 'save-state', type: 'button' }); renderSaveState(el); return el; }
 function openTodoCount() { return state.items.reduce((n, i) => n + i.todos.filter(t => !t.done).length, 0) + (state.todos || []).filter(t => !t.done).length + state.prep.filter(p => !p.done).length; }
+function openFamilyCount() { return state.items.reduce((n, i) => n + familyTodos(i).filter(t => !t.done).length, 0) + (state.todos || []).filter(t => !t.done && t.for === 'family').length; }
+function openDesignerCount() { return state.items.reduce((n, i) => n + designerTodos(i).filter(t => !t.done).length, 0) + (state.todos || []).filter(t => !t.done && t.for !== 'family').length + state.prep.filter(p => !p.done).length; }
 function tabbar(active) {
   const tabs = [['list', '清單', 'list'], ['todos', '待辦', 'todo'], ['history', '紀錄', 'history'], ['more', '更多', 'more']];
-  const open = openTodoCount();
+  const open = openFamilyCount();
   return h('nav', { class: 'tabbar', 'aria-label': '主選單' }, h('div', { class: 'inner' }, tabs.map(([id, label, ic]) =>
     h('button', { type: 'button', 'aria-current': active === id ? 'page' : null, onclick: () => go({ screen: 'tab', tab: id }, { keepScroll: true }) }, icon(ic), label, id === 'todos' && open ? h('span', { class: 'badge' }, open > 99 ? '99+' : open) : null))));
 }
@@ -110,8 +112,8 @@ function nextStep() {
   const items = state.items.filter(i => i.status !== 'skipped');
   const choosing = items.filter(i => i.status === 'choosing');
   if (choosing.length) { const hard = choosing.find(i => i.hardReq) || choosing[0]; return { t: `先決定「${hard.name}」`, d: `還有 ${choosing.length} 項沒決定`, go: () => go({ screen: 'item', itemId: hard.id }) }; }
-  const open = openTodoCount();
-  if (open) return { t: `還有 ${open} 項待辦`, d: '做完就打勾', go: () => go({ screen: 'tab', tab: 'todos' }) };
+  const open = openFamilyCount();
+  if (open) return { t: `有 ${open} 件要我們決定`, d: '在「待辦」裡打勾', go: () => go({ screen: 'tab', tab: 'todos' }) };
   const notBought = items.filter(i => i.status === 'decided');
   if (notBought.length) return { t: `${notBought.length} 項已決定、還沒買`, d: '下單後改成「已購買」', go: () => go({ screen: 'item', itemId: notBought[0].id }) };
   return { t: '全部完成！', d: '', go: null };
@@ -125,16 +127,24 @@ function renderList() {
   const est = { cp: 0, mid: 0, top: 0 }; active.forEach(i => ['cp', 'mid', 'top'].forEach(k => { const v = tierEstimate(i, k); if (v != null) est[k] += v * (i.defaultQty || 1); }));
   const out = [pendingBanner()];
   out.push(h('div', { class: 'hero' },
-    h('div', {}, h('h2', { class: 'h-hero' }, state.meta.title), h('p', { class: 'sub' }, `已決定 ${decided}／${active.length}・已購買 ${bought}${decidedN ? `・合計 ${fmtMoney(decidedSum)}` : ''}`)),
+    h('div', {}, h('h2', { class: 'h-hero' }, state.meta.title), h('p', { class: 'sub' }, `已決定 ${decided}／${active.length}・已購買 ${bought}${decidedN ? `・設備 ${fmtMoney(decidedSum)}` : ''}`)),
     h('div', { class: 'ring', style: `--p:${pct}` }, h('span', {}, `${pct}%`, h('small', {}, '已決定'))),
     h('div', { class: 'hero-actions' }, h('button', { class: 'btn sm', type: 'button', onclick: () => shareLink('family') }, icon('share'), '分享給家人'), h('button', { class: 'btn sm', type: 'button', onclick: () => go({ screen: 'tab', tab: 'more' }) }, icon('book'), '設計師連結'))));
   const ns = nextStep();
   out.push(h(ns.go ? 'button' : 'div', { class: 'next' + (ns.go ? ' item-row' : ' card'), type: ns.go ? 'button' : null, onclick: ns.go || null },
     h('span', { class: 'tile r-next' }, icon('pin')), h('div', {}, h('div', { class: 'eyebrow' }, '下一步'), h('div', { class: 't' }, ns.t), ns.d ? h('div', { class: 'small muted' }, ns.d) : null), ns.go ? icon('next', 'arrow') : null));
+  const pickedItems = active.filter(i => picksOf(i).length);
+  const inst = installRange(pickedItems), instAll = installRange(active);
   out.push(h('details', { class: 'card flat fold' },
     h('summary', {}, h('span', {}, '預算總覽 ', h('b', { class: 'price' }, decidedN ? fmtMoney(decidedSum) : '—')), icon('next', 'chev')),
     h('div', { class: 'fold-body stack' },
       h('p', { class: 'small muted' }, decidedN ? `已決定 ${decidedN} 項的合計（含數量）` : '還沒有已決定的品項'),
+      decidedN ? h('div', { class: 'cost-rows' },
+        h('div', { class: 'row between' }, h('span', {}, '設備'), h('b', {}, fmtMoney(decidedSum))),
+        inst.n ? h('div', { class: 'row between' }, h('span', {}, '安裝工程估算'), h('b', {}, installText({ min: inst.min, max: inst.max }))) : null,
+        inst.n ? h('div', { class: 'row between total' }, h('span', {}, '總計'), h('b', { class: 'price' }, installText({ min: decidedSum + inst.min, max: decidedSum + inst.max }))) : null,
+        h('p', { class: 'tiny' }, inst.n ? `安裝工程含拉線、開孔、配管、吊掛等（${inst.n} 項已估）；未選的品項未計入。` : '安裝工程費用尚未估算')) : null,
+      instAll.n ? h('p', { class: 'tiny' }, `若全部品項都裝，安裝工程估約 ${installText({ min: instAll.min, max: instAll.max })}。`) : null,
       h('div', { class: 'summary' }, [['cp', '全選高CP值'], ['mid', '全選高級'], ['top', '全選頂級']].map(([k, l]) => h('div', { class: 'cell' }, h('div', { class: 'v', style: 'font-size:1rem' }, fmtMoney(est[k])), h('div', { class: 'k' }, l)))),
       h('div', { class: 'table-wrap' }, h('table', { class: 'ctable', style: 'min-width:420px' }, h('thead', {}, h('tr', {}, h('th', {}, '品項'), h('th', {}, '數量'), h('th', {}, '高CP值'), h('th', {}, '高級'), h('th', {}, '頂級'))),
         h('tbody', {}, active.map(i => h('tr', {}, h('td', {}, i.name), h('td', {}, i.defaultQty || 1), ['cp', 'mid', 'top'].map(k => { const v = tierEstimate(i, k); return h('td', {}, v == null ? '—' : (v * (i.defaultQty || 1)).toLocaleString('en-US')); })))))),
@@ -186,17 +196,26 @@ function renderItemBody(it) {
   const ps = picksOf(it), total = itemTotal(it);
   if (ps.length) out.push(h('div', { class: 'card tone-accent' }, h('div', { class: 'row between' }, h('div', { class: 'eyebrow' }, '已選清單'), qtyHint(it) ? h('span', { class: 'tiny' }, `已選 ${pickCount(it)} 台・${qtyHint(it)}`) : null),
     h('div', { class: 'stack-sm' }, ps.map(p => h('div', { class: 'row between pick-line' }, h('div', { class: 'grow' }, h('b', {}, `${p.option.brand} ${p.option.model}`), p.qty > 1 ? h('span', { class: 'chip s-decided', style: 'margin-left:.4rem' }, `×${p.qty}`) : null), prof.show.price ? h('span', { class: 'price' }, priceValue(effectivePrice(p.option)) != null ? fmtMoney(priceValue(effectivePrice(p.option)) * p.qty) : '—') : null))),
-    prof.show.price && total.n && ps.length > 1 ? h('div', { class: 'row between', style: 'border-top:1px solid var(--line);padding-top:.4rem' }, h('b', {}, '合計'), h('span', { class: 'price' }, fmtMoney(total.sum))) : null));
+    prof.show.price && total.n && ps.length > 1 ? h('div', { class: 'row between', style: 'border-top:1px solid var(--line);padding-top:.4rem' }, h('b', {}, '合計'), h('span', { class: 'price' }, fmtMoney(total.sum))) : null,
+    prof.show.price && it.installCost ? h('div', { class: 'row between', style: 'border-top:1px dashed var(--line);padding-top:.4rem' }, h('span', { class: 'small' }, '另加安裝工程估算'), h('b', { class: 'small' }, installText(it.installCost))) : null));
   else if (it.status !== 'skipped') out.push(h('div', { class: 'card tone-attn' }, h('p', {}, `還沒選。按方案上的「加入清單」即可${qtyHint(it) ? `；${qtyHint(it)}，可以混搭不同方案` : ''}。`)));
   if (prof.show.options) out.push(h('section', { class: 'stack' }, h('h2', { class: 'h-sec' }, '方案', h('span', { class: 'count' }, `${it.options.length} 個`)), sortedOptions(it).map(o => optionCard(it, o, { prof, editable }))));
   if (editable) out.push(h('button', { class: 'btn outline block', type: 'button', onclick: () => openAddProductSheet(it) }, icon('plus'), '新增其他商品'));
   if (prof.show.advice && it.advice) out.push(h('div', { class: 'card tone-soft' }, h('div', { class: 'eyebrow' }, '達人建議'), h('p', {}, it.advice)));
   if (it.warnings.length) out.push(fold(`注意事項（${it.warnings.length}）`, h('ul', { class: 'small' }, it.warnings.map(w => h('li', {}, w)))));
   if (prof.show.install && it.install.length) out.push(fold('安裝須知（給設計師／水電）', h('div', {}, installList(it.install))));
-  if (prof.show.price && it.costNotes.length) out.push(fold('費用參考', h('ul', { class: 'small' }, it.costNotes.map(c => h('li', {}, c)))));
+  if (prof.show.price && (it.costNotes.length || it.installCost)) out.push(fold('費用參考' + (it.installCost ? `（安裝 ${installText(it.installCost)}）` : ''), h('div', { class: 'stack-sm small' },
+    it.installCost ? h('div', {}, h('b', {}, '安裝工程估算 ' + installText(it.installCost)), it.installCost.note ? h('div', { class: 'muted' }, it.installCost.note) : null) : null,
+    it.costNotes.length ? h('ul', {}, it.costNotes.map(c => h('li', {}, c))) : null)));
   const reqs = it.requests.filter(r => r.status === 'pending');
   if (reqs.length && prof.show.notes) out.push(h('div', { class: 'card' }, h('div', { class: 'eyebrow' }, '等 Claude 幫忙查'), reqs.map(r => h('div', { class: 'row between' }, h('div', { class: 'grow' }, h('div', {}, r.query || r.url), h('div', { class: 'tiny' }, `${r.who}・${fmtTime(r.ts)}`)), editable ? h('button', { class: 'btn sm', type: 'button', onclick: () => dispatch({ type: 'updateRequest', itemId: it.id, requestId: r.id, patch: { status: 'done' } }) }, '已處理') : null))));
-  if (prof.show.todos) { const open = it.todos.filter(t => !t.done), done = it.todos.filter(t => t.done); out.push(h('div', { class: 'card' }, h('div', { class: 'row between' }, h('div', { class: 'eyebrow' }, `待辦（${open.length}）`), editable ? h('button', { class: 'btn sm', type: 'button', onclick: () => openAddTodoSheet(it.id) }, icon('plus'), '新增') : null), open.length || done.length ? h('div', { class: 'stack-sm' }, open.map(t => todoRow(t, it.id, editable)), done.map(t => todoRow(t, it.id, editable))) : h('p', { class: 'small muted' }, '沒有待辦'))); }
+  if (prof.show.todos) {
+    const fam = familyTodos(it), des = designerTodos(it);
+    const famOpen = fam.filter(t => !t.done), famDone = fam.filter(t => t.done);
+    out.push(h('div', { class: 'card' }, h('div', { class: 'row between' }, h('div', { class: 'eyebrow' }, `要我們決定（${famOpen.length}）`), editable ? h('button', { class: 'btn sm', type: 'button', onclick: () => openAddTodoSheet(it.id) }, icon('plus'), '新增') : null),
+      fam.length ? h('div', { class: 'stack-sm' }, famOpen.map(t => todoRow(t, it.id, editable)), famDone.map(t => todoRow(t, it.id, editable))) : h('p', { class: 'small muted' }, '沒有要決定的事')));
+    if (des.length) out.push(fold(`給設計師／水電（${des.filter(t => !t.done).length}）`, h('div', { class: 'stack-sm' }, des.map(t => todoRow(t, it.id, editable)))));
+  }
   if (prof.show.notes) out.push(h('div', { class: 'card' }, h('div', { class: 'row between' }, h('div', { class: 'eyebrow' }, `留言（${it.notes.length}）`), editable ? h('button', { class: 'btn sm', type: 'button', onclick: () => openNoteSheet(it.id) }, icon('plus'), '留言') : null),
     it.notes.length ? h('div', { class: 'stack-sm' }, [...it.notes].reverse().map(n => h('div', { class: 'note' }, h('div', { class: 'row between' }, h('span', { class: 'who' }, n.who), h('span', { class: 'when' }, fmtTime(n.ts, true))), h('div', { class: 'txt' }, n.text), editable && me && n.who === me.name ? h('button', { class: 'linkbtn small', type: 'button', onclick: async () => { if (await confirmDialog({ title: '刪除這則留言？', ok: '刪除', danger: true })) dispatch({ type: 'removeNote', itemId: it.id, noteId: n.id }); } }, '刪除') : null))) : h('p', { class: 'small muted' }, '有想法就寫下來，全家都看得到。')));
   return out;
@@ -273,15 +292,25 @@ function prepRow(p, editable) {
 /* ---------- todos ---------- */
 function renderTodos() {
   const editable = canEdit(), out = [pendingBanner()];
-  const groups = []; const general = (state.todos || []); if (general.length) groups.push({ title: '一般待辦', itemId: null, todos: general });
-  state.items.forEach(it => { if (it.todos.length) groups.push({ title: it.name, itemId: it.id, todos: it.todos }); });
-  const openTotal = groups.reduce((n, g) => n + g.todos.filter(t => !t.done).length, 0);
-  out.push(h('div', { class: 'row between' }, h('p', { class: 'muted' }, `未完成 ${openTotal} 項`), editable ? h('button', { class: 'btn primary', type: 'button', onclick: () => openAddTodoSheet(null) }, icon('plus'), '新增') : null));
-  groups.forEach(g => { const open = g.todos.filter(t => !t.done); if (open.length) out.push(h('section', { class: 'stack' }, h('h2', { class: 'h-sec' }, g.title), h('div', { class: 'stack-sm' }, open.map(t => todoRow(t, g.itemId, editable))))); });
-  const prepGroups = [...new Set(state.prep.map(p => p.group))]; const prepOpen = state.prep.filter(p => !p.done).length;
-  out.push(h('h2', { class: 'h-room', style: 'margin-top:.4rem' }, '全屋前置工程', h('span', { class: 'count' }, `${prepOpen} 未完成`)));
-  prepGroups.forEach(gn => { const ps = state.prep.filter(p => p.group === gn && !p.done); if (ps.length) out.push(h('section', { class: 'stack' }, h('h2', { class: 'h-sec' }, gn), h('div', { class: 'stack-sm' }, ps.map(p => prepRow(p, editable))))); });
-  const doneList = []; groups.forEach(g => g.todos.filter(t => t.done).forEach(t => doneList.push(todoRow(t, g.itemId, editable, g.title)))); state.prep.filter(p => p.done).forEach(p => doneList.push(prepRow(p, editable)));
+  const famGroups = [], desGroups = [];
+  const general = (state.todos || []);
+  const gf = general.filter(t => t.for === 'family'), gd = general.filter(t => t.for !== 'family');
+  if (gf.length) famGroups.push({ title: '其他', itemId: null, todos: gf });
+  if (gd.length) desGroups.push({ title: '其他', itemId: null, todos: gd });
+  state.items.forEach(it => { const f = familyTodos(it), d = designerTodos(it); if (f.length) famGroups.push({ title: it.name, itemId: it.id, todos: f }); if (d.length) desGroups.push({ title: it.name, itemId: it.id, todos: d }); });
+  const famOpen = openFamilyCount(), desOpen = openDesignerCount();
+  out.push(h('div', { class: 'row between' }, h('div', {}, h('h2', { class: 'h-room' }, '要我們決定'), h('p', { class: 'small muted' }, famOpen ? `還有 ${famOpen} 件` : '都決定好了')), editable ? h('button', { class: 'btn primary', type: 'button', onclick: () => openAddTodoSheet(null) }, icon('plus'), '新增') : null));
+  let any = false;
+  famGroups.forEach(g => { const open = g.todos.filter(t => !t.done); if (open.length) { any = true; out.push(h('section', { class: 'stack' }, h('h2', { class: 'h-sec' }, g.title), h('div', { class: 'stack-sm' }, open.map(t => todoRow(t, g.itemId, editable))))); } });
+  if (!any) out.push(h('div', { class: 'card tone-soft' }, h('p', { class: 'muted' }, '目前沒有需要家人決定的事，其他都交給設計師與水電。')));
+  const desBody = h('div', { class: 'stack' });
+  desGroups.forEach(g => { const open = g.todos.filter(t => !t.done); if (open.length) desBody.append(h('section', { class: 'stack' }, h('h2', { class: 'h-sec' }, g.title), h('div', { class: 'stack-sm' }, open.map(t => todoRow(t, g.itemId, editable))))); });
+  const prepGroups = [...new Set(state.prep.map(p => p.group))];
+  prepGroups.forEach(gn => { const ps = state.prep.filter(p => p.group === gn && !p.done); if (ps.length) desBody.append(h('section', { class: 'stack' }, h('h2', { class: 'h-sec' }, '前置工程・' + gn), h('div', { class: 'stack-sm' }, ps.map(p => prepRow(p, editable))))); });
+  out.push(fold(`給設計師／水電（${desOpen}）`, desBody, { cls: 'card flat' }));
+  const doneList = [];
+  [...famGroups, ...desGroups].forEach(g => g.todos.filter(t => t.done).forEach(t => doneList.push(todoRow(t, g.itemId, editable, g.title))));
+  state.prep.filter(p => p.done).forEach(p => doneList.push(prepRow(p, editable)));
   if (doneList.length) out.push(fold(`已完成（${doneList.length}）`, h('div', { class: 'stack-sm' }, doneList), { cls: 'card flat' }));
   return out;
 }
@@ -414,6 +443,6 @@ function docItem(i, p) {
   const warns = i.warnings.map(txt).filter(Boolean); if (warns.length && (p.show.advice || p.show.install)) el.append(h('ul', { class: 'small', style: 'color:var(--attn)' }, warns.map(w => h('li', {}, w))));
   if (p.show.price && i.costNotes.length) el.append(h('div', {}, h('div', { class: 'eyebrow', style: 'margin-top:.3rem' }, '費用參考'), h('ul', { class: 'small' }, i.costNotes.map(c => h('li', {}, c)))));
   if (p.show.notes && i.notes.length) el.append(h('div', {}, h('div', { class: 'eyebrow', style: 'margin-top:.3rem' }, '家人留言'), i.notes.map(n => h('div', { class: 'note' }, h('span', { class: 'who' }, n.who), ' ', h('span', { class: 'when' }, fmtTime(n.ts, true)), h('div', { class: 'txt' }, n.text)))));
-  if (p.show.todos && i.todos.length) el.append(h('div', {}, h('div', { class: 'eyebrow', style: 'margin-top:.3rem' }, '待辦'), h('ul', { class: 'small' }, i.todos.map(t => h('li', { style: t.done ? 'text-decoration:line-through;color:var(--ink-3)' : '' }, t.text)))));
+  const dTodos = designerTodos(i); if (p.show.todos && dTodos.length) el.append(h('div', {}, h('div', { class: 'eyebrow', style: 'margin-top:.3rem' }, '待確認／待施工'), h('ul', { class: 'small' }, dTodos.map(t => h('li', { style: t.done ? 'text-decoration:line-through;color:var(--ink-3)' : '' }, t.text)))));
   return el;
 }

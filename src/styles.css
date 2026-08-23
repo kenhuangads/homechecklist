@@ -294,3 +294,6 @@ details.fold.card > summary { font-size: 1.05rem; }
 dialog.tut h2 { font-family: var(--display); font-weight: 700; }
 .doc .doc-head h2, .doc .room > h3 { font-family: var(--display); font-weight: 700; }
 .h-room { font-family: var(--display); font-weight: 700; }
+.cost-rows { display: flex; flex-direction: column; gap: .35rem; background: var(--surface-2); border-radius: var(--radius-sm); padding: .6rem .75rem; }
+.cost-rows .total { border-top: 1px solid var(--line-strong); padding-top: .4rem; margin-top: .1rem; }
+.cost-rows .tiny { color: var(--ink-3); }

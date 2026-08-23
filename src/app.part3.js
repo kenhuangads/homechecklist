@@ -59,11 +59,15 @@ function openDesignerMoreSheet() {
 /* ---------- todo / note / price / add product ---------- */
 function openAddTodoSheet(itemId) {
   const key = 'todo:' + (itemId || 'general');
-  const input = draftInput(h('input', { class: 'input', placeholder: '例如：量廚具寬度', maxlength: '120' }), key);
-  const sel = h('select', { class: 'input' }, h('option', { value: '' }, '一般待辦（不屬於特定品項）'), state.items.map(i => h('option', { value: i.id, selected: i.id === itemId ? true : null }, i.name)));
-  const submit = () => { const text = input.value.trim(); if (!text) { input.focus(); return false; } const e = dispatch({ type: 'addTodo', itemId: sel.value || null, todo: { id: uid(), text, done: false, by: me.name, ts: nowIso() } }); clearDraft(key); if (e) toast('已新增待辦'); };
+  const input = draftInput(h('input', { class: 'input', placeholder: '例如：決定要不要抽屜式', maxlength: '120' }), key);
+  const sel = h('select', { class: 'input' }, h('option', { value: '' }, '不屬於特定品項'), state.items.map(i => h('option', { value: i.id, selected: i.id === itemId ? true : null }, i.name)));
+  let who = 'family';
+  const seg = h('div', { class: 'seg' });
+  const draw = () => seg.replaceChildren(...[['family', '我們要決定'], ['designer', '給設計師／水電']].map(([v, l]) => h('button', { class: 'btn', type: 'button', 'aria-pressed': String(who === v), onclick: () => { who = v; draw(); } }, l)));
+  draw();
+  const submit = () => { const text = input.value.trim(); if (!text) { input.focus(); return false; } const e = dispatch({ type: 'addTodo', itemId: sel.value || null, todo: { id: uid(), text, done: false, for: who, by: me.name, ts: nowIso() } }); clearDraft(key); if (e) toast('已新增'); };
   input.addEventListener('keydown', e => { if (e.key === 'Enter') { if (submit() !== false) closeSheet(); } });
-  openSheet({ title: '新增待辦', name: key, body: () => h('div', { class: 'stack' }, h('div', { class: 'field' }, h('label', {}, '要做什麼？'), input), h('div', { class: 'field' }, h('label', {}, '屬於哪個品項'), sel)), actions: [{ label: '取消' }, { label: '新增', class: 'primary', onClick: submit }] });
+  openSheet({ title: '新增待辦', name: key, body: () => h('div', { class: 'stack' }, h('div', { class: 'field' }, h('label', {}, '要做什麼？'), input), h('div', { class: 'field' }, h('label', {}, '這是誰要做的？'), seg), h('div', { class: 'field' }, h('label', {}, '屬於哪個品項'), sel)), actions: [{ label: '取消' }, { label: '新增', class: 'primary', onClick: submit }] });
   setTimeout(() => input.focus(), 50);
 }
 function openNoteSheet(itemId) {
