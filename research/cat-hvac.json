@@ -1,0 +1,672 @@
+[
+  {
+    "itemId": "ac_living",
+    "name": "客餐廳吊隱式冷暖空調",
+    "roomId": "hvac",
+    "short": "15坪客餐廳吊隱冷暖",
+    "hardReq": "15 坪開放式客餐廳含廚房，冷房 9–11 kW、單相 220V、吊隱式藏天花板",
+    "advice": "15 坪含廚房又是開放式，直接算 11 kW 才有餘裕，別聽「9 kW 夠了」，廚房一開火就破功。吊隱式的重點不在主機而在天花板：維修孔一定要 ≥600×600 並開在風鼓正下方，不然日後清洗要拆天花板。想省錢就改壁掛，木作可以少花三五萬。",
+    "warnings": [
+      "維修孔沒開夠大是最常見的後悔，至少 600×600",
+      "凍結洗淨取代不了拆機清洗，2–3 年仍要 2,500–12,000",
+      "商用 ZEAS 機種不一定在住宅節能補助名單，先問經銷商",
+      "天花板要降 35–40 cm，客廳淨高會變矮",
+      "冷媒漏最常見是安裝工事，找有確實真空抽氣的師傅",
+      "排水靠重力要 1/100 坡度，做不出來就得加排水器",
+      "吊隱機沒有壁掛那些花俏功能，只有基本冷暖與定時"
+    ],
+    "install": [
+      {
+        "tag": "電",
+        "text": "拉 1 組 220V 專用迴路（20A 無熔絲開關、2.0 mm² 以上），室外機旁留可上鎖檢修開關箱"
+      },
+      {
+        "tag": "尺寸",
+        "text": "室內機 1400×245×800 mm（大金）或約 1850×250×505 mm（日立），天花板淨高留 350–400 mm"
+      },
+      {
+        "tag": "木作",
+        "text": "風鼓與電控箱正下方各開 ≥600×600 維修孔，蓋板要整片可拆，不可用矽利康封死"
+      },
+      {
+        "tag": "排水",
+        "text": "冷凝排水管 φ25 以上、坡度 ≥1/100 直通排水孔；無坡度加排水器，並裝溢流偵測自動斷電"
+      },
+      {
+        "tag": "排風",
+        "text": "出風口 3–4 組（客廳 2、餐廳 1、廚房交界 1），回風集中 1 大組並加可拆濾網格柵"
+      },
+      {
+        "tag": "搬運",
+        "text": "室外機 47–80 kg，先確認吊掛路徑與 L 型架承重；機背離牆 ≥10 cm、前方 ≥50 cm 散熱"
+      },
+      {
+        "tag": "其他",
+        "text": "冷媒管標準含 3–5 m，超過每米 400–700 元，先量室內外機實際距離"
+      }
+    ],
+    "costNotes": [
+      "2026 一級能效冷氣：回收舊機可領經濟部住宅家電汰舊換新每台 3,000，再加財政部貨物稅退稅 500–2,000，合計最高 5,000",
+      "購買期限 2026/12/31、申請受理到 2027/1/31，兩項可同時申請（退稅不強制汰舊）",
+      "商用 ZEAS 吊隱機種請先向經銷商確認有無列入補助與退稅清單，別先買了才發現領不到",
+      "PRO360 行情：9.3–11 kW 吊隱安裝工資 9,000/組、集風箱 6,500–8,000/個、出風口 600–1,200/組、室外機安裝架 1,200–3,000",
+      "管路加長：冷媒管 400–700/公尺、保溫軟管 120–150/公尺、排水管 50–80/公尺、排水器 2,500–3,500/組",
+      "老屋 220V 專用迴路：明管 2,000–3,000/迴、暗管 3,800–4,200/迴，含開關實務報價常落在 4,800–8,500",
+      "日後拆機深度清洗 2,500–12,000/次；2 顆風鼓以上每顆加價，安裝高度超過 3 米再加",
+      "天花板木作降板包覆與維修孔另由木工計價，一般 8,000–20,000（中部行情估算）"
+    ],
+    "installCost": {
+      "min": 30000,
+      "max": 75000,
+      "note": "估算（中部行情）：吊掛工資 9,000；冷媒管 400–700/m＋排水管 50–80/m 約 2,500–7,800；保溫風管 120–150/m 與集風箱 6,500–8,000；出風口 3 組 1,800–4,800＋回風格柵 1,500–3,000；天花板木作降板與 ≥600×600 維修孔 8,000–20,000；220V 專用迴路 4,800–8,500；溢流偵測 1,500–3,000；排水器 2,500–3,500。日後拆機清洗 2,500–12,000/次未含"
+    },
+    "todos": [
+      {
+        "text": "量樑下淨高，天花板降板預留 350–400 mm",
+        "for": "designer"
+      },
+      {
+        "text": "風鼓與電控箱正下方各開 ≥600×600 維修孔",
+        "for": "designer"
+      },
+      {
+        "text": "拉 1 組 220V／20A 專用迴路，估 4,800–8,500",
+        "for": "designer"
+      },
+      {
+        "text": "排水坡度 ≥1/100，加裝溢流偵測斷電",
+        "for": "designer"
+      },
+      {
+        "text": "決定吊隱式或壁掛（木作差 3–5 萬）",
+        "for": "family"
+      }
+    ],
+    "defaultQty": 1,
+    "options": [
+      {
+        "id": "daikin_zeas_rzac100dvlt",
+        "tier": "頂級",
+        "brand": "DAIKIN 大金",
+        "model": "RZAC100DVLT/FBA100BVLT",
+        "name": "大金 ZEAS 吊隱式一對一變頻冷暖 10.1kW",
+        "highlights": [
+          "商用 ZEAS 底子，耐長時間運轉",
+          "室內機高只有 245mm，好藏",
+          "單相 220V，不用拉三相電"
+        ],
+        "dims": "室內機 1400×245×800 mm；室外機 990×940×320 mm",
+        "cutout": "天花板淨高 ≥350 mm；維修孔 ≥600×600 mm",
+        "power": "單相 220V；冷房 10.1 kW（3.2–11.2）；年耗電 2,204 度；CSPF 5.61",
+        "weight": "室外機約 47 kg",
+        "other": "適用 13–15 坪；風量 32/27/22.5 m³/min；噪音 48/51/54 dB(A)；保固依大金商用條款",
+        "price": {
+          "amount": 98180,
+          "min": 98180,
+          "max": 105756,
+          "source": "other",
+          "checkedAt": "2026-08-23",
+          "note": "翠亨生活館 98,180 元（機器價，不含吊隱安裝與風管木作）；他店約 10.6 萬"
+        },
+        "links": [
+          {
+            "type": "other",
+            "url": "https://www.chlifemall.com/products/%EF%BC%BBdaikin-%E5%A4%A7%E9%87%91%EF%BC%BD13-15%E5%9D%AA-%E5%96%AE%E7%9B%B8220v-zeas%E9%9A%B1%E8%97%8F%E5%9E%8B-%E4%B8%80%E5%B0%8D%E4%B8%80%E5%88%86%E9%9B%A2%E5%BC%8F%E8%AE%8A%E9%A0%BB%E5%86%B7%E6%B0%A3-rzac100dvltfba100bvlt",
+            "verified": true,
+            "label": "翠亨生活館 看商品"
+          },
+          {
+            "type": "other",
+            "url": "https://shop.jj2929.com.tw/product_view.php?id=41235",
+            "verified": false,
+            "label": "佳家電器 看商品"
+          }
+        ],
+        "availability": "in_stock",
+        "reviews": {
+          "praise": [
+            "商用機底子，長時間連續運轉不容易掛",
+            "室內機只有 245 mm 高，天花板降板可以少一點",
+            "單相 220V 一般住家就能裝，不用申請三相"
+          ],
+          "complaints": [
+            "01 有整串在問這台『每年都要補一次冷媒』，多數回文指向安裝工事沒做好",
+            "吊隱機身高度小、出風口面積小，風速比較急促、風切聲較明顯",
+            "只有基本冷暖與定時，沒有壁掛機的清淨、自動清潔那些功能"
+          ],
+          "sources": [
+            "https://www.mobile01.com/topicdetail.php?f=731&t=6803617",
+            "https://www.mobile01.com/topicdetail.php?f=731&t=6993558",
+            "https://www.mobile01.com/topicdetail.php?f=731&t=5283882",
+            "https://www.mobile01.com/topicdetail.php?f=731&t=6094548"
+          ],
+          "confidence": "medium"
+        },
+        "cmpKeyword": "DAIKIN RZAC100DVLT FBA100BVLT"
+      },
+      {
+        "id": "hitachi_rad110njp1",
+        "tier": "高級",
+        "brand": "HITACHI 日立",
+        "model": "RAD-110NJP1/RAC-110NP",
+        "name": "日立 頂級埋入型變頻冷暖 11kW 凍結洗淨",
+        "highlights": [
+          "冷房 11kW，15 坪含廚房有餘裕",
+          "凍結洗淨 3.0 自動洗熱交換器",
+          "全機 7 年、壓縮機 10 年保固"
+        ],
+        "dims": "室內機約 1850×250×505 mm；室外機 1060(1155)×940×370 mm",
+        "cutout": "天花板淨高 ≥350 mm；維修孔 ≥600×600 mm；室內機長 1.85 m 要先確認樑位",
+        "power": "1φ 220V 60Hz；冷房 11.0 kW／暖房 12.5 kW；同系列壁掛版 CSPF 5.9",
+        "weight": "室內機約 36 kg／室外機 80 kg",
+        "other": "冷媒粗管 15.88 mm；賣場價含標準安裝（銅管與控制線 5 米內）；R32 一級能效",
+        "price": {
+          "amount": 96800,
+          "min": 89690,
+          "max": 117045,
+          "source": "other",
+          "checkedAt": "2026-08-23",
+          "note": "老王電器 96,800 含標準安裝；MOMO 只有冷專版 RAD-110NJP1/RAC-110JP 105,340"
+        },
+        "links": [
+          {
+            "type": "other",
+            "url": "https://www.unbox.tw/product/%E3%80%90hitachi-%E6%97%A5%E7%AB%8B%E3%80%9118%E5%9D%AA-%E8%AE%8A%E9%A0%BB%E5%86%B7%E6%9A%96%E5%90%8A%E9%9A%B1%E5%BC%8F%E5%88%86%E9%9B%A2%E5%BC%8F%E5%86%B7%E6%B0%A3-rad-110njp1-rac-110np",
+            "verified": true,
+            "label": "老王電器 看商品"
+          },
+          {
+            "type": "momo",
+            "url": "https://www.momoshop.com.tw/goods/GoodsDetail.jsp?i_code=15010852",
+            "verified": true
+          },
+          {
+            "type": "official",
+            "url": "https://www.hitachiaircon.com/tw/range/split-embedded",
+            "verified": false
+          }
+        ],
+        "availability": "in_stock",
+        "reviews": {
+          "praise": [
+            "日立吊隱室內機高度較高，熱交換與出風面積大，風切聲比大金好",
+            "凍結洗淨會自己結冰沖洗熱交換器，吊隱藏在天花板裡特別實用",
+            "日本製壓縮機＋7 年全機／10 年壓縮機保固，中部維修據點好找"
+          ],
+          "complaints": [
+            "室內機長 1.85 m，天花板要留的空間比大金大",
+            "01 有『清洗過後室內機不運轉』的案例，找沒經驗的師傅拆裝有風險",
+            "凍結洗淨只洗熱交換器，風鼓和排水盤還是要 2–3 年拆機清一次"
+          ],
+          "sources": [
+            "https://www.mobile01.com/topicdetail.php?f=731&t=6313712",
+            "https://www.mobile01.com/topicdetail.php?f=731&t=5283882",
+            "https://www.mobile01.com/topicdetail.php?f=731&t=5839892",
+            "https://www.mobile01.com/topicdetail.php?f=731&t=7124970"
+          ],
+          "confidence": "medium"
+        },
+        "cmpKeyword": "HITACHI RAD-110NJP1 RAC-110NP"
+      },
+      {
+        "id": "daikin_yokozuna_z_ftxm90zvlt",
+        "tier": "高CP值",
+        "brand": "DAIKIN 大金",
+        "model": "RXM90ZVLT/FTXM90ZVLT",
+        "name": "大金 橫綱Z 一對一變頻冷暖 8.7kW（壁掛）",
+        "highlights": [
+          "省掉天花板木作，直接少花 3–5 萬",
+          "閃流放電防霉，南投潮濕很有感",
+          "一級能效，可申請補助＋退稅"
+        ],
+        "dims": "壁掛室內機，牆面需連續寬度約 1.0 m；不需降天花板",
+        "cutout": "只需 φ65–70 mm 冷媒孔並向外微斜；不用開維修孔",
+        "power": "單相 220V 專用迴路；冷房約 8.7–9.0 kW；R32 一級能效",
+        "weight": "室內機約 12 kg；室外機約 50 kg",
+        "other": "適用 14–16 坪；閃流放電、康達氣流、智慧眼；MOMO 頁面含基本安裝",
+        "price": {
+          "amount": 86562,
+          "min": 86562,
+          "max": 92000,
+          "source": "momo",
+          "checkedAt": "2026-08-23",
+          "note": "MOMO 空調速配 86,562，含基本安裝；壁掛不用木作，總價比吊隱省最多"
+        },
+        "links": [
+          {
+            "type": "momo",
+            "url": "https://www.momoshop.com.tw/goods/GoodsDetail.jsp?i_code=13876884",
+            "verified": true
+          },
+          {
+            "type": "other",
+            "url": "https://www.panashop.com.tw/prod/RXM90ZVLT%20FTXM90ZVLT",
+            "verified": false,
+            "label": "東隆電器 看商品"
+          }
+        ],
+        "availability": "in_stock",
+        "reviews": {
+          "praise": [
+            "Z 系列比上一代橫綱 Y 便宜，閃流放電還在，潮濕環境防霉有幫助",
+            "溫濕雙控做得好，不會冷但黏",
+            "壁掛好清濾網，日後保養成本遠低於吊隱"
+          ],
+          "complaints": [
+            "Z 系列相對 Y 系列有拿掉一些功能",
+            "壁掛掛在開放式客餐廳吹不遠，離廚房那端會偏熱",
+            "機身外露，跟系統櫃天花板的整體感沒有吊隱好"
+          ],
+          "sources": [
+            "https://www.mobile01.com/topicdetail.php?f=731&t=6775830",
+            "https://www.ptt.cc/bbs/E-appliance/M.1744801453.A.8B4.html",
+            "https://www.dcard.tw/f/house/p/259150738",
+            "https://www.momoshop.com.tw/goods/GoodsDetail.jsp?i_code=13876884"
+          ],
+          "confidence": "medium"
+        },
+        "cmpKeyword": "DAIKIN RXM90ZVLT FTXM90ZVLT"
+      },
+      {
+        "id": "mhi_dxk80zrt2w",
+        "tier": "替代方案",
+        "brand": "MITSUBISHI 三菱重工",
+        "model": "DXC80ZRT2-W/DXK80ZRT2-W",
+        "name": "三菱重工 晴空 8.0kW 變頻冷暖（壁掛）",
+        "highlights": [
+          "同級最便宜，7 萬有找",
+          "17 米超遠送風，開放空間好用",
+          "一級能效，補助＋退稅都拿得到"
+        ],
+        "dims": "壁掛室內機；不需降天花板",
+        "cutout": "φ65–70 mm 冷媒孔",
+        "power": "單相 220V 專用迴路；冷房 8.0 kW；一級能效",
+        "weight": "室外機約 40 kg",
+        "other": "適用 13–15 坪（含廚房偏緊）；JETFLOW 環流溫控；官方直營店保固",
+        "price": {
+          "amount": 70434,
+          "min": 70434,
+          "max": 72154,
+          "source": "momo",
+          "checkedAt": "2026-08-23",
+          "note": "MOMO 官方直營 70,434、空調速配 72,154，均含基本安裝"
+        },
+        "links": [
+          {
+            "type": "momo",
+            "url": "https://www.momoshop.com.tw/goods/GoodsDetail.jsp?i_code=13713697",
+            "verified": true
+          },
+          {
+            "type": "momo",
+            "url": "https://www.momoshop.com.tw/goods/GoodsDetail.jsp?i_code=15028300",
+            "verified": true
+          },
+          {
+            "type": "official",
+            "url": "https://www.heavyduty.com.tw/product/Residential-Single-Split-Wall-Mounted/ZRT.html",
+            "verified": false
+          }
+        ],
+        "availability": "in_stock",
+        "reviews": {
+          "praise": [
+            "同能力最便宜的一級能效冷暖",
+            "送風距離長，開放式客餐廳吹得到底"
+          ],
+          "complaints": [
+            "01 有整串『三菱重工空調品質真差』，同系列出現室內外機都漏冷媒、入住當天故障的案例",
+            "版上有室外機生鏽的討論，靠海或潮濕環境要留意",
+            "8.0 kW 對 15 坪含開放廚房偏小，夏天中午會吃力"
+          ],
+          "sources": [
+            "https://www.mobile01.com/topicdetail.php?f=731&t=7108171",
+            "https://www.mobile01.com/topicdetail.php?f=731&t=7105893",
+            "https://www.mobile01.com/topicdetail.php?f=731&t=6371131",
+            "https://www.momoshop.com.tw/goods/GoodsDetail.jsp?i_code=13713697"
+          ],
+          "confidence": "medium"
+        },
+        "cmpKeyword": "三菱重工 DXK80ZRT2-W DXC80ZRT2-W"
+      }
+    ],
+    "pickOptionId": "hitachi_rad110njp1",
+    "pickReason": "11kW 對 15 坪含廚房有餘裕，含標準安裝 96,800，凍結洗淨降低吊隱清洗麻煩"
+  },
+  {
+    "itemId": "dehumidifier_living",
+    "name": "客餐廳吊隱式除濕機",
+    "roomId": "hvac",
+    "short": "藏天花板除濕，免倒水",
+    "hardReq": "吊隱藏於天花板內，自然排水免倒水，覆蓋 15 坪開放式客餐廳含廚房",
+    "advice": "15 坪客餐廳選 18–20 L/日 就夠，別被「40L 比較強」帶走，除濕機是靠時間跑，機器太大只是更吵更貴。Panasonic F-YD36LX 帶 nanoe X，一台同時除濕加清淨最划算。台達電在台灣只做全熱交換與換氣，沒有吊隱除濕主機；要台灣製、要大除濕量再看米多力。",
+    "warnings": [
+      "台達電台灣沒有吊隱式除濕主機，只有全熱交換器與換氣扇",
+      "壓縮機聲會順著風管跑，主機別放臥室或沙發正上方",
+      "自然排水要 1/100 坡度，沒坡度水盤滿水就停機",
+      "主機報價都不含安裝，風管與木作另計 2–5 萬",
+      "標示適用坪數是最大值，開火煮飯時除濕會明顯變慢",
+      "維修孔沒開好，光是換濾網就要拆天花板",
+      "除濕機沒有汰舊換新 3,000 補助，只有貨物稅退稅"
+    ],
+    "install": [
+      {
+        "tag": "電",
+        "text": "拉 1 組 220V 專用迴路（15–20A）；F-YD36LX 276W、F-YD64LX 440W、米多力 40–70L 級約 540W"
+      },
+      {
+        "tag": "尺寸",
+        "text": "F-YD36LX 275×690×570 mm／28 kg；F-YD64LX 295×900×561 mm／46 kg；米多力 MD-70LBAD 662×648×310 mm。天花板淨高留 ≥350 mm"
+      },
+      {
+        "tag": "排水",
+        "text": "排水管 3/4 吋（φ20–25），坡度 ≥1/100 直通排水孔或洗衣機排水；加溢流偵測，滿水自動斷電"
+      },
+      {
+        "tag": "排風",
+        "text": "回風 1 大組（含可拆濾網格柵），出風 2–3 組分送客廳與餐廳；保溫軟管單邊控制在 8 m 內減少風切聲"
+      },
+      {
+        "tag": "木作",
+        "text": "主機正下方開 ≥600×600 維修孔，濾網那一側要能整片抽出不卡到"
+      },
+      {
+        "tag": "搬運",
+        "text": "主機 28–46 kg，吊架用膨脹螺絲鎖 RC 樓板並加防震橡膠墊，不可只鎖輕鋼架"
+      }
+    ],
+    "costNotes": [
+      "2026 除濕機不適用經濟部汰舊換新 3,000，只能申請財政部貨物稅減徵退稅，每台 500–2,000",
+      "購買期限 2026/12/31、申請受理到 2027/1/31；買前先確認型號在財政部退稅清單內",
+      "主機報價幾乎都標「安裝另計」（宏騰興、元昌電器都是），談價時要問清楚含不含風管",
+      "市場整套行情：小坪數吊隱除濕 5–7 萬、一般 30 坪住宅全戶 10–14 萬（含主機與風管）",
+      "濾網屬耗材：副廠濾網 600–1,900 元／片，約 1 年換一次；原廠更貴",
+      "日後拆機清洗約 2,500–8,000/次，維修孔位置開對才不用動到天花板",
+      "老屋 220V 專用迴路：明管 2,000–3,000/迴、暗管 3,800–4,200/迴，含開關實務常報 4,800–8,500"
+    ],
+    "installCost": {
+      "min": 20000,
+      "max": 50000,
+      "note": "估算（中部行情）：主機吊掛工資 3,000–6,000；保溫風管 120–150/m 約 1,200–3,000；集風箱 3,000–6,500；出風口 2–3 組 1,200–3,600＋回風格柵 1,500–3,000；3/4 吋排水管 400–640（無坡度加排水器 2,500–3,500）；220V 專用迴路 4,800–8,500；天花板木作降板與 ≥600×600 維修孔 6,000–15,000；溢流偵測 1,500–3,000。日後拆機清洗 2,500–8,000/次未含"
+    },
+    "todos": [
+      {
+        "text": "排水管 3/4 吋、坡度 ≥1/100 接到室外或洗衣機排水",
+        "for": "designer"
+      },
+      {
+        "text": "主機正下方開 ≥600×600 維修孔，濾網要抽得出來",
+        "for": "designer"
+      },
+      {
+        "text": "拉 1 組 220V／15–20A 專用迴路給除濕主機",
+        "for": "designer"
+      },
+      {
+        "text": "主機位置避開臥室與沙發正上方，風管單邊 ≤8 m",
+        "for": "designer"
+      },
+      {
+        "text": "決定 18L 一台或 32–40L 全戶級（價差約 1 萬）",
+        "for": "family"
+      }
+    ],
+    "defaultQty": 1,
+    "options": [
+      {
+        "id": "panasonic_fyd64lx",
+        "tier": "頂級",
+        "brand": "Panasonic 國際牌",
+        "model": "F-YD64LX",
+        "name": "國際牌 隱藏型清淨除濕機 32L/日",
+        "highlights": [
+          "32L/日，最大約 40 坪，全樓層可分送",
+          "nanoe X＋W-HEXS 除濕清淨一機兩用",
+          "DC 馬達，440W 帶得動整層"
+        ],
+        "dims": "295×900×561 mm（高×寬×深）",
+        "cutout": "天花板淨高 ≥350 mm；維修孔 ≥600×600 mm",
+        "power": "220V／消耗功率 440W；濕度設定 30–80%；24 小時定時",
+        "weight": "46 kg",
+        "other": "HEPA＋活性碳濾網、21 項安全裝置、無線遙控，8 房控制器選配",
+        "price": {
+          "amount": 39500,
+          "min": 39500,
+          "max": 43300,
+          "source": "other",
+          "checkedAt": "2026-08-23",
+          "note": "宏騰興 39,500（定價 43,300）、甫佳電器 43,300；皆為主機價，安裝另計"
+        },
+        "links": [
+          {
+            "type": "other",
+            "url": "https://htx4379.waca.ec/category/154383",
+            "verified": true,
+            "label": "宏騰興 看價格"
+          },
+          {
+            "type": "other",
+            "url": "https://www.fuchia.tw/v2/shop/item/3128",
+            "verified": true,
+            "label": "甫佳電器 看商品"
+          },
+          {
+            "type": "official",
+            "url": "https://www.panasonic.com/tw/consumer/air-conditioner/ceiling-dehumid/f-yd64lx.html",
+            "verified": false
+          }
+        ],
+        "availability": "in_stock",
+        "reviews": {
+          "praise": [
+            "一台可以分送多個房間，比每間放一台移動式整齊",
+            "nanoe X 讓除濕跟清淨合一，不用再擺清淨機",
+            "機身高度 295 mm，一般降板天花板塞得下"
+          ],
+          "complaints": [
+            "主機價將近 4 萬還不含安裝，整套下來很有感",
+            "40 坪是『最大』適用值，實際除濕速度沒有想像中快",
+            "01 上實際長期使用回報少，多半停在詢價與比較階段"
+          ],
+          "sources": [
+            "https://www.mobile01.com/topicdetail.php?f=731&t=6866647",
+            "https://www.mobile01.com/topicdetail.php?f=731&t=6200233",
+            "https://www.mobile01.com/topicdetail.php?f=731&t=6743025"
+          ],
+          "confidence": "low"
+        },
+        "cmpKeyword": "Panasonic F-YD64LX"
+      },
+      {
+        "id": "panasonic_fyd36lx",
+        "tier": "高級",
+        "brand": "Panasonic 國際牌",
+        "model": "F-YD36LX",
+        "name": "國際牌 隱藏型清淨除濕機 18L/日",
+        "highlights": [
+          "18L/日，最大約 23 坪，客餐廳剛好",
+          "只吃 276W，開整天電費不心疼",
+          "機身高 275mm，降板最好處理"
+        ],
+        "dims": "275×690×570 mm（高×寬×深）",
+        "cutout": "天花板淨高 ≥350 mm；維修孔 ≥600×600 mm",
+        "power": "220V／消耗功率 276W／DC 馬達；濕度設定 30–80%；24 小時定時",
+        "weight": "28 kg",
+        "other": "W-HEXS 雙重除濕、nanoe X、防霉關機後送風 3 分鐘、8 房控制器選配",
+        "price": {
+          "amount": 29500,
+          "min": 29500,
+          "max": 31900,
+          "source": "other",
+          "checkedAt": "2026-08-23",
+          "note": "宏騰興 29,500（定價 31,900）、老王電器 31,900；主機價，安裝另計"
+        },
+        "links": [
+          {
+            "type": "other",
+            "url": "https://htx4379.waca.ec/category/154383",
+            "verified": true,
+            "label": "宏騰興 看價格"
+          },
+          {
+            "type": "other",
+            "url": "https://www.unbox.tw/product/%E9%9A%B1%E8%97%8F%E5%9E%8B%E6%B8%85%E6%B7%A8%E9%99%A4%E6%BF%95%E6%A9%9F-f-yd36lx",
+            "verified": true,
+            "label": "老王電器 看商品"
+          },
+          {
+            "type": "official",
+            "url": "https://www.panasonic.com/tw/consumer/air-conditioner/ceiling-dehumid/f-yd36lx.html",
+            "verified": false
+          }
+        ],
+        "availability": "in_stock",
+        "reviews": {
+          "praise": [
+            "275 mm 高度是同級最薄，天花板不用降太多",
+            "276W 低耗電，設定 60% 讓它整天跑也還好",
+            "國際牌通路與維修好找，比小廠牌安心"
+          ],
+          "complaints": [
+            "23 坪是最大值，開放式又有廚房蒸氣時要跑比較久",
+            "定價偏高，且主機、安裝、木作要分三筆算",
+            "壓縮機聲仍會經風管傳出，網友普遍不建議裝臥室上方"
+          ],
+          "sources": [
+            "https://www.mobile01.com/topicdetail.php?f=731&t=6608618",
+            "https://www.mobile01.com/topicdetail.php?f=731&t=6587298",
+            "https://www.mobile01.com/topicdetail.php?f=731&t=6866647"
+          ],
+          "confidence": "medium"
+        },
+        "cmpKeyword": "Panasonic F-YD36LX"
+      },
+      {
+        "id": "hitachi_rdi360dx",
+        "tier": "高CP值",
+        "brand": "HITACHI 日立",
+        "model": "RDI-360DX",
+        "name": "日立 埋入型除濕機 18L/日",
+        "highlights": [
+          "同除濕量最便宜，2.9 萬有找",
+          "日立埋入型系列噪音低於 40dB",
+          "維修通路多，壞了好找人"
+        ],
+        "dims": "埋入型主機，安裝深度依機型，天花板淨高留 ≥350 mm",
+        "cutout": "維修孔 ≥600×600 mm，濾網側需可整片抽出",
+        "power": "220V 專用迴路；除濕能力 18 L/日",
+        "weight": "依機型（同級約 25–30 kg）",
+        "other": "同系列 RDI-450HH 22L/日 33,500；熱管除濕清淨型可搭 HEPA 濾網",
+        "price": {
+          "amount": 28800,
+          "min": 28800,
+          "max": 33500,
+          "source": "other",
+          "checkedAt": "2026-08-23",
+          "note": "元昌電器 28,800（原 32,600，無安裝）；22L 版 RDI-450HH 33,500"
+        },
+        "links": [
+          {
+            "type": "other",
+            "url": "https://www.ye888.com.tw/ec99/rwd1295/category.asp?category_id=357",
+            "verified": true,
+            "label": "元昌電器 看價格"
+          },
+          {
+            "type": "official",
+            "url": "https://www.hitachiaircon.com/tw/ranges/dehumidifier/dehumidifier-embedded",
+            "verified": true
+          }
+        ],
+        "availability": "in_stock",
+        "reviews": {
+          "praise": [
+            "01 上網友提到日立埋入 HH 系列噪音真的很低，約 40dB 以下",
+            "有人裝 18 公升版回報運轉聲可接受、穩定度不錯",
+            "同除濕量下是三家裡最便宜的"
+          ],
+          "complaints": [
+            "除濕量偏小，整棟透天要多台才蓋得住，設備數量一多就佔天花板",
+            "官網規格公開得少，尺寸與風管條件要跟經銷商拿型錄確認",
+            "價格已是無安裝價，風管與木作全部另計"
+          ],
+          "sources": [
+            "https://www.mobile01.com/topicdetail.php?f=731&t=6608618",
+            "https://www.mobile01.com/topicdetail.php?f=731&t=6587298",
+            "https://www.mobile01.com/topicdetail.php?f=731&t=6200233",
+            "https://www.ye888.com.tw/ec99/rwd1295/category.asp?category_id=357"
+          ],
+          "confidence": "medium"
+        },
+        "cmpKeyword": "HITACHI RDI-360DX 埋入型除濕機"
+      },
+      {
+        "id": "medole_md40lbd",
+        "tier": "替代方案",
+        "brand": "MEDOLE 米多力",
+        "model": "MD-40LBD",
+        "name": "米多力 吊隱式風管除濕機 40L/日",
+        "highlights": [
+          "台灣製，除濕量大、全屋分送",
+          "自然排水免倒水，滿水自動停機",
+          "可加 APP 雲端與 UV 殺菌選配"
+        ],
+        "dims": "同系列 MD-70LBAD 為 662×648×310 mm；40L 級略小，需向原廠索型錄",
+        "cutout": "維修孔 ≥600×600 mm；天花板淨高留 ≥350 mm",
+        "power": "220V/1φ/60Hz；同系列 70L 版 540W、風量 420 CMH",
+        "weight": "依機型（同級約 40–50 kg）",
+        "other": "排水管 3/4 吋、三重防火自動斷電、鍍鋅鋼板多層隔音；玻璃有線觸控面板",
+        "price": {
+          "amount": 39800,
+          "min": 39800,
+          "max": 43200,
+          "source": "other",
+          "checkedAt": "2026-08-23",
+          "note": "元昌電器 39,800（無安裝）、宏騰興 43,200（定價 49,200）；安裝另計"
+        },
+        "links": [
+          {
+            "type": "other",
+            "url": "https://www.ye888.com.tw/ec99/rwd1295/category.asp?category_id=357",
+            "verified": true,
+            "label": "元昌電器 看價格"
+          },
+          {
+            "type": "other",
+            "url": "https://htx4379.waca.ec/category/152962",
+            "verified": true,
+            "label": "宏騰興 看價格"
+          },
+          {
+            "type": "official",
+            "url": "https://www.medole.com.tw/70lbad-md-70lbad.html",
+            "verified": true
+          }
+        ],
+        "availability": "in_stock",
+        "reviews": {
+          "praise": [
+            "台灣製、找得到人修，規格書把除濕量、風量、排水管徑都寫清楚",
+            "自然排水免倒水，滿水會自動停機警示",
+            "有網友提到 62L 級含安裝（未拉管）約 3 萬，Wi-Fi 遙控、濕度到就停很好用"
+          ],
+          "complaints": [
+            "01 上有人直接說不建議裝臥室，夜裡敏感的人聽得到壓縮機聲",
+            "主機價其實不便宜，40L 版比國際牌 18L 貴一萬多",
+            "風管沒配好會有明顯風切聲，安裝師傅經驗差很多"
+          ],
+          "sources": [
+            "https://www.mobile01.com/topicdetail.php?f=731&t=5773663",
+            "https://www.mobile01.com/topicdetail.php?f=731&t=6608618",
+            "https://www.medole.com.tw/70lbad-md-70lbad.html",
+            "https://www.ye888.com.tw/ec99/rwd1295/category.asp?category_id=357"
+          ],
+          "confidence": "medium"
+        },
+        "cmpKeyword": "米多力 MEDOLE MD-40LBD"
+      }
+    ],
+    "pickOptionId": "panasonic_fyd36lx",
+    "pickReason": "18L/日 對 15 坪剛剛好，nanoe X 除濕清淨一機兩用，275mm 最好藏天花板"
+  }
+]

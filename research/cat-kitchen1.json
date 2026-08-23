@@ -1,0 +1,426 @@
+[
+  {
+    "itemId": "dishwasher",
+    "name": "洗碗機",
+    "roomId": "kitchen",
+    "short": "大鍋放得下才算數",
+    "hardReq": "常煮大鍋菜，要洗 32–36 cm 炒鍋＋大湯鍋",
+    "advice": "先決定型式：抽屜式好彎腰、省水，但 32 cm 以上炒鍋幾乎放不進去；你們家常煮大鍋菜，建議走 60 cm 下掀全嵌式，上層籃升起來就能塞大炒鍋和湯鍋。烘乾優先選沸石（Bosch），台灣濕氣重、洗完不用開門也乾；預算緊就選伊萊克斯自動開門款，價差三萬多。",
+    "warnings": [
+      "抽屜式單抽高度有限，36 cm 炒鍋放不下",
+      "自動開門機種會噴蒸氣，旁邊木作櫃要留意",
+      "全嵌門板另計，一片 2,500–3,000 元",
+      "Miele 洗劑只能買原廠 PowerDisk，耗材較貴",
+      "凹底杯盤沒斜放會積水，是通病不是故障",
+      "Miele、菲雪品克在中部維修等料時間偏久"
+    ],
+    "install": [
+      {"tag": "尺寸", "text": "全嵌位櫥櫃內淨寬 600 mm、深 ≥570 mm、高 820–900 mm，先拆兩格抽屜"},
+      {"tag": "水", "text": "水槽下加裝進水三通角凡爾，冷水即可（可接 ≤60°C 熱水）"},
+      {"tag": "排水", "text": "水槽下留高位排水接頭，管口離地 ≥500 mm 做防倒吸，排水管長 1.8 m 內"},
+      {"tag": "電", "text": "Bosch／Electrolux 走 110V 專用插座（≥15A）；Miele 要 220V／10A 專用迴路"},
+      {"tag": "木作", "text": "全嵌門板厚度、把手位置與鉸鏈孔要照原廠模板開，門板重量需落在規範內"},
+      {"tag": "搬運", "text": "機身 60–65 kg，透天樓梯轉角需 ≥800 mm 淨寬"}
+    ],
+    "costNotes": [
+      "洗碗錠約 8–15 元／顆，一天一次年約 3,000–5,500 元",
+      "Miele PowerDisk 三入約 1,794 元（原廠專用，約可用 3 個月）",
+      "軟化鹽與光潔劑一年約 800–1,500 元",
+      "全嵌門板加工 2,500–3,000 元／片，另加鉸鏈五金",
+      "濾網、噴臂自行清洗免費；到府保養行情 1,500–2,500 元／次"
+    ],
+    "defaultQty": 1,
+    "installCost": {
+      "min": 10000,
+      "max": 30000,
+      "note": "櫥櫃開孔改造6,000–15,000、門板加工2,500–3,000/片、進排水改接2,000–4,000、專用插座2,000–5,000、搬運約1,000（中部行情估算）"
+    },
+    "todos": [
+      {"text": "拍板抽屜式或 60cm 下掀式（大鍋能不能放）", "for": "family"},
+      {"text": "量測並保留櫥櫃內淨寬600×深570×高820mm", "for": "designer"},
+      {"text": "洗碗機位拉110V專用插座（Miele則220V/10A迴路）", "for": "designer"},
+      {"text": "水槽下留高位排水口（離地≥500mm）＋進水三通", "for": "designer"},
+      {"text": "門板照原廠模板開鉸鏈孔，尺寸先跟廠商對過", "for": "designer"}
+    ],
+    "options": [
+      {
+        "id": "bosch_smv8zcx00x",
+        "tier": "頂級",
+        "brand": "BOSCH 博世",
+        "model": "SMV8ZCX00X",
+        "name": "8系列 沸石全嵌式洗碗機 60cm 14人份",
+        "highlights": ["沸石烘乾，塑膠也能吹乾", "41dB／夜間39dB 半夜跑不吵", "上層籃三段升降可塞大炒鍋"],
+        "dims": "機身 H815 × W598 × D550 mm",
+        "cutout": "全嵌開孔 W600 × D≥570 × H815–875 mm（以原廠安裝書為準）",
+        "power": "110V／60Hz，建議獨立 15A 插座",
+        "weight": "約 60 kg",
+        "other": "2年保固；AquaStop 防漏、Home Connect、彩色 TFT 繁中面板、熱交換器",
+        "price": {"amount": 84500, "min": 84500, "max": 91100, "source": "momo", "checkedAt": "2026-08-23", "note": "momo 84,500 含標準安裝（原98,000）；博世官方商城 91,100，9月到貨"},
+        "links": [
+          {"type": "momo", "url": "https://www.momoshop.com.tw/TP/TP0002980/goodsDetail/TP00029800000034", "verified": true},
+          {"type": "official", "url": "https://www.bosch-home-shop.com.tw/products/smv8zcx00x", "verified": true}
+        ],
+        "availability": "in_stock",
+        "reviews": {
+          "praise": ["沸石烘乾是真的乾，連塑膠保鮮盒都不太留水", "41dB 實測很安靜，設定半夜洗不影響睡覺", "洗淨力強，炒鍋油垢和乾掉的飯粒都洗得掉", "網友實測炒鍋可以連同碗盤一起放進去洗"],
+          "complaints": ["杯底凹槽會積水，一定要斜著放", "最快行程也要 1 小時，70 度行程約 2 小時", "碗盤怎麼擺要練一陣子，剛開始很花時間", "價格偏高，不等促銷買很不划算"],
+          "sources": [
+            "https://www.mobile01.com/topicdetail.php?f=729&t=6472321",
+            "https://www.mobile01.com/topicdetail.php?f=729&t=6165921",
+            "https://www.mobile01.com/topicdetail.php?f=729&t=6163781",
+            "https://www.mobile01.com/topicdetail.php?f=729&t=6165455"
+          ],
+          "confidence": "high"
+        },
+        "cmpKeyword": "BOSCH SMV8ZCX00X"
+      },
+      {
+        "id": "miele_g7114c_sci",
+        "tier": "頂級",
+        "brand": "Miele",
+        "model": "G7114C SCi",
+        "name": "半嵌式洗碗機 AutoDos 自動投劑 16人份",
+        "highlights": ["中式碗籃＋三層可調，最好放大鍋", "AutoDos 自動投劑不用天天放錠", "44dBA、三支全尺寸噴水臂"],
+        "dims": "機身 W598 × D570 × H805 mm",
+        "cutout": "開孔 W600 × D570 × H805–870 mm",
+        "power": "220V／60Hz／1.8kW／10A，需 220V 專用迴路",
+        "weight": "約 60 kg",
+        "other": "AutoOpen Drying 自動開門烘乾；最低耗水 6L／耗電 0.7 度；半嵌式（面板外露）",
+        "price": {"amount": 89300, "min": 89300, "max": 94000, "source": "other", "checkedAt": "2026-08-23", "note": "章記衛廚 CBK 特價 89,300（定價 94,000），不含安裝；PowerDisk 三入約 1,794"},
+        "links": [
+          {"type": "other", "url": "https://www.cbk.tw/ec99/rwd1033/product.asp?prodid=G7114C-SCi", "verified": true, "label": "章記衛廚 CBK 看商品"}
+        ],
+        "availability": "in_stock",
+        "reviews": {
+          "praise": ["7系列三層碗籃＋中式碗籃，亞洲鍋碗最好塞", "中層高度可調，炒鍋大湯鍋放得下", "AutoDos 一個月換一盤 PowerDisk，不用每次放洗碗粉", "自動開門烘乾＋44dB 超靜音，洗完幾乎全乾"],
+          "complaints": ["售後客服被抱怨，PTT 有碗籃生鏽、回應慢的災情", "PowerDisk 只能跟原廠買，耗材成本比 Bosch 高", "自動開門瞬間噴大量水蒸氣，旁邊木作櫃長期要小心", "門板只能全開停不住，原廠說是門片太輕"],
+          "sources": [
+            "https://www.ptt.cc/bbs/E-appliance/M.1739188561.A.5C8.html",
+            "https://www.mobile01.com/topicdetail.php?f=729&t=6518347&p=2",
+            "https://www.mobile01.com/topicdetail.php?f=729&t=6589348",
+            "https://www.ptt.cc/bbs/E-appliance/M.1673248582.A.998.html"
+          ],
+          "confidence": "high"
+        },
+        "cmpKeyword": "Miele G7114C SCi"
+      },
+      {
+        "id": "fp_dd60dchx9",
+        "tier": "高級",
+        "brand": "Fisher & Paykel 菲雪品克",
+        "model": "DD60DCHX9",
+        "name": "雙層不鏽鋼抽屜式洗碗機 14人份",
+        "highlights": ["兩抽獨立運作，少量碗開一抽就好", "不用彎腰，站著拿放最省力", "最大耗水僅 6.9L，超省水"],
+        "dims": "機身 W599 × D573 × H820 mm",
+        "cutout": "嵌入 W600 × D560 × H820 mm",
+        "power": "110V／60Hz，最大 1200W（雙層同時）",
+        "weight": "約 50 kg",
+        "other": "2年保固；DC TURBO 變頻馬達、6洗程＋3附加選項、73°C 高溫殺菌、自動排風烘乾",
+        "price": {"amount": 68800, "min": 68800, "max": 79900, "source": "momo", "checkedAt": "2026-08-23", "note": "momo 68,800 含全省基本安裝＋舊機回收，贈大同電鍋，促銷至 8/31（市價 79,900）"},
+        "links": [
+          {"type": "momo", "url": "https://www.momoshop.com.tw/goods/GoodsDetail.jsp?i_code=10732312", "verified": true},
+          {"type": "other", "url": "https://www.fuchia.tw/v2/shop/item/93", "verified": true, "label": "甫佳電器 看商品"}
+        ],
+        "availability": "in_stock",
+        "reviews": {
+          "praise": ["兩抽可分開洗，兩個人吃飯開一抽就夠，很省水電", "抽屜式不用蹲，長輩用最順手", "有網友用 18 年沒出過大問題，耐操", "洗程短、上下抽可同時跑不同行程"],
+          "complaints": ["大炒鍋放不進去，單抽高度就是不夠", "2019 年後烘乾時間從 2 小時縮到 20 分鐘，台灣濕氣重容易返潮", "維修零件要等很久，代理商換過（嘉儀→競衡）服務點分散", "價格比同容量下掀式貴不少"],
+          "sources": [
+            "https://www.mobile01.com/topicdetail.php?f=729&t=6848764",
+            "https://www.mobile01.com/topicdetail.php?f=729&t=2032487",
+            "https://www.mobile01.com/topicdetail.php?f=729&t=5738151",
+            "https://486word.com/Page/funbox/A2404150002460f/",
+            "https://www.mobile01.com/topicdetail.php?f=729&t=5792061"
+          ],
+          "confidence": "high"
+        },
+        "cmpKeyword": "Fisher&Paykel DD60DCHX9"
+      },
+      {
+        "id": "bosch_smv6zax00x",
+        "tier": "高級",
+        "brand": "BOSCH 博世",
+        "model": "SMV6ZAX00X",
+        "name": "6系列 沸石全嵌式洗碗機 60cm 13人份",
+        "highlights": ["一樣有沸石烘乾，價差兩萬多", "不鏽鋼內槽＋三層濾網", "自動偵測髒污省水電"],
+        "dims": "60 cm 全嵌式，13人份",
+        "cutout": "全嵌開孔 W600 × D≥570 × H815–875 mm（以原廠安裝書為準）",
+        "power": "110V／60Hz",
+        "weight": "約 58 kg",
+        "other": "2年保固；漏水自動偵測、熱交換器；無 Home Connect 與彩色螢幕",
+        "price": {"amount": 62000, "min": 58000, "max": 72800, "source": "momo", "checkedAt": "2026-08-23", "note": "momo 促銷 58,000–62,000 含基本安裝（定價 70,500）；甫佳 62,000"},
+        "links": [
+          {"type": "momo", "url": "https://www.momoshop.com.tw/TP/TP0002980/goodsDetail/TP00029800000032", "verified": true},
+          {"type": "other", "url": "https://www.fuchia.tw/v2/shop/item/2377", "verified": true, "label": "甫佳電器 看商品"}
+        ],
+        "availability": "in_stock",
+        "reviews": {
+          "praise": ["沸石烘乾跟 8 系列同一套，烘乾效果一樣好", "不用連 App、按鍵單純，長輩比較會用", "同樣沸石只要 6 萬初，CP 值明顯"],
+          "complaints": ["13人份比 8 系列少一份，上層籃調整彈性略差", "沒有彩色螢幕與 Home Connect，行程資訊看得沒那麼清楚", "同系列的積水、擺放要練習問題一樣有"],
+          "sources": [
+            "https://www.mobile01.com/topicdetail.php?f=729&t=6472321",
+            "https://www.mobile01.com/topicdetail.php?f=729&t=6165455",
+            "https://www.fuchia.tw/v2/shop/item/2377"
+          ],
+          "confidence": "medium"
+        },
+        "cmpKeyword": "BOSCH SMV6ZAX00X"
+      },
+      {
+        "id": "electrolux_ebf7531sba",
+        "tier": "高CP值",
+        "brand": "Electrolux 伊萊克斯",
+        "model": "EBF7531SBA",
+        "name": "極淨呵護700系列 60cm 15人份全嵌式洗碗機",
+        "highlights": ["15人份最大肚量，鍋子好塞", "AirDry 自動開門 10cm 自然風乾", "MaxiFlex 第三層餐具抽屜"],
+        "dims": "機身 W596 × D550 × H818 mm",
+        "cutout": "開孔 W600 × D550 × H820–900 mm",
+        "power": "110V／60Hz／800W",
+        "weight": "約 45 kg",
+        "other": "2年保固；44dB、耗水 11L、排水管 1.8m、360度噴水臂、專為亞洲餐具設計的可調空間",
+        "price": {"amount": 56000, "min": 50400, "max": 56000, "source": "momo", "checkedAt": "2026-08-23", "note": "momo／PChome 皆 56,000；格蘭登 50,400、上隆 52,900、甫佳 53,000（多為不含安裝）"},
+        "links": [
+          {"type": "momo", "url": "https://www.momoshop.com.tw/goods/GoodsDetail.jsp?i_code=13439664", "verified": true},
+          {"type": "pchome", "url": "https://24h.pchome.com.tw/prod/DMBH1Q-A900I20ON", "verified": true},
+          {"type": "official", "url": "https://www.electrolux.com.tw/appliances/dishwashers/ebf7531sba/", "verified": true}
+        ],
+        "availability": "in_stock",
+        "reviews": {
+          "praise": ["15人份真的能裝，大盤大碗一次解決", "自動開門風乾，比密閉悶乾好很多", "第三層餐具抽屜好用，湯匙筷子不用擠", "價格比 Bosch／Miele 便宜一大截"],
+          "complaints": ["沒有單獨烘乾行程，一定要跑完整個洗程才會烘", "碗盤角度沒喬好就會積水，要用 65 度快洗才幾乎全乾", "自動開門會噴蒸氣，旁邊木作櫃要注意", "Mobile01 有「很雷不推」的故障與維修負評串"],
+          "sources": [
+            "https://www.mobile01.com/topicdetail.php?f=729&t=5870952",
+            "https://www.mobile01.com/topicdetail.php?f=729&t=6843762",
+            "https://heianlife.com/electrolux-dishwasher/",
+            "https://www.momoshop.com.tw/goods/GoodsDetail.jsp?i_code=13439664"
+          ],
+          "confidence": "medium"
+        },
+        "cmpKeyword": "Electrolux EBF7531SBA"
+      },
+      {
+        "id": "fp_dd60scthx9",
+        "tier": "替代方案",
+        "brand": "Fisher & Paykel 菲雪品克",
+        "model": "DD60SCTHX9",
+        "name": "單層加高款不鏽鋼抽屜式洗碗機 7人份",
+        "highlights": ["加高款，比一般單抽放得下鍋", "只佔一格櫥櫃，改造最小", "含全省基本安裝，價格門檻低"],
+        "dims": "60 cm 寬單層加高抽屜（機身以原廠安裝書為準）",
+        "cutout": "嵌入寬 600 mm，高度需依加高款規格預留",
+        "power": "110V／60Hz",
+        "weight": "約 32 kg",
+        "other": "2年保固；自動排風烘乾、贈大同電鍋（促銷至 8/31）",
+        "price": {"amount": 44500, "min": 44500, "max": 79900, "source": "momo", "checkedAt": "2026-08-23", "note": "momo 44,500 含全省基本安裝（市價 79,900），促銷至 2026/8/31"},
+        "links": [
+          {"type": "momo", "url": "https://www.momoshop.com.tw/goods/GoodsDetail.jsp?i_code=10732311", "verified": true},
+          {"type": "other", "url": "https://www.fuchia.tw/v2/shop/item/94", "verified": true, "label": "甫佳電器 看商品"}
+        ],
+        "availability": "in_stock",
+        "reviews": {
+          "praise": ["加高款比一般單抽多不少高度，中型湯鍋放得下", "只吃一格櫥櫃，舊廚房改造最容易", "省水、洗一次很快，兩三個人剛好"],
+          "complaints": ["7人份對常煮大鍋菜的家庭一定不夠", "36 cm 炒鍋還是進不去", "跟雙抽同一套後勤，維修等料時間長"],
+          "sources": [
+            "https://www.momoshop.com.tw/goods/GoodsDetail.jsp?i_code=10732311",
+            "https://www.mobile01.com/topicdetail.php?f=729&t=5738151",
+            "https://486word.com/Page/funbox/A2404150002460f/"
+          ],
+          "confidence": "low"
+        },
+        "cmpKeyword": "Fisher&Paykel DD60SCTHX9"
+      }
+    ],
+    "pickOptionId": "bosch_smv8zcx00x",
+    "pickReason": "沸石烘乾不用開門就乾，上層籃升起放得下大炒鍋，momo 含安裝、中部服務點多。"
+  },
+  {
+    "itemId": "hood",
+    "name": "抽油煙機",
+    "roomId": "kitchen",
+    "short": "頂側雙吸，爆炒不外溢",
+    "hardReq": "",
+    "advice": "頂側雙吸就是上下兩個吸風口一起收，爆炒時油煙不會從兩側竄出去，比傳統單吸有感。Panasonic 這台 18 m³/min、揮手就能調風速，機身內縮不撞頭。真的很在意風量的話，林內 RH-L9702D 是 23.3 m³/min＋DC 變頻，PChome 24,000 還含基本安裝，可以一起比。",
+    "warnings": [
+      "PChome 查無此型號，MOMO 也搜不到，只能找經銷商",
+      "甫佳、KW 標示不含安裝，南投要自己找師傅",
+      "最大風速噪音 68 dB(A)，爆炒時會吵",
+      "機身寬 895 mm，廚具開口至少留 900 mm",
+      "排氣管超過 3 m 或彎頭太多，風量會掉很多"
+    ],
+    "install": [
+      {"tag": "排風", "text": "外牆預留 Φ150 mm 排氣孔，管長控制在 3 m 內、彎頭 ≤2 個"},
+      {"tag": "排風", "text": "牆孔往外做 3–5% 洩水坡，外側裝止逆風門＋防雨罩，防倒風回煙"},
+      {"tag": "尺寸", "text": "機身 W895 × D354 × H935 mm、32.5 kg，上櫃開口留 ≥900 mm"},
+      {"tag": "尺寸", "text": "機體下緣距檯面 65–75 cm；IH 爐可取下限，瓦斯爐取上限"},
+      {"tag": "電", "text": "110V／60Hz／328W，機體上方留專用插座，避開排氣管路徑"},
+      {"tag": "木作", "text": "RC 牆掛點要打進結構，32.5 kg 不能只靠矽酸鈣板"}
+    ],
+    "costNotes": [
+      "濾網與儲油杯自己拆洗免費，快拆設計不用工具",
+      "專業到府深度清洗行情 1,200–2,500 元／次，建議 1–2 年一次",
+      "排氣管與止逆風門耗材，日後更換約 1,000–2,000 元",
+      "原廠保固 1 年，過保馬達更換行情 3,000–6,000 元"
+    ],
+    "defaultQty": 1,
+    "installCost": {
+      "min": 4000,
+      "max": 15000,
+      "note": "Φ150排氣管與外牆鑽孔3,000–8,000、止逆風門與防雨罩1,000–2,000、吊掛工資2,000–3,500、舊機拆除約1,000；賣場多不含安裝需另找師傅"
+    },
+    "todos": [
+      {"text": "外牆定 Φ150mm 排氣孔位置，管長≤3m、彎頭≤2個", "for": "designer"},
+      {"text": "上櫃開口留≥900mm，下緣距檯面65–75cm", "for": "designer"},
+      {"text": "機體上方拉110V專用插座，避開排氣管", "for": "designer"},
+      {"text": "牆孔外側加止逆風門與防雨罩，做3–5%外洩水坡", "for": "designer"},
+      {"text": "拍板跟廚具一起發包，還是自購機器另找師傅", "for": "family"}
+    ],
+    "options": [
+      {
+        "id": "panasonic_fv_ktb2sd1tw",
+        "tier": "指定",
+        "brand": "Panasonic 國際牌",
+        "model": "FV-KTB2SD1TW",
+        "name": "頂側雙吸式排油煙機 90cm",
+        "highlights": ["頂＋側雙吸口，油煙不從兩側跑", "18 m³/min 大風量、3段風速", "揮手智控，手髒不用碰面板"],
+        "dims": "W895 × D354 × H935 mm，32.5 kg",
+        "cutout": "上櫃開口 ≥900 mm；排氣管徑 Φ150 mm；下緣距檯面 65–75 cm",
+        "power": "110V／60Hz／328W（LED 照明 3W）",
+        "weight": "32.5 kg",
+        "other": "原廠保固 1 年；鋼化玻璃鏡面、快拆式儲油杯、3分鐘延遲關機、L型機體內縮 21%、噪音 68 dB(A)",
+        "price": {"amount": 21900, "min": 21900, "max": 26500, "source": "other", "checkedAt": "2026-08-23", "note": "甫佳 21,900（預定品、不含安裝）；KW廚房世界 25,900、樂天 26,500，皆不含安裝"},
+        "links": [
+          {"type": "other", "url": "https://www.fuchia.tw/v2/shop/item/3219", "verified": true, "label": "甫佳電器 看商品"},
+          {"type": "other", "url": "https://kitchenworld.com.tw/product/241028120731/Panasonic%E5%9C%8B%E9%9A%9B%E7%89%8CFV-KTB2SD1TW%E9%A0%82%E5%81%B4%E9%9B%99", "verified": true, "label": "KW廚房世界 看商品"},
+          {"type": "official", "url": "https://www.panasonic.com/tw/homeliving/housing/kitchen/range-hood/fv-ktb2sd1tw.html", "verified": true}
+        ],
+        "availability": "unclear",
+        "reviews": {
+          "praise": ["雙吸設計對爆炒攏煙有感，側邊不容易竄煙", "揮手調風速，手上有油不用碰面板", "快拆儲油杯＋鋼化玻璃鏡面，擦一擦就乾淨", "L型機身內縮，站著洗鍋不會撞頭"],
+          "complaints": ["這型號的長期使用心得非常少，網路上幾乎查不到真實評價", "最大風速標示 68 dB(A)，爆炒時會明顯吵", "PChome 完全沒上架、MOMO 也搜不到，只能靠經銷商，比價困難", "多數賣場標示不含安裝，中部要另外找師傅"],
+          "sources": [
+            "https://www.panasonic.com/tw/homeliving/housing/kitchen/range-hood/fv-ktb2sd1tw.specs.html",
+            "https://www.fuchia.tw/v2/shop/item/3219",
+            "https://kitchenworld.com.tw/product/241028120731/Panasonic%E5%9C%8B%E9%9A%9B%E7%89%8CFV-KTB2SD1TW%E9%A0%82%E5%81%B4%E9%9B%99",
+            "https://www.ptt.cc/bbs/E-appliance/M.1644652394.A.E24.html"
+          ],
+          "confidence": "low"
+        },
+        "cmpKeyword": "Panasonic FV-KTB2SD1TW"
+      },
+      {
+        "id": "rinnai_rh_l9702d",
+        "tier": "替代方案",
+        "brand": "Rinnai 林內",
+        "model": "RH-L9702D",
+        "name": "90cm 倒T式 頂側雙吸 DC變頻排油煙機",
+        "highlights": ["23.3 m³/min，風量比指定機大", "DC 變頻馬達＋6段風速", "PChome 24,000 含基本安裝"],
+        "dims": "W895 × H802 × D410 mm（不含風管護罩）",
+        "cutout": "上櫃開口 ≥900 mm；機身較深 410 mm，需確認不撞頭",
+        "power": "110V／60Hz／240W",
+        "weight": "以原廠規格為準",
+        "other": "節能標章；SUS#430 不鏽鋼、黑晶玻璃觸控、大容量集油盒；噪音最大 69 dB(A)±5%",
+        "price": {"amount": 24000, "min": 24000, "max": 28330, "source": "pchome", "checkedAt": "2026-08-23", "note": "PChome 24,000 含全台配送＋基本安裝＋原廠保固（定價 28,330），現貨"},
+        "links": [
+          {"type": "pchome", "url": "https://24h.pchome.com.tw/prod/DPAL22-A900I2U6X", "verified": true},
+          {"type": "official", "url": "https://www.rinnai.com.tw/Product/V4/1/391", "verified": true}
+        ],
+        "availability": "in_stock",
+        "reviews": {
+          "praise": ["23.3 m³/min 風量比多數同級大，重油煙適用", "DC 變頻馬達，低速時比傳統 AC 安靜", "含基本安裝與原廠保固，找師傅麻煩事少一半"],
+          "complaints": ["機身深 410 mm，比 Panasonic 深 5.6 cm，矮個子容易撞頭", "最大噪音 69 dB(A)±5%，全開一樣吵", "同樣查不到大量長期使用者心得，僅有經銷商規格頁"],
+          "sources": [
+            "https://24h.pchome.com.tw/prod/DPAL22-A900I2U6X",
+            "https://www.rinnai.com.tw/Product/V4/1/391",
+            "https://grand-kitchen.com.tw/product/rinnai-rh-l9702d/",
+            "https://www.mobile01.com/topicdetail.php?f=729&t=6940751"
+          ],
+          "confidence": "low"
+        },
+        "cmpKeyword": "Rinnai RH-L9702D"
+      }
+    ],
+    "pickOptionId": "panasonic_fv_ktb2sd1tw",
+    "pickReason": "家人指定機種，雙吸攏煙＋揮手控制夠用；甫佳 21,900 是目前查到最低價。"
+  },
+  {
+    "itemId": "ih",
+    "name": "IH 調理爐",
+    "roomId": "kitchen",
+    "short": "220V 專用迴路先拉好",
+    "hardReq": "",
+    "advice": "IH 最大好處是廚房不熱、平面一擦就乾淨，3200W 燒水比瓦斯快。但兩件事一定要先講：一是要拉 220V 專用迴路，翻修階段做最便宜；二是鍋子要 IH 可用，鋁鍋、砂鍋、薄底不鏽鋼都不能用，先盤點家裡的鍋。爐下方要留約 300 mm 散熱，那格抽屜得改假抽。",
+    "warnings": [
+      "非 IH 鍋具完全不能用，換鍋要另編預算",
+      "沒有 220V 專用迴路絕對不能裝，跳電有危險",
+      "老屋總電流不足時，IH＋冷氣同開會跳總開關",
+      "鍋子離開面板就沒火力，甩鍋爆炒習慣要改",
+      "爐下抽屜不改假抽，散熱不良會跳保護",
+      "面板玻璃怕重摔，鑄鐵鍋用拖的會刮傷"
+    ],
+    "install": [
+      {"tag": "電", "text": "從配電箱拉 220V 專用迴路，導線 5.5 mm² 以上，無熔絲開關 20A"},
+      {"tag": "電", "text": "先確認總電流容量，IH 3200W／15–16A 不可與冷氣共迴路"},
+      {"tag": "尺寸", "text": "檯面開孔約 W710 × D368 mm，機體 W744 × D440 × H93 mm，前後各留邊"},
+      {"tag": "尺寸", "text": "機體下方淨空約 300 mm 散熱，該格抽屜改假抽面板或降板"},
+      {"tag": "其他", "text": "人造石／石英石檯面開孔請廠商在工廠做，現場切易崩角"},
+      {"tag": "其他", "text": "IH 爐上方抽油煙機下緣可取 65 cm，無明火不需拉太高"}
+    ],
+    "costNotes": [
+      "電費：3200W 全開約 0.8 元／分鐘（以 5 元／度估），實務比瓦斯略貴一點",
+      "IH 專用鍋具汰換，一套 3–5 支約 4,000–15,000 元",
+      "面板清潔劑與刮刀一年約 300–600 元",
+      "原廠保固 1 年；過保面板破裂更換行情 8,000 元以上"
+    ],
+    "defaultQty": 1,
+    "installCost": {
+      "min": 6500,
+      "max": 20000,
+      "note": "220V專用迴路（5.5mm²、20A）3,000–8,500、檯面開孔710×368mm約1,500–4,000、爐下抽屜改假抽木作2,000–6,000、安裝工資1,500–3,000（中部估算）"
+    },
+    "todos": [
+      {"text": "配電箱拉220V專用迴路，5.5mm²以上、NFB 20A", "for": "designer"},
+      {"text": "檯面開孔710×368mm，交石材廠在工廠預開", "for": "designer"},
+      {"text": "爐下抽屜改假抽，機體下方淨空約300mm散熱", "for": "designer"},
+      {"text": "核算總電流：IH 3200W＋洗碗機＋冷氣同開不跳電", "for": "designer"},
+      {"text": "盤點現有鍋具是否 IH 可用，不行要編換鍋預算", "for": "family"}
+    ],
+    "options": [
+      {
+        "id": "panasonic_ky_c1w70",
+        "tier": "指定",
+        "brand": "Panasonic 國際牌",
+        "model": "KY-C1W70",
+        "name": "雙口嵌入式 IH 調理爐 75cm",
+        "highlights": ["3200W 大火力，燒水爆快", "IR Sensor 直測鍋底溫度回穩快", "75cm 寬，兩個大鍋同時放"],
+        "dims": "機體 W744 × D440 × H93 mm，11.6 kg",
+        "cutout": "檯面開孔約 W710 × D368 mm；下方需淨空約 300 mm 散熱",
+        "power": "單相 220V／60Hz、總消耗 3200W、15–16A，需 220V 專用迴路（建議 NFB 20A）",
+        "weight": "11.6 kg",
+        "other": "原廠保固 1 年；日本製；雙口各 3200W／加熱直徑 190mm、9段火力、5段油煎、7段油炸、兒童鎖、空燒與無鍋自動斷電、LED 顯示",
+        "price": {"amount": 39800, "min": 38800, "max": 44623, "source": "pchome", "checkedAt": "2026-08-23", "note": "PChome 黑色 39,800（不含安裝、贈鍋鏟組，庫存少）；另 43,000／44,623 兩組；momo 42,900；甫佳 38,800"},
+        "links": [
+          {"type": "pchome", "url": "https://24h.pchome.com.tw/prod/QBAY1F-A900A80OH", "verified": true},
+          {"type": "pchome", "url": "https://24h.pchome.com.tw/prod/DMAGOH-A900GDYU4", "verified": true},
+          {"type": "momo", "url": "https://www.momoshop.com.tw/TP/TP0006954/goodsDetail/TP00069540000174", "verified": true},
+          {"type": "other", "url": "https://www.fuchia.tw/v2/shop/index/1/13/40/328/504", "verified": true, "label": "甫佳電器 IH感應爐"},
+          {"type": "official", "url": "https://www.panasonic.com/tw/consumer/kitchen/ih-cooker/ky-c1w70.html", "verified": true}
+        ],
+        "availability": "in_stock",
+        "reviews": {
+          "praise": ["3200W 火力真的夠，燒水速度比瓦斯快很多", "IR Sensor 直接測鍋底，翻炒後溫度回穩快，不會忽冷忽熱", "平面好清，煮完擦一擦就好，廚房不會熱、油煙也少", "安全機制多：45分鐘無動作、空燒15分鐘、無鍋1分鐘都會自動斷電，還有兒童鎖"],
+          "complaints": ["挑鍋，鋁鍋、砂鍋、薄底不鏽鋼都不能用，等於要換一批鍋", "鍋子離開面板就沒火力，習慣甩鍋爆炒的人要重新適應", "一定要 220V 專用迴路，老屋拉線又是一筆", "面板玻璃怕重摔，鑄鐵鍋用拖的會刮傷", "這個單一型號的長期心得偏少，多是 IH 爐通用經驗"],
+          "sources": [
+            "https://www.mobile01.com/topicdetail.php?f=729&t=6704132",
+            "https://www.mobile01.com/topicdetail.php?f=729&t=6211431",
+            "https://www.mobile01.com/topicdetail.php?f=729&t=6683993",
+            "https://www.mobile01.com/topicdetail.php?f=729&t=6530679&p=2",
+            "https://www.mobile01.com/topicdetail.php?f=729&t=6902885"
+          ],
+          "confidence": "medium"
+        },
+        "cmpKeyword": "Panasonic KY-C1W70"
+      }
+    ],
+    "pickOptionId": "panasonic_ky_c1w70",
+    "pickReason": "家人指定機種，3200W 兩口都夠力；PChome 黑色 39,800 是目前現貨最低價。"
+  }
+]

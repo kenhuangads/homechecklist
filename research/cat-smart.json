@@ -5,31 +5,73 @@
     "roomId": "entry",
     "short": "接水管、免倒水的掃拖機",
     "hardReq": "自動上下水",
-    "advice": "先確認基站位置能同時拉到冷水 2 分管、排水口和 110V，再挑機器。透天門檻多，優先選越障 8.8 cm 的石頭 Saros 20 水立方或追覓 X60 Ultra；追覓的上下水模組要另購、九月下旬才出貨。南投水硬，熱水洗拖布的機種記得定期除垢。",
+    "advice": "自動上下水優先挑內建款：石頭 Saros 20 水立方越障 8.8 cm，過得了透天門檻。追覓 X60 Ultra 便宜但模組另買、九月才到，要現貨改選 X60 Master。一樓旗艦、二樓再擺台 CP 的 X11 PRO，兩層各留水電。",
     "warnings": [
-      "上下水基站有漏水災情：Q Revo 用 3–4 個月進水口漏，維修等 45–60 天",
+      "基站漏水災情：Q Revo 用 3–4 個月進水口漏，修 45–60 天",
       "排水接在有防臭蓋的地排會排不掉，觸發溢水保護",
-      "接頭、三通越多，漏水機率越高；排水管記得防蟲防臭",
-      "追覓上下水模組另購 3,280–3,680，預購九月下旬才出貨",
-      "科沃斯 X11 PRO 越障只有 4 cm、機身 9.8 cm，高門檻與矮床底不行",
+      "接頭、三通越多漏水機率越高；排水管末端要防蟲防臭",
+      "追覓 X60 Ultra 上下水模組另購 3,280–3,680，九月下旬才出貨",
+      "科沃斯 X11 PRO 越障只有 4 cm、機身 9.8 cm，高門檻會卡",
       "南投自來水硬度約 151 mg/L，加熱管與噴嘴會結垢，每季除垢",
       "基站定位後別再搬，搬了機器會迷路要重建地圖",
-      "石頭 Qrevo Pro 水立方 14,999 官網限量，PChome 目前缺貨"
+      "買兩台放不同樓層，兩處都要各自的進水、排水、插座"
     ],
     "install": [
-      {"tag": "水", "text": "基站位置牆面預留冷水 2 分（1/2\"）出水點＋球閥＋三通，水壓 0.1–0.4 MPa（超過 0.4 加減壓閥）；出水點離基站 1.5 m 內"},
-      {"tag": "排水", "text": "預留 3 分排水管接地排或洗手台排水三通，排水口高度低於基站底 35 cm、坡度 ≥1–2%，不可接在防臭蓋或存水彎後方；加防蟲網"},
-      {"tag": "電", "text": "基站旁 110V 專用插座 1 個，離地 30 cm、避開水路；建議該迴路有漏電斷路器，基站下方放漏水感應器"},
-      {"tag": "尺寸", "text": "櫃內預留寬 ≥45、深 ≥55、高 ≥55 cm（Saros 20 水立方基站 38.1×47.5×30 cm；X11 PRO 上下水 33.8×45.9×50 cm）；櫃門離地 ≥15.5 cm，基站前方淨空 100 cm 不放鏡面玻璃"},
-      {"tag": "其他", "text": "硬水區進水前加一組前置濾心（PP＋樹脂軟水或至少網式過濾）減少水垢；走明管用不鏽鋼編織管，接頭纏止洩帶"}
+      {
+        "tag": "水",
+        "text": "基站位置牆面預留冷水 2 分出水點＋球閥＋三通，水壓 0.1–0.4 MPa（超過 0.4 加減壓閥）；出水點離基站 1.5 m 內"
+      },
+      {
+        "tag": "排水",
+        "text": "預留 3 分排水管接地排或洗手台排水三通，排水口高度低於基站底 35 cm、坡度 ≥1–2%，不可接在防臭蓋或存水彎後方；管末加防蟲網"
+      },
+      {
+        "tag": "電",
+        "text": "基站旁 110V 專用插座 1 個，離地 30 cm、避開水路；該迴路要有漏電斷路器，基站下方放一顆漏水感應器"
+      },
+      {
+        "tag": "尺寸",
+        "text": "櫃內預留寬 ≥45、深 ≥55、高 ≥55 cm（Saros 20 基站 38.1×47.5×30 cm）；櫃門離地 ≥15.5 cm，基站前方淨空 100 cm 且不放鏡面玻璃"
+      },
+      {
+        "tag": "其他",
+        "text": "硬水區進水前加一組前置濾心減少水垢；走明管用不鏽鋼編織管，接頭纏止洩帶"
+      }
     ],
     "costNotes": [
-      "追覓 X60 Ultra 上下水模組另購 NT$3,280–3,680（官網預購）；呼叫黃背心到府安裝另報價，官網優惠碼可折 1,000",
-      "石頭水立方系列內建上下水、不含安裝；指定活動期間購買送安裝費最高返 1,200",
-      "進排水點位與插座要在泥作前定位，併入水電工程；事後走明管改裝約 2 小時",
-      "耗材：集塵袋、拖布、邊刷、清潔劑（石頭需中性不起泡專用劑），一年約 1–3 千",
-      "維修參考：石頭基站漏水案例維修 45–60 天；主機保固 1–2 年，買前看清楚",
-      "家人若旗艦＋CP 各買一台，兩個基站都要各自預留進排水與插座"
+      "追覓 X60 Ultra 上下水模組另購 3,280（主機頁加購）／3,680（單買），預購九月下旬出貨",
+      "石頭水立方系列與科沃斯上下水款內建模組、不含安裝",
+      "進排水點位與插座要在泥作前定位；事後走明管改裝約 2 小時、2,000–3,000",
+      "耗材：集塵袋、拖布、邊刷、清潔劑，一年約 1,000–3,000",
+      "保固：追覓 X60 Master 3 年、石頭 2 年、Qrevo Pro 1 年",
+      "同價位備案：科沃斯 T90 PRO 上下水款 22,999（有三重抬升）"
+    ],
+    "installCost": {
+      "min": 1500,
+      "max": 6000,
+      "note": "估算：2 分進水＋球閥三通 800–1,500、3 分排水含坡度 1,000–2,000、專用插座 1,000–2,000；前置濾心另計，兩層樓 ×2"
+    },
+    "todos": [
+      {
+        "text": "基站牆面留 2 分冷水點＋球閥，離基站 ≤1.5 m",
+        "for": "designer"
+      },
+      {
+        "text": "3 分排水低於基站底 35 cm、坡度 ≥1%，避開防臭蓋",
+        "for": "designer"
+      },
+      {
+        "text": "基站櫃留寬45×深55×高55 cm＋110V 專用插座",
+        "for": "designer"
+      },
+      {
+        "text": "量各樓層門檻高度回報，越障上限 8.8 cm",
+        "for": "designer"
+      },
+      {
+        "text": "決定是否一樓旗艦＋二樓 CP 各一台（要各留一組水電）",
+        "for": "family"
+      }
     ],
     "defaultQty": 1,
     "options": [
@@ -39,34 +81,52 @@
         "brand": "Roborock 石頭",
         "model": "Saros 20 水立方",
         "name": "石頭 Saros 20 水立方 跨越奇兵（內建自動上下水）",
-        "highlights": ["內建自動上下水免加購", "越障 4.5+4.3 cm 雙門檻", "100°C 熱水洗＋55°C 烘乾"],
-        "dims": "主機 350×353×79.8 mm；基站 381×475×300 mm（官網標示）",
+        "highlights": [
+          "內建自動上下水免加購",
+          "越障 4.5+4.3 cm 雙門檻",
+          "100°C 熱水洗＋55°C 烘乾"
+        ],
+        "dims": "主機 350×353×79.8 mm；基站 381×475×300 mm",
         "cutout": "基站旁預留 2 分進水、3 分排水、110V；前方淨空 1 m",
         "power": "110V；36,000Pa",
         "weight": "",
         "other": "主機保固 2 年；需自行找水電接水線；FoF 除垢除臭模組",
-        "price": {"amount": 34980, "min": 34980, "max": 34980, "source": "pchome", "checkedAt": "2026-08-23", "note": "PChome 34,980 現貨；官網同價但標示現貨出完等下一批；不含安裝"},
+        "price": {
+          "amount": 34980,
+          "min": 34980,
+          "max": 36980,
+          "source": "pchome",
+          "checkedAt": "2026-08-23",
+          "note": "PChome 34,980 現貨（原價 69,999）；官網同價；不含安裝"
+        },
         "links": [
-          {"type": "pchome", "url": "https://24h.pchome.com.tw/prod/DMBL1C-A900JNELR", "verified": true},
-          {"type": "official", "url": "https://www.roborocktw.com/products/saros-20%E6%B0%B4%E7%AB%8B%E6%96%B9", "verified": true}
+          {
+            "type": "pchome",
+            "url": "https://24h.pchome.com.tw/prod/DMBL1C-A900JNELR",
+            "verified": true
+          },
+          {
+            "type": "official",
+            "url": "https://www.roborocktw.com/products/saros-20%E6%B0%B4%E7%AB%8B%E6%96%B9",
+            "verified": true
+          }
         ],
         "availability": "in_stock",
         "reviews": {
           "praise": [
-            "機身不到 8 cm，沙發床底進得去，越障表現好（Mobile01 開箱）",
-            "App 直覺，掃完自動集塵、洗烘拖布，不用顧",
-            "100°C 熱水洗＋FoF 除垢，拖布不發臭（udn 實測）"
+            "機身不到 8 cm，沙發床底進得去，越障表現好",
+            "App 直覺，掃完自動集塵、洗烘拖布",
+            "100°C 熱水洗＋FoF 除垢，拖布不發臭"
           ],
           "complaints": [
-            "越障對門檻高度、材質很挑，不是每個門檻都過得去",
+            "越障對門檻高度、材質很挑",
             "內建鏡頭有隱私疑慮；售價 3 萬以上",
-            "石頭舊款 Q Revo 基站進水口 3–4 個月漏水，維修等 45–60 天（Mobile01）"
+            "石頭舊款 Q Revo 基站進水口 3–4 個月漏水，維修等 45–60 天"
           ],
           "sources": [
             "https://www.mobile01.com/topicdetail.php?f=728&t=7240514",
             "https://tech.udn.com/tech/story/123156/9458271",
-            "https://www.mobile01.com/topicdetail.php?f=728&t=6861881",
-            "https://www.isbonny.com/roborock-saros-20-review/"
+            "https://www.mobile01.com/topicdetail.php?f=728&t=6861881"
           ],
           "confidence": "medium"
         },
@@ -78,39 +138,115 @@
         "brand": "Dreame 追覓",
         "model": "X60 Ultra",
         "name": "追覓 X60 Ultra AI 藍光辨識超薄掃拖旗艦（上下水模組另購）",
-        "highlights": ["7.95 cm 超薄＋越障 8.8 cm", "AI 藍光辨識髒污、36,000Pa", "100°C 沸水洗拖布＋烘乾"],
-        "dims": "主機 351×350×79.5 mm（雷達升起 102.8 mm）；基站尺寸官網未列，下單前向客服確認",
-        "cutout": "加裝上下水模組：2 分進水、3 分排水、110V；基站前方淨空 100 cm",
+        "highlights": [
+          "7.95 cm＋越障 8.8 cm",
+          "AI 藍光辨識髒污、36,000Pa",
+          "100°C 沸水洗拖布＋烘乾"
+        ],
+        "dims": "主機 351×350×79.5 mm；基站尺寸官網未列",
+        "cutout": "加裝上下水模組後：2 分進水、3 分排水、110V；基站前方淨空 100 cm",
         "power": "110V／75W；電池 6,400mAh",
         "weight": "主機約 5.1 kg",
-        "other": "主機保固 1 年（99 節活動加碼 3 年）；上下水模組另購，可自裝或找呼叫黃背心",
-        "price": {"amount": 26980, "min": 26980, "max": 27980, "source": "momo", "checkedAt": "2026-08-23", "note": "momo 26,980／PChome 27,980；上下水模組另購 3,280–3,680，預購 9 月下旬出貨"},
+        "other": "主機保固 1 年（活動加碼 3 年）；上下水模組另購",
+        "price": {
+          "amount": 26980,
+          "min": 26980,
+          "max": 27980,
+          "source": "momo",
+          "checkedAt": "2026-08-23",
+          "note": "momo 26,980／PChome 27,980；上下水模組另購 3,280–3,680，九月出貨"
+        },
         "links": [
-          {"type": "momo", "url": "https://www.momoshop.com.tw/goods/GoodsDetail.jsp?i_code=14977086", "verified": true},
-          {"type": "pchome", "url": "https://24h.pchome.com.tw/prod/DMBL3E-A900JUP4D", "verified": true},
-          {"type": "official", "url": "https://www.dreametech.com.tw/products/x60-ultra", "verified": true},
-          {"type": "official", "url": "https://www.dreametech.com.tw/products/x60-ultra-water-hookup-kit", "verified": true, "label": "追覓官網 上下水模組"}
+          {
+            "type": "momo",
+            "url": "https://www.momoshop.com.tw/goods/GoodsDetail.jsp?i_code=14977086",
+            "verified": true
+          },
+          {
+            "type": "pchome",
+            "url": "https://24h.pchome.com.tw/prod/DMBL3E-A900JUP4D",
+            "verified": true
+          },
+          {
+            "type": "official",
+            "url": "https://www.dreametech.com.tw/products/x60-ultra-water-hookup-kit",
+            "verified": true,
+            "label": "追覓官網 上下水模組 3,680"
+          }
         ],
         "availability": "in_stock",
         "reviews": {
           "praise": [
-            "避障靈敏沒撞過東西，地圖一次建好不用手動改（PTT 一個月心得）",
-            "100°C 熱水洗＋烘乾拖布不臭；70 歲長輩也會用 App",
-            "床底、暗處自己開燈進去掃，邊刷會伸出來貼邊"
+            "避障靈敏沒撞過東西，地圖一次建好",
+            "100°C 熱水洗＋烘乾拖布不臭；長輩也會用 App",
+            "床底、暗處自己開燈進去掃"
           ],
           "complaints": [
+            "上下水模組要另外買、九月下旬才出貨",
             "集塵聲像吸塵器；基座換位置機器會迷路",
-            "不支援台語語音，功能多長輩要人先設定好（Mobile01）",
-            "Dcard 有追覓客服慢、早期批次基站積水漏水（水盤堵、密封圈）的抱怨"
+            "不支援台語語音，功能多要人先設定好",
+            "Dcard 有客服慢、早期批次基站積水漏水的抱怨"
           ],
           "sources": [
             "https://www.ptt.cc/bbs/E-appliance/M.1781081765.A.2FC.html",
-            "https://www.mobile01.com/topicdetail.php?f=728&t=7267801",
-            "https://www.dreametech.com.tw/products/x60-ultra-water-hookup-kit"
+            "https://www.mobile01.com/topicdetail.php?f=728&t=7267801"
           ],
           "confidence": "medium"
         },
         "cmpKeyword": "Dreame X60 Ultra"
+      },
+      {
+        "id": "dreame_x60_master",
+        "tier": "替代方案",
+        "brand": "Dreame 追覓",
+        "model": "X60 Master",
+        "name": "追覓 X60 Master 低矮版（上下水內建、現貨）",
+        "highlights": [
+          "上下水整合款、不用等模組",
+          "7.95 cm、越障 8.8 cm",
+          "官網標 3 年原廠保固"
+        ],
+        "dims": "主機 7.95 cm 高；低矮基站，尺寸官網未列",
+        "cutout": "2 分進水、3 分排水、110V；官網明示此款必須安裝自動上下水",
+        "power": "110V；36,000Pa",
+        "weight": "",
+        "other": "官網已售完，PChome 尚有貨",
+        "price": {
+          "amount": 31980,
+          "min": 31980,
+          "max": 31980,
+          "source": "pchome",
+          "checkedAt": "2026-08-23",
+          "note": "PChome 31,980 現貨 11 台；比 X60 Ultra＋模組貴約 1,300 但免等"
+        },
+        "links": [
+          {
+            "type": "pchome",
+            "url": "https://24h.pchome.com.tw/prod/DMBL3E-A900JZ3SP",
+            "verified": true
+          },
+          {
+            "type": "official",
+            "url": "https://www.dreametech.com.tw/products/x60-master",
+            "verified": true
+          }
+        ],
+        "availability": "in_stock",
+        "reviews": {
+          "praise": [
+            "跟 X60 Ultra 同一代機身，上下水直接內建",
+            "官網標 3 年原廠保固"
+          ],
+          "complaints": [
+            "2026 新型號，獨立長期心得幾乎查不到",
+            "官網已售完只剩通路庫存；基站尺寸未公開"
+          ],
+          "sources": [
+            "https://www.dreametech.com.tw/products/x60-master"
+          ],
+          "confidence": "low"
+        },
+        "cmpKeyword": "Dreame X60 Master 上下水"
       },
       {
         "id": "ecovacs_x11_pro_plumbed",
@@ -118,33 +254,51 @@
         "brand": "ECOVACS 科沃斯",
         "model": "DEEBOT X11 PRO 上下水款",
         "name": "科沃斯 DEEBOT X11 PRO 上下水款 滾筒洗地機器人",
-        "highlights": ["上下水版 22,999 最便宜", "滾筒活水洗地，邊洗邊刮", "瞬充無限續航，大坪數一次掃完"],
-        "dims": "主機 353×351×98 mm；基站（官網）338×459×500 mm，評測實量上下水版基站高約 26.7 cm，下單前跟客服確認",
-        "cutout": "2 分進水、3 分排水、110V；排水口高度低於基站底 35 cm（科沃斯規範）",
-        "power": "110V／110W；電池 6,400mAh；19,500Pa",
+        "highlights": [
+          "上下水版 22,999 最划算",
+          "滾筒活水洗地，邊洗邊刮",
+          "瞬充無限續航，大坪數一次掃"
+        ],
+        "dims": "主機 353×351×98 mm；基站 338×459×500 mm",
+        "cutout": "2 分進水、3 分排水、110V；排水口高度低於基站底 35 cm",
+        "power": "110V／110W；19,500Pa",
         "weight": "",
-        "other": "75°C 熱水洗、熱風烘乾；越障 4 cm；科沃斯台灣公司貨保固",
-        "price": {"amount": 22999, "min": 22999, "max": 27999, "source": "pchome", "checkedAt": "2026-08-23", "note": "PChome 22,999（另一賣場 27,999）；官網同價 22,999；不含安裝"},
+        "other": "75°C 熱水洗、熱風烘乾；越障 4 cm；台灣公司貨保固",
+        "price": {
+          "amount": 22999,
+          "min": 22999,
+          "max": 27999,
+          "source": "pchome",
+          "checkedAt": "2026-08-23",
+          "note": "PChome 22,999 現貨；官網同價，皆不含安裝"
+        },
         "links": [
-          {"type": "pchome", "url": "https://24h.pchome.com.tw/prod/DMBL0L-A900JRDAS", "verified": true},
-          {"type": "official", "url": "https://storetw.ecovacs.com/zh-tw/products/deebot-x11-pro-%E4%B8%8A%E4%B8%8B%E6%B0%B4%E6%AC%BE", "verified": true}
+          {
+            "type": "pchome",
+            "url": "https://24h.pchome.com.tw/prod/DMBL0L-A900JRDAS",
+            "verified": true
+          },
+          {
+            "type": "official",
+            "url": "https://storetw.ecovacs.com/zh-tw/products/deebot-x11-pro-%E4%B8%8A%E4%B8%8B%E6%B0%B4%E6%AC%BE",
+            "verified": true
+          }
         ],
         "availability": "in_stock",
         "reviews": {
           "praise": [
-            "滾筒邊洗邊刮，拖過一次沒水痕（邦尼實測）",
-            "上下水三步驟接好，完全不用倒水補水",
+            "滾筒邊洗邊刮，拖過一次沒水痕",
+            "上下水接好完全不用倒水補水",
             "防纏繞 3.0，長髮、寵物毛不卡"
           ],
           "complaints": [
             "越障只有 4 cm、機身 9.8 cm，門檻高或床底矮會卡",
-            "2026 新機，PTT／Mobile01 真實長期心得還很少",
-            "科沃斯舊款上下水（X1 Omni）用戶自備減壓閥與漏水偵測器，接頭多易漏"
+            "2026 新機，真實長期心得還很少",
+            "科沃斯舊款上下水接頭多易漏，用戶自備減壓閥與漏水偵測器"
           ],
           "sources": [
             "https://www.isbonny.com/ecovacs-x11-pa-review/",
-            "https://www.ptt.cc/bbs/E-appliance/M.1683858862.A.13C.html",
-            "https://storetw.ecovacs.com/zh-tw/products/deebot-x11-pro-%E4%B8%8A%E4%B8%8B%E6%B0%B4%E6%AC%BE"
+            "https://www.ptt.cc/bbs/E-appliance/M.1683858862.A.13C.html"
           ],
           "confidence": "low"
         },
@@ -155,33 +309,43 @@
         "tier": "替代方案",
         "brand": "Roborock 石頭",
         "model": "Qrevo Pro 水立方",
-        "name": "石頭 Qrevo Pro 水立方（內建上下水，官網限量）",
-        "highlights": ["14,999 內建上下水最便宜", "60°C 熱水洗＋機械手臂貼邊", "7,000Pa、自動集塵烘乾"],
-        "dims": "官網未列基站尺寸；水立方基站比水箱版矮（同系列 MaxV 水立方約 40.5 cm 高）",
+        "name": "石頭 Qrevo Pro 水立方（內建上下水，目前缺貨）",
+        "highlights": [
+          "14,999 內建上下水最便宜",
+          "60°C 熱水洗＋機械手臂貼邊",
+          "7,000Pa、自動集塵烘乾"
+        ],
+        "dims": "官網未列基站尺寸",
         "cutout": "2 分進水、3 分排水、110V",
         "power": "110V；7,000Pa",
         "weight": "",
-        "other": "主機保固僅 1 年；官網標示數量有限售完為止",
-        "price": {"amount": 14999, "min": 14999, "max": 14999, "source": "pchome", "checkedAt": "2026-08-23", "note": "PChome 14,999 目前缺貨；官網 14,999 限量（頁面顯示尚未開賣／售完為止）"},
+        "other": "主機保固僅 1 年；限量款，缺貨後不一定補",
+        "price": {
+          "amount": 14999,
+          "min": 14999,
+          "max": 14999,
+          "source": "pchome",
+          "checkedAt": "2026-08-23",
+          "note": "PChome 14,999 目前缺貨；官方通路頁面也標售完"
+        },
         "links": [
-          {"type": "pchome", "url": "https://24h.pchome.com.tw/prod/DMBL1C-A900IAE5C", "verified": true},
-          {"type": "official", "url": "https://www.luxystargroup.com/products/roborock-qrevo-pro%E6%B0%B4%E7%AB%8B%E6%96%B9-ai%E6%A9%9F%E6%A2%B0%E8%87%82cp%E7%8E%8B%E8%80%85", "verified": true}
+          {
+            "type": "pchome",
+            "url": "https://24h.pchome.com.tw/prod/DMBL1C-A900IAE5C",
+            "verified": true
+          }
         ],
-        "availability": "unclear",
+        "availability": "discontinued",
         "reviews": {
           "praise": [
-            "價格只有旗艦一半，上下水、熱水洗、集塵烘乾都有",
-            "同系列 MaxV 水立方基站業界最小，裝潢免留水箱高度（就是教不落）"
+            "價格只有旗艦一半，上下水、熱水洗、集塵烘乾都有"
           ],
           "complaints": [
             "吸力 7,000Pa、越障普通，透天門檻要先量",
-            "官網限量常缺貨；保固只 1 年",
-            "Q Revo 系列有基站漏水、維修 45–60 天案例（Mobile01）"
+            "PChome 與官方通路都已缺貨售完；保固只 1 年"
           ],
           "sources": [
-            "https://www.mobile01.com/topicdetail.php?f=728&t=6861881",
-            "https://steachs.com/archives/65082",
-            "https://www.luxystargroup.com/products/roborock-qrevo-pro%E6%B0%B4%E7%AB%8B%E6%96%B9-ai%E6%A9%9F%E6%A2%B0%E8%87%82cp%E7%8E%8B%E8%80%85"
+            "https://steachs.com/archives/65082"
           ],
           "confidence": "low"
         },
@@ -189,39 +353,81 @@
       }
     ],
     "pickOptionId": "saros20_cube",
-    "pickReason": "內建上下水不用等模組、越障 8.8 cm 適合透天門檻、主機保固 2 年"
+    "pickReason": "內建上下水不用等模組、越障 8.8 cm 過得了透天門檻、主機保固 2 年"
   },
   {
     "itemId": "door_lock",
-    "name": "大門電子鎖（人臉＋指紋）",
+    "name": "大門電子鎖",
     "roomId": "entry",
-    "short": "人臉指紋雙備援大門鎖",
+    "short": "人臉＋指紋雙備援",
     "hardReq": "人臉＋指紋",
-    "advice": "四款都是鋰電池機種，免煩惱乾電池漏液吃掉主機板。透天大門常西曬、逆光，人臉鏡頭別正對太陽，留掌靜脈或指紋當備援。先量門厚、門框邊距再下單；買公司貨含安裝＋保固卡，便宜 5 千到 1 萬的水貨沒 3 年保固、App 還要裝微信。",
+    "advice": "四款都用鋰電池，不會像乾電池漏液吃掉主機板。透天大門常西曬逆光，人臉容易失手，一定要留指紋或掌靜脈備援。下單前先量門厚和門框邊距，新做的門要先選鎖再訂門。務必買含安裝的公司貨。",
     "warnings": [
-      "乾電池機種禁用碳鋅與充電電池；漏液腐蝕主機板不保固，修 2–5 千",
-      "換電池要同品牌同批次整組換、不混新舊；每 3 個月開蓋檢查",
-      "鋰電機種充電用一般 5V/1A 頭，禁用 PD/QC 快充頭（飛利浦、日立明示）",
-      "人臉在強光、逆光、過暗時辨識率下降；門口西曬要加遮陽",
-      "裝在內門或被門框、紗門擋到，人臉會辨識失敗（PTT）",
-      "飛利浦水貨要裝微信＋外掛 App、沒 3 年保固；認明公司貨保固卡",
-      "雙層門內外門淨距不足 20 cm，推拉式鎖體會撞外門",
-      "鹿客 V5 Max 電池實際約 3 個月要充一次；NFC 只認官方卡",
-      "日立 FY10-T 是 2026 新機，真實心得少，PTT 有疑似業配推文"
+      "乾電池機種禁用碳鋅與充電電池，漏液腐蝕主機板算人為、不保固",
+      "換電池要同品牌同批次一次全換，新舊或混牌最容易漏液",
+      "每 3 個月開內側蓋檢查電池，看到滲液或白粉立刻整組換掉",
+      "鋰電充電只能用 5V/1A、5V/2A 頭，禁用 PD、QC 快充頭",
+      "人臉在強光、逆光、過暗時辨識率下降，門口西曬要加遮陽",
+      "裝在內門或被門框、紗門擋到，人臉會辨識失敗",
+      "飛利浦水貨要裝微信＋外掛 App、沒 3 年保固",
+      "雙層門內外門淨距不足 20 cm，推拉式鎖體會撞到外門",
+      "鹿客 V5 Max 電池實際約 3 個月要充一次；NFC 只認官方卡"
     ],
     "install": [
-      {"tag": "尺寸", "text": "先量門厚：鹿客 4–10 cm、飛利浦 3.8–12 cm、Yale 3.5–10 cm；鎖體中心到門邊 ≥6 cm，雙層門內外門淨距 ≥20 cm"},
-      {"tag": "木作", "text": "新門先選鎖再訂門，請門廠依鎖體開孔圖開孔；防火門改鎖要確認不影響防火認證"},
-      {"tag": "其他", "text": "大門西曬或逆光要加雨遮／遮陽板；人臉鏡頭對準身高 125–200 cm，外層紗門、鐵捲門不可擋鏡頭"},
-      {"tag": "電", "text": "鋰電機種免接電；門內側 1 m 內留 110V 插座方便充電；2.4GHz Wi-Fi 訊號要到大門，不夠就加 Mesh 節點"},
-      {"tag": "其他", "text": "請原廠或公司貨經銷師傅到府安裝，保留保固卡與安裝照片；備一把機械鑰匙放車上或親友家"}
+      {
+        "tag": "尺寸",
+        "text": "先量門厚：鹿客 4–10 cm、飛利浦 3.8–12 cm、Yale 3.5–10 cm；鎖體中心到門邊 ≥6 cm，雙層門內外門淨距 ≥20 cm"
+      },
+      {
+        "tag": "木作",
+        "text": "新門先選鎖再訂門，請門廠依鎖體開孔圖開孔；防火門改鎖要確認不影響防火認證"
+      },
+      {
+        "tag": "其他",
+        "text": "大門西曬或逆光要加雨遮／遮陽板；人臉鏡頭對準身高 125–200 cm，外層紗門、鐵捲門不可擋鏡頭"
+      },
+      {
+        "tag": "電",
+        "text": "鋰電機種免接電；門內側 1 m 內留 110V 插座方便充電；2.4GHz Wi-Fi 訊號要涵蓋大門"
+      },
+      {
+        "tag": "其他",
+        "text": "請公司貨經銷師傅到府安裝，保留保固卡與安裝照片；備一把機械鑰匙放車上或親友家"
+      }
     ],
     "costNotes": [
-      "四款公司貨多含基本安裝；子母門、加厚鐵門、舊孔位修補等特殊門另加價",
-      "Yale Luna Pro+ 遠端功能要另購 Wi-Fi 網關，約數千元",
-      "鋰電池備用：飛利浦 709 備用電池約 1,000 元，建議買一顆輪替",
+      "四款公司貨多含基本安裝；子母門、加厚鐵門、舊孔位修補等特殊門另加 1,000–3,000",
+      "Yale Luna Pro+ 遠端功能要另購 Wi-Fi 網關，約 2,000–3,000",
+      "備用鋰電池約 1,000 元，建議買一顆輪替",
       "過保維修：飛利浦零件 6,000 起；乾電池漏液修主機板 2,000–5,000（不保固）",
       "公司貨 vs 水貨差 5,000–10,000，但水貨保固 1 年且可能無零件可修"
+    ],
+    "installCost": {
+      "min": 0,
+      "max": 6000,
+      "note": "估算：多含基本安裝＝0；特殊門型改孔 0–3,000、Yale 遠端網關 2,000–3,000、大門加 Mesh 1,000–2,500、備用電池 1,000"
+    },
+    "todos": [
+      {
+        "text": "量大門厚度、鎖體中心到門邊 ≥6 cm，拍照給安裝方",
+        "for": "designer"
+      },
+      {
+        "text": "雙層門量內外門淨距，需 ≥20 cm 才裝推拉式",
+        "for": "designer"
+      },
+      {
+        "text": "大門西曬加雨遮，鏡頭對 125–200 cm 免被擋",
+        "for": "designer"
+      },
+      {
+        "text": "門內側 1 m 留插座，確認有 2.4G Wi-Fi",
+        "for": "designer"
+      },
+      {
+        "text": "決定買公司貨（貴 5,000–10,000、3 年保）或水貨",
+        "for": "family"
+      }
     ],
     "defaultQty": 1,
     "options": [
@@ -230,35 +436,52 @@
         "tier": "頂級",
         "brand": "Lockin 鹿客",
         "model": "V5 Max",
-        "name": "鹿客 Lockin V5 Max 掌靜脈人臉貓眼電子鎖",
-        "highlights": ["掌靜脈＋3D 人臉＋指紋三備援", "雙鋰電池、內建 Wi-Fi", "4 吋貓眼螢幕、C 級鎖芯"],
+        "name": "鹿客 V5 Max 掌靜脈人臉貓眼電子鎖",
+        "highlights": [
+          "掌靜脈＋3D 人臉＋指紋三備援",
+          "雙鋰電池、內建 Wi-Fi",
+          "4 吋貓眼螢幕、C 級鎖芯"
+        ],
         "dims": "外鎖 45.5×7.6×6.6 cm；內鎖 45.5×7.5×8.0 cm",
-        "cutout": "門厚 4–10 cm；推拉式鎖體，門框邊距依原廠開孔圖",
-        "power": "7.4V 雙鋰電池（5000＋2250mAh），Type-C 應急供電",
+        "cutout": "門厚 4–10 cm；推拉式鎖體",
+        "power": "7.4V 雙鋰電池（5000＋2250mAh），Type-C 應急供電，禁用快充頭",
         "weight": "",
-        "other": "公司貨保固 2 年（水貨 1 年）；人臉 50 組／掌靜脈 50 組；身高 130–200 cm",
-        "price": {"amount": 31000, "min": 31000, "max": 34500, "source": "pchome", "checkedAt": "2026-08-23", "note": "PChome 31,000（定價 41,000）；momo 黑武士 34,500；含不含安裝依賣場"},
+        "other": "公司貨保固 2 年；人臉 50 組／掌靜脈 50 組；適用身高 130–200 cm",
+        "price": {
+          "amount": 31000,
+          "min": 31000,
+          "max": 34500,
+          "source": "pchome",
+          "checkedAt": "2026-08-23",
+          "note": "PChome 31,000（原價 41,000）庫存僅 2 組；momo 黑武士版 34,500"
+        },
         "links": [
-          {"type": "pchome", "url": "https://24h.pchome.com.tw/prod/DQAT1H-A900I5LFR", "verified": true},
-          {"type": "momo", "url": "https://www.momoshop.com.tw/TP/TP0005915/goodsDetail/TP00059150000007", "verified": true}
+          {
+            "type": "pchome",
+            "url": "https://24h.pchome.com.tw/prod/DQAT1H-A900I5LFR",
+            "verified": true
+          },
+          {
+            "type": "momo",
+            "url": "https://www.momoshop.com.tw/TP/TP0005915/goodsDetail/TP00059150000007",
+            "verified": true
+          }
         ],
         "availability": "in_stock",
         "reviews": {
           "praise": [
-            "人臉速度跟 iPhone 差不多，手拿東西直接開（Mobile01 用 3 個月以上）",
+            "人臉速度跟 iPhone 差不多，手拿東西直接開",
             "掌靜脈對指紋淺的長輩、手濕手髒都準",
             "用 3 個月以上穩定，開鎖快、軟體順"
           ],
           "complaints": [
-            "電池沒官方說的久，約 3 個月就要充；上電池充電時貓眼螢幕暫關",
-            "NFC 只能用鹿客官方卡；App 偶爾卡頓、連線不穩（PTT）",
-            "裝內門雷達一直觸發很耗電，要調感應距離；水貨客服找不到人、零件貴"
+            "電池約 3 個月就要充；充電時貓眼螢幕會暫關",
+            "NFC 只能用官方卡；App 偶爾卡頓、連線不穩",
+            "裝內門雷達一直觸發很耗電，要調感應距離"
           ],
           "sources": [
             "https://www.mobile01.com/topicdetail.php?f=168&t=6815012",
-            "https://fashionlock.org/%E9%B9%BF%E5%AE%A2v5-max-ptt",
-            "https://www.sc-smarthome69.com/lockintw/",
-            "https://www.sc-smarthome69.com/v5-max-open/"
+            "https://fashionlock.org/%E9%B9%BF%E5%AE%A2v5-max-ptt"
           ],
           "confidence": "medium"
         },
@@ -270,77 +493,57 @@
         "brand": "Philips 飛利浦",
         "model": "DDL709-FVP",
         "name": "飛利浦 709-FVP 3D 人臉貓眼視訊電子鎖（含安裝）",
-        "highlights": ["3D 結構光人臉＋貓眼視訊對講", "5000mAh 鋰電、3 年保固", "門厚 3.8–12 cm 適應性高"],
+        "highlights": [
+          "3D 結構光人臉＋貓眼視訊對講",
+          "5000mAh 鋰電、3 年保固",
+          "門厚 3.8–12 cm 適應性高"
+        ],
         "dims": "外鎖 41.2×7.8×5.5 cm；內鎖 42.0×8.0×6.5 cm",
         "cutout": "門厚 3.8–12 cm；推拉式，鎖體較厚要先確認門框",
-        "power": "5000mAh 充電鋰電池，Type-C 5V/1A 充電（原廠明示禁用快充頭）",
+        "power": "5000mAh 充電鋰電池，Type-C 5V/1A 充電（禁用快充頭）",
         "weight": "",
-        "other": "台灣總代理 3 年保固（水貨不保）；生活防潑水不可淋雨；低電量會關閉人臉",
-        "price": {"amount": 32500, "min": 32000, "max": 34200, "source": "pchome", "checkedAt": "2026-08-23", "note": "PChome 32,500 含安裝；愛購智能+ 34,200（定價 36,500）含基本安裝；飛利浦智能鎖館 32,000"},
+        "other": "台灣總代理 3 年保固（水貨不保）；生活防潑水不可淋雨",
+        "price": {
+          "amount": 32500,
+          "min": 32000,
+          "max": 34200,
+          "source": "pchome",
+          "checkedAt": "2026-08-23",
+          "note": "PChome 32,500（原價 42,000）現貨含安裝；愛購智能+ 34,200"
+        },
         "links": [
-          {"type": "pchome", "url": "https://24h.pchome.com.tw/prod/DQBS4N-A900I7PXE", "verified": true},
-          {"type": "other", "url": "https://www.lovebuyigo.com.tw/products/philips_709-fvp", "verified": true, "label": "愛購智能+ 看商品"}
+          {
+            "type": "pchome",
+            "url": "https://24h.pchome.com.tw/prod/DQBS4N-A900I7PXE",
+            "verified": true
+          },
+          {
+            "type": "other",
+            "url": "https://www.lovebuyigo.com.tw/products/philips_709-fvp",
+            "verified": true,
+            "label": "愛購智能+ 看商品"
+          }
         ],
         "availability": "in_stock",
         "reviews": {
           "praise": [
-            "人臉走近 1 秒開，貓眼＋視訊對講功能最齊（PTT）",
+            "人臉走近 1 秒開，貓眼＋視訊對講功能最齊",
             "公司貨 App 直接用，有本地維修團隊",
-            "3D 結構光防照片破解，身高 125–200 cm 都抓得到"
+            "3D 結構光防照片破解"
           ],
           "complaints": [
             "沒有 App 一鍵遠端開門，只能發臨時密碼",
-            "水貨要裝微信＋飛利浦外掛、台灣手機註冊不了；水貨重災區",
-            "子母門門把太淺會夾手；裝內門人臉很難成功；備用電池約 1,000 元不好買",
+            "水貨要裝微信＋外掛、台灣手機註冊不了",
+            "子母門門把太淺會夾手；裝內門人臉很難成功",
             "強光直射門口會影響人臉穩定度"
           ],
           "sources": [
             "https://www.ptt.cc/bbs/E-appliance/M.1736273380.A.3CD.html",
-            "https://www.ptt.cc/bbs/E-appliance/M.1738229491.A.51E.html",
-            "https://www.ptt.cc/bbs/E-appliance/M.1737872397.A.42E.html",
-            "https://ilocklife.com/article-detail/philips-locks-problems/",
-            "https://www.lovebuyigo.com.tw/products/philips_709-fvp"
+            "https://ilocklife.com/article-detail/philips-locks-problems/"
           ],
           "confidence": "high"
         },
         "cmpKeyword": "Philips DDL709-FVP"
-      },
-      {
-        "id": "hitachi_fy10t",
-        "tier": "替代方案",
-        "brand": "HITACHI 日立",
-        "model": "HIT-FY10-T",
-        "name": "日立 HIT-FY10-T 逸系列 人臉掌靜脈貓眼電子鎖（含基本安裝）",
-        "highlights": ["人臉＋掌靜脈＋指紋 7 合 1", "300 萬畫素夜視貓眼、IP54", "原廠 3 年保固含安裝"],
-        "dims": "推拉式鎖體；尺寸請向代理（快譯通）索取安裝圖",
-        "cutout": "推拉式對門框邊距要求高，先傳門照給安裝團隊評估",
-        "power": "7.4V 5000mAh 鋰電池；不支援快充，需原廠充電線；Type-C 應急",
-        "weight": "",
-        "other": "保固 3 年（換新機）；C 級鎖芯；200 組使用者；濕度 25–93% RH 無冷凝",
-        "price": {"amount": 35800, "min": 34960, "max": 36800, "source": "momo", "checkedAt": "2026-08-23", "note": "momo 35,800 含基本安裝；PChome 34,960–36,800 含基本安裝；官網定價 36,800 含安裝"},
-        "links": [
-          {"type": "momo", "url": "https://www.momoshop.com.tw/goods/GoodsDetail.jsp?i_code=15368264", "verified": true},
-          {"type": "pchome", "url": "https://24h.pchome.com.tw/prod/DQBS4N-A900KAPUN", "verified": true}
-        ],
-        "availability": "in_stock",
-        "reviews": {
-          "praise": [
-            "日系品牌、含安裝＋3 年保固，PTT 有人覺得指紋款 CP 高",
-            "功能最齊：人臉、掌靜脈、指紋、夜視貓眼一次到位"
-          ],
-          "complaints": [
-            "2026 才上市，獨立長期心得極少；PTT 有人指出疑似快譯通相關帳號洗推",
-            "前代 FH10-T 貓眼在陰暗走廊夜間感光不足",
-            "推拉式對門框邊距挑；不支援快充、要用原廠線"
-          ],
-          "sources": [
-            "https://www.ptt.cc/bbs/E-appliance/M.1757837480.A.19E.html",
-            "https://ilocklife.com/article-detail/hitachi-electronic-lock-review-guide/",
-            "https://www.momoshop.com.tw/goods/GoodsDetail.jsp?i_code=15368264"
-          ],
-          "confidence": "low"
-        },
-        "cmpKeyword": "HITACHI HIT-FY10-T"
       },
       {
         "id": "yale_luna_pro_plus",
@@ -348,42 +551,112 @@
         "brand": "Yale 耶魯",
         "model": "Luna Pro+",
         "name": "Yale Luna Pro+ 3D 人臉辨識推拉電子鎖（送安裝）",
-        "highlights": ["27,999 含安裝、3 年保固", "3D 結構光人臉＋雙紅外夜間補光", "支援 HomeKit／Google"],
-        "dims": "推拉式；偏心設計不夾手；門把側面較淺",
-        "cutout": "門厚 3.5–10 cm（部分通路標 4–8 cm）；門框邊距依原廠圖",
-        "power": "4900mAh 充電鋰電池；Type-C 行動電源應急",
+        "highlights": [
+          "27,999 含安裝、3 年保固",
+          "3D 結構光人臉＋雙紅外補光",
+          "支援 HomeKit／Google"
+        ],
+        "dims": "推拉式；偏心設計不夾手",
+        "cutout": "門厚 3.5–10 cm；門框邊距依原廠圖",
+        "power": "4900mAh 充電鋰電池；Type-C 應急，不要用快充頭",
         "weight": "",
-        "other": "公司貨 3 年保固；人臉 100／指紋 50 組；遠端要另購 Yale Connect Wi-Fi 網關",
-        "price": {"amount": 27999, "min": 25000, "max": 27999, "source": "momo", "checkedAt": "2026-08-23", "note": "momo 27,999 送安裝；PChome 27,999（香檳金另一賣場 25,000 含安裝，僅剩 1 件）"},
+        "other": "公司貨 3 年保固；人臉 100／指紋 50 組；遠端要另購網關",
+        "price": {
+          "amount": 27999,
+          "min": 25000,
+          "max": 27999,
+          "source": "momo",
+          "checkedAt": "2026-08-23",
+          "note": "momo 27,999 送安裝；PChome 27,999，香檳金賣場 25,000 只剩 1 件"
+        },
         "links": [
-          {"type": "momo", "url": "https://www.momoshop.com.tw/goods/GoodsDetail.jsp?i_code=14167057", "verified": true},
-          {"type": "pchome", "url": "https://24h.pchome.com.tw/prod/DQBS4N-A900J4U5F", "verified": true},
-          {"type": "pchome", "url": "https://24h.pchome.com.tw/prod/DQBS4N-A900K6CMI", "verified": true}
+          {
+            "type": "momo",
+            "url": "https://www.momoshop.com.tw/goods/GoodsDetail.jsp?i_code=14167057",
+            "verified": true
+          },
+          {
+            "type": "pchome",
+            "url": "https://24h.pchome.com.tw/prod/DQBS4N-A900J4U5F",
+            "verified": true
+          }
         ],
         "availability": "in_stock",
         "reviews": {
           "praise": [
-            "全黑環境靠雙紅外補光也能人臉開（Mobile01 開箱）",
-            "耶魯 24 小時客服，遠端教到會（PTT）",
+            "全黑環境靠雙紅外補光也能人臉開",
+            "耶魯 24 小時客服，遠端教到會",
             "HomeKit 原生支援，公司貨 3 年保固"
           ],
           "complaints": [
-            "門把側面深度淺，大手只塞得進一節指頭（Mobile01）",
-            "說明書難懂；遠端功能要另購網關數千元",
-            "Yale 對門厚、鎖孔、門框要求較嚴；指紋模組有短期異常個案，售後因通路有差"
+            "門把側面深度淺，大手只塞得進一節指頭",
+            "說明書難懂；遠端功能要另購網關 2,000–3,000",
+            "對門厚、鎖孔、門框要求較嚴"
           ],
           "sources": [
             "https://www.mobile01.com/topicdetail.php?f=168&t=7159368",
-            "https://www.ptt.cc/bbs/E-appliance/M.1774870656.A.ADF.html",
-            "https://ilocklife.com/article-detail/electronic-lock-disadvantages/",
-            "https://ilocklife.com/article-detail/yale-electronic-locks-comparison-guide/"
+            "https://www.ptt.cc/bbs/E-appliance/M.1774870656.A.ADF.html"
           ],
           "confidence": "medium"
         },
         "cmpKeyword": "Yale Luna Pro+"
+      },
+      {
+        "id": "hitachi_fy10t",
+        "tier": "替代方案",
+        "brand": "HITACHI 日立",
+        "model": "HIT-FY10-T",
+        "name": "日立 逸系列 人臉掌靜脈貓眼電子鎖（含基本安裝）",
+        "highlights": [
+          "人臉＋掌靜脈＋指紋 7 合 1",
+          "300 萬畫素夜視貓眼、IP54",
+          "原廠 3 年保固含安裝"
+        ],
+        "dims": "推拉式鎖體；尺寸請向代理索取安裝圖",
+        "cutout": "推拉式對門框邊距要求高，先傳門照給安裝團隊評估",
+        "power": "7.4V 5000mAh 鋰電池；不支援快充",
+        "weight": "",
+        "other": "保固 3 年（換新機）；C 級鎖芯；200 組使用者",
+        "price": {
+          "amount": 34960,
+          "min": 34960,
+          "max": 36800,
+          "source": "pchome",
+          "checkedAt": "2026-08-23",
+          "note": "PChome 折後 34,960 含基本安裝；momo 35,800 含基本安裝"
+        },
+        "links": [
+          {
+            "type": "pchome",
+            "url": "https://24h.pchome.com.tw/prod/DQBS4N-A900KAPUN",
+            "verified": true
+          },
+          {
+            "type": "momo",
+            "url": "https://www.momoshop.com.tw/goods/GoodsDetail.jsp?i_code=15368264",
+            "verified": true
+          }
+        ],
+        "availability": "in_stock",
+        "reviews": {
+          "praise": [
+            "日系品牌、含安裝＋3 年保固",
+            "功能最齊：人臉、掌靜脈、指紋、夜視貓眼一次到位"
+          ],
+          "complaints": [
+            "2026 才上市，獨立長期心得極少",
+            "前代 FH10-T 貓眼在陰暗走廊夜間感光不足",
+            "推拉式對門框邊距挑；不支援快充"
+          ],
+          "sources": [
+            "https://ilocklife.com/article-detail/hitachi-electronic-lock-review-guide/"
+          ],
+          "confidence": "low"
+        },
+        "cmpKeyword": "HITACHI HIT-FY10-T"
       }
     ],
     "pickOptionId": "lockin_v5_max",
-    "pickReason": "掌靜脈＋人臉互補，手濕戴口罩照開；雙鋰電、Mobile01 長期口碑穩，務必買公司貨"
+    "pickReason": "掌靜脈＋人臉互補，手濕戴口罩照開；雙鋰電、長期口碑穩，務必買公司貨"
   }
 ]

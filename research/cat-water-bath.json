@@ -1,0 +1,1233 @@
+[
+  {
+    "itemId": "water_dispenser",
+    "name": "櫥下型飲水機",
+    "roomId": "water",
+    "short": "常溫冰熱氣泡一次到位",
+    "hardReq": "櫥下型，常溫＋熱水＋冰水＋氣泡水四種都要",
+    "advice": "四種水一台搞定，目前只有 OASIS FIZZ-401 做得到，含免費安裝，鋼瓶跟 SodaStream 通用。想省錢就買三溫機或賀眾 RO，桌上再擺一台 SodaStream，便宜一萬多，但要自己打氣、多佔一塊檯面。賀眾網友實測冰水只有 11~15 度，怕不夠冰要留意。",
+    "warnings": [
+      "OASIS 只有三道濾芯不是 RO，濾芯一年約 4,900",
+      "網友實測賀眾冰水 11~15 度，沒有標示的那麼冰",
+      "氣泡鋼瓶要自己跑門市換，一支 550 元",
+      "SodaStream 鋼瓶剩一半就開始沒氣，氣泡變弱",
+      "櫥下機會吃掉水槽下一大塊，先量淨高與深度",
+      "賣場「基本安裝」不含開孔與加長管線，要先問"
+    ],
+    "install": [
+      {
+        "tag": "電",
+        "text": "櫥下留 110V 專用防潮插座（15A 迴路、附接地），距主機 1 m 內，不與其他廚電共用"
+      },
+      {
+        "tag": "水",
+        "text": "冷水進水處留 1/2 吋三通＋止水閥；主機 W230×D350×H450 mm，櫥下淨高留 500 mm、寬 250 mm"
+      },
+      {
+        "tag": "排水",
+        "text": "RO 廢水與洩壓水要接排水，做 P 型存水彎、管徑 ≥25 mm，避免臭味回竄"
+      },
+      {
+        "tag": "尺寸",
+        "text": "檯面飲水龍頭開孔 Ø35 mm，龍頭高 356 mm，與水槽龍頭間距留 ≥150 mm"
+      },
+      {
+        "tag": "其他",
+        "text": "氣泡鋼瓶要側傾 30 度轉出，櫥下機前方留 200 mm 操作空間，門片要能全開"
+      }
+    ],
+    "costNotes": [
+      "OASIS 三道濾芯一年一組約 4,900–4,990 元，格威到府換並洗管",
+      "賀眾 600G RO：活性碳一年約 2,500、RO 膜兩年約 4,500",
+      "SodaStream 425g 鋼瓶換氣 550 元/支，一支約做 40–50 L 氣泡水",
+      "MOMO／PChome 的 OASIS、賀眾都含基本安裝，加長管線與開孔另計"
+    ],
+    "installCost": {
+      "min": 2000,
+      "max": 12000,
+      "note": "賣場多含基本安裝；額外：櫥下 110V 專用迴路 2,000–4,000、檯面開孔 800–1,500、排水與存水彎 1,500–3,500、加長管線每米 300–500（中部行情估算）"
+    },
+    "todos": [
+      { "text": "櫥下量淨高 500mm、寬 250mm 以上", "for": "designer" },
+      { "text": "櫥下加 110V 專用防潮插座與 15A 迴路", "for": "designer" },
+      { "text": "檯面預留 Ø35mm 飲水龍頭開孔", "for": "designer" },
+      { "text": "櫥下拉排水並做存水彎，管徑 25mm", "for": "designer" },
+      { "text": "決定四合一一台，還是三溫＋桌上氣泡機", "for": "family" }
+    ],
+    "defaultQty": 1,
+    "options": [
+      {
+        "id": "oasis_fizz_401",
+        "tier": "頂級",
+        "brand": "OASIS 美國",
+        "model": "LUXES-FIZZ-401",
+        "name": "OASIS 櫥下極奢氣泡三溫 UVC 飲水機",
+        "highlights": [
+          "常溫冰熱＋氣泡四合一",
+          "UVC 瞬間殺菌，含免費安裝",
+          "鋼瓶與 SodaStream 通用"
+        ],
+        "dims": "主機 230×350×450 mm；龍頭 55×192×356 mm；三道濾芯 320×70×375 mm",
+        "cutout": "檯面龍頭開孔 Ø35 mm；櫥下淨高 ≥500 mm、寬 ≥250 mm",
+        "power": "110V/60Hz，額定 450W，建議專用迴路",
+        "weight": "主機約 20 kg（含濾芯組）",
+        "other": "1 年保固；恆隆行／格威代理，含免費基本安裝；NSF、SGS 生飲認證",
+        "price": {
+          "amount": 52060,
+          "min": 52060,
+          "max": 54800,
+          "source": "momo",
+          "checkedAt": "2026-08-23",
+          "note": "MOMO 促銷 54,800、限時 95 折後 52,060；PChome 54,800，皆含免費基本安裝"
+        },
+        "links": [
+          {
+            "type": "momo",
+            "url": "https://www.momoshop.com.tw/goods/GoodsDetail.jsp?i_code=13048533",
+            "verified": true
+          },
+          {
+            "type": "pchome",
+            "url": "https://24h.pchome.com.tw/prod/DMCI01-A900I4EU0",
+            "verified": true
+          },
+          {
+            "type": "official",
+            "url": "https://shop.hengstyle.com/SalePage/Index/9976090",
+            "verified": true
+          }
+        ],
+        "availability": "in_stock",
+        "reviews": {
+          "praise": [
+            "熱水出水快、流量穩，熱水槽 3.8L 夠泡奶洗菜",
+            "冷熱走不同管路，切換約 3 秒不用等",
+            "格威（恆隆行關係企業）會主動 LINE 提醒換濾芯，到府換還順便洗管",
+            "鋼瓶用 SodaStream 規格，燦坤、全國電子、恆隆行都能換"
+          ],
+          "complaints": [
+            "只有三道濾芯不是 RO，想要 RO 得加價到 64,800 的 600G 版",
+            "有人試用機反映關水後龍頭會滴漏一陣子",
+            "耗材綁原廠，一年濾芯約 4,900 起跳，比白牌貴",
+            "氣泡鋼瓶剩一半氣就明顯變弱，得提早換"
+          ],
+          "sources": [
+            "https://www.mobile01.com/topicdetail.php?f=729&t=7099496",
+            "https://www.mobile01.com/topicdetail.php?f=400&t=7122880",
+            "https://forum.babyhome.com.tw/topic/5031743",
+            "https://www.ptt.cc/bbs/E-appliance/M.1658994528.A.479.html"
+          ],
+          "confidence": "medium"
+        },
+        "cmpKeyword": "OASIS LUXES-FIZZ-401"
+      },
+      {
+        "id": "oasis_cold301_sodastream",
+        "tier": "高級",
+        "brand": "OASIS 美國＋SodaStream",
+        "model": "LUXES-COLD-301＋ART",
+        "name": "OASIS 櫥下輕奢三溫 UVC 飲水機＋SodaStream ART 氣泡機",
+        "highlights": [
+          "同系列三溫機，質感一致",
+          "氣泡另外用桌上機更省",
+          "含免費基本安裝"
+        ],
+        "dims": "主機 230×350×450 mm（15.2 kg）；ART 250×180×440 mm",
+        "cutout": "檯面龍頭開孔 Ø35 mm；櫥下淨高 ≥500 mm；檯面另留 25×20 cm 放氣泡機",
+        "power": "飲水機 110V/60Hz；SodaStream ART 免插電手動拉桿",
+        "weight": "飲水機 15.2 kg；ART 3.5 kg",
+        "other": "飲水機 1 年保固、ART 2 年保固；流量 1.8 L/60 秒",
+        "price": {
+          "amount": 42800,
+          "min": 42800,
+          "max": 44790,
+          "source": "momo",
+          "checkedAt": "2026-08-23",
+          "note": "MOMO 三溫機 39,800、限時 95 折 37,810；氣泡機取 PChome 4,990"
+        },
+        "links": [
+          {
+            "type": "momo",
+            "url": "https://www.momoshop.com.tw/goods/GoodsDetail.jsp?i_code=13116710",
+            "verified": true
+          },
+          {
+            "type": "pchome",
+            "url": "https://24h.pchome.com.tw/prod/DMCI01-A900I4ERS",
+            "verified": true
+          },
+          {
+            "type": "pchome",
+            "url": "https://24h.pchome.com.tw/prod/DMAWGY-A900HF5JT",
+            "verified": true
+          },
+          {
+            "type": "official",
+            "url": "https://shop.hengstyle.com/SalePage/Index/10123858",
+            "verified": true
+          }
+        ],
+        "availability": "in_stock",
+        "reviews": {
+          "praise": [
+            "三溫機本體和四合一同尺寸、同售後，質感一樣",
+            "SodaStream 氣泡比超商最便宜的氣泡水細、不刺不苦",
+            "有人靠氣泡水機戒掉外面的手搖飲",
+            "氣泡機壞了單獨換就好，不會拖累櫥下主機"
+          ],
+          "complaints": [
+            "要氣泡得自己走到檯面手動打氣，懶的時候就不想喝",
+            "原廠鋼瓶偏貴，有人乾脆改機接 3L 大鋼瓶（會失保固）",
+            "打完要盡快喝，氣泡散得快",
+            "剛換的新鋼瓶太飽氣，照標準步驟容易噴水"
+          ],
+          "sources": [
+            "https://www.ptt.cc/bbs/E-appliance/M.1658994528.A.479.html",
+            "https://www.ptt.cc/bbs/E-appliance/M.1591085306.A.122.html",
+            "https://www.mobile01.com/topicdetail.php?f=400&t=7027962",
+            "https://www.mobile01.com/topicdetail.php?f=729&t=7099496"
+          ],
+          "confidence": "medium"
+        },
+        "cmpKeyword": "OASIS LUXES-COLD-301"
+      },
+      {
+        "id": "uw_3902aw_sodastream",
+        "tier": "高CP值",
+        "brand": "賀眾牌＋SodaStream",
+        "model": "UR-3902AW-1＋ART",
+        "name": "賀眾牌 PREMIER 廚下冰溫瞬熱旗艦飲水機＋SodaStream ART",
+        "highlights": [
+          "內建 600GPD RO 雙源淨化",
+          "含標準安裝，濾材好買",
+          "9 段溫控、6 段水量"
+        ],
+        "dims": "主機 183×467×463 mm；前置濾芯 160×155×380 mm；ART 250×180×440 mm",
+        "cutout": "櫥下淨高 ≥500 mm、寬 ≥250 mm；檯面龍頭開孔 Ø35 mm",
+        "power": "110V/60Hz，加熱 1500W＋製冷 100W；另有 220V 版（加熱 2100W）同價",
+        "weight": "主機約 22 kg",
+        "other": "1 年保固；含標準安裝（3 米內）；冰水箱 0.8L、UV 自動殺菌、兒童安全鎖",
+        "price": {
+          "amount": 41790,
+          "min": 41790,
+          "max": 41790,
+          "source": "momo",
+          "checkedAt": "2026-08-23",
+          "note": "MOMO／PChome 飲水機同為 36,800（含標準安裝）＋PChome ART 4,990"
+        },
+        "links": [
+          {
+            "type": "momo",
+            "url": "https://www.momoshop.com.tw/goods/GoodsDetail.jsp?i_code=14013218",
+            "verified": true
+          },
+          {
+            "type": "pchome",
+            "url": "https://24h.pchome.com.tw/prod/DMAWI0-A900ITF3M",
+            "verified": true
+          },
+          {
+            "type": "pchome",
+            "url": "https://24h.pchome.com.tw/prod/DMAWGY-A900HF5JT",
+            "verified": true
+          },
+          {
+            "type": "official",
+            "url": "https://acuowater.com.tw/product/ur-3902aw/",
+            "verified": true
+          }
+        ],
+        "availability": "in_stock",
+        "reviews": {
+          "praise": [
+            "賀眾是老牌子，全台服務站多、師傅好叫",
+            "內建 600GPD RO，1:0.5 廢水比在同級算省水",
+            "冰、溫、瞬熱三溫一機到位，價格只要四合一機的七成",
+            "220V／110V 同價可選，220V 版加熱 2100W 更快"
+          ],
+          "complaints": [
+            "網友實測冰水只有 11~15 度，不是真的「冰」水",
+            "出水量約 800 ml/分，瞬熱僅 380 ml/分，有人裝完覺得太小",
+            "RO 廢水一定要拉排水，櫥下管線變多",
+            "耗材綁原廠，比白牌 RO 貴一截"
+          ],
+          "sources": [
+            "https://www.threads.com/@asd9020210/post/DZrBohSGe9-/",
+            "https://www.threads.com/@f.jiangi/post/DZptpCcE_wu/",
+            "https://www.mobile01.com/topicdetail.php?f=729&t=7148066",
+            "https://www.ptt.cc/bbs/E-appliance/M.1757644478.A.A34.html"
+          ],
+          "confidence": "medium"
+        },
+        "cmpKeyword": "賀眾牌 UR-3902AW-1"
+      }
+    ],
+    "pickOptionId": "oasis_fizz_401",
+    "pickReason": "唯一一台龍頭直接給常溫冰熱＋氣泡，含免費安裝，售後好找"
+  },
+  {
+    "itemId": "softener",
+    "name": "全戶軟水系統",
+    "roomId": "water",
+    "short": "全戶軟水去水垢",
+    "hardReq": "全戶式，南投市自來水硬度約 151 mg/L 屬中度硬水",
+    "advice": "透天三衛浴＋洗碗機，用水量大，直接上 3M SFT-200（2.0 噸/時）比較不會不夠用；預算緊才選 SFT-150。裝在一樓進水處、旁邊要有插座和地排。水壓不到 2 kg 會吸不到鹽水，等於白裝，先量壓力。BWT 目前缺貨，別等。",
+    "warnings": [
+      "水壓 <2 kg/cm² 吸不到鹽水，還原會失效",
+      "軟水機要插電，停電後控制閥時間要重設",
+      "再生排水口要留氣隙，不可直接插進排水管",
+      "不能用粗鹽代替鹽錠，溶解慢會塞機器",
+      "BWT Bewamat 75A 兩平台皆無庫存，只能預購",
+      "3M SFT-150／200 為預購，約 2026/09/11 後才排安裝"
+    ],
+    "install": [
+      {
+        "tag": "水",
+        "text": "總進水（水表後或水塔出水後）切管做 1 吋三通與旁通閥組，軟水機進出水 3/4 吋"
+      },
+      {
+        "tag": "排水",
+        "text": "再生排水管 ≥3/4 吋接到地排，出水口與排水面留 40 mm 氣隙防倒吸"
+      },
+      {
+        "tag": "電",
+        "text": "旁邊留 110V 防水插座（可與加壓馬達同迴路），控制閥耗電約 20W"
+      },
+      {
+        "tag": "尺寸",
+        "text": "SFT-200 需 484×483×1123 mm，前方留 600 mm 加鹽與維修空間；SFT-150 為 470×460×661 mm"
+      },
+      {
+        "tag": "搬運",
+        "text": "SFT-150 淨重 21 kg、SFT-200 更重，基座要水平且能承重，優先放一樓不要放頂樓"
+      },
+      {
+        "tag": "其他",
+        "text": "進水壓量測 ≥2 kg/cm²，不足要加裝加壓馬達與電磁閥；戶外要加遮雨棚避免日曬"
+      }
+    ],
+    "costNotes": [
+      "鹽錠每月 1–2 包 10 kg，約 500–1,000 元（南投 151 mg/L 中度硬水）",
+      "再生一次耗水約 200–260 L，水費另計",
+      "網友回報 3M 全戶軟水維護費約每年 4,000 元（鹽錠＋檢查）",
+      "前置反洗 BFS3-40BK 已含在 MOMO 組合價內，不必另買",
+      "在地白牌／Clack 控制閥軟水機網友說 60L 樹脂含大胖約 1 萬初頭，但無公開牌價，需現場報價"
+    ],
+    "installCost": {
+      "min": 8000,
+      "max": 20000,
+      "note": "總進水切管、1 吋三通與旁通閥、再生排水管與氣隙、110V 防水插座、水泥基座與遮雨棚；水壓不足另加壓馬達 8,000–15,000（中部行情估算）"
+    },
+    "todos": [
+      { "text": "總進水處留 1 米見方空間、插座與地排", "for": "designer" },
+      { "text": "量進水壓，低於 2kg/cm² 要加加壓馬達", "for": "designer" },
+      { "text": "配旁通閥，保養時全戶不斷水", "for": "designer" },
+      { "text": "基座做防水並加遮雨棚，機體離地 100mm", "for": "designer" },
+      { "text": "決定 SFT-200 或 SFT-150（差約 1.6 萬）", "for": "family" }
+    ],
+    "defaultQty": 1,
+    "options": [
+      {
+        "id": "bwt_bewamat_75a",
+        "tier": "頂級",
+        "brand": "BWT 德國倍世",
+        "model": "Bewamat 75A",
+        "name": "BWT 智慧型全戶軟水機 Bewamat 75A",
+        "highlights": [
+          "德國製，交換容量 75 m³",
+          "工作流量 1.8–2.5 m³/h",
+          "管徑 1-1/4 吋，儲鹽 50 kg"
+        ],
+        "dims": "390×560×1090 mm（W×D×H）",
+        "cutout": "進出水 1-1/4 吋；前方留 600 mm 維修空間",
+        "power": "230V/50-60Hz 變壓 18V，耗電約 20W",
+        "weight": "空機約 45 kg（含樹脂更重）",
+        "other": "1 年保固；台灣總代理拓霖企業，須預購",
+        "price": {
+          "amount": 213000,
+          "min": 213000,
+          "max": 213000,
+          "source": "pchome",
+          "checkedAt": "2026-08-23",
+          "note": "PChome 標價 213,000（原價 236,000），但庫存 0、NotReady 無法下單"
+        },
+        "links": [
+          {
+            "type": "pchome",
+            "url": "https://24h.pchome.com.tw/prod/QBAU0O-A90065T09",
+            "verified": true
+          },
+          {
+            "type": "other",
+            "url": "https://shop.wqp-water.com.tw/products/bwt-75a-%E8%BB%9F%E6%B0%B4%E6%A9%9F",
+            "verified": false,
+            "label": "拓霖企業商城（BWT 台灣總代理）看商品"
+          }
+        ],
+        "availability": "unclear",
+        "reviews": {
+          "praise": [
+            "德國原裝，交換容量比 3M 同價位大",
+            "1-1/4 吋大管徑，透天多點同時用水壓降較少"
+          ],
+          "complaints": [
+            "台灣通路少，MOMO 商品頁已顯示無展售、PChome 庫存 0",
+            "價格是 3M SFT-200 的兩倍多，耗材與維修都要找總代理",
+            "PTT／Mobile01 全戶軟水討論幾乎都在講 3M，BWT 的長期心得很少"
+          ],
+          "sources": [
+            "https://24h.pchome.com.tw/prod/QBAU0O-A90065T09",
+            "https://www.mobile01.com/topicdetail.php?f=168&t=6848464",
+            "https://www.ptt.cc/bbs/E-appliance/M.1639129491.A.EA6.html"
+          ],
+          "confidence": "low"
+        },
+        "cmpKeyword": "BWT Bewamat 75A"
+      },
+      {
+        "id": "m3_sft200",
+        "tier": "高級",
+        "brand": "3M",
+        "model": "SFT-200",
+        "name": "3M SFT-200 全戶式軟水系統（含 BFS3-40BK 前置反洗）",
+        "highlights": [
+          "工作流量 2.0 噸/時",
+          "儲鹽 60 kg，補鹽跑得少",
+          "英國食品級樹脂、NSF 認證"
+        ],
+        "dims": "483.5×482.5×1123 mm",
+        "cutout": "進出水 3/4 吋；前方留 600 mm 加鹽與維修空間",
+        "power": "110V/60Hz，控制閥約 20W",
+        "weight": "含樹脂約 60 kg 以上，需水平承重基座",
+        "other": "1 年保固；最大流量 2.9 噸/時；MOMO 為預購、2026/09/11 後排程安裝",
+        "price": {
+          "amount": 90900,
+          "min": 90900,
+          "max": 120700,
+          "source": "momo",
+          "checkedAt": "2026-08-23",
+          "note": "MOMO 軟水機＋前置反洗 90,900（市售 93,900）；加 SS802 淨水三件組 120,700"
+        },
+        "links": [
+          {
+            "type": "momo",
+            "url": "https://www.momoshop.com.tw/goods/GoodsDetail.jsp?i_code=14779269",
+            "verified": true
+          },
+          {
+            "type": "momo",
+            "url": "https://www.momoshop.com.tw/goods/GoodsDetail.jsp?i_code=14520267",
+            "verified": true
+          },
+          {
+            "type": "official",
+            "url": "https://shop.3m.com.tw/SalePage/Index/11013225",
+            "verified": true
+          }
+        ],
+        "availability": "in_stock",
+        "reviews": {
+          "praise": [
+            "用了一年後淋浴間、龍頭幾乎不長水垢，最有感的改變",
+            "洗衣服會覺得衣服變柔軟，網友說「裝了回不去」",
+            "平常只要固定加鹽錠，操作簡單",
+            "3M 通路大，鹽錠與零件好買，師傅也好找"
+          ],
+          "complaints": [
+            "用 3.5 年的網友回報鹽錠約每月 10 kg，長期是筆固定支出",
+            "維護費約每年 4,000 元，加上再生耗水，帳單會變多",
+            "水壓不夠就吸不到鹽水、還原失效，不少廠商要求加裝加壓馬達與電磁閥",
+            "體積接近 1.2 米高，透天要先找到能放又不淋雨的位置"
+          ],
+          "sources": [
+            "https://www.mobile01.com/topicdetail.php?f=168&t=6474400",
+            "https://www.mobile01.com/topicdetail.php?f=168&t=7077026",
+            "https://www.ptt.cc/bbs/E-appliance/M.1673849839.A.0C2.html",
+            "https://www.ptt.cc/bbs/E-appliance/M.1730520004.A.2CB.html"
+          ],
+          "confidence": "high"
+        },
+        "cmpKeyword": "3M SFT-200"
+      },
+      {
+        "id": "m3_sft150",
+        "tier": "高CP值",
+        "brand": "3M",
+        "model": "SFT-150",
+        "name": "3M SFT-150 全戶式軟水系統（含 BFS3-40BK 前置反洗）",
+        "highlights": [
+          "比 SFT-200 便宜約 1.6 萬",
+          "高度只有 661 mm 好放",
+          "工作流量 1.5 噸/時"
+        ],
+        "dims": "470×460×661 mm",
+        "cutout": "進出水 3/4 吋；前方留 500 mm 加鹽空間",
+        "power": "110V/60Hz，控制閥約 20W",
+        "weight": "淨重 21 kg（含樹脂與鹽更重）",
+        "other": "1 年保固；最大流量 2.4 噸/時；MOMO 為預購、預計 2026/09/11 出貨",
+        "price": {
+          "amount": 74900,
+          "min": 74900,
+          "max": 84900,
+          "source": "momo",
+          "checkedAt": "2026-08-23",
+          "note": "MOMO 促銷 74,900（市售 84,900），加碼送 BFS3-40BK 前置反洗；PChome 未上架"
+        },
+        "links": [
+          {
+            "type": "momo",
+            "url": "https://www.momoshop.com.tw/goods/GoodsDetail.jsp?i_code=13230158",
+            "verified": true
+          },
+          {
+            "type": "official",
+            "url": "https://shop.3m.com.tw/SalePage/Index/10138623",
+            "verified": false
+          },
+          {
+            "type": "pchome",
+            "url": "https://24h.pchome.com.tw/search/?q=3M%20SFT-150",
+            "verified": false
+          }
+        ],
+        "availability": "in_stock",
+        "reviews": {
+          "praise": [
+            "同樣 3M 售後與鹽錠通路，價格便宜一大截",
+            "高度 661 mm，放陽台、後院比 SFT-200 好塞",
+            "淨重 21 kg，搬運與基座負擔小",
+            "小家庭網友用 SFT-100 兩年，鹽錠約 2 個月加一次、濾心一年一換"
+          ],
+          "complaints": [
+            "工作流量只有 1.5 噸/時，三衛浴同時開水會覺得壓力掉",
+            "樹脂量較少，硬水地區再生更頻繁、鹽耗更快",
+            "網友普遍建議「空間夠就直接買大台」，小台換得早",
+            "MOMO 是預購，工期趕的話要先跟廠商確認排程"
+          ],
+          "sources": [
+            "https://www.mobile01.com/topicdetail.php?f=168&t=6848464",
+            "https://www.ptt.cc/bbs/E-appliance/M.1673849839.A.0C2.html",
+            "https://www.ptt.cc/bbs/E-appliance/M.1639129491.A.EA6.html",
+            "https://www.mobile01.com/topicdetail.php?f=168&t=6474400"
+          ],
+          "confidence": "medium"
+        },
+        "cmpKeyword": "3M SFT-150"
+      }
+    ],
+    "pickOptionId": "m3_sft200",
+    "pickReason": "2 噸/時流量撐得住三衛浴同時用水，儲鹽 60kg 少跑腿，通路與售後最好找"
+  },
+  {
+    "itemId": "bath_heater",
+    "name": "浴室暖風乾燥機",
+    "roomId": "bath",
+    "short": "三間衛浴暖風乾燥",
+    "hardReq": "三間衛浴各一台，優先 220V",
+    "advice": "220V 暖房快、乾得也快，三間都拉 220V 最省事。主浴上三菱 V-251BZ（日本製、電動逆止閥、暖房最快），次浴用台達線控可以省一半錢。台達感應夜燈太靈敏，記得請師傅照說明書關掉。管道間沒封好，抽風反而會把臭味倒抽回來。",
+    "warnings": [
+      "台達感應夜燈太靈敏，沒人也亮，可關但停電要重設",
+      "網友反映三菱停止運轉後有約 5 秒噠噠聲",
+      "排風管要直通屋外並封管道間，否則倒灌臭味",
+      "暖風機不可與吹風機、免治共用同一迴路",
+      "Panasonic 這款沒電動逆止閥，靠管道間密封",
+      "風管小於 Ø100mm 會排不出去，浴室反而變悶"
+    ],
+    "install": [
+      {
+        "tag": "電",
+        "text": "每間拉 220V 專用迴路（2.0 mm²、無熔絲開關 15A），三間共三迴，不與插座共用"
+      },
+      {
+        "tag": "排風",
+        "text": "4 吋（Ø100 mm）硬管直通屋外，管長 ≤4 m、彎頭 ≤2 個；管道間縫隙全部封死只留一個排氣孔"
+      },
+      {
+        "tag": "尺寸",
+        "text": "三菱嵌入 300×275×180 mm；Panasonic 開孔 400×280 mm、上方淨高需 200 mm；台達安裝 300×300×174 mm"
+      },
+      {
+        "tag": "木作",
+        "text": "天花板開孔四周加角材補強，機體上方留 200 mm 檢修空間並做維修孔"
+      },
+      {
+        "tag": "其他",
+        "text": "線控款要預埋控制器配管到門外牆面，面板高度約 1.3 m；無線遙控款只需壁掛座"
+      }
+    ],
+    "costNotes": [
+      "三間安裝每間 4,800–8,500，含天花開孔、風管、線控配線與吊掛",
+      "220V 專用迴路每迴 2,500–4,000（配電箱有空迴路才是這個價）",
+      "保固：三菱 3 年、台達 3 年、Panasonic 1 年（依 MOMO 商品頁）",
+      "同款 110V／220V 常是合併賣場，下單要記得選 220V 型號"
+    ],
+    "installCost": {
+      "min": 14400,
+      "max": 25500,
+      "note": "以三間計：天花開孔與角材補強、Ø100 排風硬管與封管道間、220V 專用迴路、線控配管、吊掛工資，每間 4,800–8,500（中部行情估算）"
+    },
+    "todos": [
+      { "text": "配電箱留三迴 220V/15A 給三間暖風機", "for": "designer" },
+      { "text": "每間拉 Ø100mm 硬式排風管直通屋外", "for": "designer" },
+      { "text": "封死管道間縫隙，只留一個排氣孔", "for": "designer" },
+      { "text": "天花開孔 300×300mm 並加角材補強與維修孔", "for": "designer" },
+      { "text": "決定三間全上三菱，或主浴三菱、次浴台達", "for": "family" }
+    ],
+    "defaultQty": 3,
+    "options": [
+      {
+        "id": "mitsubishi_v251bz_twn",
+        "tier": "頂級",
+        "brand": "MITSUBISHI 三菱電機",
+        "model": "V-251BZ-TWN",
+        "name": "三菱電機 浴室暖風乾燥機 V-251BZ-TWN（220V 無線遙控）",
+        "highlights": [
+          "日本原裝，暖房速度最快",
+          "電動逆止閥擋管道間臭味",
+          "3D 廣角電動導風、IPX7 遙控"
+        ],
+        "dims": "本體 300×275×180 mm；風管 4 吋（Ø100 mm）",
+        "cutout": "天花開孔約 300×275 mm，上方淨高留 200 mm",
+        "power": "220V/60Hz，消耗功率 2250W，適用 2~4 坪",
+        "weight": "約 6 kg（含機體與外罩）",
+        "other": "MOMO 標示 3 年保固；不含安裝；110V 無線遙控對應型號為 V-151BZ-TWN",
+        "price": {
+          "amount": 14700,
+          "min": 14700,
+          "max": 15000,
+          "source": "pchome",
+          "checkedAt": "2026-08-23",
+          "note": "PChome 14,700（市價 24,500、庫存 18）；MOMO 15,000。三間共約 44,100"
+        },
+        "links": [
+          {
+            "type": "pchome",
+            "url": "https://24h.pchome.com.tw/prod/DPAL3O-A900K8KTZ",
+            "verified": true
+          },
+          {
+            "type": "momo",
+            "url": "https://www.momoshop.com.tw/goods/GoodsDetail.jsp?i_code=8437790",
+            "verified": true
+          },
+          {
+            "type": "other",
+            "url": "https://www.daguan-tech.com.tw/product/v-151bz-twn-v-251bz-twn/",
+            "verified": true,
+            "label": "大冠科技（三菱經銷）規格頁"
+          }
+        ],
+        "availability": "in_stock",
+        "reviews": {
+          "praise": [
+            "「暖房非常快，尤其冬天有夠爽」，夏天切涼風大號也不會爆汗",
+            "換氣效率好、乾燥速度快，用好幾年風力還是很夠",
+            "電動逆止閥密閉效果好，是板上最被推的擋味手段",
+            "同價位下網友傾向選日本製，外觀也比較不容易積髒"
+          ],
+          "complaints": [
+            "有人直說「三菱的不安靜」「沒有想像中安靜」",
+            "板友回報停止運轉後約 5 秒的噠噠聲，換氣開強時有低鳴共振",
+            "價位比台達高一倍，小坪數浴室 CP 值不明顯",
+            "台灣三菱官網只有 V-141／241BZ-TWN 專頁，251 型資料要看經銷商"
+          ],
+          "sources": [
+            "https://www.ptt.cc/bbs/E-appliance/M.1699241675.A.95D.html",
+            "https://www.ptt.cc/bbs/E-appliance/M.1722732347.A.929.html",
+            "https://www.ptt.cc/bbs/E-appliance/M.1701698320.A.17C.html",
+            "https://www.mobile01.com/topicdetail.php?f=731&t=6581185"
+          ],
+          "confidence": "high"
+        },
+        "cmpKeyword": "三菱電機 V-251BZ-TWN"
+      },
+      {
+        "id": "panasonic_fv40buy1w",
+        "tier": "高級",
+        "brand": "Panasonic 國際牌",
+        "model": "FV-40BUY1W",
+        "name": "Panasonic 陶瓷加熱浴室暖風乾燥機 FV-40BUY1W（220V 線控）",
+        "highlights": [
+          "PTC 陶瓷加熱，5 重安全裝置",
+          "風量 200 m³/h、24 小時換氣",
+          "價格不到三菱的七成"
+        ],
+        "dims": "本體 394×270×180 mm",
+        "cutout": "開孔 400×280 mm，上方淨高需 200 mm",
+        "power": "220V，1650W；單馬達單扇葉，風量 200 m³/h",
+        "weight": "約 6 kg",
+        "other": "MOMO 標示 1 年保固；有線線控；110V 對應型號 FV-40BUY1R，下單要選 220V",
+        "price": {
+          "amount": 9405,
+          "min": 9405,
+          "max": 9900,
+          "source": "momo",
+          "checkedAt": "2026-08-23",
+          "note": "MOMO 限時折後 9,405（促銷 9,900、市售 22,000）；PChome 9,800。三間約 28,215"
+        },
+        "links": [
+          {
+            "type": "momo",
+            "url": "https://www.momoshop.com.tw/goods/GoodsDetail.jsp?i_code=11072198",
+            "verified": true
+          },
+          {
+            "type": "pchome",
+            "url": "https://24h.pchome.com.tw/prod/DPAL3M-A900BTWEY",
+            "verified": true
+          },
+          {
+            "type": "other",
+            "url": "https://www.tsannbo.com/product.php?act=view&no=33",
+            "verified": false,
+            "label": "璨柏國際（Panasonic 台灣代理）產品頁"
+          }
+        ],
+        "availability": "in_stock",
+        "reviews": {
+          "praise": [
+            "板友說「國際 220V 蠻強的」，暖房夠力",
+            "PTC 陶瓷加熱＋溫度保險絲，安全設計完整",
+            "線控面板操作直覺，不用怕遙控器進水或不見",
+            "價格帶漂亮，是三菱以外最多人點名的替代"
+          ],
+          "complaints": [
+            "「國際牌沒有電動逆止閥就輸了」是板上常見評語，擋味只能靠管道間",
+            "MOMO／PChome 多為 110V／220V 合併賣場，下錯型號很常見",
+            "保固只有 1 年，比三菱、台達的 3 年短",
+            "PChome 該賣場庫存只有 1 台，三間份要分開下單或問其他賣場"
+          ],
+          "sources": [
+            "https://www.ptt.cc/bbs/E-appliance/M.1699241675.A.95D.html",
+            "https://www.mobile01.com/topicdetail.php?f=731&t=6227825",
+            "https://www.mobile01.com/topicdetail.php?f=731&t=5436728",
+            "https://24h.pchome.com.tw/prod/DPAL3M-A900BTWEY"
+          ],
+          "confidence": "medium"
+        },
+        "cmpKeyword": "Panasonic FV-40BUY1W"
+      },
+      {
+        "id": "delta_vhb30bcmt_ad",
+        "tier": "高CP值",
+        "brand": "DELTA 台達電子",
+        "model": "VHB30BCMT-AD",
+        "name": "台達 豪華 300 系列多功能涼暖風機 VHB30BCMT-AD（220V 線控）",
+        "highlights": [
+          "DC 直流馬達，換氣安靜",
+          "原廠全機 3 年保固",
+          "適用 3~6 坪，一台不到 8 千"
+        ],
+        "dims": "安裝尺寸 300×300×174 mm；出風口 4 吋（Ø100 mm）；5.5 kg",
+        "cutout": "天花開孔 300×300 mm，上方淨高留 200 mm",
+        "power": "220V/60Hz；暖房加熱器 2000W＋馬達 15W",
+        "weight": "5.5 kg",
+        "other": "原廠全機 3 年保固；韻律風門、六段定時、感應夜燈；商品頁註明不含安裝",
+        "price": {
+          "amount": 7780,
+          "min": 7780,
+          "max": 8500,
+          "source": "momo",
+          "checkedAt": "2026-08-23",
+          "note": "MOMO 限時折後 7,780（促銷 8,500、市售 14,900）；PChome 8,100。三間約 23,340"
+        },
+        "links": [
+          {
+            "type": "momo",
+            "url": "https://www.momoshop.com.tw/goods/GoodsDetail.jsp?i_code=9758064",
+            "verified": true
+          },
+          {
+            "type": "pchome",
+            "url": "https://24h.pchome.com.tw/prod/DMAZ67-A900BSZZ7",
+            "verified": true
+          },
+          {
+            "type": "official",
+            "url": "https://www.deltaww.com/zh-tw/products/Heater-Fan/3251",
+            "verified": false
+          }
+        ],
+        "availability": "in_stock",
+        "reviews": {
+          "praise": [
+            "「乾燥或環境加溫都很有效果，噪音在可容忍範圍」",
+            "DC 直流馬達，節能模式排風很安靜，可以整天常駐抽風",
+            "以換氣模式比較，噪音與耗電都優於同級國產機",
+            "原廠 3 年保固，價格只要三菱的一半"
+          ],
+          "complaints": [
+            "感應夜燈／感應換氣太靈敏，沒人也會亮，有人被嚇到",
+            "感應功能可依說明書關閉，但完全斷電後要重新設定一次",
+            "節能模式很安靜但風量偏弱，想快乾要開強",
+            "有板友 2020 年買、2024 年故障送修；另有人的 300 型除開燈外恆亮，叫修回覆沒辦法"
+          ],
+          "sources": [
+            "https://www.ptt.cc/bbs/E-appliance/M.1710842575.A.B85.html",
+            "https://www.ptt.cc/bbs/E-appliance/M.1722732347.A.929.html",
+            "https://www.mobile01.com/topicdetail.php?f=168&t=6288619",
+            "https://filecenter.deltaww.com/Products/download/03/030202/Manual/VHB30BCMT-AD-TW.pdf"
+          ],
+          "confidence": "high"
+        },
+        "cmpKeyword": "台達電子 VHB30BCMT-AD"
+      },
+      {
+        "id": "delta_vhb30bcmrt_a",
+        "tier": "替代方案",
+        "brand": "DELTA 台達電子",
+        "model": "VHB30BCMRT-A",
+        "name": "台達 豪華 300 系列多功能涼暖風機 VHB30BCMRT-A（220V 無線遙控）",
+        "highlights": [
+          "同規格改無線遙控",
+          "不用埋線控配管",
+          "PChome 只要 7,500"
+        ],
+        "dims": "安裝尺寸 300×300×174 mm；出風口 4 吋（Ø100 mm）；5.5 kg",
+        "cutout": "天花開孔 300×300 mm，上方淨高留 200 mm",
+        "power": "220V/60Hz；暖房加熱器 2000W＋馬達 15W",
+        "weight": "5.5 kg",
+        "other": "原廠全機 3 年保固；適用 3~6 坪；不含安裝",
+        "price": {
+          "amount": 7500,
+          "min": 7500,
+          "max": 8500,
+          "source": "pchome",
+          "checkedAt": "2026-08-23",
+          "note": "PChome 7,500（市價 13,000、庫存 20）；MOMO 合併賣場 8,500，需選 220V"
+        },
+        "links": [
+          {
+            "type": "pchome",
+            "url": "https://24h.pchome.com.tw/prod/DPAL3O-A900HYXY7",
+            "verified": true
+          },
+          {
+            "type": "momo",
+            "url": "https://www.momoshop.com.tw/goods/GoodsDetail.jsp?i_code=8381731",
+            "verified": true
+          },
+          {
+            "type": "official",
+            "url": "https://www.deltaww.com/zh-tw/products/Heater-Fan/3251",
+            "verified": false
+          }
+        ],
+        "availability": "in_stock",
+        "reviews": {
+          "praise": [
+            "和線控版同機芯，暖房、乾燥表現一致",
+            "免埋控制器配管，舊屋改裝或不想動牆最方便",
+            "價格是四個選項裡最低的"
+          ],
+          "complaints": [
+            "遙控器要有地方放，浴室潮濕容易壞或不見",
+            "感應夜燈靈敏度問題與線控版相同",
+            "MOMO 是 110V／220V 合併賣場，容易選錯規格"
+          ],
+          "sources": [
+            "https://www.ptt.cc/bbs/E-appliance/M.1710842575.A.B85.html",
+            "https://www.mobile01.com/topicdetail.php?f=168&t=6288619",
+            "https://24h.pchome.com.tw/prod/DPAL3O-A900HYXY7"
+          ],
+          "confidence": "medium"
+        },
+        "cmpKeyword": "台達電子 VHB30BCMRT-A"
+      }
+    ],
+    "pickOptionId": "mitsubishi_v251bz_twn",
+    "pickReason": "220V/2250W 暖房最快、有電動逆止閥擋味、日本製 3 年保固，三間裝一致最省心"
+  },
+  {
+    "itemId": "toilet",
+    "name": "TOTO 電腦馬桶",
+    "roomId": "bath",
+    "short": "自動掀蓋自動沖水",
+    "hardReq": "自動掀蓋＋自動沖水，三間衛浴都要",
+    "advice": "三間都要自動掀蓋＋自動沖水，NEOREST 一台就 11 萬起，三間直接破 33 萬。TOTO 官方套組 CCW288S7AA 是 CW288 馬桶＋S7 旗艦便座＋自動沖水裝置，兩個自動一樣都有，一台 71,920，三間省下十幾萬。便座壞了單換就好，不用整顆丟。",
+    "warnings": [
+      "自動掀蓋很靈敏，只是進去洗手也會開，可關掉",
+      "全自動馬桶停電要手動沖水，先看說明書位置",
+      "地排管距超出 305~435mm 要另購轉換套管 2,800",
+      "TOTO 到府檢測費 600 元起，週六與夜間 900 元",
+      "NEOREST 零件：便座 7,900、遙控器 7,100、主 IC 板 3,700",
+      "沒乾濕分離時別拿蓮蓬頭直接沖便座，電子件會壞"
+    ],
+    "install": [
+      {
+        "tag": "水",
+        "text": "先量三間現況地排管距（套組要 305~400 mm、NEOREST 要 305~435 mm）；止水閥換新、供水 1/2 吋"
+      },
+      {
+        "tag": "電",
+        "text": "每間馬桶側邊留 110V 附接地防水插座，距地約 300 mm，迴路要有漏電斷路器"
+      },
+      {
+        "tag": "尺寸",
+        "text": "CCW288S7AA W452×D732×H625 mm；NEOREST RS/AS 約 W386×D690；LS W411×D725×H497 mm"
+      },
+      {
+        "tag": "搬運",
+        "text": "一體型 NEOREST 單顆逾 40 kg，透天樓梯轉角先量，二三樓建議兩人以上搬"
+      },
+      {
+        "tag": "其他",
+        "text": "管距不合要訂 TOTO 排污套管（地排 305–435 mm 定價 2,800、壁排 3,000）"
+      }
+    ],
+    "costNotes": [
+      "三間拆舊裝新每間 3,000–8,000（不含管距改造與泥作）",
+      "管距轉換套管 ASCW-004 定價 2,800/顆，壁排套管 3,000/顆",
+      "PChome 的 NEOREST 標示不含安裝，要自己找水電或請 TOTO 經銷施工",
+      "保固外叫修：檢測費平日 600、週六夜間 900，＋零件＋20 km 外車馬費 100–500"
+    ],
+    "installCost": {
+      "min": 9000,
+      "max": 24000,
+      "note": "三間合計：拆舊馬桶與清運、管距轉換套管每顆 2,800、防水接地插座每間 1,500–3,000、止水閥與矽利康、安裝工資每間 3,000–8,000（中部行情估算）"
+    },
+    "todos": [
+      { "text": "三間各量地排管距（需 305–400mm）", "for": "designer" },
+      { "text": "每間馬桶側留 110V 接地防水插座，距地 300mm", "for": "designer" },
+      { "text": "管距超出範圍先訂 TOTO 排污套管 2,800/顆", "for": "designer" },
+      { "text": "確認馬桶區深度 ≥800mm 放得下套組", "for": "designer" },
+      { "text": "決定三間全用套組，或主臥上 NEOREST", "for": "family" }
+    ],
+    "defaultQty": 3,
+    "options": [
+      {
+        "id": "toto_neorest_ls_ces87120gtw",
+        "tier": "頂級",
+        "brand": "TOTO",
+        "model": "CES87120GTW",
+        "name": "TOTO NEOREST LS 除菌全自動馬桶 CES87120GTW（不含安裝）",
+        "highlights": [
+          "NEOREST 最高階在售款",
+          "電解除菌水＋AIR-IN 水波",
+          "自動掀蓋、自動沖水內建"
+        ],
+        "dims": "W411×D725×H497 mm",
+        "cutout": "地排管距 305~435 mm；馬桶區深度建議 ≥800 mm",
+        "power": "110V；洗淨水量 3.8L/3.0L；龍捲噴射式",
+        "weight": "一體型約 40 kg 以上",
+        "other": "官網定價 210,000；喜貼心抗污釉、緣弧設計、暖風烘乾、除臭",
+        "price": {
+          "amount": 172200,
+          "min": 172200,
+          "max": 210000,
+          "source": "pchome",
+          "checkedAt": "2026-08-23",
+          "note": "PChome 172,200（原價 210,000、庫存 10）不含安裝；MOMO 無上架"
+        },
+        "links": [
+          {
+            "type": "pchome",
+            "url": "https://24h.pchome.com.tw/prod/DEDW02-A900K5B4X",
+            "verified": true
+          },
+          {
+            "type": "official",
+            "url": "https://www.twtoto.com.tw/product-detail.aspx?mid=1&id=2810",
+            "verified": true
+          },
+          {
+            "type": "momo",
+            "url": "https://www.momoshop.com.tw/search/searchShop.jsp?keyword=CES87120GTW",
+            "verified": false
+          }
+        ],
+        "availability": "in_stock",
+        "reviews": {
+          "praise": [
+            "NEOREST 抗污陶瓷＋水龍捲，板友說「保養真的很方便」",
+            "自體清潔強，用三個多月只清過一次、噴頭也乾淨",
+            "自動面板有大小水、全掀半掀可直接按，比便座遙控好用",
+            "沖水會先蓄水再沖、再蓄，洗得比較乾淨"
+          ],
+          "complaints": [
+            "板上一路都在質疑 CP 值：「自動馬桶不是賣給一般人的，買便座就好」",
+            "牌價 15 萬上下、經銷八折都難找，三間就要五十幾萬",
+            "感應開蓋太靈敏，經過廁所就開，很多人乾脆關掉",
+            "停電就得手動沖水，平常沒在用還要翻說明書"
+          ],
+          "sources": [
+            "https://www.ptt.cc/bbs/E-appliance/M.1582816772.A.B2C.html",
+            "https://www.ptt.cc/bbs/E-appliance/M.1615263571.A.369.html",
+            "https://www.ptt.cc/bbs/E-appliance/M.1700520184.A.BC6.html",
+            "https://www.twtoto.com.tw/service-parts-detail.aspx?tp=1&key=CES83410GTW"
+          ],
+          "confidence": "medium"
+        },
+        "cmpKeyword": "TOTO CES87120GTW"
+      },
+      {
+        "id": "toto_neorest_as_ces85510gtw",
+        "tier": "高級",
+        "brand": "TOTO",
+        "model": "CES85510GTW",
+        "name": "TOTO NEOREST AS 除菌全自動馬桶 CES85510GTW（不含安裝）",
+        "highlights": [
+          "RS 外型＋AIR-IN 律動水波",
+          "地排壁排都有對應型號",
+          "自動掀蓋、自動沖水內建"
+        ],
+        "dims": "W386×D690×H512 mm",
+        "cutout": "地排 305~435 mm（-S1）／壁排 120~155 mm（-S2）；436~540 mm 或 200 mm 需洽經銷商",
+        "power": "110V；洗淨水量 地排 3.8L/3.0L、壁排 4.8L/3.0L",
+        "weight": "一體型約 40 kg 以上",
+        "other": "官網定價 158,000；電解除菌水、前噴霧、暖風烘乾、除臭",
+        "price": {
+          "amount": 129560,
+          "min": 129560,
+          "max": 158000,
+          "source": "pchome",
+          "checkedAt": "2026-08-23",
+          "note": "PChome 129,560（原價 158,000、庫存 10）不含安裝；MOMO 無上架"
+        },
+        "links": [
+          {
+            "type": "pchome",
+            "url": "https://24h.pchome.com.tw/prod/DEDW02-A900K5B9K",
+            "verified": true
+          },
+          {
+            "type": "official",
+            "url": "https://www.twtoto.com.tw/product-detail.aspx?mid=1&id=2811",
+            "verified": true
+          },
+          {
+            "type": "momo",
+            "url": "https://www.momoshop.com.tw/search/searchShop.jsp?keyword=CES85510GTW",
+            "verified": false
+          }
+        ],
+        "availability": "in_stock",
+        "reviews": {
+          "praise": [
+            "尺寸與 RS 相同但多了 AIR-IN 律動水波，是 NEOREST 裡的甜蜜點",
+            "一體型自動掀蓋＋自動沖水都內建，不用另配洗淨裝置",
+            "有壁排版本，老屋壁排衛浴也裝得上",
+            "板友說 TOTO 全自動用十年沒問題，品質不擔心"
+          ],
+          "complaints": [
+            "一體型壞掉維修費用不便宜，水電行提醒挑之前就要算進去",
+            "MOMO 沒上架，只能買 PChome 或找經銷，比價空間小",
+            "不含安裝，三間拆裝與管距轉換要另外找師傅",
+            "自動掀蓋一樣會被路過觸發，空間小的次浴常被抱怨"
+          ],
+          "sources": [
+            "https://www.mobile01.com/topicdetail.php?f=360&t=6817794",
+            "https://www.ptt.cc/bbs/E-appliance/M.1582816772.A.B2C.html",
+            "https://www.mobile01.com/topicdetail.php?f=168&t=6377987",
+            "https://www.twtoto.com.tw/product-detail.aspx?mid=1&id=2811"
+          ],
+          "confidence": "medium"
+        },
+        "cmpKeyword": "TOTO CES85510GTW"
+      },
+      {
+        "id": "toto_neorest_rs_ces83410gtw",
+        "tier": "高級",
+        "brand": "TOTO",
+        "model": "CES83410GTW",
+        "name": "TOTO NEOREST RS 除菌全自動馬桶 CES83410GTW（不含安裝）",
+        "highlights": [
+          "NEOREST 入門，價格最低",
+          "電解除菌水＋喜貼心抗污釉",
+          "自動掀蓋、自動沖水內建"
+        ],
+        "dims": "W386×D690×H515 mm",
+        "cutout": "地排 305~435 mm（-S1）／壁排 120~155 mm（-S2）；管距 200 mm 零件另購",
+        "power": "110V；洗淨水量 地排 3.8L/3.0L、壁排 4.8L/3.0L",
+        "weight": "一體型約 40 kg 以上",
+        "other": "官網定價 137,000；Red Dot、金級省水標章",
+        "price": {
+          "amount": 112340,
+          "min": 112340,
+          "max": 137000,
+          "source": "pchome",
+          "checkedAt": "2026-08-23",
+          "note": "PChome 112,340（原價 137,000、庫存 8）不含安裝；MOMO 站內搜尋無結果"
+        },
+        "links": [
+          {
+            "type": "pchome",
+            "url": "https://24h.pchome.com.tw/prod/DEDW02-A900K5BBS",
+            "verified": true
+          },
+          {
+            "type": "official",
+            "url": "https://www.twtoto.com.tw/product-detail.aspx?mid=1&id=2812",
+            "verified": true
+          },
+          {
+            "type": "momo",
+            "url": "https://www.momoshop.com.tw/search/searchShop.jsp?keyword=CES83410GTW",
+            "verified": false
+          }
+        ],
+        "availability": "in_stock",
+        "reviews": {
+          "praise": [
+            "進 NEOREST 門檻最低的一台，外型與 AS 幾乎相同",
+            "板友表示 TOTO 馬桶本身不太卡垢，兩三週濕布擦一下就乾淨",
+            "官網零件價格全公開，之後修哪個零件多少錢查得到",
+            "台灣有原廠保修，網友說「新貨不會被當故障，約了就來」"
+          ],
+          "complaints": [
+            "官網零件單價不低：便座 7,900、遙控器 7,100、外殼 7,600、主 IC 板 3,700",
+            "保固外叫修先付檢測費 600（週六與夜間 900），20 km 外再加車馬費 100–500",
+            "MOMO 沒有自營賣場，第三方賣場常限北部配送",
+            "三間都用要 33 萬以上，多數板友建議只有主浴上一台"
+          ],
+          "sources": [
+            "https://www.twtoto.com.tw/service-parts-detail.aspx?tp=1&key=CES83410GTW",
+            "https://www.twtoto.com.tw/news-detail.aspx?id=474",
+            "https://www.ptt.cc/bbs/E-appliance/M.1757946368.A.01F.html",
+            "https://www.mobile01.com/topicdetail.php?f=360&t=6817794"
+          ],
+          "confidence": "high"
+        },
+        "cmpKeyword": "TOTO CES83410GTW"
+      },
+      {
+        "id": "toto_g5_ces75110atw",
+        "tier": "高CP值",
+        "brand": "TOTO",
+        "model": "CES75110ATW",
+        "name": "TOTO G5 全自動馬桶 CES75110ATW（經銷商通路）",
+        "highlights": [
+          "最便宜的 TOTO 一體型",
+          "自動掀蓋、自動沖水內建",
+          "地排 305／400 mm 都對應"
+        ],
+        "dims": "W386×D721×H518 mm",
+        "cutout": "地排管距 305 mm 或 400 mm",
+        "power": "110V；洗淨水量 4.8L/3.0L；龍捲上旋式",
+        "weight": "一體型約 40 kg 以上",
+        "other": "官網建議售價 98,000；無電解除菌水；MOMO／PChome 皆未上架，需洽經銷商",
+        "price": {
+          "amount": 98000,
+          "min": 65000,
+          "max": 98000,
+          "source": "official",
+          "checkedAt": "2026-08-23",
+          "note": "TOTO 官網建議售價 98,000；板友 2023 年問到經銷最低約 65,000，須實際議價"
+        },
+        "links": [
+          {
+            "type": "official",
+            "url": "https://www.twtoto.com.tw/product-detail.aspx?mid=1&id=2536",
+            "verified": true
+          },
+          {
+            "type": "other",
+            "url": "https://shihjie.com/product-info.php?id=10088",
+            "verified": true,
+            "label": "世傑水電材料行 看商品（04-22025555）"
+          },
+          {
+            "type": "pchome",
+            "url": "https://24h.pchome.com.tw/search/?q=CES75110ATW",
+            "verified": false
+          },
+          {
+            "type": "momo",
+            "url": "https://www.momoshop.com.tw/search/searchShop.jsp?keyword=CES75110ATW",
+            "verified": false
+          }
+        ],
+        "availability": "unclear",
+        "reviews": {
+          "praise": [
+            "TOTO 官網「全自動馬桶」分類裡最便宜的一體型，掀蓋沖水都內建",
+            "板友 2023 年比價，G5 經銷最低約 65,000，比 NEOREST 便宜一半",
+            "龍捲上旋式＋喜貼心抗污釉，日常擦拭就乾淨",
+            "地排 305／400 mm 兩種都對應，舊屋改建彈性大"
+          ],
+          "complaints": [
+            "沒有電解除菌水，噴嘴與便器的自動除菌是 NEOREST 才有",
+            "MOMO 與 PChome 都沒上架，只能跑經銷商、價格不透明",
+            "洗淨水量 4.8L 比 NEOREST 的 3.8L 耗水",
+            "一體型維修一樣得整台處理，不像便座壞了單換"
+          ],
+          "sources": [
+            "https://www.ptt.cc/bbs/E-appliance/M.1700520184.A.BC6.html",
+            "https://www.twtoto.com.tw/product-detail.aspx?mid=1&id=2536",
+            "https://www.twtoto.com.tw/service-parts-detail.aspx?tp=1&key=CES75110ATW",
+            "https://shihjie.com/product-info.php?id=10088"
+          ],
+          "confidence": "medium"
+        },
+        "cmpKeyword": "TOTO CES75110ATW"
+      },
+      {
+        "id": "toto_ccw288s7aa",
+        "tier": "高CP值",
+        "brand": "TOTO",
+        "model": "CCW288S7AA",
+        "name": "TOTO 除菌全自動馬桶套組 CCW288S7AA（CW288＋S7 旗艦便座＋TCA541）",
+        "highlights": [
+          "自動掀蓋＋自動沖水都有",
+          "便座壞了單換不用整顆丟",
+          "一台只要 NEOREST 六成價"
+        ],
+        "dims": "W452×D732×H625 mm（含水箱）；S7 便座 W383×D530×H103 mm",
+        "cutout": "地排管距 305~400 mm；馬桶區深度建議 ≥800 mm",
+        "power": "110V；沖水量 4.8L；龍捲噴射式；S7 為瞬間加熱式",
+        "weight": "馬桶＋水箱＋便座合計約 40 kg（分件搬運）",
+        "other": "官網定價 89,900；CW288SGUR＋TCF47360GTW＋馬桶洗淨裝置 TCA541；電解除菌水、藏線",
+        "price": {
+          "amount": 71920,
+          "min": 71920,
+          "max": 89900,
+          "source": "momo",
+          "checkedAt": "2026-08-23",
+          "note": "MOMO 71,920（市售 89,900），品名未標示含安裝；PChome 搜尋 CCW288 無結果"
+        },
+        "links": [
+          {
+            "type": "momo",
+            "url": "https://www.momoshop.com.tw/goods/GoodsDetail.jsp?i_code=15239925",
+            "verified": true
+          },
+          {
+            "type": "official",
+            "url": "https://www.twtoto.com.tw/product-detail.aspx?mid=1&id=2926",
+            "verified": true
+          },
+          {
+            "type": "pchome",
+            "url": "https://24h.pchome.com.tw/search/?q=CCW288S7AA",
+            "verified": false
+          }
+        ],
+        "availability": "in_stock",
+        "reviews": {
+          "praise": [
+            "CW288 水龍捲有兩條凹槽出水孔，板友說「水量不多但沖力非常足夠」",
+            "馬桶乾式施工，師傅說好裝，約一小時就完成",
+            "S7 旗艦是目前唯一有電動便蓋自動開閉的在售 WASHLET，除菌水會噴到便座底緣",
+            "分件式：便座壞了單換 TCF47360GTW，不必整顆馬桶換掉"
+          ],
+          "complaints": [
+            "CW288 配便座「尺寸偏小」，身高 180 的板友說坐起來卡卡、下體會碰到前緣",
+            "自動掀蓋在小廁所會被洗手觸發，板友多半直接關掉",
+            "自動沖水靠 TCA541 驅動，換別款馬桶不一定能用，改型號前要先確認",
+            "噴嘴清潔仍要人顧，板上有人擔心不清會有衛生問題"
+          ],
+          "sources": [
+            "https://www.ptt.cc/bbs/E-appliance/M.1656095417.A.570.html",
+            "https://www.ptt.cc/bbs/E-appliance/M.1583069514.A.8BF.html",
+            "https://www.ptt.cc/bbs/E-appliance/M.1757946368.A.01F.html",
+            "https://www.twtoto.com.tw/product-detail.aspx?mid=2&id=2930"
+          ],
+          "confidence": "high"
+        },
+        "cmpKeyword": "TOTO CCW288S7AA"
+      }
+    ],
+    "pickOptionId": "toto_ccw288s7aa",
+    "pickReason": "一樣自動掀蓋＋自動沖水，三間總價比一台 NEOREST 還低，便座壞了單換"
+  }
+]

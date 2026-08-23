@@ -1,0 +1,951 @@
+[
+  {
+    "itemId": "oven",
+    "name": "氣炸烤箱",
+    "roomId": "kitchen",
+    "short": "取代小烤箱加氣炸鍋",
+    "hardReq": "要塞進廚房電器櫃，能烤全雞或一次出一家四口的量",
+    "advice": "26L 的 TOA-95TW 是甜蜜點，數位溫控加電子探針，烤雞、烤盤菜一次搞定。17L 的 TOA-60TW 便宜一半但是機械旋鈕，網友實測溫度會上下抖 30 度，比較適合烤吐司加熱。電器櫃一定要留散熱，別把它塞死在封閉層板裡。",
+    "warnings": [
+      "1550W 約 14A，別跟微波爐共用同一迴路",
+      "17L 機械旋鈕款溫度誤差網友實測到 30 度",
+      "美膳雅過保後主機板故障，台灣多半只能換新機",
+      "烤肉油會噴滿內壁與排風扇，建議墊烘焙紙",
+      "上方要留 15 公分散熱，不能直接壓層板",
+      "TOA-110TW 台灣通路已查不到在售賣場"
+    ],
+    "install": [
+      {
+        "tag": "電",
+        "text": "氣炸烤箱層拉 110V 20A 專用迴路（2.0mm²），單獨一個插座，不與微波爐共用"
+      },
+      {
+        "tag": "尺寸",
+        "text": "電器櫃開孔淨寬 ≥60cm、深 ≥58cm、高 ≥55cm（機身 47.5×43×39.6cm 再加散熱）"
+      },
+      {
+        "tag": "排風",
+        "text": "層板後方開 ≥10cm 散熱縫、上方留 ≥15cm、左右各 ≥5cm，背板不可封死"
+      },
+      {
+        "tag": "木作",
+        "text": "做滑軌拉盤、承重 ≥30kg，使用時整台拉出來散熱也好清潔"
+      },
+      {
+        "tag": "尺寸",
+        "text": "插座裝在櫃側或櫃內上方，線長 1m 以內不用延長線"
+      }
+    ],
+    "costNotes": [
+      "momo 與 PChome 同價 8,888，含運但不含電器櫃與電源工程",
+      "110V 20A 專用迴路含配管與無熔絲開關，中部行情 4,000–6,500 元／迴路",
+      "電器櫃滑軌拉盤含五金，一層約 2,500–5,000 元",
+      "耗材：烘焙紙／氣炸紙一年約 500–800 元",
+      "TOA-95TW 主機保固 2 年，過保維修台灣多半無零件，要有換新機心理準備"
+    ],
+    "installCost": {
+      "min": 6500,
+      "max": 18000,
+      "note": "110V 20A 專用迴路 4,000–6,500；電器櫃滑軌拉盤與散熱開孔 2,500–8,000；插座與配電盤開關 1,500–3,500（中部估算）"
+    },
+    "todos": [
+      {
+        "text": "氣炸層預留 110V 20A 專用迴路",
+        "for": "designer"
+      },
+      {
+        "text": "層板做滑軌拉盤、承重 30kg 以上",
+        "for": "designer"
+      },
+      {
+        "text": "開孔淨高留 55cm、上方散熱 15cm",
+        "for": "designer"
+      },
+      {
+        "text": "櫃內插座位置避開機身背面出風口",
+        "for": "designer"
+      },
+      {
+        "text": "決定買 26L 還是 17L（差 3,908 元）",
+        "for": "family"
+      }
+    ],
+    "defaultQty": 1,
+    "options": [
+      {
+        "id": "panasonic_nu_sc280w",
+        "tier": "頂級",
+        "brand": "Panasonic 國際牌",
+        "model": "NU-SC280W",
+        "name": "31L 蒸氣烘烤爐 NU-SC280W",
+        "highlights": [
+          "蒸氣＋熱風＋氣炸三合一",
+          "31L 容量大、可低溫烹調",
+          "30–250℃控溫、70種行程"
+        ],
+        "dims": "375H×494W×434D mm，18.1 kg",
+        "cutout": "櫃內開孔淨寬 ≥62cm、深 ≥58cm、高 ≥55cm（上方留 15cm）",
+        "power": "110V；蒸氣約 1330W、蒸氣熱風約 1830W，務必獨立 20A 迴路",
+        "weight": "18.1 kg",
+        "other": "原廠保固 1 年；需定期加水與除垢",
+        "price": {
+          "amount": 13520,
+          "min": 13520,
+          "max": 16900,
+          "source": "pchome",
+          "checkedAt": "2026-08-23",
+          "note": "PChome 折後 13,520（定價 16,900），庫存少、不含安裝"
+        },
+        "links": [
+          {
+            "type": "pchome",
+            "url": "https://24h.pchome.com.tw/prod/DMBJ7P-A900GNK3G",
+            "verified": true
+          }
+        ],
+        "availability": "in_stock",
+        "reviews": {
+          "praise": [
+            "蒸氣模式回烤麵包、蒸魚都好用",
+            "PChome 買家評價 5.0（20 則），多稱容量夠"
+          ],
+          "complaints": [
+            "1830W 吃電大，一定要獨立迴路",
+            "水箱要常清、有水垢問題",
+            "台灣論壇長期心得少，耐用度資料不足"
+          ],
+          "sources": [
+            "https://24h.pchome.com.tw/prod/DMBJ7P-A900GNK3G",
+            "https://www.panasonic.com/my/consumer/kitchen-appliance/oven/cubie-oven/nu-sc280wmpq.specs.html"
+          ],
+          "confidence": "low"
+        },
+        "cmpKeyword": "Panasonic NU-SC280W"
+      },
+      {
+        "id": "cuisinart_toa95tw",
+        "tier": "高級",
+        "brand": "Cuisinart 美膳雅",
+        "model": "TOA-95TW",
+        "name": "26L 大容量數位氣炸烤箱 TOA-95TW",
+        "highlights": [
+          "26L 放得下全雞與 13 吋披薩",
+          "上4下2加熱管＋360度熱風",
+          "電子探針控溫 25–230℃"
+        ],
+        "dims": "47.5×42.95×39.6 cm（長×寬×高），12 kg",
+        "cutout": "櫃內開孔淨寬 ≥60cm、深 ≥58cm、高 ≥55cm；上方 ≥15cm、後方 ≥10cm",
+        "power": "110V/60Hz、1550W（約 14A），建議 110V 20A 專用迴路",
+        "weight": "12 kg",
+        "other": "主機保固 2 年；12 種模式、附烤盤與氣炸籃",
+        "price": {
+          "amount": 8888,
+          "min": 8888,
+          "max": 11800,
+          "source": "momo",
+          "checkedAt": "2026-08-23",
+          "note": "momo 與 PChome 同為 8,888（定價 11,800–12,800），含運不含安裝"
+        },
+        "links": [
+          {
+            "type": "momo",
+            "url": "https://www.momoshop.com.tw/goods/GoodsDetail.jsp?i_code=11978993",
+            "verified": true
+          },
+          {
+            "type": "pchome",
+            "url": "https://24h.pchome.com.tw/prod/DMAGOA-A900KAR59",
+            "verified": true
+          }
+        ],
+        "availability": "in_stock",
+        "reviews": {
+          "praise": [
+            "溫控穩、上色均勻，成品顏色漂亮",
+            "不鏽鋼機身與旋鈕手感扎實",
+            "26L 空間夠，烤整雞或一家份量不用分批"
+          ],
+          "complaints": [
+            "烤雞腿油噴滿內壁，排風扇附近很難擦",
+            "同品牌有過保主機板壞、台灣無零件只能換新的案例",
+            "體積不小，電器櫃沒留散熱容易悶"
+          ],
+          "sources": [
+            "https://www.ptt.cc/bbs/cookclub/M.1765441661.A.1E4.html",
+            "https://www.ptt.cc/bbs/cookclub/M.1699789340.A.F91.html",
+            "https://www.ptt.cc/bbs/cookclub/M.1674131972.A.49F.html",
+            "https://www.mobile01.com/topicdetail.php?f=729&t=5943113",
+            "https://www.pttweb.cc/bbs/E-appliance/M.1607652313.A.731"
+          ],
+          "confidence": "medium"
+        },
+        "cmpKeyword": "Cuisinart TOA-95TW"
+      },
+      {
+        "id": "cuisinart_toa60tw",
+        "tier": "高CP值",
+        "brand": "Cuisinart 美膳雅",
+        "model": "TOA-60TW",
+        "name": "17L 多功能氣炸烤箱 TOA-60TW",
+        "highlights": [
+          "不到 5 千、7 種烘烤模式",
+          "體積小，電器櫃好安排",
+          "機械旋鈕，長輩也會用"
+        ],
+        "dims": "42.5×39.8×35 cm（長×寬×高）；內腔 30×27×16 cm，10.1 kg",
+        "cutout": "櫃內開孔淨寬 ≥55cm、深 ≥52cm、高 ≥50cm；上方 ≥12cm",
+        "power": "110V/60Hz、1550W（約 14A），一樣建議獨立 20A 迴路",
+        "weight": "10.1 kg",
+        "other": "主機保固 2 年；附烤盤、氣炸籃、烤架、集屑盤",
+        "price": {
+          "amount": 4980,
+          "min": 4980,
+          "max": 8990,
+          "source": "momo",
+          "checkedAt": "2026-08-23",
+          "note": "momo 與 PChome 同為 4,980（定價 8,990），含運不含安裝"
+        },
+        "links": [
+          {
+            "type": "momo",
+            "url": "https://www.momoshop.com.tw/goods/GoodsDetail.jsp?i_code=8006617",
+            "verified": true
+          },
+          {
+            "type": "pchome",
+            "url": "https://24h.pchome.com.tw/prod/DMAGOA-A900KAR7L",
+            "verified": true
+          }
+        ],
+        "availability": "in_stock",
+        "reviews": {
+          "praise": [
+            "價格甜、當日常小烤箱很夠用",
+            "機械式旋鈕反而少了電路板故障風險",
+            "體積小、單身或雙人份量剛好"
+          ],
+          "complaints": [
+            "PTT 實測機械溫控上下震盪可到 30 度",
+            "內高只有 16cm，厚戚風或整雞放不下",
+            "空間小，油噴後更難清"
+          ],
+          "sources": [
+            "https://www.ptt.cc/bbs/cookclub/M.1699789340.A.F91.html",
+            "https://www.ptt.cc/bbs/cookclub/M.1588147056.A.2EB.html",
+            "https://www.ptt.cc/bbs/e-shopping/M.1644393136.A.438.html",
+            "https://www.ptt.cc/bbs/cookclub/M.1674131972.A.49F.html"
+          ],
+          "confidence": "medium"
+        },
+        "cmpKeyword": "Cuisinart TOA-60TW"
+      },
+      {
+        "id": "balmuda_k11a",
+        "tier": "替代方案",
+        "brand": "BALMUDA 百慕達",
+        "model": "K11A",
+        "name": "The Toaster 蒸氣烤麵包機 K11A（國際版）",
+        "highlights": [
+          "蒸氣烤吐司口感公認一流",
+          "外型好看、佔位小",
+          "與 TOA-95TW 同價位不同路線"
+        ],
+        "dims": "357×321×209 mm；內腔 275×224×178 mm，4.1 kg",
+        "cutout": "檯面擺放即可，上方留 ≥10cm、後方 ≥5cm",
+        "power": "100–110V、1300W",
+        "weight": "4.1 kg",
+        "other": "PChome 標示為「國際版」，台灣保固條件請下單前先問清楚",
+        "price": {
+          "amount": 8990,
+          "min": 8990,
+          "max": 14990,
+          "source": "pchome",
+          "checkedAt": "2026-08-23",
+          "note": "PChome 折後 8,990（定價 14,990）；台灣公司貨 K11C-SE 另為 12,990"
+        },
+        "links": [
+          {
+            "type": "pchome",
+            "url": "https://24h.pchome.com.tw/prod/DMAGR0-A900K1RIJ",
+            "verified": true
+          }
+        ],
+        "availability": "in_stock",
+        "reviews": {
+          "praise": [
+            "回烤麵包外酥內軟，這點無人有異議",
+            "操作簡單、只有一個旋鈕"
+          ],
+          "complaints": [
+            "只能烤兩片吐司，取代不了氣炸烤箱",
+            "沒有氣炸與熱風循環功能",
+            "國際版／水貨保固爭議多，要認清通路"
+          ],
+          "sources": [
+            "https://24h.pchome.com.tw/prod/DMAGR0-A900K1RIJ",
+            "https://us.balmuda.com/pages/toaster-specification"
+          ],
+          "confidence": "low"
+        },
+        "cmpKeyword": "BALMUDA The Toaster K11A"
+      },
+      {
+        "id": "cuisinart_toa110tw",
+        "tier": "替代方案",
+        "brand": "Cuisinart 美膳雅",
+        "model": "TOA-110TW",
+        "name": "數位氣炸烤箱 TOA-110TW（台灣已停供）",
+        "highlights": [
+          "曾是最大容量的美膳雅氣炸烤箱",
+          "2026/8 台灣通路查無在售",
+          "想找同級請直接看 TOA-95TW"
+        ],
+        "dims": "",
+        "cutout": "",
+        "power": "",
+        "weight": "",
+        "other": "2026/8/23 於 momo、PChome 皆搜尋不到型號相符的在售賣場",
+        "price": {
+          "amount": null,
+          "min": null,
+          "max": null,
+          "source": "other",
+          "checkedAt": "2026-08-23",
+          "note": "查無在售賣場，無現價可引用"
+        },
+        "links": [
+          {
+            "type": "momo",
+            "url": "https://www.momoshop.com.tw/search/searchShop.jsp?keyword=TOA-110TW",
+            "verified": false
+          },
+          {
+            "type": "other",
+            "url": "https://cuisinart.com.tw/index/product/typeinfo.html?id=1",
+            "verified": true,
+            "label": "美膳雅台灣官網 氣炸烤箱系列"
+          }
+        ],
+        "availability": "discontinued",
+        "reviews": {
+          "praise": [],
+          "complaints": [],
+          "sources": [
+            "https://cuisinart.com.tw/index/product/typeinfo.html?id=1"
+          ],
+          "confidence": "low"
+        },
+        "cmpKeyword": "Cuisinart TOA-110TW"
+      }
+    ],
+    "pickOptionId": "cuisinart_toa95tw",
+    "pickReason": "26L 數位溫控最實用，8,888 這價位烤箱少有對手"
+  },
+  {
+    "itemId": "microwave",
+    "name": "微波爐",
+    "roomId": "kitchen",
+    "short": "平台式無轉盤好清潔",
+    "hardReq": "放電器櫃，長方形便當盒要放得下，要有燒烤",
+    "advice": "NN-GF574 賣了十年還在賣，就是耐用、零件好找。平台式沒轉盤，長方形便當盒直接放，內部好擦。燒烤只是加分，別當烤箱用——網友最常抱怨就是燒烤時油噴到上面石英管很難清。真要烤東西，另外配氣炸烤箱比較實在。",
+    "warnings": [
+      "燒烤時油會噴到上方石英管，很難清",
+      "無轉盤機構運轉會有卡卡聲，屬正常",
+      "約 1.3kW，要獨立 110V 插座別接延長線",
+      "原廠保固 1 年，磁控管年限看保證書",
+      "有網友反映燒烤功能用幾個月就故障"
+    ],
+    "install": [
+      {
+        "tag": "電",
+        "text": "微波爐層獨立 110V 專用插座（15A 以上迴路），不與氣炸烤箱共用"
+      },
+      {
+        "tag": "尺寸",
+        "text": "機身 529W×422D×326H mm；櫃內開孔淨寬 ≥65cm、深 ≥55cm、高 ≥45cm"
+      },
+      {
+        "tag": "排風",
+        "text": "左右各留 ≥5cm、上方 ≥10cm、後方 ≥10cm 散熱，背板不封死"
+      },
+      {
+        "tag": "木作",
+        "text": "擺放高度建議 90–120cm，門前方留 ≥45cm 取放空間"
+      }
+    ],
+    "costNotes": [
+      "momo 與 PChome 都是 6,550（定價 8,390），含運不含安裝",
+      "110V 專用插座迴路含配管，中部行情 3,500–5,500 元",
+      "電器櫃層板散熱開孔與封邊木作，約 2,000–5,000 元",
+      "微波爐屬「應施檢驗」與節能標章品項，但不在節能補助與貨物稅退稅範圍內"
+    ],
+    "installCost": {
+      "min": 5000,
+      "max": 13000,
+      "note": "110V 專用插座迴路 3,500–5,500；電器櫃層板散熱開孔與封邊 2,000–5,000；插座面板加配電盤開關 1,500–2,500。中部行情估算"
+    },
+    "todos": [
+      {
+        "text": "微波爐層拉獨立 110V 15A 迴路",
+        "for": "designer"
+      },
+      {
+        "text": "櫃內開孔淨寬 65cm、深 55cm、高 45cm",
+        "for": "designer"
+      },
+      {
+        "text": "左右上後各留 5–10cm 散熱縫",
+        "for": "designer"
+      },
+      {
+        "text": "確認開門方向與前方 45cm 取放空間",
+        "for": "designer"
+      },
+      {
+        "text": "決定微波爐放哪一層（大人好拿的高度）",
+        "for": "family"
+      }
+    ],
+    "defaultQty": 1,
+    "options": [
+      {
+        "id": "sharp_ax_xs10t",
+        "tier": "頂級",
+        "brand": "SHARP 夏普",
+        "model": "AX-XS10T",
+        "name": "31L Healsio 極智烘烤系列水波爐 AX-XS10T",
+        "highlights": [
+          "過熱水蒸氣，微波烤箱一台搞定",
+          "31L 大容量，微波烤箱二合一",
+          "少油烹調、減脂族適合"
+        ],
+        "dims": "31L 桌上型（外觀尺寸請依原廠規格表現場確認）",
+        "cutout": "櫃內開孔淨寬 ≥65cm、深 ≥60cm、高 ≥55cm，上方留 ≥10cm",
+        "power": "110V；水波爐加熱功率高，務必獨立 20A 專用迴路",
+        "weight": "",
+        "other": "原廠保固依保證書；水箱需定期清潔除垢",
+        "price": {
+          "amount": 24900,
+          "min": 24900,
+          "max": 29900,
+          "source": "pchome",
+          "checkedAt": "2026-08-23",
+          "note": "PChome 24,900（定價 29,900），三色皆有貨，不含安裝"
+        },
+        "links": [
+          {
+            "type": "pchome",
+            "url": "https://24h.pchome.com.tw/prod/DMBJ03-A900JTYJP",
+            "verified": true
+          }
+        ],
+        "availability": "in_stock",
+        "reviews": {
+          "praise": [
+            "一台抵微波爐加烤箱，省一個櫃位",
+            "水蒸氣加熱回鍋菜不乾柴"
+          ],
+          "complaints": [
+            "價格是 NN-GF574 的近 4 倍",
+            "水箱與爐內要常清，懶人會放棄",
+            "台灣論壇長期使用心得少，資料不足"
+          ],
+          "sources": [
+            "https://24h.pchome.com.tw/prod/DMBJ03-A900JTYJP",
+            "https://24h.pchome.com.tw/prod/DMBJ03-A900K5SUG"
+          ],
+          "confidence": "low"
+        },
+        "cmpKeyword": "SHARP AX-XS10T"
+      },
+      {
+        "id": "panasonic_nn_gf574",
+        "tier": "高級",
+        "brand": "Panasonic 國際牌",
+        "model": "NN-GF574",
+        "name": "27L 光波燒烤變頻微波爐 NN-GF574",
+        "highlights": [
+          "平台式無轉盤，便當盒直接放",
+          "變頻微波＋1000W 燒烤",
+          "長銷十年、零件好找"
+        ],
+        "dims": "529W×422D×326H mm；爐內 354W×338D×230H mm，12.7 kg",
+        "cutout": "櫃內開孔淨寬 ≥65cm、深 ≥55cm、高 ≥45cm；左右 ≥5cm、上方 ≥10cm",
+        "power": "110V；微波輸出 1000W、燒烤 1000W，約 1.3kW，需獨立 110V 插座",
+        "weight": "12.7 kg",
+        "other": "按鍵開門、6 段火力、23 種自動行程；原廠保固 1 年",
+        "price": {
+          "amount": 6550,
+          "min": 6550,
+          "max": 8790,
+          "source": "momo",
+          "checkedAt": "2026-08-23",
+          "note": "momo 與 PChome 同為 6,550（定價 8,390–8,790），含運不含安裝"
+        },
+        "links": [
+          {
+            "type": "momo",
+            "url": "https://www.momoshop.com.tw/goods/GoodsDetail.jsp?i_code=8342622",
+            "verified": true
+          },
+          {
+            "type": "pchome",
+            "url": "https://24h.pchome.com.tw/prod/DMBJ0G-A900AMQOF",
+            "verified": true
+          }
+        ],
+        "availability": "in_stock",
+        "reviews": {
+          "praise": [
+            "平台式無轉盤，底部一塊平板超好擦",
+            "賣十年以上的長青機種，維修零件找得到",
+            "變頻火力穩，解凍不會外熟內冰",
+            "PChome 買家 4.9 星、60 則評價"
+          ],
+          "complaints": [
+            "燒烤油噴到上方石英管，鐵柵欄擋著超難清",
+            "沒清乾淨下次加熱會冒煙",
+            "無轉盤機構運轉會有卡卡聲",
+            "有人反映燒烤功能用幾個月就掛掉"
+          ],
+          "sources": [
+            "https://www.mobile01.com/topicdetail.php?f=729&t=4747545",
+            "https://www.ptt.cc/bbs/E-appliance/M.1772273694.A.DF2.html",
+            "https://disp.cc/ptt/E-appliance/1auUTKQE",
+            "https://www.ptt.cc/bbs/E-appliance/M.1598169092.A.444.html",
+            "https://24h.pchome.com.tw/prod/DMBJ0G-A900AMQOF"
+          ],
+          "confidence": "high"
+        },
+        "cmpKeyword": "Panasonic NN-GF574"
+      },
+      {
+        "id": "hitachi_hmr_dg2413",
+        "tier": "高CP值",
+        "brand": "HITACHI 日立",
+        "model": "HMR-DG2413",
+        "name": "24L 變頻燒烤微波爐 HMR-DG2413",
+        "highlights": [
+          "4 千出頭就有變頻燒烤",
+          "24L 夠一家四口日常加熱",
+          "PChome 5 星評價"
+        ],
+        "dims": "24L 桌上型（外觀尺寸依原廠規格表確認）",
+        "cutout": "櫃內開孔淨寬 ≥62cm、深 ≥52cm、高 ≥42cm",
+        "power": "110V；燒烤微波爐約 1.2–1.4kW，建議獨立插座",
+        "weight": "",
+        "other": "保固依原廠保證書",
+        "price": {
+          "amount": 4305,
+          "min": 4305,
+          "max": 4680,
+          "source": "pchome",
+          "checkedAt": "2026-08-23",
+          "note": "PChome 4,305（定價 4,680），有貨，不含安裝"
+        },
+        "links": [
+          {
+            "type": "pchome",
+            "url": "https://24h.pchome.com.tw/prod/DMBJ01-1900I80CR",
+            "verified": true
+          }
+        ],
+        "availability": "in_stock",
+        "reviews": {
+          "praise": [
+            "價格只有 NN-GF574 的三分之二",
+            "PChome 買家評價 5.0（少量樣本）"
+          ],
+          "complaints": [
+            "有轉盤，長方形便當盒可能卡到",
+            "論壇長期心得少，耐用度資料不足"
+          ],
+          "sources": [
+            "https://24h.pchome.com.tw/prod/DMBJ01-1900I80CR",
+            "https://24h.pchome.com.tw/prod/DMBJ5P-A900I8GSN"
+          ],
+          "confidence": "low"
+        },
+        "cmpKeyword": "HITACHI HMR-DG2413"
+      },
+      {
+        "id": "panasonic_nn_fs301",
+        "tier": "替代方案",
+        "brand": "Panasonic 國際牌",
+        "model": "NN-FS301",
+        "name": "23L 烘焙燒烤微波爐 NN-FS301",
+        "highlights": [
+          "多了烘焙模式，可做簡單烘焙",
+          "同樣是國際牌平台式",
+          "比 GF574 貴約 1,900 元"
+        ],
+        "dims": "23L 桌上型（外觀尺寸依原廠規格表確認）",
+        "cutout": "櫃內開孔淨寬 ≥62cm、深 ≥55cm、高 ≥45cm",
+        "power": "110V；燒烤烘焙合計功率高，建議獨立 20A 迴路",
+        "weight": "",
+        "other": "保固依原廠保證書",
+        "price": {
+          "amount": 8490,
+          "min": 8490,
+          "max": 10900,
+          "source": "pchome",
+          "checkedAt": "2026-08-23",
+          "note": "PChome 折後 8,490（原 10,900），有貨，不含安裝"
+        },
+        "links": [
+          {
+            "type": "pchome",
+            "url": "https://24h.pchome.com.tw/prod/DMBJ01-1900IYCQN",
+            "verified": true
+          }
+        ],
+        "availability": "in_stock",
+        "reviews": {
+          "praise": [
+            "微波、燒烤、烘焙一台包辦",
+            "容量 23L，佔位比 27L 小"
+          ],
+          "complaints": [
+            "PTT 有機主貼圖：非加熱面焦垢嚴重、清潔是災難",
+            "裸露加熱管的機型油噴幾乎躲不掉",
+            "比 NN-GF574 貴，容量反而小"
+          ],
+          "sources": [
+            "https://www.ptt.cc/bbs/E-appliance/M.1772273694.A.DF2.html",
+            "https://24h.pchome.com.tw/prod/DMBJ01-1900IYCQN"
+          ],
+          "confidence": "low"
+        },
+        "cmpKeyword": "Panasonic NN-FS301"
+      }
+    ],
+    "pickOptionId": "panasonic_nn_gf574",
+    "pickReason": "平台式好清、變頻長銷十年，6,550 這價位最穩"
+  },
+  {
+    "itemId": "freezer",
+    "name": "直立式冷凍櫃",
+    "roomId": "kitchen",
+    "short": "囤冷凍食材，透天好用",
+    "hardReq": "380L 直立式、自動除霜；要搬得上透天樓梯並放進後陽台或廚房",
+    "advice": "380L 直立式是家庭囤貨的甜蜜點，抽屜分層比上掀式好找東西，自動除霜不用年年剷冰。重點提醒：這台不是一級能效電冰箱——冷凍櫃根本還沒有強制能效分級，所以 3,000 節能補助和 2,000 貨物稅退稅都申請不到，算預算時千萬不要先扣掉。",
+    "warnings": [
+      "冷凍櫃非「電冰箱」，領不到 3,000 節能補助",
+      "也退不了貨物稅，退稅只限電冰箱冷氣除濕機",
+      "momo 頁自填「能源分級標示 1」，官方無此分級",
+      "出風口會結霜，網友說自動除霜不一定除乾淨",
+      "包裝箱寬 750mm，樓梯與門框要先量過",
+      "頂面距天花板要 30cm、左右各 10cm 散熱",
+      "國際牌大家電維修排程慢，網路抱怨不少"
+    ],
+    "install": [
+      {
+        "tag": "電",
+        "text": "冷凍櫃位置留 110V 專用插座（15A 迴路、須接地），24 小時運轉不可用延長線"
+      },
+      {
+        "tag": "尺寸",
+        "text": "機身 1855H×710W×767D mm（含把手）；預留寬 ≥93cm、深 ≥88cm、高 ≥216cm"
+      },
+      {
+        "tag": "搬運",
+        "text": "包裝箱 1910×750×756mm，樓梯淨寬與轉角需 ≥80cm、樓梯上方淨高 ≥200cm"
+      },
+      {
+        "tag": "尺寸",
+        "text": "放置面水平、平整，前方留 ≥110cm 開門與抽屜拉出空間"
+      },
+      {
+        "tag": "其他",
+        "text": "出廠設定右開，要改左開需原廠人員到府設定並另收費，下單前先講"
+      }
+    ],
+    "costNotes": [
+      "PChome 22,792、momo 同價且標示「含標準安裝」定位，momo 另有 23,310 的賣場",
+      "**不適用 2026 電冰箱汰舊換新補助 3,000 元**：經濟部住宅家電汰舊換新只補助一級能效「電冰箱」與冷氣機，冷凍櫃不在品項內",
+      "**也不能退貨物稅（最高 2,000 元）**：貨物稅條例第11條之1 與退稅辦法只含電冰箱、冷(暖)氣機、除濕機，且要能效第 1 或第 2 級",
+      "冷凍櫃目前只有自願性「節能標章」（NR-FZ383AV 已獲證，EF 23.1、年耗電 348 度），強制性能效分級草案 2026/8/6 才開廠商座談會，尚未上路",
+      "舊機若是廢電冰箱／冷凍箱，仍可請回收商免費載走並拿回收聯單，但新機是冷凍櫃就沒有補助可領",
+      "透天無電梯搬運：2 樓以上約 200 元／樓、樓梯高過扶手每層再加 400 元、拆門 500 元／扇、過窗吊運 600 元／台、舊機移機 500 元",
+      "年耗電 348 度，一年電費約 1,000–1,400 元（依用電級距）"
+    ],
+    "installCost": {
+      "min": 3500,
+      "max": 14000,
+      "note": "110V 專用迴路 3,500–5,500；透天樓梯搬運 200 元/樓、過扶手 +400/層、拆門 500/扇；地坪整平 1,000–3,000（中部估算）"
+    },
+    "todos": [
+      {
+        "text": "冷凍櫃位拉 110V 專用迴路並接地",
+        "for": "designer"
+      },
+      {
+        "text": "量樓梯與門框淨寬，需 ≥80cm",
+        "for": "designer"
+      },
+      {
+        "text": "預留寬 93cm×深 88cm×高 216cm",
+        "for": "designer"
+      },
+      {
+        "text": "確認頂面距天花板 ≥30cm 可散熱",
+        "for": "designer"
+      },
+      {
+        "text": "打 02-29559666 確認冷凍櫃確實無補助",
+        "for": "family"
+      },
+      {
+        "text": "決定左開或右開（出廠為右開）",
+        "for": "family"
+      }
+    ],
+    "defaultQty": 1,
+    "options": [
+      {
+        "id": "lg_gr_fl40ms",
+        "tier": "頂級",
+        "brand": "LG 樂金",
+        "model": "GR-FL40MS",
+        "name": "324L WiFi 變頻直立式冷凍櫃 GR-FL40MS",
+        "highlights": [
+          "WiFi 遠端監控溫度與異常",
+          "線性變頻壓縮機，安靜省電",
+          "LG 壓縮機保固業界最長"
+        ],
+        "dims": "324L 直立式（外觀尺寸依原廠規格表確認）",
+        "cutout": "預留寬 ≥90cm、深 ≥85cm、高 ≥200cm；頂面 ≥30cm 散熱",
+        "power": "110V 專用插座、需接地",
+        "weight": "",
+        "other": "已取得冷凍櫃節能標章（能源署獲證清單有 GR-FL40MS）",
+        "price": {
+          "amount": 25900,
+          "min": 25900,
+          "max": 27900,
+          "source": "pchome",
+          "checkedAt": "2026-08-23",
+          "note": "PChome 兩個賣場 25,900（庫存 1）與 27,900（庫存足），定價 32,900"
+        },
+        "links": [
+          {
+            "type": "pchome",
+            "url": "https://24h.pchome.com.tw/prod/DPAK31-A900BY19V",
+            "verified": true
+          },
+          {
+            "type": "pchome",
+            "url": "https://24h.pchome.com.tw/prod/DMBM2D-A900IF54P",
+            "verified": true
+          }
+        ],
+        "availability": "in_stock",
+        "reviews": {
+          "praise": [
+            "LG 變頻壓縮機安靜，評價普遍好",
+            "可用手機看溫度、停電或門沒關會通知"
+          ],
+          "complaints": [
+            "比 Panasonic 380L 貴 3–5 千但容量少 56L",
+            "同樣沒有能效分級，一樣領不到補助",
+            "台灣長期使用心得樣本少"
+          ],
+          "sources": [
+            "https://24h.pchome.com.tw/prod/DPAK31-A900BY19V",
+            "https://www.energylabel.org.tw/purchasing/product/upt.aspx?p0=63"
+          ],
+          "confidence": "low"
+        },
+        "cmpKeyword": "LG GR-FL40MS"
+      },
+      {
+        "id": "panasonic_nr_fz383av_s",
+        "tier": "高級",
+        "brand": "Panasonic 國際牌",
+        "model": "NR-FZ383AV-S",
+        "name": "380L 高效變頻壓縮機直立式冷凍櫃 NR-FZ383AV-S",
+        "highlights": [
+          "380L 分層透明抽屜，好找食材",
+          "自動除霜，不用年年剷冰",
+          "冷凍冷藏可切換、四星級冷凍"
+        ],
+        "dims": "1855H×710W×767D mm（含把手）；包裝箱 1910×750×756 mm",
+        "cutout": "頂面距天花板 ≥30cm、左右各 ≥10cm、後方 ≥10cm；前方 ≥110cm 開門",
+        "power": "110V 專用插座（15A 迴路、須接地），R600a 環保冷媒",
+        "weight": "官網未公開淨重；以包裝箱 1910×750×756 mm 規劃搬運路徑",
+        "other": "節能標章獲證機種，EF 23.1、年耗電 348 度；**無能源效率分級（冷凍櫃無此制度）**；出廠右開可改左開（原廠到府另計費）",
+        "price": {
+          "amount": 22792,
+          "min": 22792,
+          "max": 25900,
+          "source": "pchome",
+          "checkedAt": "2026-08-23",
+          "note": "PChome 22,792、momo 同價含標準安裝定位；定價 25,900，不含樓層加價"
+        },
+        "links": [
+          {
+            "type": "pchome",
+            "url": "https://24h.pchome.com.tw/prod/DPAC1T-A900GB0L3",
+            "verified": true
+          },
+          {
+            "type": "momo",
+            "url": "https://www.momoshop.com.tw/goods/GoodsDetail.jsp?i_code=10601450",
+            "verified": true
+          },
+          {
+            "type": "official",
+            "url": "https://www.panasonic.com/tw/consumer/refrigerator/freezer/nr-fz383av-s.html",
+            "verified": true
+          },
+          {
+            "type": "other",
+            "url": "https://www.fuchia.tw/v2/shop/item/2755",
+            "verified": true,
+            "label": "甫佳電器 24,500 看商品"
+          }
+        ],
+        "availability": "in_stock",
+        "reviews": {
+          "praise": [
+            "380L 抽屜分層，比上掀式好找東西",
+            "自動除霜真的省事，不用停機剷冰",
+            "門未關警示音、防鼠咬電源線設計貼心",
+            "同系列 242L 款 PChome 4.8 星（26 則）"
+          ],
+          "complaints": [
+            "網友反映出風口周圍會結霜，隔天沒完全除掉",
+            "同尺寸下容積比同級品略小（保溫層較厚）",
+            "國際牌大家電維修排程與客服態度被抱怨過",
+            "寬 710mm、包裝 750mm，透天樓梯不好搬"
+          ],
+          "sources": [
+            "https://www.mobile01.com/topicdetail.php?f=729&t=7022370",
+            "https://www.mobile01.com/topicdetail.php?f=729&t=7131039",
+            "https://www.pttweb.cc/bbs/E-appliance/M.1750011509.A.4ED",
+            "https://www.mobile01.com/topicdetail.php?f=729&t=7028825",
+            "https://24h.pchome.com.tw/prod/DPAC1T-A900GB0L3"
+          ],
+          "confidence": "medium"
+        },
+        "cmpKeyword": "Panasonic NR-FZ383AV-S"
+      },
+      {
+        "id": "heran_hfz_b3862fv",
+        "tier": "高CP值",
+        "brand": "HERAN 禾聯",
+        "model": "HFZ-B3862FV",
+        "name": "383L 變頻風冷無霜直立式冷凍櫃 HFZ-B3862FV",
+        "highlights": [
+          "383L 同容量、便宜約 900 元",
+          "變頻風冷無霜，維護輕鬆",
+          "已取得冷凍櫃節能標章"
+        ],
+        "dims": "約 1850H×700W×700D mm；月耗電（冷凍）約 28 度",
+        "cutout": "預留寬 ≥90cm、深 ≥82cm、高 ≥215cm；頂面 ≥30cm 散熱",
+        "power": "110V 專用插座、須接地",
+        "weight": "",
+        "other": "節能標章獲證（能源署冷凍櫃清單有 HFZ-B3862FV）；同樣無能效分級",
+        "price": {
+          "amount": 21900,
+          "min": 21200,
+          "max": 24900,
+          "source": "pchome",
+          "checkedAt": "2026-08-23",
+          "note": "PChome 風冷無霜款 21,900（定價 24,900），另有 21,200 賣場；不含安裝"
+        },
+        "links": [
+          {
+            "type": "pchome",
+            "url": "https://24h.pchome.com.tw/prod/DPAC8X-A900KAUZ0",
+            "verified": true
+          },
+          {
+            "type": "momo",
+            "url": "https://www.momoshop.com.tw/search/searchShop.jsp?keyword=HFZ-B3862FV",
+            "verified": false
+          }
+        ],
+        "availability": "in_stock",
+        "reviews": {
+          "praise": [
+            "PTT 網友「家裡兩台禾聯 383L，目前沒什麼問題」",
+            "自動除霜方便很多，用半年沒看到冰霜",
+            "抽屜滑順度比預期好，運轉不吵"
+          ],
+          "complaints": [
+            "評價兩極，也有人抱怨用不久就開始結霜",
+            "結霜嚴重時可能影響門的密合",
+            "寬 70cm，門框走道要先量",
+            "維修與保固支援不如日系大廠"
+          ],
+          "sources": [
+            "https://www.ptt.cc/bbs/E-appliance/M.1716445229.A.DAB.html",
+            "https://www.mobile01.com/topicdetail.php?f=729&t=6864348",
+            "https://www.pttweb.cc/bbs/E-appliance/M.1750011509.A.4ED",
+            "https://24h.pchome.com.tw/prod/DPAC8X-A900KAUZ0"
+          ],
+          "confidence": "medium"
+        },
+        "cmpKeyword": "HERAN HFZ-B3862FV"
+      },
+      {
+        "id": "haier_hfz_270ts",
+        "tier": "替代方案",
+        "brand": "Haier 海爾",
+        "model": "HFZ-270TS",
+        "name": "270L 無霜直立式冷凍櫃 HFZ-270TS",
+        "highlights": [
+          "1.4 萬有找，預算最省",
+          "270L 對小家庭已經夠用",
+          "機身較窄，透天樓梯好搬"
+        ],
+        "dims": "270L 直立式（外觀尺寸依原廠規格表確認）",
+        "cutout": "預留寬 ≥85cm、深 ≥80cm、高 ≥190cm；頂面 ≥30cm 散熱",
+        "power": "110V 專用插座、須接地",
+        "weight": "",
+        "other": "保固依原廠保證書；能源署冷凍櫃節能標章清單未見此型號",
+        "price": {
+          "amount": 13688,
+          "min": 13688,
+          "max": 23800,
+          "source": "pchome",
+          "checkedAt": "2026-08-23",
+          "note": "PChome 折後 13,688（定價 23,800），兩個賣場同價，不含安裝"
+        },
+        "links": [
+          {
+            "type": "pchome",
+            "url": "https://24h.pchome.com.tw/prod/DPAC8U-A900ICAXH",
+            "verified": true
+          },
+          {
+            "type": "pchome",
+            "url": "https://24h.pchome.com.tw/prod/DPAC8U-A900G9OOU",
+            "verified": true
+          }
+        ],
+        "availability": "in_stock",
+        "reviews": {
+          "praise": [
+            "價錢只有 380L 機種的六成",
+            "PChome 買家 4.9 星（8 則）與 4.4 星（9 則）"
+          ],
+          "complaints": [
+            "容量少 110L，囤貨族一年後會後悔",
+            "PTT 有「買便宜的冷凍櫃經不起壞」的提醒",
+            "未見於能源署節能標章獲證清單"
+          ],
+          "sources": [
+            "https://24h.pchome.com.tw/prod/DPAC8U-A900ICAXH",
+            "https://www.ptt.cc/bbs/E-appliance/M.1716445229.A.DAB.html",
+            "https://www.energylabel.org.tw/purchasing/product/upt.aspx?p0=63"
+          ],
+          "confidence": "low"
+        },
+        "cmpKeyword": "Haier HFZ-270TS"
+      }
+    ],
+    "pickOptionId": "panasonic_nr_fz383av_s",
+    "pickReason": "380L 自動除霜、22,792 含定位安裝，抽屜分層最好用"
+  }
+]
