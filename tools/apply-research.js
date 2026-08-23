@@ -72,7 +72,7 @@ const extraPrep = [
   { id: 'prep_tr1', group: '電熱毛巾架', trade: '電', text: '每間衛浴乾區預留 110V 插座（距出水口 ≥60 cm、離地 ≥60 cm），迴路加漏電保護（RCBO／GFCI）並接地' }
 ];
 extraPrep.forEach(p => { if (!seed.prep.some(x => x.id === p.id) && seed.items.some(i => ['ac_living', 'dehumidifier_living', 'water_heater', 'towel_rack'].includes(i.id))) seed.prep.push(Object.assign({ done: false }, p)); });
-seed.catalogVersion = 2026082310; seed.rev = (seed.rev || 0) + 1; seed.updatedAt = new Date().toISOString();
+seed.catalogVersion = Math.max(Number(seed.catalogVersion) || 0, Number(today.replace(/-/g, '')) * 100) + 1; seed.rev = (seed.rev || 0) + 1; seed.updatedAt = new Date().toISOString();
 seed.meta.priceNote = '價格以 MOMO、PChome 24h 現價為準（2026/8/23 逐一實查；PChome 價格每天自動更新），下單前請再點進去確認。';
 seed.meta.researchedAt = today;
 fs.writeFileSync(seedPath, JSON.stringify(seed, null, 2));

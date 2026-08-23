@@ -12,7 +12,9 @@
 | 網站 | 靜態單檔 `docs/index.html`，由 GitHub Pages 提供（`main` 分支 `/docs`） |
 | 雲端資料與版本紀錄 | Google 試算表 + Apps Script 網頁應用程式（`apps-script/Code.gs`，只要求「目前這份試算表」權限）；資料壓縮後存在 `state` 分頁，每次儲存在 `snapshots` 分頁留快照（最近 120 份），`history` 分頁記錄每筆修改 |
 | 每日價格 | GitHub Actions 每天 11:00（台灣）呼叫 PChome 公開 API 更新 `docs/prices.json`，網站顯示「今日價」；另有飛比價格／BigGo 即時比價連結 |
-| 商品資料 | `src/seed.json`：42 個方案、133 個連結（2026/8/22 逐一實查，失效連結已替換） |
+| 商品資料 | `src/seed.json`：18 個品項、6 個空間、60+ 個方案（2026/8/23 重新研究，含真實口碑摘要與安裝延伸費用估算） |
+| 數量 | 每個品項可選多個方案並各自設定數量（`picks: [{optionId, qty}]`），例如掃地機器人旗艦＋CP 各一台 |
+| 待辦 | 每條待辦有 `for: family｜designer`；家人只看要拍板的決策，其餘歸「給設計師／水電」並出現在設計師版 |
 
 ## 第一次部署後要做的事
 1. 照 [SETUP.md](SETUP.md) 建立 Google 試算表與 Apps Script（約 5 分鐘），取得 `/exec` 網址。
@@ -21,12 +23,17 @@
 
 ## 開發
 ```bash
-node tools/merge-research.js    # 把 research/*.json 合併進 seed（只在重新實查時）
-node tools/content-pass.js      # 簡潔優點／專家建議／比價關鍵字（只在重新實查時）
-node tools/apply-linkcheck.js   # 套用 research/links-result-*.json 的連結檢查
-node tools/fetch-prices.js      # 手動更新 docs/prices.json
-node build.js                   # 產生 docs/index.html（SHARE_URL 可覆蓋分享網址）
+node tools/apply-research.js   # 把 research/cat-*.json（agent 產出）合併進 seed，bump catalogVersion
+node tools/check-links.js      # 檢查所有商品連結，結果寫到 research/linkcheck-latest.json
+node tools/apply-linkfix.js    # 套用檢查結果：失效連結改搜尋頁、缺貨標記
+node tools/fetch-prices.js     # 手動更新 docs/prices.json（GitHub Actions 每天自動跑）
+node build.js                  # 產生 docs/index.html（SHARE_URL 可覆蓋分享網址）
 ```
+
+## 重新研究商品（給未來的 Claude）
+1. `research/AGENT_BRIEF.md` 是共用研究規範（含輸出 JSON 格式、真實口碑查證方式、`installCost` 與 `todos.for`）。
+2. 每個 agent 負責 2–4 個品類，輸出寫到 `research/cat-<主題>.json`。
+3. 回來後跑 `apply-research.js` → `check-links.js` → `apply-linkfix.js` → `build.js` → push。
 本機預覽：`.claude/launch.json`（port 8791，serve `docs/`）；在瀏覽器 localStorage 設 `hc_api` 為 `"mock"` 可模擬雲端。
 
 ## 資料流與更新規則

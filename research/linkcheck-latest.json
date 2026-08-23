@@ -91,16 +91,16 @@
   },
   {
     "it": "oven",
-    "opt": "oven_toa110tw",
-    "model": "TOA-110TW",
-    "type": "official",
-    "url": "https://cuisinart.com.tw/index/product/productinfo.html?id=376",
+    "opt": "panasonic_nu_sc280w",
+    "model": "NU-SC280W",
+    "type": "pchome",
+    "url": "https://24h.pchome.com.tw/prod/DMBJ7P-A900GNK3G",
     "status": "ok",
-    "note": "http 200"
+    "note": "ForSale qty 4 low 13520"
   },
   {
     "it": "oven",
-    "opt": "oven_toa95tw",
+    "opt": "cuisinart_toa95tw",
     "model": "TOA-95TW",
     "type": "momo",
     "url": "https://www.momoshop.com.tw/goods/GoodsDetail.jsp?i_code=11978993",
@@ -109,7 +109,7 @@
   },
   {
     "it": "oven",
-    "opt": "oven_toa95tw",
+    "opt": "cuisinart_toa95tw",
     "model": "TOA-95TW",
     "type": "pchome",
     "url": "https://24h.pchome.com.tw/prod/DMAGOA-A900KAR59",
@@ -118,16 +118,7 @@
   },
   {
     "it": "oven",
-    "opt": "oven_toa95tw",
-    "model": "TOA-95TW",
-    "type": "official",
-    "url": "https://cuisinart.com.tw/index/product/productinfo.html?id=126",
-    "status": "ok",
-    "note": "http 200"
-  },
-  {
-    "it": "oven",
-    "opt": "oven_toa60tw",
+    "opt": "cuisinart_toa60tw",
     "model": "TOA-60TW",
     "type": "momo",
     "url": "https://www.momoshop.com.tw/goods/GoodsDetail.jsp?i_code=8006617",
@@ -136,7 +127,7 @@
   },
   {
     "it": "oven",
-    "opt": "oven_toa60tw",
+    "opt": "cuisinart_toa60tw",
     "model": "TOA-60TW",
     "type": "pchome",
     "url": "https://24h.pchome.com.tw/prod/DMAGOA-A900KAR7L",
@@ -145,25 +136,43 @@
   },
   {
     "it": "oven",
-    "opt": "oven_toa60tw",
-    "model": "TOA-60TW",
-    "type": "official",
-    "url": "https://cuisinart.com.tw/index/product/productinfo.html?id=13",
+    "opt": "balmuda_k11a",
+    "model": "K11A",
+    "type": "pchome",
+    "url": "https://24h.pchome.com.tw/prod/DMAGR0-A900K1RIJ",
+    "status": "ok",
+    "note": "ForSale qty 5 low null"
+  },
+  {
+    "it": "oven",
+    "opt": "cuisinart_toa110tw",
+    "model": "TOA-110TW",
+    "type": "other",
+    "url": "https://cuisinart.com.tw/index/product/typeinfo.html?id=1",
     "status": "ok",
     "note": "http 200"
   },
   {
     "it": "microwave",
-    "opt": "mw_nngf574",
+    "opt": "sharp_ax_xs10t",
+    "model": "AX-XS10T",
+    "type": "pchome",
+    "url": "https://24h.pchome.com.tw/prod/DMBJ03-A900JTYJP",
+    "status": "ok",
+    "note": "ForSale qty 3 low null"
+  },
+  {
+    "it": "microwave",
+    "opt": "panasonic_nn_gf574",
     "model": "NN-GF574",
     "type": "momo",
-    "url": "https://www.momoshop.com.tw/TP/TP0003321/goodsDetail/TP00033210000357",
+    "url": "https://www.momoshop.com.tw/goods/GoodsDetail.jsp?i_code=8342622",
     "status": "ok",
     "note": "http 200"
   },
   {
     "it": "microwave",
-    "opt": "mw_nngf574",
+    "opt": "panasonic_nn_gf574",
     "model": "NN-GF574",
     "type": "pchome",
     "url": "https://24h.pchome.com.tw/prod/DMBJ0G-A900AMQOF",
@@ -172,25 +181,43 @@
   },
   {
     "it": "microwave",
-    "opt": "mw_nngf574",
-    "model": "NN-GF574",
-    "type": "official",
-    "url": "https://www.panasonic.com/tw/consumer/kitchen/microwave/nn-gf574.html",
+    "opt": "hitachi_hmr_dg2413",
+    "model": "HMR-DG2413",
+    "type": "pchome",
+    "url": "https://24h.pchome.com.tw/prod/DMBJ01-1900I80CR",
     "status": "ok",
-    "note": "http 200"
+    "note": "ForSale qty 13 low null"
+  },
+  {
+    "it": "microwave",
+    "opt": "panasonic_nn_fs301",
+    "model": "NN-FS301",
+    "type": "pchome",
+    "url": "https://24h.pchome.com.tw/prod/DMBJ01-1900IYCQN",
+    "status": "ok",
+    "note": "ForSale qty 8 low 8490"
   },
   {
     "it": "freezer",
-    "opt": "freezer_nrfz383avs",
-    "model": "NR-FZ383AV-S",
-    "type": "momo",
-    "url": "https://www.momoshop.com.tw/goods/GoodsDetail.jsp?i_code=10601450",
+    "opt": "lg_gr_fl40ms",
+    "model": "GR-FL40MS",
+    "type": "pchome",
+    "url": "https://24h.pchome.com.tw/prod/DPAK31-A900BY19V",
     "status": "ok",
-    "note": "http 200"
+    "note": "ForSale qty 14 low null"
   },
   {
     "it": "freezer",
-    "opt": "freezer_nrfz383avs",
+    "opt": "lg_gr_fl40ms",
+    "model": "GR-FL40MS",
+    "type": "pchome",
+    "url": "https://24h.pchome.com.tw/prod/DMBM2D-A900IF54P",
+    "status": "ok",
+    "note": "ForSale qty 1 low null"
+  },
+  {
+    "it": "freezer",
+    "opt": "panasonic_nr_fz383av_s",
     "model": "NR-FZ383AV-S",
     "type": "pchome",
     "url": "https://24h.pchome.com.tw/prod/DPAC1T-A900GB0L3",
@@ -199,7 +226,16 @@
   },
   {
     "it": "freezer",
-    "opt": "freezer_nrfz383avs",
+    "opt": "panasonic_nr_fz383av_s",
+    "model": "NR-FZ383AV-S",
+    "type": "momo",
+    "url": "https://www.momoshop.com.tw/goods/GoodsDetail.jsp?i_code=10601450",
+    "status": "ok",
+    "note": "http 200"
+  },
+  {
+    "it": "freezer",
+    "opt": "panasonic_nr_fz383av_s",
     "model": "NR-FZ383AV-S",
     "type": "official",
     "url": "https://www.panasonic.com/tw/consumer/refrigerator/freezer/nr-fz383av-s.html",
@@ -208,12 +244,39 @@
   },
   {
     "it": "freezer",
-    "opt": "freezer_nrfz383avs",
+    "opt": "panasonic_nr_fz383av_s",
     "model": "NR-FZ383AV-S",
     "type": "other",
-    "url": "https://pmst.panasonic.com.tw/Shop/Product/Detail/Y2ZKLTYGDG00P91I2PZM/NR-FZ383AV-S",
+    "url": "https://www.fuchia.tw/v2/shop/item/2755",
     "status": "ok",
     "note": "http 200"
+  },
+  {
+    "it": "freezer",
+    "opt": "heran_hfz_b3862fv",
+    "model": "HFZ-B3862FV",
+    "type": "pchome",
+    "url": "https://24h.pchome.com.tw/prod/DPAC8X-A900KAUZ0",
+    "status": "ok",
+    "note": "ForSale qty 4 low null"
+  },
+  {
+    "it": "freezer",
+    "opt": "haier_hfz_270ts",
+    "model": "HFZ-270TS",
+    "type": "pchome",
+    "url": "https://24h.pchome.com.tw/prod/DPAC8U-A900ICAXH",
+    "status": "ok",
+    "note": "ForSale qty 6 low 13688"
+  },
+  {
+    "it": "freezer",
+    "opt": "haier_hfz_270ts",
+    "model": "HFZ-270TS",
+    "type": "pchome",
+    "url": "https://24h.pchome.com.tw/prod/DPAC8U-A900G9OOU",
+    "status": "ok",
+    "note": "ForSale qty 18 low null"
   },
   {
     "it": "dishwasher",
@@ -325,7 +388,7 @@
   },
   {
     "it": "water_dispenser",
-    "opt": "water_oasis_fizz401",
+    "opt": "oasis_fizz_401",
     "model": "LUXES-FIZZ-401",
     "type": "momo",
     "url": "https://www.momoshop.com.tw/goods/GoodsDetail.jsp?i_code=13048533",
@@ -334,7 +397,7 @@
   },
   {
     "it": "water_dispenser",
-    "opt": "water_oasis_fizz401",
+    "opt": "oasis_fizz_401",
     "model": "LUXES-FIZZ-401",
     "type": "pchome",
     "url": "https://24h.pchome.com.tw/prod/DMCI01-A900I4EU0",
@@ -343,7 +406,7 @@
   },
   {
     "it": "water_dispenser",
-    "opt": "water_oasis_fizz401",
+    "opt": "oasis_fizz_401",
     "model": "LUXES-FIZZ-401",
     "type": "official",
     "url": "https://shop.hengstyle.com/SalePage/Index/9976090",
@@ -352,62 +415,8 @@
   },
   {
     "it": "water_dispenser",
-    "opt": "water_modular_3temp_soda",
-    "model": "UR-3902AW-1 ＋ SodaStream ART",
-    "type": "momo",
-    "url": "https://www.momoshop.com.tw/goods/GoodsDetail.jsp?i_code=14013218",
-    "status": "mismatch?",
-    "note": "http 200 model not found in page"
-  },
-  {
-    "it": "water_dispenser",
-    "opt": "water_modular_3temp_soda",
-    "model": "UR-3902AW-1 ＋ SodaStream ART",
-    "type": "pchome",
-    "url": "https://24h.pchome.com.tw/prod/DMAWI0-A900ITF3M",
-    "status": "ok",
-    "note": "ForSale qty 20 low null"
-  },
-  {
-    "it": "water_dispenser",
-    "opt": "water_modular_3temp_soda",
-    "model": "UR-3902AW-1 ＋ SodaStream ART",
-    "type": "official",
-    "url": "https://acuowater.com.tw/product/ur-3902aw/",
-    "status": "ok",
-    "note": "http 200"
-  },
-  {
-    "it": "water_dispenser",
-    "opt": "water_modular_3temp_soda",
-    "model": "UR-3902AW-1 ＋ SodaStream ART",
-    "type": "momo",
-    "url": "https://www.momoshop.com.tw/goods/GoodsDetail.jsp?i_code=10071565",
-    "status": "mismatch?",
-    "note": "http 200 model not found in page"
-  },
-  {
-    "it": "water_dispenser",
-    "opt": "water_modular_3temp_soda",
-    "model": "UR-3902AW-1 ＋ SodaStream ART",
-    "type": "pchome",
-    "url": "https://24h.pchome.com.tw/prod/DMAWGY-A900HF5JT",
-    "status": "ok",
-    "note": "ForSale qty 13 low null"
-  },
-  {
-    "it": "water_dispenser",
-    "opt": "water_modular_3temp_soda",
-    "model": "UR-3902AW-1 ＋ SodaStream ART",
-    "type": "official",
-    "url": "https://www.sodastream.com.tw/catalog/ins.php?index_id=91",
-    "status": "mismatch?",
-    "note": "http 200 model not found in page"
-  },
-  {
-    "it": "water_dispenser",
-    "opt": "water_oasis_3temp",
-    "model": "LUXES-COLD-301",
+    "opt": "oasis_cold301_sodastream",
+    "model": "LUXES-COLD-301＋ART",
     "type": "momo",
     "url": "https://www.momoshop.com.tw/goods/GoodsDetail.jsp?i_code=13116710",
     "status": "ok",
@@ -415,8 +424,8 @@
   },
   {
     "it": "water_dispenser",
-    "opt": "water_oasis_3temp",
-    "model": "LUXES-COLD-301",
+    "opt": "oasis_cold301_sodastream",
+    "model": "LUXES-COLD-301＋ART",
     "type": "pchome",
     "url": "https://24h.pchome.com.tw/prod/DMCI01-A900I4ERS",
     "status": "ok",
@@ -424,26 +433,8 @@
   },
   {
     "it": "water_dispenser",
-    "opt": "water_oasis_3temp",
-    "model": "LUXES-COLD-301",
-    "type": "official",
-    "url": "https://shop.hengstyle.com/SalePage/Index/10123858",
-    "status": "mismatch?",
-    "note": "http 200 model not found in page"
-  },
-  {
-    "it": "water_dispenser",
-    "opt": "water_oasis_3temp",
-    "model": "LUXES-COLD-301",
-    "type": "momo",
-    "url": "https://www.momoshop.com.tw/goods/GoodsDetail.jsp?i_code=10071565",
-    "status": "mismatch?",
-    "note": "http 200 model not found in page"
-  },
-  {
-    "it": "water_dispenser",
-    "opt": "water_oasis_3temp",
-    "model": "LUXES-COLD-301",
+    "opt": "oasis_cold301_sodastream",
+    "model": "LUXES-COLD-301＋ART",
     "type": "pchome",
     "url": "https://24h.pchome.com.tw/prod/DMAWGY-A900HF5JT",
     "status": "ok",
@@ -451,16 +442,52 @@
   },
   {
     "it": "water_dispenser",
-    "opt": "water_oasis_3temp",
-    "model": "LUXES-COLD-301",
+    "opt": "oasis_cold301_sodastream",
+    "model": "LUXES-COLD-301＋ART",
     "type": "official",
-    "url": "https://www.sodastream.com.tw/catalog/ins.php?index_id=91",
+    "url": "https://shop.hengstyle.com/SalePage/Index/10123858",
     "status": "mismatch?",
     "note": "http 200 model not found in page"
   },
   {
+    "it": "water_dispenser",
+    "opt": "uw_3902aw_sodastream",
+    "model": "UR-3902AW-1＋ART",
+    "type": "momo",
+    "url": "https://www.momoshop.com.tw/goods/GoodsDetail.jsp?i_code=14013218",
+    "status": "mismatch?",
+    "note": "http 200 model not found in page"
+  },
+  {
+    "it": "water_dispenser",
+    "opt": "uw_3902aw_sodastream",
+    "model": "UR-3902AW-1＋ART",
+    "type": "pchome",
+    "url": "https://24h.pchome.com.tw/prod/DMAWI0-A900ITF3M",
+    "status": "ok",
+    "note": "ForSale qty 20 low null"
+  },
+  {
+    "it": "water_dispenser",
+    "opt": "uw_3902aw_sodastream",
+    "model": "UR-3902AW-1＋ART",
+    "type": "pchome",
+    "url": "https://24h.pchome.com.tw/prod/DMAWGY-A900HF5JT",
+    "status": "ok",
+    "note": "ForSale qty 13 low null"
+  },
+  {
+    "it": "water_dispenser",
+    "opt": "uw_3902aw_sodastream",
+    "model": "UR-3902AW-1＋ART",
+    "type": "official",
+    "url": "https://acuowater.com.tw/product/ur-3902aw/",
+    "status": "ok",
+    "note": "http 200"
+  },
+  {
     "it": "softener",
-    "opt": "soft_bwt_bewamat75a",
+    "opt": "bwt_bewamat_75a",
     "model": "Bewamat 75A",
     "type": "pchome",
     "url": "https://24h.pchome.com.tw/prod/QBAU0O-A90065T09",
@@ -469,25 +496,25 @@
   },
   {
     "it": "softener",
-    "opt": "soft_bwt_bewamat75a",
+    "opt": "bwt_bewamat_75a",
     "model": "Bewamat 75A",
     "type": "other",
-    "url": "https://tw.buy.yahoo.com/gdsale/BWT%E5%BE%B7%E5%9C%8B%E5%80%8D%E4%B8%96-%E6%99%BA%E6%85%A7%E5%9E%8B%E8%BB%9F%E6%B0%B4%E6%A9%9F-Bewamat-75A-9802288.html",
-    "status": "ok",
-    "note": "http 200"
+    "url": "https://shop.wqp-water.com.tw/products/bwt-75a-%E8%BB%9F%E6%B0%B4%E6%A9%9F",
+    "status": "dead",
+    "note": "http 404"
   },
   {
     "it": "softener",
-    "opt": "soft_3m_sft200",
+    "opt": "m3_sft200",
     "model": "SFT-200",
-    "type": "official",
-    "url": "https://shop.3m.com.tw/SalePage/Index/11013225",
+    "type": "momo",
+    "url": "https://www.momoshop.com.tw/goods/GoodsDetail.jsp?i_code=14779269",
     "status": "ok",
     "note": "http 200"
   },
   {
     "it": "softener",
-    "opt": "soft_3m_sft200",
+    "opt": "m3_sft200",
     "model": "SFT-200",
     "type": "momo",
     "url": "https://www.momoshop.com.tw/goods/GoodsDetail.jsp?i_code=14520267",
@@ -496,7 +523,16 @@
   },
   {
     "it": "softener",
-    "opt": "soft_3m_sft150",
+    "opt": "m3_sft200",
+    "model": "SFT-200",
+    "type": "official",
+    "url": "https://shop.3m.com.tw/SalePage/Index/11013225",
+    "status": "ok",
+    "note": "http 200"
+  },
+  {
+    "it": "softener",
+    "opt": "m3_sft150",
     "model": "SFT-150",
     "type": "momo",
     "url": "https://www.momoshop.com.tw/goods/GoodsDetail.jsp?i_code=13230158",
@@ -505,7 +541,7 @@
   },
   {
     "it": "softener",
-    "opt": "soft_3m_sft150",
+    "opt": "m3_sft150",
     "model": "SFT-150",
     "type": "official",
     "url": "https://shop.3m.com.tw/SalePage/Index/10138623",
@@ -514,8 +550,8 @@
   },
   {
     "it": "toilet",
-    "opt": "toilet_neorest_ls_ces87120gtw",
-    "model": "NEOREST LS CES87120GTW",
+    "opt": "toto_neorest_ls_ces87120gtw",
+    "model": "CES87120GTW",
     "type": "pchome",
     "url": "https://24h.pchome.com.tw/prod/DEDW02-A900K5B4X",
     "status": "ok",
@@ -523,8 +559,8 @@
   },
   {
     "it": "toilet",
-    "opt": "toilet_neorest_ls_ces87120gtw",
-    "model": "NEOREST LS CES87120GTW",
+    "opt": "toto_neorest_ls_ces87120gtw",
+    "model": "CES87120GTW",
     "type": "official",
     "url": "https://www.twtoto.com.tw/product-detail.aspx?mid=1&id=2810",
     "status": "ok",
@@ -532,8 +568,8 @@
   },
   {
     "it": "toilet",
-    "opt": "toilet_neorest_as_ces85510gtw",
-    "model": "NEOREST AS CES85510GTW",
+    "opt": "toto_neorest_as_ces85510gtw",
+    "model": "CES85510GTW",
     "type": "pchome",
     "url": "https://24h.pchome.com.tw/prod/DEDW02-A900K5B9K",
     "status": "ok",
@@ -541,8 +577,8 @@
   },
   {
     "it": "toilet",
-    "opt": "toilet_neorest_as_ces85510gtw",
-    "model": "NEOREST AS CES85510GTW",
+    "opt": "toto_neorest_as_ces85510gtw",
+    "model": "CES85510GTW",
     "type": "official",
     "url": "https://www.twtoto.com.tw/product-detail.aspx?mid=1&id=2811",
     "status": "ok",
@@ -550,8 +586,8 @@
   },
   {
     "it": "toilet",
-    "opt": "toilet_neorest_rs_ces83410gtw",
-    "model": "NEOREST RS CES83410GTW",
+    "opt": "toto_neorest_rs_ces83410gtw",
+    "model": "CES83410GTW",
     "type": "pchome",
     "url": "https://24h.pchome.com.tw/prod/DEDW02-A900K5BBS",
     "status": "ok",
@@ -559,8 +595,8 @@
   },
   {
     "it": "toilet",
-    "opt": "toilet_neorest_rs_ces83410gtw",
-    "model": "NEOREST RS CES83410GTW",
+    "opt": "toto_neorest_rs_ces83410gtw",
+    "model": "CES83410GTW",
     "type": "official",
     "url": "https://www.twtoto.com.tw/product-detail.aspx?mid=1&id=2812",
     "status": "ok",
@@ -568,8 +604,8 @@
   },
   {
     "it": "toilet",
-    "opt": "toilet_g5_ces75110atw",
-    "model": "G5 全自動馬桶 CES75110ATW",
+    "opt": "toto_g5_ces75110atw",
+    "model": "CES75110ATW",
     "type": "official",
     "url": "https://www.twtoto.com.tw/product-detail.aspx?mid=1&id=2536",
     "status": "ok",
@@ -577,8 +613,17 @@
   },
   {
     "it": "toilet",
-    "opt": "toilet_set_ccw288s7aa",
-    "model": "CCW288S7AA 套組（CW288 馬桶＋S7 旗艦便座＋洗淨裝置）",
+    "opt": "toto_g5_ces75110atw",
+    "model": "CES75110ATW",
+    "type": "other",
+    "url": "https://shihjie.com/product-info.php?id=10088",
+    "status": "error",
+    "note": "This operation was aborted"
+  },
+  {
+    "it": "toilet",
+    "opt": "toto_ccw288s7aa",
+    "model": "CCW288S7AA",
     "type": "momo",
     "url": "https://www.momoshop.com.tw/goods/GoodsDetail.jsp?i_code=15239925",
     "status": "ok",
@@ -586,52 +631,16 @@
   },
   {
     "it": "toilet",
-    "opt": "toilet_set_ccw288s7aa",
-    "model": "CCW288S7AA 套組（CW288 馬桶＋S7 旗艦便座＋洗淨裝置）",
+    "opt": "toto_ccw288s7aa",
+    "model": "CCW288S7AA",
     "type": "official",
     "url": "https://www.twtoto.com.tw/product-detail.aspx?mid=1&id=2926",
     "status": "ok",
     "note": "http 200"
   },
   {
-    "it": "toilet",
-    "opt": "toilet_set_ccw288s7aa",
-    "model": "CCW288S7AA 套組（CW288 馬桶＋S7 旗艦便座＋洗淨裝置）",
-    "type": "momo",
-    "url": "https://www.momoshop.com.tw/goods/GoodsDetail.jsp?i_code=12288626",
-    "status": "mismatch?",
-    "note": "http 200 model not found in page"
-  },
-  {
-    "it": "toilet",
-    "opt": "toilet_set_ccw288s7aa",
-    "model": "CCW288S7AA 套組（CW288 馬桶＋S7 旗艦便座＋洗淨裝置）",
-    "type": "pchome",
-    "url": "https://24h.pchome.com.tw/prod/DMAL6I-A900JEKAD",
-    "status": "ok",
-    "note": "ForSale qty 2 low null"
-  },
-  {
-    "it": "toilet",
-    "opt": "toilet_set_ccw288s7aa",
-    "model": "CCW288S7AA 套組（CW288 馬桶＋S7 旗艦便座＋洗淨裝置）",
-    "type": "official",
-    "url": "https://www.twtoto.com.tw/product-detail.aspx?mid=2&id=2930",
-    "status": "mismatch?",
-    "note": "http 200 model not found in page"
-  },
-  {
     "it": "bath_heater",
-    "opt": "heater_mitsubishi_v251bztwn",
-    "model": "V-251BZ-TWN",
-    "type": "momo",
-    "url": "https://www.momoshop.com.tw/goods/GoodsDetail.jsp?i_code=8437790",
-    "status": "ok",
-    "note": "http 200"
-  },
-  {
-    "it": "bath_heater",
-    "opt": "heater_mitsubishi_v251bztwn",
+    "opt": "mitsubishi_v251bz_twn",
     "model": "V-251BZ-TWN",
     "type": "pchome",
     "url": "https://24h.pchome.com.tw/prod/DPAL3O-A900K8KTZ",
@@ -640,7 +649,25 @@
   },
   {
     "it": "bath_heater",
-    "opt": "heater_panasonic_fv40buy1w",
+    "opt": "mitsubishi_v251bz_twn",
+    "model": "V-251BZ-TWN",
+    "type": "momo",
+    "url": "https://www.momoshop.com.tw/goods/GoodsDetail.jsp?i_code=8437790",
+    "status": "ok",
+    "note": "http 200"
+  },
+  {
+    "it": "bath_heater",
+    "opt": "mitsubishi_v251bz_twn",
+    "model": "V-251BZ-TWN",
+    "type": "other",
+    "url": "https://www.daguan-tech.com.tw/product/v-151bz-twn-v-251bz-twn/",
+    "status": "blocked",
+    "note": "http 403"
+  },
+  {
+    "it": "bath_heater",
+    "opt": "panasonic_fv40buy1w",
     "model": "FV-40BUY1W",
     "type": "momo",
     "url": "https://www.momoshop.com.tw/goods/GoodsDetail.jsp?i_code=11072198",
@@ -649,7 +676,7 @@
   },
   {
     "it": "bath_heater",
-    "opt": "heater_panasonic_fv40buy1w",
+    "opt": "panasonic_fv40buy1w",
     "model": "FV-40BUY1W",
     "type": "pchome",
     "url": "https://24h.pchome.com.tw/prod/DPAL3M-A900BTWEY",
@@ -658,17 +685,44 @@
   },
   {
     "it": "bath_heater",
-    "opt": "heater_delta_vhb30bcmrta",
-    "model": "VHB30BCMRT-A（無線）／VHB30BCMT-AD（有線）",
-    "type": "momo",
-    "url": "https://www.momoshop.com.tw/goods/GoodsDetail.jsp?i_code=8381731",
+    "opt": "panasonic_fv40buy1w",
+    "model": "FV-40BUY1W",
+    "type": "other",
+    "url": "https://www.tsannbo.com/product.php?act=view&no=33",
     "status": "ok",
     "note": "http 200"
   },
   {
     "it": "bath_heater",
-    "opt": "heater_delta_vhb30bcmrta",
-    "model": "VHB30BCMRT-A（無線）／VHB30BCMT-AD（有線）",
+    "opt": "delta_vhb30bcmt_ad",
+    "model": "VHB30BCMT-AD",
+    "type": "momo",
+    "url": "https://www.momoshop.com.tw/goods/GoodsDetail.jsp?i_code=9758064",
+    "status": "ok",
+    "note": "http 200"
+  },
+  {
+    "it": "bath_heater",
+    "opt": "delta_vhb30bcmt_ad",
+    "model": "VHB30BCMT-AD",
+    "type": "pchome",
+    "url": "https://24h.pchome.com.tw/prod/DMAZ67-A900BSZZ7",
+    "status": "ok",
+    "note": "ForSale qty 20 low null"
+  },
+  {
+    "it": "bath_heater",
+    "opt": "delta_vhb30bcmt_ad",
+    "model": "VHB30BCMT-AD",
+    "type": "official",
+    "url": "https://www.deltaww.com/zh-tw/products/Heater-Fan/3251",
+    "status": "ok",
+    "note": "http 200"
+  },
+  {
+    "it": "bath_heater",
+    "opt": "delta_vhb30bcmrt_a",
+    "model": "VHB30BCMRT-A",
     "type": "pchome",
     "url": "https://24h.pchome.com.tw/prod/DPAL3O-A900HYXY7",
     "status": "ok",
@@ -676,30 +730,21 @@
   },
   {
     "it": "bath_heater",
-    "opt": "heater_delta_vhb30bcmrta",
-    "model": "VHB30BCMRT-A（無線）／VHB30BCMT-AD（有線）",
-    "type": "official",
-    "url": "https://www.deltaww.com/zh-TW/products/Heater-Fan/VHB300",
+    "opt": "delta_vhb30bcmrt_a",
+    "model": "VHB30BCMRT-A",
+    "type": "momo",
+    "url": "https://www.momoshop.com.tw/goods/GoodsDetail.jsp?i_code=8381731",
     "status": "ok",
     "note": "http 200"
   },
   {
     "it": "bath_heater",
-    "opt": "heater_delta_vhb30bcmrta",
-    "model": "VHB30BCMRT-A（無線）／VHB30BCMT-AD（有線）",
-    "type": "momo",
-    "url": "https://www.momoshop.com.tw/goods/GoodsDetail.jsp?i_code=9758064",
-    "status": "mismatch?",
-    "note": "http 200 model not found in page"
-  },
-  {
-    "it": "bath_heater",
-    "opt": "heater_delta_vhb30bcmrta",
-    "model": "VHB30BCMRT-A（無線）／VHB30BCMT-AD（有線）",
-    "type": "pchome",
-    "url": "https://24h.pchome.com.tw/prod/DMAZ67-A900BSZZ7",
+    "opt": "delta_vhb30bcmrt_a",
+    "model": "VHB30BCMRT-A",
+    "type": "official",
+    "url": "https://www.deltaww.com/zh-tw/products/Heater-Fan/3251",
     "status": "ok",
-    "note": "ForSale qty 20 low null"
+    "note": "http 200"
   },
   {
     "it": "tv",
