@@ -289,6 +289,11 @@ function verifyPoints(it) {
   const manual = (it.verify || []).filter(v => v && v.text);
   return manual.length ? manual : autoVerify(it);
 }
+/* 實務經驗提醒：規格上塞得下、現場不見得裝得進去。
+   例如櫥下飲水機照原廠 500×250 mm 規劃，遇到水槽盆體與存水彎就放不下。
+   這類提醒是人工寫在目錄的 it.tolerance，跟 verify（數字互相矛盾）分開顯示。 */
+function tolerancePoints(it) { return (it.tolerance || []).filter(v => v && v.text); }
+const hasAlerts = it => verifyPoints(it).length > 0 || tolerancePoints(it).length > 0;
 const profileOf = id => state.profiles[id] || state.profiles.family;
 function canEdit() { return role === 'family'; }
 function knownNames() { const names = new Set(); (state.history || []).forEach(e => e.who && names.add(e.who)); state.items.forEach(it => (it.notes || []).forEach(n => n.who && names.add(n.who))); return [...names]; }
@@ -414,7 +419,7 @@ function normalize(s) {
     if (it.status === 'decided' && !it.picks.length) it.status = 'choosing'; });
   return s;
 }
-const CATALOG_ITEM_FIELDS = ['name', 'short', 'hardReq', 'advice', 'warnings', 'install', 'costNotes', 'pickOptionId', 'pickReason', 'roomId', 'defaultQty', 'installCost', 'verify'];
+const CATALOG_ITEM_FIELDS = ['name', 'short', 'hardReq', 'advice', 'warnings', 'install', 'costNotes', 'pickOptionId', 'pickReason', 'roomId', 'defaultQty', 'installCost', 'verify', 'tolerance'];
 const CATALOG_OPTION_FIELDS = ['key', 'tier', 'brand', 'model', 'name', 'highlights', 'dims', 'cutout', 'power', 'weight', 'other', 'price', 'links', 'availability', 'storeName', 'researchNote', 'checkedAt', 'cmpKeyword', 'reviews'];
 function mergeCatalog(remote, seed) {
   remote.meta = Object.assign({}, remote.meta, seed.meta); remote.profiles = clone(seed.profiles); remote.rooms = clone(seed.rooms); remote.budget = clone(seed.budget);

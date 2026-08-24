@@ -385,12 +385,24 @@ dialog.tut h2 { font-family: var(--display); font-weight: 700; }
 .doc details.hidden-notes ul { margin: 0 0 .6rem; padding-left: 1.1rem; }
 
 /* 施工前必須確認：資料本身有矛盾或缺漏的地方，螢幕與紙本都要跳出來 */
-.doc .verify { border: 1px solid var(--attn); border-left: 6px solid var(--attn); border-radius: var(--radius-sm);
+.verify { border: 1px solid var(--attn); border-left: 6px solid var(--attn); border-radius: var(--radius-sm);
   background: var(--attn-soft); padding: .6rem .8rem; display: flex; flex-direction: column; gap: .35rem;
   -webkit-print-color-adjust: exact; print-color-adjust: exact; break-inside: avoid; }
-.doc .verify .vhead { display: flex; align-items: center; gap: .35rem; font-weight: 800; color: var(--attn); font-size: .96rem; }
-.doc .verify .vhead svg { width: 1.05rem; height: 1.05rem; }
-.doc .verify ul { margin: 0; padding-left: 1.15rem; font-size: .9rem; line-height: 1.55; }
-.doc .verify li + li { margin-top: .3rem; }
-.doc .verify-top { border-width: 2px; border-left-width: 8px; }
-.doc .verify-top .vhead { font-size: 1.1rem; }
+.verify .vhead { display: flex; align-items: center; gap: .35rem; font-weight: 800; color: var(--attn); font-size: .96rem; }
+.verify .vhead svg { width: 1.05rem; height: 1.05rem; }
+.verify ul { margin: 0; padding-left: 1.15rem; font-size: .9rem; line-height: 1.55; }
+.verify li + li { margin-top: .3rem; }
+.verify-top { border-width: 2px; border-left-width: 8px; }
+.verify-top .vhead { font-size: 1.1rem; }
+
+/* 預留彈性（實務提醒）：跟「必須確認」分開，用品牌色而不是警示黃 */
+.tol { border: 1px solid var(--accent); border-left: 6px solid var(--accent); border-radius: var(--radius-sm);
+  background: var(--accent-soft); padding: .6rem .8rem; display: flex; flex-direction: column; gap: .35rem;
+  -webkit-print-color-adjust: exact; print-color-adjust: exact; break-inside: avoid; }
+.tol .vhead { display: flex; align-items: center; gap: .35rem; font-weight: 800; color: var(--accent-deep); font-size: .96rem; }
+.tol .vhead svg { width: 1.05rem; height: 1.05rem; }
+.tol ul { margin: 0; padding-left: 1.15rem; font-size: .9rem; line-height: 1.55; }
+.tol li + li { margin-top: .3rem; }
+.tol-top { border-width: 2px; border-left-width: 8px; }
+.tol-top .vhead { font-size: 1.1rem; }
+.chip.tag-alert, .tag-alert { background: var(--attn-soft); color: var(--attn); border-color: var(--attn); font-weight: 800; }
