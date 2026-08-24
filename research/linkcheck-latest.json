@@ -222,7 +222,7 @@
     "type": "pchome",
     "url": "https://24h.pchome.com.tw/prod/DPAC1T-A900GB0L3",
     "status": "ok",
-    "note": "ForSale qty 20 low 22792"
+    "note": "ForSale qty 20 low 23310"
   },
   {
     "it": "freezer",
@@ -267,7 +267,7 @@
     "type": "pchome",
     "url": "https://24h.pchome.com.tw/prod/DPAC8U-A900ICAXH",
     "status": "ok",
-    "note": "ForSale qty 6 low 13688"
+    "note": "ForSale qty 5 low 13688"
   },
   {
     "it": "freezer",
@@ -496,15 +496,6 @@
   },
   {
     "it": "softener",
-    "opt": "bwt_bewamat_75a",
-    "model": "Bewamat 75A",
-    "type": "other",
-    "url": "https://shop.wqp-water.com.tw/products/bwt-75a-%E8%BB%9F%E6%B0%B4%E6%A9%9F",
-    "status": "dead",
-    "note": "http 404"
-  },
-  {
-    "it": "softener",
     "opt": "m3_sft200",
     "model": "SFT-200",
     "type": "momo",
@@ -545,6 +536,33 @@
     "model": "SFT-150",
     "type": "official",
     "url": "https://shop.3m.com.tw/SalePage/Index/10138623",
+    "status": "ok",
+    "note": "http 200"
+  },
+  {
+    "it": "softener",
+    "opt": "m3_vst150",
+    "model": "VST150",
+    "type": "momo",
+    "url": "https://www.momoshop.com.tw/product/14966176",
+    "status": "ok",
+    "note": "http 200"
+  },
+  {
+    "it": "softener",
+    "opt": "m3_vst150",
+    "model": "VST150",
+    "type": "official",
+    "url": "https://shop.3m.com.tw/SalePage/Index/11516654",
+    "status": "ok",
+    "note": "http 200"
+  },
+  {
+    "it": "softener",
+    "opt": "m3_vst150",
+    "model": "VST150",
+    "type": "other",
+    "url": "https://www.trplus.com.tw/p/026010842",
     "status": "ok",
     "note": "http 200"
   },
@@ -610,15 +628,6 @@
     "url": "https://www.twtoto.com.tw/product-detail.aspx?mid=1&id=2536",
     "status": "ok",
     "note": "http 200"
-  },
-  {
-    "it": "toilet",
-    "opt": "toto_g5_ces75110atw",
-    "model": "CES75110ATW",
-    "type": "other",
-    "url": "https://shihjie.com/product-info.php?id=10088",
-    "status": "error",
-    "note": "This operation was aborted"
   },
   {
     "it": "toilet",
@@ -777,15 +786,6 @@
     "it": "tv",
     "opt": "lg_oled77c5",
     "model": "OLED77C5PTA",
-    "type": "other",
-    "url": "https://tw.buy.yahoo.com/gdsale/11585986.html",
-    "status": "dead",
-    "note": "http 404"
-  },
-  {
-    "it": "tv",
-    "opt": "lg_oled77c5",
-    "model": "OLED77C5PTA",
     "type": "official",
     "url": "https://www.lg.com/tw/tv-soundbars/oled-evo/oled77c5pta/",
     "status": "ok",
@@ -843,7 +843,7 @@
     "type": "pchome",
     "url": "https://24h.pchome.com.tw/prod/DPAD06-A900J477W",
     "status": "ok",
-    "note": "ForSale qty 6 low 82710"
+    "note": "ForSale qty 6 low null"
   },
   {
     "it": "tv",
@@ -960,7 +960,7 @@
     "type": "pchome",
     "url": "https://24h.pchome.com.tw/prod/DMBL3E-A900JUP4D",
     "status": "ok",
-    "note": "ForSale qty 10 low null"
+    "note": "ForSale qty 9 low null"
   },
   {
     "it": "robot_vacuum",
@@ -996,7 +996,7 @@
     "type": "pchome",
     "url": "https://24h.pchome.com.tw/prod/DMBL0L-A900JRDAS",
     "status": "ok",
-    "note": "ForSale qty 7 low null"
+    "note": "ForSale qty 6 low null"
   },
   {
     "it": "robot_vacuum",
@@ -1023,7 +1023,7 @@
     "type": "pchome",
     "url": "https://24h.pchome.com.tw/prod/DQAT1H-A900I5LFR",
     "status": "ok",
-    "note": "ForSale qty 2 low null"
+    "note": "ForSale qty 2 low 29450"
   },
   {
     "it": "door_lock",
@@ -1096,15 +1096,6 @@
     "url": "https://www.chlifemall.com/products/%EF%BC%BBdaikin-%E5%A4%A7%E9%87%91%EF%BC%BD13-15%E5%9D%AA-%E5%96%AE%E7%9B%B8220v-zeas%E9%9A%B1%E8%97%8F%E5%9E%8B-%E4%B8%80%E5%B0%8D%E4%B8%80%E5%88%86%E9%9B%A2%E5%BC%8F%E8%AE%8A%E9%A0%BB%E5%86%B7%E6%B0%A3-rzac100dvltfba100bvlt",
     "status": "ok",
     "note": "http 200"
-  },
-  {
-    "it": "ac_living",
-    "opt": "daikin_zeas_rzac100dvlt",
-    "model": "RZAC100DVLT/FBA100BVLT",
-    "type": "other",
-    "url": "https://shop.jj2929.com.tw/product_view.php?id=41235",
-    "status": "error",
-    "note": "This operation was aborted"
   },
   {
     "it": "ac_living",

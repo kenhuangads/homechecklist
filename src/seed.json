@@ -2755,6 +2755,63 @@
           "cmpKeyword": "3M SFT-150",
           "note": "",
           "checkedAt": "2026-08-23"
+        },
+        {
+          "id": "m3_vst150",
+          "key": "m3_vst150",
+          "tier": "替代方案",
+          "brand": "3M",
+          "model": "VST150",
+          "name": "3M VST150 全戶式軟水機（含贈 BFS3-40BK 前置反洗）",
+          "highlights": [
+            "同樣含前置反洗，比 SFT-150 便宜 9,000 元",
+            "高 72 cm、23 kg，比 SFT-200 矮 40 cm 好放",
+            "智能控制閥、自動缺鹽提醒、抽屜式鹽蓋"
+          ],
+          "dims": "長 380 × 寬 530 × 高 720 mm，23.0 kg（特力屋規格表）",
+          "cutout": "進出水 3/4 吋；前方需留加鹽與維修空間（原廠未標數值，建議比照 SFT 系列抓 500–600 mm）",
+          "power": "110V（原廠未公布耗電；SFT 系列控制閥約 20W 可參考）",
+          "weight": "23.0 kg（未含鹽與水）",
+          "other": "1 年保固；產地中國。「工作流量原廠與各通路皆未公布」——SFT-150 為 1.5 噸/時、SFT-200 為 2.0 噸/時，而 VST 系列目前最高只到 VST150、沒有 VST200。三衛浴同時用水撐不撐得住取決於這個數字，下單前務必向經銷商問到。",
+          "price": {
+            "amount": 65900,
+            "min": 65900,
+            "max": 77900,
+            "source": "momo",
+            "checkedAt": "2026-08-24",
+            "note": "MOMO、3M 官方旗艦店、特力屋同為 65,900（3M 官網原價 77,900），三家皆含贈 BFS3-40BK 前置反洗"
+          },
+          "links": [
+            {
+              "type": "momo",
+              "url": "https://www.momoshop.com.tw/product/14966176",
+              "verified": true,
+              "note": "",
+              "checkedAt": "2026-08-24",
+              "stock": "ok"
+            },
+            {
+              "type": "official",
+              "url": "https://shop.3m.com.tw/SalePage/Index/11516654",
+              "verified": true,
+              "note": "3M 官方旗艦店",
+              "checkedAt": "2026-08-24",
+              "stock": "ok"
+            },
+            {
+              "type": "other",
+              "url": "https://www.trplus.com.tw/p/026010842",
+              "label": "特力屋（含規格表）",
+              "verified": true,
+              "note": "唯一查得到尺寸重量的通路",
+              "checkedAt": "2026-08-24",
+              "stock": "ok"
+            }
+          ],
+          "availability": "in_stock",
+          "reviews": null,
+          "cmpKeyword": "3M VST150",
+          "researchNote": "2026-08-24 補查。3M 官方旗艦店站內已無 SFT-150 單機頁，該位置（商品編號 11516654）改為 VST150，研判為世代更新。未做網友口碑查證。"
         }
       ],
       "notes": [],
@@ -2786,6 +2843,12 @@
         {
           "id": "softener_r5",
           "text": "決定 SFT-200 或 SFT-150（差約 1.6 萬）",
+          "done": false,
+          "for": "family"
+        },
+        {
+          "id": "softener_vst1",
+          "text": "問經銷商 VST150 工作流量幾噸/時（比 SFT-200 便宜 2.5 萬）",
           "done": false,
           "for": "family"
         }
@@ -6866,5 +6929,5 @@
   },
   "history": [],
   "todos": [],
-  "catalogVersion": 2026082408
+  "catalogVersion": 2026082409
 }
