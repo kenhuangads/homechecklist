@@ -160,7 +160,7 @@ function renderList() {
       h('div', { class: 'table-wrap only-wide' }, h('table', { class: 'ctable', style: 'min-width:420px' }, h('thead', {}, h('tr', {}, h('th', {}, '品項'), h('th', {}, '數量'), h('th', {}, '高CP值'), h('th', {}, '高級'), h('th', {}, '頂級'))),
         h('tbody', {}, active.map(i => h('tr', {}, h('td', {}, i.name), h('td', {}, i.defaultQty || 1), ['cp', 'mid', 'top'].map(k => { const v = tierEstimate(i, k); return h('td', {}, v == null ? '—' : (v * (i.defaultQty || 1)).toLocaleString('en-US')); })))))),
       h('p', { class: 'tiny' }, state.budget.note))));
-  state.rooms.forEach(r => { const its = items.filter(i => i.roomId === r.id); if (its.length) out.push(h('section', { class: 'stack' }, roomHeader(r, its.length), its.map(itemRow))); });
+  state.rooms.forEach(r => { const its = items.filter(i => i.roomId === r.id); if (its.length) out.push(h('section', { class: 'stack rooms' }, roomHeader(r, its.length), its.map(itemRow))); });
   out.push(h('p', { class: 'tiny', style: 'text-align:center' }, state.meta.priceNote, prices && prices.checkedAt ? `（PChome 價格更新：${fmtDateShort(prices.checkedAt)}）` : ''));
   return out;
 }
