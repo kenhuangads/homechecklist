@@ -166,7 +166,7 @@ function renderList() {
 }
 function picksText(it, withPrice) {
   const ps = picksOf(it); if (!ps.length) return '';
-  const s = ps.map(p => `${p.option.model.split(/[（(]/)[0].trim()}${p.qty > 1 ? ' ×' + p.qty : ''}`).join('、');
+  const s = ps.map(p => `${p.option.model.split(/[（(]/)[0].trim()}${p.backup ? '（備案）' : (p.qty > 1 ? ' ×' + p.qty : '')}`).join('、');
   const t = itemTotal(it); return withPrice && t.n ? `${s}　${fmtMoney(t.sum)}` : s;
 }
 function itemRow(it) {
@@ -212,8 +212,10 @@ function renderItemBody(it) {
   const need = (it.defaultQty || 1) - pickCount(it);
   if (ps.length) out.push(h('div', { class: 'card tone-accent' }, h('div', { class: 'row between' }, h('div', { class: 'eyebrow' }, '我要買的'), h('span', { class: 'tiny' }, `共 ${pickCount(it)} 台`)),
     h('div', { class: 'stack-sm' }, ps.map(p => h('div', { class: 'pick-line' },
-      h('div', { class: 'grow' }, h('b', {}, `${p.option.brand} ${p.option.model}`.trim()), prof.show.price ? h('div', { class: 'small muted' }, priceValue(effectivePrice(p.option)) != null ? `${fmtMoney(priceValue(effectivePrice(p.option)))} × ${p.qty} ＝ ${fmtMoney(priceValue(effectivePrice(p.option)) * p.qty)}` : '價格待查') : null),
-      editable ? stepper(it, p.option, true) : h('span', { class: 'chip s-decided' }, `${p.qty} 台`)))),
+      h('div', { class: 'grow' }, h('b', {}, `${p.option.brand} ${p.option.model}`.trim()), p.backup ? [' ', chip('備案', 'tag tag-backup')] : null, prof.show.price ? h('div', { class: 'small muted' }, priceValue(effectivePrice(p.option)) == null ? '價格待查' : p.backup ? `${fmtMoney(priceValue(effectivePrice(p.option)))}（備案，不計入預算）` : `${fmtMoney(priceValue(effectivePrice(p.option)))} × ${p.qty} ＝ ${fmtMoney(priceValue(effectivePrice(p.option)) * p.qty)}`) : null),
+      editable ? h('div', { class: 'pick-actions' }, stepper(it, p.option, true),
+        h('button', { class: 'linkbtn tiny', type: 'button', onclick: () => dispatch({ type: 'setPickBackup', itemId: it.id, optionId: p.option.id, backup: !p.backup }) }, p.backup ? '改回要買' : '設為備案'))
+        : h('span', { class: 'chip s-decided' }, p.backup ? '備案' : `${p.qty} 台`)))),
     prof.show.price && total.n && ps.length > 1 ? h('div', { class: 'row between', style: 'border-top:1px solid var(--line);padding-top:.4rem' }, h('b', {}, '合計'), h('span', { class: 'price' }, fmtMoney(total.sum))) : null,
     prof.show.price && it.installCost ? h('div', { class: 'row between', style: 'border-top:1px dashed var(--line);padding-top:.4rem' }, h('span', { class: 'small' }, '另加安裝工程'), h('b', { class: 'small' }, installText(it.installCost))) : null,
     need > 0 ? h('div', { class: 'banner warn small', style: 'margin-top:.2rem' }, icon('info'), h('div', {}, `建議 ${it.defaultQty} 台，還差 ${need} 台。可以按同一款的「＋」，或到下面選別款混搭。`)) : null));
@@ -474,7 +476,7 @@ function docItem(i, p) {
       hl.length ? h('ul', { class: 'small muted', style: 'margin:.2rem 0' }, hl.map(x => h('li', {}, x))) : null,
       rows.length ? h('table', {}, h('tbody', {}, rows.map(([k, v]) => h('tr', {}, h('th', {}, k), h('td', {}, v))))) : null, p.show.links ? linkButtons(opt) : null);
   };
-  if (ps.length) ps.forEach(pk => el.append(optBlock(pk.option, '選定', pk.qty)));
+  if (ps.length) ps.forEach(pk => el.append(optBlock(pk.option, pk.backup ? '備案（買不到首選才用）' : '選定', pk.backup ? 1 : pk.qty)));
   else if (p.show.options && i.options.length) { el.append(h('div', { class: 'small muted' }, '尚未決定，候選方案：')); sortedOptions(i).forEach(opt => el.append(optBlock(opt))); }
   else el.append(h('div', { class: 'small muted' }, '尚未決定型號'));
   if (p.show.install && i.install.length) {

@@ -172,11 +172,13 @@ let syncedRev = 0, remoteStatus = 'unknown', lastSyncAt = null, lastPollAt = 0;
 
 const item = id => state.items.find(i => i.id === id);
 const room = id => state.rooms.find(r => r.id === id);
-const picksOf = it => (it.picks || []).map(p => ({ option: it.options.find(o => o.id === p.optionId), qty: Number(p.qty) || 1 })).filter(p => p.option);
-const chosenOption = it => { const ps = picksOf(it); return ps.length ? ps[0].option : null; };
+const picksOf = it => (it.picks || []).map(p => ({ option: it.options.find(o => o.id === p.optionId), qty: Number(p.qty) || 1, backup: !!p.backup })).filter(p => p.option);
+/* 「備案」＝買不到首選時才會買的替代機型：不算台數、不計預算、不當作規格基準 */
+const realPicks = it => picksOf(it).filter(p => !p.backup);
+const chosenOption = it => { const ps = realPicks(it); const any = picksOf(it); return (ps[0] || any[0] || {}).option || null; };
 const pickQty = (it, optionId) => { const p = (it.picks || []).find(x => x.optionId === optionId); return p ? (Number(p.qty) || 1) : 0; };
-const pickCount = it => picksOf(it).reduce((n, p) => n + p.qty, 0);
-function itemTotal(it) { let sum = 0, n = 0; picksOf(it).forEach(p => { const v = priceValue(effectivePrice(p.option)); if (v != null) { sum += v * p.qty; n++; } }); return { sum, n }; }
+const pickCount = it => realPicks(it).reduce((n, p) => n + p.qty, 0);
+function itemTotal(it) { let sum = 0, n = 0; realPicks(it).forEach(p => { const v = priceValue(effectivePrice(p.option)); if (v != null) { sum += v * p.qty; n++; } }); return { sum, n }; }
 const familyTodos = it => (it.todos || []).filter(t => t.for === 'family');
 const designerTodos = it => (it.todos || []).filter(t => t.for !== 'family');
 function installRange(items) { let min = 0, max = 0, n = 0; (items || []).forEach(i => { const c = i.installCost; if (!c) return; const lo = typeof c.min === 'number' ? c.min : (typeof c.max === 'number' ? c.max : 0); const hi = typeof c.max === 'number' ? c.max : lo; if (!lo && !hi) return; min += lo; max += hi; n++; }); return { min, max, n }; }
@@ -355,9 +357,11 @@ function reduce(action) {
       const qty = Math.max(0, Math.min(20, Number(a.qty) || 0)); const prev = pickQty(it, a.optionId);
       if (qty === prev) return null;
       const c = ch({ kind: 'item', id: it.id }, () => {
+        const prevPick = (it.picks || []).find(p => p.optionId === a.optionId);
         const picks = (it.picks || []).filter(p => p.optionId !== a.optionId);
-        if (qty > 0) { const idx = (it.picks || []).findIndex(p => p.optionId === a.optionId); if (idx >= 0) picks.splice(idx, 0, { optionId: a.optionId, qty }); else picks.push({ optionId: a.optionId, qty }); }
-        it.picks = picks; it.chosenOptionId = picks[0] ? picks[0].optionId : null;
+        if (qty > 0) { const entry = { optionId: a.optionId, qty }; if (prevPick && prevPick.backup) entry.backup = true;
+          const idx = (it.picks || []).findIndex(p => p.optionId === a.optionId); if (idx >= 0) picks.splice(idx, 0, entry); else picks.push(entry); }
+        it.picks = picks; const firstReal = picks.find(p => !p.backup) || picks[0]; it.chosenOptionId = firstReal ? firstReal.optionId : null;
         if (picks.length && it.status === 'choosing') it.status = 'decided'; if (!picks.length && it.status === 'decided') it.status = 'choosing';
       });
       const label = `${opt.brand} ${opt.model}`.trim();
@@ -365,6 +369,22 @@ function reduce(action) {
     }
     case 'addOption': { const it = item(a.itemId); if (!it || it.options.some(o => o.id === a.option.id)) return null; const c = ch({ kind: 'option', itemId: it.id, id: a.option.id }, () => { it.options.push(clone(a.option)); }); return { changes: [c], summary: `在「${it.name}」新增商品 ${a.option.model}` }; }
     case 'updateOption': { const it = item(a.itemId); if (!it) return null; const opt = it.options.find(o => o.id === a.optionId); if (!opt) return null; const c = ch({ kind: 'option', itemId: it.id, id: opt.id }, () => { Object.assign(opt, clone(a.patch)); }); return { changes: [c], summary: a.summary || `更新「${it.name}」${opt.model} 的資料` }; }
+    case 'setPickBackup': {
+      const it = item(a.itemId); if (!it) return null;
+      const opt = it.options.find(o => o.id === a.optionId); if (!opt) return null;
+      const cur = (it.picks || []).find(p => p.optionId === a.optionId); if (!cur) return null;
+      const backup = !!a.backup; if (!!cur.backup === backup) return null;
+      const c = ch({ kind: 'item', id: it.id }, () => {
+        it.picks = (it.picks || []).map(p => {
+          if (p.optionId !== a.optionId) return p;
+          const next = Object.assign({}, p); if (backup) next.backup = true; else delete next.backup; return next;
+        });
+        const first = it.picks.find(p => !p.backup) || it.picks[0];
+        it.chosenOptionId = first ? first.optionId : null;
+      });
+      const label = `${opt.brand} ${opt.model}`.trim();
+      return { changes: [c], summary: `「${it.name}」${label} ${backup ? '改為備案（買不到首選才用）' : '改回要買的機型'}` };
+    }
     case 'removeOption': { const it = item(a.itemId); if (!it) return null; const opt = it.options.find(o => o.id === a.optionId); if (!opt) return null; const c = ch({ kind: 'option', itemId: it.id, id: opt.id }, () => { it.options = it.options.filter(o => o.id !== opt.id); if (it.chosenOptionId === opt.id) it.chosenOptionId = null; }); return { changes: [c], summary: `從「${it.name}」移除商品 ${opt.model}` }; }
     case 'addNote': { const it = item(a.itemId); if (!it) return null; it.notes = it.notes || []; if (it.notes.some(n => n.id === a.note.id)) return null; const c = ch({ kind: 'note', itemId: it.id, id: a.note.id }, () => { it.notes.push(clone(a.note)); }); return { changes: [c], summary: `在「${it.name}」留言：${a.note.text.slice(0, 30)}${a.note.text.length > 30 ? '…' : ''}` }; }
     case 'removeNote': { const it = item(a.itemId); if (!it) return null; const c = ch({ kind: 'note', itemId: it.id, id: a.noteId }, () => { it.notes = (it.notes || []).filter(n => n.id !== a.noteId); }); if (!c.before) return null; return { changes: [c], summary: `刪除「${it.name}」的一則留言` }; }
