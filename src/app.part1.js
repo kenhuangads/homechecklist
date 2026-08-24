@@ -181,6 +181,79 @@ const familyTodos = it => (it.todos || []).filter(t => t.for === 'family');
 const designerTodos = it => (it.todos || []).filter(t => t.for !== 'family');
 function installRange(items) { let min = 0, max = 0, n = 0; (items || []).forEach(i => { const c = i.installCost; if (!c) return; const lo = typeof c.min === 'number' ? c.min : (typeof c.max === 'number' ? c.max : 0); const hi = typeof c.max === 'number' ? c.max : lo; if (!lo && !hi) return; min += lo; max += hi; n++; }); return { min, max, n }; }
 function installText(c) { if (!c) return ''; const lo = typeof c.min === 'number' ? c.min : null, hi = typeof c.max === 'number' ? c.max : null; if (lo == null && hi == null) return ''; if (lo != null && hi != null && lo !== hi) return `${fmtMoney(lo)}–${Math.round(hi).toLocaleString('en-US')}`; return fmtMoney(lo != null ? lo : hi); }
+/* ---- 只留「已決定機型」的安裝須知（設計師版）----
+   install 的文字是以「整個品項」為單位寫的，會同時交代好幾個候選機型的做法。
+   決定機型後，其他機型那幾句對設計師是雜訊、甚至會看錯電壓，所以在這裡濾掉。
+   規則保守：只有當「別的機型」出現在句子開頭附近、而且整句都沒提到選定機型時才隱藏，
+   像「先量地排管距（套組要 305~400 mm、NEOREST 要 305~435 mm）」這種主詞是通則的句子會留著。 */
+const BRAND_STOP = /^(通用|其他|標準|基本|美國|日本|台灣|德國|韓國|中國|義大|土耳|歐系|全戶)$/;
+function modelTokens(o) {
+  const out = new Set();
+  String((o && o.model) || '').split(/[\/\s、＋+]+/).forEach(seg => {
+    if (!/[A-Za-z]/.test(seg) || !/\d/.test(seg)) return;        // 型號要英數混合
+    if (/^[WHDwhd]?\d+\s*[×xX*]/.test(seg)) return;              // 尺寸不是型號
+    if (seg.length >= 3) out.add(seg);
+  });
+  (String((o && o.model) || '') + ' ' + String((o && o.name) || '')).split(/[^A-Za-z0-9-]+/)
+    .forEach(w => { if (/^[A-Z]{4,}$/.test(w)) out.add(w); });    // 產品線名，如 NEOREST
+  String((o && o.brand) || '').split(/[\s（()）]+/).forEach(b => {
+    b = b.trim(); if (!b || BRAND_STOP.test(b)) return;
+    if (/^[A-Za-z][A-Za-z&.\-]+$/.test(b) && b.length >= 3) out.add(b);
+    else if (/^[\u4e00-\u9fff]{2,}$/.test(b)) { out.add(b); const short = b.slice(0, 2); if (!BRAND_STOP.test(short)) out.add(short); }
+  });
+  return [...out];
+}
+const hasTok = (text, t) => text.toLowerCase().includes(t.toLowerCase());
+const sentences = text => String(text || '').split(/(?<=[；。])/).map(x => x.trim()).filter(Boolean);
+function otherModelTokens(it) {
+  const chosen = picksOf(it).map(p => p.option);
+  if (!chosen.length) return null;
+  const mine = [...new Set(chosen.flatMap(modelTokens))];
+  const mineLow = new Set(mine.map(t => t.toLowerCase()));
+  const others = [...new Set(it.options.filter(o => !chosen.some(c => c.id === o.id)).flatMap(modelTokens))]
+    .filter(t => !mineLow.has(t.toLowerCase()));
+  return { mine, others };
+}
+/* 回傳 { notes, hidden }：notes 是濾過的安裝須知，hidden 是被拿掉的句子（螢幕上可展開查證） */
+function installForProfile(it, p) {
+  const notes = it.install || [];
+  if (!p || p.show.otherModels !== false) return { notes, hidden: [] };
+  const tok = otherModelTokens(it);
+  if (!tok || !tok.others.length) return { notes, hidden: [] };
+  const hidden = [], out = [];
+  notes.forEach(n => {
+    const keep = [];
+    sentences(n.text).forEach(sen => {
+      const mo = tok.others.filter(t => hasTok(sen, t));
+      const mine = tok.mine.filter(t => hasTok(sen, t));
+      const lead = mo.length ? Math.min(...mo.map(t => sen.toLowerCase().indexOf(t.toLowerCase()))) : -1;
+      if (mo.length && !mine.length && lead <= 10) hidden.push({ tag: n.tag, text: sen.replace(/[；。]$/, '') });
+      else keep.push(sen);
+    });
+    const text = keep.join('').replace(/；$/, '');
+    if (text) out.push(Object.assign({}, n, { text }));
+  });
+  return { notes: out, hidden };
+}
+/* 設計師版的待辦：已打勾的代表家人已經拍板，不必再讓設計師看；
+   只講別台候選機型的（例如「決定一體型 NEOREST 或原廠套組」）也一併收起來。 */
+function designerTodosFor(it, p) {
+  const all = designerTodos(it);
+  if (!p || p.show.otherModels !== false) return { todos: all, hidden: [] };
+  const tok = otherModelTokens(it);
+  const hidden = [], todos = [];
+  all.forEach(t => {
+    if (t.done) { hidden.push({ tag: '已完成', text: t.text }); return; }
+    if (tok && tok.others.length) {
+      const mo = tok.others.filter(x => hasTok(t.text, x));
+      const mine = tok.mine.filter(x => hasTok(t.text, x));
+      const lead = mo.length ? Math.min(...mo.map(x => t.text.toLowerCase().indexOf(x.toLowerCase()))) : -1;
+      if (mo.length && !mine.length && lead <= 10) { hidden.push({ tag: '其他機型', text: t.text }); return; }
+    }
+    todos.push(t);
+  });
+  return { todos, hidden };
+}
 const profileOf = id => state.profiles[id] || state.profiles.family;
 function canEdit() { return role === 'family'; }
 function knownNames() { const names = new Set(); (state.history || []).forEach(e => e.who && names.add(e.who)); state.items.forEach(it => (it.notes || []).forEach(n => n.who && names.add(n.who))); return [...names]; }

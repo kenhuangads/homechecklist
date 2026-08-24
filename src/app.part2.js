@@ -427,8 +427,8 @@ function renderDoc(p) {
   out.push(h('div', { class: 'banner info no-print' }, icon('info'), h('div', { class: 'small' }, '每個品項列出「選定型號」（或候選方案）的尺寸、開孔與電源；安裝須知用標籤分 ', tagChip('電'), ' ', tagChip('水'), ' ', tagChip('排風'), ' ', tagChip('尺寸'), '。最下方是全屋前置工程清單。內容由屋主隨時更新，列印前建議重新整理。')));
   if (p.show.install) {
     const short = t => { const x = (t || '').split(/[；（(，,。]/)[0].trim(); return x.length > 16 ? x.slice(0, 16) + '…' : x; };
-    const quick = items.map(i => { const o = chosenOption(i); const tags = [...new Set(i.install.map(n => n.tag))]; const powerNote = i.install.find(n => n.tag === '電'); const chips = [chip('電：' + short((o && o.power) || (powerNote && powerNote.text) || '—'), 'tag tag-電')]; ['水', '排水', '排風', '搬運'].forEach(t => { if (tags.includes(t)) chips.push(tagChip(t)); }); if (o && o.cutout) chips.push(chip('開孔：' + short(o.cutout), 'tag tag-尺寸')); return h('div', { class: 'row wrap', style: 'padding:.45rem 0;border-top:1px solid var(--line)' }, h('b', { style: 'min-width:7em' }, i.name, (i.defaultQty || 1) > 1 || pickCount(i) > 1 ? h('span', { class: 'tiny' }, ` ×${pickCount(i) || i.defaultQty}`) : null), h('span', { class: 'tiny' }, o ? picksText(i, false) : '未決定'), h('span', { class: 'row wrap', style: 'gap:.3rem' }, chips)); });
-    const rows = items.map(i => { const o = chosenOption(i); const byTag = t => i.install.filter(n => t.includes(n.tag)).map(n => txt(n.text)).filter(Boolean).join('；'); return h('tr', {}, h('td', {}, h('b', {}, i.name), h('div', { class: 'tiny' }, o ? picksText(i, false) : '未決定')), h('td', {}, pickCount(i) || i.defaultQty || 1), h('td', {}, byTag(['電'])), h('td', {}, byTag(['水', '排水'])), h('td', {}, byTag(['排風'])), h('td', {}, [o && o.cutout, byTag(['尺寸', '搬運'])].filter(Boolean).join('；'))); });
+    const quick = items.map(i => { const o = chosenOption(i); const ins = installForProfile(i, p).notes; const tags = [...new Set(ins.map(n => n.tag))]; const powerNote = ins.find(n => n.tag === '電'); const chips = [chip('電：' + short((o && o.power) || (powerNote && powerNote.text) || '—'), 'tag tag-電')]; ['水', '排水', '排風', '搬運'].forEach(t => { if (tags.includes(t)) chips.push(tagChip(t)); }); if (o && o.cutout) chips.push(chip('開孔：' + short(o.cutout), 'tag tag-尺寸')); return h('div', { class: 'row wrap', style: 'padding:.45rem 0;border-top:1px solid var(--line)' }, h('b', { style: 'min-width:7em' }, i.name, (i.defaultQty || 1) > 1 || pickCount(i) > 1 ? h('span', { class: 'tiny' }, ` ×${pickCount(i) || i.defaultQty}`) : null), h('span', { class: 'tiny' }, o ? picksText(i, false) : '未決定'), h('span', { class: 'row wrap', style: 'gap:.3rem' }, chips)); });
+    const rows = items.map(i => { const o = chosenOption(i); const ins = installForProfile(i, p).notes; const byTag = t => ins.filter(n => t.includes(n.tag)).map(n => txt(n.text)).filter(Boolean).join('；'); return h('tr', {}, h('td', {}, h('b', {}, i.name), h('div', { class: 'tiny' }, o ? picksText(i, false) : '未決定')), h('td', {}, pickCount(i) || i.defaultQty || 1), h('td', {}, byTag(['電'])), h('td', {}, byTag(['水', '排水'])), h('td', {}, byTag(['排風'])), h('td', {}, [o && o.cutout, byTag(['尺寸', '搬運'])].filter(Boolean).join('；'))); });
     out.push(h('div', { class: 'doc' }, h('h3', { class: 'h-room' }, '需求總表'), h('div', { class: 'card flat only-narrow' }, quick, h('p', { class: 'tiny', style: 'margin-top:.4rem' }, '速覽；完整內容見下方各品項。')),
       h('div', { class: 'table-wrap only-wide' }, h('table', { class: 'ctable' }, h('thead', {}, h('tr', {}, h('th', {}, '品項'), h('th', {}, '數量'), h('th', {}, '電'), h('th', {}, '給水／排水'), h('th', {}, '排風'), h('th', {}, '尺寸／預留／搬運'))), h('tbody', {}, rows)))));
   }
@@ -445,10 +445,10 @@ function renderDoc(p) {
 }
 function docItem(i, p) {
   const ps = picksOf(i), noPrice = !p.show.price, txt = t => noPrice ? stripPriceSentences(t) : t;
-  const el = h('div', { class: 'ditem' }, h('h4', {}, tile(i), i.name, statusChip(i.status), (i.defaultQty || 1) > 1 ? chip(`建議 ${i.defaultQty} 台`, 'tag') : null, i.hardReq ? chip('硬需求', 'tag') : null));
+  const el = h('div', { class: 'ditem' }, h('h4', {}, tile(i), i.name, statusChip(i.status), ps.length ? (pickCount(i) > 1 ? chip(`共 ${pickCount(i)} 台`, 'tag') : null) : ((i.defaultQty || 1) > 1 ? chip(`建議 ${i.defaultQty} 台`, 'tag') : null), i.hardReq ? chip('硬需求', 'tag') : null));
   if (i.hardReq) el.append(h('p', { class: 'small' }, h('b', {}, '硬需求：'), i.hardReq));
   const optBlock = (opt, label, qty) => {
-    const rows = []; const hl = (opt.highlights || []).map(txt).filter(Boolean);
+    const rows = []; const hl = p.show.highlights === false ? [] : (opt.highlights || []).map(txt).filter(Boolean);
     if (p.show.dims) [['尺寸', opt.dims], ['開孔／預留', opt.cutout], ['電源', opt.power], ['重量', opt.weight], ['其他', opt.other]].forEach(([k, v]) => { const t = txt(v); if (t) rows.push([k, t]); });
     if (p.show.price) rows.push(['價格', priceText(effectivePrice(opt))]);
     return h('div', {}, h('div', { style: 'font-weight:800' }, label ? label + '：' : '', `${opt.brand} ${opt.model}`, qty > 1 ? ` ×${qty}` : '', ' ', tierChip(opt.tier), i.pickOptionId === opt.id ? [' ', chip('達人推薦', 'pick')] : null), txt(opt.name) ? h('div', { class: 'small muted' }, txt(opt.name)) : null,
@@ -458,11 +458,20 @@ function docItem(i, p) {
   if (ps.length) ps.forEach(pk => el.append(optBlock(pk.option, '選定', pk.qty)));
   else if (p.show.options && i.options.length) { el.append(h('div', { class: 'small muted' }, '尚未決定，候選方案：')); sortedOptions(i).forEach(opt => el.append(optBlock(opt))); }
   else el.append(h('div', { class: 'small muted' }, '尚未決定型號'));
-  if (p.show.install && i.install.length) el.append(h('div', {}, h('div', { class: 'eyebrow', style: 'margin-top:.3rem' }, '安裝須知'), installList(i.install, noPrice)));
+  if (p.show.install && i.install.length) {
+    const ins = installForProfile(i, p);
+    if (ins.notes.length) el.append(h('div', {}, h('div', { class: 'eyebrow', style: 'margin-top:.3rem' }, '安裝須知'), installList(ins.notes, noPrice)));
+    if (ins.hidden.length) el.append(h('details', { class: 'fold hidden-notes no-print' },
+      h('summary', {}, `已隱藏 ${ins.hidden.length} 句其他候選機型的說明`),
+      h('ul', { class: 'small muted' }, ins.hidden.map(x => h('li', {}, tagChip(x.tag), ' ', x.text)))));
+  }
   if (p.show.advice && txt(i.advice)) el.append(h('div', {}, h('div', { class: 'eyebrow', style: 'margin-top:.3rem' }, '建議'), h('p', { class: 'small' }, txt(i.advice))));
-  const warns = i.warnings.map(txt).filter(Boolean); if (warns.length && (p.show.advice || p.show.install)) el.append(h('ul', { class: 'small', style: 'color:var(--attn)' }, warns.map(w => h('li', {}, w))));
+  const warns = p.show.reviews === false ? [] : i.warnings.map(txt).filter(Boolean); if (warns.length && (p.show.advice || p.show.install)) el.append(h('ul', { class: 'small', style: 'color:var(--attn)' }, warns.map(w => h('li', {}, w))));
   if (p.show.price && i.costNotes.length) el.append(h('div', {}, h('div', { class: 'eyebrow', style: 'margin-top:.3rem' }, '費用參考'), h('ul', { class: 'small' }, i.costNotes.map(c => h('li', {}, c)))));
   if (p.show.notes && i.notes.length) el.append(h('div', {}, h('div', { class: 'eyebrow', style: 'margin-top:.3rem' }, '家人留言'), i.notes.map(n => h('div', { class: 'note' }, h('span', { class: 'who' }, n.who), ' ', h('span', { class: 'when' }, fmtTime(n.ts, true)), h('div', { class: 'txt' }, n.text)))));
-  const dTodos = designerTodos(i); if (p.show.todos && dTodos.length) el.append(h('div', {}, h('div', { class: 'eyebrow', style: 'margin-top:.3rem' }, '待確認／待施工'), h('ul', { class: 'small' }, dTodos.map(t => h('li', { style: t.done ? 'text-decoration:line-through;color:var(--ink-3)' : '' }, t.text)))));
+  const dt = designerTodosFor(i, p); if (p.show.todos && dt.todos.length) el.append(h('div', {}, h('div', { class: 'eyebrow', style: 'margin-top:.3rem' }, '待確認／待施工'), h('ul', { class: 'small' }, dt.todos.map(t => h('li', { style: t.done ? 'text-decoration:line-through;color:var(--ink-3)' : '' }, t.text)))));
+  if (dt.hidden.length) el.append(h('details', { class: 'fold hidden-notes no-print' },
+    h('summary', {}, `已隱藏 ${dt.hidden.length} 條待辦（家人已拍板或屬其他候選機型）`),
+    h('ul', { class: 'small muted' }, dt.hidden.map(x => h('li', {}, chip(x.tag, 'tag'), ' ', x.text)))));
   return el;
 }

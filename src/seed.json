@@ -33,7 +33,10 @@
         "notes": true,
         "todos": true,
         "advice": true,
-        "prep": true
+        "prep": true,
+        "highlights": true,
+        "reviews": true,
+        "otherModels": true
       },
       "edit": true
     },
@@ -41,17 +44,20 @@
       "id": "designer",
       "label": "設計師",
       "who": "設計師／水電",
-      "desc": "設計與水電需求：尺寸、開孔、電壓迴路、給排水、排風、待確認事項與全屋前置工程。",
+      "desc": "只顯示「已決定」機型的設計與水電需求：尺寸、開孔、電壓迴路、給排水、排風、待確認事項與全屋前置工程。不含選購建議、網友口碑與其他候選機型。",
       "show": {
         "price": false,
         "links": false,
-        "options": true,
+        "options": false,
         "install": true,
         "dims": true,
         "notes": false,
         "todos": true,
-        "advice": true,
-        "prep": true
+        "advice": false,
+        "prep": true,
+        "highlights": false,
+        "reviews": false,
+        "otherModels": false
       },
       "edit": false
     }
@@ -6781,5 +6787,5 @@
   },
   "history": [],
   "todos": [],
-  "catalogVersion": 2026082311
+  "catalogVersion": 2026082401
 }

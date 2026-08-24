@@ -378,3 +378,8 @@ dialog.tut h2 { font-family: var(--display); font-weight: 700; }
   .hero { padding: 1.3rem 1.4rem 1.2rem; }
   .hero-actions { grid-template-columns: repeat(4, 1fr); }
 }
+
+/* 設計師版：被隱藏的其他機型說明（螢幕上可展開查證，列印不出現） */
+.doc details.hidden-notes { background: var(--surface-2); border: 1px dashed var(--line-strong); border-radius: var(--radius-sm); padding: 0 .7rem; }
+.doc details.hidden-notes > summary { font-size: .84rem; color: var(--ink-3); font-weight: 600; padding: .4rem 0; cursor: pointer; }
+.doc details.hidden-notes ul { margin: 0 0 .6rem; padding-left: 1.1rem; }
