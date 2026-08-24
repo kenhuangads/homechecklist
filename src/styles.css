@@ -325,3 +325,56 @@ dialog.tut h2 { font-family: var(--display); font-weight: 700; }
 @media (max-width: 400px) { .h-hero { font-size: 1.6rem; } .hero .sub { font-size: .86rem; } .ring { width: 4.8rem; height: 4.8rem; } }
 .budget-now { border-color: color-mix(in srgb, var(--accent) 35%, var(--line)); }
 .budget-now .big-total { font-family: var(--display); font-weight: 700; font-size: 1.85rem; letter-spacing: -.01em; white-space: nowrap; color: var(--accent-deep); }
+
+/* ---- v3.2: designer doc on desktop & on paper ---- */
+/* 桌機有空間時放寬閱讀欄寬（手機版面完全不變） */
+@media (min-width: 860px) {
+  .doc-mode .app { max-width: 1080px; }
+  .doc-mode main.content { padding-left: 1.5rem; padding-right: 1.5rem; gap: 1.3rem; }
+  .doc-mode .doc .ditem { padding: 1rem 1.1rem; }
+  .doc-mode .doc .doc-head h2 { font-size: 2rem; }
+}
+/* 需求總表：固定欄寬＋自動換行，永遠不會被切掉或需要左右捲 */
+.doc .table-wrap { overflow-x: visible; }
+.doc .ctable { min-width: 0; table-layout: fixed; }
+.doc .ctable th, .doc .ctable td { white-space: normal; overflow-wrap: anywhere; line-height: 1.5; }
+.doc .ctable th:nth-child(1), .doc .ctable td:nth-child(1) { width: 15%; }
+.doc .ctable th:nth-child(2), .doc .ctable td:nth-child(2) { width: 3.4em; text-align: center; }
+.doc .ctable th:nth-child(3), .doc .ctable td:nth-child(3) { width: 23%; }
+.doc .ctable th:nth-child(4), .doc .ctable td:nth-child(4) { width: 20%; }
+.doc .ctable th:nth-child(5), .doc .ctable td:nth-child(5) { width: 14%; }
+.doc .ctable tbody tr:nth-child(even) { background: color-mix(in srgb, var(--surface-2) 50%, transparent); }
+
+@page { margin: 12mm 10mm 14mm; }
+@media print {
+  html { font-size: 10pt; }
+  .app, .doc-mode .app { max-width: none; }
+  main.content { padding: 0; gap: .8rem; }
+  .doc { gap: .7rem; }
+  /* 表格完整印出：不捲動、表頭每頁重複、單列不跨頁 */
+  .doc .table-wrap { overflow: visible !important; }
+  .doc .ctable { font-size: 8.6pt; }
+  .doc .ctable thead { display: table-header-group; }
+  .doc .ctable tr { break-inside: avoid; }
+  .doc .ctable th, .doc .ctable td { padding: .22rem .3rem; }
+  /* 長品項允許跨頁，避免整頁留白（原本每個 ditem 都 avoid，紙張被撐爆） */
+  .doc .ditem { break-inside: auto; padding: .45rem .6rem; gap: .35rem; border-radius: 0; }
+  .doc .ditem > h4 { break-after: avoid; font-size: 1.05rem; }
+  .doc .room > h3, .doc .h-room, .h-room { break-after: avoid; }
+  .doc .ditem table th, .doc .ditem table td { padding: .18rem .35rem; }
+  .doc .ditem ul { margin: .1rem 0; padding-left: 1.15rem; }
+  .doc p, .doc li { orphans: 2; widows: 2; }
+  .doc .ditem .eyebrow { margin-top: .15rem; }
+}
+
+/* ---- v3.2: family view on desktop（<860px 完全維持原本手機版面）---- */
+@media (min-width: 860px) {
+  .app { max-width: 1080px; }
+  .tabbar .inner { max-width: 1080px; }
+  main.content { padding-left: 1.5rem; padding-right: 1.5rem; }
+  /* 首頁品項卡片雙欄；待辦、方案清單仍維持單欄 */
+  section.stack.rooms { display: grid; grid-template-columns: 1fr 1fr; gap: .7rem; align-items: stretch; }
+  section.stack.rooms > .h-room { grid-column: 1 / -1; }
+  .hero { padding: 1.3rem 1.4rem 1.2rem; }
+  .hero-actions { grid-template-columns: repeat(4, 1fr); }
+}
