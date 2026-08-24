@@ -50,7 +50,7 @@ function renderSaveState(el) {
   el.onclick = () => { if (msg) toast(msg); };
 }
 function saveStateEl() { const el = h('button', { id: 'saveState', class: 'save-state', type: 'button' }); renderSaveState(el); return el; }
-function openTodoCount() { return state.items.reduce((n, i) => n + i.todos.filter(t => !t.done).length, 0) + (state.todos || []).filter(t => !t.done).length + state.prep.filter(p => !p.done).length; }
+function openTodoCount() { return state.items.reduce((n, i) => n + liveTodos(i).filter(t => !t.done).length, 0) + (state.todos || []).filter(t => !t.done).length + state.prep.filter(p => !p.done).length; }
 function openFamilyCount() { return state.items.reduce((n, i) => n + familyTodos(i).filter(t => !t.done).length, 0) + (state.todos || []).filter(t => !t.done && t.for === 'family').length; }
 function openDesignerCount() { return state.items.reduce((n, i) => n + designerTodos(i).filter(t => !t.done).length, 0) + (state.todos || []).filter(t => !t.done && t.for !== 'family').length + state.prep.filter(p => !p.done).length; }
 function tabbar(active) {
@@ -170,7 +170,7 @@ function picksText(it, withPrice) {
   const t = itemTotal(it); return withPrice && t.n ? `${s}　${fmtMoney(t.sum)}` : s;
 }
 function itemRow(it) {
-  const ps = picksOf(it); const openTodos = it.todos.filter(t => !t.done).length;
+  const ps = picksOf(it); const openTodos = liveTodos(it).filter(t => !t.done).length;
   const sub = ps.length ? picksText(it, profileOf(role).show.price) : (it.status === 'skipped' ? '這次不買' : `${it.options.length} 個方案${qtyHint(it) ? '・' + qtyHint(it) : ''}`);
   return h('button', { class: 'item-row', type: 'button', onclick: () => go({ screen: 'item', itemId: it.id }) }, tile(it),
     h('div', {}, h('div', { class: 'title' }, it.name), h('div', { class: 'sub' }, sub), h('div', { class: 'meta' }, statusChip(it.status), hasAlerts(it) ? chip('需確認', 'tag tag-alert') : null, openTodos ? chip(`待辦 ${openTodos}`, 'tag') : null, it.notes.length ? chip(`留言 ${it.notes.length}`, 'tag') : null)),

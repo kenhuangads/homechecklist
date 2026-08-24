@@ -179,8 +179,12 @@ const chosenOption = it => { const ps = realPicks(it); const any = picksOf(it); 
 const pickQty = (it, optionId) => { const p = (it.picks || []).find(x => x.optionId === optionId); return p ? (Number(p.qty) || 1) : 0; };
 const pickCount = it => realPicks(it).reduce((n, p) => n + p.qty, 0);
 function itemTotal(it) { let sum = 0, n = 0; realPicks(it).forEach(p => { const v = priceValue(effectivePrice(p.option)); if (v != null) { sum += v * p.qty; n++; } }); return { sum, n }; }
-const familyTodos = it => (it.todos || []).filter(t => t.for === 'family');
-const designerTodos = it => (it.todos || []).filter(t => t.for !== 'family');
+/* 目錄退場的待辦：內容已經在安裝須知講過，或決策已拍板而失效。
+   雲端的待辦不會被目錄更新覆寫，所以用 id 名單隱藏，家人不必逐條手動刪，日後拿掉 id 就會回來。 */
+const isRetired = (it, t) => Array.isArray(it.retiredTodos) && it.retiredTodos.includes(t.id);
+const liveTodos = it => (it.todos || []).filter(t => !isRetired(it, t));
+const familyTodos = it => liveTodos(it).filter(t => t.for === 'family');
+const designerTodos = it => liveTodos(it).filter(t => t.for !== 'family');
 function installRange(items) { let min = 0, max = 0, n = 0; (items || []).forEach(i => { const c = i.installCost; if (!c) return; const lo = typeof c.min === 'number' ? c.min : (typeof c.max === 'number' ? c.max : 0); const hi = typeof c.max === 'number' ? c.max : lo; if (!lo && !hi) return; min += lo; max += hi; n++; }); return { min, max, n }; }
 function installText(c) { if (!c) return ''; const lo = typeof c.min === 'number' ? c.min : null, hi = typeof c.max === 'number' ? c.max : null; if (lo == null && hi == null) return ''; if (lo != null && hi != null && lo !== hi) return `${fmtMoney(lo)}–${Math.round(hi).toLocaleString('en-US')}`; return fmtMoney(lo != null ? lo : hi); }
 /* ---- 只留「已決定機型」的安裝須知（設計師版）----
@@ -439,7 +443,7 @@ function normalize(s) {
     if (it.status === 'decided' && !it.picks.length) it.status = 'choosing'; });
   return s;
 }
-const CATALOG_ITEM_FIELDS = ['name', 'short', 'hardReq', 'advice', 'warnings', 'install', 'costNotes', 'pickOptionId', 'pickReason', 'roomId', 'defaultQty', 'installCost', 'verify', 'tolerance'];
+const CATALOG_ITEM_FIELDS = ['name', 'short', 'hardReq', 'advice', 'warnings', 'install', 'costNotes', 'pickOptionId', 'pickReason', 'roomId', 'defaultQty', 'installCost', 'verify', 'tolerance', 'retiredTodos'];
 const CATALOG_OPTION_FIELDS = ['key', 'tier', 'brand', 'model', 'name', 'highlights', 'dims', 'cutout', 'power', 'weight', 'other', 'price', 'links', 'availability', 'storeName', 'researchNote', 'checkedAt', 'cmpKeyword', 'reviews'];
 function mergeCatalog(remote, seed) {
   remote.meta = Object.assign({}, remote.meta, seed.meta); remote.profiles = clone(seed.profiles); remote.rooms = clone(seed.rooms); remote.budget = clone(seed.budget);
