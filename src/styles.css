@@ -383,3 +383,14 @@ dialog.tut h2 { font-family: var(--display); font-weight: 700; }
 .doc details.hidden-notes { background: var(--surface-2); border: 1px dashed var(--line-strong); border-radius: var(--radius-sm); padding: 0 .7rem; }
 .doc details.hidden-notes > summary { font-size: .84rem; color: var(--ink-3); font-weight: 600; padding: .4rem 0; cursor: pointer; }
 .doc details.hidden-notes ul { margin: 0 0 .6rem; padding-left: 1.1rem; }
+
+/* 施工前必須確認：資料本身有矛盾或缺漏的地方，螢幕與紙本都要跳出來 */
+.doc .verify { border: 1px solid var(--attn); border-left: 6px solid var(--attn); border-radius: var(--radius-sm);
+  background: var(--attn-soft); padding: .6rem .8rem; display: flex; flex-direction: column; gap: .35rem;
+  -webkit-print-color-adjust: exact; print-color-adjust: exact; break-inside: avoid; }
+.doc .verify .vhead { display: flex; align-items: center; gap: .35rem; font-weight: 800; color: var(--attn); font-size: .96rem; }
+.doc .verify .vhead svg { width: 1.05rem; height: 1.05rem; }
+.doc .verify ul { margin: 0; padding-left: 1.15rem; font-size: .9rem; line-height: 1.55; }
+.doc .verify li + li { margin-top: .3rem; }
+.doc .verify-top { border-width: 2px; border-left-width: 8px; }
+.doc .verify-top .vhead { font-size: 1.1rem; }

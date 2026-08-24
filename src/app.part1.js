@@ -254,6 +254,41 @@ function designerTodosFor(it, p) {
   });
   return { todos, hidden };
 }
+/* ---- 施工前必須確認：把「資料本身不確定」的地方標出來 ----
+   兩個來源：
+   1) 目錄裡人工寫的 it.verify（查到規格互相矛盾、原廠沒公開⋯⋯）
+   2) 自動檢查：選定機型缺尺寸／電源，或「嵌入式」開孔標得比機身還小
+   檯面下嵌式（IH、水槽龍頭）本來就是玻璃面壓在檯面上、開孔小於機身，不算矛盾，所以跳過。 */
+const NICHE_RE = /嵌入|櫃內|內嵌|全嵌/;
+const OVERHANG_RE = /檯面|台面/;
+const AXIS_LABEL = { W: '寬', D: '深', H: '高' };
+function specWDH(t) {
+  const out = {}; const re = /([WDH])\s*(\d{2,4})/gi; let m;
+  while ((m = re.exec(String(t || '')))) { const k = m[1].toUpperCase(); if (out[k] == null) out[k] = Number(m[2]); }
+  return out;
+}
+function autoVerify(it) {
+  const out = [];
+  picksOf(it).forEach(({ option: o }) => {
+    const who = ((o.brand || '') + ' ' + (o.model || '')).trim();
+    const miss = [];
+    if (!o.dims) miss.push('外型尺寸');
+    if (!o.cutout) miss.push('開孔／預留');
+    if (!o.power) miss.push('電源');
+    if (miss.length) out.push({ tag: '缺資料', text: `${who} 的${miss.join('、')}目前查不到，沒辦法據以預留位置與迴路；請向經銷商要原廠尺寸圖後再定案。` });
+    if (o.dims && o.cutout && NICHE_RE.test(o.cutout) && !OVERHANG_RE.test(o.cutout)) {
+      const d = specWDH(o.dims), c = specWDH(o.cutout);
+      const bad = ['W', 'D', 'H'].filter(k => d[k] != null && c[k] != null && c[k] < d[k]);
+      if (bad.length) out.push({ tag: '數字不符', text: `${who} 標示的嵌入尺寸比機身還小（${bad.map(k => `${AXIS_LABEL[k]} ${c[k]} < ${d[k]}`).join('、')} mm）；木作開孔前請向廠商確認實際尺寸。` });
+    }
+  });
+  return out;
+}
+/* 目錄裡已經人工註記過的品項，就不再跑自動檢查，免得同一件事講兩次 */
+function verifyPoints(it) {
+  const manual = (it.verify || []).filter(v => v && v.text);
+  return manual.length ? manual : autoVerify(it);
+}
 const profileOf = id => state.profiles[id] || state.profiles.family;
 function canEdit() { return role === 'family'; }
 function knownNames() { const names = new Set(); (state.history || []).forEach(e => e.who && names.add(e.who)); state.items.forEach(it => (it.notes || []).forEach(n => n.who && names.add(n.who))); return [...names]; }
@@ -379,7 +414,7 @@ function normalize(s) {
     if (it.status === 'decided' && !it.picks.length) it.status = 'choosing'; });
   return s;
 }
-const CATALOG_ITEM_FIELDS = ['name', 'short', 'hardReq', 'advice', 'warnings', 'install', 'costNotes', 'pickOptionId', 'pickReason', 'roomId', 'defaultQty', 'installCost'];
+const CATALOG_ITEM_FIELDS = ['name', 'short', 'hardReq', 'advice', 'warnings', 'install', 'costNotes', 'pickOptionId', 'pickReason', 'roomId', 'defaultQty', 'installCost', 'verify'];
 const CATALOG_OPTION_FIELDS = ['key', 'tier', 'brand', 'model', 'name', 'highlights', 'dims', 'cutout', 'power', 'weight', 'other', 'price', 'links', 'availability', 'storeName', 'researchNote', 'checkedAt', 'cmpKeyword', 'reviews'];
 function mergeCatalog(remote, seed) {
   remote.meta = Object.assign({}, remote.meta, seed.meta); remote.profiles = clone(seed.profiles); remote.rooms = clone(seed.rooms); remote.budget = clone(seed.budget);

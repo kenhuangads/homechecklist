@@ -424,6 +424,11 @@ function renderDoc(p) {
   const noPrice = !p.show.price, txt = t => noPrice ? stripPriceSentences(t) : t;
   out.push(h('div', { class: 'doc' }, h('div', { class: 'doc-head' }, h('p', { class: 'eyebrow' }, '設計與水電需求總表'), h('h2', {}, state.meta.title), h('p', { class: 'muted' }, state.meta.subtitle),
     h('p', { class: 'small muted', style: 'margin-top:.3rem' }, `資料更新：${fmtTime(state.updatedAt, true)}（台灣時間）・已決定 ${decided.length}／${items.length} 項`))));
+  const allVerify = items.flatMap(i => verifyPoints(i).map(v => Object.assign({ item: i.name }, v)));
+  if (allVerify.length) out.push(h('div', { class: 'doc' }, h('div', { class: 'verify verify-top' },
+    h('div', { class: 'vhead' }, icon('info'), `施工前必須確認（${allVerify.length} 項）`),
+    h('p', { class: 'small' }, '以下是目前查到的規格互相矛盾、或原廠沒公開的數字。發包與開孔前請先向廠商確認，不要直接照本文件施工。'),
+    h('ul', {}, allVerify.map(v => h('li', {}, h('b', {}, v.item), v.tag ? [' ', chip(v.tag, 'tag')] : null, ' ', v.text))))));
   out.push(h('div', { class: 'banner info no-print' }, icon('info'), h('div', { class: 'small' }, '每個品項列出「選定型號」（或候選方案）的尺寸、開孔與電源；安裝須知用標籤分 ', tagChip('電'), ' ', tagChip('水'), ' ', tagChip('排風'), ' ', tagChip('尺寸'), '。最下方是全屋前置工程清單。內容由屋主隨時更新，列印前建議重新整理。')));
   if (p.show.install) {
     const short = t => { const x = (t || '').split(/[；（(，,。]/)[0].trim(); return x.length > 16 ? x.slice(0, 16) + '…' : x; };
@@ -447,6 +452,9 @@ function docItem(i, p) {
   const ps = picksOf(i), noPrice = !p.show.price, txt = t => noPrice ? stripPriceSentences(t) : t;
   const el = h('div', { class: 'ditem' }, h('h4', {}, tile(i), i.name, statusChip(i.status), ps.length ? (pickCount(i) > 1 ? chip(`共 ${pickCount(i)} 台`, 'tag') : null) : ((i.defaultQty || 1) > 1 ? chip(`建議 ${i.defaultQty} 台`, 'tag') : null), i.hardReq ? chip('硬需求', 'tag') : null));
   if (i.hardReq) el.append(h('p', { class: 'small' }, h('b', {}, '硬需求：'), i.hardReq));
+  const vps = verifyPoints(i);
+  if (vps.length) el.append(h('div', { class: 'verify' }, h('div', { class: 'vhead' }, icon('info'), '施工前必須確認'),
+    h('ul', {}, vps.map(v => h('li', {}, v.tag ? chip(v.tag, 'tag') : null, ' ', v.text)))));
   const optBlock = (opt, label, qty) => {
     const rows = []; const hl = p.show.highlights === false ? [] : (opt.highlights || []).map(txt).filter(Boolean);
     if (p.show.dims) [['尺寸', opt.dims], ['開孔／預留', opt.cutout], ['電源', opt.power], ['重量', opt.weight], ['其他', opt.other]].forEach(([k, v]) => { const t = txt(v); if (t) rows.push([k, t]); });
