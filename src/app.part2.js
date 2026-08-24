@@ -441,9 +441,14 @@ function renderDoc(p) {
   if (p.show.install) {
     const short = t => { const x = (t || '').split(/[；（(，,。]/)[0].trim(); return x.length > 16 ? x.slice(0, 16) + '…' : x; };
     const quick = items.map(i => { const o = chosenOption(i); const ins = installForProfile(i, p).notes; const tags = [...new Set(ins.map(n => n.tag))]; const powerNote = ins.find(n => n.tag === '電'); const chips = [chip('電：' + short((o && o.power) || (powerNote && powerNote.text) || '—'), 'tag tag-電')]; ['水', '排水', '排風', '搬運'].forEach(t => { if (tags.includes(t)) chips.push(tagChip(t)); }); if (o && o.cutout) chips.push(chip('開孔：' + short(o.cutout), 'tag tag-尺寸')); return h('div', { class: 'row wrap', style: 'padding:.45rem 0;border-top:1px solid var(--line)' }, h('b', { style: 'min-width:7em' }, i.name, (i.defaultQty || 1) > 1 || pickCount(i) > 1 ? h('span', { class: 'tiny' }, ` ×${pickCount(i) || i.defaultQty}`) : null), h('span', { class: 'tiny' }, o ? picksText(i, false) : '未決定'), h('span', { class: 'row wrap', style: 'gap:.3rem' }, chips)); });
-    const rows = items.map(i => { const o = chosenOption(i); const ins = installForProfile(i, p).notes; const byTag = t => ins.filter(n => t.includes(n.tag)).map(n => txt(n.text)).filter(Boolean).join('；'); return h('tr', {}, h('td', {}, h('b', {}, i.name), h('div', { class: 'tiny' }, o ? picksText(i, false) : '未決定')), h('td', {}, pickCount(i) || i.defaultQty || 1), h('td', {}, byTag(['電'])), h('td', {}, byTag(['水', '排水'])), h('td', {}, byTag(['排風'])), h('td', {}, [o && o.cutout, byTag(['尺寸', '搬運'])].filter(Boolean).join('；'))); });
+    // 需求總表是「一眼掃過」用的，完整內容就在下方各品項，所以設計師版只取每條的第一句
+    const gist = s => { const first = String(s || '').split(/[；。]/)[0].trim(); return first.length > 34 ? first.slice(0, 34) + '…' : first; };
+    const brief = p.show.extras === false;
+    const rows = items.map(i => { const o = chosenOption(i); const ins = installForProfile(i, p).notes;
+      const byTag = t => { const parts = ins.filter(n => t.includes(n.tag)).map(n => txt(n.text)).filter(Boolean);
+        return (brief ? parts.map(gist) : parts).filter(Boolean).join('；'); }; return h('tr', {}, h('td', {}, h('b', {}, i.name), h('div', { class: 'tiny' }, o ? picksText(i, false) : '未決定')), h('td', {}, pickCount(i) || i.defaultQty || 1), h('td', {}, byTag(['電'])), h('td', {}, byTag(['水', '排水'])), h('td', {}, byTag(['排風'])), h('td', {}, [brief ? gist(o && o.cutout) : (o && o.cutout), byTag(['尺寸', '搬運'])].filter(Boolean).join('；'))); });
     out.push(h('div', { class: 'doc' }, h('h3', { class: 'h-room' }, '需求總表'), h('div', { class: 'card flat only-narrow' }, quick, h('p', { class: 'tiny', style: 'margin-top:.4rem' }, '速覽；完整內容見下方各品項。')),
-      h('div', { class: 'table-wrap only-wide' }, h('table', { class: 'ctable' }, h('thead', {}, h('tr', {}, h('th', {}, '品項'), h('th', {}, '數量'), h('th', {}, '電'), h('th', {}, '給水／排水'), h('th', {}, '排風'), h('th', {}, '尺寸／預留／搬運'))), h('tbody', {}, rows)))));
+      h('p', { class: 'tiny only-wide', style: 'margin:-.4rem 0 .2rem' }, '速覽；每個品項的完整尺寸、開孔與安裝須知見下方。'), h('div', { class: 'table-wrap only-wide' }, h('table', { class: 'ctable' }, h('thead', {}, h('tr', {}, h('th', {}, '品項'), h('th', {}, '數量'), h('th', {}, '電'), h('th', {}, '給水／排水'), h('th', {}, '排風'), h('th', {}, '尺寸／預留／搬運'))), h('tbody', {}, rows)))));
   }
   const docEl = h('div', { class: 'doc' });
   state.rooms.forEach(r => { const its = items.filter(i => i.roomId === r.id); if (!its.length) return; const roomEl = h('div', { class: 'room' }, h('h3', {}, r.name, h('span', { class: 'small muted', style: 'font-weight:500;font-family:var(--sans)' }, `${its.length} 項`))); its.forEach(i => roomEl.append(docItem(i, p))); docEl.append(roomEl); });
@@ -465,14 +470,21 @@ function alertBlocks(it) {
 }
 function docItem(i, p) {
   const ps = picksOf(i), noPrice = !p.show.price, txt = t => noPrice ? stripPriceSentences(t) : t;
-  const el = h('div', { class: 'ditem' }, h('h4', {}, tile(i), i.name, statusChip(i.status), ps.length ? (pickCount(i) > 1 ? chip(`共 ${pickCount(i)} 台`, 'tag') : null) : ((i.defaultQty || 1) > 1 ? chip(`建議 ${i.defaultQty} 台`, 'tag') : null), i.hardReq ? chip('硬需求', 'tag') : null));
+  const lean = p.show.extras === false;   // 設計師版：只留施工要用的東西
+  const el = h('div', { class: 'ditem' }, h('h4', {}, tile(i), i.name, lean ? null : statusChip(i.status), ps.length ? (pickCount(i) > 1 ? chip(`共 ${pickCount(i)} 台`, 'tag') : null) : ((i.defaultQty || 1) > 1 ? chip(`建議 ${i.defaultQty} 台`, 'tag') : null), lean || !i.hardReq ? null : chip('硬需求', 'tag')));
   if (i.hardReq) el.append(h('p', { class: 'small' }, h('b', {}, '硬需求：'), i.hardReq));
   alertBlocks(i).forEach(b => el.append(b));
   const optBlock = (opt, label, qty) => {
     const rows = []; const hl = p.show.highlights === false ? [] : (opt.highlights || []).map(txt).filter(Boolean);
-    if (p.show.dims) [['尺寸', opt.dims], ['開孔／預留', opt.cutout], ['電源', opt.power], ['重量', opt.weight], ['其他', opt.other]].forEach(([k, v]) => { const t = txt(v); if (t) rows.push([k, t]); });
+    if (p.show.dims) {
+      const fields = lean ? [['尺寸', opt.dims], ['開孔／預留', opt.cutout], ['電源', opt.power], ['重量', opt.weight]]
+                          : [['尺寸', opt.dims], ['開孔／預留', opt.cutout], ['電源', opt.power], ['重量', opt.weight], ['其他', opt.other]];
+      fields.forEach(([k, v]) => { const t = txt(v); if (!t) return;
+        if (lean && k === '重量' && String(opt.dims || '').includes(t)) return;   // 尺寸欄已經寫過就別再列一次
+        rows.push([k, t]); });
+    }
     if (p.show.price) rows.push(['價格', priceText(effectivePrice(opt))]);
-    return h('div', {}, h('div', { style: 'font-weight:800' }, label ? label + '：' : '', `${opt.brand} ${opt.model}`, qty > 1 ? ` ×${qty}` : '', ' ', tierChip(opt.tier), i.pickOptionId === opt.id ? [' ', chip('達人推薦', 'pick')] : null), txt(opt.name) ? h('div', { class: 'small muted' }, txt(opt.name)) : null,
+    return h('div', {}, h('div', { style: 'font-weight:800' }, label ? label + '：' : '', `${opt.brand} ${opt.model}`, qty > 1 ? ` ×${qty}` : '', lean ? null : [' ', tierChip(opt.tier)], lean || i.pickOptionId !== opt.id ? null : [' ', chip('達人推薦', 'pick')]), txt(opt.name) ? h('div', { class: 'small muted' }, txt(opt.name)) : null,
       hl.length ? h('ul', { class: 'small muted', style: 'margin:.2rem 0' }, hl.map(x => h('li', {}, x))) : null,
       rows.length ? h('table', {}, h('tbody', {}, rows.map(([k, v]) => h('tr', {}, h('th', {}, k), h('td', {}, v))))) : null, p.show.links ? linkButtons(opt) : null);
   };
