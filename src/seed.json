@@ -6701,7 +6701,7 @@
       "id": "prep_s3",
       "group": "預留尺寸",
       "trade": "木作",
-      "text": "洗碗機依機型開孔（60cm 下掀約 W600 × H820 × D570）",
+      "text": "洗碗機依機型開孔（本次 F&P DD60DCHX9 抽屜式：櫥櫃內淨寬 600 × 深 ≥570 × 高 820 mm，先拆兩格抽屜）",
       "done": false
     },
     {
@@ -6794,5 +6794,5 @@
   },
   "history": [],
   "todos": [],
-  "catalogVersion": 2026082402
+  "catalogVersion": 2026082403
 }
