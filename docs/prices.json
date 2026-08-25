@@ -1,5 +1,5 @@
 {
-  "checkedAt": "2026-08-24T03:57:27.011Z",
+  "checkedAt": "2026-08-25T03:51:55.475Z",
   "source": "PChome 24h prodapi (每日自動更新)",
   "pchome": {
     "DPAL22-A900I2U6X": {
@@ -14,17 +14,17 @@
       "qty": 1,
       "button": "ForSale"
     },
-    "QBAY1F-A900A80OH-004": {
-      "low": 39800,
-      "list": 39800,
-      "qty": 0,
-      "button": "OrderRefill"
-    },
     "QBAY1F-A900A80OH-005": {
       "low": 39800,
       "list": 39800,
       "qty": 1,
       "button": "ForSale"
+    },
+    "QBAY1F-A900A80OH-004": {
+      "low": 39800,
+      "list": 39800,
+      "qty": 0,
+      "button": "OrderRefill"
     },
     "DMAGOH-A900GDYU4": {
       "low": 43000,
@@ -135,7 +135,7 @@
       "button": "ForSale"
     },
     "DPAC1T-A900GB0L3": {
-      "low": 22792,
+      "low": 23310,
       "list": 25900,
       "qty": 20,
       "button": "ForSale"
@@ -200,21 +200,21 @@
       "qty": 2,
       "button": "ForSale"
     },
-    "DMCI01-A900I4ERS-002": {
-      "low": 39800,
-      "list": 39800,
-      "qty": 2,
-      "button": "ForSale"
-    },
     "DMCI01-A900I4ERS-003": {
       "low": 39800,
       "list": 39800,
       "qty": 2,
       "button": "ForSale"
     },
+    "DMCI01-A900I4ERS-002": {
+      "low": 39800,
+      "list": 39800,
+      "qty": 2,
+      "button": "ForSale"
+    },
     "DMAWGY-A900HF5JT": {
-      "low": 4990,
-      "list": 4990,
+      "low": 5490,
+      "list": 5490,
       "qty": 13,
       "button": "ForSale"
     },
@@ -371,20 +371,20 @@
     "DMBM1D-A900J5JAZ": {
       "low": 19900,
       "list": 19900,
-      "qty": 1,
-      "button": "ForSale"
+      "qty": 0,
+      "button": "OrderRefill"
     },
     "DMAAO6-A900IE4HM": {
       "low": 37710,
       "list": 41900,
-      "qty": 16,
+      "qty": 10,
       "button": "ForSale"
     },
     "DMAAO6-A900IE4HM-001": {
       "low": 37710,
       "list": 41900,
-      "qty": 0,
-      "button": "SoldOut"
+      "qty": 10,
+      "button": "ForSale"
     },
     "DMAAO6-A900IE4HM-002": {
       "low": 37710,
@@ -440,13 +440,13 @@
       "qty": 2,
       "button": "ForSale"
     },
-    "DQAT1H-A900I5LFR-001": {
+    "DQAT1H-A900I5LFR-002": {
       "low": 29450,
       "list": 31000,
       "qty": 2,
       "button": "ForSale"
     },
-    "DQAT1H-A900I5LFR-002": {
+    "DQAT1H-A900I5LFR-001": {
       "low": 29450,
       "list": 31000,
       "qty": 2,
