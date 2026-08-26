@@ -60,7 +60,7 @@
     "type": "pchome",
     "url": "https://24h.pchome.com.tw/prod/DMAGOH-A900GDYU4",
     "status": "ok",
-    "note": "ForSale qty 3 low null"
+    "note": "ForSale qty 1 low null"
   },
   {
     "it": "ih",
@@ -132,7 +132,7 @@
     "type": "pchome",
     "url": "https://24h.pchome.com.tw/prod/DMAGOA-A900KAR7L",
     "status": "ok",
-    "note": "ForSale qty 8 low null"
+    "note": "ForSale qty 7 low null"
   },
   {
     "it": "oven",
@@ -195,7 +195,7 @@
     "type": "pchome",
     "url": "https://24h.pchome.com.tw/prod/DMBJ01-1900IYCQN",
     "status": "ok",
-    "note": "ForSale qty 8 low 8490"
+    "note": "ForSale qty 7 low 8490"
   },
   {
     "it": "freezer",
@@ -798,7 +798,7 @@
     "type": "pchome",
     "url": "https://24h.pchome.com.tw/prod/DPADYE-A900JZW22",
     "status": "ok",
-    "note": "ForSale qty 8 low 39900"
+    "note": "ForSale qty 7 low 39900"
   },
   {
     "it": "tv",
@@ -897,7 +897,7 @@
     "type": "pchome",
     "url": "https://24h.pchome.com.tw/prod/DMBM1D-A900J5JAZ",
     "status": "ok",
-    "note": "ForSale qty 1 low null"
+    "note": "ForSale qty 2 low null"
   },
   {
     "it": "soundbar",
@@ -933,7 +933,7 @@
     "type": "pchome",
     "url": "https://24h.pchome.com.tw/prod/DMBL1C-A900JNELR",
     "status": "ok",
-    "note": "ForSale qty 20 low null"
+    "note": "ForSale qty 16 low null"
   },
   {
     "it": "robot_vacuum",
@@ -960,7 +960,7 @@
     "type": "pchome",
     "url": "https://24h.pchome.com.tw/prod/DMBL3E-A900JUP4D",
     "status": "ok",
-    "note": "ForSale qty 9 low null"
+    "note": "ForSale qty 10 low null"
   },
   {
     "it": "robot_vacuum",
@@ -1018,75 +1018,192 @@
   },
   {
     "it": "door_lock",
-    "opt": "lockin_v5_max",
-    "model": "V5 Max",
-    "type": "pchome",
-    "url": "https://24h.pchome.com.tw/prod/DQAT1H-A900I5LFR",
-    "status": "ok",
-    "note": "ForSale qty 2 low 29450"
+    "opt": "hitachi_hit_fy10t",
+    "model": "HIT-FY10-T",
+    "type": "official",
+    "url": "https://www.instant.com.tw/news/a21aadc4-4b60-4b40-b16d-bc9a34f5ee24",
+    "status": "mismatch?",
+    "note": "http 200 model not found in page"
   },
   {
     "it": "door_lock",
-    "opt": "lockin_v5_max",
-    "model": "V5 Max",
-    "type": "momo",
-    "url": "https://www.momoshop.com.tw/TP/TP0005915/goodsDetail/TP00059150000007",
-    "status": "ok",
-    "note": "http 200"
-  },
-  {
-    "it": "door_lock",
-    "opt": "philips_ddl709_fvp",
-    "model": "DDL709-FVP",
-    "type": "pchome",
-    "url": "https://24h.pchome.com.tw/prod/DQBS4N-A900I7PXE",
-    "status": "ok",
-    "note": "ForSale qty 6 low null"
-  },
-  {
-    "it": "door_lock",
-    "opt": "philips_ddl709_fvp",
-    "model": "DDL709-FVP",
+    "opt": "hitachi_hit_fy10t",
+    "model": "HIT-FY10-T",
     "type": "other",
-    "url": "https://www.lovebuyigo.com.tw/products/philips_709-fvp",
+    "url": "https://www.soba.com.tw/products/info.php?id=64312&title_id=1200",
     "status": "ok",
     "note": "http 200"
   },
   {
     "it": "door_lock",
-    "opt": "yale_luna_pro_plus",
-    "model": "Luna Pro+",
-    "type": "momo",
-    "url": "https://www.momoshop.com.tw/goods/GoodsDetail.jsp?i_code=14167057",
-    "status": "ok",
-    "note": "http 200"
-  },
-  {
-    "it": "door_lock",
-    "opt": "yale_luna_pro_plus",
-    "model": "Luna Pro+",
-    "type": "pchome",
-    "url": "https://24h.pchome.com.tw/prod/DQBS4N-A900J4U5F",
-    "status": "ok",
-    "note": "ForSale qty 5 low null"
-  },
-  {
-    "it": "door_lock",
-    "opt": "hitachi_fy10t",
+    "opt": "hitachi_hit_fy10t",
     "model": "HIT-FY10-T",
-    "type": "pchome",
-    "url": "https://24h.pchome.com.tw/prod/DQBS4N-A900KAPUN",
+    "type": "other",
+    "url": "https://www.elockmaster.com/products/hitachi-fy10",
     "status": "ok",
-    "note": "ForSale qty 11 low 34960"
+    "note": "http 200"
   },
   {
     "it": "door_lock",
-    "opt": "hitachi_fy10t",
+    "opt": "hitachi_hit_fy10t",
+    "model": "HIT-FY10-T",
+    "type": "other",
+    "url": "https://www.tk3c.com/product/270409",
+    "status": "ok",
+    "note": "http 200"
+  },
+  {
+    "it": "door_lock",
+    "opt": "hitachi_hit_fy10t",
     "model": "HIT-FY10-T",
     "type": "momo",
-    "url": "https://www.momoshop.com.tw/goods/GoodsDetail.jsp?i_code=15368264",
+    "url": "https://www.momoshop.com.tw/product/15368264",
     "status": "ok",
     "note": "http 200"
+  },
+  {
+    "it": "door_lock",
+    "opt": "apex_ap100",
+    "model": "AP100",
+    "type": "official",
+    "url": "https://www.apex-tw.com/product-detail/ap100-b",
+    "status": "ok",
+    "note": "http 200"
+  },
+  {
+    "it": "door_lock",
+    "opt": "apex_ap100",
+    "model": "AP100",
+    "type": "official",
+    "url": "https://www.apex-tw.com/news-detail/app-siri",
+    "status": "mismatch?",
+    "note": "http 200 model not found in page"
+  },
+  {
+    "it": "door_lock",
+    "opt": "apex_ap100",
+    "model": "AP100",
+    "type": "official",
+    "url": "https://www.apex-tw.com/news-detail/Install-smartlocks",
+    "status": "ok",
+    "note": "http 200"
+  },
+  {
+    "it": "door_lock",
+    "opt": "apex_ap100",
+    "model": "AP100",
+    "type": "official",
+    "url": "https://www.apex-tw.com/store",
+    "status": "mismatch?",
+    "note": "http 200 model not found in page"
+  },
+  {
+    "it": "door_lock",
+    "opt": "apex_ap100",
+    "model": "AP100",
+    "type": "other",
+    "url": "https://www.sc-smarthome69.com/apex-ap100-open/",
+    "status": "ok",
+    "note": "http 200"
+  },
+  {
+    "it": "door_lock",
+    "opt": "voc_p988_elite",
+    "model": "P988 Elite",
+    "type": "official",
+    "url": "https://www.celebrate.com.tw/products_detail/52.htm",
+    "status": "ok",
+    "note": "http 200"
+  },
+  {
+    "it": "door_lock",
+    "opt": "voc_p988_elite",
+    "model": "P988 Elite",
+    "type": "official",
+    "url": "https://www.celebrate.com.tw/download/downloadfile/47/1.htm",
+    "status": "mismatch?",
+    "note": "http 200 model not found in page"
+  },
+  {
+    "it": "door_lock",
+    "opt": "voc_p988_elite",
+    "model": "P988 Elite",
+    "type": "official",
+    "url": "https://www.celebrate.com.tw/download/downloadfile/46/1.htm",
+    "status": "mismatch?",
+    "note": "http 200 model not found in page"
+  },
+  {
+    "it": "door_lock",
+    "opt": "voc_p988_elite",
+    "model": "P988 Elite",
+    "type": "other",
+    "url": "https://www.celebrate.com.tw/service_2.htm",
+    "status": "mismatch?",
+    "note": "http 200 model not found in page"
+  },
+  {
+    "it": "door_lock",
+    "opt": "voc_p988_elite",
+    "model": "P988 Elite",
+    "type": "other",
+    "url": "https://www.welock.com.tw/products_detail/P988-Elite",
+    "status": "ok",
+    "note": "http 200"
+  },
+  {
+    "it": "door_lock",
+    "opt": "voc_p988_elite",
+    "model": "P988 Elite",
+    "type": "other",
+    "url": "https://www.mobile01.com/topicdetail.php?f=168&t=7068413",
+    "status": "mismatch?",
+    "note": "http 200 model not found in page"
+  },
+  {
+    "it": "door_lock",
+    "opt": "sharp_holo3",
+    "model": "Holo 3",
+    "type": "pchome",
+    "url": "https://24h.pchome.com.tw/prod/DQBS4N-A900ITLM0",
+    "status": "ok",
+    "note": "ForSale qty 20 low 34960"
+  },
+  {
+    "it": "door_lock",
+    "opt": "sharp_holo3",
+    "model": "Holo 3",
+    "type": "momo",
+    "url": "https://www.momoshop.com.tw/product/14196244",
+    "status": "ok",
+    "note": "http 200"
+  },
+  {
+    "it": "door_lock",
+    "opt": "sharp_holo3",
+    "model": "Holo 3",
+    "type": "other",
+    "url": "https://www.mrsmartlock.com/products/info.php?id=245346&title_id=9587",
+    "status": "ok",
+    "note": "http 200"
+  },
+  {
+    "it": "door_lock",
+    "opt": "sharp_holo3",
+    "model": "Holo 3",
+    "type": "other",
+    "url": "https://pxbox.es.pxmart.com.tw/product/339268",
+    "status": "ok",
+    "note": "http 200"
+  },
+  {
+    "it": "door_lock",
+    "opt": "sharp_holo3",
+    "model": "Holo 3",
+    "type": "official",
+    "url": "https://tw.sharp/",
+    "status": "mismatch?",
+    "note": "http 200 model not found in page"
   },
   {
     "it": "ac_living",

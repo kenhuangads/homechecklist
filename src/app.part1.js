@@ -453,7 +453,10 @@ function mergeCatalog(remote, seed) {
     CATALOG_ITEM_FIELDS.forEach(k => { if (si[k] !== undefined) ri[k] = clone(si[k]); });
     si.options.forEach(so => { const ro = ri.options.find(o => o.id === so.id); if (ro) CATALOG_OPTION_FIELDS.forEach(k => { if (so[k] !== undefined) ro[k] = clone(so[k]); }); else ri.options.push(clone(so)); });
     ri.options = ri.options.filter(o => o.tier === '家人推薦' || si.options.some(so => so.id === o.id));
+    const hadPicks = (ri.picks || []).length;
     ri.picks = (ri.picks || []).filter(p => ri.options.some(o => o.id === p.optionId)); ri.chosenOptionId = ri.picks[0] ? ri.picks[0].optionId : null;
+    // 選過的機型被目錄下架（例如查出不符需求）時，狀態要退回「考慮中」，不然會顯示「已決定」卻沒有任何選擇
+    if (hadPicks && !ri.picks.length && ri.status === 'decided') ri.status = 'choosing';
     si.todos.forEach(st => { if (!ri.todos.some(t => t.id === st.id)) ri.todos.push(clone(st)); });
   });
   seed.prep.forEach(sp => { const rp = remote.prep.find(p => p.id === sp.id); if (rp) { rp.text = sp.text; rp.group = sp.group; rp.trade = sp.trade; } else remote.prep.push(clone(sp)); });
