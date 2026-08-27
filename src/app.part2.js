@@ -220,7 +220,7 @@ function renderItemBody(it) {
     prof.show.price && it.installCost ? h('div', { class: 'row between', style: 'border-top:1px dashed var(--line);padding-top:.4rem' }, h('span', { class: 'small' }, '另加安裝工程'), h('b', { class: 'small' }, installText(it.installCost))) : null,
     need > 0 ? h('div', { class: 'banner warn small', style: 'margin-top:.2rem' }, icon('info'), h('div', {}, `建議 ${it.defaultQty} 台，還差 ${need} 台。可以按同一款的「＋」，或到下面選別款混搭。`)) : null));
   else if (it.status !== 'skipped') out.push(h('div', { class: 'card tone-attn' }, h('div', { class: 'row' }, icon('pin'), h('div', {}, h('b', {}, '怎麼選？'), h('div', { class: 'small' }, `看下面的方案，喜歡哪個就按「我要這個」${(it.defaultQty || 1) > 1 ? `。這裡建議 ${it.defaultQty} 台，可以同一款按「＋」加數量，也可以不同款各選一台` : ''}。`)))));
-  alertBlocks(it).forEach(b => out.push(b));
+  alertBlocks(it, prof).forEach(b => out.push(b));
   if (prof.show.options) out.push(h('section', { class: 'stack' }, h('h2', { class: 'h-sec' }, '方案', h('span', { class: 'count' }, `${it.options.length} 個`)), sortedOptions(it).map(o => optionCard(it, o, { prof, editable }))));
   if (editable) out.push(h('button', { class: 'btn outline block', type: 'button', onclick: () => openAddProductSheet(it) }, icon('plus'), '新增其他商品'));
   if (prof.show.advice && it.advice) out.push(h('div', { class: 'card tone-soft' }, h('div', { class: 'eyebrow' }, '達人建議'), h('p', {}, it.advice)));
@@ -427,12 +427,12 @@ function renderDoc(p) {
   const noPrice = !p.show.price, txt = t => noPrice ? stripPriceSentences(t) : t;
   out.push(h('div', { class: 'doc' }, h('div', { class: 'doc-head' }, h('p', { class: 'eyebrow' }, '設計與水電需求總表'), h('h2', {}, state.meta.title), h('p', { class: 'muted' }, state.meta.subtitle),
     h('p', { class: 'small muted', style: 'margin-top:.3rem' }, `資料更新：${fmtTime(state.updatedAt, true)}（台灣時間）・已決定 ${decided.length}／${items.length} 項`))));
-  const allVerify = items.flatMap(i => verifyPoints(i).map(v => Object.assign({ item: i.name }, v)));
+  const allVerify = items.flatMap(i => verifyPoints(i, p).map(v => Object.assign({ item: i.name }, v)));
   if (allVerify.length) out.push(h('div', { class: 'doc' }, h('div', { class: 'verify verify-top' },
     h('div', { class: 'vhead' }, icon('info'), `施工前必須確認（${allVerify.length} 項）`),
     h('p', { class: 'small' }, '以下是目前查到的規格互相矛盾、或原廠沒公開的數字。發包與開孔前請先向廠商確認，不要直接照本文件施工。'),
     h('ul', {}, allVerify.map(v => h('li', {}, h('b', {}, v.item), v.tag ? [' ', chip(v.tag, 'tag')] : null, ' ', v.text))))));
-  const allTol = items.flatMap(i => tolerancePoints(i).map(v => Object.assign({ item: i.name }, v)));
+  const allTol = items.flatMap(i => tolerancePoints(i, p).map(v => Object.assign({ item: i.name }, v)));
   if (allTol.length) out.push(h('div', { class: 'doc' }, h('div', { class: 'tol tol-top' },
     h('div', { class: 'vhead' }, icon('pin'), `預留彈性（${allTol.length} 項實務提醒）`),
     h('p', { class: 'small' }, '規格書上塞得下，現場不一定裝得進去。以下位置請不要照最小尺寸抓，留一點可調整的餘裕。'),
@@ -461,8 +461,8 @@ function renderDoc(p) {
   out.push(h('p', { class: 'tiny', style: 'text-align:center' }, `產生時間 ${fmtTime(nowIso(), true)}`));
   return out;
 }
-function alertBlocks(it) {
-  const out = [], vps = verifyPoints(it), tps = tolerancePoints(it);
+function alertBlocks(it, p) {
+  const out = [], vps = verifyPoints(it, p), tps = tolerancePoints(it, p);
   const list = arr => h('ul', {}, arr.map(v => h('li', {}, v.tag ? chip(v.tag, 'tag') : null, ' ', v.text)));
   if (vps.length) out.push(h('div', { class: 'verify' }, h('div', { class: 'vhead' }, icon('info'), '施工前必須確認'), list(vps)));
   if (tps.length) out.push(h('div', { class: 'tol' }, h('div', { class: 'vhead' }, icon('pin'), '預留彈性（實務提醒）'), list(tps)));
@@ -473,7 +473,7 @@ function docItem(i, p) {
   const lean = p.show.extras === false;   // 設計師版：只留施工要用的東西
   const el = h('div', { class: 'ditem' }, h('h4', {}, tile(i), i.name, lean ? null : statusChip(i.status), ps.length ? (pickCount(i) > 1 ? chip(`共 ${pickCount(i)} 台`, 'tag') : null) : ((i.defaultQty || 1) > 1 ? chip(`建議 ${i.defaultQty} 台`, 'tag') : null), lean || !i.hardReq ? null : chip('硬需求', 'tag')));
   if (i.hardReq) el.append(h('p', { class: 'small' }, h('b', {}, '硬需求：'), i.hardReq));
-  alertBlocks(i).forEach(b => el.append(b));
+  alertBlocks(i, p).forEach(b => el.append(b));
   const optBlock = (opt, label, qty) => {
     const rows = []; const hl = p.show.highlights === false ? [] : (opt.highlights || []).map(txt).filter(Boolean);
     if (p.show.dims) {

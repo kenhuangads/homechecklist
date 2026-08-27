@@ -291,14 +291,36 @@ function autoVerify(it) {
   return out;
 }
 /* 目錄裡已經人工註記過的品項，就不再跑自動檢查，免得同一件事講兩次 */
-function verifyPoints(it) {
-  const manual = (it.verify || []).filter(v => v && v.text);
+/* 提醒類文字（verify / tolerance）在寫的時候常會拿幾個候選機型互相比較。
+   機型定案後，那些句子對設計師是雜訊，規則沿用安裝須知那一套：
+   句子開頭附近出現「沒選的機型」而且整句沒提到選定機型，就隱藏。 */
+function keepForProfile(it, p, list) {
+  const arr = (list || []).filter(v => v && v.text);
+  if (!p || p.show.otherModels !== false) return arr;
+  const tok = otherModelTokens(it);
+  if (!tok || !tok.others.length) return arr;
+  const out = [];
+  arr.forEach(v => {
+    const keep = [];
+    sentences(v.text).forEach(sen => {
+      const mo = tok.others.filter(t => hasTok(sen, t));
+      const mine = tok.mine.filter(t => hasTok(sen, t));
+      const lead = mo.length ? Math.min(...mo.map(t => sen.toLowerCase().indexOf(t.toLowerCase()))) : -1;
+      if (!(mo.length && !mine.length && lead <= 10)) keep.push(sen);
+    });
+    const text = keep.join('').replace(/；$/, '');
+    if (text) out.push(Object.assign({}, v, { text }));
+  });
+  return out;
+}
+function verifyPoints(it, p) {
+  const manual = keepForProfile(it, p, it.verify);
   return manual.length ? manual : autoVerify(it);
 }
 /* 實務經驗提醒：規格上塞得下、現場不見得裝得進去。
    例如櫥下飲水機照原廠 500×250 mm 規劃，遇到水槽盆體與存水彎就放不下。
    這類提醒是人工寫在目錄的 it.tolerance，跟 verify（數字互相矛盾）分開顯示。 */
-function tolerancePoints(it) { return (it.tolerance || []).filter(v => v && v.text); }
+function tolerancePoints(it, p) { return keepForProfile(it, p, it.tolerance); }
 const hasAlerts = it => verifyPoints(it).length > 0 || tolerancePoints(it).length > 0;
 const profileOf = id => state.profiles[id] || state.profiles.family;
 function canEdit() { return role === 'family'; }
