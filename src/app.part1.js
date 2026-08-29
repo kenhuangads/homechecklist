@@ -494,7 +494,15 @@ function mergeCatalog(remote, seed) {
     ri.picks = (ri.picks || []).filter(p => ri.options.some(o => o.id === p.optionId)); ri.chosenOptionId = ri.picks[0] ? ri.picks[0].optionId : null;
     // 選過的機型被目錄下架（例如查出不符需求）時，狀態要退回「考慮中」，不然會顯示「已決定」卻沒有任何選擇
     if (hadPicks && !ri.picks.length && ri.status === 'decided') ri.status = 'choosing';
-    si.todos.forEach(st => { if (!ri.todos.some(t => t.id === st.id)) ri.todos.push(clone(st)); });
+    /* 目錄待辦的文字與歸屬（家人／設計師）以目錄為準。家人只能勾完成或刪除、不能改字，
+       所以覆寫不會蓋掉任何人的編輯；勾完成的狀態則保留。之前這裡只 push 沒有的、不更新既有的，
+       結果把待辦從家人改判給設計師之後，雲端還是顯示舊的那一句。 */
+    si.todos.forEach(st => {
+      const rt = ri.todos.find(t => t.id === st.id);
+      if (!rt) { ri.todos.push(clone(st)); return; }
+      rt.text = st.text;
+      if (st.for !== undefined) rt.for = st.for; else delete rt.for;
+    });
     /* 機型已經進到目錄＝Claude 查完了，把「請 Claude 幫忙查」的待處理詢問結案 */
     (ri.requests || []).forEach(r => { if (r.status === 'pending' && r.optionId && si.options.some(so => so.id === r.optionId)) { r.status = 'done'; r.doneBy = 'Claude'; r.doneAt = new Date().toISOString(); } });
   });
