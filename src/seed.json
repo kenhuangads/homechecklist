@@ -249,10 +249,11 @@
             },
             {
               "type": "official",
-              "url": "https://www.rinnai.com.tw/Product/V4/1/391",
+              "url": "https://www.rinnai.com.tw/Product/V3/494",
               "verified": true,
-              "note": "",
-              "checkedAt": "2026-08-23"
+              "note": "舊網址 /Product/V4/1/391 已成 404，2026-08-29 從林內官網搜尋 RH-L9702D 找回正確頁面",
+              "checkedAt": "2026-08-29",
+              "label": "林內官方產品頁（建議售價 28,330）"
             }
           ],
           "availability": "in_stock",
@@ -2427,8 +2428,9 @@
               "type": "momo",
               "url": "https://www.momoshop.com.tw/goods/GoodsDetail.jsp?i_code=14013218",
               "verified": true,
-              "note": "",
-              "checkedAt": "2026-08-23"
+              "note": "2026-08-29 人工確認：頁面標題為賀眾牌 UR-3902AW，商品正確（momo 型號寫在 JS 規格表，自動比對抓不到）",
+              "checkedAt": "2026-08-29",
+              "modelCheck": false
             },
             {
               "type": "pchome",
@@ -4377,11 +4379,20 @@
             },
             {
               "type": "momo",
-              "url": "https://www.momoshop.com.tw/goods/GoodsDetail.jsp?i_code=13226987",
+              "url": "https://www.momoshop.com.tw/goods/GoodsDetail.jsp?i_code=14906380",
               "verified": true,
-              "note": "",
-              "checkedAt": "2026-08-23",
-              "stock": "ok"
+              "note": "舊商品編號 13226987 已下架，2026-08-29 換成 momo 自營現行頁。注意：momo 這頁下方規格表把型號誤植成 S90TR、描述寫 5.1.3 聲道，但標題、圖片與尺寸重量（1250×63×135mm／5.65kg）都對得上 S95TR，是 momo 自己複製貼上的錯誤；若要在 momo 下單，結帳前請客服確認一次是 S95TR。",
+              "checkedAt": "2026-08-29",
+              "stock": "ok",
+              "label": "MOMO 自營 32,900（比 PChome 貴 4,000）"
+            },
+            {
+              "type": "search-momo",
+              "url": "https://www.momoshop.com.tw/search/searchShop.jsp?keyword=S95TR",
+              "verified": true,
+              "label": "MOMO 搜尋 S95TR（連結失效時用這條）",
+              "note": "momo 常換商品編號，這條永遠有效",
+              "checkedAt": "2026-08-29"
             }
           ],
           "availability": "in_stock",
@@ -6028,8 +6039,9 @@
               "type": "momo",
               "url": "https://www.momoshop.com.tw/goods/GoodsDetail.jsp?i_code=15010852",
               "verified": true,
-              "note": "",
-              "checkedAt": "2026-08-23"
+              "note": "MOMO 上架的是冷專版 RAC-110JP，不是這裡建議的冷暖版 RAC-110NP。要買冷暖版請走老王電器那條連結或問設計師配的水電。",
+              "checkedAt": "2026-08-29",
+              "label": "MOMO（注意：這頁是冷專版 RAC-110JP，只能參考價格）"
             },
             {
               "type": "official",
@@ -7266,8 +7278,9 @@
               "type": "momo",
               "url": "https://www.momoshop.com.tw/goods/GoodsDetail.jsp?i_code=12097159",
               "verified": true,
-              "note": "",
-              "checkedAt": "2026-08-23"
+              "note": "2026-08-29 人工確認：頁面標題為 KOHLER Underscore 110V 電熱毛巾桿，商品正確（momo 型號寫在 JS 規格表，自動比對抓不到）",
+              "checkedAt": "2026-08-29",
+              "modelCheck": false
             },
             {
               "type": "official",

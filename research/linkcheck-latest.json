@@ -5,6 +5,7 @@
     "model": "FV-KTB2SD1TW",
     "type": "other",
     "url": "https://www.fuchia.tw/v2/shop/item/3219",
+    "modelCheck": true,
     "status": "ok",
     "note": "http 200"
   },
@@ -14,6 +15,7 @@
     "model": "FV-KTB2SD1TW",
     "type": "other",
     "url": "https://kitchenworld.com.tw/product/241028120731/Panasonic%E5%9C%8B%E9%9A%9B%E7%89%8CFV-KTB2SD1TW%E9%A0%82%E5%81%B4%E9%9B%99",
+    "modelCheck": true,
     "status": "ok",
     "note": "http 200"
   },
@@ -23,6 +25,7 @@
     "model": "FV-KTB2SD1TW",
     "type": "official",
     "url": "https://www.panasonic.com/tw/homeliving/housing/kitchen/range-hood/fv-ktb2sd1tw.html",
+    "modelCheck": true,
     "status": "ok",
     "note": "http 200"
   },
@@ -32,6 +35,7 @@
     "model": "RH-L9702D",
     "type": "pchome",
     "url": "https://24h.pchome.com.tw/prod/DPAL22-A900I2U6X",
+    "modelCheck": true,
     "status": "ok",
     "note": "ForSale qty 20 low null"
   },
@@ -40,9 +44,10 @@
     "opt": "rinnai_rh_l9702d",
     "model": "RH-L9702D",
     "type": "official",
-    "url": "https://www.rinnai.com.tw/Product/V4/1/391",
+    "url": "https://www.rinnai.com.tw/Product/V3/494",
+    "modelCheck": true,
     "status": "blocked",
-    "note": "http 403"
+    "note": "http 403（反爬蟲擋住，請用瀏覽器人工開一次確認不是 404）"
   },
   {
     "it": "ih",
@@ -50,6 +55,7 @@
     "model": "KY-C1W70",
     "type": "pchome",
     "url": "https://24h.pchome.com.tw/prod/QBAY1F-A900A80OH",
+    "modelCheck": true,
     "status": "oos",
     "note": "OrderRefill qty 0 low null"
   },
@@ -59,6 +65,7 @@
     "model": "KY-C1W70",
     "type": "pchome",
     "url": "https://24h.pchome.com.tw/prod/DMAGOH-A900GDYU4",
+    "modelCheck": true,
     "status": "ok",
     "note": "ForSale qty 3 low null"
   },
@@ -68,6 +75,7 @@
     "model": "KY-C1W70",
     "type": "momo",
     "url": "https://www.momoshop.com.tw/TP/TP0006954/goodsDetail/TP00069540000174",
+    "modelCheck": true,
     "status": "ok",
     "note": "http 200"
   },
@@ -77,6 +85,7 @@
     "model": "KY-C1W70",
     "type": "other",
     "url": "https://www.fuchia.tw/v2/shop/index/1/13/40/328/504",
+    "modelCheck": true,
     "status": "ok",
     "note": "http 200"
   },
@@ -86,6 +95,7 @@
     "model": "KY-C1W70",
     "type": "official",
     "url": "https://www.panasonic.com/tw/consumer/kitchen/ih-cooker/ky-c1w70.html",
+    "modelCheck": true,
     "status": "ok",
     "note": "http 200"
   },
@@ -95,6 +105,7 @@
     "model": "NU-SC280W",
     "type": "pchome",
     "url": "https://24h.pchome.com.tw/prod/DMBJ7P-A900GNK3G",
+    "modelCheck": true,
     "status": "ok",
     "note": "ForSale qty 4 low 13520"
   },
@@ -104,6 +115,7 @@
     "model": "TOA-95TW",
     "type": "momo",
     "url": "https://www.momoshop.com.tw/goods/GoodsDetail.jsp?i_code=11978993",
+    "modelCheck": true,
     "status": "ok",
     "note": "http 200"
   },
@@ -113,6 +125,7 @@
     "model": "TOA-95TW",
     "type": "pchome",
     "url": "https://24h.pchome.com.tw/prod/DMAGOA-A900KAR59",
+    "modelCheck": true,
     "status": "ok",
     "note": "ForSale qty 10 low null"
   },
@@ -122,6 +135,7 @@
     "model": "TOA-60TW",
     "type": "momo",
     "url": "https://www.momoshop.com.tw/goods/GoodsDetail.jsp?i_code=8006617",
+    "modelCheck": true,
     "status": "ok",
     "note": "http 200"
   },
@@ -131,6 +145,7 @@
     "model": "TOA-60TW",
     "type": "pchome",
     "url": "https://24h.pchome.com.tw/prod/DMAGOA-A900KAR7L",
+    "modelCheck": true,
     "status": "ok",
     "note": "ForSale qty 7 low null"
   },
@@ -140,6 +155,7 @@
     "model": "K11A",
     "type": "pchome",
     "url": "https://24h.pchome.com.tw/prod/DMAGR0-A900K1RIJ",
+    "modelCheck": true,
     "status": "ok",
     "note": "ForSale qty 5 low null"
   },
@@ -149,6 +165,7 @@
     "model": "TOA-110TW",
     "type": "other",
     "url": "https://cuisinart.com.tw/index/product/typeinfo.html?id=1",
+    "modelCheck": true,
     "status": "ok",
     "note": "http 200"
   },
@@ -158,6 +175,7 @@
     "model": "AX-XS10T",
     "type": "pchome",
     "url": "https://24h.pchome.com.tw/prod/DMBJ03-A900JTYJP",
+    "modelCheck": true,
     "status": "ok",
     "note": "ForSale qty 3 low null"
   },
@@ -167,6 +185,7 @@
     "model": "NN-GF574",
     "type": "momo",
     "url": "https://www.momoshop.com.tw/goods/GoodsDetail.jsp?i_code=8342622",
+    "modelCheck": true,
     "status": "ok",
     "note": "http 200"
   },
@@ -176,6 +195,7 @@
     "model": "NN-GF574",
     "type": "pchome",
     "url": "https://24h.pchome.com.tw/prod/DMBJ0G-A900AMQOF",
+    "modelCheck": true,
     "status": "ok",
     "note": "ForSale qty 20 low 6550"
   },
@@ -185,6 +205,7 @@
     "model": "HMR-DG2413",
     "type": "pchome",
     "url": "https://24h.pchome.com.tw/prod/DMBJ01-1900I80CR",
+    "modelCheck": true,
     "status": "ok",
     "note": "ForSale qty 13 low null"
   },
@@ -194,6 +215,7 @@
     "model": "NN-FS301",
     "type": "pchome",
     "url": "https://24h.pchome.com.tw/prod/DMBJ01-1900IYCQN",
+    "modelCheck": true,
     "status": "ok",
     "note": "ForSale qty 6 low 8490"
   },
@@ -203,6 +225,7 @@
     "model": "GR-FL40MS",
     "type": "pchome",
     "url": "https://24h.pchome.com.tw/prod/DPAK31-A900BY19V",
+    "modelCheck": true,
     "status": "ok",
     "note": "ForSale qty 14 low null"
   },
@@ -212,6 +235,7 @@
     "model": "GR-FL40MS",
     "type": "pchome",
     "url": "https://24h.pchome.com.tw/prod/DMBM2D-A900IF54P",
+    "modelCheck": true,
     "status": "ok",
     "note": "ForSale qty 1 low null"
   },
@@ -221,6 +245,7 @@
     "model": "NR-FZ383AV-S",
     "type": "pchome",
     "url": "https://24h.pchome.com.tw/prod/DPAC1T-A900GB0L3",
+    "modelCheck": true,
     "status": "ok",
     "note": "ForSale qty 20 low 22792"
   },
@@ -230,6 +255,7 @@
     "model": "NR-FZ383AV-S",
     "type": "momo",
     "url": "https://www.momoshop.com.tw/goods/GoodsDetail.jsp?i_code=10601450",
+    "modelCheck": true,
     "status": "ok",
     "note": "http 200"
   },
@@ -239,6 +265,7 @@
     "model": "NR-FZ383AV-S",
     "type": "official",
     "url": "https://www.panasonic.com/tw/consumer/refrigerator/freezer/nr-fz383av-s.html",
+    "modelCheck": true,
     "status": "ok",
     "note": "http 200"
   },
@@ -248,6 +275,7 @@
     "model": "NR-FZ383AV-S",
     "type": "other",
     "url": "https://www.fuchia.tw/v2/shop/item/2755",
+    "modelCheck": true,
     "status": "ok",
     "note": "http 200"
   },
@@ -257,6 +285,7 @@
     "model": "HFZ-B3862FV",
     "type": "pchome",
     "url": "https://24h.pchome.com.tw/prod/DPAC8X-A900KAUZ0",
+    "modelCheck": true,
     "status": "ok",
     "note": "ForSale qty 4 low null"
   },
@@ -266,6 +295,7 @@
     "model": "HFZ-270TS",
     "type": "pchome",
     "url": "https://24h.pchome.com.tw/prod/DPAC8U-A900ICAXH",
+    "modelCheck": true,
     "status": "ok",
     "note": "ForSale qty 5 low 13688"
   },
@@ -275,6 +305,7 @@
     "model": "HFZ-270TS",
     "type": "pchome",
     "url": "https://24h.pchome.com.tw/prod/DPAC8U-A900G9OOU",
+    "modelCheck": true,
     "status": "ok",
     "note": "ForSale qty 18 low null"
   },
@@ -284,6 +315,7 @@
     "model": "SMV8ZCX00X",
     "type": "momo",
     "url": "https://www.momoshop.com.tw/TP/TP0002980/goodsDetail/TP00029800000034",
+    "modelCheck": true,
     "status": "ok",
     "note": "http 200"
   },
@@ -293,6 +325,7 @@
     "model": "SMV8ZCX00X",
     "type": "official",
     "url": "https://www.bosch-home-shop.com.tw/products/smv8zcx00x",
+    "modelCheck": true,
     "status": "ok",
     "note": "http 200"
   },
@@ -302,6 +335,7 @@
     "model": "G7114C SCi",
     "type": "other",
     "url": "https://www.cbk.tw/ec99/rwd1033/product.asp?prodid=G7114C-SCi",
+    "modelCheck": true,
     "status": "ok",
     "note": "http 200"
   },
@@ -311,6 +345,7 @@
     "model": "DD60DCHX9",
     "type": "momo",
     "url": "https://www.momoshop.com.tw/goods/GoodsDetail.jsp?i_code=10732312",
+    "modelCheck": true,
     "status": "ok",
     "note": "http 200"
   },
@@ -320,6 +355,7 @@
     "model": "DD60DCHX9",
     "type": "other",
     "url": "https://www.fuchia.tw/v2/shop/item/93",
+    "modelCheck": true,
     "status": "ok",
     "note": "http 200"
   },
@@ -329,6 +365,7 @@
     "model": "SMV6ZAX00X",
     "type": "momo",
     "url": "https://www.momoshop.com.tw/TP/TP0002980/goodsDetail/TP00029800000032",
+    "modelCheck": true,
     "status": "ok",
     "note": "http 200"
   },
@@ -338,6 +375,7 @@
     "model": "SMV6ZAX00X",
     "type": "other",
     "url": "https://www.fuchia.tw/v2/shop/item/2377",
+    "modelCheck": true,
     "status": "ok",
     "note": "http 200"
   },
@@ -347,6 +385,7 @@
     "model": "EBF7531SBA",
     "type": "momo",
     "url": "https://www.momoshop.com.tw/goods/GoodsDetail.jsp?i_code=13439664",
+    "modelCheck": true,
     "status": "ok",
     "note": "http 200"
   },
@@ -356,6 +395,7 @@
     "model": "EBF7531SBA",
     "type": "pchome",
     "url": "https://24h.pchome.com.tw/prod/DMBH1Q-A900I20ON",
+    "modelCheck": true,
     "status": "ok",
     "note": "ForSale qty 5 low null"
   },
@@ -365,6 +405,7 @@
     "model": "EBF7531SBA",
     "type": "official",
     "url": "https://www.electrolux.com.tw/appliances/dishwashers/ebf7531sba/",
+    "modelCheck": true,
     "status": "ok",
     "note": "http 200"
   },
@@ -374,6 +415,7 @@
     "model": "DD60SCTHX9",
     "type": "momo",
     "url": "https://www.momoshop.com.tw/goods/GoodsDetail.jsp?i_code=10732311",
+    "modelCheck": true,
     "status": "ok",
     "note": "http 200"
   },
@@ -383,6 +425,7 @@
     "model": "DD60SCTHX9",
     "type": "other",
     "url": "https://www.fuchia.tw/v2/shop/item/94",
+    "modelCheck": true,
     "status": "ok",
     "note": "http 200"
   },
@@ -392,6 +435,7 @@
     "model": "LUXES-FIZZ-401",
     "type": "momo",
     "url": "https://www.momoshop.com.tw/goods/GoodsDetail.jsp?i_code=13048533",
+    "modelCheck": true,
     "status": "ok",
     "note": "http 200"
   },
@@ -401,6 +445,7 @@
     "model": "LUXES-FIZZ-401",
     "type": "pchome",
     "url": "https://24h.pchome.com.tw/prod/DMCI01-A900I4EU0",
+    "modelCheck": true,
     "status": "ok",
     "note": "ForSale qty 2 low null"
   },
@@ -410,6 +455,7 @@
     "model": "LUXES-FIZZ-401",
     "type": "official",
     "url": "https://shop.hengstyle.com/SalePage/Index/9976090",
+    "modelCheck": true,
     "status": "ok",
     "note": "http 200"
   },
@@ -419,6 +465,7 @@
     "model": "LUXES-COLD-301＋ART",
     "type": "momo",
     "url": "https://www.momoshop.com.tw/goods/GoodsDetail.jsp?i_code=13116710",
+    "modelCheck": true,
     "status": "ok",
     "note": "http 200"
   },
@@ -428,6 +475,7 @@
     "model": "LUXES-COLD-301＋ART",
     "type": "pchome",
     "url": "https://24h.pchome.com.tw/prod/DMCI01-A900I4ERS",
+    "modelCheck": true,
     "status": "ok",
     "note": "ForSale qty 2 low null"
   },
@@ -437,6 +485,7 @@
     "model": "LUXES-COLD-301＋ART",
     "type": "pchome",
     "url": "https://24h.pchome.com.tw/prod/DMAWGY-A900HF5JT",
+    "modelCheck": true,
     "status": "ok",
     "note": "ForSale qty 13 low null"
   },
@@ -446,8 +495,9 @@
     "model": "LUXES-COLD-301＋ART",
     "type": "official",
     "url": "https://shop.hengstyle.com/SalePage/Index/10123858",
-    "status": "mismatch?",
-    "note": "http 200 model not found in page"
+    "modelCheck": true,
+    "status": "ok",
+    "note": "http 200 (官網／其他頁未出現型號，正常)"
   },
   {
     "it": "water_dispenser",
@@ -455,8 +505,9 @@
     "model": "UR-3902AW-1＋ART",
     "type": "momo",
     "url": "https://www.momoshop.com.tw/goods/GoodsDetail.jsp?i_code=14013218",
-    "status": "mismatch?",
-    "note": "http 200 model not found in page"
+    "modelCheck": false,
+    "status": "ok",
+    "note": "http 200 (已人工確認過商品正確，略過型號比對)"
   },
   {
     "it": "water_dispenser",
@@ -464,6 +515,7 @@
     "model": "UR-3902AW-1＋ART",
     "type": "pchome",
     "url": "https://24h.pchome.com.tw/prod/DMAWI0-A900ITF3M",
+    "modelCheck": true,
     "status": "ok",
     "note": "ForSale qty 20 low null"
   },
@@ -473,6 +525,7 @@
     "model": "UR-3902AW-1＋ART",
     "type": "pchome",
     "url": "https://24h.pchome.com.tw/prod/DMAWGY-A900HF5JT",
+    "modelCheck": true,
     "status": "ok",
     "note": "ForSale qty 13 low null"
   },
@@ -482,6 +535,7 @@
     "model": "UR-3902AW-1＋ART",
     "type": "official",
     "url": "https://acuowater.com.tw/product/ur-3902aw/",
+    "modelCheck": true,
     "status": "ok",
     "note": "http 200"
   },
@@ -491,6 +545,7 @@
     "model": "Bewamat 75A",
     "type": "pchome",
     "url": "https://24h.pchome.com.tw/prod/QBAU0O-A90065T09",
+    "modelCheck": true,
     "status": "oos",
     "note": "NotReady qty 0 low null"
   },
@@ -500,6 +555,7 @@
     "model": "SFT-200",
     "type": "momo",
     "url": "https://www.momoshop.com.tw/goods/GoodsDetail.jsp?i_code=14779269",
+    "modelCheck": true,
     "status": "ok",
     "note": "http 200"
   },
@@ -509,6 +565,7 @@
     "model": "SFT-200",
     "type": "momo",
     "url": "https://www.momoshop.com.tw/goods/GoodsDetail.jsp?i_code=14520267",
+    "modelCheck": true,
     "status": "ok",
     "note": "http 200"
   },
@@ -518,6 +575,7 @@
     "model": "SFT-200",
     "type": "official",
     "url": "https://shop.3m.com.tw/SalePage/Index/11013225",
+    "modelCheck": true,
     "status": "ok",
     "note": "http 200"
   },
@@ -527,6 +585,7 @@
     "model": "SFT-150",
     "type": "momo",
     "url": "https://www.momoshop.com.tw/goods/GoodsDetail.jsp?i_code=13230158",
+    "modelCheck": true,
     "status": "ok",
     "note": "http 200"
   },
@@ -536,6 +595,7 @@
     "model": "SFT-150",
     "type": "official",
     "url": "https://shop.3m.com.tw/SalePage/Index/10138623",
+    "modelCheck": true,
     "status": "ok",
     "note": "http 200"
   },
@@ -545,6 +605,7 @@
     "model": "VST150",
     "type": "momo",
     "url": "https://www.momoshop.com.tw/product/14966176",
+    "modelCheck": true,
     "status": "ok",
     "note": "http 200"
   },
@@ -554,6 +615,7 @@
     "model": "VST150",
     "type": "official",
     "url": "https://shop.3m.com.tw/SalePage/Index/11516654",
+    "modelCheck": true,
     "status": "ok",
     "note": "http 200"
   },
@@ -563,6 +625,7 @@
     "model": "VST150",
     "type": "other",
     "url": "https://www.trplus.com.tw/p/026010842",
+    "modelCheck": true,
     "status": "ok",
     "note": "http 200"
   },
@@ -572,6 +635,7 @@
     "model": "CES87120GTW",
     "type": "pchome",
     "url": "https://24h.pchome.com.tw/prod/DEDW02-A900K5B4X",
+    "modelCheck": true,
     "status": "ok",
     "note": "ForSale qty 10 low null"
   },
@@ -581,6 +645,7 @@
     "model": "CES87120GTW",
     "type": "official",
     "url": "https://www.twtoto.com.tw/product-detail.aspx?mid=1&id=2810",
+    "modelCheck": true,
     "status": "ok",
     "note": "http 200"
   },
@@ -590,6 +655,7 @@
     "model": "CES85510GTW",
     "type": "pchome",
     "url": "https://24h.pchome.com.tw/prod/DEDW02-A900K5B9K",
+    "modelCheck": true,
     "status": "ok",
     "note": "ForSale qty 10 low null"
   },
@@ -599,6 +665,7 @@
     "model": "CES85510GTW",
     "type": "official",
     "url": "https://www.twtoto.com.tw/product-detail.aspx?mid=1&id=2811",
+    "modelCheck": true,
     "status": "ok",
     "note": "http 200"
   },
@@ -608,6 +675,7 @@
     "model": "CES83410GTW",
     "type": "pchome",
     "url": "https://24h.pchome.com.tw/prod/DEDW02-A900K5BBS",
+    "modelCheck": true,
     "status": "ok",
     "note": "ForSale qty 8 low null"
   },
@@ -617,6 +685,7 @@
     "model": "CES83410GTW",
     "type": "official",
     "url": "https://www.twtoto.com.tw/product-detail.aspx?mid=1&id=2812",
+    "modelCheck": true,
     "status": "ok",
     "note": "http 200"
   },
@@ -626,6 +695,7 @@
     "model": "CES75110ATW",
     "type": "official",
     "url": "https://www.twtoto.com.tw/product-detail.aspx?mid=1&id=2536",
+    "modelCheck": true,
     "status": "ok",
     "note": "http 200"
   },
@@ -635,6 +705,7 @@
     "model": "CCW288S7AA",
     "type": "momo",
     "url": "https://www.momoshop.com.tw/goods/GoodsDetail.jsp?i_code=15239925",
+    "modelCheck": true,
     "status": "ok",
     "note": "http 200"
   },
@@ -644,6 +715,7 @@
     "model": "CCW288S7AA",
     "type": "official",
     "url": "https://www.twtoto.com.tw/product-detail.aspx?mid=1&id=2926",
+    "modelCheck": true,
     "status": "ok",
     "note": "http 200"
   },
@@ -653,6 +725,7 @@
     "model": "V-251BZ-TWN",
     "type": "pchome",
     "url": "https://24h.pchome.com.tw/prod/DPAL3O-A900K8KTZ",
+    "modelCheck": true,
     "status": "ok",
     "note": "ForSale qty 18 low null"
   },
@@ -662,6 +735,7 @@
     "model": "V-251BZ-TWN",
     "type": "momo",
     "url": "https://www.momoshop.com.tw/goods/GoodsDetail.jsp?i_code=8437790",
+    "modelCheck": true,
     "status": "ok",
     "note": "http 200"
   },
@@ -671,8 +745,9 @@
     "model": "V-251BZ-TWN",
     "type": "other",
     "url": "https://www.daguan-tech.com.tw/product/v-151bz-twn-v-251bz-twn/",
+    "modelCheck": true,
     "status": "blocked",
-    "note": "http 403"
+    "note": "http 403（反爬蟲擋住，請用瀏覽器人工開一次確認不是 404）"
   },
   {
     "it": "bath_heater",
@@ -680,6 +755,7 @@
     "model": "FV-40BUY1W",
     "type": "momo",
     "url": "https://www.momoshop.com.tw/goods/GoodsDetail.jsp?i_code=11072198",
+    "modelCheck": true,
     "status": "ok",
     "note": "http 200"
   },
@@ -689,6 +765,7 @@
     "model": "FV-40BUY1W",
     "type": "pchome",
     "url": "https://24h.pchome.com.tw/prod/DPAL3M-A900BTWEY",
+    "modelCheck": true,
     "status": "ok",
     "note": "ForSale qty 1 low null"
   },
@@ -698,6 +775,7 @@
     "model": "FV-40BUY1W",
     "type": "other",
     "url": "https://www.tsannbo.com/product.php?act=view&no=33",
+    "modelCheck": true,
     "status": "ok",
     "note": "http 200"
   },
@@ -707,6 +785,7 @@
     "model": "VHB30BCMT-AD",
     "type": "momo",
     "url": "https://www.momoshop.com.tw/goods/GoodsDetail.jsp?i_code=9758064",
+    "modelCheck": true,
     "status": "ok",
     "note": "http 200"
   },
@@ -716,6 +795,7 @@
     "model": "VHB30BCMT-AD",
     "type": "pchome",
     "url": "https://24h.pchome.com.tw/prod/DMAZ67-A900BSZZ7",
+    "modelCheck": true,
     "status": "ok",
     "note": "ForSale qty 20 low null"
   },
@@ -725,6 +805,7 @@
     "model": "VHB30BCMT-AD",
     "type": "official",
     "url": "https://www.deltaww.com/zh-tw/products/Heater-Fan/3251",
+    "modelCheck": true,
     "status": "ok",
     "note": "http 200"
   },
@@ -734,8 +815,9 @@
     "model": "VHB30BCMRT-A",
     "type": "pchome",
     "url": "https://24h.pchome.com.tw/prod/DPAL3O-A900HYXY7",
+    "modelCheck": true,
     "status": "ok",
-    "note": "ForSale qty 20 low null"
+    "note": "ForSale qty 16 low null"
   },
   {
     "it": "bath_heater",
@@ -743,6 +825,7 @@
     "model": "VHB30BCMRT-A",
     "type": "momo",
     "url": "https://www.momoshop.com.tw/goods/GoodsDetail.jsp?i_code=8381731",
+    "modelCheck": true,
     "status": "ok",
     "note": "http 200"
   },
@@ -752,6 +835,7 @@
     "model": "VHB30BCMRT-A",
     "type": "official",
     "url": "https://www.deltaww.com/zh-tw/products/Heater-Fan/3251",
+    "modelCheck": true,
     "status": "ok",
     "note": "http 200"
   },
@@ -761,6 +845,7 @@
     "model": "OLED77G6PTA",
     "type": "pchome",
     "url": "https://24h.pchome.com.tw/prod/DPADZ5-A900K4PDR",
+    "modelCheck": true,
     "status": "ok",
     "note": "ForSale qty 3 low null"
   },
@@ -770,6 +855,7 @@
     "model": "OLED77G6PTA",
     "type": "momo",
     "url": "https://www.momoshop.com.tw/goods/GoodsDetail.jsp?i_code=15390224",
+    "modelCheck": true,
     "status": "ok",
     "note": "http 200"
   },
@@ -779,6 +865,7 @@
     "model": "OLED77G6PTA",
     "type": "official",
     "url": "https://www.lg.com/tw/tv-soundbars/oled-evo/oled77g6pta/",
+    "modelCheck": true,
     "status": "ok",
     "note": "http 200"
   },
@@ -788,6 +875,7 @@
     "model": "OLED77C5PTA",
     "type": "official",
     "url": "https://www.lg.com/tw/tv-soundbars/oled-evo/oled77c5pta/",
+    "modelCheck": true,
     "status": "ok",
     "note": "http 200"
   },
@@ -797,6 +885,7 @@
     "model": "75QNED82ATA",
     "type": "pchome",
     "url": "https://24h.pchome.com.tw/prod/DPADYE-A900JZW22",
+    "modelCheck": true,
     "status": "ok",
     "note": "ForSale qty 6 low 39900"
   },
@@ -806,6 +895,7 @@
     "model": "75QNED82ATA",
     "type": "momo",
     "url": "https://www.momoshop.com.tw/goods/GoodsDetail.jsp?i_code=15204600",
+    "modelCheck": true,
     "status": "ok",
     "note": "http 200"
   },
@@ -815,6 +905,7 @@
     "model": "75QNED82ATA",
     "type": "official",
     "url": "https://www.lg.com/tw/tv-soundbars/qned/75qned82ata/",
+    "modelCheck": true,
     "status": "ok",
     "note": "http 200"
   },
@@ -824,6 +915,7 @@
     "model": "QA75QN90FAXXZW",
     "type": "pchome",
     "url": "https://24h.pchome.com.tw/prod/DPADEW-A900IUDMN",
+    "modelCheck": true,
     "status": "oos",
     "note": "OrderRefill qty 0 low null"
   },
@@ -833,6 +925,7 @@
     "model": "QA75QN90FAXXZW",
     "type": "pchome",
     "url": "https://24h.pchome.com.tw/prod/DPADEW-A900IUDPG",
+    "modelCheck": true,
     "status": "ok",
     "note": "ForSale qty 1 low null"
   },
@@ -842,6 +935,7 @@
     "model": "Y-75XR70",
     "type": "pchome",
     "url": "https://24h.pchome.com.tw/prod/DPAD06-A900J477W",
+    "modelCheck": true,
     "status": "ok",
     "note": "ForSale qty 6 low 82710"
   },
@@ -851,6 +945,7 @@
     "model": "Y-75XR70",
     "type": "pchome",
     "url": "https://24h.pchome.com.tw/prod/DPADO2-A900K7L2F",
+    "modelCheck": true,
     "status": "ok",
     "note": "ForSale qty 1 low null"
   },
@@ -860,6 +955,7 @@
     "model": "HW-Q990F",
     "type": "momo",
     "url": "https://www.momoshop.com.tw/goods/GoodsDetail.jsp?i_code=14063403",
+    "modelCheck": true,
     "status": "ok",
     "note": "http 200"
   },
@@ -869,6 +965,7 @@
     "model": "HW-Q990F",
     "type": "pchome",
     "url": "https://24h.pchome.com.tw/prod/DMAAOD-A900JUDD2",
+    "modelCheck": true,
     "status": "ok",
     "note": "ForSale qty 1 low null"
   },
@@ -878,6 +975,7 @@
     "model": "S95TR",
     "type": "pchome",
     "url": "https://24h.pchome.com.tw/prod/DMAAF8-A900I0K0Y",
+    "modelCheck": true,
     "status": "ok",
     "note": "ForSale qty 5 low null"
   },
@@ -886,8 +984,9 @@
     "opt": "lg_s95tr",
     "model": "S95TR",
     "type": "momo",
-    "url": "https://www.momoshop.com.tw/goods/GoodsDetail.jsp?i_code=13226987",
-    "status": "dead",
+    "url": "https://www.momoshop.com.tw/goods/GoodsDetail.jsp?i_code=14906380",
+    "modelCheck": true,
+    "status": "ok",
     "note": "http 200"
   },
   {
@@ -896,6 +995,7 @@
     "model": "S80TR",
     "type": "pchome",
     "url": "https://24h.pchome.com.tw/prod/DMBM1D-A900J5JAZ",
+    "modelCheck": true,
     "status": "ok",
     "note": "ForSale qty 1 low null"
   },
@@ -905,6 +1005,7 @@
     "model": "S80TR",
     "type": "momo",
     "url": "https://www.momoshop.com.tw/goods/GoodsDetail.jsp?i_code=14906381",
+    "modelCheck": true,
     "status": "ok",
     "note": "http 200"
   },
@@ -914,6 +1015,7 @@
     "model": "Arc Ultra",
     "type": "pchome",
     "url": "https://24h.pchome.com.tw/prod/DMAAO6-A900IE4HM",
+    "modelCheck": true,
     "status": "ok",
     "note": "ForSale qty 14 low 37710"
   },
@@ -923,6 +1025,7 @@
     "model": "Arc Ultra",
     "type": "momo",
     "url": "https://www.momoshop.com.tw/goods/GoodsDetail.jsp?i_code=14825640",
+    "modelCheck": true,
     "status": "ok",
     "note": "http 200"
   },
@@ -932,6 +1035,7 @@
     "model": "Saros 20 水立方",
     "type": "pchome",
     "url": "https://24h.pchome.com.tw/prod/DMBL1C-A900JNELR",
+    "modelCheck": true,
     "status": "ok",
     "note": "ForSale qty 15 low null"
   },
@@ -941,6 +1045,7 @@
     "model": "Saros 20 水立方",
     "type": "official",
     "url": "https://www.roborocktw.com/products/saros-20%E6%B0%B4%E7%AB%8B%E6%96%B9",
+    "modelCheck": true,
     "status": "ok",
     "note": "http 200"
   },
@@ -950,6 +1055,7 @@
     "model": "X60 Ultra",
     "type": "momo",
     "url": "https://www.momoshop.com.tw/goods/GoodsDetail.jsp?i_code=14977086",
+    "modelCheck": true,
     "status": "ok",
     "note": "http 200"
   },
@@ -959,6 +1065,7 @@
     "model": "X60 Ultra",
     "type": "pchome",
     "url": "https://24h.pchome.com.tw/prod/DMBL3E-A900JUP4D",
+    "modelCheck": true,
     "status": "ok",
     "note": "ForSale qty 8 low null"
   },
@@ -968,6 +1075,7 @@
     "model": "X60 Ultra",
     "type": "official",
     "url": "https://www.dreametech.com.tw/products/x60-ultra-water-hookup-kit",
+    "modelCheck": true,
     "status": "ok",
     "note": "http 200"
   },
@@ -977,6 +1085,7 @@
     "model": "X60 Master",
     "type": "pchome",
     "url": "https://24h.pchome.com.tw/prod/DMBL3E-A900JZ3SP",
+    "modelCheck": true,
     "status": "ok",
     "note": "ForSale qty 6 low null"
   },
@@ -986,6 +1095,7 @@
     "model": "X60 Master",
     "type": "official",
     "url": "https://www.dreametech.com.tw/products/x60-master",
+    "modelCheck": true,
     "status": "ok",
     "note": "http 200"
   },
@@ -995,6 +1105,7 @@
     "model": "DEEBOT X11 PRO 上下水款",
     "type": "pchome",
     "url": "https://24h.pchome.com.tw/prod/DMBL0L-A900JRDAS",
+    "modelCheck": true,
     "status": "ok",
     "note": "ForSale qty 8 low null"
   },
@@ -1004,6 +1115,7 @@
     "model": "DEEBOT X11 PRO 上下水款",
     "type": "official",
     "url": "https://storetw.ecovacs.com/zh-tw/products/deebot-x11-pro-%E4%B8%8A%E4%B8%8B%E6%B0%B4%E6%AC%BE",
+    "modelCheck": true,
     "status": "ok",
     "note": "http 200"
   },
@@ -1013,6 +1125,7 @@
     "model": "Qrevo Pro 水立方",
     "type": "pchome",
     "url": "https://24h.pchome.com.tw/prod/DMBL1C-A900IAE5C",
+    "modelCheck": true,
     "status": "oos",
     "note": "NotReady qty 0 low null"
   },
@@ -1022,8 +1135,9 @@
     "model": "HIT-FY10-T",
     "type": "official",
     "url": "https://www.instant.com.tw/news/a21aadc4-4b60-4b40-b16d-bc9a34f5ee24",
-    "status": "mismatch?",
-    "note": "http 200 model not found in page"
+    "modelCheck": true,
+    "status": "ok",
+    "note": "http 200 (官網／其他頁未出現型號，正常)"
   },
   {
     "it": "door_lock",
@@ -1031,6 +1145,7 @@
     "model": "HIT-FY10-T",
     "type": "other",
     "url": "https://www.soba.com.tw/products/info.php?id=64312&title_id=1200",
+    "modelCheck": true,
     "status": "ok",
     "note": "http 200"
   },
@@ -1040,6 +1155,7 @@
     "model": "HIT-FY10-T",
     "type": "other",
     "url": "https://www.elockmaster.com/products/hitachi-fy10",
+    "modelCheck": true,
     "status": "ok",
     "note": "http 200"
   },
@@ -1049,6 +1165,7 @@
     "model": "HIT-FY10-T",
     "type": "other",
     "url": "https://www.tk3c.com/product/270409",
+    "modelCheck": true,
     "status": "ok",
     "note": "http 200"
   },
@@ -1058,6 +1175,7 @@
     "model": "HIT-FY10-T",
     "type": "momo",
     "url": "https://www.momoshop.com.tw/product/15368264",
+    "modelCheck": true,
     "status": "ok",
     "note": "http 200"
   },
@@ -1067,6 +1185,7 @@
     "model": "HIT-FY10-T",
     "type": "other",
     "url": "https://www.elockmaster.com/collections/hitachi%E6%97%A5%E7%AB%8B",
+    "modelCheck": true,
     "status": "ok",
     "note": "http 200"
   },
@@ -1076,6 +1195,7 @@
     "model": "AP100",
     "type": "official",
     "url": "https://www.apex-tw.com/product-detail/ap100-b",
+    "modelCheck": true,
     "status": "ok",
     "note": "http 200"
   },
@@ -1085,6 +1205,7 @@
     "model": "AP100",
     "type": "official",
     "url": "https://www.apex-tw.com/product-detail/ap100-r",
+    "modelCheck": true,
     "status": "ok",
     "note": "http 200"
   },
@@ -1094,8 +1215,9 @@
     "model": "AP100",
     "type": "official",
     "url": "https://www.apex-tw.com/news-detail/app-siri",
-    "status": "mismatch?",
-    "note": "http 200 model not found in page"
+    "modelCheck": true,
+    "status": "ok",
+    "note": "http 200 (官網／其他頁未出現型號，正常)"
   },
   {
     "it": "door_lock",
@@ -1103,6 +1225,7 @@
     "model": "AP100",
     "type": "official",
     "url": "https://www.apex-tw.com/news-detail/Install-smartlocks",
+    "modelCheck": true,
     "status": "ok",
     "note": "http 200"
   },
@@ -1112,8 +1235,9 @@
     "model": "AP100",
     "type": "official",
     "url": "https://www.apex-tw.com/store",
-    "status": "mismatch?",
-    "note": "http 200 model not found in page"
+    "modelCheck": true,
+    "status": "ok",
+    "note": "http 200 (官網／其他頁未出現型號，正常)"
   },
   {
     "it": "door_lock",
@@ -1121,8 +1245,9 @@
     "model": "AP100",
     "type": "official",
     "url": "https://www.apex-tw.com/about/44",
-    "status": "mismatch?",
-    "note": "http 200 model not found in page"
+    "modelCheck": true,
+    "status": "ok",
+    "note": "http 200 (官網／其他頁未出現型號，正常)"
   },
   {
     "it": "door_lock",
@@ -1130,6 +1255,7 @@
     "model": "702-FVP",
     "type": "official",
     "url": "https://www.ljtwm.com/product/philips-%E9%A3%9B%E5%88%A9%E6%B5%A6%E6%99%BA%E8%83%BD%E9%8E%96%EF%BD%9Ceasykey-702-fvp-7hws-%E4%BA%BA%E8%87%89%E5%8F%AF%E8%A6%96%E6%99%BA%E8%83%BD%E9%96%80%E9%8E%96/",
+    "modelCheck": true,
     "status": "ok",
     "note": "http 200"
   },
@@ -1139,8 +1265,9 @@
     "model": "702-FVP",
     "type": "official",
     "url": "https://www.ljtwm.com/wp-content/uploads/2025/04/702-FVP-7HW%E7%94%A8%E6%88%B6%E6%89%8B%E5%86%8A_20250425.pdf",
+    "modelCheck": true,
     "status": "ok",
-    "note": "http 200"
+    "note": "http 200 (非 HTML，略過型號比對)"
   },
   {
     "it": "door_lock",
@@ -1148,8 +1275,9 @@
     "model": "702-FVP",
     "type": "official",
     "url": "https://www.ljtwm.com/2400/",
-    "status": "mismatch?",
-    "note": "http 200 model not found in page"
+    "modelCheck": true,
+    "status": "ok",
+    "note": "http 200 (官網／其他頁未出現型號，正常)"
   },
   {
     "it": "door_lock",
@@ -1157,8 +1285,9 @@
     "model": "702-FVP",
     "type": "official",
     "url": "https://www.ljtwm.com/%E6%8E%88%E6%AC%8A%E9%8A%B7%E5%94%AE%E6%93%9A%E9%BB%9E/%E8%A1%97%E9%82%8A%E9%96%80%E5%BA%97/",
-    "status": "mismatch?",
-    "note": "http 200 model not found in page"
+    "modelCheck": true,
+    "status": "ok",
+    "note": "http 200 (官網／其他頁未出現型號，正常)"
   },
   {
     "it": "door_lock",
@@ -1166,8 +1295,9 @@
     "model": "702-FVP",
     "type": "other",
     "url": "https://www.ljtwm.com/1563/",
-    "status": "mismatch?",
-    "note": "http 200 model not found in page"
+    "modelCheck": true,
+    "status": "ok",
+    "note": "http 200 (官網／其他頁未出現型號，正常)"
   },
   {
     "it": "door_lock",
@@ -1175,6 +1305,7 @@
     "model": "702-FVP",
     "type": "other",
     "url": "https://www.lovebuyigo.com.tw/products/philips_702-fvp",
+    "modelCheck": true,
     "status": "ok",
     "note": "http 200"
   },
@@ -1184,6 +1315,7 @@
     "model": "V5 Max",
     "type": "official",
     "url": "https://www.lockin.tw/tw/product-detail/v5max-s",
+    "modelCheck": true,
     "status": "ok",
     "note": "http 200"
   },
@@ -1193,6 +1325,7 @@
     "model": "V5 Max",
     "type": "official",
     "url": "https://www.lockin.tw/tw/product-detail/v5max-b",
+    "modelCheck": true,
     "status": "ok",
     "note": "http 200"
   },
@@ -1202,8 +1335,9 @@
     "model": "V5 Max",
     "type": "official",
     "url": "https://www.lockin.tw/tw/news-detail/30",
+    "modelCheck": true,
     "status": "ok",
-    "note": "http 200"
+    "note": "http 200 (官網／其他頁未出現型號，正常)"
   },
   {
     "it": "door_lock",
@@ -1211,8 +1345,9 @@
     "model": "V5 Max",
     "type": "official",
     "url": "https://www.lockin.tw/tw/stronghold-detail/8",
+    "modelCheck": true,
     "status": "ok",
-    "note": "http 200"
+    "note": "http 200 (官網／其他頁未出現型號，正常)"
   },
   {
     "it": "door_lock",
@@ -1220,6 +1355,7 @@
     "model": "V5 Max",
     "type": "pchome",
     "url": "https://24h.pchome.com.tw/prod/DQAT1H-A900I5LFR",
+    "modelCheck": true,
     "status": "ok",
     "note": "ForSale qty 2 low 29450"
   },
@@ -1229,6 +1365,7 @@
     "model": "V5 Max",
     "type": "other",
     "url": "https://ilocklife.com/products-detail/lockin-v5max/",
+    "modelCheck": true,
     "status": "ok",
     "note": "http 200"
   },
@@ -1238,6 +1375,7 @@
     "model": "Holo 3",
     "type": "pchome",
     "url": "https://24h.pchome.com.tw/prod/DQBS4N-A900ITLM0",
+    "modelCheck": true,
     "status": "ok",
     "note": "ForSale qty 20 low 34960"
   },
@@ -1247,6 +1385,7 @@
     "model": "Holo 3",
     "type": "momo",
     "url": "https://www.momoshop.com.tw/product/14196244",
+    "modelCheck": true,
     "status": "ok",
     "note": "http 200"
   },
@@ -1256,6 +1395,7 @@
     "model": "Holo 3",
     "type": "other",
     "url": "https://www.mrsmartlock.com/products/info.php?id=245346&title_id=9587",
+    "modelCheck": true,
     "status": "ok",
     "note": "http 200"
   },
@@ -1265,6 +1405,7 @@
     "model": "Holo 3",
     "type": "other",
     "url": "https://www.lockworld.com.tw/products/sharp-holo3",
+    "modelCheck": true,
     "status": "ok",
     "note": "http 200"
   },
@@ -1274,6 +1415,7 @@
     "model": "Holo 3",
     "type": "other",
     "url": "https://www.elockmaster.com/products/sharp-holo3",
+    "modelCheck": true,
     "status": "ok",
     "note": "http 200"
   },
@@ -1283,6 +1425,7 @@
     "model": "Holo 3",
     "type": "other",
     "url": "https://pxbox.es.pxmart.com.tw/product/339268",
+    "modelCheck": true,
     "status": "ok",
     "note": "http 200"
   },
@@ -1292,6 +1435,7 @@
     "model": "P100F-Pro",
     "type": "official",
     "url": "https://hexa-tw.com/products/p100f-pro%E6%99%BA%E6%85%A7%E6%8C%87%E7%B4%8B%E9%96%80%E9%8E%96",
+    "modelCheck": true,
     "status": "ok",
     "note": "http 200"
   },
@@ -1301,8 +1445,9 @@
     "model": "P100F-Pro",
     "type": "other",
     "url": "https://cdn.shopify.com/s/files/1/0689/2951/9681/files/P100-Pro_CH_e3453201-8edd-449f-8fb3-e686e047c007.pdf",
-    "status": "mismatch?",
-    "note": "http 200 model not found in page"
+    "modelCheck": true,
+    "status": "ok",
+    "note": "http 200 (非 HTML，略過型號比對)"
   },
   {
     "it": "door_lock",
@@ -1310,6 +1455,7 @@
     "model": "P100F-Pro",
     "type": "official",
     "url": "https://hexa-tw.com/pages/%E4%BF%9D%E5%9B%BA%E9%A0%88%E7%9F%A5",
+    "modelCheck": true,
     "status": "ok",
     "note": "http 200"
   },
@@ -1319,6 +1465,7 @@
     "model": "P100F-Pro",
     "type": "official",
     "url": "https://hexa-tw.com/pages/%E6%8E%88%E6%AC%8A%E9%80%9A%E8%B7%AF",
+    "modelCheck": true,
     "status": "ok",
     "note": "http 200"
   },
@@ -1328,6 +1475,7 @@
     "model": "P100F-Pro",
     "type": "official",
     "url": "https://hexa-tw.com/collections/all",
+    "modelCheck": true,
     "status": "ok",
     "note": "http 200"
   },
@@ -1337,6 +1485,7 @@
     "model": "P100F-Pro",
     "type": "other",
     "url": "https://shop.ljtwm.com/products/hexa-p100-f-pro",
+    "modelCheck": true,
     "status": "ok",
     "note": "http 200"
   },
@@ -1346,6 +1495,7 @@
     "model": "P100F-Pro",
     "type": "other",
     "url": "https://shop.ljtwm.com/pages/lock-additional-fees",
+    "modelCheck": true,
     "status": "ok",
     "note": "http 200"
   },
@@ -1355,6 +1505,7 @@
     "model": "P100F-Pro",
     "type": "other",
     "url": "https://www.ruten.com.tw/item/show?22617575592810",
+    "modelCheck": true,
     "status": "ok",
     "note": "http 200"
   },
@@ -1364,6 +1515,7 @@
     "model": "P100F-Pro",
     "type": "momo",
     "url": "https://www.momoshop.com.tw/TP/TP0000234/goodsDetail/TP00002340014009",
+    "modelCheck": true,
     "status": "ok",
     "note": "http 200"
   },
@@ -1373,8 +1525,9 @@
     "model": "P100F-Pro",
     "type": "other",
     "url": "https://apps.apple.com/tw/app/hexa/id6748297294",
-    "status": "mismatch?",
-    "note": "http 200 model not found in page"
+    "modelCheck": true,
+    "status": "ok",
+    "note": "http 200 (官網／其他頁未出現型號，正常)"
   },
   {
     "it": "ac_living",
@@ -1382,6 +1535,7 @@
     "model": "RZAC100DVLT/FBA100BVLT",
     "type": "other",
     "url": "https://www.chlifemall.com/products/%EF%BC%BBdaikin-%E5%A4%A7%E9%87%91%EF%BC%BD13-15%E5%9D%AA-%E5%96%AE%E7%9B%B8220v-zeas%E9%9A%B1%E8%97%8F%E5%9E%8B-%E4%B8%80%E5%B0%8D%E4%B8%80%E5%88%86%E9%9B%A2%E5%BC%8F%E8%AE%8A%E9%A0%BB%E5%86%B7%E6%B0%A3-rzac100dvltfba100bvlt",
+    "modelCheck": true,
     "status": "ok",
     "note": "http 200"
   },
@@ -1391,6 +1545,7 @@
     "model": "RAD-110NJP1/RAC-110NP",
     "type": "other",
     "url": "https://www.unbox.tw/product/%E3%80%90hitachi-%E6%97%A5%E7%AB%8B%E3%80%9118%E5%9D%AA-%E8%AE%8A%E9%A0%BB%E5%86%B7%E6%9A%96%E5%90%8A%E9%9A%B1%E5%BC%8F%E5%88%86%E9%9B%A2%E5%BC%8F%E5%86%B7%E6%B0%A3-rad-110njp1-rac-110np",
+    "modelCheck": true,
     "status": "ok",
     "note": "http 200"
   },
@@ -1400,8 +1555,9 @@
     "model": "RAD-110NJP1/RAC-110NP",
     "type": "momo",
     "url": "https://www.momoshop.com.tw/goods/GoodsDetail.jsp?i_code=15010852",
-    "status": "mismatch?",
-    "note": "http 200 model not found in page"
+    "modelCheck": true,
+    "status": "ok",
+    "note": "http 200"
   },
   {
     "it": "ac_living",
@@ -1409,8 +1565,9 @@
     "model": "RAD-110NJP1/RAC-110NP",
     "type": "official",
     "url": "https://www.hitachiaircon.com/tw/range/split-embedded",
-    "status": "mismatch?",
-    "note": "http 200 model not found in page"
+    "modelCheck": true,
+    "status": "ok",
+    "note": "http 200 (官網／其他頁未出現型號，正常)"
   },
   {
     "it": "ac_living",
@@ -1418,6 +1575,7 @@
     "model": "RXM90ZVLT/FTXM90ZVLT",
     "type": "momo",
     "url": "https://www.momoshop.com.tw/goods/GoodsDetail.jsp?i_code=13876884",
+    "modelCheck": true,
     "status": "ok",
     "note": "http 200"
   },
@@ -1427,8 +1585,9 @@
     "model": "RXM90ZVLT/FTXM90ZVLT",
     "type": "other",
     "url": "https://www.panashop.com.tw/prod/RXM90ZVLT%20FTXM90ZVLT",
-    "status": "mismatch?",
-    "note": "http 200 model not found in page"
+    "modelCheck": true,
+    "status": "ok",
+    "note": "http 200"
   },
   {
     "it": "ac_living",
@@ -1436,6 +1595,7 @@
     "model": "DXC80ZRT2-W/DXK80ZRT2-W",
     "type": "momo",
     "url": "https://www.momoshop.com.tw/goods/GoodsDetail.jsp?i_code=15028300",
+    "modelCheck": true,
     "status": "ok",
     "note": "http 200"
   },
@@ -1445,8 +1605,9 @@
     "model": "DXC80ZRT2-W/DXK80ZRT2-W",
     "type": "official",
     "url": "https://www.heavyduty.com.tw/product/Residential-Single-Split-Wall-Mounted/ZRT.html",
-    "status": "mismatch?",
-    "note": "http 200 model not found in page"
+    "modelCheck": true,
+    "status": "ok",
+    "note": "http 200"
   },
   {
     "it": "dehumidifier_living",
@@ -1454,6 +1615,7 @@
     "model": "F-YD64LX",
     "type": "other",
     "url": "https://htx4379.waca.ec/category/154383",
+    "modelCheck": true,
     "status": "ok",
     "note": "http 200"
   },
@@ -1463,6 +1625,7 @@
     "model": "F-YD64LX",
     "type": "other",
     "url": "https://www.fuchia.tw/v2/shop/item/3128",
+    "modelCheck": true,
     "status": "ok",
     "note": "http 200"
   },
@@ -1472,6 +1635,7 @@
     "model": "F-YD64LX",
     "type": "official",
     "url": "https://www.panasonic.com/tw/consumer/air-conditioner/ceiling-dehumid/f-yd64lx.html",
+    "modelCheck": true,
     "status": "ok",
     "note": "http 200"
   },
@@ -1481,6 +1645,7 @@
     "model": "F-YD36LX",
     "type": "other",
     "url": "https://htx4379.waca.ec/category/154383",
+    "modelCheck": true,
     "status": "ok",
     "note": "http 200"
   },
@@ -1490,6 +1655,7 @@
     "model": "F-YD36LX",
     "type": "other",
     "url": "https://www.unbox.tw/product/%E9%9A%B1%E8%97%8F%E5%9E%8B%E6%B8%85%E6%B7%A8%E9%99%A4%E6%BF%95%E6%A9%9F-f-yd36lx",
+    "modelCheck": true,
     "status": "ok",
     "note": "http 200"
   },
@@ -1499,6 +1665,7 @@
     "model": "F-YD36LX",
     "type": "official",
     "url": "https://www.panasonic.com/tw/consumer/air-conditioner/ceiling-dehumid/f-yd36lx.html",
+    "modelCheck": true,
     "status": "ok",
     "note": "http 200"
   },
@@ -1508,6 +1675,7 @@
     "model": "RDI-360DX",
     "type": "other",
     "url": "https://www.ye888.com.tw/ec99/rwd1295/category.asp?category_id=357",
+    "modelCheck": true,
     "status": "ok",
     "note": "http 200"
   },
@@ -1517,6 +1685,7 @@
     "model": "RDI-360DX",
     "type": "official",
     "url": "https://www.hitachiaircon.com/tw/ranges/dehumidifier/dehumidifier-embedded",
+    "modelCheck": true,
     "status": "ok",
     "note": "http 200"
   },
@@ -1526,6 +1695,7 @@
     "model": "MD-40LBD",
     "type": "other",
     "url": "https://www.ye888.com.tw/ec99/rwd1295/category.asp?category_id=357",
+    "modelCheck": true,
     "status": "ok",
     "note": "http 200"
   },
@@ -1535,6 +1705,7 @@
     "model": "MD-40LBD",
     "type": "other",
     "url": "https://htx4379.waca.ec/category/152962",
+    "modelCheck": true,
     "status": "ok",
     "note": "http 200"
   },
@@ -1544,6 +1715,7 @@
     "model": "MD-40LBD",
     "type": "official",
     "url": "https://www.medole.com.tw/70lbad-md-70lbad.html",
+    "modelCheck": true,
     "status": "ok",
     "note": "http 200"
   },
@@ -1553,6 +1725,7 @@
     "model": "HP50W/300TS7",
     "type": "momo",
     "url": "https://www.momoshop.com.tw/goods/GoodsDetail.jsp?i_code=9775834",
+    "modelCheck": true,
     "status": "ok",
     "note": "http 200"
   },
@@ -1562,6 +1735,7 @@
     "model": "HP50W/300TS7",
     "type": "official",
     "url": "https://www.haierpro.com.tw/product/300ts7/",
+    "modelCheck": true,
     "status": "ok",
     "note": "http 200"
   },
@@ -1571,6 +1745,7 @@
     "model": "FEGQ24",
     "type": "momo",
     "url": "https://www.momoshop.com.tw/goods/GoodsDetail.jsp?i_code=15567277",
+    "modelCheck": true,
     "status": "ok",
     "note": "http 200"
   },
@@ -1580,8 +1755,9 @@
     "model": "FEGQ24",
     "type": "official",
     "url": "https://www.dyhot.com.tw/products/fegq-20-24-28-32",
-    "status": "mismatch?",
-    "note": "http 200 model not found in page"
+    "modelCheck": true,
+    "status": "ok",
+    "note": "http 200 (官網／其他頁未出現型號，正常)"
   },
   {
     "it": "water_heater",
@@ -1589,6 +1765,7 @@
     "model": "REU-E2426W-TR",
     "type": "momo",
     "url": "https://www.momoshop.com.tw/goods/GoodsDetail.jsp?i_code=7404794",
+    "modelCheck": true,
     "status": "ok",
     "note": "http 200"
   },
@@ -1598,6 +1775,7 @@
     "model": "REU-E2426W-TR",
     "type": "pchome",
     "url": "https://24h.pchome.com.tw/prod/DMBM31-A900FRWB4",
+    "modelCheck": true,
     "status": "oos",
     "note": "NotReady qty 0 low null"
   },
@@ -1607,6 +1785,7 @@
     "model": "DH2460",
     "type": "momo",
     "url": "https://www.momoshop.com.tw/goods/GoodsDetail.jsp?i_code=8654043",
+    "modelCheck": true,
     "status": "ok",
     "note": "http 200"
   },
@@ -1616,6 +1795,7 @@
     "model": "DH2460",
     "type": "pchome",
     "url": "https://24h.pchome.com.tw/prod/DPAL3B-A900BQACS",
+    "modelCheck": true,
     "status": "oos",
     "note": "NotReady qty 0 low null"
   },
@@ -1625,6 +1805,7 @@
     "model": "REU-A2426W-TR",
     "type": "momo",
     "url": "https://www.momoshop.com.tw/goods/GoodsDetail.jsp?i_code=9881886",
+    "modelCheck": true,
     "status": "ok",
     "note": "http 200"
   },
@@ -1634,6 +1815,7 @@
     "model": "LINA W600×H1200",
     "type": "other",
     "url": "https://grand-kitchen.com.tw/product/hammam-lina-1/",
+    "modelCheck": true,
     "status": "ok",
     "note": "http 200"
   },
@@ -1643,6 +1825,7 @@
     "model": "TW012",
     "type": "official",
     "url": "https://www.caesar.com.tw/product/detail/TW012",
+    "modelCheck": true,
     "status": "ok",
     "note": "http 200"
   },
@@ -1652,6 +1835,7 @@
     "model": "TW012",
     "type": "other",
     "url": "https://www.bsbs.co/products/caesar-tw012",
+    "modelCheck": true,
     "status": "ok",
     "note": "http 200"
   },
@@ -1661,8 +1845,9 @@
     "model": "K-29349TW-7",
     "type": "momo",
     "url": "https://www.momoshop.com.tw/goods/GoodsDetail.jsp?i_code=12097159",
-    "status": "mismatch?",
-    "note": "http 200 model not found in page"
+    "modelCheck": false,
+    "status": "ok",
+    "note": "http 200 (已人工確認過商品正確，略過型號比對)"
   },
   {
     "it": "towel_rack",
@@ -1670,8 +1855,9 @@
     "model": "K-29349TW-7",
     "type": "official",
     "url": "https://shop.kohler.com.tw/underscore-110v/",
-    "status": "mismatch?",
-    "note": "http 200 model not found in page"
+    "modelCheck": true,
+    "status": "ok",
+    "note": "http 200 (官網／其他頁未出現型號，正常)"
   },
   {
     "it": "towel_rack",
@@ -1679,8 +1865,9 @@
     "model": "免打孔數顯恆溫款",
     "type": "momo",
     "url": "https://www.momoshop.com.tw/goods/GoodsDetail.jsp?i_code=14871546",
-    "status": "mismatch?",
-    "note": "http 200 model not found in page"
+    "modelCheck": true,
+    "status": "ok",
+    "note": "http 200 (型號無可比對字串)"
   },
   {
     "it": "towel_rack",
@@ -1688,6 +1875,7 @@
     "model": "免打孔數顯恆溫款",
     "type": "pchome",
     "url": "https://24h.pchome.com.tw/prod/DECB77-A900EOHIO",
+    "modelCheck": true,
     "status": "ok",
     "note": "ForSale qty 17 low null"
   }
