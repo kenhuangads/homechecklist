@@ -473,13 +473,30 @@ function mergeCatalog(remote, seed) {
     let ri = remote.items.find(i => i.id === si.id);
     if (!ri) { remote.items.push(clone(si)); return; }
     CATALOG_ITEM_FIELDS.forEach(k => { if (si[k] !== undefined) ri[k] = clone(si[k]); });
-    si.options.forEach(so => { const ro = ri.options.find(o => o.id === so.id); if (ro) CATALOG_OPTION_FIELDS.forEach(k => { if (so[k] !== undefined) ro[k] = clone(so[k]); }); else ri.options.push(clone(so)); });
+    /* 家人自己加的機型（fam_…）查證後會被寫進目錄，或是舊機型停產換新型號。
+       目錄項目用 replaces 認領舊 id，把「已經選好的那一筆」與「請 Claude 查」的詢問一起接過來，
+       不然家人會發現自己選的東西默默不見了。 */
+    si.options.forEach(so => (so.replaces || []).forEach(oldId => {
+      if (!oldId || oldId === so.id) return;
+      const idx = ri.options.findIndex(o => o.id === oldId); if (idx < 0) return;
+      ri.options.splice(idx, 1);
+      const old = (ri.picks || []).find(p => p.optionId === oldId);
+      if (old) {
+        const cur = ri.picks.find(p => p.optionId === so.id);
+        if (cur) { cur.qty = Math.min(20, (Number(cur.qty) || 1) + (Number(old.qty) || 1)); ri.picks = ri.picks.filter(p => p !== old); }
+        else old.optionId = so.id;
+      }
+      (ri.requests || []).forEach(r => { if (r.optionId === oldId) r.optionId = so.id; });
+    }));
+    si.options.forEach(so => { const ro = ri.options.find(o => o.id === so.id); if (ro) CATALOG_OPTION_FIELDS.forEach(k => { if (so[k] !== undefined) ro[k] = clone(so[k]); }); else { const add = clone(so); delete add.replaces; ri.options.push(add); } });
     ri.options = ri.options.filter(o => o.tier === '家人推薦' || si.options.some(so => so.id === o.id));
     const hadPicks = (ri.picks || []).length;
     ri.picks = (ri.picks || []).filter(p => ri.options.some(o => o.id === p.optionId)); ri.chosenOptionId = ri.picks[0] ? ri.picks[0].optionId : null;
     // 選過的機型被目錄下架（例如查出不符需求）時，狀態要退回「考慮中」，不然會顯示「已決定」卻沒有任何選擇
     if (hadPicks && !ri.picks.length && ri.status === 'decided') ri.status = 'choosing';
     si.todos.forEach(st => { if (!ri.todos.some(t => t.id === st.id)) ri.todos.push(clone(st)); });
+    /* 機型已經進到目錄＝Claude 查完了，把「請 Claude 幫忙查」的待處理詢問結案 */
+    (ri.requests || []).forEach(r => { if (r.status === 'pending' && r.optionId && si.options.some(so => so.id === r.optionId)) { r.status = 'done'; r.doneBy = 'Claude'; r.doneAt = new Date().toISOString(); } });
   });
   seed.prep.forEach(sp => { const rp = remote.prep.find(p => p.id === sp.id); if (rp) { rp.text = sp.text; rp.group = sp.group; rp.trade = sp.trade; } else remote.prep.push(clone(sp)); });
   remote.catalogVersion = seed.catalogVersion;
