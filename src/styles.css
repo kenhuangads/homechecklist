@@ -135,6 +135,7 @@ main.content { flex: 1; padding: .9rem .9rem calc(5.4rem + env(safe-area-inset-b
 .tag-尺寸 { background: #ECE6F8 !important; color: #5A3A9A !important; border-color: #D3C6EC !important; }
 .tag-搬運 { background: #F8E6DA !important; color: #8E4A12 !important; border-color: #EBC7AE !important; }
 .tag-木作 { background: #F3EAD9 !important; color: #6F4E13 !important; border-color: #E1CFA6 !important; }
+.tag-弱電 { background: #D7F0F2 !important; color: #0F5F68 !important; border-color: #ADE0E5 !important; }
 .tag-其他 { background: var(--surface-2) !important; color: var(--ink-2) !important; }
 :root[data-theme="dark"] [class*="tag-"] { background: var(--surface-2) !important; color: var(--ink) !important; border-color: var(--line-strong) !important; }
 @media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) [class*="tag-"] { background: var(--surface-2) !important; color: var(--ink) !important; border-color: var(--line-strong) !important; } }
@@ -412,3 +413,21 @@ dialog.tut h2 { font-family: var(--display); font-weight: 700; }
 .pick-actions { display: flex; flex-direction: column; align-items: flex-end; gap: .15rem; }
 .pick-actions .linkbtn.tiny { font-size: .74rem; padding: 0; color: var(--ink-3); }
 .pick-line .grow b + .chip { vertical-align: middle; }
+
+/* ---- 設計師版摺疊區塊 ---- */
+.doc details.fold { padding: 0 .7rem; margin: 0; }
+.doc details.fold > summary { min-height: 2.6rem; font-size: .95rem; }
+.doc .dsum { display: flex; align-items: center; flex-wrap: wrap; gap: .35rem; min-width: 0; }
+.doc .dsum b { font-family: var(--display); }
+.doc .dsum .tiny { color: var(--ink-2); font-weight: 500; }
+.doc details.ditem-fold > .fold-body { padding-bottom: .6rem; }
+.doc details.ditem-fold .ditem { border: 0; padding: 0; box-shadow: none; background: transparent; }
+.doc .room > details.fold + details.fold { margin-top: .35rem; }
+.doc .foldbar { display: flex; justify-content: flex-end; margin: -.2rem 0 .1rem; }
+/* 列印時所有摺疊一律展開（beforeprint 會補開，這裡是保險） */
+@media print {
+  .doc details.fold > .fold-body { display: block !important; }
+  .doc details.fold > summary { list-style: none; }
+  .doc details.fold { border: 0; padding: 0; }
+  .doc .foldbar { display: none !important; }
+}

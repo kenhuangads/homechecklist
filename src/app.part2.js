@@ -428,15 +428,16 @@ function renderDoc(p) {
   out.push(h('div', { class: 'doc' }, h('div', { class: 'doc-head' }, h('p', { class: 'eyebrow' }, '設計與水電需求總表'), h('h2', {}, state.meta.title), h('p', { class: 'muted' }, state.meta.subtitle),
     h('p', { class: 'small muted', style: 'margin-top:.3rem' }, `資料更新：${fmtTime(state.updatedAt, true)}（台灣時間）・已決定 ${decided.length}／${items.length} 項`))));
   const allVerify = items.flatMap(i => verifyPoints(i, p).map(v => Object.assign({ item: i.name }, v)));
-  if (allVerify.length) out.push(h('div', { class: 'doc' }, h('div', { class: 'verify verify-top' },
-    h('div', { class: 'vhead' }, icon('info'), `施工前必須確認（${allVerify.length} 項）`),
-    h('p', { class: 'small' }, '以下是目前查到的規格互相矛盾、或原廠沒公開的數字。發包與開孔前請先向廠商確認，不要直接照本文件施工。'),
-    h('ul', {}, allVerify.map(v => h('li', {}, h('b', {}, v.item), v.tag ? [' ', chip(v.tag, 'tag')] : null, ' ', v.text))))));
+  /* 這塊最重要，預設展開；但十幾條攤在最上面會擋住後面全部內容，所以讀完可以收起來 */
+  if (allVerify.length) out.push(h('div', { class: 'doc' }, fold(h('span', { class: 'dsum' }, icon('info'), h('b', {}, `施工前必須確認（${allVerify.length} 項）`)),
+    h('div', { class: 'verify verify-top' },
+      h('p', { class: 'small' }, '以下是目前查到的規格互相矛盾、或原廠沒公開的數字。發包與開孔前請先向廠商確認，不要直接照本文件施工。'),
+      h('ul', {}, allVerify.map(v => h('li', {}, h('b', {}, v.item), v.tag ? [' ', chip(v.tag, 'tag')] : null, ' ', v.text)))), { open: true, cls: 'verify-fold' })));
   const allTol = items.flatMap(i => tolerancePoints(i, p).map(v => Object.assign({ item: i.name }, v)));
-  if (allTol.length) out.push(h('div', { class: 'doc' }, h('div', { class: 'tol tol-top' },
-    h('div', { class: 'vhead' }, icon('pin'), `預留彈性（${allTol.length} 項實務提醒）`),
-    h('p', { class: 'small' }, '規格書上塞得下，現場不一定裝得進去。以下位置請不要照最小尺寸抓，留一點可調整的餘裕。'),
-    h('ul', {}, allTol.map(v => h('li', {}, h('b', {}, v.item), v.tag ? [' ', chip(v.tag, 'tag')] : null, ' ', v.text))))));
+  if (allTol.length) out.push(h('div', { class: 'doc' }, fold(h('span', { class: 'dsum' }, icon('pin'), h('b', {}, `預留彈性（${allTol.length} 項實務提醒）`)),
+    h('div', { class: 'tol tol-top' },
+      h('p', { class: 'small' }, '規格書上塞得下，現場不一定裝得進去。以下位置請不要照最小尺寸抓，留一點可調整的餘裕。'),
+      h('ul', {}, allTol.map(v => h('li', {}, h('b', {}, v.item), v.tag ? [' ', chip(v.tag, 'tag')] : null, ' ', v.text)))))));
   out.push(h('div', { class: 'banner info no-print' }, icon('info'), h('div', { class: 'small' }, '每個品項列出「選定型號」（或候選方案）的尺寸、開孔與電源；安裝須知用標籤分 ', tagChip('電'), ' ', tagChip('水'), ' ', tagChip('排風'), ' ', tagChip('尺寸'), '。最下方是全屋前置工程清單。內容由屋主隨時更新，列印前建議重新整理。')));
   if (p.show.install) {
     const short = t => { const x = (t || '').split(/[；（(，,。]/)[0].trim(); return x.length > 16 ? x.slice(0, 16) + '…' : x; };
@@ -450,12 +451,18 @@ function renderDoc(p) {
     out.push(h('div', { class: 'doc' }, h('h3', { class: 'h-room' }, '需求總表'), h('div', { class: 'card flat only-narrow' }, quick, h('p', { class: 'tiny', style: 'margin-top:.4rem' }, '速覽；完整內容見下方各品項。')),
       h('p', { class: 'tiny only-wide', style: 'margin:-.4rem 0 .2rem' }, '速覽；每個品項的完整尺寸、開孔與安裝須知見下方。'), h('div', { class: 'table-wrap only-wide' }, h('table', { class: 'ctable' }, h('thead', {}, h('tr', {}, h('th', {}, '品項'), h('th', {}, '數量'), h('th', {}, '電'), h('th', {}, '給水／排水'), h('th', {}, '排風'), h('th', {}, '尺寸／預留／搬運'))), h('tbody', {}, rows)))));
   }
+  out.push(h('div', { class: 'doc foldbar no-print' }, foldToggleBtn()));
   const docEl = h('div', { class: 'doc' });
   state.rooms.forEach(r => { const its = items.filter(i => i.roomId === r.id); if (!its.length) return; const roomEl = h('div', { class: 'room' }, h('h3', {}, r.name, h('span', { class: 'small muted', style: 'font-weight:500;font-family:var(--sans)' }, `${its.length} 項`))); its.forEach(i => roomEl.append(docItem(i, p))); docEl.append(roomEl); });
   out.push(docEl);
   if (p.show.prep) {
     const groups = [...new Set(state.prep.map(x => x.group))];
-    out.push(h('div', { class: 'doc' }, h('h3', { class: 'h-room' }, '全屋前置工程清單'), groups.map(gn => h('div', { class: 'ditem' }, h('h4', {}, gn), h('ul', {}, state.prep.filter(x => x.group === gn).map(x => h('li', { style: x.done ? 'color:var(--ink-3);text-decoration:line-through' : '' }, tagChip(x.trade), ' ', x.text)))))));
+    out.push(h('div', { class: 'doc' }, h('h3', { class: 'h-room' }, '全屋前置工程清單'), groups.map(gn => {
+      const ps = state.prep.filter(x => x.group === gn);
+      const trades = [...new Set(ps.map(x => x.trade))];
+      return fold(h('span', { class: 'dsum' }, h('b', {}, gn), h('span', { class: 'tiny' }, `${ps.length} 條`), trades.map(t => tagChip(t))),
+        h('ul', {}, ps.map(x => h('li', { style: x.done ? 'color:var(--ink-3);text-decoration:line-through' : '' }, tagChip(x.trade), ' ', x.text))));
+    })));
     const w = state.meta.water; if (w) out.push(h('div', { class: 'card flat' }, h('div', { class: 'eyebrow' }, '自來水水質（官方一手數據）'), h('p', {}, `${w.plant}，採樣 ${w.sampledAt}：總硬度 ${w.hardness} mg/L（${w.grade}）、TDS ${w.tds}、pH ${w.ph}。`), h('p', { class: 'small muted' }, w.note)));
   }
   out.push(h('p', { class: 'tiny', style: 'text-align:center' }, `產生時間 ${fmtTime(nowIso(), true)}`));
@@ -468,10 +475,16 @@ function alertBlocks(it, p) {
   if (tps.length) out.push(h('div', { class: 'tol' }, h('div', { class: 'vhead' }, icon('pin'), '預留彈性（實務提醒）'), list(tps)));
   return out;
 }
+function foldToggleBtn() {
+  const b = h('button', { class: 'btn sm ghost', type: 'button' }, '全部展開');
+  b.onclick = () => { const ds = [...document.querySelectorAll('.doc details.fold:not(.hidden-notes)')];
+    const open = !ds.every(d => d.open); ds.forEach(d => { d.open = open; }); b.textContent = open ? '全部收合' : '全部展開'; };
+  return b;
+}
 function docItem(i, p) {
   const ps = picksOf(i), noPrice = !p.show.price, txt = t => noPrice ? stripPriceSentences(t) : t;
   const lean = p.show.extras === false;   // 設計師版：只留施工要用的東西
-  const el = h('div', { class: 'ditem' }, h('h4', {}, tile(i), i.name, lean ? null : statusChip(i.status), ps.length ? (pickCount(i) > 1 ? chip(`共 ${pickCount(i)} 台`, 'tag') : null) : ((i.defaultQty || 1) > 1 ? chip(`建議 ${i.defaultQty} 台`, 'tag') : null), lean || !i.hardReq ? null : chip('硬需求', 'tag')));
+  const el = h('div', { class: 'ditem' });
   if (i.hardReq) el.append(h('p', { class: 'small' }, h('b', {}, '硬需求：'), i.hardReq));
   alertBlocks(i, p).forEach(b => el.append(b));
   const optBlock = (opt, label, qty) => {
@@ -506,5 +519,12 @@ function docItem(i, p) {
   if (dt.hidden.length) el.append(h('details', { class: 'fold hidden-notes no-print' },
     h('summary', {}, `已隱藏 ${dt.hidden.length} 條待辦（家人已拍板或屬其他候選機型）`),
     h('ul', { class: 'small muted' }, dt.hidden.map(x => h('li', {}, chip(x.tag, 'tag'), ' ', x.text)))));
-  return el;
+  /* 摘要列就要看得出「這項是什麼、選了哪台、有沒有雷」，不展開也能一路掃下去 */
+  const sum = h('span', { class: 'dsum' }, tile(i), h('b', {}, i.name),
+    h('span', { class: 'tiny' }, ps.length ? picksText(i, false) : '未決定'),
+    ps.length ? (pickCount(i) > 1 ? chip(`共 ${pickCount(i)} 台`, 'tag') : null) : ((i.defaultQty || 1) > 1 ? chip(`建議 ${i.defaultQty} 台`, 'tag') : null),
+    lean || !i.hardReq ? null : chip('硬需求', 'tag'),
+    hasAlerts(i) ? chip('需確認', 'tag tag-alert') : null,
+    lean ? null : statusChip(i.status));
+  return fold(sum, el, { cls: 'ditem-fold' });
 }

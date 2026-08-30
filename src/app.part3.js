@@ -207,4 +207,7 @@ async function boot() {
   if (role === 'family' && me && !store.get(KEYS.tut)) showTutorial('family');
   if (pending.length && canEdit()) scheduleSave();
 }
+/* 列印時把所有摺疊補開，印完再收回原狀——設計師直接列印時不能因為收起來就少印內容 */
+addEventListener('beforeprint', () => document.querySelectorAll('details:not([open])').forEach(d => { d.dataset.wasClosed = '1'; d.open = true; }));
+addEventListener('afterprint', () => document.querySelectorAll('details[data-was-closed]').forEach(d => { d.open = false; delete d.dataset.wasClosed; }));
 document.addEventListener('DOMContentLoaded', boot);
