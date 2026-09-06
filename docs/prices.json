@@ -1,5 +1,5 @@
 {
-  "checkedAt": "2026-09-05T07:31:04.679Z",
+  "checkedAt": "2026-09-06T07:44:31.735Z",
   "source": "PChome 24h prodapi (每日自動更新)",
   "pchome": {
     "DPAL22-A900I2U6X": {
@@ -47,13 +47,13 @@
     "DMAGOA-A900KAR59": {
       "low": 8620,
       "list": 8620,
-      "qty": 9,
+      "qty": 8,
       "button": "ForSale"
     },
     "DMAGOA-A900KAR7L": {
       "low": 4880,
       "list": 4880,
-      "qty": 5,
+      "qty": 3,
       "button": "ForSale"
     },
     "DMAGR0-A900K1RIJ": {
@@ -117,8 +117,8 @@
       "button": "ForSale"
     },
     "DPAK31-A900BY19V": {
-      "low": 27900,
-      "list": 27900,
+      "low": 25999,
+      "list": 25999,
       "qty": 14,
       "button": "ForSale"
     },
@@ -131,7 +131,7 @@
     "DPAC1T-A900GB0L3": {
       "low": 22792,
       "list": 25900,
-      "qty": 7,
+      "qty": 1,
       "button": "ForSale"
     },
     "DPAC8X-A900KAUZ0": {
@@ -170,13 +170,13 @@
       "qty": 2,
       "button": "ForSale"
     },
-    "DMCI01-A900I4EU0-002": {
+    "DMCI01-A900I4EU0-003": {
       "low": 54800,
       "list": 54800,
       "qty": 2,
       "button": "ForSale"
     },
-    "DMCI01-A900I4EU0-003": {
+    "DMCI01-A900I4EU0-002": {
       "low": 54800,
       "list": 54800,
       "qty": 2,
@@ -299,7 +299,7 @@
     "DPAL3O-A900HYXY7": {
       "low": 7399,
       "list": 7399,
-      "qty": 5,
+      "qty": 4,
       "button": "ForSale"
     },
     "DPAL3O-A900HYXY7-001": {
@@ -311,7 +311,7 @@
     "DPAL3O-A900HYXY7-002": {
       "low": 7399,
       "list": 7399,
-      "qty": 5,
+      "qty": 4,
       "button": "ForSale"
     },
     "DPADZ5-A900K4PDR": {
@@ -323,7 +323,7 @@
     "DPADYE-A900JZW22": {
       "low": 37900,
       "list": 56618,
-      "qty": 15,
+      "qty": 12,
       "button": "ForSale"
     },
     "DPADEW-A900IUDMN": {
@@ -393,20 +393,20 @@
       "button": "ForSale"
     },
     "DMBL3E-A900JUP4D": {
-      "low": 26980,
-      "list": 26980,
+      "low": 27980,
+      "list": 27980,
       "qty": 3,
       "button": "ForSale"
     },
     "DMBL3E-A900JUP4D-001": {
-      "low": 26980,
-      "list": 26980,
+      "low": 27980,
+      "list": 27980,
       "qty": 7,
       "button": "ForSale"
     },
     "DMBL3E-A900JUP4D-002": {
-      "low": 26980,
-      "list": 26980,
+      "low": 27980,
+      "list": 27980,
       "qty": 3,
       "button": "ForSale"
     },
