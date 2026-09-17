@@ -1,5 +1,5 @@
 {
-  "checkedAt": "2026-09-16T08:24:04.121Z",
+  "checkedAt": "2026-09-17T08:29:44.424Z",
   "source": "PChome 24h prodapi (每日自動更新)",
   "pchome": {
     "DPAL22-A900I2U6X": {
@@ -11,13 +11,13 @@
     "QBAY1F-A900A80OH": {
       "low": 39800,
       "list": 39800,
-      "qty": 1,
+      "qty": 2,
       "button": "ForSale"
     },
     "QBAY1F-A900A80OH-005": {
       "low": 39800,
       "list": 39800,
-      "qty": 1,
+      "qty": 2,
       "button": "ForSale"
     },
     "DMAGOH-A900GDYU4": {
@@ -26,13 +26,13 @@
       "qty": 3,
       "button": "ForSale"
     },
-    "DMAGOH-A900GDYU4-003": {
+    "DMAGOH-A900GDYU4-004": {
       "low": 43000,
       "list": 43000,
       "qty": 3,
       "button": "ForSale"
     },
-    "DMAGOH-A900GDYU4-004": {
+    "DMAGOH-A900GDYU4-003": {
       "low": 43000,
       "list": 43000,
       "qty": 3,
@@ -101,7 +101,7 @@
     "DMBJ0G-A900AMQOF": {
       "low": 6550,
       "list": 8390,
-      "qty": 3,
+      "qty": 2,
       "button": "ForSale"
     },
     "DMBJ01-1900I80CR": {
@@ -164,13 +164,13 @@
       "qty": 2,
       "button": "ForSale"
     },
-    "DMCI01-A900I4EU0-002": {
+    "DMCI01-A900I4EU0-001": {
       "low": 54800,
       "list": 54800,
       "qty": 2,
       "button": "ForSale"
     },
-    "DMCI01-A900I4EU0-001": {
+    "DMCI01-A900I4EU0-002": {
       "low": 54800,
       "list": 54800,
       "qty": 2,
@@ -359,7 +359,7 @@
     "DMAAF8-A900I0K0Y": {
       "low": 28900,
       "list": 28900,
-      "qty": 5,
+      "qty": 4,
       "button": "ForSale"
     },
     "DMBM1D-A900J5JAZ": {
@@ -398,16 +398,16 @@
       "qty": 1,
       "button": "ForSale"
     },
-    "DMBL3E-A900JUP4D-001": {
-      "low": 27980,
-      "list": 27980,
-      "qty": 6,
-      "button": "ForSale"
-    },
     "DMBL3E-A900JUP4D-002": {
       "low": 27980,
       "list": 27980,
       "qty": 1,
+      "button": "ForSale"
+    },
+    "DMBL3E-A900JUP4D-001": {
+      "low": 27980,
+      "list": 27980,
+      "qty": 6,
       "button": "ForSale"
     },
     "DMBL3E-A900JZ3SP": {
