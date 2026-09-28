@@ -1,5 +1,5 @@
 {
-  "checkedAt": "2026-09-27T09:03:31.171Z",
+  "checkedAt": "2026-09-28T09:31:33.955Z",
   "source": "PChome 24h prodapi (每日自動更新)",
   "pchome": {
     "DPAL22-A900I2U6X": {
@@ -53,7 +53,7 @@
     "DMAGOA-A900KAR7L": {
       "low": 4880,
       "list": 4880,
-      "qty": 6,
+      "qty": 5,
       "button": "ForSale"
     },
     "DMAGR0-A900K1RIJ": {
@@ -164,6 +164,12 @@
       "qty": 2,
       "button": "ForSale"
     },
+    "DMCI01-A900I4EU0-003": {
+      "low": 54800,
+      "list": 54800,
+      "qty": 2,
+      "button": "ForSale"
+    },
     "DMCI01-A900I4EU0-001": {
       "low": 54800,
       "list": 54800,
@@ -171,12 +177,6 @@
       "button": "ForSale"
     },
     "DMCI01-A900I4EU0-002": {
-      "low": 54800,
-      "list": 54800,
-      "qty": 2,
-      "button": "ForSale"
-    },
-    "DMCI01-A900I4EU0-003": {
       "low": 54800,
       "list": 54800,
       "qty": 2,
@@ -207,8 +207,8 @@
       "button": "ForSale"
     },
     "DMAWGY-A900HF5JT": {
-      "low": 4990,
-      "list": 4990,
+      "low": 5490,
+      "list": 5490,
       "qty": 13,
       "button": "ForSale"
     },
@@ -323,7 +323,7 @@
     "DPADYE-A900JZW22": {
       "low": 37900,
       "list": 56618,
-      "qty": 5,
+      "qty": 3,
       "button": "ForSale"
     },
     "DPADEW-A900IUDMN": {
@@ -395,13 +395,13 @@
     "DMBL3E-A900JUP4D": {
       "low": 26980,
       "list": 26980,
-      "qty": 2,
+      "qty": 1,
       "button": "ForSale"
     },
     "DMBL3E-A900JUP4D-001": {
       "low": 26980,
       "list": 26980,
-      "qty": 2,
+      "qty": 1,
       "button": "ForSale"
     },
     "DMBL3E-A900JUP4D-002": {
@@ -413,13 +413,13 @@
     "DMBL3E-A900JZ3SP": {
       "low": 31980,
       "list": 31980,
-      "qty": 18,
+      "qty": 16,
       "button": "ForSale"
     },
     "DMBL0L-A900JRDAS": {
       "low": 22999,
       "list": 22999,
-      "qty": 4,
+      "qty": 3,
       "button": "ForSale"
     },
     "DMBL1C-A900IAE5C": {
