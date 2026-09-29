@@ -1,5 +1,5 @@
 {
-  "checkedAt": "2026-09-28T09:31:33.955Z",
+  "checkedAt": "2026-09-29T09:35:37.447Z",
   "source": "PChome 24h prodapi (每日自動更新)",
   "pchome": {
     "DPAL22-A900I2U6X": {
@@ -45,39 +45,39 @@
       "button": "ForSale"
     },
     "DMAGOA-A900KAR59": {
-      "low": 8620,
-      "list": 8620,
+      "low": 8888,
+      "list": 8888,
       "qty": 7,
       "button": "ForSale"
     },
     "DMAGOA-A900KAR7L": {
-      "low": 4880,
-      "list": 4880,
+      "low": 4980,
+      "list": 4980,
       "qty": 5,
       "button": "ForSale"
     },
     "DMAGR0-A900K1RIJ": {
-      "low": 8540,
+      "low": 8990,
       "list": 8990,
-      "qty": 2,
+      "qty": 5,
       "button": "ForSale"
     },
     "DMAGR0-A900K1RIJ-001": {
-      "low": 8540,
+      "low": 8990,
       "list": 8990,
-      "qty": 2,
+      "qty": 5,
       "button": "ForSale"
     },
     "DMAGR0-A900K1RIJ-002": {
-      "low": 8540,
+      "low": 8990,
       "list": 8990,
-      "qty": 3,
+      "qty": 5,
       "button": "ForSale"
     },
     "DMAGR0-A900K1RIJ-003": {
-      "low": 8540,
+      "low": 8990,
       "list": 8990,
-      "qty": 2,
+      "qty": 5,
       "button": "ForSale"
     },
     "DMBJ03-A900JTYJP": {
@@ -129,7 +129,7 @@
       "button": "ForSale"
     },
     "DPAC1T-A900GB0L3": {
-      "low": 22792,
+      "low": 23310,
       "list": 25900,
       "qty": 20,
       "button": "ForSale"
@@ -164,7 +164,7 @@
       "qty": 2,
       "button": "ForSale"
     },
-    "DMCI01-A900I4EU0-003": {
+    "DMCI01-A900I4EU0-002": {
       "low": 54800,
       "list": 54800,
       "qty": 2,
@@ -176,7 +176,7 @@
       "qty": 2,
       "button": "ForSale"
     },
-    "DMCI01-A900I4EU0-002": {
+    "DMCI01-A900I4EU0-003": {
       "low": 54800,
       "list": 54800,
       "qty": 2,
@@ -194,13 +194,13 @@
       "qty": 2,
       "button": "ForSale"
     },
-    "DMCI01-A900I4ERS-002": {
+    "DMCI01-A900I4ERS-003": {
       "low": 39800,
       "list": 39800,
       "qty": 2,
       "button": "ForSale"
     },
-    "DMCI01-A900I4ERS-003": {
+    "DMCI01-A900I4ERS-002": {
       "low": 39800,
       "list": 39800,
       "qty": 2,
@@ -209,7 +209,7 @@
     "DMAWGY-A900HF5JT": {
       "low": 5490,
       "list": 5490,
-      "qty": 13,
+      "qty": 12,
       "button": "ForSale"
     },
     "DMAWI0-A900ITF3M": {
@@ -302,17 +302,17 @@
       "qty": 20,
       "button": "ForSale"
     },
-    "DPAL3O-A900HYXY7-001": {
-      "low": 7500,
-      "list": 7500,
-      "qty": 20,
-      "button": "ForSale"
-    },
     "DPAL3O-A900HYXY7-002": {
       "low": 7500,
       "list": 7500,
       "qty": 0,
       "button": "OrderRefill"
+    },
+    "DPAL3O-A900HYXY7-001": {
+      "low": 7500,
+      "list": 7500,
+      "qty": 20,
+      "button": "ForSale"
     },
     "DPADZ5-A900K4PDR": {
       "low": 151050,
@@ -323,7 +323,7 @@
     "DPADYE-A900JZW22": {
       "low": 37900,
       "list": 56618,
-      "qty": 3,
+      "qty": 2,
       "button": "ForSale"
     },
     "DPADEW-A900IUDMN": {
@@ -357,13 +357,13 @@
       "button": "ForSale"
     },
     "DMAAF8-A900I0K0Y": {
-      "low": 27733,
+      "low": 28900,
       "list": 28900,
       "qty": 4,
       "button": "ForSale"
     },
     "DMBM1D-A900J5JAZ": {
-      "low": 19297,
+      "low": 19900,
       "list": 19900,
       "qty": 1,
       "button": "ForSale"
@@ -393,27 +393,27 @@
       "button": "ForSale"
     },
     "DMBL3E-A900JUP4D": {
-      "low": 26980,
-      "list": 26980,
+      "low": 27980,
+      "list": 27980,
       "qty": 1,
       "button": "ForSale"
     },
     "DMBL3E-A900JUP4D-001": {
-      "low": 26980,
-      "list": 26980,
+      "low": 27980,
+      "list": 27980,
       "qty": 1,
       "button": "ForSale"
     },
     "DMBL3E-A900JUP4D-002": {
-      "low": 26980,
-      "list": 26980,
+      "low": 27980,
+      "list": 27980,
       "qty": 0,
       "button": "OrderRefill"
     },
     "DMBL3E-A900JZ3SP": {
       "low": 31980,
       "list": 31980,
-      "qty": 16,
+      "qty": 15,
       "button": "ForSale"
     },
     "DMBL0L-A900JRDAS": {
