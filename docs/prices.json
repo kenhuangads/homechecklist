@@ -1,5 +1,5 @@
 {
-  "checkedAt": "2026-10-03T08:58:27.007Z",
+  "checkedAt": "2026-10-04T09:29:39.337Z",
   "source": "PChome 24h prodapi (每日自動更新)",
   "pchome": {
     "DPAL22-A900I2U6X": {
@@ -149,7 +149,7 @@
     "DPAC8U-A900G9OOU": {
       "low": 13688,
       "list": 13688,
-      "qty": 15,
+      "qty": 14,
       "button": "ForSale"
     },
     "DMBH1Q-A900I20ON": {
@@ -194,13 +194,13 @@
       "qty": 2,
       "button": "ForSale"
     },
-    "DMCI01-A900I4ERS-003": {
+    "DMCI01-A900I4ERS-002": {
       "low": 39800,
       "list": 39800,
       "qty": 2,
       "button": "ForSale"
     },
-    "DMCI01-A900I4ERS-002": {
+    "DMCI01-A900I4ERS-003": {
       "low": 39800,
       "list": 39800,
       "qty": 2,
@@ -302,17 +302,17 @@
       "qty": 20,
       "button": "ForSale"
     },
-    "DPAL3O-A900HYXY7-001": {
-      "low": 7500,
-      "list": 7500,
-      "qty": 20,
-      "button": "ForSale"
-    },
     "DPAL3O-A900HYXY7-002": {
       "low": 7500,
       "list": 7500,
       "qty": 0,
       "button": "OrderRefill"
+    },
+    "DPAL3O-A900HYXY7-001": {
+      "low": 7500,
+      "list": 7500,
+      "qty": 20,
+      "button": "ForSale"
     },
     "DPADZ5-A900K4PDR": {
       "low": 159000,
@@ -393,26 +393,26 @@
       "button": "ForSale"
     },
     "DMBL3E-A900JUP4D": {
-      "low": 25911,
-      "list": 25911,
+      "low": 26980,
+      "list": 26980,
       "qty": 0,
       "button": "OrderRefill"
     },
     "DMBL3E-A900JUP4D-002": {
-      "low": 25911,
-      "list": 25911,
+      "low": 26980,
+      "list": 26980,
       "qty": 0,
       "button": "OrderRefill"
     },
     "DMBL3E-A900JUP4D-001": {
-      "low": 25911,
-      "list": 25911,
+      "low": 26980,
+      "list": 26980,
       "qty": 0,
       "button": "OrderRefill"
     },
     "DMBL3E-A900JZ3SP": {
-      "low": 31911,
-      "list": 31911,
+      "low": 31980,
+      "list": 31980,
       "qty": 12,
       "button": "ForSale"
     },
@@ -464,13 +464,13 @@
       "qty": 0,
       "button": "NotReady"
     },
-    "DPAL3B-A900BQACS-001": {
+    "DPAL3B-A900BQACS-002": {
       "low": 45090,
       "list": 45090,
       "qty": 0,
       "button": "NotReady"
     },
-    "DPAL3B-A900BQACS-002": {
+    "DPAL3B-A900BQACS-001": {
       "low": 45090,
       "list": 45090,
       "qty": 0,
