@@ -1,5 +1,5 @@
 {
-  "checkedAt": "2026-10-05T10:10:33.754Z",
+  "checkedAt": "2026-10-06T09:54:39.144Z",
   "source": "PChome 24h prodapi (每日自動更新)",
   "pchome": {
     "DPAL22-A900I2U6X": {
@@ -164,13 +164,13 @@
       "qty": 2,
       "button": "ForSale"
     },
-    "DMCI01-A900I4EU0-002": {
+    "DMCI01-A900I4EU0-001": {
       "low": 54800,
       "list": 54800,
       "qty": 2,
       "button": "ForSale"
     },
-    "DMCI01-A900I4EU0-001": {
+    "DMCI01-A900I4EU0-002": {
       "low": 54800,
       "list": 54800,
       "qty": 2,
@@ -194,13 +194,13 @@
       "qty": 2,
       "button": "ForSale"
     },
-    "DMCI01-A900I4ERS-003": {
+    "DMCI01-A900I4ERS-002": {
       "low": 39800,
       "list": 39800,
       "qty": 2,
       "button": "ForSale"
     },
-    "DMCI01-A900I4ERS-002": {
+    "DMCI01-A900I4ERS-003": {
       "low": 39800,
       "list": 39800,
       "qty": 2,
@@ -302,21 +302,21 @@
       "qty": 20,
       "button": "ForSale"
     },
-    "DPAL3O-A900HYXY7-002": {
-      "low": 7500,
-      "list": 7500,
-      "qty": 20,
-      "button": "ForSale"
-    },
     "DPAL3O-A900HYXY7-001": {
       "low": 7500,
       "list": 7500,
       "qty": 20,
       "button": "ForSale"
     },
+    "DPAL3O-A900HYXY7-002": {
+      "low": 7500,
+      "list": 7500,
+      "qty": 20,
+      "button": "ForSale"
+    },
     "DPADZ5-A900K4PDR": {
-      "low": 159000,
-      "list": 159000,
+      "low": 151050,
+      "list": 151050,
       "qty": 3,
       "button": "ForSale"
     },
@@ -354,7 +354,7 @@
       "low": 38888,
       "list": 38888,
       "qty": 0,
-      "button": "OrderRefill"
+      "button": "NotReady"
     },
     "DMAAF8-A900I0K0Y": {
       "low": 28900,
@@ -371,7 +371,7 @@
     "DMAAO6-A900IE4HM": {
       "low": 37710,
       "list": 41900,
-      "qty": 1,
+      "qty": 6,
       "button": "ForSale"
     },
     "DMAAO6-A900IE4HM-001": {
@@ -383,13 +383,13 @@
     "DMAAO6-A900IE4HM-002": {
       "low": 37710,
       "list": 41900,
-      "qty": 1,
-      "button": "ForSale"
+      "qty": 0,
+      "button": "SoldOut"
     },
     "DMBL1C-A900JNELR": {
-      "low": 33480,
+      "low": 34980,
       "list": 34980,
-      "qty": 14,
+      "qty": 10,
       "button": "ForSale"
     },
     "DMBL3E-A900JUP4D": {
@@ -398,13 +398,13 @@
       "qty": 0,
       "button": "OrderRefill"
     },
-    "DMBL3E-A900JUP4D-001": {
+    "DMBL3E-A900JUP4D-002": {
       "low": 26980,
       "list": 26980,
       "qty": 0,
       "button": "OrderRefill"
     },
-    "DMBL3E-A900JUP4D-002": {
+    "DMBL3E-A900JUP4D-001": {
       "low": 26980,
       "list": 26980,
       "qty": 0,
