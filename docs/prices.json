@@ -1,5 +1,5 @@
 {
-  "checkedAt": "2026-10-25T08:13:30.813Z",
+  "checkedAt": "2026-10-26T08:39:57.260Z",
   "source": "PChome 24h prodapi (每日自動更新)",
   "pchome": {
     "DPAL22-A900I2U6X": {
@@ -101,7 +101,7 @@
     "DMBJ0G-A900AMQOF": {
       "low": 6550,
       "list": 8390,
-      "qty": 3,
+      "qty": 1,
       "button": "ForSale"
     },
     "DMBJ01-1900I80CR": {
@@ -302,13 +302,13 @@
       "qty": 20,
       "button": "ForSale"
     },
-    "DPAL3O-A900HYXY7-001": {
+    "DPAL3O-A900HYXY7-002": {
       "low": 7099,
       "list": 7099,
       "qty": 20,
       "button": "ForSale"
     },
-    "DPAL3O-A900HYXY7-002": {
+    "DPAL3O-A900HYXY7-001": {
       "low": 7099,
       "list": 7099,
       "qty": 20,
@@ -341,7 +341,7 @@
     "DPAD06-A900J477W": {
       "low": 80800,
       "list": 82700,
-      "qty": 5,
+      "qty": 3,
       "button": "ForSale"
     },
     "DPADO2-A900K7L2F": {
