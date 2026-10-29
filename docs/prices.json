@@ -1,5 +1,5 @@
 {
-  "checkedAt": "2026-10-28T09:26:30.288Z",
+  "checkedAt": "2026-10-29T09:38:27.366Z",
   "source": "PChome 24h prodapi (每日自動更新)",
   "pchome": {
     "DPAL22-A900I2U6X": {
@@ -45,8 +45,8 @@
       "button": "ForSale"
     },
     "DMAGOA-A900KAR59": {
-      "low": 8888,
-      "list": 8888,
+      "low": 10800,
+      "list": 10800,
       "qty": 20,
       "button": "ForSale"
     },
@@ -86,16 +86,16 @@
       "qty": 2,
       "button": "ForSale"
     },
-    "DMBJ03-A900JTYJP-001": {
-      "low": 24900,
-      "list": 24900,
-      "qty": 2,
-      "button": "ForSale"
-    },
     "DMBJ03-A900JTYJP-002": {
       "low": 24900,
       "list": 24900,
       "qty": 3,
+      "button": "ForSale"
+    },
+    "DMBJ03-A900JTYJP-001": {
+      "low": 24900,
+      "list": 24900,
+      "qty": 2,
       "button": "ForSale"
     },
     "DMBJ0G-A900AMQOF": {
@@ -371,13 +371,13 @@
     "DMAAO6-A900IE4HM": {
       "low": 37710,
       "list": 41900,
-      "qty": 3,
+      "qty": 2,
       "button": "ForSale"
     },
     "DMAAO6-A900IE4HM-001": {
       "low": 37710,
       "list": 41900,
-      "qty": 3,
+      "qty": 2,
       "button": "ForSale"
     },
     "DMAAO6-A900IE4HM-002": {
@@ -389,31 +389,31 @@
     "DMBL1C-A900JNELR": {
       "low": 32980,
       "list": 34980,
-      "qty": 20,
+      "qty": 19,
       "button": "ForSale"
     },
     "DMBL3E-A900JUP4D": {
-      "low": 25911,
-      "list": 25911,
+      "low": 26980,
+      "list": 26980,
       "qty": 20,
       "button": "ForSale"
     },
     "DMBL3E-A900JUP4D-001": {
-      "low": 25911,
-      "list": 25911,
+      "low": 26980,
+      "list": 26980,
       "qty": 20,
       "button": "ForSale"
     },
     "DMBL3E-A900JZ3SP": {
-      "low": 31911,
-      "list": 31911,
+      "low": 31980,
+      "list": 31980,
       "qty": 10,
       "button": "ForSale"
     },
     "DMBL0L-A900JRDAS": {
       "low": 22999,
       "list": 22999,
-      "qty": 3,
+      "qty": 2,
       "button": "ForSale"
     },
     "DMBL1C-A900IAE5C": {
