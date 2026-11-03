@@ -1,5 +1,5 @@
 {
-  "checkedAt": "2026-11-02T10:43:09.964Z",
+  "checkedAt": "2026-11-03T10:35:20.302Z",
   "source": "PChome 24h prodapi (每日自動更新)",
   "pchome": {
     "DPAL22-A900I2U6X": {
@@ -26,13 +26,13 @@
       "qty": 3,
       "button": "ForSale"
     },
-    "DMAGOH-A900GDYU4-004": {
+    "DMAGOH-A900GDYU4-003": {
       "low": 43000,
       "list": 43000,
       "qty": 3,
       "button": "ForSale"
     },
-    "DMAGOH-A900GDYU4-003": {
+    "DMAGOH-A900GDYU4-004": {
       "low": 43000,
       "list": 43000,
       "qty": 3,
@@ -65,8 +65,8 @@
     "DMAGR0-A900K1RIJ-001": {
       "low": 8990,
       "list": 8990,
-      "qty": 0,
-      "button": "OrderRefill"
+      "qty": 5,
+      "button": "ForSale"
     },
     "DMAGR0-A900K1RIJ-002": {
       "low": 8990,
@@ -77,8 +77,8 @@
     "DMAGR0-A900K1RIJ-003": {
       "low": 8990,
       "list": 8990,
-      "qty": 0,
-      "button": "OrderRefill"
+      "qty": 5,
+      "button": "ForSale"
     },
     "DMBJ03-A900JTYJP": {
       "low": 24900,
@@ -101,7 +101,7 @@
     "DMBJ0G-A900AMQOF": {
       "low": 6550,
       "list": 8390,
-      "qty": 3,
+      "qty": 2,
       "button": "ForSale"
     },
     "DMBJ01-1900I80CR": {
@@ -179,8 +179,8 @@
     "DMCI01-A900I4EU0-002": {
       "low": 52060,
       "list": 54800,
-      "qty": 2,
-      "button": "ForSale"
+      "qty": 0,
+      "button": "OrderRefill"
     },
     "DMCI01-A900I4ERS": {
       "low": 37810,
@@ -291,25 +291,25 @@
       "button": "ForSale"
     },
     "DMAZ67-A900BSZZ7": {
-      "low": 8100,
+      "low": 6930,
       "list": 8100,
       "qty": 20,
       "button": "ForSale"
     },
     "DPAL3O-A900HYXY7": {
-      "low": 7099,
+      "low": 6411,
       "list": 7099,
       "qty": 20,
       "button": "ForSale"
     },
     "DPAL3O-A900HYXY7-002": {
-      "low": 7099,
+      "low": 6411,
       "list": 7099,
       "qty": 20,
       "button": "ForSale"
     },
     "DPAL3O-A900HYXY7-001": {
-      "low": 7099,
+      "low": 6411,
       "list": 7099,
       "qty": 20,
       "button": "ForSale"
