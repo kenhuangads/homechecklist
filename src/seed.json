@@ -1218,6 +1218,55 @@
           "cmpKeyword": "Panasonic NN-FS301",
           "note": "",
           "checkedAt": "2026-08-23"
+        },
+        {
+          "id": "balmuda_krn01tw",
+          "key": "balmuda_krn01tw",
+          "tier": "替代方案",
+          "brand": "BALMUDA 百慕達",
+          "model": "KRN01TW",
+          "name": "The Range S 20L 平台式微波爐（緩關門）",
+          "highlights": [
+            "平台式無轉盤、緩關門設計，外型簡潔好融入電器櫃",
+            "沒有燒烤功能，只有微波（自動／手動 100–900W／飲品／冷凍米飯／解凍）",
+            "容量 20L、加熱室 300×310×195 mm，長方形便當盒放入前請先量"
+          ],
+          "dims": "外觀 W466 × D393 × H295 mm（含握把；不含握把 D353）；加熱室 W300 × D310 × H195 mm；約 9.5 kg",
+          "cutout": "原廠未公布周圍散熱空間，請以說明書為準；電器櫃開孔以機身尺寸外加散熱餘裕預留",
+          "power": "110V／60Hz，消耗功率 1500W，需獨立 110V 插座；電源線約 1.3 m",
+          "weight": "約 9.5 kg",
+          "other": "原廠保固 1 年；產地中國；黑、白兩色。注意：硬需求寫「要有燒烤」，這台沒有燒烤功能。",
+          "price": {
+            "amount": 11990,
+            "min": 11990,
+            "max": 13990,
+            "source": "momo",
+            "checkedAt": "2026-11-27",
+            "note": "momo 促銷 11,990（市售 13,990），廠商宅配不含安裝；BALMUDA 官網 13,990"
+          },
+          "links": [
+            {
+              "type": "momo",
+              "url": "https://www.momoshop.com.tw/product/15172559",
+              "verified": true,
+              "checkedAt": "2026-11-27",
+              "note": ""
+            },
+            {
+              "type": "official",
+              "url": "https://www.balmuda.com.tw/range-s/specs",
+              "label": "官網規格",
+              "verified": true,
+              "checkedAt": "2026-11-27",
+              "note": ""
+            }
+          ],
+          "availability": "in_stock",
+          "reviews": null,
+          "cmpKeyword": "BALMUDA KRN01TW",
+          "note": "",
+          "checkedAt": "2026-11-27",
+          "researchNote": "2026-11-27 依家人指定加入。規格取自 BALMUDA 台灣官網。"
         }
       ],
       "notes": [],
@@ -7809,5 +7858,5 @@
   },
   "history": [],
   "todos": [],
-  "catalogVersion": "2026083001"
+  "catalogVersion": 2026112701
 }
